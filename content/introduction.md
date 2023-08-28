@@ -45,3 +45,8 @@ Ainsi, on soudera dans cet ordre :
 9. enfin le(s) transformateur(s)
 
 Cet ordre précis permet de s'affranchir de tordre les pattes des composants, utiliser de l'adhésif, ...
+
+Test formule math
+```{math}
+a^2 + b^2 = c^2
+```
