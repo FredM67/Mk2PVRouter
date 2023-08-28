@@ -4,7 +4,6 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 import sphinx_rtd_theme
-import myst_parser
 import sphinx.ext.mathjax
 
 # -- Project information -----------------------------------------------------
