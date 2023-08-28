@@ -19,12 +19,12 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: html-docs
-          path: _build/
+          path: docs/_build/html/
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _build/
+          publish_dir: docs/_build/html/
           force_orphan: true
