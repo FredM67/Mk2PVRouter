@@ -25,7 +25,8 @@ extensions = [
     'myst_parser',
     'sphinx.ext.mathjax',
     'sphinx_rtd_theme_ext_color_contrast',
-    'sphinx_copybutton',]
+    'sphinx_copybutton',
+]
 
 source_suffix = ['.rst', '.md']
 
