@@ -50,3 +50,8 @@ Test formule math
 ```{math}
 a^2 + b^2 = c^2
 ```
+
+````{callout} À retenir
+Peu importe l'installation de production d'électricité (monophasée, biphasée, triphasée), le routeur DOIT correspondre au type de raccordement.  
+Raccordement triphasé = routeur triphasé
+````

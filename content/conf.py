@@ -22,7 +22,7 @@ conf_py_path = "/content/" # with leading and trailing slash
 extensions = [
     # githubpages just adds a .nojekyll file
     "sphinx.ext.githubpages",
-    'myst_parser',
+    "sphinx_lesson",
     'sphinx.ext.mathjax',
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',

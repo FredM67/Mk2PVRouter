@@ -2,4 +2,5 @@ sphinx
 sphinx_rtd_theme
 git+https://github.com/rkdarst/sphinx-copybutton.git@exclude-unselectable-3
 sphinx_rtd_theme_ext_color_contrast
-myst-parser
+sphinx-lesson
+https://github.com/coderefinery/sphinx-coderefinery-branding/archive/master.zip

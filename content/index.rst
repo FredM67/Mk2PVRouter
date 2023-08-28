@@ -16,10 +16,11 @@ Grace aux modules sortie-relais, il peut aussi gérer des installations de chauf
 
 Ce routeur existe en 2 versions, une monophasé, exclusivement pour les raccordements monophasés, et une triphasé pour les raccordements en triphasés. Seul le raccordement est important, peu importe que la production d'électricité soit en monophasé ou que l'on utilise que des appareils monophasés.
 
-.. note::
+.. callout:: À retenir
+
    Peu importe l'installation de production d'électricité (monophasée, biphasée, triphasée), le routeur DOIT correspondre au type de raccordement.
 
-   Raccordement triphasé => routeur triphasé
+   Raccordement triphasé = routeur triphasé
 
 
 .. toctree::
