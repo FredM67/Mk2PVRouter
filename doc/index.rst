@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Bienvenue dans la documentation du Mk2PVRouter !
-=======================================
+================================================
 
 .. toctree::
    :maxdepth: 2
