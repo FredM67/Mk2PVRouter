@@ -16,9 +16,11 @@ author = 'ENERGIE ROUTER & F. Metrich (aka FredM67)'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    # githubpages just adds a .nojekyll file
+    "sphinx.ext.githubpages",
     'myst_parser',
     'sphinx.ext.mathjax',
-    'sphinx_rtd_theme',
+    'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',]
 
 source_suffix = ['.rst', '.md']

@@ -1,3 +1,4 @@
-sphinx_rtd_theme
+sphinx
+sphinx_rtd_theme_ext_color_contrast
 myst-parser
-sphinx_copybutton
+git+https://github.com/rkdarst/sphinx-copybutton.git@exclude-unselectable-3
