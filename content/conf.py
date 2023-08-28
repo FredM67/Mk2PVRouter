@@ -11,6 +11,8 @@ import sphinx.ext.mathjax
 project = 'Mk2PVRouter'
 copyright = '2023, ENERGIE ROUTER & F. Metrich (aka FredM67)'
 author = 'ENERGIE ROUTER & F. Metrich (aka FredM67)'
+github_user = ""
+github_repo_name = ""  # auto-detected from dirname if blank
 github_version = "main"
 conf_py_path = "/content/" # with leading and trailing slash
 
