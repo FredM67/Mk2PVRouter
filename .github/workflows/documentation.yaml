@@ -55,11 +55,13 @@ jobs:
       - name: Install Latex
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: latexmk texlive-full texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+          packages: latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+          execute_install_scripts: true
+          version: 1.0
 
-      - name: Rebuild LaTeX formats
-        run: |
-          sudo fmtutil-sys --all
+      # - name: Rebuild LaTeX formats
+      #   run: |
+      #     sudo fmtutil-sys --all
 
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
