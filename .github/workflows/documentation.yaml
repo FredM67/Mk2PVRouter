@@ -55,7 +55,7 @@ jobs:
       - name: Install Latex
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: latex latexmk texlive-latex-extra
+          packages: texlive-latex latexmk texlive-latex-extra
 
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
