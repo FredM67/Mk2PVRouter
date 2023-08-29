@@ -13,9 +13,6 @@ jobs:
   build-and-deploy:
     name: Build and gh-pages
     runs-on: ubuntu-latest
-    container:
-      image: sphinxdoc/sphinx-latexpdf
-      options: --user root
     permissions:
       contents: write
     steps:
