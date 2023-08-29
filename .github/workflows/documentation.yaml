@@ -25,8 +25,6 @@ jobs:
       # ^-- This gives info on matrix testing.
       - name: Install Python
         uses: actions/setup-python@v3
-        with:
-          python-version: 3.8
       # https://docs.github.com/en/actions/guides/building-and-testing-python#caching-dependencies
       # ^-- How to set up caching for pip on Ubuntu
       - name: Cache pip

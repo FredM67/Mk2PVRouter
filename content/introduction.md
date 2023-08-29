@@ -34,7 +34,6 @@ Ces composants sont aussi de tailles très différentes. Des plus petits, avec q
 
 Pour des raisons pratiques, il est conseillé de procéder strictement par ordre de taille.
 Ainsi, on soudera dans cet ordre :
-
 1. résistances et diodes, ponts le cas échéant
 2. supports IC1 et IC2 (voire IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les support)
 3. condensateurs "orange" non polarisés, oscillateur
