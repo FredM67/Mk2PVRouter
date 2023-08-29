@@ -52,16 +52,16 @@ jobs:
           git branch -a
           git remote -v
 
-      - name: Install TeXcommon
-        run: |
-          sudo apt-get install -y texlive-latex-recommended texlive-latex-extra
-
-      - name: Install Latex
+      - name: Install TeXLive
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: latexmk texlive-fonts-recommended
+          packages: latexmk texlive-base
           execute_install_scripts: true
           version: 1.0
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get install -y texlive-latex-extra
 
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
