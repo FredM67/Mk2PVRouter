@@ -69,13 +69,13 @@ jobs:
           make simplepdf
           mv _build/simplepdf/*.pdf _build/dirhtml/_static/Manuel_2.pdf
 
-      - uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: latexmk texlive-latex-extra
-      - name: Generate PDF 3
-        run: |
-          make latexpdf
-          mv _build/latex/*.pdf _build/dirhtml/_static/Manuel_3.pdf
+      #- uses: awalsh128/cache-apt-pkgs-action@latest
+      #  with:
+      #    packages: latexmk texlive-latex-extra
+      #- name: Generate PDF 3
+      #  run: |
+      #    make latexpdf
+      #    mv _build/latex/*.pdf _build/dirhtml/_static/Manuel_3.pdf
 
       # The following supports building all branches and combining on
       # gh-pages
