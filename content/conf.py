@@ -95,6 +95,6 @@ simplepdf_vars = {
     'cover': '#ffffff',
     'white': '#ffffff',
     'links': '#1a961a',
-    'bottom-center-content:': copyright,
+    'bottom-center-content:': 'copyright',
 }
 simplepdf_debug = True
