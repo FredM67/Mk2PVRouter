@@ -1,6 +1,6 @@
-(carte-mere-tri)=
+(carte-mere-mono)=
 
-# Carte-mère triphasée
+# Carte-mère monophasée
 
 ## Subsection
 

@@ -1,6 +1,6 @@
-(carte-mere-tri)=
+(carte-sortie-triac)=
 
-# Carte-mère triphasée
+# Carte-sortie triac
 
 ## Subsection
 

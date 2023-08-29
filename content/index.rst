@@ -28,4 +28,6 @@ Ce routeur existe en 2 versions, une monophasé, exclusivement pour les raccorde
    :caption: Contents:
 
    introduction.md
+   carte-mere-mono.md
    carte-mere-tri.md
+   carte-sortie-triac.md
