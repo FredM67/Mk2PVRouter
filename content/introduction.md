@@ -35,14 +35,14 @@ Ces composants sont aussi de tailles très différentes. Des plus petits, avec q
 Pour des raisons pratiques, il est conseillé de procéder strictement par ordre de taille.
 Ainsi, on soudera dans cet ordre :
 1. résistances et diodes, ponts le cas échéant
-1. supports IC1 et IC2 (voire IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les support)
-1. condensateurs "orange" non polarisés, oscillateur
-1. pont(s) de diodes
-1. tous les connecteurs SIL noirs et le connecteur d'affichage le cas échéant
-1. condensateurs polarisés (noir ou bleu)
-1. le(s) gros connecteur(s) haute tension
-1. le(s) porte-fusible
-1. enfin le(s) transformateur(s)
+2. supports IC1 et IC2 (voire IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les support)
+3. condensateurs "orange" non polarisés, oscillateur
+4. pont(s) de diodes
+5. tous les connecteurs SIL noirs et le connecteur d'affichage le cas échéant
+6. condensateurs polarisés (noir ou bleu)
+7. le(s) gros connecteur(s) haute tension
+8. le(s) porte-fusible
+9. enfin le(s) transformateur(s)
 
 Cet ordre précis permet de s'affranchir de tordre les pattes des composants, utiliser de l'adhésif, ...
 
