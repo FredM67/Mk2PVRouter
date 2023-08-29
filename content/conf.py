@@ -95,10 +95,4 @@ simplepdf_vars = {
     'cover': '#ffffff',
     'white': '#ffffff',
     'links': '#1a961a',
-    'top-left-content': '"Header left"',
-    'top-center-content': '"Header center"',
-    'top-right-content': '"Header right"',
-    'bottom-left-content': 'counter(page)',
-    'bottom-center-content': '"Bottom center"',
-    'bottom-right-content': 'string(heading)',
 }
