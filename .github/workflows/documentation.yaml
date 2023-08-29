@@ -71,6 +71,7 @@ jobs:
 
       - name: Generate PDF 3
         run: |
+          apt-get udpate & apt-get install -y -q latexmk
           make latexpdf
           mv _build/latex/*.pdf _build/dirhtml/_static/Manuel_3.pdf
 
