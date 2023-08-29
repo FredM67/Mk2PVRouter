@@ -77,3 +77,29 @@ if os.environ.get('GITHUB_REF', '') == 'refs/heads/'+github_version:
     html_js_files = [
         ('https://plausible.cs.aalto.fi/js/script.js', {"data-domain": "fredm67.github.io", "defer": "defer"}),
     ]
+
+# -- Options for PDF/LATEX output -------------------------------------------------
+latex_engine = 'xelatex'
+latex_elements = {
+    'papersize': 'a4paper',
+    'fontpkg': r'''
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+''',
+    'preamble': r'''
+\usepackage[titles]{tocloft}
+\cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
+\setlength{\cftchapnumwidth}{0.75cm}
+\setlength{\cftsecindent}{\cftchapnumwidth}
+\setlength{\cftsecnumwidth}{1.25cm}
+\sphinxboxsetup{border-width=2pt,%
+                border-radius=4pt,%
+                background-TeXcolor=yellow!20}
+% configure some styling element with some extra specific options:
+\protected\def\sphinxkeyboard#1{\sphinxbox[border-TeXcolor=green]{\sphinxcode{#1}}}
+''',
+    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
+    'printindex': r'\footnotesize\raggedright\printindex',
+}
+latex_show_urls = 'footnote'
