@@ -59,9 +59,9 @@ jobs:
           execute_install_scripts: true
           version: 1.0
 
-      # - name: Rebuild LaTeX formats
-      #   run: |
-      #     sudo fmtutil-sys --all
+      - name: Rebuild LaTeX formats
+        run: |
+          sudo texlive-latex-recommended
 
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
