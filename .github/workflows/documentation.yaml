@@ -54,12 +54,12 @@ jobs:
 
       - name: Install TeXcommon
         run: |
-          sudo apt-get install -y tex-common
+          sudo apt-get install -y texlive-latex-recommended
 
       - name: Install Latex
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+          packages: latexmk texlive-latex-extra texlive-fonts-recommended
           execute_install_scripts: true
           version: 1.0
 
