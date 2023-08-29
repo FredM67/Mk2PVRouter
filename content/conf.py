@@ -79,7 +79,6 @@ if os.environ.get('GITHUB_REF', '') == 'refs/heads/'+github_version:
     ]
 
 # -- Options for PDF/LATEX output -------------------------------------------------
-latex_engine = 'xelatex'
 latex_elements = {
     'papersize': 'a4paper',
     'fontpkg': r'''
