@@ -57,11 +57,14 @@ jobs:
         with:
           packages: latexmk texlive-full texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
 
+      - name: Rebuild LaTeX formats
+        run: |
+          sudo fmtutil-sys --all
+
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
       - name: Build Sphinx docs
         run: |
-          fmtutil-sys --all
           make dirhtml
 
       - name: Generate PDF 1
