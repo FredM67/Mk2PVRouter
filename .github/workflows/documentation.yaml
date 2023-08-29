@@ -1,7 +1,7 @@
 # From: https://github.com/rkdarst/sphinx-actions-test/blob/master/.github/workflows/sphinx-build.yml
 name: Sphinx
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 # If these SPHINXOPTS are enabled, then be strict about the builds and
 # fail on any warnings
@@ -13,6 +13,8 @@ jobs:
   build-and-deploy:
     name: Build and gh-pages
     runs-on: ubuntu-latest
+    container:
+      image: sphinxdoc/sphinx-latexpdf
     permissions:
       contents: write
     steps:
