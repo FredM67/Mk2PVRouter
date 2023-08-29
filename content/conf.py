@@ -24,6 +24,7 @@ extensions = [
     "sphinx.ext.githubpages",
     "sphinx_lesson",
     'sphinx.ext.mathjax',
+    'sphinx-mathjax-offline',
     'sphinx.ext.imgmath',
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',
