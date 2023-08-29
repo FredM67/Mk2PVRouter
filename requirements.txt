@@ -1,5 +1,6 @@
 sphinx_rtd_theme
 sphinx-copybutton
 sphinx-lesson
+sphinx-mathjax-offline
 sphinx_rtd_theme_ext_color_contrast
 sphinx-simplepdf
