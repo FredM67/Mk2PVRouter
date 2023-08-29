@@ -23,9 +23,9 @@ extensions = [
     # githubpages just adds a .nojekyll file
     'sphinx.ext.githubpages',
     'sphinx_lesson',
-    'sphinx.ext.mathjax',
-    'sphinx-mathjax-offline',
-    # 'sphinx.ext.imgmath',
+    # 'sphinx.ext.mathjax',
+    # 'sphinx-mathjax-offline',
+    'sphinx.ext.imgmath',
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',
     'sphinx_simplepdf',
@@ -33,6 +33,8 @@ extensions = [
 
 imgmath_image_format = 'svg'
 imgmath_embed = True
+
+version = "0.1"  # Will not be raised
 
 # Settings for myst_nb:
 # https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution
@@ -82,3 +84,21 @@ if os.environ.get('GITHUB_REF', '') == 'refs/heads/'+github_version:
     html_js_files = [
         ('https://plausible.cs.aalto.fi/js/script.js', {"data-domain": "fredm67.github.io", "defer": "defer"}),
     ]
+
+# -- Options for simplepdf output -------------------------------------------------
+simplepdf_vars = {
+    'cover-overlay': 'rgba(26, 150, 26, 0.7)',
+    'primary-opaque': 'rgba(26, 150, 26, 0.7)',
+    'cover-bg': 'url(frog.jpg) no-repeat center',
+    'primary': '#1a961a',
+    'secondary': '#379683',
+    'cover': '#ffffff',
+    'white': '#ffffff',
+    'links': '#1a961a',
+    'top-left-content': '"Header left"',
+    'top-center-content': '"Header center"',
+    'top-right-content': '"Header right"',
+    'bottom-left-content': 'counter(page)',
+    'bottom-center-content': '"Bottom center"',
+    'bottom-right-content': 'string(heading)',
+}
