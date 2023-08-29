@@ -71,7 +71,7 @@ jobs:
 
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: latexmk
+          packages: latexmk texlive-latex-extra
       - name: Generate PDF 3
         run: |
           make latexpdf
