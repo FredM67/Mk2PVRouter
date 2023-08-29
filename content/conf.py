@@ -21,8 +21,8 @@ conf_py_path = "/content/" # with leading and trailing slash
 
 extensions = [
     # githubpages just adds a .nojekyll file
-    "sphinx.ext.githubpages",
-    "sphinx_lesson",
+    'sphinx.ext.githubpages',
+    'sphinx_lesson',
     'sphinx.ext.imgmath',
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',
@@ -30,6 +30,7 @@ extensions = [
 ]
 
 imgmath_image_format = 'svg'
+imgmath_embed = True
 
 # Settings for myst_nb:
 # https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution

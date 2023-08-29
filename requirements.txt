@@ -1,8 +1,5 @@
-Sphinx
-git+https://github.com/rkdarst/sphinx-copybutton.git@exclude-unselectable-3
 sphinx_rtd_theme
-sphinx_rtd_theme_ext_color_contrast
-myst_nb
+sphinx-copybutton
 sphinx-lesson
+sphinx_rtd_theme_ext_color_contrast
 sphinx-simplepdf
-sphinx-mathjax-offline
