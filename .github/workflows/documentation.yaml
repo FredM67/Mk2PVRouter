@@ -69,6 +69,11 @@ jobs:
           make simplepdf
           mv _build/simplepdf/*.pdf _build/dirhtml/_static/Manuel_2.pdf
 
+      - name: Generate PDF 3
+        run: |
+          make latexpdf
+          mv _build/latex/*.pdf _build/dirhtml/_static/Manuel_3.pdf
+
       # The following supports building all branches and combining on
       # gh-pages
 
