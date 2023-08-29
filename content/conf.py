@@ -26,6 +26,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',
+    'sphinx_simplepdf',
 ]
 
 # Settings for myst_nb:
