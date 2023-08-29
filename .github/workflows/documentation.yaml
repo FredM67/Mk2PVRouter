@@ -7,6 +7,8 @@ on: [push, pull_request]
 # fail on any warnings
 #env:
 #  SPHINXOPTS: "-W --keep-going -T"
+
+
 jobs:
   build-and-deploy:
     name: Build and gh-pages
@@ -57,6 +59,12 @@ jobs:
       - name: Build Sphinx docs
         run: |
           make dirhtml
+
+      - name: Generate PDF
+        run: |
+          pip install https://github.com/rkdarst/sphinx_pyppeteer_builder/archive/refs/heads/main.zip
+          make pyppeteer
+          mv _build/pyppeteer/*.pdf _build/dirhtml/_static/Manuel.pdf
 
       # The following supports building all branches and combining on
       # gh-pages

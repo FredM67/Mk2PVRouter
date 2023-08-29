@@ -8,11 +8,11 @@ import sphinx.ext.mathjax
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Mk2PVRouter'
+project = 'Documentation du Mk2PVRouter'
 copyright = '2023, ENERGIE ROUTER & F. Metrich (aka FredM67)'
 author = 'ENERGIE ROUTER & F. Metrich (aka FredM67)'
-github_user = ""
-github_repo_name = ""  # auto-detected from dirname if blank
+github_user = "FredM67"
+github_repo_name = "Mk2PVRouter"  # auto-detected from dirname if blank
 github_version = "main"
 conf_py_path = "/content/" # with leading and trailing slash
 
@@ -27,6 +27,10 @@ extensions = [
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',
 ]
+
+# Settings for myst_nb:
+# https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution
+nb_execution_mode = "cache"
 
 source_suffix = ['.rst', '.md']
 
