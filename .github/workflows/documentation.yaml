@@ -69,10 +69,11 @@ jobs:
           make simplepdf
           mv _build/simplepdf/*.pdf _build/dirhtml/_static/Manuel_2.pdf
 
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: latexmk
       - name: Generate PDF 3
         run: |
-          sudo apt-get udpate
-          sudo apt-get install -y -q latexmk
           make latexpdf
           mv _build/latex/*.pdf _build/dirhtml/_static/Manuel_3.pdf
 
