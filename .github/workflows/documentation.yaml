@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: sphinxdoc/sphinx-latexpdf
+      options: --user root
     permissions:
       contents: write
     steps:
