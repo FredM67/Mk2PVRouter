@@ -61,6 +61,7 @@ jobs:
       - uses: ammaraskar/sphinx-problem-matcher@master
       - name: Build Sphinx docs
         run: |
+          sudo apt-get install texlive-full texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
           make dirhtml
 
       - name: Generate PDF 1
