@@ -82,7 +82,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          path: _build
+          path: _build/
 
       #- uses: awalsh128/cache-apt-pkgs-action@latest
       #  with:
@@ -97,6 +97,7 @@ jobs:
 
   # Clone and set up the old gh-pages branch
   Update_gh-pages:
+    name: Update gh-pages
     runs-on: ubuntu-latest
     needs: [Build]
     steps:
@@ -109,8 +110,6 @@ jobs:
         run: ls -R
 
       - uses: actions/download-artifact@v3
-        with:
-          path: _build
 
       - name: Display structure of files after build 2
         run: ls -R
