@@ -82,7 +82,8 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          path: _build/
+          name: my-artifact
+          path: _build
 
       #- uses: awalsh128/cache-apt-pkgs-action@latest
       #  with:
@@ -110,6 +111,7 @@ jobs:
         run: ls -R
 
       - uses: actions/download-artifact@v3
+        name: my-artifact
 
       - name: Display structure of files after build 2
         run: ls -R
