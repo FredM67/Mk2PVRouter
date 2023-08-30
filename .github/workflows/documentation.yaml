@@ -107,11 +107,9 @@ jobs:
           fetch-depth: 0
           lfs: true
 
-      - name: Display structure of files after build 1
-        run: ls -R
-
       - uses: actions/download-artifact@v3
         name: my-artifact
+        path: _build
 
       - name: Display structure of files after build 2
         run: ls -R
