@@ -6,15 +6,14 @@
 Bienvenue dans la documentation du Mk2PVRouter !
 ================================================
 
-Le Mk2PVRouter permet de mesurer et d’optimiser l'excédent de production d’une installation photovoltaïque/éolienne/... et d’effectuer la diversion (ou routage) de celui-ci vers une ou plusieurs charges résistives, la résistance d'un chauffe-eau ou d'un radiateur électrique par exemple.
-Ainsi il permet d’augmenter significativement la part d’autoconsommation de l’énergie produite.
+Le MK2 PV Router est l’accessoire indispensable lorsque l’on souhaite optimiser son autoconsommation.
 
-La mesure de la puissance active est effectuée en permanence sur l'ensemble des entrées (plusieurs milliers de fois par seconde).
-Selon le surplus disponible, cette puissance est envoyée toutes les 10ms vers une ou plusieurs sorties de régulation de type "Proportionnelle Intégrale" afin de piloter les sorties et d’assurer le plus précisément possible le maintien d'une consommation/injection nulle au point de raccordement.
+Particulièrement adapté à l’alimentation de résistances (chauffe eau, radiateur, sol chauffant) du fait de son alimentation à puissance variable, il saura orienter votre surplus vers le ou les équipements raccordés.
 
+Le routeur surveille en permanence la production d’énergie de votre système en autoconsommation et redirige tout excédent d’électricité vers les charges branchées.
 Grace aux modules sortie-relais, il peut aussi gérer des installations de chauffage ou toutes sortes d'appareils avec ses fonctions de programmateurs horaire, temporisations, thermostats, préparation ECS, chauffage... toutes configurables librement.
 
-Ce routeur existe en 2 versions, une monophasé, exclusivement pour les raccordements monophasés, et une triphasé pour les raccordements en triphasés. Seul le raccordement est important, peu importe que la production d'électricité soit en monophasé ou que l'on utilise que des appareils monophasés.
+Ce routeur existe en 2 versions, une version monophasé, exclusivement pour les raccordements monophasés, et une triphasé pour les raccordements en triphasés. Seul le raccordement est important, peu importe que la production d'électricité soit en monophasé ou que l'on utilise que des appareils monophasés.
 
 .. callout:: À retenir
 
@@ -22,6 +21,28 @@ Ce routeur existe en 2 versions, une monophasé, exclusivement pour les raccorde
 
    Raccordement triphasé = routeur triphasé
 
+.. figure:: img/Schema-dimplantation.png
+   :align: center
+   :alt: Schéma d'implantation
+   
+   Schéma d'implantation.
+
+Les 2 graphiques suivants vous montrent une production et une consommation typiques d'un foyer.
+Les pics importants représentent la consommation classique dûe au fonctionnement d'un chauffe-eau.
+
+.. figure:: img/Production-et-consommation-journaliere-sans-MK2-PV-Router.png
+   :align: center
+   :alt: Sans Mk2PVRouter
+
+   Production et consommation typiques SANS Mk2PVRouter
+
+.. figure:: img/Production-et-consommation-journaliere-avec-MK2-PV-Router.png
+   :align: center
+   :alt: Avec Mk2PVRouter
+
+   Production et consommation typiques AVEC Mk2PVRouter
+
+Le routeur va permettre de décaler la consommation du chauffe-eau aux moments où l'on produit sa propre électricité gratuite (hors amortissement bien sûr du système de production).
 
 .. toctree::
    :maxdepth: 2
@@ -31,3 +52,6 @@ Ce routeur existe en 2 versions, une monophasé, exclusivement pour les raccorde
    carte-mere-mono.md
    carte-mere-tri.md
    carte-sortie-triac.md
+   boitier.md
+   dissipateur.md
+   

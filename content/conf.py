@@ -29,6 +29,7 @@ extensions = [
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',
     'sphinx_simplepdf',
+    'sphinxcontrib.drawio',
 ]
 
 imgmath_image_format = 'svg'
