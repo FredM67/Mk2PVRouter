@@ -80,9 +80,12 @@ jobs:
           make simplepdf
           mv _build/simplepdf/*.pdf _build/dirhtml/_static/Manuel_2.pdf
 
+      - name: Display structure of files after build
+        run: ls -R
+
       - uses: actions/upload-artifact@v3
         with:
-          path: ${{ github.repository }}/_build
+          path: _build
 
       #- uses: awalsh128/cache-apt-pkgs-action@latest
       #  with:
@@ -102,8 +105,8 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          path: ${{ github.repository }}/_build
-          
+          path: _build
+
       - name: Display structure of downloaded files
         run: ls -R
 
