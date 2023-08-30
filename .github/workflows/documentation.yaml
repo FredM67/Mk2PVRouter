@@ -110,6 +110,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: my-artifact
+          path: _build
 
       - name: Display structure of files after build 2
         run: ls -R
