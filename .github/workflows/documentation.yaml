@@ -108,8 +108,8 @@ jobs:
           lfs: true
 
       - uses: actions/download-artifact@v3
-        name: my-artifact
-        path: _build
+        with:
+          name: my-artifact
 
       - name: Display structure of files after build 2
         run: ls -R
