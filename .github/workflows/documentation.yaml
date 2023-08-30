@@ -105,9 +105,15 @@ jobs:
           fetch-depth: 0
           lfs: true
 
+      - name: Display structure of files after build 1
+        run: ls -R
+
       - uses: actions/download-artifact@v3
         with:
           path: _build
+
+      - name: Display structure of files after build 2
+        run: ls -R
 
       # https://github.com/marketplace/actions/checkout
       - name: Clone old gh-pages
