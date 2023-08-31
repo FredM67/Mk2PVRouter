@@ -40,12 +40,12 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get -y install wget curl
-          curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep '\.deb' | cut -d '"' -f 4 | wget -i -
+          curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep `dpkg --print-architecture` | grep '\.deb' | cut -d '"' -f 4 | wget -i -
           sudo apt-get -f install ./drawio-amd64-*.deb
 
       - name: Check install drawio
         run: |
-          find / -name drawio 2>/dev/null
+          drawio --version
 
       # https://docs.github.com/en/actions/guides/building-and-testing-python#installing-dependencies
       # ^-- This gives info on installing dependencies with pip
