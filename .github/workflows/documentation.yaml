@@ -25,7 +25,7 @@ jobs:
       - name: Install drawio
         run: |
           sudo apt-get update
-          sudo apt-get -y install wget curl
+          sudo apt-get -y install wget curl libgbm-dev libasound2
           curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep `dpkg --print-architecture` | grep '\.deb' | cut -d '"' -f 4 | wget -i -
           sudo apt-get -f install ./drawio-amd64-*.deb
 
@@ -33,7 +33,7 @@ jobs:
       # ^-- This gives info on matrix testing.
       - name: Install Python
         uses: actions/setup-python@v3
-        
+
       # https://docs.github.com/en/actions/guides/building-and-testing-python#caching-dependencies
       # ^-- How to set up caching for pip on Ubuntu
       - name: Cache pip
