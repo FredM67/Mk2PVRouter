@@ -70,10 +70,12 @@ language = 'fr'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# html_static_path = ['_static']
+html_static_path = ['img/cover.jpg']
+
 # HTML context:
 from os.path import basename, dirname, realpath
 html_context = {
@@ -94,9 +96,8 @@ if os.environ.get('GITHUB_REF', '') == 'refs/heads/'+github_version:
 
 # -- Options for simplepdf output -------------------------------------------------
 simplepdf_vars = {
-    'cover-overlay': 'rgba(26, 150, 26, 0.7)',
     'primary-opaque': 'rgba(26, 150, 26, 0.7)',
-    'cover-bg': 'url(frog.jpg) no-repeat center',
+    'cover-bg': 'url(cover.jpg) no-repeat center',
     'primary': '#1a961a',
     'secondary': '#379683',
     'cover': '#ffffff',
