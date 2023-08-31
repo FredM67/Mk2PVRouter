@@ -175,9 +175,6 @@ jobs:
           name: gh-pages-artifact
           path: _gh-pages
 
-      - name: Display structure of files
-        run: ls -R
-
   # Deploy
   # https://github.com/peaceiris/actions-gh-pages                    
   Deploy:
