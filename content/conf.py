@@ -35,6 +35,8 @@ extensions = [
 imgmath_image_format = 'svg'
 imgmath_embed = True
 
+drawio_binary_path = '/opt/drawio/drawio'
+
 version = "0.1"  # Will not be raised
 
 # Settings for myst_nb:
