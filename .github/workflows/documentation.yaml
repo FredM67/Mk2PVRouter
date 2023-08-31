@@ -21,10 +21,19 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
+
+      - name: Install drawio
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install wget curl
+          curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep `dpkg --print-architecture` | grep '\.deb' | cut -d '"' -f 4 | wget -i -
+          sudo apt-get -f install ./drawio-amd64-*.deb
+
       # https://github.com/marketplace/actions/setup-python
       # ^-- This gives info on matrix testing.
       - name: Install Python
         uses: actions/setup-python@v3
+        
       # https://docs.github.com/en/actions/guides/building-and-testing-python#caching-dependencies
       # ^-- How to set up caching for pip on Ubuntu
       - name: Cache pip
@@ -35,13 +44,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
             ${{ runner.os }}-
-
-      - name: Install drawio
-        run: |
-          sudo apt-get update
-          sudo apt-get -y install wget curl
-          curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep `dpkg --print-architecture` | grep '\.deb' | cut -d '"' -f 4 | wget -i -
-          sudo apt-get -f install ./drawio-amd64-*.deb
 
       # https://docs.github.com/en/actions/guides/building-and-testing-python#installing-dependencies
       # ^-- This gives info on installing dependencies with pip
