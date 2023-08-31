@@ -38,10 +38,13 @@ jobs:
 
       - name: Install drawio
         run: |
-          sudo apt update
-          sudo apt -y install wget curl
+          sudo apt-get update
+          sudo apt-get -y install wget curl
           curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep '\.deb' | cut -d '"' -f 4 | wget -i -
-          sudo apt -f install ./drawio-amd64-*.deb
+          sudo apt-get -f install ./drawio-amd64-*.deb
+
+      - name: Check install drawio
+        run: |
           find / -name drawio 2>/dev/null
 
       # https://docs.github.com/en/actions/guides/building-and-testing-python#installing-dependencies
