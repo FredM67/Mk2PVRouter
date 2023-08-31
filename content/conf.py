@@ -36,7 +36,7 @@ extensions = [
 imgmath_image_format = 'svg'
 imgmath_embed = True
 
-drawio_builder_export_format = 'png'
+drawio_builder_export_format = {"simplepdf": "png"}
 
 # Make sure the target is unique
 autosectionlabel_prefix_document = True
