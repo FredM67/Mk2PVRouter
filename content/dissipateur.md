@@ -19,6 +19,7 @@ Chaque dissipateur devra être percé de 3 trous, 2 servant à la fixation sur l
 ```{drawio-figure} drawio/dissipateur.drawio
 :alt: Gabarit de perçage
 :align: center
+:format: pdf
 
 Gabarit de perçage
 ```

@@ -30,12 +30,14 @@ extensions = [
     'sphinx_copybutton',
     'sphinx_simplepdf',
     'sphinxcontrib.drawio',
+    'sphinx.ext.autosectionlabel',
 ]
 
 imgmath_image_format = 'svg'
 imgmath_embed = True
 
-drawio_binary_path = '/opt/drawio/drawio'
+# Make sure the target is unique
+autosectionlabel_prefix_document = True
 
 version = "0.1"  # Will not be raised
 
