@@ -22,6 +22,8 @@ conf_py_path = "/content/" # with leading and trailing slash
 extensions = [
     # githubpages just adds a .nojekyll file
     'sphinx.ext.githubpages',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.todo',
     'sphinx_lesson',
     # 'sphinx.ext.mathjax',
     # 'sphinx-mathjax-offline',
@@ -48,6 +50,9 @@ version = "0.1"  # Will not be raised
 nb_execution_mode = "cache"
 
 source_suffix = ['.rst', '.md']
+
+# The master toctree document.
+master_doc = "index"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
