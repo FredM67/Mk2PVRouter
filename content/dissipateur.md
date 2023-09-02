@@ -14,7 +14,7 @@ Compte tenu de la taille du dissipateur, il est recommandé de ne pas dépasser 
 
 ## Perçage
 
-Chaque dissipateur devra être percé de 3 trous, 2 servant à la fixation sur le boîtier, le 3^ème au milieu est destiné au triac.
+Chaque dissipateur devra être percé de 3 trous, 2 servant à la fixation sur le boîtier, le 3{sup}`ème` au milieu est destiné au triac.
 
 ```{drawio-figure} drawio/dissipateur.drawio
 :alt: Gabarit de perçage
