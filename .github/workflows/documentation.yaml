@@ -76,6 +76,7 @@ jobs:
       
       - name: Build pdf files from drawio
         run: |
+          xvfb
           mkdir -p content/pdf
           drawio --export --format pdf --output content/pdf/ content/drawio/dissipateur.drawio
 
