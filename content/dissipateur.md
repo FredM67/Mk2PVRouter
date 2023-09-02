@@ -22,8 +22,9 @@ Chaque dissipateur devra être percé de 3 trous, 2 servant à la fixation sur l
 
 Gabarit de perçage
 ```
+{download}`Gabarit de perçage<pdf/dissipateur.pdf>`
 
-Comme indiqué, le perçage sera en 3mm de diamètre. Pour le trou du milieu, on percera en 4mm sur une profondeur de 2mm.
+Comme indiqué, le perçage sera en 3mm de diamètre. Pour le trou du milieu, on percera d'abord en 3mm entièrement, puis en 4mm sur une profondeur de 2mm.
 
 Ce gabarit devra être imprimé en taille réelle.
 Veillez à bien vérifier qu'une fois imprimé, vous mesurez les mêmes cotes.

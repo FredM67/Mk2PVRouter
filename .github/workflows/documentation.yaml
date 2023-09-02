@@ -73,6 +73,11 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get install -y texlive-latex-extra
+      
+      - name: Build pdf files from drawio
+        run: |
+          mkdir -p content/pdf
+          drawio --export --format pdf --output content/pdf/ content/drawio/dissipateur.drawio
 
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
