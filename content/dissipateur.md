@@ -19,7 +19,7 @@ Chaque dissipateur devra être percé de 3 trous, 2 servant à la fixation sur l
 ```{drawio-figure} drawio/dissipateur.drawio
 :alt: Gabarit de perçage
 :align: center
-:page-index: 1
+:page-index: 0
 
 Gabarit de perçage
 ```
@@ -46,7 +46,7 @@ Le boîtier devra être percé de 3 trous, 2 servant à la fixation du dissipate
 ```{drawio-figure} drawio/dissipateur.drawio
 :alt: Gabarit de perçage du boîtier
 :align: center
-:page-index: 2
+:page-index: 1
 
 Gabarit de perçage du boîtier
 ```
