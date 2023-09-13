@@ -28,7 +28,7 @@ Les paires de trous correctes sont indiquées par les lignes épaisses dans la c
 
 Tout d’abord, le fil est plié dans une forme appropriée pour passer à travers ces trous.
 
-Ensuite, les extrémités sont pliées vers l’extérieur et fermement pressées contre le dessous de la planche…
+Ensuite, les extrémités sont pliées vers l’extérieur et fermement pressées contre le dessous du PCB.
 
 Lorsque les fils sont dans la bonne position, les quatre extrémités peuvent être coupées à longueur.
 
@@ -38,17 +38,17 @@ Une fois les agrafes en cuivre en place, tous les composants basse consommation 
 
 Comme indiqué sur le schéma de circuit :
 - **R1** = **120** &Omega; (lors du fonctionnement à partir d'une source en **3,3 V**, ou **180** &Omega; pour un fonctionnement en **5 V**)
-- **R2** = **330** &Omega; (celui en bas à gauche de la paire)
-- **R3** = **360** &Omega; (celui en haut à droite de la paire)
+- **R2** = **330** &Omega;
+- **R3** = **360** &Omega;
 
-Si vous installez un connecteur DIL pour l'optocoupleur ou le circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le PCB.
+Si vous installez un connecteur DIL pour l'optocoupleur ou circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le PCB.
 
 Ces caractéristiques indiquent toutes deux la broche 1.
 
 ## Soudure de la partie *haute puissance*/*haute tension*
 
 ```{danger}
-La qualité des soudures sera primordiale pour cette partie.
+La qualité des soudures sera primordiale pour cette étape.
 
 Une soudure ratée peut entraîner la destruction immédiate de la carte avec risque d'incendie lors de la mise sous tension.
 ```
@@ -69,12 +69,12 @@ Afin de faciliter cette opération mais aussi de protéger le triac des hautes t
 
 Pour les connexions en contact avec chacune des agrafes, un bon fer chaud et beaucoup de soudure sont nécessaires.
 
-Lorsque vous soudez la broche centrale, assurez-vous que la soudure ne dépasse pas vers la broche de gâchette. Si tel est le cas, une partie de la soudure doit être soigneusement coupée.
+Lorsque vous soudez la broche centrale, assurez-vous que la soudure ne dépasse pas vers la broche de gâchette. Si tel est le cas, une partie de la soudure devra être soigneusement retirée.
 
 ```{warning}
 Lors de la soudure du triac, veillez à bien vérifier que la soudure est "remontée" de l'autre côté du circuit. 
 
-Cela assurera une continuité parfait mais aussi une solidité accrue.
+Cela assurera une continuité parfaite mais aussi une solidité accrue.
 ```
 
 ## Mise en place de l'optocoupleur
