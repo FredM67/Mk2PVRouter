@@ -51,7 +51,7 @@ Le routeur va permettre de décaler la consommation du chauffe-eau aux moments o
    introduction.md
    carte-mere-mono.md
    carte-mere-tri.md
-   carte-sortie-triac.md
+   carte-sortie.md
    boitier.md
    dissipateur.md
    
