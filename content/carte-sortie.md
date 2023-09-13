@@ -37,9 +37,9 @@ Lorsque les fils sont dans la bonne position, les quatre extrémités peuvent ê
 Une fois les agrafes en cuivre en place, tous les composants basse consommation peuvent désormais être installés.
 
 Comme indiqué sur le schéma de circuit :
-- R1 = 120 {math}`omega` (lors du fonctionnement à partir d'une source de 3,3 V, ou 180 {math}`omega` pour un fonctionnement de 5 V)
-- R2 = 330 {math}`omega` (celui en bas à gauche de la paire)
-- R3 = 360 {math}`omega` (celui en haut à droite de la paire)
+- R1 = 120 &Omega; (lors du fonctionnement à partir d'une source de 3,3 V, ou 180 &Omega; pour un fonctionnement de 5 V)
+- R2 = 330 &Omega; (celui en bas à gauche de la paire)
+- R3 = 360 &Omega; (celui en haut à droite de la paire)
 
 Si vous installez un connecteur DIL pour l'opto-isolateur ou le circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le PCB.
 Ces caractéristiques indiquent toutes deux la broche 1.
