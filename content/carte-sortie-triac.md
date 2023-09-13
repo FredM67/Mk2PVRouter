@@ -11,7 +11,9 @@ Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet o
 
 ```{danger}
 Certaines soudures sur cette carte ont une très grande importance.
-Il faudra veiller à donner une attention particulière à la qualité de chacune des soudure sur la partie **haute tension**.
+
+Il faudra veiller à donner une attention particulière à la **qualité** de chacune des soudure sur la partie **haute tension**.
+
 Une soudure ratée peut entraîner la destruction immédiate de la carte avec risque d'incendie lors de la mise sous tension.
 ```
 
