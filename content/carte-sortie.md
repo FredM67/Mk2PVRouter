@@ -44,7 +44,7 @@ Comme indiqué sur le schéma de circuit :
 Si vous installez un connecteur DIL pour l'opto-isolateur ou le circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le PCB.
 Ces caractéristiques indiquent toutes deux la broche 1.
 
-## Soudure de la partie haute puissance
+## Soudure de la partie *haute puissance*/*haute tension*
 
 ```{danger}
 La qualité des soudures sera primordiale pour cette partie.
@@ -57,7 +57,7 @@ Lors de la construction d'un système complet, il peut être plus approprié que
 Les conseils ci-dessous sont proposés lorsqu'un étage de sortie doit être testé de manière isolée.
 
 ```{danger}
-:title: Avertissement de Sécurité
+**Avertissement de Sécurité**
 Pour tester que le déclencheur et le triac fonctionnent, un accès à la tension secteur 230 V CA est requis.
 Veuillez faire très attention et n’entreprendre cette étape suivante que si vous êtes compétent pour le faire.
 ```
