@@ -41,7 +41,7 @@ Comme indiqué sur le schéma de circuit :
 - R2 = 330 &Omega; (celui en bas à gauche de la paire)
 - R3 = 360 &Omega; (celui en haut à droite de la paire)
 
-Si vous installez un connecteur DIL pour l'opto-isolateur ou le circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le PCB.
+Si vous installez un connecteur DIL pour l'optocoupleur ou le circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le PCB.
 Ces caractéristiques indiquent toutes deux la broche 1.
 
 ## Soudure de la partie *haute puissance*/*haute tension*
@@ -50,6 +50,35 @@ Ces caractéristiques indiquent toutes deux la broche 1.
 La qualité des soudures sera primordiale pour cette partie.
 Une soudure ratée peut entraîner la destruction immédiate de la carte avec risque d'incendie lors de la mise sous tension.
 ```
+
+### Connecteur haute puissance
+
+Ce composant peut être temporairement maintenu en place en pliant les agrafes en cuivre de manière à ce qu'elles viennent juste pincer les broches saillantes.
+
+Ensuite, avec un bon fer chaud (régler la température à 450°C si possible), beaucoup de soudure peut être appliquée.
+
+### Triac
+
+De la même façon que précédemment, ce composant peut être temporairement maintenu en place en pliant les agrafes en cuivre de manière à ce qu'elles viennent juste pincer les broches saillantes.
+
+Il faudrait laisser dépasser seulement 1-2 mm des pattes du triac.
+
+Afin de faciliter cette opération mais aussi de protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l'un des dissipateurs non encore monté que vous avez à disposition. On peut prendre une pince à linge par exemple, ou toute autre pince à ressort.
+
+Pour les connexions en contact avec chacune des agrafes, un bon fer chaud et beaucoup de soudure sont nécessaires.
+
+Lorsque vous soudez la broche centrale, assurez-vous que la soudure ne dépasse pas vers la broche de gâchette. Si tel est le cas, une partie de la soudure doit être soigneusement coupée.
+
+```{warning}
+Lors de la soudure du triac, veillez à bien vérifier que la soudure est "remontée" de l'autre côté du circuit. Cela assurera une continuité parfait mais aussi une solidité accrue.
+```
+
+## Mise en place de l'optocoupleur
+
+Ce minuscule composant à 6 broches forme le *pont* entre les côtés basse tension et haute tension.
+Le point sur la puce (surligné ici en rouge) doit être à côté du cercle sur le PCB.
+
+S'il est monté dans le mauvais sens, cela ne fonctionnera pas. Mais grâce à la disposition de ses pins, il devrait survivre à l’expérience.
 
 ## Test
 
@@ -65,6 +94,6 @@ Veuillez faire très attention et n’entreprendre cette étape suivante que si 
 
 Voici une plate-forme construit qui permet de tester les cartes de sortie avec ou sans le triac soudé en place.
 Cette plate-forme est affichée en haut de la page Galerie de photos.
-Lors du test d'une carte de sortie, il est important que le triac fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit opto-isolateur et un ou plusieurs composants seront alors détruits immédiatement.
+Lors du test d'une carte de sortie, il est important que le triac fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit optocoupleur et un ou plusieurs composants seront alors détruits immédiatement.
 
 En tenant dûment compte de l'avertissement de sécurité ci-dessus, l'approche simple illustrée ci-dessous devrait convenir pour tester des cartes individuelles.
