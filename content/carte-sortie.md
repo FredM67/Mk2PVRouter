@@ -87,6 +87,7 @@ S'il est monté dans le mauvais sens, cela ne fonctionnera pas. Mais grâce à l
 ## Test
 
 Lors de la construction d'un système complet, il peut être plus approprié que l'étage de sortie terminé soit monté dans le boîtier avant d'être testé.
+
 Les conseils ci-dessous sont proposés lorsqu'un étage de sortie doit être testé de manière isolée.
 
 ```{danger}
@@ -98,7 +99,9 @@ Veuillez faire très attention et n’entreprendre cette étape suivante que si 
 ```
 
 Voici une plate-forme construit qui permet de tester les cartes de sortie avec ou sans le triac soudé en place.
+
 Cette plate-forme est affichée en haut de la page Galerie de photos.
+
 Lors du test d'une carte de sortie, il est important que le triac fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit optocoupleur et un ou plusieurs composants seront alors détruits immédiatement.
 
 En tenant dûment compte de l'avertissement de sécurité ci-dessus, l'approche simple illustrée ci-dessous devrait convenir pour tester des cartes individuelles.
