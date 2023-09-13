@@ -37,17 +37,19 @@ Lorsque les fils sont dans la bonne position, les quatre extrémités peuvent ê
 Une fois les agrafes en cuivre en place, tous les composants basse consommation peuvent désormais être installés.
 
 Comme indiqué sur le schéma de circuit :
-- R1 = 120 &Omega; (lors du fonctionnement à partir d'une source de 3,3 V, ou 180 &Omega; pour un fonctionnement de 5 V)
-- R2 = 330 &Omega; (celui en bas à gauche de la paire)
-- R3 = 360 &Omega; (celui en haut à droite de la paire)
+- **R1** = **120** &Omega; (lors du fonctionnement à partir d'une source de **3,3 V**, ou **180** &Omega; pour un fonctionnement de **5 V**)
+- **R2** = **330** &Omega; (celui en bas à gauche de la paire)
+- **R3** = **360** &Omega; (celui en haut à droite de la paire)
 
 Si vous installez un connecteur DIL pour l'optocoupleur ou le circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le PCB.
+
 Ces caractéristiques indiquent toutes deux la broche 1.
 
 ## Soudure de la partie *haute puissance*/*haute tension*
 
 ```{danger}
 La qualité des soudures sera primordiale pour cette partie.
+
 Une soudure ratée peut entraîner la destruction immédiate de la carte avec risque d'incendie lors de la mise sous tension.
 ```
 
@@ -70,7 +72,9 @@ Pour les connexions en contact avec chacune des agrafes, un bon fer chaud et bea
 Lorsque vous soudez la broche centrale, assurez-vous que la soudure ne dépasse pas vers la broche de gâchette. Si tel est le cas, une partie de la soudure doit être soigneusement coupée.
 
 ```{warning}
-Lors de la soudure du triac, veillez à bien vérifier que la soudure est "remontée" de l'autre côté du circuit. Cela assurera une continuité parfait mais aussi une solidité accrue.
+Lors de la soudure du triac, veillez à bien vérifier que la soudure est "remontée" de l'autre côté du circuit. 
+
+Cela assurera une continuité parfait mais aussi une solidité accrue.
 ```
 
 ## Mise en place de l'optocoupleur
@@ -89,6 +93,7 @@ Les conseils ci-dessous sont proposés lorsqu'un étage de sortie doit être tes
 **Avertissement de Sécurité**
 
 Pour tester que le déclencheur et le triac fonctionnent, un accès à la tension secteur 230 V CA est requis.
+
 Veuillez faire très attention et n’entreprendre cette étape suivante que si vous êtes compétent pour le faire.
 ```
 
