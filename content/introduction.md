@@ -38,15 +38,12 @@ Ainsi, on soudera dans cet ordre :
 2. supports IC1 et IC2 (voire IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les support)
 3. condensateurs "orange" non polarisés, oscillateur
 4. pont(s) de diodes
-5. tous les connecteurs SIL noirs et le connecteur d'affichage le cas échéant
+5. tous les connecteurs SIL noirs et le connecteur d'affichage, le cas échéant
 6. condensateurs polarisés (noir ou bleu)
-7. le(s) gros connecteur(s) haute tension
-8. le(s) porte-fusible
-9. enfin le(s) transformateur(s)
+7. le socle pour l'antenne, le cas échéant
+8. le(s) gros connecteur(s) "haute tension"
+9. le(s) porte-fusible
+10. le ou les régulateur(s) de tension
+11. enfin le(s) transformateur(s)
 
 Cet ordre précis permet de s'affranchir de tordre les pattes des composants, utiliser de l'adhésif, ...
-
-Test formule math
-```{math}
-a^2 + b^2 = c^2
-```
