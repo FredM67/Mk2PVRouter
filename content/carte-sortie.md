@@ -37,7 +37,7 @@ Lorsque les fils sont dans la bonne position, les quatre extrémités peuvent ê
 Une fois les agrafes en cuivre en place, tous les composants basse consommation peuvent désormais être installés.
 
 Comme indiqué sur le schéma de circuit :
-- **R1** = **120** &Omega; (lors du fonctionnement à partir d'une source de **3,3 V**, ou **180** &Omega; pour un fonctionnement de **5 V**)
+- **R1** = **120** &Omega; (lors du fonctionnement à partir d'une source en **3,3 V**, ou **180** &Omega; pour un fonctionnement en **5 V**)
 - **R2** = **330** &Omega; (celui en bas à gauche de la paire)
 - **R3** = **360** &Omega; (celui en haut à droite de la paire)
 

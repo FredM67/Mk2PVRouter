@@ -2,28 +2,7 @@
 
 # Carte-mère monophasée
 
-## Subsection
+Plusieurs versions du PCB peuvent exister.
 
-Exciting documentation in here.
-Let's make a list (empty surrounding lines required):
+Bien qu'elles fonctionnent toutes de la même manière, chaque version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l’Arduino, ...).
 
-- item 1
-
-  - nested item 1
-  - nested item 2
-
-- item 2
-- item 3
-
-### SubSubsection
-
-Exciting documentation in here.
-Let's make a list (empty surrounding lines required):
-
-- item 1
-
-  - nested item 1
-  - nested item 2
-
-- item 2
-- item 3
