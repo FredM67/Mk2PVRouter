@@ -58,6 +58,7 @@ Les conseils ci-dessous sont proposés lorsqu'un étage de sortie doit être tes
 
 ```{danger}
 **Avertissement de Sécurité**
+
 Pour tester que le déclencheur et le triac fonctionnent, un accès à la tension secteur 230 V CA est requis.
 Veuillez faire très attention et n’entreprendre cette étape suivante que si vous êtes compétent pour le faire.
 ```
