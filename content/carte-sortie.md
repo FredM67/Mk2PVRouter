@@ -22,9 +22,9 @@ Une soudure ratée peut entraîner la destruction immédiate de la carte avec ri
 ## Pose des *agrafes* en cuivre
 
 La première étape du processus d'assemblage consiste à installer une paire d'*agrafes* en cuivre massif qui augmentent la capacité de la carte à supporter des courants élevés.
-La section transversale recommandée est de 1,5 mm{sup}`2`compte tenu de la longueur très faible.
+La section transversale recommandée est de 1,5&nbsp;mm{sup}`2`compte tenu de la longueur très faible.
 
-Les paires de trous correctes sont indiquées par les lignes épaisses dans la couche de sérigraphie. Ces trous sont espacés d'environ 5 mm.
+Les paires de trous correctes sont indiquées par les lignes épaisses dans la couche de sérigraphie. Ces trous sont espacés d'environ 5&nbsp;mm.
 
 Tout d’abord, le fil est plié dans une forme appropriée pour passer à travers ces trous.
 
@@ -57,13 +57,13 @@ Une soudure ratée peut entraîner la destruction immédiate de la carte avec ri
 
 Ce composant peut être temporairement maintenu en place en pliant les agrafes en cuivre de manière à ce qu'elles viennent juste pincer les broches saillantes.
 
-Ensuite, avec un bon fer chaud (régler la température à 450°C si possible), beaucoup de soudure peut être appliquée.
+Ensuite, avec un bon fer chaud (régler la température à 450&nbsp;°C si possible), beaucoup de soudure peut être appliquée.
 
 ### Triac
 
 De la même façon que précédemment, ce composant peut être temporairement maintenu en place en pliant les agrafes en cuivre de manière à ce qu'elles viennent juste pincer les broches saillantes.
 
-Il faudrait laisser dépasser seulement 1-2 mm des pattes du triac.
+Il faudrait laisser dépasser seulement 1-2&nbsp;mm des pattes du triac.
 
 Afin de faciliter cette opération mais aussi de protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l'un des dissipateurs non encore monté que vous avez à disposition. On peut prendre une pince à linge par exemple, ou toute autre pince à ressort.
 

@@ -25,12 +25,12 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 ```{note}
 Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour R4 et R5 sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie. R4 = 100&nbsp;&Omega; convient pour un fonctionnement en 3,3V. Pour une meilleure utilisation de la plage d'entrée de l'ADC, R4 doit être augmenté à 180&nbsp;&Omega; pour un fonctionnement en 5V.
 
-La valeur pour R6 et R7 a été initialement spécifiée comme étant 150&nbsp;&Omega;. Lorsque le processeur fonctionne à 3,3V, cela donne une plage de fonctionnement d'environ 4 kW. En réduisant ces valeurs à 120R, l'autonomie est augmentée à ~5 kW. Pour un système 5V, la valeur originale de 150&nbsp;&Omega; donne une plage de fonctionnement d'environ 6 kW.
+La valeur pour R6 et R7 a été initialement spécifiée comme étant 150&nbsp;&Omega;. Lorsque le processeur fonctionne à 3,3V, cela donne une plage de fonctionnement d'environ 4&nbsp;kW. En réduisant ces valeurs à 120R, l'autonomie est augmentée à ~5&nbsp;kW. Pour un système 5V, la valeur originale de 150&nbsp;&Omega; donne une plage de fonctionnement d'environ 6&nbsp;kW.
 
 Si un enregistrement de données dans toute la maison est nécessaire, la plage de travail du capteur « grille » peut être augmentée en réduisant la valeur de R6. Il faut toutefois reconnaître que la sensibilité du système de mesure sera réduite d’autant.
-- **R6** = **56&nbsp;&Omega;** permettra des mesures jusqu'à ~10 kW
-- **R6** = **47&nbsp;&Omega;** permettra des mesures jusqu'à ~12 kW
-- **R6** = **39&nbsp;&Omega;** permettra des mesures jusqu'à ~14 kW.
+- **R6** = **56&nbsp;&Omega;** permettra des mesures jusqu'à ~10&nbsp;kW
+- **R6** = **47&nbsp;&Omega;** permettra des mesures jusqu'à ~12&nbsp;kW
+- **R6** = **39&nbsp;&Omega;** permettra des mesures jusqu'à ~14&nbsp;kW.
 
 Ces valeurs de résistance de charge s'appliquent lorsque le processeur fonctionne à 3,3V. S'il fonctionne à 5V, ces plages sont augmentées d'environ 50&nbsp;%.
 
