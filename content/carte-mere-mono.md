@@ -8,7 +8,7 @@ Bien qu'elles fonctionnent toutes de la même manière, chaque version offre plu
 
 ## Soudure des composants
 
-### Soudure des résistances
+### Résistances
 
 Ces composants n'ont pas de sens et sont très peu sensibles à l'électricité statique.
 
@@ -47,7 +47,7 @@ Si la carte doit fonctionner à **3,3&nbsp;V**, ces huit résistances doivent ê
 En cas de fonctionnement en **5&nbsp;V**, cette valeur doit être augmentée à 470&nbsp;&Omega; pour maintenir un niveau de luminosité similaire.
 ```
 
-### Soudure des diodes
+### Diodes
 
 Ensuite, les diodes peuvent être ajoutées.
 
@@ -59,7 +59,7 @@ Ces composants sont polarisés.
 Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 ```
 
-### Support circuits intégrés
+### Supports circuits intégrés
 
 Ensuite, on installe généralement les supports pour les circuits intégrés.
 
