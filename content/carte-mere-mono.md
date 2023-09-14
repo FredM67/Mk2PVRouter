@@ -61,7 +61,7 @@ Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 
 Ensuite, on installe généralement les supports pour les circuits intégrés.
 
-Si l'option *pin-saving hardware* est utilisée, quatre circuits intégrés seront nécessaires (IC1 - IC4) ; sinon il n'y en aura que deux (IC1 & IC2).
+Si l'option *pin-saving hardware* est utilisée, quatre circuits intégrés seront nécessaires (**IC1 - IC4**) ; sinon il n'y en aura que deux (**IC1** & **IC2**).
 Cette distinction est expliquée plus en détail ultérieurement.
 
 ```{warning}
@@ -76,20 +76,20 @@ Si le module RF n'est pas requis et que ces broches IO ne sont pas nécessaires 
 Cette configuration nécessite l'ajout de quatorze ponts comme indiqué dans la couche sérigraphiée. La planche de la photo suivante est assemblée de cette manière :
 
 Les 14 ponts sont représentés ici :
-- 5 ponts à IC3 ;
-- 1 pont à IC4 ;
-- 5 ponts en J1-5 ;
-- 1 pont en R24 ;
-- 1 pont en R25 ;
-- 1 pont en R26 ;
+- 5 ponts à **IC3** ;
+- 1 pont à **IC4** ;
+- 5 ponts en **J1-5** ;
+- 1 pont en **R24** ;
+- 1 pont en **R25** ;
+- 1 pont en **R26** ;
 
 Si le module RF est requis (ou si l'une de ces broches IO est nécessaire à toute autre fin), l'écran peut être utilisé à l'aide de l'option *pin-saving hardware*.
-Pour cette disposition, les supports pour IC3 et IC4 doivent être installés comme indiqué ci-dessous.
+Pour cette disposition, les supports pour **IC3** et **IC4** doivent être installés comme indiqué ci-dessous.
 
-Ici, l'un des PCB d'origine est présenté avec uniquement ces supports en place, pour IC3 et IC4.
+Ici, l'un des PCB d'origine est présenté avec uniquement ces supports en place, pour **IC3** et **IC4**.
 
 ```{note}
-Lorsque l'option *pin-saving hardware* est utilisée, aucune liaison filaire ne doit être installée au niveau du connecteur J1-J5.
+Lorsque l'option *pin-saving hardware* est utilisée, aucune liaison filaire ne doit être installée au niveau du connecteur **J1-J5**.
 ```
 
 Étant donné que cette carte est assemblée avec l'option *pin-saving hardware*, des supports d'embase ont été installés aux quatre emplacements de circuits intégrés.
@@ -97,9 +97,9 @@ Lorsque l'option *pin-saving hardware* est utilisée, aucune liaison filaire ne 
 ```{note}
 Les deux circuits intégrés qui composent l'option *pin-saving hardware* ont tous deux été initialement spécifiés à partir de la série 74HC.
 
-Malheureusement, le 74HC4543 pour IC3 n'est plus disponible sous forme DIL. Lorsqu'elle fonctionne à 3,3&nbsp;V, le composant CMOS de remplacement n'est pas en mesure de fonctionner correctement.
+Malheureusement, le **74HC4543** pour *IC3* n'est plus disponible sous forme DIL. Lorsqu'elle fonctionne à **3,3&nbsp;V**, le composant CMOS de remplacement n'est pas en mesure de fonctionner correctement.
 
-Ainsi, chaque fois que l'option *pin-saving hardware* doit être utilisée, le processeur doit fonctionner à 5&nbsp;V.
+Ainsi, chaque fois que l'option *pin-saving hardware* doit être utilisée, le processeur doit fonctionner à **5&nbsp;V**.
 ```
 
 ## Condensateurs céramiques et oscillateur
@@ -113,7 +113,7 @@ Parmi le jeu de condensateurs céramiques, deux d'entre eux sont plus petits que
 
 Il s'agit des deux condensateurs associés à l'oscillateur, leur valeur est de **22&nbsp;pF** et sont référencés **C6** et **C7**.
 
-C3, C4 et C5 sont des condensateurs céramiques de **100&nbsp;nF**, généralement marqués *104*.
+**C3**, **C4** et **C5** sont des condensateurs céramiques de **100&nbsp;nF**, généralement marqués *104*.
 ```
 
 ```{note}
