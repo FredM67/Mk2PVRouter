@@ -35,16 +35,29 @@ Lorsque le processeur fonctionne à **3,3&nbsp;V**, cela donne une plage de fonc
 
 Pour un système **5&nbsp;V**, la valeur originale de **150&nbsp;&Omega;** donne une plage de fonctionnement d'environ **6&nbsp;kW**.
 
-Si un enregistrement de données dans toute la maison est nécessaire, la plage de travail du capteur « grille » peut être augmentée en réduisant la valeur de R6. Il faut toutefois reconnaître que la sensibilité du système de mesure sera réduite d’autant.
+Si un enregistrement de données dans toute la maison est nécessaire, la plage de travail du capteur *grille* peut être augmentée en réduisant la valeur de R6. Il faut toutefois reconnaître que la sensibilité du système de mesure sera réduite d’autant.
 - **R6** = **56&nbsp;&Omega;** permettra des mesures jusqu'à **~10&nbsp;kW**
 - **R6** = **47&nbsp;&Omega;** permettra des mesures jusqu'à **~12&nbsp;kW**
 - **R6** = **39&nbsp;&Omega;** permettra des mesures jusqu'à **~14&nbsp;kW**.
 
 Ces valeurs de résistance de charge s'appliquent lorsque le processeur fonctionne à **3,3&nbsp;V**. S'il fonctionne à **5&nbsp;V**, ces plages sont augmentées d'environ **50&nbsp;%**.
 
+```{exercise} Un peu de mathématiques
+Voici les 3 formules qui vous permettront de calculer une inconnue à partir des 2 autres données connues :
+- {math}`burden_resistor = (system_voltage / 2.0) / ((I_RMS * 1.414) / ct_turns)`
+- {math}`I_RMS = (((system_voltage / 2.0) / burden_resistor) * Turns) * 0.707`
+- {math}`ct_turns = (I_RMS * 1.414) / ((system_voltage / 2.0) / burden_resistor)`
+
+Dans notre cas précis, nous avons : {math}`ct_turns = 2000`
+
+**I_RMS** correspond à l'intensité efficace.  
+Pour un appareil purement résistif (chauffe-eau, ...), nous avons {math}`P_RMS = V_RMS * I_RMS`.  
+Pour un chauffe-eau de 3000&nbsp;W, nous aurons donc {math}`I_RMS = P_RMS / V_RMS = 3000 / 230 = 13 A`.
+```
+
 **R11 - R18** sont les résistances série pour l'affichage à 4 chiffres.  
 Si la carte doit fonctionner à **3,3&nbsp;V**, ces huit résistances doivent être de **220&nbsp;&Omega;**.  
-En cas de fonctionnement en **5&nbsp;V**, cette valeur doit être augmentée à 470&nbsp;&Omega; pour maintenir un niveau de luminosité similaire.
+En cas de fonctionnement en **5&nbsp;V**, cette valeur doit être augmentée à **470&nbsp;&Omega;** pour maintenir un niveau de luminosité similaire.
 ```
 
 ### Diodes
