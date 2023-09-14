@@ -18,14 +18,18 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 - **R3** = **10&nbsp;k&Omega;**. Avec R2, cela fournit une tension de référence pour les capteurs d'entrée.
 - **R4** = **100&nbsp;&Omega;** ou **180&nbsp;&Omega;**. R4 et R5 réduisent la taille du signal AC du transformateur.
 - **R5** = **1&nbsp;k&Omega;**. R4 et R5 réduisent la taille du signal AC du transformateur.
-- **R6** = **120&nbsp;&Omega;** ou **150&nbsp;&Omega;**. Il s'agit de la résistance de charge du capteur de courant *grille*, qui utilise CT1.
+- **R6** = **120&nbsp;&Omega;** ou **150&nbsp;&Omega;**. Il s'agit de la résistance de charge (ou *burden*) du capteur de courant *grille*, qui utilise CT1.
 - **R7** = **120&nbsp;&Omega;** ou **150&nbsp;&Omega;**. Il s'agit de la résistance de charge pour le capteur de courant *détourné*, qui utilise CT2.
 - **R8** = **1&nbsp;k&Omega;**. Cette résistance est en série avec CT1 pour protéger le processeur des signaux importants.
 
 ```{note}
 Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour R4 et R5 sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie. R4 = 100&nbsp;&Omega; convient pour un fonctionnement en **3,3&nbsp;V**. Pour une meilleure utilisation de la plage d'entrée de l'ADC, R4 doit être augmenté à 180&nbsp;&Omega; pour un fonctionnement en **5&nbsp;V**.
 
-La valeur pour R6 et R7 a été initialement spécifiée comme étant **150&nbsp;&Omega;**. Lorsque le processeur fonctionne à **3,3&nbsp;V**, cela donne une plage de fonctionnement d'environ **4&nbsp;kW**. En réduisant ces valeurs à **120&nbsp;&Omega;**, l'autonomie est augmentée à **~5&nbsp;kW**. Pour un système **5&nbsp;V**, la valeur originale de **150&nbsp;&Omega;** donne une plage de fonctionnement d'environ **6&nbsp;kW**.
+La valeur pour R6 et R7 a été initialement spécifiée comme étant **150&nbsp;&Omega;**.
+
+Lorsque le processeur fonctionne à **3,3&nbsp;V**, cela donne une plage de fonctionnement d'environ **4&nbsp;kW**. En réduisant ces valeurs à **120&nbsp;&Omega;**, l'autonomie est augmentée à **~5&nbsp;kW**.
+
+Pour un système **5&nbsp;V**, la valeur originale de **150&nbsp;&Omega;** donne une plage de fonctionnement d'environ **6&nbsp;kW**.
 
 Si un enregistrement de données dans toute la maison est nécessaire, la plage de travail du capteur « grille » peut être augmentée en réduisant la valeur de R6. Il faut toutefois reconnaître que la sensibilité du système de mesure sera réduite d’autant.
 - **R6** = **56&nbsp;&Omega;** permettra des mesures jusqu'à **~10&nbsp;kW**
@@ -45,6 +49,7 @@ Celles-ci offrent un certain degré de protection au processeur lorsque des cour
 
 ```{warning}
 Ces composants sont polarisés.
+
 Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 ```
 
@@ -72,7 +77,7 @@ Les 14 ponts sont représentés ici :
 - 1 pont en R25 ;
 - 1 pont en R26 ;
 
-Si l'installation RF est requise (ou si l'une de ces broches IO est nécessaire à toute autre fin), l'écran peut être utilisé à l'aide de l'option *pin-saving hardware*.
+Si le module RF est requis (ou si l'une de ces broches IO est nécessaire à toute autre fin), l'écran peut être utilisé à l'aide de l'option *pin-saving hardware*.
 Pour cette disposition, les supports pour IC3 et IC4 doivent être installés comme indiqué ci-dessous.
 
 Ici, l'un des PCB d'origine est présenté avec uniquement ces supports en place, pour IC3 et IC4.
@@ -91,3 +96,41 @@ Malheureusement, le 74HC4543 pour IC3 n'est plus disponible sous forme DIL. Lors
 Ainsi, chaque fois que l'option *pin-saving hardware* doit être utilisée, le processeur doit fonctionner à 5&nbsp;V.
 ```
 
+## Condensateurs céramiques et oscillateur
+
+Ces composants ne sont pas polarisés.
+
+Les condensateurs céramiques sont en général orange, et ont la forme d'une goutte d'eau, par opposition aux condensateurs électrolytiques polarisés de forme cylindriques et bleus ou noirs.
+
+```{note}
+Parmi le jeu de condensateurs céramiques, deux d'entre eux sont plus petits que les autres.
+
+Il s'agit des deux condensateurs associés à l'oscillateur, leur valeur est de **22&nbsp;pF** et sont référencés **C6** et **C7**.
+
+C3, C4 et C5 sont des condensateurs céramiques de **100&nbsp;nF**, généralement marqués *104*.
+```
+
+```{note}
+L'oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du PCB.
+
+Ce n'est pas nécessaire pour le bon fonctionnement.
+
+Pour se faire, on pourra utiliser une allumette le temps d'effectuer la soudure.
+```
+
+## Pont redresseur ou pont de diodes
+
+Ce composant est polarisé.
+
+Il faudra bien veiller à faire correspondre le marquage sur le boîtier avec celui de la couche sérigraphiée.
+
+La broche la plus longue correspond au *+*.
+
+Comme pour l'oscillateur, il est courant de le souder légèrement au dessus du PCB.
+
+## Connecteurs SIL/Molex/Embase 14 broches
+
+Les connecteurs Molex ainsi que l'embase 14 broches sont "polarisés", ils possèdent un détrompeur.  
+Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviront à la connection d'autres composants polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
+
+Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel sens.
