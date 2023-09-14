@@ -95,9 +95,9 @@ Lorsque l'option *pin-saving hardware* est utilisée, aucune liaison filaire ne 
 Étant donné que cette carte est assemblée avec l'option *pin-saving hardware*, des supports d'embase ont été installés aux quatre emplacements de circuits intégrés.
 
 ```{note}
-Les deux circuits intégrés qui composent l'option *pin-saving hardware* ont tous deux été initialement spécifiés à partir de la série 74HC.
+Les deux circuits intégrés qui composent l'option *pin-saving hardware* ont tous deux été initialement spécifiés à partir de la série **74HC**.
 
-Malheureusement, le **74HC4543** pour *IC3* n'est plus disponible sous forme DIL. Lorsqu'elle fonctionne à **3,3&nbsp;V**, le composant CMOS de remplacement n'est pas en mesure de fonctionner correctement.
+Malheureusement, le **74HC4543** pour **IC3** n'est plus disponible sous forme DIL. Lorsqu'elle fonctionne à **3,3&nbsp;V**, le composant CMOS de remplacement n'est pas en mesure de fonctionner correctement.
 
 Ainsi, chaque fois que l'option *pin-saving hardware* doit être utilisée, le processeur doit fonctionner à **5&nbsp;V**.
 ```
