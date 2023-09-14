@@ -151,8 +151,8 @@ Comme pour l'oscillateur, il est courant de le souder légèrement au dessus du 
 
 ### Connecteurs SIL/Molex/Embase 14 broches
 
-Les connecteurs Molex ainsi que l'embase 14 broches sont "polarisés", ils possèdent un détrompeur.  
-Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviront à la connection d'autres composants polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
+Les connecteurs Molex ainsi que l'embase 14 broches sont *polarisés*, ils possèdent un détrompeur.  
+Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviront à la connection d'autres composants ou modules polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
 
 Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel sens.
 
@@ -201,7 +201,7 @@ Un transformateur de **6&nbsp;V** peut prendre en charge un régulateur de tensi
 Lors du montage de ce composant, il ne doit y avoir aucun espace entre la base du transformateur et le PCB.
 ```
 
-## Test
+## Tests électriques
 
 Une fois le transformateur en place, la carte est maintenant prête pour les tests électriques.  
 
@@ -214,4 +214,72 @@ Avant d'installer les circuits intégrés, le fonctionnement de l'alimentation d
 Pour poursuivre cette séquence de construction, un accès à la tension secteur **230&nbsp;V** est requis.
 
 Veuillez ne pas passer à cette étape suivante à moins que vous soyez compétent pour le faire.
+```
+
+Sur la photo ci-dessous, une alimentation temporaire de 230&nbsp;V CA via un fusible de 3 A a été connectée.  
+Bien que cela ne soit pas requis par ce PCB, une connection à la terre offre un certain degré de sécurité dans le cas où l'opérateur entrerait accidentellement en contact avec la ligne 230&nbsp;V AC.
+
+Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ 3,3&nbsp;Volts... ou 5&nbsp;V si un régulateur de tension 5&nbsp;V a été installé.
+
+Cette tension peut être facilement vérifiée au niveau du connecteur *access to power*, comme indiqué ici.
+
+À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.
+
+Avec la tension correcte en place, les circuits intégrés peuvent maintenant être installés, après avoir coupé l'alimentation.
+
+Le premier d’entre eux est IC2.  
+Il s'agit d'un amplificateur opérationnel qui fournit une tension de référence intermédiaire pour les capteurs de tension et de courant.
+
+Avec les packs Dual-in-Line, les broches devront peut-être être légèrement pliées vers l'intérieur pour s'insérer dans l'embase.
+Cela peut être fait en *faisant rouler* doucement la puce de chaque côté, tour à tour.
+
+Pour minimiser les risques de dommages électriques, cette opération doit être effectuée sur une surface protectrice telle qu'un sac antistatique.
+
+Avec les broches bien alignées, le circuit intégré peut être délicatement placé sur son connecteur, comme indiqué ici.
+
+```{warning}
+Les circuits intégrés doivent être installés dans le bon sens. Le point sur la puce doit être aligné avec l'encoche de l'image sérigraphiée.
+```
+
+Une fois que tout a été soigneusement vérifié, la puce peut être enfoncée fermement.
+
+Avec **IC2** en place et la carte alimentée à nouveau, la référence de tension peut être mesurée.  
+**Vref** doit être environ la moitié de la tension d'alimentation. Ici, nous testons une carte **3,3&nbsp;V**.
+
+Un endroit pratique pour accéder à **Vref** se trouve à l’extrémité supérieure de **R6**. La prise jack SMA est un point de masse pratique.
+
+**Vref** est également accessible à divers autres endroits, comme indiqué sur le schéma de circuit de cette carte.
+
+Le processeur principal, **IC1**, est installé de la même manière que pour **IC2**, toujours après avoir couper l'alimentation.
+Avec autant de broches, il est très facile pour l’une d’entre elles de se plier en dessous.
+
+```{warning}
+Si ce circuit intégré est dans le mauvais sens lors de la mise sous tension, il ne fonctionnera probablement plus jamais !
+```
+
+## Test logiciel
+
+Une fois le processeur en place, il peut être judicieux de vérifier que l'alimentation électrique est toujours correcte.  
+En supposant que ce soit le cas, exécutons un croquis (programme) pour déterminer si le processeur fonctionne.
+
+Pour cette prochaine étape, un dispositif de programmation adapté devra être mis en place.  
+Des détails sur la configuration de l'environnement de développement intégré (IDE) Arduino peuvent être trouvés en haut de cette page.  
+Un programmateur USB vers UART devra être branché sur le connecteur **FTDI** du PCB comme indiqué ci-dessous.  
+L'autre extrémité du programmateur doit être connectée via un câble USB approprié à l'installation de programmation (PC ou équivalent).
+
+La broche à une extrémité du connecteur à 6 voies du programmateur sera étiquetée Gnd. Cette broche doit correspondre au marquage **0&nbsp;V** sur le PCB.
+
+Ici, le programmeur FTDI est utilisé. Notez qu'il doit être monté dans l'autre sens.
+La broche "Gnd" doit toujours être la plus proche du bord de la carte
+
+Pour éviter de surcharger le connecteur du programmateur, on peut fabriquer un simple câble d'extension comme indiqué ici.
+Seules quatre des lignes sont réellement utilisées (données **Tx** & **Rx**, masse et réinitialisation).  
+Aucune des lignes d'alimentations électriques n'est utilisée par cette carte.
+
+Le fil noir est destiné à la connexion **GND** (ou **0&nbsp;V**).
+
+```{note}
+La carte FTDI ne permet pas d'alimenter la carte-mère.
+
+Le routeur devra toujours être alimenté par sa propre alimentation.
 ```
