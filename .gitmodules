@@ -1,3 +1,6 @@
 [submodule "1-phase"]
 	path = 1-phase
 	url = https://github.com/FredM67/PVRouter-Single
+[submodule "3-phase"]
+	path = 3-phase
+	url = https://github.com/FredM67/PVRouter-3-phase
