@@ -45,19 +45,19 @@ Ces valeurs de résistance de charge s'appliquent lorsque le processeur fonction
 ````{exercise} Un peu de mathématiques
 Voici les 3 formules qui vous permettront de calculer une inconnue à partir des 2 autres données connues.
 
-Calcul de la résistance de burden en fonction de l'intensité efficace maximale :
+- Calcul de la résistance de burden en fonction de l'intensité efficace maximale :
 ```{math}
-burden\_resistor = {(system\_voltage / 2.0) \over {I_{RMS} * \sqrt{2} \over ct\_turns}}
+burden\_resistor = {1 \over 2} * {system\_voltage * ct\_turns \over I_{RMS} * \sqrt{2}}
 ```
 
-Calcul de l'intensité efficace maximale en fonction de la résistance de burden :
+- Calcul de l'intensité efficace maximale en fonction de la résistance de burden :
 ```{math}
-I_{RMS} = (((system\_voltage / 2.0) / burden\_resistor) * ct\_turns) / \sqrt{2}
+I_{RMS} = {1 \over 2} * {system\_voltage * ct\_turns \over burden\_resistor *\sqrt{2}}
 ```
 
-Calcul du nombre de tours de capteur en fonction de la résistance de burden et de l'intensité efficace maximale :
+- Calcul du nombre de tours de capteur en fonction de la résistance de burden et de l'intensité efficace maximale :
 ```{math}
-ct\_turns = (I_{RMS} * \sqrt{2}) / ((system\_voltage / 2.0) / burden\_resistor)
+ct\_turns = 2 * \sqrt{2} * {I_{RMS} \over system\_voltage * burden\_resistor}
 ```
 
 Dans notre cas précis, nous avons : {math}`ct\_turns = 2000`
