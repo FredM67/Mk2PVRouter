@@ -37,7 +37,7 @@ Lorsque les fils sont dans la bonne position, les quatre extrémités peuvent ê
 Une fois les agrafes en cuivre en place, tous les composants basse consommation peuvent désormais être installés.
 
 Comme indiqué sur le schéma de circuit :
-- **R1** = **120** &Omega; (lors du fonctionnement à partir d'une source en **3,3 V**, ou **180** &Omega; pour un fonctionnement en **5 V**)
+- **R1** = **120** &Omega; (lors du fonctionnement à partir d'une source en **3,3V**, ou **180** &Omega; pour un fonctionnement en **5V**)
 - **R2** = **330** &Omega;
 - **R3** = **360** &Omega;
 
@@ -93,7 +93,7 @@ Les conseils ci-dessous sont proposés lorsqu'un étage de sortie doit être tes
 ```{danger}
 **Avertissement de Sécurité**
 
-Pour tester que le déclencheur et le triac fonctionnent, un accès à la tension secteur 230 V CA est requis.
+Pour tester que le déclencheur et le triac fonctionnent, un accès à la tension secteur 230V CA est requis.
 
 Veuillez faire très attention et n’entreprendre cette étape suivante que si vous êtes compétent pour le faire.
 ```
