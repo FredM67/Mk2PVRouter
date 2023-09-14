@@ -6,7 +6,9 @@ Plusieurs versions du PCB peuvent exister.
 
 Bien qu'elles fonctionnent toutes de la même manière, chaque version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l’Arduino, ...).
 
-## Soudure des résistances
+## Soudure des composants
+
+### Soudure des résistances
 
 Ces composants n'ont pas de sens et sont très peu sensibles à l'électricité statique.
 
@@ -45,7 +47,7 @@ Si la carte doit fonctionner à **3,3&nbsp;V**, ces huit résistances doivent ê
 En cas de fonctionnement en **5&nbsp;V**, cette valeur doit être augmentée à 470&nbsp;&Omega; pour maintenir un niveau de luminosité similaire.
 ```
 
-## Soudure des diodes
+### Soudure des diodes
 
 Ensuite, les diodes peuvent être ajoutées.
 
@@ -57,7 +59,7 @@ Ces composants sont polarisés.
 Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 ```
 
-## Support circuits intégrés
+### Support circuits intégrés
 
 Ensuite, on installe généralement les supports pour les circuits intégrés.
 
@@ -102,7 +104,7 @@ Malheureusement, le **74HC4543** pour **IC3** n'est plus disponible sous forme D
 Ainsi, chaque fois que l'option *pin-saving hardware* doit être utilisée, le processeur doit fonctionner à **5&nbsp;V**.
 ```
 
-## Condensateurs céramiques et oscillateur
+### Condensateurs céramiques et oscillateur
 
 Ces composants ne sont pas polarisés.
 
@@ -122,7 +124,7 @@ Ce n'est pas nécessaire pour le bon fonctionnement.
 Pour se faire, on pourra utiliser une allumette le temps d'effectuer la soudure.
 ```
 
-## Pont redresseur ou pont de diodes
+### Pont redresseur ou pont de diodes
 
 Le rôle de ce composant est de redressé le courant alternatif fourni par le transformateur.  
 C'est la première étape nécessaire pour obtenir une alimentation en courant continu.
@@ -147,9 +149,69 @@ La broche la plus longue correspond au *+*.
 
 Comme pour l'oscillateur, il est courant de le souder légèrement au dessus du PCB.
 
-## Connecteurs SIL/Molex/Embase 14 broches
+### Connecteurs SIL/Molex/Embase 14 broches
 
 Les connecteurs Molex ainsi que l'embase 14 broches sont "polarisés", ils possèdent un détrompeur.  
 Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviront à la connection d'autres composants polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
 
 Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel sens.
+
+### Condensateurs électrolytiques
+
+Les deux condensateurs électrolytiques, **C1** et **C2**, sont polarisés et doivent donc être installés dans le bon sens.
+La broche -ve est indiquée par une bande proéminente, en général blanche, sur toute la longueur du composant.
+
+L'autre broche est la +ve, qui doit aller dans le trou marqué '+' sur la couche sérigraphiée.
+
+```{warning}
+Bien qu’ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
+
+Le plus grand condensateur (**C1** = **100&nbsp;μF**) est le plus proche du pont redresseur.  
+Le plus petit (**C2** = **10&nbsp;μF**) est le plus proche de **IC2**.
+
+Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
+```
+
+### Connecteurs secteur et fusible
+
+Les connecteurs secteur (**TB1** & **TB2**) et le porte-fusible (**FS1**) peuvent maintenant être installés.  
+En raison des pistes du plan masse, la broche centrale de **TB1** nécessitera plus de chaleur que les autres broches.
+Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage.  
+Il est trop facile de se tromper de sens !
+
+Si cela se produit, le plastique peut être soigneusement coupé avec un couteau et chaque broche extraite séparément.
+
+Le porte-fusible, accompagné de son fusible de **100&nbsp;mA**, est simple à mettre en place.
+
+### Régulateur de tension
+
+Le régulateur de tension (**VR1**) doit être monté avec son ailette métallique éloignée du transformateur comme indiqué sur la sérigraphie.  
+Selon l'application, le **VR1** sera une version 3,3&nbsp;V ou 5&nbsp;V.  
+5&nbsp;V est nécessaire chaque fois que l'option *pin-saving hardware* est utilisée.
+
+Souder les broches du **VR1** nécessitera probablement plus de chaleur.
+Pour réduire la quantité de métal à chauffer, il est possible de prédécouper ces broches à la longueur requise.
+
+### Transformateur
+
+Le dernier composant à installer est le transformateur. Il s'agit généralement d'un appareil double **6&nbsp;V** comme indiqué sur la couche sérigraphiée.  
+Un transformateur de **6&nbsp;V** peut prendre en charge un régulateur de tension de **3,3&nbsp;V** ou de **5&nbsp;V**.
+
+```{important}
+Lors du montage de ce composant, il ne doit y avoir aucun espace entre la base du transformateur et le PCB.
+```
+
+## Test
+
+Une fois le transformateur en place, la carte est maintenant prête pour les tests électriques.  
+
+C'est le bon moment pour vérifier que tous les joints soudés sont en bon état et que toutes les éclaboussures de soudure ont été éliminées.
+
+Avant d'installer les circuits intégrés, le fonctionnement de l'alimentation doit être vérifié.
+
+```{danger}
+**Alerte de sécurité**
+Pour poursuivre cette séquence de construction, un accès à la tension secteur **230&nbsp;V** est requis.
+
+Veuillez ne pas passer à cette étape suivante à moins que vous soyez compétent pour le faire.
+```
