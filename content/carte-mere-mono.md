@@ -15,7 +15,7 @@ Ces composants n'ont pas de sens et sont très peu sensibles à l'électricité 
 Les valeurs des résistances sont indiquées sur le schéma de circuit et sont répétées ici pour plus de commodité :
 (veuillez lire les notes ci-dessous qui concernent ces valeurs de composants)
 
-- **R1** = **47&nbsp;k&Omega;**. Cela fournit le "pull-up" pour la ligne de réinitialisation du processeur.
+- **R1** = **47&nbsp;k&Omega;**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
 - **R2** = **10&nbsp;k&Omega;**. Avec R3, cela fournit une tension de référence pour les capteurs d'entrée.
 - **R3** = **10&nbsp;k&Omega;**. Avec R2, cela fournit une tension de référence pour les capteurs d'entrée.
 - **R4** = **100&nbsp;&Omega;** ou **180&nbsp;&Omega;**. R4 et R5 réduisent la taille du signal AC du transformateur.
@@ -27,7 +27,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 `````{note}
 Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour R4 et R5 sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.  
 R4 = **100&nbsp;&Omega;** convient pour un fonctionnement en **3,3&nbsp;V**.  
-Pour une meilleure utilisation de la plage d'entrée de l'ADC, R4 doit être augmenté à **180&nbsp;&Omega;** pour un fonctionnement en **5&nbsp;V**.
+Pour une meilleure utilisation de la plage d'entrée de l'ADC, **R4** doit être augmenté à **180&nbsp;&Omega;** pour un fonctionnement en **5&nbsp;V**.
 
 La valeur pour R6 et R7 a été initialement spécifiée comme étant **150&nbsp;&Omega;**.
 
@@ -47,17 +47,17 @@ Voici les 3 formules qui vous permettront de calculer une inconnue à partir des
 
 - Calcul de la résistance de burden en fonction de l'intensité efficace maximale :
 ```{math}
-burden\_resistor = {1 \over 2} * {system\_voltage * ct\_turns \over I_{RMS} * \sqrt{2}}
+burden\_resistor = {system\_voltage * ct\_turns \over 2 * \sqrt{2} * I_{RMS}}
 ```
 
 - Calcul de l'intensité efficace maximale en fonction de la résistance de burden :
 ```{math}
-I_{RMS} = {1 \over 2} * {system\_voltage * ct\_turns \over burden\_resistor *\sqrt{2}}
+I_{RMS} = {system\_voltage * ct\_turns \over 2 * \sqrt{2} * burden\_resistor }
 ```
 
 - Calcul du nombre de tours de capteur en fonction de la résistance de burden et de l'intensité efficace maximale :
 ```{math}
-ct\_turns = 2 * \sqrt{2} * {I_{RMS} \over system\_voltage * burden\_resistor}
+ct\_turns = {2 * \sqrt{2} * I_{RMS} \over system\_voltage * burden\_resistor}
 ```
 
 Dans notre cas précis, nous avons : {math}`ct\_turns = 2000`
@@ -66,8 +66,8 @@ Dans notre cas précis, nous avons : {math}`ct\_turns = 2000`
 Pour un appareil purement résistif (chauffe-eau, ...), nous avons {math}`P_{RMS} = V_{RMS} * I_{RMS}`.  
 
 Exemple pour un chauffe-eau de 3000&nbsp;W, nous aurons donc 
-```
-{math}I_{RMS} = {P_{RMS} \over V_{RMS}} = {3000 \over 230} = 13 A.
+```{math}
+I_{RMS} = {P_{RMS} \over V_{RMS}} = {3000 \over 230} = 13 A.
 ```
 ````
 
