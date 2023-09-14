@@ -52,7 +52,7 @@ Dans notre cas précis, nous avons : {math}`ct\_turns = 2000`
 
 **{math}`I_{RMS}`** correspond à l'intensité efficace.  
 Pour un appareil purement résistif (chauffe-eau, ...), nous avons {math}`P_{RMS} = V_{RMS} * I_{RMS}`.  
-Pour un chauffe-eau de 3000&nbsp;W, nous aurons donc {math}`I_{RMS} = P_{RMS} / V_{RMS} = 3000 / 230 = 13 A`.
+Pour un chauffe-eau de 3000&nbsp;W, nous aurons donc {math}`I_{RMS} = {P_{RMS} \over V_{RMS}} = {3000 \over 230} = 13 A`.
 ```
 
 **R11 - R18** sont les résistances série pour l'affichage à 4 chiffres.  
