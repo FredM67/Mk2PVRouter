@@ -127,6 +127,17 @@ Pour se faire, on pourra utiliser une allumette le temps d'effectuer la soudure.
 Le rôle de ce composant est de redressé le courant alternatif fourni par le transformateur.  
 C'est la première étape nécessaire pour obtenir une alimentation en courant continu.
 
+Sur la figure ci-après, la courbe du haut correspond à la tension fournie par le transformateur.  
+La courbe du bas est la tension fournie par le redresseur.
+
+```{figure} img/Redresseur_monophase.png
+:alt: Redressement double alternance
+:align: center
+:scale: 50%
+
+Redressement double alternance
+```
+
 ```{warning}
 Ce composant est polarisé.  
 Il faudra bien veiller à faire correspondre le marquage sur le boîtier avec celui de la couche sérigraphiée.
