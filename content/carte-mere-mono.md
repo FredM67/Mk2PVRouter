@@ -23,7 +23,9 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 - **R8** = **1&nbsp;k&Omega;**. Cette résistance est en série avec CT1 pour protéger le processeur des signaux importants.
 
 ```{note}
-Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour R4 et R5 sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie. R4 = 100&nbsp;&Omega; convient pour un fonctionnement en **3,3&nbsp;V**. Pour une meilleure utilisation de la plage d'entrée de l'ADC, R4 doit être augmenté à 180&nbsp;&Omega; pour un fonctionnement en **5&nbsp;V**.
+Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour R4 et R5 sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.  
+R4 = **100&nbsp;&Omega;** convient pour un fonctionnement en **3,3&nbsp;V**.  
+Pour une meilleure utilisation de la plage d'entrée de l'ADC, R4 doit être augmenté à **180&nbsp;&Omega;** pour un fonctionnement en **5&nbsp;V**.
 
 La valeur pour R6 et R7 a été initialement spécifiée comme étant **150&nbsp;&Omega;**.
 
@@ -38,7 +40,9 @@ Si un enregistrement de données dans toute la maison est nécessaire, la plage 
 
 Ces valeurs de résistance de charge s'appliquent lorsque le processeur fonctionne à **3,3&nbsp;V**. S'il fonctionne à **5&nbsp;V**, ces plages sont augmentées d'environ **50&nbsp;%**.
 
-R11 - R18 sont les résistances série pour l'affichage à 4 chiffres. Si la carte doit fonctionner à **3,3&nbsp;V**, ces huit résistances doivent être de **220&nbsp;&Omega;**. En cas de fonctionnement en **5&nbsp;V**, cette valeur doit être augmentée à 470&nbsp;&Omega; pour maintenir un niveau de luminosité similaire.
+**R11 - R18** sont les résistances série pour l'affichage à 4 chiffres.  
+Si la carte doit fonctionner à **3,3&nbsp;V**, ces huit résistances doivent être de **220&nbsp;&Omega;**.  
+En cas de fonctionnement en **5&nbsp;V**, cette valeur doit être augmentée à 470&nbsp;&Omega; pour maintenir un niveau de luminosité similaire.
 ```
 
 ## Soudure des diodes
@@ -60,7 +64,9 @@ Ensuite, on installe généralement les supports pour les circuits intégrés.
 Si l'option *pin-saving hardware* est utilisée, quatre circuits intégrés seront nécessaires (IC1 - IC4) ; sinon il n'y en aura que deux (IC1 & IC2).
 Cette distinction est expliquée plus en détail ultérieurement.
 
+```{warning}
 Chaque support a une encoche à une extrémité. Celle-ci doit être alignée avec la marque correspondante sur la couche sérigraphiée, comme indiqué ici.
+```
 
 Avec le support convenablement soutenue par le bas (on peut aussi utilisé un morceau d'adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place.
 Si un réalignement du composant est nécessaire, il doit être effectué avant que les broches restantes ne soient fixées.
@@ -111,18 +117,20 @@ C3, C4 et C5 sont des condensateurs céramiques de **100&nbsp;nF**, généraleme
 ```
 
 ```{note}
-L'oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du PCB.
-
-Ce n'est pas nécessaire pour le bon fonctionnement.
-
+L'oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du PCB.  
+Ce n'est pas nécessaire pour le bon fonctionnement.  
 Pour se faire, on pourra utiliser une allumette le temps d'effectuer la soudure.
 ```
 
 ## Pont redresseur ou pont de diodes
 
-Ce composant est polarisé.
+Le rôle de ce composant est de redressé le courant alternatif fourni par le transformateur.  
+C'est la première étape nécessaire pour obtenir une alimentation en courant continu.
 
+```{warning}
+Ce composant est polarisé.  
 Il faudra bien veiller à faire correspondre le marquage sur le boîtier avec celui de la couche sérigraphiée.
+```
 
 La broche la plus longue correspond au *+*.
 
