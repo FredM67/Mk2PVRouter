@@ -44,11 +44,11 @@ Ces valeurs de résistance de charge s'appliquent lorsque le processeur fonction
 
 ```{exercise} Un peu de mathématiques
 Voici les 3 formules qui vous permettront de calculer une inconnue à partir des 2 autres données connues :
-- {math}`burden\_resistor = (system\_voltage / 2.0) / ((I_{RMS} * \sqrt{2}) / ct\_turns)`
+- {math}`burden\_resistor = \frac{(system\_voltage / 2.0)}{\frac{I_{RMS} * \sqrt{2}}{ct\_turns}}`
 - {math}`I_{RMS} = (((system\_voltage / 2.0) / burden\_resistor) * ct\_turns) / \sqrt{2}`
 - {math}`ct\_turns = (I_{RMS} * \sqrt{2}) / ((system\_voltage / 2.0) / burden\_resistor)`
 
-Dans notre cas précis, nous avons : {math}`ct_turns = 2000`
+Dans notre cas précis, nous avons : {math}`ct\_turns = 2000`
 
 **{math}`I_{RMS}`** correspond à l'intensité efficace.  
 Pour un appareil purement résistif (chauffe-eau, ...), nous avons {math}`P_{RMS} = V_{RMS} * I_{RMS}`.  
