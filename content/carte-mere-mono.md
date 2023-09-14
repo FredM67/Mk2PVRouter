@@ -44,15 +44,15 @@ Ces valeurs de résistance de charge s'appliquent lorsque le processeur fonction
 
 ```{exercise} Un peu de mathématiques
 Voici les 3 formules qui vous permettront de calculer une inconnue à partir des 2 autres données connues :
-- {math}`burden_resistor = (system_voltage / 2.0) / ((I_RMS * 1.414) / ct_turns)`
-- {math}`I_RMS = (((system_voltage / 2.0) / burden_resistor) * Turns) * 0.707`
-- {math}`ct_turns = (I_RMS * 1.414) / ((system_voltage / 2.0) / burden_resistor)`
+- {math}`burden\_resistor = (system\_voltage / 2.0) / ((I_{RMS} * \sqrt{2}) / ct\_turns)`
+- {math}`I_{RMS} = (((system\_voltage / 2.0) / burden\_resistor) * ct\_turns) / \sqrt{2}`
+- {math}`ct\_turns = (I_{RMS} * \sqrt{2}) / ((system\_voltage / 2.0) / burden\_resistor)`
 
 Dans notre cas précis, nous avons : {math}`ct_turns = 2000`
 
-**I_RMS** correspond à l'intensité efficace.  
-Pour un appareil purement résistif (chauffe-eau, ...), nous avons {math}`P_RMS = V_RMS * I_RMS`.  
-Pour un chauffe-eau de 3000&nbsp;W, nous aurons donc {math}`I_RMS = P_RMS / V_RMS = 3000 / 230 = 13 A`.
+**{math}`I_{RMS}`** correspond à l'intensité efficace.  
+Pour un appareil purement résistif (chauffe-eau, ...), nous avons {math}`P_{RMS} = V_{RMS} * I_{RMS}`.  
+Pour un chauffe-eau de 3000&nbsp;W, nous aurons donc {math}`I_{RMS} = P_{RMS} / V_{RMS} = 3000 / 230 = 13 A`.
 ```
 
 **R11 - R18** sont les résistances série pour l'affichage à 4 chiffres.  
