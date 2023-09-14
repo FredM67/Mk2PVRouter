@@ -24,7 +24,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 - **R7** = **120&nbsp;&Omega;** ou **150&nbsp;&Omega;**. Il s'agit de la résistance de charge pour le capteur de courant *détourné*, qui utilise CT2.
 - **R8** = **1&nbsp;k&Omega;**. Cette résistance est en série avec CT1 pour protéger le processeur des signaux importants.
 
-```{note}
+`````{note}
 Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour R4 et R5 sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.  
 R4 = **100&nbsp;&Omega;** convient pour un fonctionnement en **3,3&nbsp;V**.  
 Pour une meilleure utilisation de la plage d'entrée de l'ADC, R4 doit être augmenté à **180&nbsp;&Omega;** pour un fonctionnement en **5&nbsp;V**.
@@ -42,23 +42,35 @@ Si un enregistrement de données dans toute la maison est nécessaire, la plage 
 
 Ces valeurs de résistance de charge s'appliquent lorsque le processeur fonctionne à **3,3&nbsp;V**. S'il fonctionne à **5&nbsp;V**, ces plages sont augmentées d'environ **50&nbsp;%**.
 
-```{exercise} Un peu de mathématiques
+````{exercise} Un peu de mathématiques
 Voici les 3 formules qui vous permettront de calculer une inconnue à partir des 2 autres données connues :
-- {math}`burden\_resistor = \frac{(system\_voltage / 2.0)}{\frac{I_{RMS} * \sqrt{2}}{ct\_turns}}`
-- {math}`I_{RMS} = (((system\_voltage / 2.0) / burden\_resistor) * ct\_turns) / \sqrt{2}`
-- {math}`ct\_turns = (I_{RMS} * \sqrt{2}) / ((system\_voltage / 2.0) / burden\_resistor)`
+```
+{math}burden\_resistor = {(system\_voltage / 2.0) \over {I_{RMS} * \sqrt{2} \over ct\_turns}}
+```
+
+```
+{math}I_{RMS} = (((system\_voltage / 2.0) / burden\_resistor) * ct\_turns) / \sqrt{2}
+```
+
+```
+{math}ct\_turns = (I_{RMS} * \sqrt{2}) / ((system\_voltage / 2.0) / burden\_resistor)
+```
 
 Dans notre cas précis, nous avons : {math}`ct\_turns = 2000`
 
 **{math}`I_{RMS}`** correspond à l'intensité efficace.  
 Pour un appareil purement résistif (chauffe-eau, ...), nous avons {math}`P_{RMS} = V_{RMS} * I_{RMS}`.  
-Pour un chauffe-eau de 3000&nbsp;W, nous aurons donc {math}`I_{RMS} = {P_{RMS} \over V_{RMS}} = {3000 \over 230} = 13 A`.
+
+Exemple pour un chauffe-eau de 3000&nbsp;W, nous aurons donc 
 ```
+{math}I_{RMS} = {P_{RMS} \over V_{RMS}} = {3000 \over 230} = 13 A.
+```
+````
 
 **R11 - R18** sont les résistances série pour l'affichage à 4 chiffres.  
 Si la carte doit fonctionner à **3,3&nbsp;V**, ces huit résistances doivent être de **220&nbsp;&Omega;**.  
 En cas de fonctionnement en **5&nbsp;V**, cette valeur doit être augmentée à **470&nbsp;&Omega;** pour maintenir un niveau de luminosité similaire.
-```
+`````
 
 ### Diodes
 
