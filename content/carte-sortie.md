@@ -37,9 +37,9 @@ Lorsque les fils sont dans la bonne position, les quatre extrémités peuvent ê
 Une fois les agrafes en cuivre en place, tous les composants basse consommation peuvent désormais être installés.
 
 Comme indiqué sur le schéma de circuit :
-- **R1** = **120** &Omega; (lors du fonctionnement à partir d'une source en **3,3V**, ou **180** &Omega; pour un fonctionnement en **5V**)
-- **R2** = **330** &Omega;
-- **R3** = **360** &Omega;
+- **R1** = **120&nbsp;&Omega;** (lors du fonctionnement à partir d'une source en **3,3V**, ou **180&nbsp;&Omega;** pour un fonctionnement en **5V**)
+- **R2** = **330&nbsp;&Omega;**
+- **R3** = **360&nbsp;&Omega;**
 
 Si vous installez un connecteur DIL pour l'optocoupleur ou circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le PCB.
 
