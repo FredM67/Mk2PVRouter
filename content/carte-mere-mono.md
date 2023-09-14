@@ -68,7 +68,7 @@ Cette distinction est expliquée plus en détail ultérieurement.
 Chaque support a une encoche à une extrémité. Celle-ci doit être alignée avec la marque correspondante sur la couche sérigraphiée, comme indiqué ici.
 ```
 
-Avec le support convenablement soutenue par le bas (on peut aussi utilisé un morceau d'adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place.
+Avec le support convenablement soutenu par le bas (on peut aussi utiliser un morceau d'adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place.
 Si un réalignement du composant est nécessaire, il doit être effectué avant que les broches restantes ne soient fixées.
 
 L'affichage à 4 chiffres peut être contrôlé de deux manières.
