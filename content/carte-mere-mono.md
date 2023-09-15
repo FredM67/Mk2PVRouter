@@ -18,20 +18,20 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 - **R1** = **47&nbsp;k&Omega;**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
 - **R2** = **10&nbsp;k&Omega;**. Avec R3, cela fournit une tension de référence pour les capteurs d'entrée.
 - **R3** = **10&nbsp;k&Omega;**. Avec R2, cela fournit une tension de référence pour les capteurs d'entrée.
-- **R4** = **100&nbsp;&Omega;** ou **180&nbsp;&Omega;**. R4 et R5 réduisent la taille du signal AC du transformateur.
-- **R5** = **1&nbsp;k&Omega;**. R4 et R5 réduisent la taille du signal AC du transformateur.
+- **R4** = **100&nbsp;&Omega;** ou **180&nbsp;&Omega;**. **R4** et **R5** réduisent la taille du signal AC du transformateur.
+- **R5** = **1&nbsp;k&Omega;**. **R4** et **R5** réduisent la taille du signal AC du transformateur.
 - **R6** = **120&nbsp;&Omega;** ou **150&nbsp;&Omega;**. Il s'agit de la résistance de charge (ou *burden*) du capteur de courant *grille*, qui utilise CT1.
 - **R7** = **120&nbsp;&Omega;** ou **150&nbsp;&Omega;**. Il s'agit de la résistance de charge pour le capteur de courant *détourné*, qui utilise CT2.
 - **R8** = **1&nbsp;k&Omega;**. Cette résistance est en série avec CT1 pour protéger le processeur des signaux importants.
 
 `````{note}
-Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour R4 et R5 sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.  
-R4 = **100&nbsp;&Omega;** convient pour un fonctionnement en **3,3&nbsp;V**.  
+Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour **R4** et **R5** sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.  
+**R4** = **100&nbsp;&Omega;** convient pour un fonctionnement en **3,3&nbsp;V**.  
 Pour une meilleure utilisation de la plage d'entrée de l'ADC, **R4** doit être augmenté à **180&nbsp;&Omega;** pour un fonctionnement en **5&nbsp;V**.
 
-La valeur pour R6 et R7 a été initialement spécifiée comme étant **150&nbsp;&Omega;**.
+La valeur pour **R6** et **R7** a été initialement spécifiée comme étant **150&nbsp;&Omega;**.
 
-Lorsque le processeur fonctionne à **3,3&nbsp;V**, cela donne une plage de fonctionnement d'environ **4&nbsp;kW**. En réduisant ces valeurs à **120&nbsp;&Omega;**, l'autonomie est augmentée à **~5&nbsp;kW**.
+Lorsque le processeur fonctionne à **3,3&nbsp;V**, cela donne une plage de fonctionnement d'environ **4&nbsp;kW**. En réduisant ces valeurs à **120&nbsp;&Omega;**, la plage est augmentée à **~5&nbsp;kW**.
 
 Pour un système **5&nbsp;V**, la valeur originale de **150&nbsp;&Omega;** donne une plage de fonctionnement d'environ **6&nbsp;kW**.
 
@@ -202,12 +202,12 @@ Le plus petit (**C2** = **10&nbsp;μF**) est le plus proche de **IC2**.
 Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
 ```
 
-### Connecteurs secteur et fusible
+### Connecteurs secteur et porte-fusible
 
 Les connecteurs secteur (**TB1** & **TB2**) et le porte-fusible (**FS1**) peuvent maintenant être installés.  
 En raison des pistes du plan masse, la broche centrale de **TB1** nécessitera plus de chaleur que les autres broches.
 Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage.  
-Il est trop facile de se tromper de sens !
+Il est très facile de se tromper de sens !
 
 Si cela se produit, le plastique peut être soigneusement coupé avec un couteau et chaque broche extraite séparément.
 
