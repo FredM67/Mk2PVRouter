@@ -18,9 +18,9 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 - **R1** = **47&nbsp;k&Omega;**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
 - **R2-R4** = **100&nbsp;&Omega;** ou **180&nbsp;&Omega;**. **R2-R5** réduisent la taille du signal AC de chaque transformateur.
 - **R5-R7** = **1&nbsp;k&Omega;**. Elles réduisent la taille du signal AC de chaque transformateur.
-- **R8-R10** = **120&nbsp;&Omega;** ou **150&nbsp;&Omega;** en général. Il s'agit des résistances de charge (ou *burden*) de chaque capteur de courant *grille*, qui utilise CT1-CT3.
-- **R11-12** = **10&nbsp;k&Omega;**. Ensemble, elles fournissent une tension de référence pour les capteurs d'entrée.
-- **R19-21** = **1&nbsp;k&Omega;**. Elles réduisent la taille du signal AC de chaque transformateur..
+- **R8-R10** = **120&nbsp;&Omega;** ou **150&nbsp;&Omega;** en général. Il s'agit des résistances de charge (ou *burden*) de chaque capteur de courant *grille*, qui utilisent **CT1-CT3**.
+- **R11-R12** = **10&nbsp;k&Omega;**. Ensemble, elles fournissent une tension de référence pour les capteurs d'entrée.
+- **R19-R21** = **1&nbsp;k&Omega;**. Elles réduisent la taille du signal AC de chaque transformateur.
 - **R22** = **1&nbsp;M&Omega;**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
 
 `````{note}
@@ -78,8 +78,7 @@ Ensuite, les diodes peuvent être ajoutées.
 Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les CTs.
 
 ```{warning}
-Ces composants sont polarisés.
-
+Ces composants sont polarisés.  
 Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 ```
 
@@ -220,6 +219,8 @@ Une fois les transformateurs en place, la carte est maintenant prête pour les t
 
 C'est le bon moment pour vérifier que tous les joints soudés sont en bon état et que toutes les éclaboussures de soudure ont été éliminées.
 
+### Test de chaque sous-alimentation
+
 Avant d'installer les circuits intégrés, le fonctionnement de l'alimentation doit être vérifié.
 
 ```{danger}
@@ -229,15 +230,16 @@ Pour poursuivre cette séquence de construction, un accès à la tension secteur
 Veuillez ne pas passer à cette étape suivante à moins que vous soyez compétent pour le faire.
 ```
 
-BLABLA
-Comment tester ???
-Tester chaque phase séparément ?!?
+Nous effectuerons les tests suivants en alimentant le routeur via chacun des connecteurs secteur, l'un après l'autre.  
+Ainsi, si une tension est incorrecte, il sera plus facile d'identifier la partie du circuit qui est défectueuse.
 
 Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ 3,3&nbsp;Volts... ou 5&nbsp;V si un régulateur de tension 5&nbsp;V a été installé.
 
 Cette tension peut être facilement vérifiée au niveau du point de test **Test VCC**, ainsi que **Test GND**, comme indiqué ici.
 
 À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.
+
+### Insertion du LM358 et test de Vref
 
 Avec la tension correcte en place, les circuits intégrés peuvent maintenant être installés, après avoir coupé l'alimentation.
 
@@ -261,6 +263,8 @@ Avec **LM358** en place et la carte alimentée à nouveau, la référence de ten
 **Vref** doit être environ la moitié de la tension d'alimentation. Ici, nous testons une carte **3,3&nbsp;V**.
 
 Cette tension est accessible via le point de test **Test Vref** juste en dessous du **LM358**.
+
+### Insertion du processeur principal
 
 Le processeur principal, **ATmega328-P**, est installé de la même manière que pour **LM358**, toujours après avoir couper l'alimentation.
 Avec autant de broches, il est très facile pour l’une d’entre elles de se plier en dessous.
@@ -298,15 +302,19 @@ Le routeur devra toujours être alimenté par sa propre alimentation.
 
 ### Test de la partie *mesures*
 
-Le transformateur a deux sorties : l'une pour l'alimentation CC, l'autre pour le capteur de tension CA qui devrait déjà fonctionner.  
+```{note}
+À partir de maintenant, une alimentation triphasée devra être fournie à la carte-mère.
+```
+
+Chaque transformateur a deux sorties : l'une pour l'alimentation CC, l'autre pour le capteur de tension CA qui devrait déjà fonctionner.  
 Cela peut être vérifié en exécutant un programme (croquis) qui affiche les mesures analogiques prises par le processeur Atmel (ATmega328-P).
 
-Le programme, qui se trouve également sur la page Téléchargements, est : RawSamplesTool_2chan.ino
+Le programme, qui se trouve également sur la page Téléchargements, est : RawSamplesTool_6chan.ino
 
 Après avoir téléchargé ce croquis sur le processeur via l'IDE Arduino, la fenêtre série (icône en forme de loupe) doit être ouverte.  
 Après avoir terminé chaque exécution, le programme peut être redémarré à partir du clavier en saisissant le caractère "**g**", suivi de *Entrée*.
 
-Le programme *RawSamplesTool_2chan* affiche les échantillons de tension alternative et de courant pour un ou plusieurs cycles secteur complets.  
+Le programme *RawSamplesTool_6chan* affiche les échantillons des trois tensions alternatives et de courant pour un ou plusieurs cycles secteur complets.  
 Si un courant important est mesuré ainsi que la tension, les résultats affichés sembleront plus intéressants.
 
 Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3&nbsp;kW avec le CT branché sur CT2.  
@@ -314,9 +322,9 @@ Lorsque le CT a été déplacé vers le port **CT1**, la sortie résultante semb
 
 RSResults_V_and_I2.txt
 
-Si aucun signal n'est disponible sur les ports **CT1** et **CT2**, les formes d'onde de ces canaux seront toutes deux des lignes droites.  
-Seul le signal de tension affichera un aspect sinusoïdal.  
-Pour vérifier le fonctionnement des ports **CT1** et **CT2** pendant que le PCB est testé sur le banc, un câblage adapté sera nécessaire.
+Si aucun signal n'est disponible sur les ports **CT1-CT3**, les formes d'onde de ces canaux seront toutes deux des lignes droites.  
+Seuls les signaux de tension afficheront un aspect sinusoïdal.  
+Pour vérifier le fonctionnement des ports **CT1-CT3** pendant que le PCB est testé sur le banc, un câblage adapté sera nécessaire.
 
 ### Test des sorties
 
