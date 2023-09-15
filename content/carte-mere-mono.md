@@ -175,7 +175,7 @@ Ce composant est polarisé.
 Il faudra bien veiller à faire correspondre le marquage sur le boîtier avec celui de la couche sérigraphiée.
 ```
 
-La broche la plus longue correspond au *+*.
+La broche la plus longue correspond au **+**.
 
 Comme pour l'oscillateur, il est courant de le souder légèrement au dessus du PCB.
 
@@ -189,9 +189,9 @@ Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel 
 ### Condensateurs électrolytiques
 
 Les deux condensateurs électrolytiques, **C1** et **C2**, sont polarisés et doivent donc être installés dans le bon sens.
-La broche -ve est indiquée par une bande proéminente, en général blanche, sur toute la longueur du composant.
+La broche **-ve** est indiquée par une bande proéminente, en général blanche, sur toute la longueur du composant.
 
-L'autre broche est la +ve, qui doit aller dans le trou marqué '+' sur la couche sérigraphiée.
+L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la couche sérigraphiée.
 
 ```{warning}
 Bien qu’ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
@@ -297,12 +297,12 @@ Des détails sur la configuration de l'environnement de développement intégré
 Un programmateur USB vers UART devra être branché sur le connecteur **FTDI** du PCB comme indiqué ci-dessous.  
 L'autre extrémité du programmateur doit être connectée via un câble USB approprié à l'installation de programmation (PC ou équivalent).
 
-La broche à une extrémité du connecteur à 6 voies du programmateur sera étiquetée Gnd. Cette broche doit correspondre au marquage **0&nbsp;V** sur le PCB.
+La broche à une extrémité du connecteur à 6 voies du programmateur sera étiquetée **Gnd**. Cette broche doit correspondre au marquage **0&nbsp;V** sur le PCB.
 
 Ici, le programmeur FTDI est utilisé. Notez qu'il doit être monté dans l'autre sens.
-La broche "Gnd" doit toujours être la plus proche du bord de la carte
+La broche **Gnd** doit toujours être la plus proche du bord de la carte
 
-Pour éviter de surcharger le connecteur du programmateur, on peut fabriquer un simple câble d'extension comme indiqué ici.
+Pour éviter de tordre le connecteur du programmateur, on peut fabriquer un simple câble d'extension comme indiqué ici.
 Seules quatre des lignes sont réellement utilisées (données **Tx** & **Rx**, masse et réinitialisation).  
 Aucune des lignes d'alimentations électriques n'est utilisée par cette carte.
 
@@ -313,3 +313,29 @@ La carte FTDI ne permet pas d'alimenter la carte-mère.
 
 Le routeur devra toujours être alimenté par sa propre alimentation.
 ```
+
+### Test de la partie *mesures*
+
+Le transformateur a deux sorties : l'une pour l'alimentation CC, l'autre pour le capteur de tension CA qui devrait déjà fonctionner.  
+Cela peut être vérifié en exécutant un programme (croquis) qui affiche les mesures analogiques prises par le processeur Atmel (IC1).
+
+Le programme, qui se trouve également sur la page Téléchargements, est : RawSamplesTool_2chan.ino
+
+Après avoir téléchargé ce croquis sur le processeur via l'IDE Arduino, la fenêtre série (icône en forme de loupe) doit être ouverte.  
+Après avoir terminé chaque exécution, le programme peut être redémarré à partir du clavier en saisissant le caractère **g**, suivi de *Entrée*.
+
+Le programme *RawSamplesTool_2chan* affiche les échantillons de tension alternative et de courant pour un ou plusieurs cycles secteur complets.  
+Si un courant important est mesuré ainsi que la tension, les résultats affichés sembleront plus intéressants.
+
+Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3&nbsp;kW avec le CT branché sur CT2.  
+Lorsque le CT a été déplacé vers le port CT1, la sortie résultante semblait presque identique, mais avec les caractères **1** et **2** inversés.
+
+RSResults_V_and_I2.txt
+
+Si aucun signal n'est disponible sur les ports **CT1** et **CT2**, les formes d'onde de ces canaux seront toutes deux des lignes droites.  
+Seul le signal de tension affichera un aspect sinusoïdal.  
+Pour vérifier le fonctionnement des ports **CT1** et **CT2** pendant que le PCB est testé sur le banc, un câblage adapté sera nécessaire.
+
+### Test des sorties
+
+### Test de l'affichage
