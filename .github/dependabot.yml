@@ -11,13 +11,8 @@ updates:
       interval: "weekly"
   - package-ecosystem: "gitsubmodule"
     directory: "/"
-    allow:
+    allow: 
       - dependency-name: "1-phase"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "gitsubmodule"
-    directory: "/"
-    allow:
       - dependency-name: "3-phase"
     schedule:
       interval: "daily"
