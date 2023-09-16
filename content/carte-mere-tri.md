@@ -327,5 +327,3 @@ Seuls les signaux de tension afficheront un aspect sinusoïdal.
 Pour vérifier le fonctionnement des ports **CT1-CT3** pendant que le PCB est testé sur le banc, un câblage adapté sera nécessaire.
 
 ### Test des sorties
-
-### Test de l'affichage
