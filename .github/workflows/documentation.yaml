@@ -65,17 +65,6 @@ jobs:
           git branch -a
           git remote -v
 
-      # - name: Install TeXLive
-      #   uses: awalsh128/cache-apt-pkgs-action@latest
-      #   with:
-      #     packages: latexmk texlive-base
-      #     execute_install_scripts: true
-      #     version: 1.0
-
-      # - name: Install LaTeX
-      #   run: |
-      #     sudo apt-get install -y texlive-latex-extra
-      
       - name: Setup TeX Live
         uses: teatimeguest/setup-texlive-action@v2
         with:
@@ -102,24 +91,15 @@ jobs:
           make simplepdf
           mv _build/simplepdf/*.pdf _build/dirhtml/_static/Manuel_2.pdf
 
-      - name: Generate PDF 3
-        run: |
-          pip install sphinx_weasyprint_builder
-          make weasyprint
-          mv _build/weasyprint/*.pdf _build/dirhtml/_static/Manuel_3.pdf
-
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact
           path: _build
 
-      #- uses: awalsh128/cache-apt-pkgs-action@latest
-      #  with:
-      #    packages: latexmk texlive-latex-extra
-      #- name: Generate PDF 3
-      #  run: |
-      #    make latexpdf
-      #    mv _build/latex/*.pdf _build/dirhtml/_static/Manuel_3.pdf
+      - name: Generate PDF 3
+        run: |
+          make latexpdf
+          mv _build/latex/*.pdf _build/dirhtml/_static/Manuel_3.pdf
 
   # The following supports building all branches and combining on
   # gh-pages
