@@ -82,6 +82,8 @@ jobs:
           packages: >-
             scheme-basic
             anyfontsize
+            latexmk
+            dvisvgm
     
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
