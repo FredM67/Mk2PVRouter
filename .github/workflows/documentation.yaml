@@ -69,14 +69,14 @@ jobs:
         uses: teatimeguest/setup-texlive-action@v2
         with:
           packages: >-
-            scheme-basic
-            anyfontsize
-            latexmk
-            dvisvgm
-            cmap
-            tex-gyre
-            fncychap
-            float
+            scheme-full
+          # anyfontsize
+          # latexmk
+          # dvisvgm
+          # cmap
+          # tex-gyre
+          # fncychap
+          # float
     
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
