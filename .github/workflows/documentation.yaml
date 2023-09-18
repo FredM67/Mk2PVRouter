@@ -76,6 +76,7 @@ jobs:
             cmap
             tex-gyre
             fncychap
+            float
     
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
