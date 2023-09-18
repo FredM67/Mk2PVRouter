@@ -75,6 +75,7 @@ jobs:
             dvisvgm
             cmap
             tex-gyre
+            fncychap
     
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
@@ -93,15 +94,15 @@ jobs:
           make simplepdf
           mv _build/simplepdf/*.pdf _build/dirhtml/_static/Manuel_2.pdf
 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: my-artifact
-          path: _build
-
       - name: Generate PDF 3
         run: |
           make latexpdf
           mv _build/latex/*.pdf _build/dirhtml/_static/Manuel_3.pdf
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: _build
 
   # The following supports building all branches and combining on
   # gh-pages
