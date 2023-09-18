@@ -81,7 +81,7 @@ jobs:
         with:
           packages: >-
             scheme-basic
-            latex-extra
+            anyfontsize
     
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
