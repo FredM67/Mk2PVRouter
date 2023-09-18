@@ -74,6 +74,7 @@ jobs:
             latexmk
             dvisvgm
             cmap
+            tex-gyre
     
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
