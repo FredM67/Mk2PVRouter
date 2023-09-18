@@ -65,17 +65,22 @@ jobs:
           git branch -a
           git remote -v
 
-      - name: Install TeXLive
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: latexmk texlive-base
-          execute_install_scripts: true
-          version: 1.0
+      # - name: Install TeXLive
+      #   uses: awalsh128/cache-apt-pkgs-action@latest
+      #   with:
+      #     packages: latexmk texlive-base
+      #     execute_install_scripts: true
+      #     version: 1.0
 
-      - name: Install LaTeX
-        run: |
-          sudo apt-get install -y texlive-latex-extra
+      # - name: Install LaTeX
+      #   run: |
+      #     sudo apt-get install -y texlive-latex-extra
       
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v2
+        with:
+          packages: scheme-basic
+    
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
       - name: Build Sphinx docs
