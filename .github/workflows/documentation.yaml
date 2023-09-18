@@ -71,6 +71,7 @@ jobs:
           packages: >-
             collection-latexextra
             tex-gyre
+            greek-fontenc
           # anyfontsize
           # latexmk
           # dvisvgm
