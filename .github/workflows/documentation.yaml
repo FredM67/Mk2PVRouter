@@ -73,6 +73,7 @@ jobs:
             anyfontsize
             latexmk
             dvisvgm
+            cmap
     
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
