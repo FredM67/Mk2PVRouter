@@ -81,7 +81,7 @@ jobs:
         with:
           packages: >-
             scheme-basic
-            texlive-latex-extra
+            latex-extra
     
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
