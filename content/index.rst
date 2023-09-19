@@ -1,4 +1,5 @@
-.. _bienvenue dans la documentation du mk2pvrouter !:
+.. _mk2pvrouter:
+
 ************************************************
 Bienvenue dans la documentation du Mk2PVRouter !
 ************************************************
