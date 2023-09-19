@@ -11,9 +11,9 @@ Selon le nombre de sorties commandées, 2 références pourront être livrées :
 
 Les contraintes à respecter sont peu nombreuses, en voici la liste :
 - **presse-étoupe** à installer sur **côté inférieur**, pour la protection contre la poussière ainsi que les ruissellements éventuels.
-- **dissipateur(s)** à installer les côtés **verticaux**. C'est **impératif** pour assurer un bon refroidissement
+- **dissipateur(s)** à installer les côtés **verticaux**. C'est **impératif** pour assurer un bon refroidissement.
 
-Pour le reste - témoin(s) LED, bouton *reset* si présent, prise(s) jack, on peut les monter n'importe où.
+Pour le reste - témoin(s) LED, bouton *reset* si présent, prise(s) jack, on peut les monter n'importe où, selon ses goûts !
 
 Cependant, cette notice décrira l'implantation la plus classique.
 ## Étapes à réaliser
