@@ -2,31 +2,45 @@
 
 # Boîtier
 
-## Subsection
+Les boîtiers utilisés pour ce routeur sont de type industriel, en ABS avec retardateur de flamme.
+Ils répondent aux normes industrielles en matière de sécurité.
 
-Exciting documentation in here.
-Let's make a list (empty surrounding lines required):
+Selon le nombre de sorties commandées, 2 références pourront être livrées :
+- Thalassa **NSYTBS24198** : ce boîtier convient pour les configurations à **1** ou **2** sorties, à installer en mode portrait ou paysage.
+- Thalassa **NSYTBS29248** : ce boîtier convient pour les configurations à **3** ou **4** sorties, à installer en **mode portrait obligatoirement**.
 
-- item 1
+Les contraintes à respecter sont peu nombreuses, en voici la liste :
+- **presse-étoupe** à installer sur **côté inférieur**, pour la protection contre la poussière ainsi que les ruissellements éventuels.
+- **dissipateur(s)** à installer les côtés **verticaux**. C'est **impératif** pour assurer un bon refroidissement
 
-  - nested item 1
-  - nested item 2
+Pour le reste - témoin(s) LED, bouton *reset* si présent, prise(s) jack, on peut les monter n'importe où.
 
-- item 2
-- item 3
+Cependant, cette notice décrira l'implantation la plus classique.
+## Étapes à réaliser
 
-### SubSubsection
+- Perçage pour la carte-mère
+  Il faudra percer 4 trous de **4&nbsp;mm** de diamètre.
+- Perçage pour les presse-étoupe
+  Il faudra percer des trous de **20&nbsp;mm** de diamètre.
+- Perçage pour le(s) prise(s) jack
+  Il faudra percer des trous de **8&nbsp;mm** de diamètre.
+- Perçage pour le(s) témoin(s) LED
+  Il faudra percer des trous de **8&nbsp;mm** de diamètre.
+- Perçage pour le bouton *reset*
+  Il faudra percer un trou de **13&nbsp;mm** de diamètre.
+- Perçage pour le(s) dissipateur(s)
+  Il faudra percer 2 trous de **3&nbsp;mm** de diamètre ainsi qu'un autre de **35&nbsp;mm** de diamètre.
+  Voir {ref}`Perçage du boîtier <percage-du-boitier>`.
 
-Exciting documentation in here.
-Let's make a list (empty surrounding lines required):
+## Outils nécessaires
 
-- item 1
+- une perceuse à colonne si possible, sinon n'importe quelle perceuse.
+- foret de **3&nbsp;mm**
+- foret de **4&nbsp;mm**
+- foret de **8&nbsp;mm**
+- foret ou fraise de **20&nbsp;mm**
+- fraise de **35&nbsp;mm**
 
-  - nested item 1
-  - nested item 2
-
-- item 2
-- item 3
 
 ```{error} Error!
 Bla bla
