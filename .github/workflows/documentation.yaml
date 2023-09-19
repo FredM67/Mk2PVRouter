@@ -99,7 +99,7 @@ jobs:
         run: |
           pip install sphinx_pyppeteer_builder
           make pyppeteer
-          mv _build/pyppeteer/*.pdf _build/dirhtml/_static/Manuel_1.pdf
+          mv _build/pyppeteer/*.pdf _build/dirhtml/_static/Manuel_3.pdf
 
 
       # - name: Generate PDF 3
