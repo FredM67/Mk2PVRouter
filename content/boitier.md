@@ -41,6 +41,7 @@ Cependant, cette notice décrira l'implantation la plus classique.
 - foret ou fraise de **20&nbsp;mm**
 - fraise de **35&nbsp;mm**
 
+## Fixations de la carte-mère
 
 ```{error} Error!
 Bla bla
