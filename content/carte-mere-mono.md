@@ -83,7 +83,7 @@ Ensuite, les diodes peuvent être ajoutées.
 
 Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les CTs.
 
-```{warning}
+```{attention}
 Ces composants sont polarisés.
 
 Ils doivent être placés selon le repérage sur la couche sérigraphiée.
@@ -96,7 +96,7 @@ Ensuite, on installe généralement les supports pour les circuits intégrés.
 Si l'option *pin-saving hardware* est utilisée, quatre circuits intégrés seront nécessaires (**IC1 - IC4**) ; sinon il n'y en aura que deux (**IC1** & **IC2**).
 Cette distinction est expliquée plus en détail ultérieurement.
 
-```{warning}
+```{attention}
 Chaque support a une encoche à une extrémité. Celle-ci doit être alignée avec la marque correspondante sur la couche sérigraphiée, comme indiqué ici.
 ```
 
@@ -170,7 +170,7 @@ La courbe du bas est la tension fournie par le redresseur.
 Redressement double alternance
 ```
 
-```{warning}
+```{attention}
 Ce composant est polarisé.  
 Il faudra bien veiller à faire correspondre le marquage sur le boîtier avec celui de la couche sérigraphiée.
 ```
@@ -193,7 +193,7 @@ La broche **-ve** est indiquée par une bande proéminente, en général blanche
 
 L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la couche sérigraphiée.
 
-```{warning}
+```{attention}
 Bien qu’ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
 
 Le plus grand condensateur (**C1** = **100&nbsp;μF**) est le plus proche du pont redresseur.  
@@ -283,7 +283,7 @@ Un endroit pratique pour accéder à **Vref** se trouve à l’extrémité supé
 Le processeur principal, **IC1**, est installé de la même manière que pour **IC2**, toujours après avoir couper l'alimentation.
 Avec autant de broches, il est très facile pour l’une d’entre elles de se plier en dessous.
 
-```{warning}
+```{caution}
 Si ce circuit intégré est dans le mauvais sens lors de la mise sous tension, il ne fonctionnera probablement plus jamais !
 ```
 

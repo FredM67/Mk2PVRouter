@@ -77,7 +77,7 @@ Ensuite, les diodes peuvent être ajoutées.
 
 Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les CTs.
 
-```{warning}
+```{attention}
 Ces composants sont polarisés.  
 Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 ```
@@ -86,7 +86,7 @@ Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 
 Ensuite, on installe généralement les supports pour les circuits intégrés.
 
-```{warning}
+```{attention}
 Chaque support a une encoche à une extrémité. Celle-ci doit être alignée avec la marque correspondante sur la couche sérigraphiée, comme indiqué ici.
 ```
 
@@ -138,7 +138,7 @@ Il y a cependant deux inconvénients :
 - la tension moyenne résultante est plus de 2 fois la tension moyenne de chaque entrée. Cela engendre un surcroît de "*travail*" du régulateur de tension qui chauffera bien plus.
 ```
 
-```{warning}
+```{attention}
 Ces composants sont polarisés.  
 Il faudra bien veiller à faire correspondre le marquage sur le boîtier avec celui de la couche sérigraphiée.
 ```
@@ -165,7 +165,7 @@ La broche **-ve** est indiquée par une bande proéminente, en général blanche
 
 L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la couche sérigraphiée.
 
-```{warning}
+```{attention}
 Bien qu’ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
 
 Le plus grand condensateur (**C1** = **100&nbsp;μF**) est le plus proche du bord du PCB.  
@@ -269,7 +269,7 @@ Cette tension est accessible via le point de test **Test Vref** juste en dessous
 Le processeur principal, **ATmega328-P**, est installé de la même manière que pour **LM358**, toujours après avoir couper l'alimentation.
 Avec autant de broches, il est très facile pour l’une d’entre elles de se plier en dessous.
 
-```{warning}
+```{caution}
 Si ce circuit intégré est dans le mauvais sens lors de la mise sous tension, il ne fonctionnera probablement plus jamais !
 ```
 
