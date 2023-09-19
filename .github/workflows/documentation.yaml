@@ -95,6 +95,13 @@ jobs:
           make simplepdf
           mv _build/simplepdf/*.pdf _build/dirhtml/_static/Manuel_2.pdf
 
+      - name: Generate PDF 3
+        run: |
+          pip install sphinx_pyppeteer_builder
+          make pyppeteer
+          mv _build/pyppeteer/*.pdf _build/dirhtml/_static/Manuel_1.pdf
+
+
       # - name: Generate PDF 3
       #   run: |
       #     make latexpdf
