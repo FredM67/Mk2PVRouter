@@ -89,3 +89,29 @@ Ce sont des fils actifs qui permettront d'envoyer les commandes d'ouverture et f
   - étage de sortie **bas droit** => **360&nbsp;mm**
 ```
 ````
+
+AUTRE VARIANTE
+
+````{admonition} Longueurs conseillées
+```{exercise} Version monophasée
+- Boîtier **1** ou **2** sorties
+  - étage de sortie **gauche** => xx&nbsp;mm
+  - étage de sortie **droit** => xx&nbsp;mm
+- Boîtier **3** ou **4** sorties
+  - étage de sortie **haut gauche** => xx&nbsp;mm
+  - étage de sortie **haut droit** => xx&nbsp;mm
+  - étage de sortie **bas gauche** => xx&nbsp;mm
+  - étage de sortie **bas droit** => xx&nbsp;mm
+```
+
+```{exercise} Version triphasée
+- Boîtier **1** ou **2** sorties
+  - étage de sortie **gauche** => **140&nbsp;mm**
+  - étage de sortie **droit** => **340&nbsp;mm**
+- Boîtier **3** ou **4** sorties
+  - étage de sortie **haut gauche** => **200&nbsp;mm**
+  - étage de sortie **haut droit** => **200&nbsp;mm**
+  - étage de sortie **bas gauche** => **240&nbsp;mm**
+  - étage de sortie **bas droit** => **360&nbsp;mm**
+```
+````
