@@ -13,7 +13,7 @@ Les contraintes à respecter sont peu nombreuses, en voici la liste :
 - **presse-étoupe** à installer sur **côté inférieur**, pour la protection contre la poussière ainsi que les ruissellements éventuels.
 - **dissipateur(s)** à installer les côtés **verticaux**. C'est **impératif** pour assurer un bon refroidissement.
 
-Pour le reste - témoin(s) LED, bouton *reset* si présent, prise(s) jack, on peut les monter n'importe où, selon ses goûts !
+Pour le reste - témoin(s) LED, bouton *reset* si présent, prise(s) jack, on peut les monter n'importe où, selon ses goûts !per
 
 Cependant, cette notice décrira l'implantation la plus classique.
 ## Étapes à réaliser
@@ -30,7 +30,7 @@ Cependant, cette notice décrira l'implantation la plus classique.
   Il faudra percer un trou de **13&nbsp;mm** de diamètre.
 - Perçage pour le(s) dissipateur(s)
   Il faudra percer 2 trous de **3&nbsp;mm** de diamètre ainsi qu'un autre de **35&nbsp;mm** de diamètre.
-  Voir {ref}`Perçage du boîtier <percage-du-boitier>`.
+  Voir {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
 
 ## Outils nécessaires
 
