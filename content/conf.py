@@ -36,7 +36,6 @@ extensions = [
 ]
 # Make sure the target is unique
 autosectionlabel_prefix_document = True
-autosectionlabel_prefix_document = True
 
 imgmath_image_format = 'svg'
 imgmath_embed = True

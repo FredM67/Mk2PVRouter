@@ -2,6 +2,7 @@
    sphinx-quickstart on Mon Aug 28 10:50:52 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+(index)=
 
 Bienvenue dans la documentation du Mk2PVRouter !
 ================================================
@@ -54,4 +55,4 @@ Le routeur va permettre de décaler la consommation du chauffe-eau aux moments o
    carte-sortie.md
    boitier.md
    dissipateur.md
-   
+   assemblage.md
