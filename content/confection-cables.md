@@ -45,7 +45,7 @@ Ces câbles serviront à transmettre les mesures prises par la ou les pinces amp
 Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'apparition de parasites.
 
 ````{admonition} Longueurs conseillées
-```{admonition} Boîtier **1** ou **2** sorties
+```{exercise} Boîtier **1** ou **2** sorties
 - **monophasé** => une paire xx&nbsp;mm de long
 - **triphasé** => 3 paires de :
   - **255&nbsp;mm** pour **CT1**,
@@ -53,7 +53,7 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
   - **345&nbsp;mm** pour **CT3**.
 ```    
 
-```{admonition} Boîtier **3** ou **4** sorties
+```{exercise} Boîtier **3** ou **4** sorties
 - **monophasé** => une paire xx&nbsp;mm de long
 - **triphasé** => 3 paires de :
   - **315&nbsp;mm** pour **CT1**,
@@ -67,7 +67,7 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
 Ce sont des fils actifs qui permettront d'envoyer les commandes d'ouverture et fermeture aux triacs.
 
 ````{admonition} Longueurs conseillées
-```{admonition} Boîtier **1** ou **2** sorties
+```{exercise} Boîtier **1** ou **2** sorties
 - **monophasé**
   - étage de sortie **gauche** => xx&nbsp;mm
   - étage de sortie **droit** => xx&nbsp;mm
@@ -76,7 +76,7 @@ Ce sont des fils actifs qui permettront d'envoyer les commandes d'ouverture et f
   - étage de sortie **droit** => **340&nbsp;mm**
 ```
 
-```{admonition} Boîtier **3** ou **4** sorties
+```{exercise} Boîtier **3** ou **4** sorties
 - **monophasé**
   - étage de sortie **haut gauche** => xx&nbsp;mm
   - étage de sortie **haut droit** => xx&nbsp;mm
