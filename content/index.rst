@@ -45,6 +45,7 @@ Le routeur va permettre de décaler la consommation du chauffe-eau aux moments o
 
 .. toctree::
    :maxdepth: 2
+   :caption: Table des matières
 
    introduction.md
    carte-mere-mono.md
