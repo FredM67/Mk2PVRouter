@@ -45,17 +45,19 @@ Ces câbles serviront à transmettre les mesures prises par la ou les pinces amp
 Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'apparition de parasites.
 
 ````{admonition} Longueurs conseillées
-```{exercise} Boîtier **1** ou **2** sorties
-- **monophasé** => une paire xx&nbsp;mm de long
-- **triphasé** => 3 paires de :
+```{exercise} Version monophasée
+- Boîtier **1** ou **2** sorties
+  xx&nbsp;mm de long
+- Boîtier **3** ou **4** sorties
+  xx&nbsp;mm de long
+```    
+
+```{exercise} Version triphasée
+- Boîtier **1** ou **2** sorties
   - **255&nbsp;mm** pour **CT1**,
   - **300&nbsp;mm** pour **CT2** et 
   - **345&nbsp;mm** pour **CT3**.
-```    
-
-```{exercise} Boîtier **3** ou **4** sorties
-- **monophasé** => une paire xx&nbsp;mm de long
-- **triphasé** => 3 paires de :
+- Boîtier **3** ou **4** sorties
   - **315&nbsp;mm** pour **CT1**,
   - **360&nbsp;mm** pour **CT2** et
   - **405&nbsp;mm** pour **CT3**.
@@ -65,32 +67,6 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
 ## Câble(s) de contrôle
 
 Ce sont des fils actifs qui permettront d'envoyer les commandes d'ouverture et fermeture aux triacs.
-
-````{admonition} Longueurs conseillées
-```{exercise} Boîtier **1** ou **2** sorties
-- **monophasé**
-  - étage de sortie **gauche** => xx&nbsp;mm
-  - étage de sortie **droit** => xx&nbsp;mm
-- **triphasé**
-  - étage de sortie **gauche** => **140&nbsp;mm**
-  - étage de sortie **droit** => **340&nbsp;mm**
-```
-
-```{exercise} Boîtier **3** ou **4** sorties
-- **monophasé**
-  - étage de sortie **haut gauche** => xx&nbsp;mm
-  - étage de sortie **haut droit** => xx&nbsp;mm
-  - étage de sortie **bas gauche** => xx&nbsp;mm
-  - étage de sortie **bas droit** => xx&nbsp;mm
-- **triphasé**
-  - étage de sortie **haut gauche** => **200&nbsp;mm**
-  - étage de sortie **haut droit** => **200&nbsp;mm**
-  - étage de sortie **bas gauche** => **240&nbsp;mm**
-  - étage de sortie **bas droit** => **360&nbsp;mm**
-```
-````
-
-AUTRE VARIANTE
 
 ````{admonition} Longueurs conseillées
 ```{exercise} Version monophasée
