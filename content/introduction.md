@@ -1,5 +1,7 @@
 # Introduction
 
+
+---
 ## Contenu du kit
 
 Dans le kit, vous trouverez :
@@ -9,6 +11,8 @@ Dans le kit, vous trouverez :
 - un boîtier
 - des câbles
 
+
+---
 ## Étapes d'assemblage
 
 L'assemblage complet va nécessité plusieurs étapes :
@@ -22,6 +26,8 @@ L'assemblage complet va nécessité plusieurs étapes :
 - étalonnage
 - programmation finale
 
+
+---
 ## Conseils pour les étapes de soudure
 
 Les composants nécessaires sont très variés. Certains composants sont passifs (résistances, ...), d'autres sont actifs (AtMega, ...).

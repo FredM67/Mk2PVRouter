@@ -12,6 +12,8 @@ Lors de l'installation finale du boîtier, il faudra **impérativement** que les
 
 Compte tenu de la taille du dissipateur, il est recommandé de ne pas dépasser 3kW connectés à chaque sortie.
 
+
+---
 ## Perçage du dissipateur
 
 Chaque dissipateur devra être percé de 3 trous, 2 servant à la fixation sur le boîtier, le 3{sup}`ème` au milieu est destiné au triac.
@@ -34,6 +36,8 @@ Le gabarit sera placé sur la face pleine du dissipateur.
 
 L'idéal est d'utiliser une perceuse à colonne.
 
+
+---
 ## Perçage du boîtier
 
 Chaque dissipateur sera monté sur les côtés **verticaux** du boîtier.

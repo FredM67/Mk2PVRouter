@@ -19,6 +19,8 @@ Il faudra veiller à donner une attention particulière à la **qualité** de ch
 Une soudure ratée peut entraîner la destruction immédiate de la carte avec risque d'incendie lors de la mise sous tension.
 ```
 
+
+---
 ## Pose des *agrafes* en cuivre
 
 La première étape du processus d'assemblage consiste à installer une paire d'*agrafes* en cuivre massif qui augmentent la capacité de la carte à supporter des courants élevés.
@@ -32,6 +34,8 @@ Ensuite, les extrémités sont pliées vers l’extérieur et fermement pressée
 
 Lorsque les fils sont dans la bonne position, les quatre extrémités peuvent être coupées à longueur.
 
+
+---
 ## Soudure des composants basse consommation
 
 Une fois les agrafes en cuivre en place, tous les composants basse consommation peuvent désormais être installés.
@@ -45,6 +49,8 @@ Si vous installez un connecteur DIL pour l'optocoupleur ou circuit intégré *d�
 
 Ces caractéristiques indiquent toutes deux la broche 1.
 
+
+---
 ## Soudure de la partie *haute puissance*/*haute tension*
 
 ```{danger}
@@ -77,6 +83,8 @@ Lors de la soudure du triac, veillez à bien vérifier que la soudure est "remon
 Cela assurera une continuité parfaite mais aussi une solidité accrue.
 ```
 
+
+---
 ## Mise en place de l'optocoupleur
 
 Ce minuscule composant à 6 broches forme le *pont* entre les côtés basse tension et haute tension.
@@ -84,6 +92,8 @@ Le point sur la puce (surligné ici en rouge) doit être à côté du cercle sur
 
 S'il est monté dans le mauvais sens, cela ne fonctionnera pas. Mais grâce à la disposition de ses pins, il devrait survivre à l’expérience.
 
+
+---
 ## Test
 
 Lors de la construction d'un système complet, il peut être plus approprié que l'étage de sortie terminé soit monté dans le boîtier avant d'être testé.

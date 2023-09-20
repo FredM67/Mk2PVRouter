@@ -6,6 +6,8 @@ Plusieurs versions du PCB peuvent exister.
 
 Bien qu'elles fonctionnent toutes de la même manière, chaque version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l’Arduino, ...).
 
+
+---
 ## Soudure des composants
 
 ### Résistances
@@ -231,6 +233,8 @@ Un transformateur de **6&nbsp;V** peut prendre en charge un régulateur de tensi
 Lors du montage de ce composant, il ne doit y avoir aucun espace entre la base du transformateur et le PCB.
 ```
 
+
+---
 ## Tests électriques
 
 Une fois le transformateur en place, la carte est maintenant prête pour les tests électriques.  
@@ -287,6 +291,8 @@ Avec autant de broches, il est très facile pour l’une d’entre elles de se p
 Si ce circuit intégré est dans le mauvais sens lors de la mise sous tension, il ne fonctionnera probablement plus jamais !
 ```
 
+
+---
 ## Test logiciel
 
 Une fois le processeur en place, il peut être judicieux de vérifier que l'alimentation électrique est toujours correcte.  
