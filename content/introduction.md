@@ -15,7 +15,7 @@ Dans le kit, vous trouverez :
 ---
 ## Étapes d'assemblage
 
-L'assemblage complet va nécessité plusieurs étapes :
+L'assemblage complet va nécessité plusieurs étapes :
 - soudure et tests de la carte-mère
 - soudure et tests de la ou les cartes de sortie
 - perçage du boîtier
@@ -40,7 +40,7 @@ Ces composants sont aussi de tailles très différentes. Des plus petits, avec q
 Pour des raisons pratiques, il est conseillé de procéder strictement par ordre de taille.
 Ainsi, on soudera dans cet ordre :
 1. résistances et diodes, ponts le cas échéant
-2. supports IC1 et IC2 (voire IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les support)
+2. supports IC1 et IC2 (voire IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports)
 3. condensateurs "orange" non polarisés, oscillateur
 4. pont(s) de diodes
 5. tous les connecteurs SIL noirs et le connecteur d'affichage, le cas échéant
@@ -65,13 +65,13 @@ Cet ordre précis permet de s'affranchir de tordre les pattes des composants, ut
 - clés plates ou douilles de 5,5 et 10
 - clé six pans de 2 et 2,5
 - une perceuse à colonne si possible, sinon n'importe quelle perceuse.
-- foret métal de **3&nbsp;mm**
-- foret métal de **4&nbsp;mm**
-- foret (bois ou métal) de **8&nbsp;mm**
-- foret (bois ou métal) ou fraise de **20&nbsp;mm**
-- fraise de **35&nbsp;mm**
+- foret métal de **3 mm**
+- foret métal de **4 mm**
+- foret (bois ou métal) de **8 mm**
+- foret (bois ou métal) ou fraise de **20 mm**
+- fraise de **35 mm**
 - colle thermofusible
 - gaine thermorétractable
 - multimètre (au minimum voltmètre et ohmmètre)
 
-Certains matériels sont optionnels (frais de 35, colle, gaine). Cependant, ils faciliterons certaines étapes et permettront de faire du travail plus propre et bien fini.
+Certains matériels sont optionnels (frais de 35, colle, gaine). Cependant, ils faciliteront certaines étapes et permettront de faire du travail plus propre et bien fini.
