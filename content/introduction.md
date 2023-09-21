@@ -26,7 +26,6 @@ L'assemblage complet va nécessité plusieurs étapes :
 - étalonnage
 - programmation finale
 
-
 ---
 ## Conseils pour les étapes de soudure
 
@@ -53,3 +52,26 @@ Ainsi, on soudera dans cet ordre :
 11. enfin le(s) transformateur(s)
 
 Cet ordre précis permet de s'affranchir de tordre les pattes des composants, utiliser de l'adhésif, ...
+
+---
+
+## Matériels nécessaires
+
+- fer à souder
+- fil de soudure
+- pince coupante
+- pince à sertir les cosses ou pince multifonction
+- tournevis cruciforme
+- clés plates ou douilles de 5,5 et 10
+- clé six pans de 2 et 2,5
+- une perceuse à colonne si possible, sinon n'importe quelle perceuse.
+- foret métal de **3&nbsp;mm**
+- foret métal de **4&nbsp;mm**
+- foret (bois ou métal) de **8&nbsp;mm**
+- foret (bois ou métal) ou fraise de **20&nbsp;mm**
+- fraise de **35&nbsp;mm**
+- colle thermofusible
+- gaine thermorétractable
+- multimètre (au minimum voltmètre et ohmmètre)
+
+Certains matériels sont optionnels (frais de 35, colle, gaine). Cependant, ils faciliterons certaines étapes et permettront de faire du travail plus propre et bien fini.
