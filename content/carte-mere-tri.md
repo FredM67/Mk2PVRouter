@@ -200,8 +200,8 @@ Les porte-fusible, accompagnés de leur fusible de **100 mA**, sont simples à 
 ### Régulateur de tension
 
 Le régulateur de tension (**VR1**) doit être monté avec son ailette métallique éloignée du transformateur comme indiqué sur la sérigraphie.  
-Selon l'application, le **VR1** sera une version 3,3 V ou 5 V.  
-5 V est nécessaire chaque fois que l'option *pin-saving hardware* est utilisée.
+Selon l'application, le **VR1** sera une version **3,3 V** ou **5 V**.  
+**5 V** est nécessaire chaque fois que l'option *pin-saving hardware* est utilisée.
 
 Souder les broches du **VR1** nécessitera probablement plus de chaleur.
 Pour réduire la quantité de métal à chauffer, il est possible de prédécouper ces broches à la longueur requise.
