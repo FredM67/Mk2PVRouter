@@ -1,10 +1,9 @@
 # Introduction
 
-
 ---
 ## Contenu du kit
 
-Dans le kit, vous trouverez :
+Dans le kit, vous trouverez :
 - le circuit imprimé (PCB) de la carte-mère
 - un ou plusieurs circuits imprimés pour chaque sortie
 - des composants électroniques (résistances, condensateurs, ...). Attention, certains sont sensibles à l'électricité statique, il faut donc les manipuler avec soin
@@ -15,7 +14,7 @@ Dans le kit, vous trouverez :
 ---
 ## Étapes d'assemblage
 
-L'assemblage complet va nécessité plusieurs étapes :
+L'assemblage complet va nécessiter plusieurs étapes :
 - soudure et tests de la carte-mère
 - soudure et tests de la ou les cartes de sortie
 - perçage du boîtier
@@ -38,7 +37,7 @@ Certains composants sont polarisés (diodes, certains condensateurs, ...), d'aut
 Ces composants sont aussi de tailles très différentes. Des plus petits, avec quelques millimètres d'épaisseur/diamètre aux plus gros avec plus centimètres d'épaisseur (transformateurs).
 
 Pour des raisons pratiques, il est conseillé de procéder strictement par ordre de taille.
-Ainsi, on soudera dans cet ordre :
+Ainsi, on soudera dans cet ordre :
 1. résistances et diodes, ponts le cas échéant
 2. supports IC1 et IC2 (voire IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports)
 3. condensateurs "orange" non polarisés, oscillateur

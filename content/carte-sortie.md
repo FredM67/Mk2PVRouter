@@ -4,7 +4,7 @@
 
 Un *Relais Statique* ou *SSR* (Solid State Relay) peut aussi être utilisé comme étage de sortie.
 
-Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet ordre :
+Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet ordre :
 1. résistances
 2. support MOC
 3. connecteur(s) Molex
@@ -14,7 +14,7 @@ Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet o
 ```{danger}
 Certaines soudures sur cette carte ont une très grande importance.
 
-Il faudra veiller à donner une attention particulière à la **qualité** de chacune des soudure sur la partie **haute tension**.
+Il faudra veiller à donner une attention particulière à la **qualité** de chacune des soudures sur la partie **haute tension**.
 
 Une soudure ratée peut entraîner la destruction immédiate de la carte avec risque d'incendie lors de la mise sous tension.
 ```
@@ -24,9 +24,9 @@ Une soudure ratée peut entraîner la destruction immédiate de la carte avec ri
 ## Pose des *agrafes* en cuivre
 
 La première étape du processus d'assemblage consiste à installer une paire d'*agrafes* en cuivre massif qui augmentent la capacité de la carte à supporter des courants élevés.
-La section transversale recommandée est de 1,5&nbsp;mm{sup}`2`compte tenu de la longueur très faible.
+La section transversale recommandée est de 1,5 mm{sup}`2`compte tenu de la longueur très faible.
 
-Les paires de trous correctes sont indiquées par les lignes épaisses dans la couche de sérigraphie. Ces trous sont espacés d'environ 5&nbsp;mm.
+Les paires de trous correctes sont indiquées par les lignes épaisses dans la couche de sérigraphie. Ces trous sont espacés d'environ 5 mm.
 
 Tout d’abord, le fil est plié dans une forme appropriée pour passer à travers ces trous.
 
@@ -40,10 +40,10 @@ Lorsque les fils sont dans la bonne position, les quatre extrémités peuvent ê
 
 Une fois les agrafes en cuivre en place, tous les composants basse consommation peuvent désormais être installés.
 
-Comme indiqué sur le schéma de circuit :
-- **R1** = **120&nbsp;&Omega;** (lors du fonctionnement à partir d'une source en **3,3&nbsp;V**, ou **180&nbsp;&Omega;** pour un fonctionnement en **5&nbsp;V**)
-- **R2** = **330&nbsp;&Omega;**
-- **R3** = **360&nbsp;&Omega;**
+Comme indiqué sur le schéma de circuit :
+- **R1** = **120 Ω** (lors du fonctionnement à partir d'une source en **3,3 V**, ou **180 Ω** pour un fonctionnement en **5 V**)
+- **R2** = **330 Ω**
+- **R3** = **360 Ω**
 
 Si vous installez un connecteur DIL pour l'optocoupleur ou circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le PCB.
 
@@ -63,13 +63,13 @@ Une soudure ratée peut entraîner la destruction immédiate de la carte avec ri
 
 Ce composant peut être temporairement maintenu en place en pliant les agrafes en cuivre de manière à ce qu'elles viennent juste pincer les broches saillantes.
 
-Ensuite, avec un bon fer chaud (régler la température à 450&nbsp;°C si possible), beaucoup de soudure peut être appliquée.
+Ensuite, avec un bon fer chaud (régler la température à 450 °C si possible), beaucoup de soudure peut être appliquée.
 
 ### Triac
 
 De la même façon que précédemment, ce composant peut être temporairement maintenu en place en pliant les agrafes en cuivre de manière à ce qu'elles viennent juste pincer les broches saillantes.
 
-Il faudrait laisser dépasser seulement 1-2&nbsp;mm des pattes du triac.
+Il faudrait laisser dépasser seulement 1-2 mm des pattes du triac.
 
 Afin de faciliter cette opération mais aussi de protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l'un des dissipateurs non encore monté que vous avez à disposition. On peut prendre une pince à linge par exemple, ou toute autre pince à ressort.
 
@@ -103,7 +103,7 @@ Les conseils ci-dessous sont proposés lorsqu'un étage de sortie doit être tes
 ```{danger}
 **Avertissement de Sécurité**
 
-Pour tester que le déclencheur et le triac fonctionnent, un accès à la tension secteur **230&nbsp;V** CA est requis.
+Pour tester que le déclencheur et le triac fonctionnent, un accès à la tension secteur **230 V** CA est requis.
 
 Veuillez faire très attention et n’entreprendre cette étape suivante que si vous êtes compétent pour le faire.
 ```
