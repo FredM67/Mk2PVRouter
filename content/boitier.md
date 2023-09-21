@@ -18,6 +18,7 @@ Pour le reste - témoin(s) LED, bouton *reset* si présent, prise(s) jack, on pe
 Cependant, cette notice décrira l'implantation la plus classique.
 
 ---
+
 ## Étapes à réaliser
 
 - Perçage pour la carte-mère
@@ -35,6 +36,7 @@ Cependant, cette notice décrira l'implantation la plus classique.
   Voir {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
 
 ---
+
 ## Outils nécessaires
 
 - une perceuse à colonne si possible, sinon n'importe quelle perceuse.
@@ -45,6 +47,7 @@ Cependant, cette notice décrira l'implantation la plus classique.
 - fraise de **35&nbsp;mm**
 
 ---
+
 ## Fixations de la carte-mère
 
 ```{error} Error!

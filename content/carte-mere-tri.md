@@ -18,11 +18,11 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 (veuillez lire les notes ci-dessous qui concernent ces valeurs de composants)
 
 - **R1** = **47&nbsp;k&Omega;**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
-- **R2-R4** = **100&nbsp;&Omega;** ou **180&nbsp;&Omega;**. **R2-R5** réduisent la taille du signal AC de chaque transformateur.
+- **R2-R4** = **100&nbsp;&Omega;** ou **180&nbsp;&Omega;**. Elles réduisent la taille du signal AC de chaque transformateur.
 - **R5-R7** = **1&nbsp;k&Omega;**. Elles réduisent la taille du signal AC de chaque transformateur.
 - **R8-R10** = **120&nbsp;&Omega;** ou **150&nbsp;&Omega;** en général. Il s'agit des résistances de charge (ou *burden*) de chaque capteur de courant *grille*, qui utilisent **CT1-CT3**.
 - **R11-R12** = **10&nbsp;k&Omega;**. Ensemble, elles fournissent une tension de référence pour les capteurs d'entrée.
-- **R19-R21** = **1&nbsp;k&Omega;**. Elles réduisent la taille du signal AC de chaque transformateur.
+- **R19-R21** = **1&nbsp;k&Omega;**. Elles sont chacune en série avec un CT pour protéger le processeur des signaux importants.
 - **R22** = **1&nbsp;M&Omega;**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
 
 `````{note}

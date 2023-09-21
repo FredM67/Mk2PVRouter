@@ -26,6 +26,7 @@ Par exemple :
 ```
 
 ---
+
 ## Fil de mise à la terre
 
 Ce sont des fils passifs qui permettront d'assurer la sécurité des personnes en cas de défaut d'isolation d'un ou plusieurs triacs.
@@ -41,6 +42,7 @@ Longueurs conseillées :
 Les fils devront être dénudés sur environ 5&nbsp;mm et être sertis directement dans les cosses **sans** soudure.
 
 ---
+
 ## Câbles prise(s) jack
 
 Ces câbles serviront à transmettre les mesures prises par la ou les pinces ampèremétriques (ou capteur de courant).  
@@ -67,6 +69,7 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
 ````
 
 ---
+
 ## Câble(s) de contrôle
 
 Ce sont des fils actifs qui permettront d'envoyer les commandes d'ouverture et fermeture aux triacs.
