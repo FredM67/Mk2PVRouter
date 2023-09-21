@@ -21,17 +21,17 @@ Cependant, cette notice décrira l'implantation la plus classique.
 
 ## Étapes à réaliser
 
-- Perçage pour la carte-mère
+- Perçage pour la carte-mère  
   Il faudra percer 4 trous de **4&nbsp;mm** de diamètre.
-- Perçage pour les presse-étoupe
+- Perçage pour les presse-étoupe  
   Il faudra percer des trous de **20&nbsp;mm** de diamètre.
-- Perçage pour le(s) prise(s) jack
+- Perçage pour le(s) prise(s) jack  
   Il faudra percer des trous de **8&nbsp;mm** de diamètre.
-- Perçage pour le(s) témoin(s) LED
+- Perçage pour le(s) témoin(s) LED  
   Il faudra percer des trous de **8&nbsp;mm** de diamètre.
-- Perçage pour le bouton *reset*
+- Perçage pour le bouton *reset*  
   Il faudra percer un trou de **13&nbsp;mm** de diamètre.
-- Perçage pour le(s) dissipateur(s)
+- Perçage pour le(s) dissipateur(s)  
   Il faudra percer 2 trous de **3&nbsp;mm** de diamètre ainsi qu'un autre de **35&nbsp;mm** de diamètre.
   Voir {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
 
