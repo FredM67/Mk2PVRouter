@@ -179,7 +179,7 @@ Si ces deux composants sont inversés, les symptômes qui en résultent peuvent 
 ### Ponts de neutre
 
 Pour un raccordement triphasé **avec** neutre, il est possible de ponter le neutre entre chacune des 3 sous-alimentations.  
-Les deux ponts sont référencés "**N**", entre les transformateurs.   
+Les deux ponts sont référencés "**N**", entre les transformateurs.  
 De cette façon, il ne sera pas nécessaire d'introduire un fil de neutre dans chaque connecteur secteur, un seul suffira.
 
 ```{warning}

@@ -153,7 +153,7 @@ Il s'agit des deux condensateurs associés à l'oscillateur, leur valeur est de 
 ```{note}
 L'oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du PCB.  
 Ce n'est pas nécessaire pour le bon fonctionnement.  
-Pour se faire, on pourra utiliser une allumette le temps d'effectuer la soudure.
+Pour ce faire, on pourra utiliser une allumette le temps d'effectuer la soudure.
 ```
 
 ### Pont redresseur ou pont de diodes
@@ -179,7 +179,7 @@ Il faudra bien veiller à faire correspondre le marquage sur le boîtier avec ce
 
 La broche la plus longue correspond au **+**.
 
-Comme pour l'oscillateur, il est courant de le souder légèrement au dessus du PCB.
+Comme pour l'oscillateur, il est courant de le souder légèrement au-dessus du PCB.
 
 ### Connecteurs SIL/Molex/Embase 14 broches
 
@@ -219,7 +219,7 @@ Le porte-fusible, accompagné de son fusible de **100 mA**, est simple à mettr
 
 Le régulateur de tension (**VR1**) doit être monté avec son ailette métallique éloignée du transformateur comme indiqué sur la sérigraphie.  
 Selon l'application, le **VR1** sera une version **3,3 V** ou **5 V**.  
-5 V est nécessaire chaque fois que l'option *pin-saving hardware* est utilisée.
+**5 V** est nécessaire chaque fois que l'option *pin-saving hardware* est utilisée.
 
 Souder les broches du **VR1** nécessitera probablement plus de chaleur.
 Pour réduire la quantité de métal à chauffer, il est possible de prédécouper ces broches à la longueur requise.
@@ -253,7 +253,7 @@ Veuillez ne pas passer à cette étape suivante à moins que vous soyez compéte
 Sur la photo ci-dessous, une alimentation temporaire de 230 V CA via un fusible de 3 A a été connectée.  
 Bien que cela ne soit pas requis par ce PCB, une connexion à la terre offre un certain degré de sécurité dans le cas où l'opérateur entrerait accidentellement en contact avec la ligne 230 V AC.
 
-Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ 3,3 Volts... ou 5 V si un régulateur de tension 5 V a été installé.
+Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ 3,3 V... ou 5 V si un régulateur de tension 5 V a été installé.
 
 Cette tension peut être facilement vérifiée au niveau du connecteur *access to power*, comme indiqué ici.
 
