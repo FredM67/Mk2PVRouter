@@ -164,6 +164,12 @@ Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviron
 
 Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel sens.
 
+Ils seront plus ou moins nombreux selon la configuration :
+- 3 connecteurs à **2 pôles** pour les pinces ampèremétriques, référencés **CT1-CT3**
+- 1 connecteur à **2 pôles** pour le bouton *reset*, référencé **Reset**
+- 1 connecteur à **6 pôles** pour le connecteur FTDI, référencé **FTDI**
+- 1 connecteur à **2 pôles** par sortie, référencé parmi **D3-D13**.
+
 ### Inductance
 
 Ce composant n'est pas polarisé. Il est référencé **L1**, à proximité de l'**ATmega328-P**.
