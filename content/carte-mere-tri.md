@@ -154,7 +154,7 @@ La broche la plus longue correspond au **+**.
 Comme pour l'oscillateur, il est courant de les souder légèrement au-dessus du PCB.
 
 ```{hint}
-On pourra "recycler" 2 des pattes coupées pour réaliser les {ref}`Ponts de neutre`.
+On pourra "recycler" 2 des pattes coupées pour réaliser les {ref}`Ponts de neutre<:Ponts de neutre>`.
 ```
 
 ### Connecteurs SIL/Molex

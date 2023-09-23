@@ -10,7 +10,6 @@ Dans le kit, vous trouverez :
 - un boîtier
 - des câbles
 
-
 ---
 ## Étapes d'assemblage
 
