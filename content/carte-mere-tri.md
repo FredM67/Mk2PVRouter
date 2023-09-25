@@ -6,6 +6,10 @@ Plusieurs versions du PCB peuvent exister.
 
 Bien qu'elles fonctionnent toutes de la même manière, chaque version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l’Arduino, ...).
 
+```{hint}
+Après chaque étape, il conviendra de vérifier les soudures effectuées (l'utilisation d'une loupe facilitera la vérification).  
+Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent afin de faire place nette pour l'étape suivante.
+```
 
 ---
 ## Soudure des composants
@@ -92,8 +96,8 @@ Ensuite, on installe généralement les supports pour les circuits intégrés.
 Chaque support a une encoche à une extrémité. Celle-ci doit être alignée avec la marque correspondante sur la couche sérigraphiée, comme indiqué ici.
 ```
 
-Avec le support convenablement soutenu par le bas (on peut aussi utiliser un morceau d'adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place.
-Si un réalignement du composant est nécessaire, il doit être effectué avant que les broches restantes ne soient fixées.
+Avec le support convenablement soutenu par le bas (on peut aussi utiliser un morceau d'adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place.  
+Si un réalignement du composant est nécessaire, il doit être effectué **avant** que les broches restantes ne soient fixées.
 
 ### Condensateurs céramiques et oscillateur
 
@@ -149,12 +153,22 @@ La broche la plus longue correspond au **+**.
 
 Comme pour l'oscillateur, il est courant de les souder légèrement au-dessus du PCB.
 
+```{tip}
+On pourra "recycler" 2 des pattes coupées pour réaliser les {ref}`Ponts de neutre<carte-mere-tri:Ponts de neutre>`.
+```
+
 ### Connecteurs SIL/Molex
 
 Les connecteurs Molex sont *polarisés*, ils possèdent un détrompeur.  
 Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviront à la connexion d'autres composants ou modules polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
 
 Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel sens.
+
+Ils seront plus ou moins nombreux selon la configuration :
+- 3 connecteurs à **2 pôles** pour les pinces ampèremétriques, référencés **CT1-CT3**
+- 1 connecteur à **2 pôles** pour le bouton *reset*, référencé **Reset**
+- 1 connecteur à **6 pôles** pour le connecteur FTDI, référencé **FTDI**
+- 1 connecteur à **2 pôles** par sortie, référencé parmi **D3-D13**.
 
 ### Inductance
 
@@ -237,7 +251,7 @@ Veuillez ne pas passer à cette étape suivante à moins que vous soyez compéte
 Nous effectuerons les tests suivants en alimentant le routeur via chacun des connecteurs secteur, l'un après l'autre.  
 Ainsi, si une tension est incorrecte, il sera plus facile d'identifier la partie du circuit qui est défectueuse.
 
-Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ 3,3 Volts... ou 5 V si un régulateur de tension 5 V a été installé.
+Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ **3,3 V**... ou **5 V** si un régulateur de tension **5 V** a été installé.
 
 Cette tension peut être facilement vérifiée au niveau du point de test **Test VCC**, ainsi que **Test GND**, comme indiqué ici.
 

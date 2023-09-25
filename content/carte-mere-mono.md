@@ -6,6 +6,10 @@ Plusieurs versions du PCB peuvent exister.
 
 Bien qu'elles fonctionnent toutes de la même manière, chaque version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l’Arduino, ...).
 
+```{hint}
+Après chaque étape, il conviendra de vérifier les soudures effectuées (l'utilisation d'une loupe facilitera la vérification).  
+Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent afin de faire place nette pour l'étape suivante.
+```
 
 ---
 ## Soudure des composants
@@ -102,8 +106,8 @@ Cette distinction est expliquée plus en détail ultérieurement.
 Chaque support a une encoche à une extrémité. Celle-ci doit être alignée avec la marque correspondante sur la couche sérigraphiée, comme indiqué ici.
 ```
 
-Avec le support convenablement soutenu par le bas (on peut aussi utiliser un morceau d'adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place.
-Si un réalignement du composant est nécessaire, il doit être effectué avant que les broches restantes ne soient fixées.
+Avec le support convenablement soutenu par le bas (on peut aussi utiliser un morceau d'adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place.  
+Si un réalignement du composant est nécessaire, il doit être effectué **avant** que les broches restantes ne soient fixées.
 
 L'affichage à 4 chiffres peut être contrôlé de deux manières.
 Si le module RF n'est pas requis et que ces broches IO ne sont pas nécessaires à d'autres fins, un ensemble complet de broches IO sur le processeur peut être dédié au pilotage de l'affichage.
@@ -253,7 +257,7 @@ Veuillez ne pas passer à cette étape suivante à moins que vous soyez compéte
 Sur la photo ci-dessous, une alimentation temporaire de 230 V CA via un fusible de 3 A a été connectée.  
 Bien que cela ne soit pas requis par ce PCB, une connexion à la terre offre un certain degré de sécurité dans le cas où l'opérateur entrerait accidentellement en contact avec la ligne 230 V AC.
 
-Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ 3,3 V... ou 5 V si un régulateur de tension 5 V a été installé.
+Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ **3,3 V**... ou **5 V** si un régulateur de tension **5 V** a été installé.
 
 Cette tension peut être facilement vérifiée au niveau du connecteur *access to power*, comme indiqué ici.
 
