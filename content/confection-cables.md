@@ -110,19 +110,7 @@ Ce sont des fils *actifs* sont repiqués sur la commande de l'étage de sortie e
 Les longueurs indiquées permettent d'ouvrir le couvercle et de le déposer sur le dessus du boîtier sans qu'aucun fil ne soit tendu.  
 Bien sûr, il est possible de faire des câbles plus courts.
 
-````{admonition} Longueurs conseillées
-```{exercise} Version monophasée
-- Boîtier **1** ou **2** sorties
-  - étage de sortie **gauche** => xx mm
-  - étage de sortie **droit** => xx mm
-- Boîtier **3** ou **4** sorties
-  - étage de sortie **haut gauche** => xx mm
-  - étage de sortie **haut droit** => xx mm
-  - étage de sortie **bas gauche** => xx mm
-  - étage de sortie **bas droit** => xx mm
-```
-
-```{exercise} Version triphasée
+```{admonition} Longueurs conseillées
 - Boîtier **1** ou **2** sorties
   - étage de sortie **gauche** => **400 mm**
   - étage de sortie **droit** => **470 mm**
@@ -132,4 +120,3 @@ Bien sûr, il est possible de faire des câbles plus courts.
   - étage de sortie **bas gauche** => **580 mm**
   - étage de sortie **bas droit** => **650 mm**
 ```
-````
