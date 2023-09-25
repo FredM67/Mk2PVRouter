@@ -31,13 +31,14 @@ Par exemple :
 
 Ce sont des fils passifs qui permettront d'assurer la sécurité des personnes en cas de défaut d'isolation d'un ou plusieurs triacs.
 
-Longueurs conseillées :
+````{admonition} Longueurs conseillées
 - boîtier 1 ou 2 sorties => 2 fils de chacun xx mm de long
 - boîtier 3 ou 4 sorties => 4 fils
   - dissipateur haut gauche => xx mm
   - dissipateur haut droit => xx mm
-  - dissipateur bas gauche => xx mm
+  - dissipateur bas gauche => 245 mm
   - dissipateur haut droit => xx mm
+````
 
 Les fils devront être dénudés sur environ 5 mm et être sertis directement dans les cosses **sans** soudure.
 
@@ -59,7 +60,7 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
 ```{exercise} Version triphasée
 - Boîtier **1** ou **2** sorties
   - **255 mm** pour **CT1**,
-  - **300 mm** pour **CT2** et 
+  - **300 mm** pour **CT2** et
   - **345 mm** pour **CT3**.
 - Boîtier **3** ou **4** sorties
   - **315 mm** pour **CT1**,
@@ -92,8 +93,8 @@ Ce sont des fils actifs qui permettront d'envoyer les commandes d'ouverture et f
   - étage de sortie **droit** => **340 mm**
 - Boîtier **3** ou **4** sorties
   - étage de sortie **haut gauche** => **200 mm**
-  - étage de sortie **haut droit** => **200 mm**
-  - étage de sortie **bas gauche** => **240 mm**
+  - étage de sortie **haut droit** => **240 mm**
+  - étage de sortie **bas gauche** => **200 mm**
   - étage de sortie **bas droit** => **360 mm**
 ```
 ````
