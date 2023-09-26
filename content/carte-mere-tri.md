@@ -207,8 +207,6 @@ En raison des pistes du plan masse, les broches référencées **PE** sur chacun
 Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage.  
 Il est très facile de se tromper de sens !
 
-Si cela se produit, le plastique peut être soigneusement coupé avec un couteau et chaque broche extraite séparément.
-
 Les porte-fusible, accompagnés de leur fusible de **100 mA**, sont simples à mettre en place.
 
 ### Régulateur de tension
