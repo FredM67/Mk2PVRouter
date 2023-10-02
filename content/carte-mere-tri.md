@@ -253,6 +253,10 @@ Si tout a été correctement assemblé, la sortie de l’alimentation devrait ê
 
 Cette tension peut être facilement vérifiée au niveau du point de test **Test VCC**, ainsi que **Test GND**, comme indiqué ici.
 
+```{hint}
+N'oubliez pas de mettre votre multimètre sur la position courant continu, **DC** !
+```
+
 À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.
 
 ### Insertion du LM358 et test de Vref
