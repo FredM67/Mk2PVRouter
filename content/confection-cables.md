@@ -31,13 +31,14 @@ Par exemple :
 
 Ce sont des fils passifs qui permettront d'assurer la sécurité des personnes en cas de défaut d'isolation d'un ou plusieurs triacs.
 
-Longueurs conseillées :
+````{admonition} Longueurs conseillées
 - boîtier 1 ou 2 sorties => 2 fils de chacun xx mm de long
 - boîtier 3 ou 4 sorties => 4 fils
   - dissipateur haut gauche => xx mm
   - dissipateur haut droit => xx mm
-  - dissipateur bas gauche => xx mm
+  - dissipateur bas gauche => 245 mm
   - dissipateur haut droit => xx mm
+````
 
 Les fils devront être dénudés sur environ 5 mm et être sertis directement dans les cosses **sans** soudure.
 
@@ -59,7 +60,7 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
 ```{exercise} Version triphasée
 - Boîtier **1** ou **2** sorties
   - **255 mm** pour **CT1**,
-  - **300 mm** pour **CT2** et 
+  - **300 mm** pour **CT2** et
   - **345 mm** pour **CT3**.
 - Boîtier **3** ou **4** sorties
   - **315 mm** pour **CT1**,
@@ -72,7 +73,7 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
 
 ## Câble(s) de contrôle
 
-Ce sont des fils actifs qui permettront d'envoyer les commandes d'ouverture et fermeture aux triacs.
+Ce sont des fils *actifs* qui permettront d'envoyer les commandes d'ouverture et fermeture aux triacs.
 
 ````{admonition} Longueurs conseillées
 ```{exercise} Version monophasée
@@ -92,8 +93,30 @@ Ce sont des fils actifs qui permettront d'envoyer les commandes d'ouverture et f
   - étage de sortie **droit** => **340 mm**
 - Boîtier **3** ou **4** sorties
   - étage de sortie **haut gauche** => **200 mm**
-  - étage de sortie **haut droit** => **200 mm**
-  - étage de sortie **bas gauche** => **240 mm**
+  - étage de sortie **haut droit** => **250 mm**
+  - étage de sortie **bas gauche** => **200 mm**
   - étage de sortie **bas droit** => **360 mm**
 ```
 ````
+
+---
+
+## Câble(s) de témoin(s) LED
+
+Ce sont des fils *actifs* sont repiqués sur la commande de l'étage de sortie et permettent de visualiser l'état de chaque sortie :
+- allumé => le courant passe (triac fermé)
+- éteint => le courant ne passe pas (triac ouvert).
+
+Les longueurs indiquées permettent d'ouvrir le couvercle et de le déposer sur le dessus du boîtier sans qu'aucun fil ne soit tendu.  
+Bien sûr, il est possible de faire des câbles plus courts.
+
+```{admonition} Longueurs conseillées
+- Boîtier **1** ou **2** sorties
+  - étage de sortie **gauche** => **400 mm**
+  - étage de sortie **droit** => **470 mm**
+- Boîtier **3** ou **4** sorties
+  - étage de sortie **haut gauche** => **440 mm**
+  - étage de sortie **haut droit** => **510 mm**
+  - étage de sortie **bas gauche** => **580 mm**
+  - étage de sortie **bas droit** => **650 mm**
+```
