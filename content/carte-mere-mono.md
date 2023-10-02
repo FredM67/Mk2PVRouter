@@ -262,7 +262,7 @@ Si tout a été correctement assemblé, la sortie de l’alimentation devrait ê
 Cette tension peut être facilement vérifiée au niveau du connecteur *access to power*, comme indiqué ici.
 
 ```{hint}
-N'oubliez pas de mettre votre multimètre sur la position courant continu, **DC**, symbole ⎓ !
+N'oubliez pas de mettre votre multimètre sur la position courant continu, **DC**, symbole ⎓ !
 ```
 
 À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.

@@ -207,8 +207,6 @@ En raison des pistes du plan masse, les broches référencées **PE** sur chacun
 Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage.  
 Il est très facile de se tromper de sens !
 
-Si cela se produit, le plastique peut être soigneusement coupé avec un couteau et chaque broche extraite séparément.
-
 Les porte-fusible, accompagnés de leur fusible de **100 mA**, sont simples à mettre en place.
 
 ### Régulateur de tension
@@ -254,6 +252,10 @@ Ainsi, si une tension est incorrecte, il sera plus facile d'identifier la partie
 Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ **3,3 V**... ou **5 V** si un régulateur de tension **5 V** a été installé.
 
 Cette tension peut être facilement vérifiée au niveau du point de test **Test VCC**, ainsi que **Test GND**, comme indiqué ici.
+
+```{hint}
+N'oubliez pas de mettre votre multimètre sur la position courant continu, **DC**, symbole ⎓ !
+```
 
 À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.
 
