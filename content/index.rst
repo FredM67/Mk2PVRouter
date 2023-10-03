@@ -55,3 +55,5 @@ Le routeur va permettre de décaler la consommation du chauffe-eau aux moments o
    dissipateur.md
    confection-cables.md
    assemblage.md
+   glossary.rst
+   
