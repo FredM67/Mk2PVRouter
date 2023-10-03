@@ -6,3 +6,4 @@ sphinx-mathjax-offline
 sphinx_rtd_theme_ext_color_contrast
 sphinx-simplepdf
 sphinxcontrib-drawio
+sphinx-hoverxref
