@@ -5,7 +5,9 @@ Glossaire
     :sorted:
 
     CT
-      Current Transformer ou transfomateur de courant.
+      *Current Transformer* ou transformateur de courant.
 
-    Sublime Text
-      Sublime Text is a sophisticated text editor for code, markup and prose. You'll love the slick user interface, extraordinary features and amazing performance.
+    PCB
+      *printed circuit board* ou circuit imprimé.
+      Un circuit imprimé est un support, en général une plaque, permettant de maintenir et de relier électriquement un ensemble de composants électroniques entre eux, dans le but de réaliser un circuit électronique complexe. On le désigne aussi par le terme de carte électronique.
+      cf. {ref}`Wikipédia<https://fr.wikipedia.org/wiki/Circuit_imprim%C3%A9>`

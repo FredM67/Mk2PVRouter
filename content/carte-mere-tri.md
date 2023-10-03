@@ -2,7 +2,7 @@
 
 # Carte-mère triphasée
 
-Plusieurs versions du PCB peuvent exister.
+Plusieurs versions du {term}`PCB` peuvent exister.
 
 Bien qu'elles fonctionnent toutes de la même manière, chaque version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l’Arduino, ...).
 
@@ -26,7 +26,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 - **R5-R7** = **1 kΩ**. Elles réduisent la taille du signal AC de chaque transformateur.
 - **R8-R10** = **120 Ω** ou **150 Ω** en général. Il s'agit des résistances de charge (ou *burden*) de chaque capteur de courant *grille*, qui utilisent **CT1-CT3**.
 - **R11-R12** = **10 kΩ**. Ensemble, elles fournissent une tension de référence pour les capteurs d'entrée.
-- **R19-R21** = **1 kΩ**. Elles sont chacune en série avec un CT pour protéger le processeur des signaux importants.
+- **R19-R21** = **1 kΩ**. Elles sont chacune en série avec un {term}`CT` pour protéger le processeur des signaux importants.
 - **R22** = **1 MΩ**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
 
 `````{note}
@@ -114,7 +114,7 @@ Il s'agit des deux condensateurs associés à l'oscillateur, leur valeur est de 
 ```
 
 ```{note}
-L'oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du PCB.  
+L'oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du {term}`PCB`.  
 Ce n'est pas nécessaire pour le bon fonctionnement.  
 Pour ce faire, on pourra utiliser une allumette le temps d'effectuer la soudure.
 ```
@@ -151,7 +151,7 @@ Il faudra bien veiller à faire correspondre le marquage sur le boîtier avec ce
 
 La broche la plus longue correspond au **+**.
 
-Comme pour l'oscillateur, il est courant de les souder légèrement au-dessus du PCB.
+Comme pour l'oscillateur, il est courant de les souder légèrement au-dessus du {term}`PCB`.
 
 ```{tip}
 On pourra "recycler" 2 des pattes coupées pour réaliser les {ref}`Ponts de neutre<carte-mere-tri:Ponts de neutre>`.
@@ -184,7 +184,7 @@ L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la 
 ```{attention}
 Bien qu’ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
 
-Le plus grand condensateur (**C1** = **100 μF**) est le plus proche du bord du PCB.  
+Le plus grand condensateur (**C1** = **100 μF**) est le plus proche du bord du {term}`PCB`.  
 Le plus petit (**C2** = **10 μF**) est le plus proche de **VR1**.
 
 Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
@@ -224,7 +224,7 @@ Les derniers composants à installer sont les transformateurs. Il s'agit génér
 Chacun des transformateurs de **6 V** peut prendre en charge un régulateur de tension de **3,3 V** ou de **5 V**.
 
 ```{important}
-Lors du montage de ces composants, il ne doit y avoir aucun espace entre la base du transformateur et le PCB.
+Lors du montage de ces composants, il ne doit y avoir aucun espace entre la base du transformateur et le {term}`PCB`.
 ```
 
 
@@ -302,10 +302,10 @@ En supposant que ce soit le cas, exécutons un croquis (programme) pour détermi
 
 Pour cette prochaine étape, un dispositif de programmation adapté devra être mis en place.  
 Des détails sur la configuration de l'environnement de développement intégré (IDE) Arduino peuvent être trouvés en haut de cette page.  
-Un programmateur USB vers UART devra être branché sur le connecteur **FTDI** du PCB comme indiqué ci-dessous.  
+Un programmateur USB vers UART devra être branché sur le connecteur **FTDI** du {term}`PCB` comme indiqué ci-dessous.  
 L'autre extrémité du programmateur doit être connectée via un câble USB approprié à l'installation de programmation (PC ou équivalent).
 
-La broche à une extrémité du connecteur à 6 voies du programmateur sera étiquetée **Gnd**. Cette broche doit correspondre au marquage **0 V** sur le PCB.
+La broche à une extrémité du connecteur à 6 voies du programmateur sera étiquetée **Gnd**. Cette broche doit correspondre au marquage **0 V** sur le {term}`PCB`.
 
 Ici, le programmeur FTDI est utilisé. Notez qu'il doit être monté dans l'autre sens.
 La broche **Gnd** doit toujours être la plus proche du bord de la carte
@@ -339,13 +339,13 @@ Après avoir terminé chaque exécution, le programme peut être redémarré à 
 Le programme *RawSamplesTool_6chan* affiche les échantillons des trois tensions alternatives et de courant pour un ou plusieurs cycles secteur complets.  
 Si un courant important est mesuré ainsi que la tension, les résultats affichés sembleront plus intéressants.
 
-Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le CT branché sur CT2.  
-Lorsque le CT a été déplacé vers le port **CT1**, la sortie résultante semblait presque identique, mais avec les caractères "**1**" et "**2**" inversés.
+Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le {term}`CT` branché sur CT2.  
+Lorsque le {term}`CT` a été déplacé vers le port **CT1**, la sortie résultante semblait presque identique, mais avec les caractères "**1**" et "**2**" inversés.
 
 RSResults_V_and_I2.txt
 
 Si aucun signal n'est disponible sur les ports **CT1-CT3**, les formes d'onde de ces canaux seront toutes deux des lignes droites.  
 Seuls les signaux de tension afficheront un aspect sinusoïdal.  
-Pour vérifier le fonctionnement des ports **CT1-CT3** pendant que le PCB est testé sur le banc, un câblage adapté sera nécessaire.
+Pour vérifier le fonctionnement des ports **CT1-CT3** pendant que le {term}`PCB` est testé sur le banc, un câblage adapté sera nécessaire.
 
 ### Test des sorties

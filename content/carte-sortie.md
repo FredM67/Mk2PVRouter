@@ -30,7 +30,7 @@ Les paires de trous correctes sont indiquées par les lignes épaisses dans la c
 
 Tout d’abord, le fil est plié dans une forme appropriée pour passer à travers ces trous.
 
-Ensuite, les extrémités sont pliées vers l’extérieur et fermement pressées contre le dessous du PCB.
+Ensuite, les extrémités sont pliées vers l’extérieur et fermement pressées contre le dessous du {term}`PCB`.
 
 Lorsque les fils sont dans la bonne position, les quatre extrémités peuvent être coupées à longueur.
 
@@ -88,7 +88,7 @@ Cela assurera une continuité parfaite mais aussi une solidité accrue.
 ## Mise en place de l'optocoupleur
 
 Ce minuscule composant à 6 broches forme le *pont* entre les côtés basse tension et haute tension.
-Le point sur la puce (surligné ici en rouge) doit être à côté du cercle sur le PCB.
+Le point sur la puce (surligné ici en rouge) doit être à côté du cercle sur le {term}`PCB`.
 
 S'il est monté dans le mauvais sens, cela ne fonctionnera pas. Mais grâce à la disposition de ses pins, il devrait survivre à l’expérience.
 
