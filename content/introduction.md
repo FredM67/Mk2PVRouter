@@ -76,4 +76,4 @@ Cet ordre précis permet de s'affranchir de tordre les pattes des composants, ut
 - gaine thermorétractable
 - multimètre (au minimum voltmètre et ohmmètre)
 
-Certains matériels sont optionnels (frais de 35, colle, gaine). Cependant, ils faciliteront certaines étapes et permettront de faire du travail plus propre et bien fini.
+Certains matériels sont optionnels (fraise de 35, colle, gaine). Cependant, ils faciliteront certaines étapes et permettront de faire du travail plus propre et bien fini.
