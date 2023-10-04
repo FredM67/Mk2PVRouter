@@ -33,7 +33,7 @@ extensions = [
     'sphinx_simplepdf',
     'sphinxcontrib.drawio',
     'sphinx.ext.autosectionlabel',
-    'hoverxref.extension',
+    # 'hoverxref.extension',
 ]
 # Make sure the target is unique
 autosectionlabel_prefix_document = True
@@ -43,9 +43,9 @@ imgmath_embed = True
 
 drawio_builder_export_format = {"simplepdf": "png"}
 
-hoverxref_roles = [
-    'term',
-]
+# hoverxref_roles = [
+#     'term',
+# ]
 
 version = "0.1"  # Will not be raised
 
