@@ -34,6 +34,7 @@ extensions = [
     'sphinxcontrib.drawio',
     'sphinx.ext.autosectionlabel',
     # 'hoverxref.extension',
+    'sphinx_new_tab_link',
 ]
 # Make sure the target is unique
 autosectionlabel_prefix_document = True
