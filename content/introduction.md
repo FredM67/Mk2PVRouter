@@ -1,5 +1,9 @@
 # Introduction
 
+Cette documentation couvre toutes les versions du Mk2PVRouter, monophasée, comme triphasée.  
+L'essentiel des informations est valable pour les 2 versions.  
+Chacune des versions dispose de son chapitre dédié.
+
 ---
 ## Contenu du kit
 
