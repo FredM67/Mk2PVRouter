@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
-SPHINXOPTS    ?= -vv
+SPHINXOPTS    ?= --jobs auto --color
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = content
 BUILDDIR      = _build
