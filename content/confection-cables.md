@@ -103,12 +103,12 @@ Ce sont des fils *actifs* qui permettront d'envoyer les commandes d'ouverture et
 
 ## Câble(s) de témoin(s) LED
 
-Ce sont des fils *actifs* sont repiqués sur la commande de l'étage de sortie et permettent de visualiser l'état de chaque sortie :
+Ce sont des fils *actifs* qui repiqués sur la commande de l'étage de sortie et permettent de visualiser l'état de chaque sortie :
 - allumé => le courant passe (triac fermé)
 - éteint => le courant ne passe pas (triac ouvert).
 
 Les longueurs indiquées permettent d'ouvrir le couvercle et de le déposer sur le dessus du boîtier sans qu'aucun fil ne soit tendu.  
-Bien sûr, il est possible de faire des câbles plus courts.
+Bien sûr, il est possible de faire des câbles plus courts, ou plus longs !
 
 ```{admonition} Longueurs conseillées
 - Boîtier **1** ou **2** sorties
