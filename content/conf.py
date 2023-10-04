@@ -50,7 +50,7 @@ drawio_builder_export_format = {"simplepdf": "png"}
 #     'term',
 # ]
 
-git_last_updated_timezone = 'France'
+git_last_updated_timezone = 'FR'
 
 version = "0.1"  # Will not be raised
 
