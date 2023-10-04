@@ -1,6 +1,4 @@
-(glossary)=
 
-=========
 Glossaire
 =========
 
