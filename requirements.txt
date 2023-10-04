@@ -8,3 +8,4 @@ sphinx-simplepdf
 sphinxcontrib-drawio
 sphinx-hoverxref
 sphinx-new-tab-link
+sphinx-last-updated-by-git

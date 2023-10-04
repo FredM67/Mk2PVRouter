@@ -35,6 +35,7 @@ extensions = [
     'sphinx.ext.autosectionlabel',
     # 'hoverxref.extension',
     'sphinx_new_tab_link',
+    'sphinx_last_updated_by_git',
 ]
 # Make sure the target is unique
 autosectionlabel_prefix_document = True
