@@ -57,3 +57,4 @@ Le routeur va permettre de décaler la consommation du chauffe-eau aux moments o
    assemblage.md
    glossary.rst
    
+`Wikipédia <https://fr.wikipedia.org/wiki/Circuit_imprim%C3%A9>`_
