@@ -65,6 +65,10 @@ jobs:
           git branch -a
           git remote -v
 
+      - name: List installed python packages
+        run: |
+          pip list
+
       - name: Setup TeX Live
         uses: teatimeguest/setup-texlive-action@v2
         with:
