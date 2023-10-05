@@ -28,3 +28,9 @@ Glossaire
      | *Analog Digital Converter* ou convertisseur analogique/numérique.
      | Il permet de convertir un signal analogique, par exemple une tension, en un signal numérique, par exemple une valeur entre 0 et 1023.
      | Supposons que la plage de mesure aille de 0 à 5 V, alors, une tension d'entrée de 2.5 V correspondra à la valeur 511. Une tension de 5 V correspondra à une valeur de 1023.
+
+   AC
+     | *Alternative Current* ou courant alternatif.
+
+   DC
+     | *Direct Current* ou courant continu.

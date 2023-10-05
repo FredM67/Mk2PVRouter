@@ -22,8 +22,8 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 (veuillez lire les notes ci-dessous qui concernent ces valeurs de composants)
 
 - **R1** = **47 kΩ**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
-- **R2-R4** = **100 Ω** ou **180 Ω**. Elles réduisent la taille du signal AC de chaque transformateur.
-- **R5-R7** = **1 kΩ**. Elles réduisent la taille du signal AC de chaque transformateur.
+- **R2-R4** = **100 Ω** ou **180 Ω**. Elles réduisent la taille du signal {term}`AC` de chaque transformateur.
+- **R5-R7** = **1 kΩ**. Elles réduisent la taille du signal {term}`AC` de chaque transformateur.
 - **R8-R10** = **120 Ω** ou **150 Ω** en général. Il s'agit des résistances de charge (ou *{term}`burden`*) de chaque capteur de courant *grille*, qui utilisent **{term}`CT`1-{term}`CT`3**.
 - **R11-R12** = **10 kΩ**. Ensemble, elles fournissent une tension de référence pour les capteurs d'entrée.
 - **R19-R21** = **1 kΩ**. Elles sont chacune en série avec un {term}`CT` pour protéger le processeur des signaux importants.
@@ -33,7 +33,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour **R2-R4** et **R5-R7** sont désormais utilisées pour augmenter la charge sur le transformateur.
 Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.  
 **R2-R4** = **100 Ω** convient pour un fonctionnement en **3,3 V**.  
-Pour une meilleure utilisation de la plage d'entrée de l'ADC, **R2-R4** doit être augmenté à **180 Ω** pour un fonctionnement en **5 V**.
+Pour une meilleure utilisation de la plage d'entrée de l'{term}`ADC`, **R2-R4** doit être augmenté à **180 Ω** pour un fonctionnement en **5 V**.
 
 La valeur pour **R8-R10** a été initialement spécifiée comme étant **150 Ω**.
 
@@ -254,7 +254,7 @@ Si tout a été correctement assemblé, la sortie de l’alimentation devrait ê
 Cette tension peut être facilement vérifiée au niveau du point de test **Test VCC**, ainsi que **Test GND**, comme indiqué ici.
 
 ```{hint}
-N'oubliez pas de mettre votre multimètre sur la position *courant continu*, **DC**, symbole **⎓** !
+N'oubliez pas de mettre votre multimètre sur la position *courant continu*, **{term}`DC`**, symbole **⎓** !
 ```
 
 À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.

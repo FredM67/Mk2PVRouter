@@ -24,16 +24,16 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 - **R1** = **47 kΩ**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
 - **R2** = **10 kΩ**. Avec R3, cela fournit une tension de référence pour les capteurs d'entrée.
 - **R3** = **10 kΩ**. Avec R2, cela fournit une tension de référence pour les capteurs d'entrée.
-- **R4** = **100 Ω** ou **180 Ω**. **R4** et **R5** réduisent la taille du signal AC du transformateur.
-- **R5** = **1 kΩ**. **R4** et **R5** réduisent la taille du signal AC du transformateur.
-- **R6** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge (ou *{term}`{term}`burden``*) du capteur de courant *grille*, qui utilise {term}`CT`1.
+- **R4** = **100 Ω** ou **180 Ω**. **R4** et **R5** réduisent la taille du signal {term}`AC` du transformateur.
+- **R5** = **1 kΩ**. **R4** et **R5** réduisent la taille du signal {term}`AC` du transformateur.
+- **R6** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge (ou *{term}`burden`*) du capteur de courant *grille*, qui utilise {term}`CT`1.
 - **R7** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge pour le capteur de courant *détourné*, qui utilise {term}`CT`2.
 - **R8** = **1 kΩ**. Cette résistance est en série avec {term}`CT`1 pour protéger le processeur des signaux importants.
 
 `````{note}
 Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour **R4** et **R5** sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.  
 **R4** = **100 Ω** convient pour un fonctionnement en **3,3 V**.  
-Pour une meilleure utilisation de la plage d'entrée de l'ADC, **R4** doit être augmenté à **180 Ω** pour un fonctionnement en **5 V**.
+Pour une meilleure utilisation de la plage d'entrée de l'{term}`ADC`, **R4** doit être augmenté à **180 Ω** pour un fonctionnement en **5 V**.
 
 La valeur pour **R6** et **R7** a été initialement spécifiée comme étant **150 Ω**.
 
@@ -255,14 +255,14 @@ Veuillez ne pas passer à cette étape suivante à moins que vous soyez compéte
 ```
 
 Sur la photo ci-dessous, une alimentation temporaire de 230 V CA via un fusible de 3 A a été connectée.  
-Bien que cela ne soit pas requis par ce {term}`PCB`, une connexion à la terre offre un certain degré de sécurité dans le cas où l'opérateur entrerait accidentellement en contact avec la ligne 230 V AC.
+Bien que cela ne soit pas requis par ce {term}`PCB`, une connexion à la terre offre un certain degré de sécurité dans le cas où l'opérateur entrerait accidentellement en contact avec la ligne 230 V {term}`AC`.
 
 Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ **3,3 V**... ou **5 V** si un régulateur de tension **5 V** a été installé.
 
 Cette tension peut être facilement vérifiée au niveau du connecteur *access to power*, comme indiqué ici.
 
 ```{hint}
-N'oubliez pas de mettre votre multimètre sur la position *courant continu*, **DC**, symbole **⎓** !
+N'oubliez pas de mettre votre multimètre sur la position *courant continu*, **{term}`DC`**, symbole **⎓** !
 ```
 
 À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.
