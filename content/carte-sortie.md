@@ -45,7 +45,7 @@ Comme indiqué sur le schéma de circuit :
 - **R2** = **330 Ω**
 - **R3** = **360 Ω**
 
-Si vous installez un connecteur DIL pour l'optocoupleur ou circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le PCB.
+Si vous installez un connecteur DIL pour l'{term}`optocoupleur` ou circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le {term}`PCB`.
 
 Ces caractéristiques indiquent toutes deux la broche 1.
 
@@ -85,7 +85,7 @@ Cela assurera une continuité parfaite mais aussi une solidité accrue.
 
 
 ---
-## Mise en place de l'optocoupleur
+## Mise en place de l'{term}`optocoupleur`
 
 Ce minuscule composant à 6 broches forme le *pont* entre les côtés basse tension et haute tension.
 Le point sur la puce (surligné ici en rouge) doit être à côté du cercle sur le {term}`PCB`.
@@ -112,6 +112,6 @@ Voici une plate-forme construit qui permet de tester les cartes de sortie avec o
 
 Cette plate-forme est affichée en haut de la page Galerie de photos.
 
-Lors du test d'une carte de sortie, il est important que le triac fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit optocoupleur et un ou plusieurs composants seront alors détruits immédiatement.
+Lors du test d'une carte de sortie, il est important que le triac fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit {term}`optocoupleur` et un ou plusieurs composants seront alors détruits immédiatement.
 
 En tenant dûment compte de l'avertissement de sécurité ci-dessus, l'approche simple illustrée ci-dessous devrait convenir pour tester des cartes individuelles.

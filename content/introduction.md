@@ -10,7 +10,8 @@ Chacune des versions dispose de son chapitre dédié.
 Dans le kit, vous trouverez :
 - le circuit imprimé ({term}`PCB`) de la carte-mère
 - un ou plusieurs circuits imprimés pour chaque sortie
-- des composants électroniques (résistances, condensateurs, ...). Attention, certains sont sensibles à l'électricité statique, il faut donc les manipuler avec soin
+- des composants électroniques (résistances, condensateurs, ...).  
+  Attention, certains sont sensibles à l'électricité statique, il faut donc les manipuler avec soin.
 - un boîtier
 - des câbles
 
@@ -31,8 +32,8 @@ L'assemblage complet va nécessiter plusieurs étapes :
 ---
 ## Conseils pour les étapes de soudure
 
-Les composants nécessaires sont très variés. Certains composants sont passifs (résistances, ...), d'autres sont actifs (AtMega, ...).
-D'une manière générale, il faut considérer que tous les composants sont sensibles à l'électricité statique.
+Les composants nécessaires sont très variés. Certains composants sont passifs (résistances, ...), d'autres sont actifs (AtMega, ...).  
+D'une manière générale, il faut considérer que tous les composants sont sensibles à l'électricité statique.  
 Il faut donc les manipuler avec soin, dans la mesure du possible, le corps humain doit être relié à la terre.
 
 Certains composants sont polarisés (diodes, certains condensateurs, ...), d'autres ne le sont pas (résistances, certains condensateurs). Faites très attention au sens AVANT de souder. Le sens est réparable directement sur la carte-mère.
