@@ -59,13 +59,13 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
 
 ```{exercise} Version triphasée
 - Boîtier **1** ou **2** sorties
-  - **255 mm** pour **CT1**,
-  - **300 mm** pour **CT2** et
-  - **345 mm** pour **CT3**.
+  - **255 mm** pour **{term}`CT`1**,
+  - **300 mm** pour **{term}`CT`2** et
+  - **345 mm** pour **{term}`CT`3**.
 - Boîtier **3** ou **4** sorties
-  - **315 mm** pour **CT1**,
-  - **360 mm** pour **CT2** et
-  - **405 mm** pour **CT3**.
+  - **315 mm** pour **{term}`CT`1**,
+  - **360 mm** pour **{term}`CT`2** et
+  - **405 mm** pour **{term}`CT`3**.
 ```
 ````
 

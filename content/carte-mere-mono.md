@@ -26,9 +26,9 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 - **R3** = **10 kΩ**. Avec R2, cela fournit une tension de référence pour les capteurs d'entrée.
 - **R4** = **100 Ω** ou **180 Ω**. **R4** et **R5** réduisent la taille du signal AC du transformateur.
 - **R5** = **1 kΩ**. **R4** et **R5** réduisent la taille du signal AC du transformateur.
-- **R6** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge (ou *burden*) du capteur de courant *grille*, qui utilise CT1.
-- **R7** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge pour le capteur de courant *détourné*, qui utilise CT2.
-- **R8** = **1 kΩ**. Cette résistance est en série avec CT1 pour protéger le processeur des signaux importants.
+- **R6** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge (ou *{term}`{term}`burden``*) du capteur de courant *grille*, qui utilise {term}`CT`1.
+- **R7** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge pour le capteur de courant *détourné*, qui utilise {term}`CT`2.
+- **R8** = **1 kΩ**. Cette résistance est en série avec {term}`CT`1 pour protéger le processeur des signaux importants.
 
 `````{note}
 Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour **R4** et **R5** sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.  
@@ -56,12 +56,12 @@ Voici les 3 formules qui vous permettront de calculer une inconnue à partir des
 > burden\_resistor = {system\_voltage * ct\_turns \over 2 * \sqrt{2} * I_{RMS}}
 > ```
 
-> Calcul de l'intensité efficace maximale en fonction de la résistance de burden :
+> Calcul de l'intensité efficace maximale en fonction de la résistance de {term}`burden` :
 > ```{math}
 > I_{RMS} = {system\_voltage * ct\_turns \over 2 * \sqrt{2} * burden\_resistor }
 > ```
 
-> Calcul du nombre de tours de capteur en fonction de la résistance de burden et de l'intensité efficace maximale :
+> Calcul du nombre de tours de capteur en fonction de la résistance de {term}`burden` et de l'intensité efficace maximale :
 > ```{math}
 > ct\_turns = {2 * \sqrt{2} * I_{RMS} \over system\_voltage * burden\_resistor}
 > ```
@@ -341,14 +341,14 @@ Après avoir terminé chaque exécution, le programme peut être redémarré à 
 Le programme *RawSamplesTool_2chan* affiche les échantillons de tension alternative et de courant pour un ou plusieurs cycles secteur complets.  
 Si un courant important est mesuré ainsi que la tension, les résultats affichés sembleront plus intéressants.
 
-Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le {term}`CT` branché sur CT2.  
-Lorsque le {term}`CT` a été déplacé vers le port **CT1**, la sortie résultante semblait presque identique, mais avec les caractères "**1**" et "**2**" inversés.
+Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le {term}`CT` branché sur {term}`CT`2.  
+Lorsque le {term}`CT` a été déplacé vers le port **{term}`CT`1**, la sortie résultante semblait presque identique, mais avec les caractères "**1**" et "**2**" inversés.
 
 RSResults_V_and_I2.txt
 
-Si aucun signal n'est disponible sur les ports **CT1** et **CT2**, les formes d'onde de ces canaux seront toutes deux des lignes droites.  
+Si aucun signal n'est disponible sur les ports **{term}`CT`1** et **{term}`CT`2**, les formes d'onde de ces canaux seront toutes deux des lignes droites.  
 Seul le signal de tension affichera un aspect sinusoïdal.  
-Pour vérifier le fonctionnement des ports **CT1** et **CT2** pendant que le {term}`PCB` est testé sur le banc, un câblage adapté sera nécessaire.
+Pour vérifier le fonctionnement des ports **{term}`CT`1** et **{term}`CT`2** pendant que le {term}`PCB` est testé sur le banc, un câblage adapté sera nécessaire.
 
 ### Test des sorties
 

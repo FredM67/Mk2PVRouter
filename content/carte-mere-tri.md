@@ -24,7 +24,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 - **R1** = **47 kΩ**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
 - **R2-R4** = **100 Ω** ou **180 Ω**. Elles réduisent la taille du signal AC de chaque transformateur.
 - **R5-R7** = **1 kΩ**. Elles réduisent la taille du signal AC de chaque transformateur.
-- **R8-R10** = **120 Ω** ou **150 Ω** en général. Il s'agit des résistances de charge (ou *burden*) de chaque capteur de courant *grille*, qui utilisent **CT1-CT3**.
+- **R8-R10** = **120 Ω** ou **150 Ω** en général. Il s'agit des résistances de charge (ou *{term}`burden`*) de chaque capteur de courant *grille*, qui utilisent **{term}`CT`1-{term}`CT`3**.
 - **R11-R12** = **10 kΩ**. Ensemble, elles fournissent une tension de référence pour les capteurs d'entrée.
 - **R19-R21** = **1 kΩ**. Elles sont chacune en série avec un {term}`CT` pour protéger le processeur des signaux importants.
 - **R22** = **1 MΩ**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
@@ -48,17 +48,17 @@ Ces puissances s'entendent sur chaque phase.
 ````{exercise} Un peu de mathématiques
 Voici les 3 formules qui vous permettront de calculer une inconnue à partir des 2 autres données connues.
 
-> Calcul de la résistance de *burden* en fonction de l'intensité efficace maximale :
+> Calcul de la résistance de *{term}`burden`* en fonction de l'intensité efficace maximale :
 > ```{math}
 > burden\_resistor = {system\_voltage * ct\_turns \over 2 * \sqrt{2} * I_{RMS}}
 > ```
 
-> Calcul de l'intensité efficace maximale en fonction de la résistance de burden :
+> Calcul de l'intensité efficace maximale en fonction de la résistance de {term}`burden` :
 > ```{math}
 > I_{RMS} = {system\_voltage * ct\_turns \over 2 * \sqrt{2} * burden\_resistor }
 > ```
 
-> Calcul du nombre de tours de capteur en fonction de la résistance de burden et de l'intensité efficace maximale :
+> Calcul du nombre de tours de capteur en fonction de la résistance de {term}`burden` et de l'intensité efficace maximale :
 > ```{math}
 > ct\_turns = {2 * \sqrt{2} * I_{RMS} \over system\_voltage * burden\_resistor}
 > ```
@@ -165,7 +165,7 @@ Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviron
 Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel sens.
 
 Ils seront plus ou moins nombreux selon la configuration :
-- 3 connecteurs à **2 pôles** pour les pinces ampèremétriques, référencés **CT1-CT3**
+- 3 connecteurs à **2 pôles** pour les pinces ampèremétriques, référencés **{term}`CT`1-{term}`CT`3**
 - 1 connecteur à **2 pôles** pour le bouton *reset*, référencé **Reset**
 - 1 connecteur à **6 pôles** pour le connecteur FTDI, référencé **FTDI**
 - 1 connecteur à **2 pôles** par sortie, référencé parmi **D3-D13**.
@@ -339,13 +339,13 @@ Après avoir terminé chaque exécution, le programme peut être redémarré à 
 Le programme *RawSamplesTool_6chan* affiche les échantillons des trois tensions alternatives et de courant pour un ou plusieurs cycles secteur complets.  
 Si un courant important est mesuré ainsi que la tension, les résultats affichés sembleront plus intéressants.
 
-Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le {term}`CT` branché sur CT2.  
-Lorsque le {term}`CT` a été déplacé vers le port **CT1**, la sortie résultante semblait presque identique, mais avec les caractères "**1**" et "**2**" inversés.
+Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le {term}`CT` branché sur {term}`CT`2.  
+Lorsque le {term}`CT` a été déplacé vers le port **{term}`CT`1**, la sortie résultante semblait presque identique, mais avec les caractères "**1**" et "**2**" inversés.
 
 RSResults_V_and_I2.txt
 
-Si aucun signal n'est disponible sur les ports **CT1-CT3**, les formes d'onde de ces canaux seront toutes deux des lignes droites.  
+Si aucun signal n'est disponible sur les ports **{term}`CT`1-{term}`CT`3**, les formes d'onde de ces canaux seront toutes deux des lignes droites.  
 Seuls les signaux de tension afficheront un aspect sinusoïdal.  
-Pour vérifier le fonctionnement des ports **CT1-CT3** pendant que le {term}`PCB` est testé sur le banc, un câblage adapté sera nécessaire.
+Pour vérifier le fonctionnement des ports **{term}`CT`1-{term}`CT`3** pendant que le {term}`PCB` est testé sur le banc, un câblage adapté sera nécessaire.
 
 ### Test des sorties
