@@ -65,8 +65,9 @@ Cet ordre précis permet de s'affranchir de tordre les pattes des composants, ut
 - pince coupante
 - pince à sertir les cosses ou pince multifonction
 - tournevis cruciforme
-- clés plates ou douilles de 5,5 et 10
-- clé six pans de 2 et 2,5
+- clé plate ou douille de **5,5**
+- clé plate **10**
+- clé six pans de **2** et **2,5**
 - une perceuse à colonne si possible, sinon n'importe quelle perceuse.
 - foret métal de **3 mm**
 - foret métal de **4 mm**
