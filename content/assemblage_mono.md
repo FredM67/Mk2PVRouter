@@ -2,7 +2,7 @@
 
 # Assemblage Kit Monophasé
 
-Après avoir effectué toutes les étapes précédentes, {ref}`Préparation du boîtier<boitier>`, {ref}`Perçage du boîtier<dissipateur:Perçage du boîtier>`, {ref}`Perçage du dissipateur<dissipateur:Perçage du dissipateur>`, Soudure de la carte-mère {ref}`monophasée<carte-mere-mono>` et {ref}`étage(s) de sortie<carte-sortie>`, il est temps d'assembler le tout.
+Après avoir effectué toutes les étapes précédentes, {ref}`Soudure de la carte-mère monophasée <carte-mere-mono>`, {ref}`Préparation du boîtier <boitier>`, {ref}`Perçage du dissipateur <dissipateur:Perçage du dissipateur>` et {ref}`étage(s) de sortie <carte-sortie>` et {ref}`Confection des câbles <confection-cables>`, il est temps d'assembler le tout.
 
 Il est possible de réaliser l'assemblage dans n'importe quel ordre, cependant, il sera plus pratique de le réaliser comme ceci :
 1. Mise en place des presse-étoupe
