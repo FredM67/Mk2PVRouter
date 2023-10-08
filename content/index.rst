@@ -50,7 +50,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: Kit monophasé
    :hidden:
 
-   introduction.md
+   introduction-mono
    carte-mere-mono.md
    carte-sortie-mono
    boitier.md
@@ -63,7 +63,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: Kit triphasé
    :hidden:
 
-   introduction.md
+   introduction-tri
    carte-mere-tri.md
    carte-sortie-tri
    boitier.md
