@@ -1,6 +1,6 @@
 (assemblage_tri)=
 
-# Assemblage Kit triphasé
+# Assemblage
 
 Après avoir effectué toutes les étapes précédentes, {ref}`Soudure de la carte-mère triphasée <carte-mere-tri>`, {ref}`Préparation du boîtier <boitier>`, {ref}`Perçage du dissipateur <dissipateur:Perçage du dissipateur>` et {ref}`étage(s) de sortie <carte-sortie>` et {ref}`Confection des câbles <confection-cables>`, il est temps d'assembler le tout.
 

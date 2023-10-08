@@ -43,19 +43,35 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 | Le routeur va permettre de décaler la consommation du chauffe-eau aux moments où l'on produit sa propre électricité gratuite (hors amortissement bien sûr du système de production).
 
+.. Hidden TOCs
+
 .. toctree::
    :maxdepth: 2
-   :caption: Table des matières
+   :caption: Kit monophasé
+   :hidden:
 
    introduction.md
    carte-mere-mono.md
-   carte-mere-tri.md
-   carte-sortie.md
+   carte-sortie-mono
    boitier.md
-   dissipateur.md
+   dissipateur-mono
    confection-cables.md
    assemblage_mono.md
-   assemblage_tri.md
-   glossary.rst
    
-`Wikipédia <https://fr.wikipedia.org/wiki/Circuit_imprim%C3%A9>`_
+.. toctree::
+   :maxdepth: 2
+   :caption: Kit triphasé
+   :hidden:
+
+   introduction.md
+   carte-mere-tri.md
+   carte-sortie-tri
+   boitier.md
+   dissipateur-tri
+   confection-cables.md
+   assemblage_tri.md
+
+.. toctree::
+   :caption: Glossaire
+
+   glossary.rst

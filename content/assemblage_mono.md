@@ -1,6 +1,6 @@
 (assemblage_mono)=
 
-# Assemblage Kit Monophasé
+# Assemblage
 
 Après avoir effectué toutes les étapes précédentes, {ref}`Soudure de la carte-mère monophasée <carte-mere-mono>`, {ref}`Préparation du boîtier <boitier>`, {ref}`Perçage du dissipateur <dissipateur:Perçage du dissipateur>` et {ref}`étage(s) de sortie <carte-sortie>` et {ref}`Confection des câbles <confection-cables>`, il est temps d'assembler le tout.
 
