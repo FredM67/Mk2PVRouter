@@ -32,7 +32,7 @@ Cependant, cette notice décrira l'implantation la plus classique.
 - Perçage pour le bouton *reset*  
   Il faudra percer un trou de **13 mm** de diamètre.
 - Perçage pour le(s) dissipateur(s)  
-  Il faudra percer 2 trous de **3 mm** de diamètre ainsi qu'un autre de **35 mm** de diamètre.
+  Il faudra percer 2 trous de **3 mm** de diamètre ainsi qu'un autre de **35 mm** de diamètre.  
   Voir {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
 
 ---

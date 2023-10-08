@@ -54,7 +54,8 @@ Bienvenue dans la documentation du Mk2PVRouter !
    boitier.md
    dissipateur.md
    confection-cables.md
-   assemblage.md
+   assemblage_mono.md
+   assemblage_tri.md
    glossary.rst
    
 `Wikipédia <https://fr.wikipedia.org/wiki/Circuit_imprim%C3%A9>`_
