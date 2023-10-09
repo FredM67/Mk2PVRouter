@@ -53,7 +53,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    introduction-mono
    carte-mere-mono.md
    carte-sortie-mono
-   boitier.md
+   boitier-mono
    dissipateur-mono
    confection-cables.md
    assemblage_mono.md
@@ -66,7 +66,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    introduction-tri
    carte-mere-tri.md
    carte-sortie-tri
-   boitier.md
+   boitier-tri
    dissipateur-tri
    confection-cables.md
    assemblage_tri.md
