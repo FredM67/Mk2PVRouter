@@ -1,11 +1,9 @@
-# Introduction
-
 Cette documentation couvre toutes les versions du Mk2PVRouter, monophasée, comme triphasée.  
 L'essentiel des informations est valable pour les 2 versions.  
 Chacune des versions dispose de son chapitre dédié.
 
 ---
-## Contenu du kit
+# Contenu du kit
 
 Dans le kit, vous trouverez :
 - le circuit imprimé ({term}`PCB`) de la carte-mère
@@ -16,7 +14,7 @@ Dans le kit, vous trouverez :
 - des câbles
 
 ---
-## Étapes d'assemblage
+# Étapes d'assemblage
 
 L'assemblage complet va nécessiter plusieurs étapes :
 - soudure et tests de la carte-mère
@@ -30,7 +28,7 @@ L'assemblage complet va nécessiter plusieurs étapes :
 - programmation finale
 
 ---
-## Conseils pour les étapes de soudure
+# Conseils pour les étapes de soudure
 
 Les composants nécessaires sont très variés. Certains composants sont passifs (résistances, ...), d'autres sont actifs (AtMega, ...).  
 D'une manière générale, il faut considérer que tous les composants sont sensibles à l'électricité statique.  
@@ -58,7 +56,7 @@ Cet ordre précis permet de s'affranchir de tordre les pattes des composants, ut
 
 ---
 
-## Matériels nécessaires
+# Matériels nécessaires
 
 - fer à souder
 - fil de soudure

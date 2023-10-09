@@ -92,6 +92,10 @@ html_static_path = [
     'img/cover.jpg',
 ]
 
+html_theme_options = {
+ 'style_external_links': True
+ }
+
 # HTML context:
 from os.path import basename, dirname, realpath
 html_context = {

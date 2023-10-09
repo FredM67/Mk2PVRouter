@@ -1,7 +1,3 @@
-(carte-sortie)=
-
-# Étage de sortie
-
 Un *Relais Statique* ou *SSR* (Solid State Relay) peut aussi être utilisé comme étage de sortie.
 
 Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet ordre :
@@ -21,7 +17,7 @@ Une soudure ratée peut entraîner la destruction immédiate de la carte avec ri
 
 
 ---
-## Pose des *agrafes* en cuivre
+# Pose des *agrafes* en cuivre
 
 La première étape du processus d'assemblage consiste à installer une paire d'*agrafes* en cuivre massif qui augmentent la capacité de la carte à supporter des courants élevés.
 La section transversale recommandée est de 1,5 mm{sup}`2`compte tenu de la longueur très faible.
@@ -36,7 +32,7 @@ Lorsque les fils sont dans la bonne position, les quatre extrémités peuvent ê
 
 
 ---
-## Soudure des composants basse consommation
+# Soudure des composants basse consommation
 
 Une fois les agrafes en cuivre en place, tous les composants basse consommation peuvent désormais être installés.
 
@@ -51,7 +47,7 @@ Ces caractéristiques indiquent toutes deux la broche 1.
 
 
 ---
-## Soudure de la partie *haute puissance*/*haute tension*
+# Soudure de la partie *haute puissance*/*haute tension*
 
 ```{danger}
 La qualité des soudures sera primordiale pour cette étape.
@@ -59,13 +55,13 @@ La qualité des soudures sera primordiale pour cette étape.
 Une soudure ratée peut entraîner la destruction immédiate de la carte avec risque d'incendie lors de la mise sous tension.
 ```
 
-### Connecteur haute puissance
+## Connecteur haute puissance
 
 Ce composant peut être temporairement maintenu en place en pliant les agrafes en cuivre de manière à ce qu'elles viennent juste pincer les broches saillantes.
 
 Ensuite, avec un bon fer chaud (régler la température à 450 °C si possible), beaucoup de soudure peut être appliquée.
 
-### Triac
+## Triac
 
 De la même façon que précédemment, ce composant peut être temporairement maintenu en place en pliant les agrafes en cuivre de manière à ce qu'elles viennent juste pincer les broches saillantes.
 
@@ -85,7 +81,7 @@ Cela assurera une continuité parfaite mais aussi une solidité accrue.
 
 
 ---
-## Mise en place de l'{term}`optocoupleur`
+# Mise en place de l'{term}`optocoupleur`
 
 Ce minuscule composant à 6 broches forme le *pont* entre les côtés basse tension et haute tension.
 Le point sur la puce (surligné ici en rouge) doit être à côté du cercle sur le {term}`PCB`.
@@ -94,7 +90,7 @@ S'il est monté dans le mauvais sens, cela ne fonctionnera pas. Mais grâce à l
 
 
 ---
-## Test
+# Test
 
 Lors de la construction d'un système complet, il peut être plus approprié que l'étage de sortie terminé soit monté dans le boîtier avant d'être testé.
 
