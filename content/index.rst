@@ -57,6 +57,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    dissipateur-mono
    confection-cables.md
    assemblage_mono.md
+   etalonnage-mono.md
    
 .. toctree::
    :maxdepth: 2
@@ -70,6 +71,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    dissipateur-tri
    confection-cables.md
    assemblage_tri.md
+   etalonnage-tri.md
 
 .. toctree::
    :caption: Glossaire
