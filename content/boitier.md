@@ -30,10 +30,11 @@ Cependant, cette notice décrira l'implantation la plus classique.
   Il faudra percer des trous de **20 mm** de diamètre.
 - Perçage pour le(s) prise(s) jack  
   Il faudra percer des trous de **8 mm** de diamètre.
-- Perçage pour le(s) témoin(s) LED  
+- Perçage pour le(s) témoin(s) LED et pour l'afficheur 4 Digits 
   Il faudra percer des trous de **8 mm** de diamètre.
-- Perçage pour le bouton *reset*  
+- Perçage pour le bouton *reset* (Ne pas effectuer ce perçage pour le routeur monophasé)
   Il faudra percer un trou de **13 mm** de diamètre.
+-
 
 
 ---
@@ -94,3 +95,19 @@ Plot
 ```
 
 ---
+
+# Perçage pour la carte-mère
+
+Une fois les étages de sortie positionnés, la carte mère peut ce placer de manière à ne pas gêner les futurs branchements et les autres équipements.
+Par le même procédé, il est possible de tracer et de percer le boitier aux bonnes côtes.
+
+```{figure} img/IMP_CarteMere.png
+:alt: Pointage carte mère
+:align: center
+:scale: 25%
+
+Pointage carte mère
+```
+
+Par la suite, pour ajuster la hauteur de la carte-mère et éviter d'être en appui sur les plots de fixations du fond de boitier, 
+un plot en plastique de 10 mm de haut est mis en place à l'aide d'une vis M3 plastique sur tous les perçages, comme pour l'étage de sortie.
