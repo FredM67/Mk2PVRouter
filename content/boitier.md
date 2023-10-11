@@ -19,6 +19,11 @@ Cependant, cette notice décrira l'implantation la plus classique.
 
 # Étapes à réaliser
 
+- Perçage pour le(s) dissipateur(s)  
+  Il faudra percer 2 trous de **3 mm** de diamètre ainsi qu'un autre de **35 mm** de diamètre.  
+  Voir {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
+- Perçage pour l'étage(s) de sortie(s) triac (SSR)
+  Il faudra percer 1 trou de **3mm** de diamètre.
 - Perçage pour la carte-mère  
   Il faudra percer 4 trous de **4 mm** de diamètre.
 - Perçage pour les presse-étoupe  
@@ -29,9 +34,7 @@ Cependant, cette notice décrira l'implantation la plus classique.
   Il faudra percer des trous de **8 mm** de diamètre.
 - Perçage pour le bouton *reset*  
   Il faudra percer un trou de **13 mm** de diamètre.
-- Perçage pour le(s) dissipateur(s)  
-  Il faudra percer 2 trous de **3 mm** de diamètre ainsi qu'un autre de **35 mm** de diamètre.  
-  Voir {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
+
 
 ---
 
@@ -46,4 +49,39 @@ Cependant, cette notice décrira l'implantation la plus classique.
 
 ---
 
-# Fixations de la carte-mère
+# Perçage pour le(s) dissipateur(s)
+
+  Se référer à la partie {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
+
+---
+
+# Perçage pour l'étage(s) de sortie(s) triac (SSR)
+
+Le triac de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boitier.
+L'étage de sortie doit aussi être fixé au fond du boitier à la bonne hauteur pour être en accord avec le point
+de fixation du triac.
+
+Pour ce faire, il faut fixer le dissipateur sur le boitier préalablement préparé et fixé l'étage de sortie sur
+celui-ci par l'intermédiaire du triac.
+
+Vu du dessus, il est possible de pointer le futur perçage à l'endroit le plus adéquat dans le trou oblong.
+
+```{figure} img/Et_Sortie_pointage_1.jpg
+:alt: Fixation dissipateur / étage de sortie
+:align: center
+:scale: 25%
+
+```{figure} img/Pointage_ETsortie.jpg
+:alt: Pointage
+:align: center
+:scale: 25%
+
+Pour percer, l'étage de sortie doit être enlevé.
+Le perçage doit s'effectuer avec un foret de **3 mm** de diamètre.
+
+Pour ajuster la hauteur de la carte de sortie, un plot en plastique de 10mm de haut est mis en place à l'aide d'une vis m3 plastique.
+
+```{figure} img/Plot_ETsortie.png
+:alt: Plot
+:align: center
+:scale: 25%
