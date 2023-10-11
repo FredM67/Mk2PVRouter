@@ -70,11 +70,13 @@ Vu du dessus, il est possible de pointer le futur perçage à l'endroit le plus 
 :alt: Fixation dissipateur / étage de sortie
 :align: center
 :scale: 25%
+```
 
 ```{figure} img/Pointage_ETsortie.jpg
 :alt: Pointage
 :align: center
 :scale: 25%
+```
 
 Pour percer, l'étage de sortie doit être enlevé.
 Le perçage doit s'effectuer avec un foret de **3 mm** de diamètre.
@@ -86,3 +88,7 @@ Pour ajuster la hauteur de la carte de sortie, un plot en plastique de 10mm de h
 :align: center
 :scale: 25%
 ```
+
+---
+
+# Perçage pour l'étage(s) de sortie(s) triac (SSR)
