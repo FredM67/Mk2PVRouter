@@ -12,13 +12,13 @@ Bienvenue dans la documentation du Mk2PVRouter !
 | Grâce aux modules sortie-relais, il peut aussi gérer des installations de chauffage ou toutes sortes d'appareils avec ses fonctions de programmateurs horaire, temporisations, thermostats, préparation ECS, chauffage... toutes configurables librement.
 |
 | Ce routeur existe en 2 versions, une version **monophasée**, exclusivement pour les raccordements monophasés, et une **triphasée** pour les raccordements en triphasé.
-| Seul le {term}`raccordement` est important, peu importe que la production d'électricité soit en monophasé ou que l'on utilise que des appareils monophasés.
+| Seul le type de raccordement au réseau électrique (Enedis ou régie locale) est important, peu importe que la production d'électricité soit en monophasé ou que l'on utilise que des appareils monophasés.
 
 .. admonition:: À retenir
 
-   Peu importe l'installation de production d'électricité (monophasée, biphasée, triphasée), le routeur DOIT correspondre au type de {term}`raccordement`.
+   Peu importe l'installation de production d'électricité (monophasée, biphasée, triphasée), le routeur **DOIT** correspondre au type de raccordement au réseau électrique.
 
-   {term}`Raccordement` triphasé = routeur triphasé
+   Raccordement au réseau électrique triphasé = routeur triphasé
 
 .. figure:: img/Schema-dimplantation.png
    :align: center

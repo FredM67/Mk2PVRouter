@@ -44,6 +44,3 @@ Glossaire
      | Ce composant électronique est capable de transmettre un signal d'un circuit électrique à un autre, sans qu'il y ait de contact galvanique entre eux, c'est-à-dire que les 2 circuits sont totalement isolés l'un de l'autre.
 
      .. seealso:: `Wikipédia, Photocoupleur <https://fr.wikipedia.org/wiki/Photocoupleur>`_
-
-   Raccordement
-     | Il s'agit du raccordement au réseau Enedis ou au réseau d'une régie locale (par exemple Électricité de Strasbourg).
