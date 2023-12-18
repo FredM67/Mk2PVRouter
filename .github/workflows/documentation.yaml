@@ -129,7 +129,7 @@ jobs:
           fetch-depth: 0
           lfs: true
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: my-artifact
           path: _build
@@ -193,7 +193,7 @@ jobs:
     needs: [Update_gh-pages]
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: gh-pages-artifact
           path: _gh-pages
