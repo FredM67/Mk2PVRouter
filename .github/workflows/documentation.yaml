@@ -25,7 +25,7 @@ jobs:
       - name: Install drawio
         run: |
           sudo apt-get update
-          sudo apt-get -y install wget curl dvisvgm
+          sudo apt-get -y install wget curl dvisvgm dvips
           curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep `dpkg --print-architecture` | grep '\.deb' | cut -d '"' -f 4 | wget -i -
           sudo apt-get -f install ./drawio-amd64-*.deb
 
