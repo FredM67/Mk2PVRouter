@@ -52,12 +52,12 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    introduction-mono
    carte-mere-mono.md
-   test-logiciel-mono
    carte-sortie-mono
    boitier-mono
    dissipateur-mono
    confection-cables.md
    assemblage_mono.md
+   test-logiciel-mono
    etalonnage-mono.md
    
 .. toctree::
@@ -67,12 +67,12 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    introduction-tri
    carte-mere-tri.md
-   test-logiciel-tri
    carte-sortie-tri
    boitier-tri
    dissipateur-tri
    confection-cables.md
    assemblage_tri.md
+   test-logiciel-tri
    etalonnage-tri.md
 
 .. toctree::

@@ -1,26 +1,26 @@
 (test-logiciel)=
 
-Une fois le processeur en place, il peut être judicieux de vérifier que l'alimentation électrique est toujours correcte.  
-En supposant que ce soit le cas, exécutons un croquis (programme) pour déterminer si le processeur fonctionne.
+Une fois le processeur installé, il serait judicieux de vérifier que l'alimentation électrique fonctionne toujours correctement.  
+Si c'est le cas, nous pouvons exécuter un croquis (programme) pour vérifier si le processeur fonctionne correctement.
 
-Pour cette prochaine étape, un dispositif de programmation adapté devra être mis en place.  
-Des détails sur la configuration de l'environnement de développement intégré (IDE) Arduino peuvent être trouvés en haut de cette page.  
-Un programmateur USB vers UART devra être branché sur le connecteur **FTDI** du {term}`PCB` comme indiqué ci-dessous.  
-L'autre extrémité du programmateur doit être connectée via un câble USB approprié à l'installation de programmation (PC ou équivalent).
+Pour cette prochaine étape, un dispositif de programmation approprié doit être mis en place.  
+Vous trouverez des détails sur la configuration de l'Environnement de Développement Intégré (IDE) Arduino en haut de cette page.  
+Un programmateur USB vers UART doit être connecté au connecteur **FTDI** du {term}`PCB` comme indiqué ci-dessous.  
+L'autre extrémité du programmateur doit être connectée à l'ordinateur de programmation (PC ou équivalent) via un câble USB approprié.
 
 La broche à une extrémité du connecteur à 6 voies du programmateur sera étiquetée **Gnd**. Cette broche doit correspondre au marquage **0 V** sur le {term}`PCB`.
 
-Ici, le programmeur FTDI est utilisé. Notez qu'il doit être monté dans l'autre sens.
-La broche **Gnd** doit toujours être la plus proche du bord de la carte
+Ici, nous utilisons le programmateur FTDI. Notez qu'il doit être monté dans le sens inverse.
+La broche **Gnd** doit toujours être la plus proche du bord de la carte.
 
-Pour éviter de tordre le connecteur du programmateur, on peut fabriquer un simple câble d'extension comme indiqué ici.
+Pour éviter de tordre le connecteur du programmateur, vous pouvez fabriquer un simple câble d'extension comme indiqué ici.
 Seules quatre des lignes sont réellement utilisées (données **Tx** & **Rx**, masse et réinitialisation).  
-Aucune des lignes d'alimentations électriques n'est utilisée par cette carte.
+Aucune des lignes d'alimentation électrique n'est utilisée par cette carte.
 
 Le fil noir est destiné à la connexion **GND** (ou **0 V**).
 
 ```{note}
-La carte FTDI ne permet pas d'alimenter la carte-mère.
+La carte FTDI ne peut pas alimenter la carte-mère.
 
-Le routeur devra toujours être alimenté par sa propre alimentation.
+Le routeur doit toujours être alimenté par sa propre source d'alimentation.
 ```
