@@ -4,7 +4,7 @@
 
 Plusieurs versions du {term}`PCB` peuvent exister.
 
-Bien qu'elles fonctionnent toutes de la même manière, chaque version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l’Arduino, ...).
+Bien qu'elles fonctionnent toutes de la même manière, chaque version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l’Arduino, …).
 
 ```{hint}
 Après chaque étape, il conviendra de vérifier les soudures effectuées (l'utilisation d'une loupe facilitera la vérification).  
@@ -70,7 +70,7 @@ Voici les 3 formules qui vous permettront de calculer une inconnue à partir des
 Dans notre cas précis, nous avons : {math}`ct\_turns = 2000`
 
 **{math}`I_{RMS}`** correspond à l'intensité efficace.  
-Pour un appareil purement résistif (chauffe-eau, ...), nous avons {math}`P_{RMS} = V_{RMS} * I_{RMS}`.  
+Pour un appareil purement résistif (chauffe-eau, …), nous avons {math}`P_{RMS} = V_{RMS} * I_{RMS}`.  
 
 Exemple pour un chauffe-eau de 3000 W, nous aurons donc 
 ```{math}
@@ -257,7 +257,7 @@ Veuillez ne pas passer à cette étape suivante à moins que vous soyez compéte
 Sur la photo ci-dessous, une alimentation temporaire de 230 V CA via un fusible de 3 A a été connectée.  
 Bien que cela ne soit pas requis par ce {term}`PCB`, une connexion à la terre offre un certain degré de sécurité dans le cas où l'opérateur entrerait accidentellement en contact avec la ligne 230 V {term}`AC`.
 
-Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ **3,3 V**... ou **5 V** si un régulateur de tension **5 V** a été installé.
+Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ **3,3 V**… ou **5 V** si un régulateur de tension **5 V** a été installé.
 
 Cette tension peut être facilement vérifiée au niveau du connecteur *access to power*, comme indiqué ici.
 

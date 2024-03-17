@@ -9,7 +9,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 | Particulièrement adapté à l’alimentation de résistances (chauffe-eau, radiateur, sol chauffant) du fait de son alimentation à puissance variable, il saura orienter votre surplus vers le ou les équipements raccordés.
 |
 | Le routeur surveille en permanence la production d’énergie de votre système en autoconsommation et redirige tout excédent d’électricité vers les charges branchées.
-| Grâce aux modules sortie-relais, il peut aussi gérer des installations de chauffage ou toutes sortes d'appareils avec ses fonctions de programmateurs horaire, temporisations, thermostats, préparation ECS, chauffage... toutes configurables librement.
+| Grâce aux modules sortie-relais, il peut aussi gérer des installations de chauffage ou toutes sortes d'appareils avec ses fonctions de programmateurs horaire, temporisations, thermostats, préparation ECS, chauffage… toutes configurables librement.
 |
 | Ce routeur existe en 2 versions, une version **monophasée**, exclusivement pour les raccordements monophasés, et une **triphasée** pour les raccordements en triphasé.
 | Seul le type de raccordement au réseau électrique (Enedis ou régie locale) est important, peu importe que la production d'électricité soit en monophasé ou que l'on utilise que des appareils monophasés.

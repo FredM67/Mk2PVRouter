@@ -11,7 +11,7 @@ Les contraintes à respecter sont peu nombreuses, en voici la liste :
 - **presse-étoupe** à installer sur **côté inférieur**, pour la protection contre la poussière ainsi que les ruissellements éventuels.
 - **dissipateur(s)** à installer les côtés **verticaux**. C'est **impératif** pour assurer un bon refroidissement.
 
-Pour le reste — témoin(s) LED, ... — on peut les monter n'importe où, selon ses goûts !
+Pour le reste — témoin(s) LED, … — on peut les monter n'importe où, selon ses goûts !
 
 Cependant, cette notice décrira l'implantation la plus classique.
 
