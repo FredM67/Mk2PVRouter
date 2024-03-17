@@ -52,6 +52,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    introduction-mono
    carte-mere-mono.md
+   test-logiciel-mono
    carte-sortie-mono
    boitier-mono
    dissipateur-mono
@@ -66,6 +67,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    introduction-tri
    carte-mere-tri.md
+   test-logiciel-tri
    carte-sortie-tri
    boitier-tri
    dissipateur-tri

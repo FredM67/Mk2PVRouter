@@ -64,7 +64,7 @@ Cette séquence précise permet d'éviter de tordre les pattes des composants, d
 - pince à sertir les cosses ou pince multifonction
 - tournevis cruciforme
 - clé plate ou douille de **5,5**
-- clé plate **10**
+- clé plate de **10**
 - clé six pans de **2** et **2,5**
 - une perceuse à colonne si possible, sinon n'importe quelle perceuse.
 - foret métal de **3 mm**
