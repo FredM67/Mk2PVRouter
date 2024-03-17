@@ -12,11 +12,14 @@ Le taux du flux d'impulsions pour le matériel en cours de test peut être ajust
 
 ## {term}`CT` *grille/réseau*
 
-Lors de l'étalonnage d'un nouvel ensemble de matériel, la première étape consiste à étalonner le canal **CT1**. À cette fin, le matériel en cours de test doit exécuter le programme cal_CT1_v_meter.ino, qui est disponible sur la page de téléchargements.
+Lors de l'étalonnage d'un nouvel ensemble de matériel, la première étape consiste à étalonner le canal **CT1**. À cette fin, le matériel en cours de test doit exécuter le programme ```cal_CT1_v_meter.ino```, qui est disponible sur la page de téléchargements.
 
-Pour chaque unité d'énergie mesurée au point de connexion au réseau via **CT1**, une impulsion sera générée au port de sortie. Le taux des impulsions peut être modifié en changeant la valeur de powerCal_grid. Un flux d'impulsions similaire sera visible au compteur.
+Pour chaque unité d'énergie mesurée au point de connexion au réseau via **CT1**, une impulsion sera générée au port de sortie.  
+Le taux des impulsions peut être modifié en changeant la valeur de ```powerCal_grid```. Un flux d'impulsions similaire sera visible au compteur.
 
-Pour avancer un flux d'impulsions par rapport à l'autre, un second chemin pour le courant devra passer à travers **CT1**. La puissance consommée par n'importe quel petit appareil fera l'affaire — un seul de ses cœurs actifs doit passer à travers **CT1** — et le courant peut circuler dans les deux sens. Lorsque l'appareil est éteint, le fil supplémentaire n'aura aucun effet sur les performances du CT, car aucun courant ne le traverse.
+Pour avancer un flux d'impulsions par rapport à l'autre, un second chemin pour le courant devra passer à travers **CT1**.  
+La puissance consommée par n'importe quel petit appareil fera l'affaire — un seul de ses cœurs actifs doit passer à travers **CT1** — et le courant peut circuler dans les deux sens.  
+Lorsque l'appareil est éteint, le fil supplémentaire n'aura aucun effet sur les performances du CT, car aucun courant ne le traverse.
 
 Lorsque la valeur correcte a été trouvée pour ```powerCal_grid```, cette même valeur peut être utilisée avec n'importe quel croquis de routeur Mk2PVRouter qui doit être exécuté sur le **même matériel**.
 
