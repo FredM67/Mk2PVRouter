@@ -1,6 +1,4 @@
-(test-mesures)=
-
-## Test logiciel
+(test-logiciel)=
 
 Une fois le processeur en place, il peut être judicieux de vérifier que l'alimentation électrique est toujours correcte.  
 En supposant que ce soit le cas, exécutons un croquis (programme) pour déterminer si le processeur fonctionne.
