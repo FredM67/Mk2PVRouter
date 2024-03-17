@@ -66,7 +66,7 @@ constexpr float f_powerCal[NO_OF_PHASES]{0.05000f, 0.05000f, 0.05000f};
 Supposons que le compteur affiche **2250**, et que le log du routeur affiche **2000**.
 On aura alors :
 ```{math}
-f_{powerCal} = {0.05000 * 2250} \over 2000 = 0.05625
+f_{powerCal} = {0.05000 * 2250 \over 2000} = 0.05625
 ```
 
 En triphasé, il faudra répéter l'opération sur chacune des phases.
