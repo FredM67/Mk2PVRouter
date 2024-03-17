@@ -22,7 +22,7 @@ Il est **fortement** recommandé de se fixer une convention de couleur, selon le
 
 Par exemple :
 - **rouge** pour le **+**, **bleu** pour la *masse*
-- ou si on prend du câble réseau, *couleur* pour le **+**, **blanc** pour la **masse**.
+- ou si on prend du câble réseau, *couleur* pour le **+**, *couleur/blanc* pour la **masse**.
 ```
 
 ---
@@ -103,7 +103,7 @@ Ce sont des fils *actifs* qui permettront d'envoyer les commandes d'ouverture et
 
 ## Câble(s) de témoin(s) LED
 
-Ce sont des fils *actifs* qui repiqués sur la commande de l'étage de sortie et permettent de visualiser l'état de chaque sortie :
+Ce sont des fils *actifs* qui sont repiqués sur la commande de l'étage de sortie et permettent de visualiser l'état de chaque sortie :
 - allumé => le courant passe (triac fermé)
 - éteint => le courant ne passe pas (triac ouvert).
 
