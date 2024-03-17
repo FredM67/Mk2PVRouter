@@ -63,13 +63,22 @@ Avant de télécharger le sketch d'étalonnage, je veille à définir les valeur
 constexpr float f_powerCal[NO_OF_PHASES]{0.05000f, 0.05000f, 0.05000f};
 ```
 
-Supposons que le compteur affiche **2250**, et que le log du routeur affiche **2000**.
+Supposons que le compteur affiche **2250**, et que le log du routeur affiche **2000**.  
 On aura alors :
 ```{math}
-f_{powerCal} = {0.05000 * 2250 \over 2000} = 0.05625
+f_{powerCal} = 0.05000 * {2250 \over 2000} = 0.05625
 ```
 
-En triphasé, il faudra répéter l'opération sur chacune des phases.
+```{note}
+La valeur ```0.05000``` dans la formule correspond à la valeur inscrite dans le sketch téléversé.  
+Si le sketch contient une autre valeur, il conviendra alors d'adapter la formule en conséquence.
+```
+
+```{hint}
+Après avoir calculé le ```f_powerCal``` de la phase en cours d'étalonnage et saisi sa valeur dans le sketch, il peut être judicieux de téléverser à nouveau sur le routeur et de s'assurer maintenant, la valeur affichée dans le log correspond à celle du compteur.
+```
+
+En triphasé, il faudra répéter l'opération sur chacune des phases.  
 Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu'au convertisseur analogique du microcontrôleur.
 
 ```{Important}
@@ -77,7 +86,7 @@ Chaque pince devra alors être marquée pour savoir à quelle ligne elle corresp
 ```
 
 #### Méthode avec un appareil de mesure annexe
-Cette méthode nécessite un appareil de mesure, type wattmètre ou un autre compteur.
+Cette méthode nécessite un appareil de mesure, type wattmètre ou un autre compteur.  
 
 ```{danger}
 **ALERTE SÉCURITÉ**  
@@ -85,7 +94,8 @@ Potentiellement, selon l'appareil utilisé, il faudra modifier le câblage élec
 Dans le doute, couper le disjoncteur principal.
 ```
 
-Pour cette méthode, le simple sera d'utiliser le chauffe-eau lui-même comme appareil d'étalonnage. Sur le même principe que la première méthode, on va brancher l'appareil de mesure sur la ligne du chauffe-eau ainsi que l'une des pinces du routeur.
+Pour cette méthode, le simple sera d'utiliser le chauffe-eau lui-même comme appareil d'étalonnage.  
+Sur le même principe que la première méthode, on va brancher l'appareil de mesure sur la ligne du chauffe-eau ainsi que l'une des pinces du routeur.
 
 ```{attention}
 La phase doit correspondre. Si j'étalonne la phase **L1**, le chauffe-eau DOIT être branché sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**.
@@ -94,10 +104,16 @@ La phase doit correspondre. Si j'étalonne la phase **L1**, le chauffe-eau DOIT 
 Selon que l'appareil affiche une puissance instantanée ou produit des flashs tous les Wh consommés, on appliquera la première méthode.
 
 ```{admonition} Chauffe-eau triphasé
-Dans cette situation, on déplacera l'appareil de mesure sur chacune des phases, et on prendra la pince du routeur associée à la bonne phase. Il ne sera pas nécessaire de décâbler le chauffe-eau.
+Dans cette situation, on déplacera l'appareil de mesure sur chacune des phases — si cet appareil est triphasé, il ne sera pas nécessaire de le déplacer de phase en phase — et on prendra la pince du routeur associée à la bonne phase. Il ne sera pas nécessaire de décâbler le chauffe-eau.
 ```
 
-Comme précédemment, il faudra répéter l'opération sur chacune des phases (décâbler le chauffe-eau sur une autre phase, …).
+Sur le même principe que précédemment, supposons que le compteur/wattmètre affiche **2250**, et que le log du routeur affiche **2000**.  
+On aura alors :
+```{math}
+f_{powerCal} = 0.05000 * {2250 \over 2000} = 0.05625
+```
+
+Comme précédemment, il faudra répéter l'opération sur chacune des phases (décâbler le chauffe-eau sur une autre phase, …).  
 Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu'au convertisseur analogique du microcontrôleur.
 
 ```{Important}
