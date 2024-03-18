@@ -44,3 +44,8 @@ Glossaire
      | Ce composant électronique est capable de transmettre un signal d'un circuit électrique à un autre, sans qu'il y ait de contact galvanique entre eux, c'est-à-dire que les 2 circuits sont totalement isolés l'un de l'autre.
 
      .. seealso:: `Wikipédia, Photocoupleur <https://fr.wikipedia.org/wiki/Photocoupleur>`_
+
+   Pull-up
+     | Résistance de rappel.
+     | Une résistance de rappel permet de fixer une entrée numérique à un état *HIGH* ou *LOW* stable.
+     | Elle permet aussi de réduire le bruit, d'éliminer les broches flottantes et surtout, d'établir deux états électriques clairs et distincts.

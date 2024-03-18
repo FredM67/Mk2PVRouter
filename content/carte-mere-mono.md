@@ -21,7 +21,7 @@ Ces composants n'ont pas de sens et sont très peu sensibles à l'électricité 
 Les valeurs des résistances sont indiquées sur le schéma de circuit et sont répétées ici pour plus de commodité :
 (veuillez lire les notes ci-dessous qui concernent ces valeurs de composants)
 
-- **R1** = **47 kΩ**. Cela fournit le *pull-up* pour la ligne de réinitialisation du processeur.
+- **R1** = **47 kΩ**. Cela fournit le *{term}`pull-up`* pour la ligne de réinitialisation du processeur.
 - **R2** = **10 kΩ**. Avec R3, cela fournit une tension de référence pour les capteurs d'entrée.
 - **R3** = **10 kΩ**. Avec R2, cela fournit une tension de référence pour les capteurs d'entrée.
 - **R4** = **100 Ω** ou **180 Ω**. **R4** et **R5** réduisent la taille du signal {term}`AC` du transformateur.
@@ -31,7 +31,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 - **R8** = **1 kΩ**. Cette résistance est en série avec {term}`CT`1 pour protéger le processeur des signaux importants.
 
 `````{note}
-Comme mentionné en haut de la page Notes techniques, des valeurs inférieures pour **R4** et **R5** sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.  
+Des valeurs inférieures pour **R4** et **R5** sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.  
 **R4** = **100 Ω** convient pour un fonctionnement en **3,3 V**.  
 Pour une meilleure utilisation de la plage d'entrée de l'{term}`ADC`, **R4** doit être augmenté à **180 Ω** pour un fonctionnement en **5 V**.
 
@@ -74,7 +74,7 @@ Pour un appareil purement résistif (chauffe-eau, …), nous avons {math}`P_{RMS
 
 Exemple pour un chauffe-eau de 3000 W, nous aurons donc 
 ```{math}
-I_{RMS} = {P_{RMS} \over V_{RMS}} = {3000 \over 230} = 13 A.
+I_{RMS} = {P_{RMS} \over V_{RMS}} = {3000 \over 230} \approx 13 A.
 ```
 ````
 
