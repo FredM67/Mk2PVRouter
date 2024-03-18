@@ -9,9 +9,9 @@ Selon le nombre de sorties commandées, 2 références pourront être livrées 
 
 Les contraintes à respecter sont peu nombreuses, en voici la liste :
 - **presse-étoupe** à installer sur **côté inférieur**, pour la protection contre la poussière ainsi que les ruissellements éventuels.
-- **dissipateur(s)** à installer les côtés **verticaux**. C'est **impératif** pour assurer un bon refroidissement.
+- **dissipateur·s** à installer les côtés **verticaux**. C'est **impératif** pour assurer un bon refroidissement.
 
-Pour le reste — témoin(s) LED, … — on peut les monter n'importe où, selon ses goûts !
+Pour le reste — témoin·s LED, … — on peut les monter n'importe où, selon ses goûts !
 
 Cependant, cette notice décrira l'implantation la plus classique.
 
@@ -19,18 +19,18 @@ Cependant, cette notice décrira l'implantation la plus classique.
 
 # Étapes à réaliser
 
-- Perçage pour le(s) dissipateur(s)  
+- Perçage pour le·s dissipateur·s  
   Il faudra percer 2 trous de **3 mm** de diamètre ainsi qu'un autre de **35 mm** de diamètre.  
   Voir {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
-- Perçage pour l'étage(s) de sortie(s) triac
+- Perçage pour le ou les étage·s de sortie·s triac
   Il faudra percer 1 trou de **3 mm** de diamètre.
 - Perçage pour la carte-mère  
   Il faudra percer 4 trous de **4 mm** de diamètre.
 - Perçage pour les presse-étoupe  
   Il faudra percer des trous de **20 mm** de diamètre.
-- Perçage pour le(s) prise(s) jack  
+- Perçage pour le·s prise·s jack  
   Il faudra percer des trous de **8 mm** de diamètre.
-- Perçage pour le(s) témoin(s) LED et pour l'afficheur 4 Digits 
+- Perçage pour le·s témoin·s LED et pour l'afficheur 4 Digits 
   Il faudra percer des trous de **8 mm** de diamètre.
 - Perçage pour le bouton *reset* (Ne pas effectuer ce perçage pour le routeur monophasé)
   Il faudra percer un trou de **13 mm** de diamètre.
@@ -50,7 +50,7 @@ Cependant, cette notice décrira l'implantation la plus classique.
 
 ---
 
-# Perçage pour le(s) dissipateur(s)
+# Perçage pour le·s dissipateur·s
 
   Se référer à la partie {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
 

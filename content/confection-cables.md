@@ -44,7 +44,7 @@ Les fils devront être dénudés sur environ 5 mm et être sertis directement d
 
 ---
 
-## Câbles prise(s) jack
+## Câbles prise·s jack
 
 Ces câbles serviront à transmettre les mesures prises par la ou les pinces ampèremétriques (ou capteur de courant).  
 Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'apparition de parasites.
@@ -71,7 +71,7 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
 
 ---
 
-## Câble(s) de contrôle
+## Câble·s de contrôle
 
 Ce sont des fils *actifs* qui permettront d'envoyer les commandes d'ouverture et fermeture aux triacs.
 
@@ -101,7 +101,7 @@ Ce sont des fils *actifs* qui permettront d'envoyer les commandes d'ouverture et
 
 ---
 
-## Câble(s) de témoin(s) LED
+## Câble·s de témoin·s LED
 
 Ce sont des fils *actifs* qui sont repiqués sur la commande de l'étage de sortie et permettent de visualiser l'état de chaque sortie :
 - allumé => le courant passe (triac fermé)

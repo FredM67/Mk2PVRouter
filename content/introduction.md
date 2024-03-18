@@ -34,23 +34,23 @@ Les composants nécessaires sont très divers. Certains composants sont passifs 
 En général, tous les composants sont sensibles à l'électricité statique.  
 Il est donc nécessaire de les manipuler avec précaution, et si possible, le corps humain doit être relié à la terre.
 
-Certains composants sont polarisés (diodes, certains condensateurs, etc.), d'autres ne le sont pas (résistances, certains condensateurs). Soyez très attentif à l'orientation AVANT de souder. L'orientation est indiquée directement sur la carte principale.
+Certains composants sont polarisés (diodes, certains condensateurs, etc.), d'autres ne le sont pas (résistances, certains condensateurs). Soyez très attentif à l'orientation AVANT de souder. L'orientation est indiquée directement sur la carte-mère.
 
 Ces composants varient également en taille. Ils vont des plus petits, avec quelques millimètres d'épaisseur/diamètre, aux plus grands avec plusieurs centimètres d'épaisseur (transformateurs).
 
-Pour des raisons pratiques, il est recommandé de procéder strictement par ordre de taille.
+Pour des raisons pratiques, il est recommandé de procéder strictement par ordre de taille.  
 Ainsi, on soudera dans cet ordre :
 1. résistances et diodes, ponts le cas échéant
 2. supports IC1 et IC2 (voire IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports)
 3. condensateurs "orange" non polarisés, oscillateur
-4. pont(s) de diodes
+4. pont·s de diodes
 5. tous les connecteurs SIL noirs et le connecteur d'affichage, le cas échéant
 6. condensateurs polarisés (noir ou bleu)
 7. le socle pour l'antenne, le cas échéant
-8. le(s) gros connecteur(s) "haute tension"
-9. le(s) porte-fusible
-10. le ou les régulateur(s) de tension
-11. enfin le(s) transformateur(s)
+8. le·s gros connecteur·s "haute tension"
+9. le·s porte-fusible
+10. le ou les régulateur·s de tension
+11. enfin le·s transformateur·s
 
 Cette séquence précise permet d'éviter de tordre les pattes des composants, d'utiliser de l'adhésif, etc.
 

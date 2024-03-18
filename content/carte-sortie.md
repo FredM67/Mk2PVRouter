@@ -3,7 +3,7 @@ Un *Relais Statique* ou *SSR* (Solid State Relay) peut aussi être utilisé comm
 Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet ordre :
 1. résistances
 2. support MOC
-3. connecteur(s) Molex
+3. connecteur·s Molex
 4. connecteur de puissance
 5. triac
 
