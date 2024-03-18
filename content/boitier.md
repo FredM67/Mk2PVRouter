@@ -110,4 +110,4 @@ Pointage carte mère
 ```
 
 Par la suite, pour ajuster la hauteur de la carte-mère et éviter d'être en appui sur les plots de fixations du fond de boitier, 
-un plot en plastique de 10 mm de haut est mis en place à l'aide d'une vis M3 plastique sur tous les perçages, comme pour l'étage de sortie.
+un plot en plastique de 10 mm de haut est mis en place à l'aide d'une vis M4 sur tous les perçages, comme pour l'étage de sortie.
