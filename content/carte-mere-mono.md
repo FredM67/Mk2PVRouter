@@ -221,22 +221,21 @@ Le porte-fusible, accompagné de son fusible de **100 mA**, est simple à mettr
 
 ### Régulateur de tension
 
-Le régulateur de tension (**VR1**) doit être monté avec son ailette métallique éloignée du transformateur comme indiqué sur la sérigraphie.  
-Selon l'application, le **VR1** sera une version **3,3 V** ou **5 V**.  
-**5 V** est nécessaire chaque fois que l'option *pin-saving hardware* est utilisée.
+Le régulateur de tension (**VR1**) doit être positionné de manière à ce que son ailette métallique soit éloignée du transformateur, comme indiqué sur la sérigraphie.  
+En fonction de l'application, le **VR1** sera une version **3,3 V** ou **5 V**.  
+La version **5 V** est nécessaire chaque fois que l'option *pin-saving hardware* est utilisée.
 
-Souder les broches du **VR1** nécessitera probablement plus de chaleur.
-Pour réduire la quantité de métal à chauffer, il est possible de prédécouper ces broches à la longueur requise.
+La soudure des broches du **VR1** nécessitera probablement une température plus élevée.  
+Pour réduire la quantité de métal à chauffer, il est possible de couper préalablement ces broches à la longueur requise.
 
 ### Transformateur
 
-Le dernier composant à installer est le transformateur. Il s'agit généralement d'un appareil double **6 V** comme indiqué sur la couche sérigraphiée.  
+Le dernier composant à installer est le transformateur. Il s'agit d'un transformateur double **6 V** comme indiqué sur la couche sérigraphiée.  
 Un transformateur de **6 V** peut prendre en charge un régulateur de tension de **3,3 V** ou de **5 V**.
 
 ```{important}
-Lors du montage de ce composant, il ne doit y avoir aucun espace entre la base du transformateur et le {term}`PCB`.
+Lors de l'installation de ce composant, assurez-vous qu'il n'y ait aucun espace entre la base du transformateur et la carte de circuit imprimé {term}`PCB`.
 ```
-
 
 ---
 ## Tests électriques
