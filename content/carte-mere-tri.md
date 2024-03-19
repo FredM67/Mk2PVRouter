@@ -8,7 +8,7 @@ Bien qu'elles fonctionnent toutes de la même manière, chaque nouvelle version 
 
 ```{hint}
 Après chaque étape, il conviendra de vérifier les soudures effectuées (l'utilisation d'une loupe facilitera la vérification).  
-Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent afin de faire place nette pour l'étape suivante.
+Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent avec une petite pince coupante afin de faire place nette pour l'étape suivante.
 ```
 
 ---
