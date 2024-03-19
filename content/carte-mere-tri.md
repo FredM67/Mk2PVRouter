@@ -192,12 +192,16 @@ Si ces deux composants sont inversés, les symptômes qui en résultent peuvent 
 
 ### Ponts de neutre
 
-Pour un raccordement triphasé **avec** neutre, il est possible de ponter le neutre entre chacune des 3 sous-alimentations.  
+Pour un raccordement triphasé **avec** neutre (en France et la plupart des pays européens), il est possible de ponter le neutre entre chacune des 3 sous-alimentations.  
 Les deux ponts sont référencés "**N**", entre les transformateurs.  
 De cette façon, il ne sera pas nécessaire d'introduire un fil de neutre dans chaque connecteur secteur, un seul suffira.
 
 ```{warning}
 Pour un raccordement triphasé **sans** neutre, essentiellement le 3 * 230 V en **Belgique**, il ne faudra pas souder ces ponts.
+```
+
+```{hint}
+Pour réaliser ces ponts, on pourra utiliser le reliquat des pattes coupées des ponts de diodes.
 ```
 
 ### Connecteurs secteur et porte-fusible
