@@ -201,7 +201,7 @@ Pour un raccordement triphasé **sans** neutre, essentiellement le 3 * 230 V 
 ```
 
 ```{hint}
-Pour réaliser ces ponts, on pourra utiliser le reliquat des pattes coupées des ponts de diodes.
+Pour réaliser ces ponts, on pourra utiliser le reliquat des pattes coupées de l'inductance.
 ```
 
 ### Connecteurs secteur et porte-fusible
