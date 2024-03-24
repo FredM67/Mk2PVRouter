@@ -12,7 +12,7 @@ Chaque version a son propre chapitre.
 Dans le kit, vous trouverez :
 - le circuit imprimé ({term}`PCB`) de la carte-mère
 - un ou plusieurs circuits imprimés pour chaque sortie
-- des composants électroniques (résistances, condensateurs, …).
+- des composants électroniques (résistances, condensateurs, …).<br />
   Attention, certains sont sensibles à l'électricité statique, il faut donc les manipuler avec soin.
 - un boîtier
 - des câbles
@@ -42,7 +42,8 @@ Certains composants sont polarisés (comme les diodes et certains condensateurs)
 
 Les composants varient également en taille, allant de quelques millimètres à plusieurs centimètres (dans le cas des transformateurs).
 
-Pour des raisons pratiques, il est recommandé de procéder à la soudure en suivant un ordre précis basé sur la taille des composants.<br />
+Pour des raisons pratiques, il est recommandé de procéder à la soudure en suivant un ordre précis basé sur la taille des composants.
+
 Ainsi, l'ordre de soudure recommandé est le suivant :
 1. Résistances et diodes, et éventuellement les ponts
 2. Supports IC1 et IC2 (et éventuellement IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports à ce stade)
