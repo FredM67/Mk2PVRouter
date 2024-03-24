@@ -7,7 +7,7 @@ Plusieurs versions du {term}`PCB` peuvent exister.
 Bien qu'elles fonctionnent toutes de la même manière, chaque nouvelle version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l’Arduino, …).
 
 ```{hint}
-Après chaque étape, il conviendra de vérifier les soudures effectuées (l'utilisation d'une loupe facilitera la vérification).  
+Après chaque étape, il conviendra de vérifier les soudures effectuées (l'utilisation d'une loupe facilitera la vérification).<br />
 Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent avec une petite pince coupante afin de faire place nette pour l'étape suivante.
 ```
 
@@ -31,8 +31,8 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 
 `````{note}
 Des valeurs inférieures pour **R2-R4** et **R5-R7** sont désormais utilisées pour augmenter la charge sur le transformateur.
-Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.  
-**R2-R4** = **100 Ω** convient pour un fonctionnement en **3,3 V**.  
+Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.<br />
+**R2-R4** = **100 Ω** convient pour un fonctionnement en **3,3 V**.<br />
 Pour une meilleure utilisation de la plage d'entrée de l'{term}`ADC`, **R2-R4** doit être augmenté à **180 Ω** pour un fonctionnement en **5 V**.
 
 La valeur pour **R8-R10** a été initialement spécifiée comme étant **150 Ω**.
@@ -66,8 +66,8 @@ Voici les 3 formules qui vous permettront de calculer une inconnue à partir des
 
 Dans notre cas précis, nous avons : {math}`ct\_turns = 2000`
 
-**{math}`I_{RMS}`** correspond à l'intensité efficace.  
-Pour un appareil purement résistif (chauffe-eau, …), nous avons {math}`P_{RMS} = V_{RMS} * I_{RMS}`.  
+**{math}`I_{RMS}`** correspond à l'intensité efficace.<br />
+Pour un appareil purement résistif (chauffe-eau, …), nous avons {math}`P_{RMS} = V_{RMS} * I_{RMS}`.<br />
 
 Exemple pour un chauffe-eau de 3000 W, nous aurons donc 
 ```{math}
@@ -84,7 +84,7 @@ Ensuite, les diodes peuvent être ajoutées.
 Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les CTs.
 
 ```{attention}
-Ces composants sont polarisés.  
+Ces composants sont polarisés.<br />
 Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 ```
 
@@ -96,7 +96,7 @@ Ensuite, on installe généralement les supports pour les circuits intégrés.
 Chaque support a une encoche à une extrémité. Celle-ci doit être alignée avec la marque correspondante sur la couche sérigraphiée, comme indiqué ici.
 ```
 
-Avec le support convenablement soutenu par le bas (on peut aussi utiliser un morceau d'adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place.  
+Avec le support convenablement soutenu par le bas (on peut aussi utiliser un morceau d'adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place.<br />
 Si un réalignement du composant est nécessaire, il doit être effectué **avant** que les broches restantes ne soient fixées.
 
 ### Condensateurs céramiques et oscillateur
@@ -114,17 +114,17 @@ Il s'agit des deux condensateurs associés à l'oscillateur, leur valeur est de 
 ```
 
 ```{note}
-L'oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du {term}`PCB`.  
-Ce n'est pas nécessaire pour le bon fonctionnement.  
+L'oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du {term}`PCB`.<br />
+Ce n'est pas nécessaire pour le bon fonctionnement.<br />
 Pour ce faire, on pourra utiliser une allumette le temps d'effectuer la soudure.
 ```
 
 ### Ponts redresseurs ou ponts de diodes
 
-Le rôle de ce composant est de redresser le courant alternatif fourni par le transformateur.  
+Le rôle de ce composant est de redresser le courant alternatif fourni par le transformateur.<br />
 C'est la première étape nécessaire pour obtenir une alimentation en courant continu.
 
-Sur la figure ci-après, la courbe du haut correspond à la tension fournie par le transformateur.  
+Sur la figure ci-après, la courbe du haut correspond à la tension fournie par le transformateur.<br />
 La courbe du bas est la tension fournie par le redresseur.
 
 ```{figure} img/Redresseur_monophase.png
@@ -135,7 +135,7 @@ La courbe du bas est la tension fournie par le redresseur.
 Redressement double alternance monophasé
 ```
 
-Sur la version triphasée de ce routeur, ils sont au nombre de trois, un par phase.  
+Sur la version triphasée de ce routeur, ils sont au nombre de trois, un par phase.<br />
 
 ```{note}
 Il aurait été possible de réaliser un redresseur double alternance triphasé. Ce type de redresseur ne nécessite que six diodes.
@@ -145,7 +145,7 @@ Il y a cependant deux inconvénients :
 ```
 
 ```{attention}
-Ces composants sont polarisés.  
+Ces composants sont polarisés.<br />
 Il faudra bien veiller à faire correspondre le marquage sur le boîtier avec celui de la couche sérigraphiée.
 ```
 
@@ -159,7 +159,7 @@ On pourra "recycler" 2 des pattes coupées pour réaliser les {ref}`Ponts de neu
 
 ### Connecteurs SIL/Molex
 
-Les connecteurs Molex sont *polarisés*, ils possèdent un détrompeur.  
+Les connecteurs Molex sont *polarisés*, ils possèdent un détrompeur.<br />
 Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviront à la connexion d'autres composants ou modules polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
 
 Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel sens.
@@ -184,7 +184,7 @@ L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la 
 ```{attention}
 Bien qu’ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
 
-Le plus grand condensateur (**C1** = **100 μF**) est le plus proche du bord du {term}`PCB`.  
+Le plus grand condensateur (**C1** = **100 μF**) est le plus proche du bord du {term}`PCB`.<br />
 Le plus petit (**C2** = **10 μF**) est le plus proche de **VR1**.
 
 Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
@@ -192,8 +192,8 @@ Si ces deux composants sont inversés, les symptômes qui en résultent peuvent 
 
 ### Ponts de neutre
 
-Pour un raccordement triphasé **avec** neutre (en France et la plupart des pays européens), il est possible de ponter le neutre entre chacune des 3 sous-alimentations.  
-Les deux ponts sont référencés "**N**", entre les transformateurs.  
+Pour un raccordement triphasé **avec** neutre (en France et la plupart des pays européens), il est possible de ponter le neutre entre chacune des 3 sous-alimentations.<br />
+Les deux ponts sont référencés "**N**", entre les transformateurs.<br />
 De cette façon, il ne sera pas nécessaire d'introduire un fil de neutre dans chaque connecteur secteur, un seul suffira.
 
 ```{warning}
@@ -206,19 +206,19 @@ Pour réaliser ces ponts, on pourra utiliser le reliquat des pattes coupées de 
 
 ### Connecteurs secteur et porte-fusible
 
-Les connecteurs secteur (**PWR1-PWR3**) et les porte-fusible (**FS1-FS3**) peuvent maintenant être installés.  
+Les connecteurs secteur (**PWR1-PWR3**) et les porte-fusible (**FS1-FS3**) peuvent maintenant être installés.<br />
 En raison des pistes du plan masse, les broches référencées **PE** sur chacun des connecteurs nécessitera plus de chaleur que les autres broches.
-Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage.  
+Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage.<br />
 Il est très facile de se tromper de sens !
 
 Les porte-fusible, accompagnés de leur fusible de **100 mA**, sont simples à mettre en place.
 
 ### Régulateur de tension
 
-Le régulateur de tension (**VR1**) doit être installé de manière à ce que son ailette métallique soit éloignée du transformateur, comme indiqué sur la sérigraphie.  
+Le régulateur de tension (**VR1**) doit être installé de manière à ce que son ailette métallique soit éloignée du transformateur, comme indiqué sur la sérigraphie.<br />
 En fonction de l'application, le **VR1** sera une version **3,3 V** ou **5 V**.
 
-La soudure des broches du **VR1** nécessitera probablement une température plus élevée.  
+La soudure des broches du **VR1** nécessitera probablement une température plus élevée.<br />
 Pour réduire la quantité de métal à chauffer, il est possible de couper préalablement ces broches à la longueur requise.
 
 ### Transformateurs
@@ -234,7 +234,7 @@ Lors du montage de ces composants, il ne doit y avoir aucun espace entre la base
 ---
 ## Tests électriques
 
-Une fois les transformateurs en place, la carte est maintenant prête pour les tests électriques.  
+Une fois les transformateurs en place, la carte est maintenant prête pour les tests électriques.<br />
 
 C'est le bon moment pour vérifier que tous les joints soudés sont en bon état et que toutes les éclaboussures de soudure ont été éliminées.
 
@@ -249,7 +249,7 @@ Pour poursuivre cette séquence de construction, un accès à la tension secteur
 Veuillez ne pas passer à cette étape suivante à moins que vous soyez compétent pour le faire.
 ```
 
-Nous effectuerons les tests suivants en alimentant le routeur via chacun des connecteurs secteur, l'un après l'autre.  
+Nous effectuerons les tests suivants en alimentant le routeur via chacun des connecteurs secteur, l'un après l'autre.<br />
 Ainsi, si une tension est incorrecte, il sera plus facile d'identifier la partie du circuit qui est défectueuse.
 
 Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ **3,3 V**… ou **5 V** si un régulateur de tension **5 V** a été installé.
@@ -266,7 +266,7 @@ N'oubliez pas de mettre votre multimètre sur la position *courant continu*, **{
 
 Avec la tension correcte en place, les circuits intégrés peuvent maintenant être installés, après avoir coupé l'alimentation.
 
-Le premier d’entre eux est LM358.  
+Le premier d’entre eux est LM358.<br />
 Il s'agit d'un amplificateur opérationnel qui fournit une tension de référence intermédiaire pour les capteurs de tension et de courant.
 
 Avec les packs Dual-in-Line, les broches devront peut-être être légèrement pliées vers l'intérieur pour s'insérer dans l'embase.
@@ -282,7 +282,7 @@ Les circuits intégrés doivent être installés dans le bon sens. Le point sur 
 
 Une fois que tout a été soigneusement vérifié, la puce peut être enfoncée fermement.
 
-Avec **LM358** en place et la carte alimentée à nouveau, la référence de tension peut être mesurée.  
+Avec **LM358** en place et la carte alimentée à nouveau, la référence de tension peut être mesurée.<br />
 **Vref** doit être environ la moitié de la tension d'alimentation. Ici, nous testons une carte **3,3 V**.
 
 Cette tension est accessible via le point de test **Test Vref** juste en dessous du **LM358**.

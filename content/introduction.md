@@ -1,5 +1,5 @@
-Cette documentation est applicable à toutes les versions du Mk2PVRouter, qu'elles soient monophasées ou triphasées.  
-La majorité des informations sont pertinentes pour les deux versions.  
+Cette documentation est applicable à toutes les versions du Mk2PVRouter, qu'elles soient monophasées ou triphasées.<br />
+La majorité des informations sont pertinentes pour les deux versions.<br />
 Chaque version a son propre chapitre.
 
 ---
@@ -8,8 +8,8 @@ Chaque version a son propre chapitre.
 Dans le kit, vous trouverez :
 - le circuit imprimé ({term}`PCB`) de la carte-mère
 - un ou plusieurs circuits imprimés pour chaque sortie
-- des composants électroniques (résistances, condensateurs, …).  
-  Attention, certains sont sensibles à l'électricité statique, il faut donc les manipuler avec soin.
+- des composants électroniques (résistances, condensateurs, …).<br />
+<br />Attention, certains sont sensibles à l'électricité statique, il faut donc les manipuler avec soin.
 - un boîtier
 - des câbles
 
@@ -30,15 +30,15 @@ L'assemblage complet va nécessiter plusieurs étapes :
 ---
 # Conseils pour les étapes de soudure
 
-Les composants nécessaires sont très divers. Certains composants sont passifs (résistances, etc.), d'autres sont actifs (AtMega, etc.).  
-En général, tous les composants sont sensibles à l'électricité statique.  
+Les composants nécessaires sont très divers. Certains composants sont passifs (résistances, etc.), d'autres sont actifs (AtMega, etc.).<br />
+En général, tous les composants sont sensibles à l'électricité statique.<br />
 Il est donc nécessaire de les manipuler avec précaution, et si possible, le corps humain doit être relié à la terre.
 
 Certains composants sont polarisés (diodes, certains condensateurs, etc.), d'autres ne le sont pas (résistances, certains condensateurs). Soyez très attentif à l'orientation AVANT de souder. L'orientation est indiquée directement sur la carte-mère.
 
 Ces composants varient également en taille. Ils vont des plus petits, avec quelques millimètres d'épaisseur/diamètre, aux plus grands avec plusieurs centimètres d'épaisseur (transformateurs).
 
-Pour des raisons pratiques, il est recommandé de procéder strictement par ordre de taille.  
+Pour des raisons pratiques, il est recommandé de procéder strictement par ordre de taille.<br />
 Ainsi, on soudera dans cet ordre :
 1. résistances et diodes, ponts le cas échéant
 2. supports IC1 et IC2 (voire IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports)

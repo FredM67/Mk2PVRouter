@@ -1,6 +1,6 @@
 (boitier)=
 
-Les boîtiers utilisés pour ce routeur sont de type industriel, fabriqués en ABS avec un retardateur de flamme.   
+Les boîtiers utilisés pour ce routeur sont de type industriel, fabriqués en ABS avec un retardateur de flamme.<br />
 Ils sont conformes aux normes de sécurité industrielles.
 
 En fonction du nombre de sorties à contrôler, deux références peuvent être fournies :
@@ -19,23 +19,23 @@ Cependant, ce guide décrira l'implantation la plus classique.
 
 # Étapes à réaliser
 
-- Perçage pour le·s dissipateur·s   
-  Vous devrez percer 2 trous de **3 mm** de diamètre et un autre de **35 mm** de diamètre.
-  Voir {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
-- Perçage pour le ou les étage·s de sortie·s triac   
-  Vous devrez percer 1 trou de **3 mm** de diamètre.
-- Perçage pour la carte-mère   
-  Vous devrez percer 4 trous de **4 mm** de diamètre.
-- Perçage pour les presse-étoupe   
-  Vous devrez percer des trous de **20 mm** de diamètre.
-- Perçage pour le·s prise·s jack   
-  Vous devrez percer des trous de **8 mm** de diamètre.
-- Perçage pour le·s témoin·s LED et pour l'afficheur 4 Digits (**Uniquement** pour le routeur **monophasé**)   
-  Vous devrez percer des trous de **8 mm** de diamètre.
-- Perçage pour le bouton *marche* (**Uniquement** pour le routeur **monophasé**)   
-  Vous devrez percer un trou de **20 mm** de diamètre.
-- Perçage pour le bouton *reset* (**Uniquement** pour le routeur **triphasé**)   
-  Vous devrez percer un trou de **13 mm** de diamètre.
+- Perçage pour le·s dissipateur·s<br />
+<br />Vous devrez percer 2 trous de **3 mm** de diamètre et un autre de **35 mm** de diamètre.
+<br />Voir {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
+- Perçage pour le ou les étage·s de sortie·s triac<br />
+<br />Vous devrez percer 1 trou de **3 mm** de diamètre.
+- Perçage pour la carte-mère<br />
+<br />Vous devrez percer 4 trous de **4 mm** de diamètre.
+- Perçage pour les presse-étoupe<br />
+<br />Vous devrez percer des trous de **20 mm** de diamètre.
+- Perçage pour le·s prise·s jack<br />
+<br />Vous devrez percer des trous de **8 mm** de diamètre.
+- Perçage pour le·s témoin·s LED et pour l'afficheur 4 Digits (**Uniquement** pour le routeur **monophasé**)<br />
+<br />Vous devrez percer des trous de **8 mm** de diamètre.
+- Perçage pour le bouton *marche* (**Uniquement** pour le routeur **monophasé**)<br />
+<br />Vous devrez percer un trou de **20 mm** de diamètre.
+- Perçage pour le bouton *reset* (**Uniquement** pour le routeur **triphasé**)<br />
+<br />Vous devrez percer un trou de **13 mm** de diamètre.
 
 ---
 
@@ -52,13 +52,13 @@ Cependant, ce guide décrira l'implantation la plus classique.
 
 # Perçage pour le·s dissipateur·s
 
-  Veuillez vous référer à la section {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
+<br />Veuillez vous référer à la section {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
 
 ---
 
 # Perçage pour chaque étage de sortie triac
 
-Le triac de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boitier.   
+Le triac de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boitier.<br />
 L'étage de sortie doit aussi être fixé au fond du boitier à la bonne hauteur pour être en accord avec le point de fixation du triac.
 
 Pour ce faire, il faut fixer le dissipateur sur le boitier préalablement préparé et fixé l'étage de sortie sur celui-ci par l'intermédiaire du triac.
@@ -81,7 +81,7 @@ Fixation dissipateur / étage de sortie
 Pointage
 ```
 
-Pour percer, l'étage de sortie doit être retiré.   
+Pour percer, l'étage de sortie doit être retiré.<br />
 Le perçage doit être effectué avec un foret de **3 mm** de diamètre.
 
 Pour ajuster la hauteur de la carte de sortie, un plot en plastique de 10 mm de haut est installé à l'aide d'une vis M3 en plastique.
@@ -98,7 +98,7 @@ Plot
 
 # Perçage pour la carte-mère
 
-Une fois les étages de sortie correctement positionnés, vous pouvez placer la carte-mère de manière à ne pas entraver les futurs branchements et autres équipements.   
+Une fois les étages de sortie correctement positionnés, vous pouvez placer la carte-mère de manière à ne pas entraver les futurs branchements et autres équipements.<br />
 En utilisant la même méthode, vous pouvez marquer et percer le boîtier aux dimensions appropriées.
 
 ```{figure} img/IMP_CarteMere.png

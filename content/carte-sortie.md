@@ -1,20 +1,20 @@
-Le triac, ou triode pour courant alternatif, est un composant électronique de la famille des thyristors utilisé comme interrupteur semi-conducteur pour contrôler la puissance délivrée à une charge électrique.   
-Sa particularité est de pouvoir conduire le courant dans les deux sens et ainsi de travailler avec du courant alternatif (AC).   
+Le triac, ou triode pour courant alternatif, est un composant électronique de la famille des thyristors utilisé comme interrupteur semi-conducteur pour contrôler la puissance délivrée à une charge électrique.<br />
+Sa particularité est de pouvoir conduire le courant dans les deux sens et ainsi de travailler avec du courant alternatif (AC).<br />
 Lorsqu'il est utilisé pour réguler la puissance fournie à un appareil purement résistif, tel qu'un radiateur électrique, un chauffe-eau ou une lampe à incandescence, le triac permet de moduler finement l'énergie transmise et donc de contrôler l'intensité de la chaleur ou de la lumière émise.
 
 # Principe de Fonctionnement d'une Sortie Triac
-Un triac est contrôlé par un signal de gâchette (ou signal de commande) appliqué à sa broche de commande, appelée gâchette ou *gate*.   
-Lorsque ce signal atteint un certain seuil, le triac s'amorce et devient conducteur, permettant ainsi au courant de passer à travers lui.   
+Un triac est contrôlé par un signal de gâchette (ou signal de commande) appliqué à sa broche de commande, appelée gâchette ou *gate*.<br />
+Lorsque ce signal atteint un certain seuil, le triac s'amorce et devient conducteur, permettant ainsi au courant de passer à travers lui.<br />
 Une fois amorcé, il reste conducteur jusqu'à ce que le courant passant à travers lui tombe en dessous d'un certain niveau, généralement proche de zéro, ce qui se produit naturellement à chaque demi-cycle du courant alternatif.
 
 # Contrôle de la Puissance
-Pour contrôler la puissance fournie à un appareil résistif, on utilise souvent une technique appelée variation de phase ou gradation.   
-Elle consiste à retarder l'amorçage du triac dans chaque demi-cycle de la tension alternative. En ne déclenchant le triac que pendant une portion de chaque demi-cycle, on réduit la quantité d'énergie fournie à la charge.   
-Plus le retard est important, plus la puissance transmise est faible, et inversement.   
+Pour contrôler la puissance fournie à un appareil résistif, on utilise souvent une technique appelée variation de phase ou gradation.<br />
+Elle consiste à retarder l'amorçage du triac dans chaque demi-cycle de la tension alternative. En ne déclenchant le triac que pendant une portion de chaque demi-cycle, on réduit la quantité d'énergie fournie à la charge.<br />
+Plus le retard est important, plus la puissance transmise est faible, et inversement.<br />
 Le principal inconvénient de cette méthode est qu'elle génère des harmoniques dans le réseau électrique.
 
-Une autre approche consiste à ne laisser passer que des sinusoïdes complètes, une technique connue sous le nom de modulation par trains d'ondes ou *burst fire control*.   
-Le principal inconvénient de cette méthode est que la gradation est moins précise, mais l'expérience a montré que cela ne pose pas de problème avec les compteurs électriques en France, quel que soit le modèle.   
+Une autre approche consiste à ne laisser passer que des sinusoïdes complètes, une technique connue sous le nom de modulation par trains d'ondes ou *burst fire control*.<br />
+Le principal inconvénient de cette méthode est que la gradation est moins précise, mais l'expérience a montré que cela ne pose pas de problème avec les compteurs électriques en France, quel que soit le modèle.<br />
 Le principal **avantage** de cette méthode est qu'elle ne génère aucune harmonique dans le réseau électrique.
 
 # Applications Typiques
