@@ -32,34 +32,33 @@ L'assemblage complet va nécessiter plusieurs étapes :
 - programmation finale
 
 ---
-## Conseils pour les étapes de soudure
+## Recommandations pour les étapes de soudure
 
-Les composants nécessaires sont très divers. Certains composants sont passifs (résistances, etc.), d'autres sont actifs (AtMega, etc.).<br />
-En général, tous les composants sont sensibles à l'électricité statique.<br />
-Il est donc nécessaire de les manipuler avec précaution, et si possible, le corps humain doit être relié à la terre.
+Les composants nécessaires sont très variés. Certains sont passifs (comme les résistances), tandis que d'autres sont actifs (comme l'AtMega328P).<br />
+Tous ces composants sont généralement sensibles à l'électricité statique.<br />
+Il est donc important de les manipuler avec soin et, si possible, de se mettre à la terre pour éviter toute décharge électrostatique.
 
-Certains composants sont polarisés (diodes, certains condensateurs, etc.), d'autres ne le sont pas (résistances, certains condensateurs). Soyez très attentif à l'orientation AVANT de souder. L'orientation est indiquée directement sur la carte-mère.
+Certains composants sont polarisés (comme les diodes et certains condensateurs), tandis que d'autres ne le sont pas (comme les résistances et certains condensateurs). Il est donc crucial de faire attention à l'orientation des composants AVANT de les souder. L'orientation est généralement indiquée directement sur la carte mère.
 
-Ces composants varient également en taille. Ils vont des plus petits, avec quelques millimètres d'épaisseur/diamètre, aux plus grands avec plusieurs centimètres d'épaisseur (transformateurs).
+Les composants varient également en taille, allant de quelques millimètres à plusieurs centimètres (dans le cas des transformateurs).
 
-Pour des raisons pratiques, il est recommandé de procéder strictement par ordre de taille.<br />
-Ainsi, on soudera dans cet ordre :
-1. résistances et diodes, ponts le cas échéant
-2. supports IC1 et IC2 (voire IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports)
-3. condensateurs "orange" non polarisés, oscillateur
-4. pont·s de diodes
-5. tous les connecteurs SIL noirs et le connecteur d'affichage, le cas échéant
-6. condensateurs polarisés (noir ou bleu)
-7. le socle pour l'antenne, le cas échéant
-8. le·s gros connecteur·s "haute tension"
-9. le·s porte-fusible
-10. le ou les régulateur·s de tension
-11. enfin le·s transformateur·s
+Pour des raisons pratiques, il est recommandé de procéder à la soudure en suivant un ordre précis basé sur la taille des composants.<br />
+Ainsi, l'ordre de soudure recommandé est le suivant :
+1. Résistances et diodes, et éventuellement les ponts
+2. Supports IC1 et IC2 (et éventuellement IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports à ce stade)
+3. Condensateurs non polarisés "orange", oscillateur
+4. Pont·s de diodes
+5. Tous les connecteurs SIL noirs et le connecteur d'affichage, le cas échéant
+6. Condensateurs polarisés (noirs ou bleus)
+7. Le socle pour l'antenne, le cas échéant
+8. Les gros connecteurs "haute tension"
+9. Les porte-fusibles
+10. Les régulateurs de tension
+11. Enfin, les transformateurs
 
-Cette séquence précise permet d'éviter de tordre les pattes des composants, d'utiliser de l'adhésif, etc.
+Suivre cette séquence précise permet d'éviter de tordre les pattes des composants ou d'avoir à utiliser de l'adhésif, entre autres.
 
 ---
-
 ## Matériels nécessaires
 
 - fer à souder
