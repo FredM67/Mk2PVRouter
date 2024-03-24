@@ -19,5 +19,13 @@ Cet arc peut, à terme, user les contacts. Il se peut qu'un jour, ces contacts r
 
 C'est pourquoi ces cartes-relais doivent être utilisées **uniquement** pour commander un relais de puissance réel, similaire aux contacteurs Heures Creuses/Heures Pleines que l'on trouve dans un tableau électrique.
 
+```{callout} À retenir
+Ne pas utiliser ces cartes-relais pour commander directement un appareil.
+```
+# Assemblage
+Les cartes-relais sont fournies entièrement assemblées.
+
+Elles seront fixées à l'aide de 4 vis M3, généralement au fond du boîtier. Pour éviter que le circuit imprimé de la carte ne soit en contact direct avec le boîtier, 4 entretoises seront utilisées.
+
 ---
 # Test

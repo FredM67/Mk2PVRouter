@@ -27,7 +27,7 @@ Le principal **avantage** de cette méthode est qu'elle ne génère aucune harmo
 - **Pas de Pièces Mobiles** : L'absence de pièces mobiles réduit l'usure mécanique et augmente la fiabilité et la durée de vie du système de commutation.
 
 # Considérations Techniques
-- **Dissipation Thermique** : Les triacs génèrent de la chaleur lors de la conduction. Il est donc important de prévoir une dissipation thermique adéquate, souvent sous la forme de radiateurs.
+- **Dissipation Thermique** : Les triacs génèrent de la chaleur lors de la conduction. Il est donc important de prévoir une dissipation thermique adéquate, souvent sous la forme de radiateurs ou dissipateurs.
 - **Compatibilité de Charge** : Le courant étant haché, seuls des appareils purement résistifs peuvent être contrôlés par un triac.
 
 # Assemblage d'une carte de sortie
@@ -39,104 +39,94 @@ Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet o
 5. triac
 
 ```{danger}
-Certaines soudures sur cette carte ont une très grande importance.
+Il est crucial de prêter une attention particulière à la **qualité** des soudures sur la section **haute tension** de cette carte.
 
-Il faudra veiller à donner une attention particulière à la **qualité** de chacune des soudures sur la partie **haute tension**.
-
-Une soudure ratée peut entraîner la destruction immédiate de la carte avec risque d'incendie lors de la mise sous tension.
+Une soudure mal réalisée peut provoquer une défaillance immédiate de la carte lors de la mise sous tension, avec un risque potentiel d'incendie.
 ```
 
 ---
-## Pose des *agrafes* en cuivre
+## Installation des *agrafes* en cuivre massif
+La première étape de l'assemblage consiste à installer une paire d'*agrafes* en cuivre massif qui renforcent la capacité de la carte à gérer des courants élevés.
 
-La première étape du processus d'assemblage consiste à installer une paire d'*agrafes* en cuivre massif qui augmentent la capacité de la carte à supporter des courants élevés.
-La section transversale recommandée est de 1,5 mm{sup}`2`compte tenu de la longueur très faible.
+La section transversale recommandée est de 1,5 mm² en raison de la très faible longueur entre le triac et le connecteur de puissance.
 
-Les paires de trous correctes sont indiquées par les lignes épaisses dans la couche de sérigraphie. Ces trous sont espacés d'environ 5 mm.
+Les paires de trous appropriées sont indiquées par les lignes épaisses sur la couche de sérigraphie. Ces trous sont espacés d'environ 5 mm.
 
-Tout d’abord, le fil est plié dans une forme appropriée pour passer à travers ces trous.
+Pour commencer, le fil est plié de manière à passer à travers ces trous.
 
-Ensuite, les extrémités sont pliées vers l’extérieur et fermement pressées contre le dessous du {term}`PCB`.
+Ensuite, les extrémités sont pliées vers l'extérieur et pressées fermement contre le dessous du {term}`PCB`.
 
-Lorsque les fils sont dans la bonne position, les quatre extrémités peuvent être coupées à longueur.
-
+Une fois les *agrafes* correctement positionnées, les quatre extrémités peuvent être coupées à la longueur appropriée.
 
 ---
-## Soudure des composants basse consommation
+## Soudure des composants faible puissance
 
-Une fois les agrafes en cuivre en place, tous les composants basse consommation peuvent désormais être installés.
+Avec les agrafes en cuivre correctement positionnées, tous les composants de faible puissance peuvent maintenant être installés.
 
-Comme indiqué sur le schéma de circuit :
-- **R1** = **120 Ω** (lors du fonctionnement à partir d'une source en **3,3 V**, ou **180 Ω** pour un fonctionnement en **5 V**)
-- **R2** = **330 Ω**
-- **R3** = **360 Ω**
+Comme le montre le schéma du circuit :
+- **R1** doit être de **120 Ω** si le circuit fonctionne à partir d'une source de **3,3 V**, ou de **180 Ω** pour un fonctionnement à **5 V**.
+- **R2** doit être de **330 Ω**.
+- **R3** doit être de **360 Ω**.
 
-Si vous installez un connecteur DIL pour l'{term}`optocoupleur` ou circuit intégré *déclencheur*, l'encoche doit être en bas, à côté du cercle sur le {term}`PCB`.
+Si vous installez un connecteur DIL pour l'{term}`optocoupleur` ou le circuit intégré *déclencheur*, veillez à ce que l'encoche soit positionnée en bas, à côté du cercle sur le {term}`PCB`.
 
-Ces caractéristiques indiquent toutes deux la broche 1.
-
+Ces deux caractéristiques indiquent l'emplacement de la broche 1.
 
 ---
 ## Soudure de la partie *haute puissance*/*haute tension*
 
 ```{danger}
-La qualité des soudures sera primordiale pour cette étape.
+La qualité des soudures est d'une importance capitale pour cette étape.
 
-Une soudure ratée peut entraîner la destruction immédiate de la carte avec risque d'incendie lors de la mise sous tension.
+Une soudure mal réalisée peut provoquer une défaillance immédiate de la carte lors de la mise sous tension, avec un risque potentiel d'incendie.
 ```
 
 ### Connecteur haute puissance
 
-Ce composant peut être temporairement maintenu en place en pliant les agrafes en cuivre de manière à ce qu'elles viennent juste pincer les broches saillantes.
+Ce composant peut être maintenu provisoirement en place en pliant légèrement les agrafes en cuivre pour qu'elles pincent les broches saillantes.
 
-Ensuite, avec un bon fer chaud (régler la température à 450 °C si possible), beaucoup de soudure peut être appliquée.
+Ensuite, avec un fer à souder bien chaud (réglez la température à 450 °C si possible), appliquez généreusement de la soudure.
 
 ### Triac
 
-De la même façon que précédemment, ce composant peut être temporairement maintenu en place en pliant les agrafes en cuivre de manière à ce qu'elles viennent juste pincer les broches saillantes.
+De la même manière, ce composant peut être maintenu provisoirement en place en pliant légèrement les agrafes en cuivre pour qu'elles pincent les broches saillantes.
 
-Il faudrait laisser dépasser seulement 1-2 mm des pattes du triac.
+Seuls 1 à 2 mm des pattes du triac devraient dépasser.
 
-Afin de faciliter cette opération mais aussi de protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l'un des dissipateurs non encore monté que vous avez à disposition. On peut prendre une pince à linge par exemple, ou toute autre pince à ressort.
+Pour faciliter cette opération et aussi pour protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l'un des dissipateurs non encore montés que vous avez à disposition. Vous pouvez utiliser une pince à linge ou toute autre pince à ressort.
 
 Pour les connexions en contact avec chacune des agrafes, un bon fer chaud et beaucoup de soudure sont nécessaires.
 
-Lorsque vous soudez la broche centrale, assurez-vous que la soudure ne dépasse pas vers la broche de gâchette. Si tel est le cas, une partie de la soudure devra être soigneusement retirée.
-
 ```{warning}
-Lors de la soudure du triac, veillez à bien vérifier que la soudure est "remontée" de l'autre côté du circuit. 
+Lors de la soudure du triac, veillez à bien vérifier que la soudure est *remontée* de l'autre côté du circuit.
 
 Cela assurera une continuité parfaite mais aussi une solidité accrue.
 ```
 
-
 ---
-## Mise en place de l'{term}`optocoupleur`
+## Installation de l'{term}`optocoupleur`
 
-Ce minuscule composant à 6 broches forme le *pont* entre les côtés basse tension et haute tension.
-Le point sur la puce (surligné ici en rouge) doit être à côté du cercle sur le {term}`PCB`.
+Ce petit composant à 6 broches fait office de *pont* entre les parties basse tension et haute tension du circuit.<br />
+Le repère sur la puce (mis en évidence ici en rouge) doit être positionné à côté du cercle sur le {term}`PCB`.
 
-S'il est monté dans le mauvais sens, cela ne fonctionnera pas. Mais grâce à la disposition de ses pins, il devrait survivre à l’expérience.
-
+Si ce composant est monté à l'envers, le circuit ne fonctionnera pas. Cependant, grâce à la disposition de ses broches, il devrait survivre à cette erreur.
 
 ---
 # Test
 
-Lors de la construction d'un système complet, il peut être plus approprié que l'étage de sortie terminé soit monté dans le boîtier avant d'être testé.
+Lors de la construction d'un système complet, il peut être préférable de monter l'étage de sortie finalisé dans le boîtier avant de procéder à son test.
 
-Les conseils ci-dessous sont proposés lorsqu'un étage de sortie doit être testé de manière isolée.
+Les conseils suivants sont destinés aux situations où un étage de sortie doit être testé de manière indépendante.
 
 ```{danger}
 **Avertissement de Sécurité**
 
-Pour tester que le déclencheur et le triac fonctionnent, un accès à la tension secteur **230 V** CA est requis.
+Pour vérifier le bon fonctionnement du déclencheur et du triac, un accès à la tension du réseau électrique **230 V** CA est nécessaire.
 
-Veuillez faire très attention et n’entreprendre cette étape suivante que si vous êtes compétent pour le faire.
+Faites preuve de la plus grande prudence et n'entamez cette étape que si vous avez les compétences nécessaires pour le faire en toute sécurité.
 ```
 
-Voici une plate-forme construit qui permet de tester les cartes de sortie avec ou sans le triac soudé en place.
-
-Cette plate-forme est affichée en haut de la page Galerie de photos.
+Voici une plate-forme construite qui permet de tester les cartes de sortie avec ou sans le triac soudé en place.
 
 Lors du test d'une carte de sortie, il est important que le triac fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit {term}`optocoupleur` et un ou plusieurs composants seront alors détruits immédiatement.
 
