@@ -12,8 +12,8 @@ Chaque version a son propre chapitre.
 Dans le kit, vous trouverez :
 - le circuit imprimé ({term}`PCB`) de la carte-mère
 - un ou plusieurs circuits imprimés pour chaque sortie
-- des composants électroniques (résistances, condensateurs, …).<br />
-<br />Attention, certains sont sensibles à l'électricité statique, il faut donc les manipuler avec soin.
+- des composants électroniques (résistances, condensateurs, …).
+  Attention, certains sont sensibles à l'électricité statique, il faut donc les manipuler avec soin.
 - un boîtier
 - des câbles
 

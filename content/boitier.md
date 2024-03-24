@@ -20,22 +20,22 @@ Cependant, ce guide décrira l'implantation la plus classique.
 # Étapes à réaliser
 
 - Perçage pour le·s dissipateur·s<br />
-<br />Vous devrez percer 2 trous de **3 mm** de diamètre et un autre de **35 mm** de diamètre.
-<br />Voir {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
+  Vous devrez percer 2 trous de **3 mm** de diamètre et un autre de **35 mm** de diamètre.
+  Voir {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
 - Perçage pour le ou les étage·s de sortie·s triac<br />
-<br />Vous devrez percer 1 trou de **3 mm** de diamètre.
+  Vous devrez percer 1 trou de **3 mm** de diamètre.
 - Perçage pour la carte-mère<br />
-<br />Vous devrez percer 4 trous de **4 mm** de diamètre.
+  Vous devrez percer 4 trous de **4 mm** de diamètre.
 - Perçage pour les presse-étoupe<br />
-<br />Vous devrez percer des trous de **20 mm** de diamètre.
+  Vous devrez percer des trous de **20 mm** de diamètre.
 - Perçage pour le·s prise·s jack<br />
-<br />Vous devrez percer des trous de **8 mm** de diamètre.
+  Vous devrez percer des trous de **8 mm** de diamètre.
 - Perçage pour le·s témoin·s LED et pour l'afficheur 4 Digits (**Uniquement** pour le routeur **monophasé**)<br />
-<br />Vous devrez percer des trous de **8 mm** de diamètre.
+  Vous devrez percer des trous de **8 mm** de diamètre.
 - Perçage pour le bouton *marche* (**Uniquement** pour le routeur **monophasé**)<br />
-<br />Vous devrez percer un trou de **20 mm** de diamètre.
+  Vous devrez percer un trou de **20 mm** de diamètre.
 - Perçage pour le bouton *reset* (**Uniquement** pour le routeur **triphasé**)<br />
-<br />Vous devrez percer un trou de **13 mm** de diamètre.
+  Vous devrez percer un trou de **13 mm** de diamètre.
 
 ---
 
@@ -52,7 +52,7 @@ Cependant, ce guide décrira l'implantation la plus classique.
 
 # Perçage pour le·s dissipateur·s
 
-<br />Veuillez vous référer à la section {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
+  Veuillez vous référer à la section {ref}`Perçage du boîtier <dissipateur:Perçage du boîtier>`.
 
 ---
 
