@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2024-03-24T19:40:03+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Principe de Fonctionnement d’une Sortie Triac &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/minipres.js?v=a0d29692"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=d99ca74e"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kit monophasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier-mono/">Préparation du boîtier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere-mono/">Carte-mère monophasée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-mono/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais-mono/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dissipateur-mono/">Dissipateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage_mono/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-mono/">Test logiciel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-mono/#test-de-la-partie-mesures">Test de la partie <em>mesures</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage-mono/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kit triphasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier-tri/">Préparation du boîtier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere-tri/">Carte-mère triphasée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais-tri/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dissipateur-tri/">Dissipateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage_tri/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-tri/">Test logiciel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-tri/#test-de-la-partie-mesures">Test de la partie <em>mesures</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage-tri/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Principe de Fonctionnement d’une Sortie Triac</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-sortie.md" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>Le triac, ou triode pour courant alternatif, est un composant électronique de la famille des thyristors utilisé comme interrupteur semi-conducteur pour contrôler la puissance délivrée à une charge électrique.<br />
+Sa particularité est de pouvoir conduire le courant dans les deux sens et ainsi de travailler avec du courant alternatif (AC).<br />
+Lorsqu’il est utilisé pour réguler la puissance fournie à un appareil purement résistif, tel qu’un radiateur électrique, un chauffe-eau ou une lampe à incandescence, le triac permet de moduler finement l’énergie transmise et donc de contrôler l’intensité de la chaleur ou de la lumière émise.</p>
+<section id="principe-de-fonctionnement-d-une-sortie-triac">
+<h1>Principe de Fonctionnement d’une Sortie Triac<a class="headerlink" href="#principe-de-fonctionnement-d-une-sortie-triac" title="Link to this heading"></a></h1>
+<p>Un triac est contrôlé par un signal de gâchette (ou signal de commande) appliqué à sa broche de commande, appelée gâchette ou <em>gate</em>.<br />
+Lorsque ce signal atteint un certain seuil, le triac s’amorce et devient conducteur, permettant ainsi au courant de passer à travers lui.<br />
+Une fois amorcé, il reste conducteur jusqu’à ce que le courant passant à travers lui tombe en dessous d’un certain niveau, généralement proche de zéro, ce qui se produit naturellement à chaque demi-cycle du courant alternatif.</p>
+</section>
+<section id="controle-de-la-puissance">
+<h1>Contrôle de la Puissance<a class="headerlink" href="#controle-de-la-puissance" title="Link to this heading"></a></h1>
+<p>Pour contrôler la puissance fournie à un appareil résistif, on utilise souvent une technique appelée variation de phase ou gradation.<br />
+Elle consiste à retarder l’amorçage du triac dans chaque demi-cycle de la tension alternative. En ne déclenchant le triac que pendant une portion de chaque demi-cycle, on réduit la quantité d’énergie fournie à la charge.<br />
+Plus le retard est important, plus la puissance transmise est faible, et inversement.<br />
+Le principal inconvénient de cette méthode est qu’elle génère des harmoniques dans le réseau électrique.</p>
+<p>Une autre approche consiste à ne laisser passer que des sinusoïdes complètes, une technique connue sous le nom de modulation par trains d’ondes ou <em>burst fire control</em>.<br />
+Le principal inconvénient de cette méthode est que la gradation est moins précise, mais l’expérience a montré que cela ne pose pas de problème avec les compteurs électriques en France, quel que soit le modèle.<br />
+Le principal <strong>avantage</strong> de cette méthode est qu’elle ne génère aucune harmonique dans le réseau électrique.</p>
+</section>
+<section id="applications-typiques">
+<h1>Applications Typiques<a class="headerlink" href="#applications-typiques" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><strong>Éclairage</strong> : Les variateurs de lumière utilisent des triacs pour ajuster l’intensité de l’éclairage. En contrôlant le moment où le triac s’amorce, on peut varier la luminosité de la lampe.</p></li>
+<li><p><strong>Chauffage</strong> : Pour les radiateurs électriques, les triacs sont utilisés pour réguler la température. En modifiant le temps de conduction, on peut augmenter ou diminuer la chaleur produite par l’élément chauffant.</p></li>
+</ul>
+<section id="avantages-par-rapport-a-un-relais">
+<h2>Avantages par rapport à un relais<a class="headerlink" href="#avantages-par-rapport-a-un-relais" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Contrôle Précis</strong> : Le triac permet un contrôle très précis de la puissance, ce qui est idéal pour des applications où une régulation fine est nécessaire.</p></li>
+<li><p><strong>Commutation Silencieuse</strong> : Contrairement aux relais mécaniques, les triacs commutent silencieusement, sans le bruit de claquement des contacts.</p></li>
+<li><p><strong>Pas de Pièces Mobiles</strong> : L’absence de pièces mobiles réduit l’usure mécanique et augmente la fiabilité et la durée de vie du système de commutation.</p></li>
+</ul>
+</section>
+</section>
+<section id="considerations-techniques">
+<h1>Considérations Techniques<a class="headerlink" href="#considerations-techniques" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><strong>Dissipation Thermique</strong> : Les triacs génèrent de la chaleur lors de la conduction. Il est donc important de prévoir une dissipation thermique adéquate, souvent sous la forme de radiateurs ou dissipateurs.</p></li>
+<li><p><strong>Compatibilité de Charge</strong> : Le courant étant haché, seuls des appareils purement résistifs peuvent être contrôlés par un triac.</p></li>
+</ul>
+</section>
+<section id="assemblage-d-une-carte-de-sortie">
+<h1>Assemblage d’une carte de sortie<a class="headerlink" href="#assemblage-d-une-carte-de-sortie" title="Link to this heading"></a></h1>
+<p>Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet ordre :</p>
+<ol class="arabic simple">
+<li><p>résistances</p></li>
+<li><p>support MOC</p></li>
+<li><p>connecteur·s Molex</p></li>
+<li><p>connecteur de puissance</p></li>
+<li><p>triac</p></li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Il est crucial de prêter une attention particulière à la <strong>qualité</strong> des soudures sur la section <strong>haute tension</strong> de cette carte.</p>
+<p>Une soudure mal réalisée peut provoquer une défaillance immédiate de la carte lors de la mise sous tension, avec un risque potentiel d’incendie.</p>
+</div>
+<hr class="docutils" />
+<section id="installation-des-agrafes-en-cuivre-massif">
+<h2>Installation des <em>agrafes</em> en cuivre massif<a class="headerlink" href="#installation-des-agrafes-en-cuivre-massif" title="Link to this heading"></a></h2>
+<p>La première étape de l’assemblage consiste à installer une paire d”<em>agrafes</em> en cuivre massif qui renforcent la capacité de la carte à gérer des courants élevés.</p>
+<p>La section transversale recommandée est de 1,5 mm² en raison de la très faible longueur entre le triac et le connecteur de puissance.</p>
+<p>Les paires de trous appropriées sont indiquées par les lignes épaisses sur la couche de sérigraphie. Ces trous sont espacés d’environ 5 mm.</p>
+<p>Pour commencer, le fil est plié de manière à passer à travers ces trous.</p>
+<p>Ensuite, les extrémités sont pliées vers l’extérieur et pressées fermement contre le dessous du <a class="reference internal" href="../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>.</p>
+<p>Une fois les <em>agrafes</em> correctement positionnées, les quatre extrémités peuvent être coupées à la longueur appropriée.</p>
+</section>
+<hr class="docutils" />
+<section id="soudure-des-composants-faible-puissance">
+<h2>Soudure des composants faible puissance<a class="headerlink" href="#soudure-des-composants-faible-puissance" title="Link to this heading"></a></h2>
+<p>Avec les agrafes en cuivre correctement positionnées, tous les composants de faible puissance peuvent maintenant être installés.</p>
+<p>Comme le montre le schéma du circuit :</p>
+<ul class="simple">
+<li><p><strong>R1</strong> doit être de <strong>120 Ω</strong> si le circuit fonctionne à partir d’une source de <strong>3,3 V</strong>, ou de <strong>180 Ω</strong> pour un fonctionnement à <strong>5 V</strong>.</p></li>
+<li><p><strong>R2</strong> doit être de <strong>330 Ω</strong>.</p></li>
+<li><p><strong>R3</strong> doit être de <strong>360 Ω</strong>.</p></li>
+</ul>
+<p>Si vous installez un connecteur DIL pour l”<a class="reference internal" href="../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a> ou le circuit intégré <em>déclencheur</em>, veillez à ce que l’encoche soit positionnée en bas, à côté du cercle sur le <a class="reference internal" href="../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>.</p>
+<p>Ces deux caractéristiques indiquent l’emplacement de la broche 1.</p>
+</section>
+<hr class="docutils" />
+<section id="soudure-de-la-partie-haute-puissance-haute-tension">
+<h2>Soudure de la partie <em>haute puissance</em>/<em>haute tension</em><a class="headerlink" href="#soudure-de-la-partie-haute-puissance-haute-tension" title="Link to this heading"></a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>La qualité des soudures est d’une importance capitale pour cette étape.</p>
+<p>Une soudure mal réalisée peut provoquer une défaillance immédiate de la carte lors de la mise sous tension, avec un risque potentiel d’incendie.</p>
+</div>
+<section id="connecteur-haute-puissance">
+<h3>Connecteur haute puissance<a class="headerlink" href="#connecteur-haute-puissance" title="Link to this heading"></a></h3>
+<p>Ce composant peut être maintenu provisoirement en place en pliant légèrement les agrafes en cuivre pour qu’elles pincent les broches saillantes.</p>
+<p>Ensuite, avec un fer à souder bien chaud (réglez la température à 450 °C si possible), appliquez généreusement de la soudure.</p>
+</section>
+<section id="triac">
+<h3>Triac<a class="headerlink" href="#triac" title="Link to this heading"></a></h3>
+<p>De la même manière, ce composant peut être maintenu provisoirement en place en pliant légèrement les agrafes en cuivre pour qu’elles pincent les broches saillantes.</p>
+<p>Seuls 1 à 2 mm des pattes du triac devraient dépasser.</p>
+<p>Pour faciliter cette opération et aussi pour protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l’un des dissipateurs non encore montés que vous avez à disposition. Vous pouvez utiliser une pince à linge ou toute autre pince à ressort.</p>
+<p>Pour les connexions en contact avec chacune des agrafes, un bon fer chaud et beaucoup de soudure sont nécessaires.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Lors de la soudure du triac, veillez à bien vérifier que la soudure est <em>remontée</em> de l’autre côté du circuit.</p>
+<p>Cela assurera une continuité parfaite mais aussi une solidité accrue.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="installation-de-l-optocoupleur">
+<h2>Installation de l”<a class="reference internal" href="../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a><a class="headerlink" href="#installation-de-l-optocoupleur" title="Link to this heading"></a></h2>
+<p>Ce petit composant à 6 broches fait office de <em>pont</em> entre les parties basse tension et haute tension du circuit.<br />
+Le repère sur la puce (mis en évidence ici en rouge) doit être positionné à côté du cercle sur le <a class="reference internal" href="../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>.</p>
+<p>Si ce composant est monté à l’envers, le circuit ne fonctionnera pas. Cependant, grâce à la disposition de ses broches, il devrait survivre à cette erreur.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="test">
+<h1>Test<a class="headerlink" href="#test" title="Link to this heading"></a></h1>
+<p>Lors de la construction d’un système complet, il peut être préférable de monter l’étage de sortie finalisé dans le boîtier avant de procéder à son test.</p>
+<p>Les conseils suivants sont destinés aux situations où un étage de sortie doit être testé de manière indépendante.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Avertissement de Sécurité</strong></p>
+<p>Pour vérifier le bon fonctionnement du déclencheur et du triac, un accès à la tension du réseau électrique <strong>230 V</strong> CA est nécessaire.</p>
+<p>Faites preuve de la plus grande prudence et n’entamez cette étape que si vous avez les compétences nécessaires pour le faire en toute sécurité.</p>
+</div>
+<p>Voici une plate-forme construite qui permet de tester les cartes de sortie avec ou sans le triac soudé en place.</p>
+<p>Lors du test d’une carte de sortie, il est important que le triac fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit <a class="reference internal" href="../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a> et un ou plusieurs composants seront alors détruits immédiatement.</p>
+<p>En tenant dûment compte de l’avertissement de sécurité ci-dessus, l’approche simple illustrée ci-dessous devrait convenir pour tester des cartes individuelles.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2023, ENERGIE ROUTER &amp; F. Metrich (aka FredM67).
+      <span class="lastupdated">Mis à jour le mars 24, 2024.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
