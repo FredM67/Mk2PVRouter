@@ -55,7 +55,7 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
 <br />xx mm de long
 - Boîtier **3** ou **4** sorties
 <br />xx mm de long
-```<br /> 
+```
 
 ```{exercise} Version triphasée
 - Boîtier **1** ou **2** sorties

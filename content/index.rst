@@ -45,6 +45,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :hidden:
+
    introduction.md
 
 .. toctree::
@@ -52,7 +53,6 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: Kit monophasé
    :hidden:
 
-   introduction-mono
    boitier-mono
    carte-mere-mono.md
    carte-sortie-mono
@@ -68,7 +68,6 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: Kit triphasé
    :hidden:
 
-   introduction-tri
    boitier-tri
    carte-mere-tri.md
    carte-sortie-tri
