@@ -43,7 +43,9 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 | Le routeur va permettre de décaler la consommation du chauffe-eau aux moments où l'on produit sa propre électricité gratuite (hors amortissement bien sûr du système de production).
 
-.. Hidden TOCs
+.. toctree::
+   :hidden:
+   introduction.md
 
 .. toctree::
    :maxdepth: 2
