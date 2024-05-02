@@ -106,6 +106,10 @@ html_context = {
     "github_repo": github_repo_name or basename(dirname(realpath(__file__))),
     "github_version": github_version,
     "conf_py_path": conf_py_path,
+    "versions": [
+        ("latest", "/"),
+        # ("stable", "/stable/"),
+    ],
 }
 
 import os
