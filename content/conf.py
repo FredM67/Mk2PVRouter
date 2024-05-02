@@ -30,7 +30,7 @@ extensions = [
     # 'sphinx-mathjax-offline',
     'sphinx.ext.imgmath',
     'sphinx_rtd_theme',
-    # 'sphinx_rtd_theme_ext_color_contrast',
+    'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',
     'sphinx_simplepdf',
     'sphinxcontrib.drawio',
