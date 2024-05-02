@@ -15,8 +15,9 @@
       </dl>
       <dl>
         <dt>{{ _('Téléchargements') }}</dt>
-        <dd><a href="_static/Manuel_1.pdf"> {{ _('Manuel 1 PDF') }}</a></dd>
-        <dd><a href="_static/Manuel_2.pdf"> {{ _('Manuel 2 PDF') }}</a></dd>
+        {% for type, url in downloads %}
+          <dd><a href="{{ url }}">{{ type }}</a></dd>
+        {% endfor %}
       </dl>
       <dl>
         <dt>{{ _('On Github') }}</dt>

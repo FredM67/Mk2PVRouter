@@ -29,7 +29,8 @@ extensions = [
     # 'sphinx.ext.mathjax',
     # 'sphinx-mathjax-offline',
     'sphinx.ext.imgmath',
-    'sphinx_rtd_theme_ext_color_contrast',
+    'sphinx_rtd_theme',
+    # 'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',
     'sphinx_simplepdf',
     'sphinxcontrib.drawio',
@@ -109,6 +110,10 @@ html_context = {
     "versions": [
         ("latest", "/"),
         # ("stable", "/stable/"),
+    ],
+    "downloads": [
+        ("PDF1", "_static/Manuel_1.pdf"),
+        ("PDF2", "_static/Manuel_2.pdf"),
     ],
 }
 
