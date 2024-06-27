@@ -91,36 +91,19 @@ Vue dessus/dessous, agrafes posées
 ## Installation des composants de faible puissance, support DIL
 Une fois les agrafes de cuivre mises en place, il est temps d'installer les composants qui nécessitent peu de puissance.
 
-Selon le plan du circuit :
-- La résistance **R1** doit être de **120 Ω** si le circuit est alimenté en **3,3 V**, ou de **180 Ω** pour une alimentation en **5 V**.
-- La résistance **R2** doit avoir une valeur de **330 Ω**.
-- La résistance **R3** doit être de **360 Ω**.
-
+Voici les valeurs ohmiques correctes pour chacune des résistances en fonction de la tension du système ainsi que du type d'{term}`optocoupleur` :
 ```{eval-rst}
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 2
-
-   * - 
-     - **Common Header 1**
-     - **Common Header 2**
-     - 
-   * - **Header 1**
-     - **Header 2**
-     - **Header 3**
-     - **Header 4**
-   * - **Row 1, Cell 1**
-     - **Row 1, Cell 2**
-     - **Row 1, Cell 3**
-     - **Row 1, Cell 4**
-   * - **Row 2, Cell 1**
-     - **Row 2, Cell 2**
-     - **Row 2, Cell 3**
-     - **Row 2, Cell 4**
-   * - **Row 3, Cell 1**
-     - **Row 3, Cell 2**
-     - **Row 3, Cell 3**
-     - **Row 3, Cell 4**
++--------+-------+-------+-------+-------+
+|        |    MOC 3041   |    MOC 3043   |
++--------+-------+-------+-------+-------+
+|        | 3.3 V |  5 V  | 3.3 V |  5 V  |
++========+=======+=======+=======+=======+
+| **R1** | 120 Ω | 180 Ω | 330 Ω | 500 Ω |
++--------+-------+-------+-------+-------+
+| **R2** | 330 Ω | 330 Ω | 360 Ω | 360 Ω |
++--------+-------+-------+-------+-------+
+| **R3** | 360 Ω | 360 Ω | 360 Ω | 360 Ω |
++--------+-------+-------+-------+-------+
 ```
 
 ```{note}
