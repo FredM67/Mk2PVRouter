@@ -127,7 +127,7 @@ C'est la première étape nécessaire pour obtenir une alimentation en courant c
 Sur la figure ci-après, la courbe du haut correspond à la tension fournie par le transformateur.<br />
 La courbe du bas est la tension fournie par le redresseur.
 
-```{figure} img/Redresseur_monophase.png
+```{figure} img/Redresseur-monophase.png
 :alt: Redressement double alternance monophasé
 :align: center
 :scale: 50%
