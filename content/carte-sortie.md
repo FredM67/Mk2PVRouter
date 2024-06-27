@@ -96,6 +96,19 @@ Selon le plan du circuit :
 - La résistance **R2** doit avoir une valeur de **330 Ω**.
 - La résistance **R3** doit être de **360 Ω**.
 
+```{eval-rst}
+=====  =====  ======
+   Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======
+```
+
 ```{note}
 Pour des besoins spécifiques, un autre type d'{term}`optocoupleur` pourrait être nécessaire.  
 Dans ce cas, les valeurs des résistances peuvent varier.
