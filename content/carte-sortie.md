@@ -88,7 +88,7 @@ Vue dessus/dessous, agrafes posées
 ```
 
 ---
-## Installation des composants de faible puissance
+## Installation des composants de faible puissance, support DIL
 Une fois les agrafes de cuivre mises en place, il est temps d'installer les composants qui nécessitent peu de puissance.
 
 Selon le plan du circuit :
@@ -99,6 +99,19 @@ Selon le plan du circuit :
 ```{note}
 Pour des besoins spécifiques, un autre type d'{term}`optocoupleur` pourrait être nécessaire.  
 Dans ce cas, les valeurs des résistances peuvent varier.
+```
+
+```{hint}
+Pour assurer que le support DIL soit correctement fixé et en contact total avec le circuit imprimé, commencez par souder une seule de ses broches. Ensuite, vérifiez que le support est bien en place et parfaitement aligné avant de procéder à la soudure des cinq broches restantes.
+```
+
+```{figure} img/Soudure-Rs-DIL.jpg
+:alt: Vue dessus/dessous, résistances et support DIL soudés
+:align: center
+:scale: 25%
+
+Vue dessus/dessous, résistances et support DIL soudés
+```
 
 ---
 ## Soudure de la partie *haute puissance*/*haute tension*
