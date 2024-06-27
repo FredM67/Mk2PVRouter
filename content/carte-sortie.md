@@ -97,16 +97,30 @@ Selon le plan du circuit :
 - La résistance **R3** doit être de **360 Ω**.
 
 ```{eval-rst}
-=====  =====  ======
-   Inputs     Output
-------------  ------
-  A      B    A or B
-=====  =====  ======
-False  False  False
-True   False  True
-False  True   True
-True   True   True
-=====  =====  ======
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 2
+
+   * - 
+     - **Common Header 1**
+     - **Common Header 2**
+     - 
+   * - **Header 1**
+     - **Header 2**
+     - **Header 3**
+     - **Header 4**
+   * - **Row 1, Cell 1**
+     - **Row 1, Cell 2**
+     - **Row 1, Cell 3**
+     - **Row 1, Cell 4**
+   * - **Row 2, Cell 1**
+     - **Row 2, Cell 2**
+     - **Row 2, Cell 3**
+     - **Row 2, Cell 4**
+   * - **Row 3, Cell 1**
+     - **Row 3, Cell 2**
+     - **Row 3, Cell 3**
+     - **Row 3, Cell 4**
 ```
 
 ```{note}
