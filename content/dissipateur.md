@@ -69,7 +69,7 @@ Ce gabarit doit être imprimé à taille réelle. Assurez-vous que les dimension
 Le gabarit sera placé sur la face externe du boîtier, le bas du gabarit le long du bord inférieur du boîtier.<br />
 Bien placé, le dissipateur sera en contact avec la collerette périphérique du boîtier.
 
-```{figure} img/Gabarit_dissipateur_boitier.jpg
+```{figure} img/Gabarit-dissipateur-boitier.jpg
 :alt: Positionnement du gabarit sur le boîtier
 :align: center
 :scale: 25%

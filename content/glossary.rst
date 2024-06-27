@@ -41,7 +41,7 @@ Glossaire
 
    Optocoupleur
      | Ou photocoupleur.
-     | Ce composant électronique est capable de transmettre un signal d'un circuit électrique à un autre, sans qu'il y ait de contact galvanique entre eux, c'est-à-dire que les 2 circuits sont totalement isolés l'un de l'autre.
+     | Un optocoupleur est un composant électronique qui permet de transférer un signal électrique entre deux parties d'un circuit tout en les isolant électriquement l'une de l'autre. Il est souvent utilisé pour contrôler un circuit de haute tension à partir d'un signal de basse tension, en assurant une isolation galvanique entre les deux.
 
      .. seealso:: `Wikipédia, Photocoupleur <https://fr.wikipedia.org/wiki/Photocoupleur>`_
 

@@ -65,7 +65,7 @@ Pour ce faire, il faut fixer le dissipateur sur le boitier préalablement prépa
 
 Vu du dessus, il est possible de pointer le futur perçage à l'endroit le plus adéquat dans le trou oblong.
 
-```{figure} img/Et_Sortie_pointage_1.jpg
+```{figure} img/Pointage-sortie-side.jpg
 :alt: Fixation dissipateur / étage de sortie
 :align: center
 :scale: 25%
@@ -73,7 +73,7 @@ Vu du dessus, il est possible de pointer le futur perçage à l'endroit le plus 
 Fixation dissipateur / étage de sortie
 ```
 
-```{figure} img/Pointage_ETsortie.jpg
+```{figure} img/Pointage-sortie-top.jpg
 :alt: Pointage
 :align: center
 :scale: 25%
@@ -86,7 +86,7 @@ Le perçage doit être effectué avec un foret de **3 mm** de diamètre.
 
 Pour ajuster la hauteur de la carte de sortie, un plot en plastique de 10 mm de haut est installé à l'aide d'une vis M3 en plastique.
 
-```{figure} img/Plot_ETsortie.png
+```{figure} img/Entretoise-sortie.png
 :alt: Plot
 :align: center
 :scale: 25%
@@ -101,7 +101,7 @@ Plot
 Une fois les étages de sortie correctement positionnés, vous pouvez placer la carte-mère de manière à ne pas entraver les futurs branchements et autres équipements.<br />
 En utilisant la même méthode, vous pouvez marquer et percer le boîtier aux dimensions appropriées.
 
-```{figure} img/IMP_CarteMere.png
+```{figure} img/Implantation-Mono.png
 :alt: Pointage carte mère
 :align: center
 :scale: 25%

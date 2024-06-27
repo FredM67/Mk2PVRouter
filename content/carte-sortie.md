@@ -30,10 +30,30 @@ Le principal **avantage** de cette méthode est qu'elle ne génère aucune harmo
 - **Dissipation Thermique** : Les triacs génèrent de la chaleur lors de la conduction. Il est donc important de prévoir une dissipation thermique adéquate, souvent sous la forme de radiateurs ou dissipateurs.
 - **Compatibilité de Charge** : Le courant étant haché, seuls des appareils purement résistifs peuvent être contrôlés par un triac.
 
+# Composition d'un kit pour étage de sortie triac
+Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
+- Un **circuit imprimé** qui distingue clairement les zones de basse et de haute tension de chaque côté.
+- Une **résistance R1**, dont la valeur est choisie en fonction de la tension nominale du système et du modèle d'optocoupleur utilisé.
+- Une **résistance R2**, sélectionnée selon le modèle d'optocoupleur.
+- Une **résistance R3**.
+- Un **support DIL** pour l'optocoupleur, comportant deux rangées de trois broches.
+- Deux **connecteurs type Molex**.
+- Un **isolant** qui assure à la fois l'isolation électrique et la conduction thermique.
+- Un **triac**, adapté aux exigences spécifiques de l'application.
+- Un **connecteur de puissance** qui dispose habituellement de trois broches, la broche centrale étant inutilisée.
+  
+```{figure} img/Kit-sortie.jpg
+:alt: Contenu d'un kit de sortie
+:align: center
+:scale: 25%
+
+Contenu d'un kit de sortie
+```
+
 # Assemblage d'une carte de sortie
 Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet ordre :
 1. résistances
-2. support MOC
+2. support {term}`optocoupleur`
 3. connecteur·s Molex
 4. connecteur de puissance
 5. triac
@@ -41,7 +61,7 @@ Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet o
 ```{danger}
 Il est crucial de prêter une attention particulière à la **qualité** des soudures sur la section **haute tension** de cette carte.
 
-Une soudure mal réalisée peut provoquer une défaillance immédiate de la carte lors de la mise sous tension, avec un risque potentiel d'incendie.
+Une soudure mal réalisée peut provoquer une défaillance immédiate de la carte lors de la mise sous tension, avec un risque d'incendie.
 ```
 
 ---
