@@ -37,7 +37,7 @@ Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 - Une **résistance R2**, sélectionnée selon le modèle d'optocoupleur.
 - Une **résistance R3**.
 - Un **support DIL** pour l'optocoupleur, comportant deux rangées de trois broches.
-- Deux **connecteurs type Molex**.
+- Deux paires de **connecteurs type Molex**.
 - Un **isolant** qui assure à la fois l'isolation électrique et la conduction thermique.
 - Un **triac**, adapté aux exigences spécifiques de l'application.
 - Un **connecteur de puissance** qui dispose habituellement de trois broches, la broche centrale étant inutilisée.
@@ -79,9 +79,16 @@ Puis, pliez les extrémités vers l'extérieur et pressez-les fermement contre l
 
 Une fois les agrafes correctement mises en place, coupez les quatre extrémités à la longueur nécessaire.
 
+```{figure} img/Pose-agrafes.jpg
+:alt: Vue dessus/dessous, agrafes posées
+:align: center
+:scale: 25%
+
+Vue dessus/dessous, agrafes posées
+```
+
 ---
 ## Installation des composants de faible puissance
-
 Une fois les agrafes de cuivre mises en place, il est temps d'installer les composants qui nécessitent peu de puissance.
 
 Selon le plan du circuit :
