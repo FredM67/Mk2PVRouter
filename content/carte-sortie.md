@@ -41,6 +41,7 @@ Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 - Un **isolant** qui assure à la fois l'isolation électrique et la conduction thermique.
 - Un **triac**, adapté aux exigences spécifiques de l'application.
 - Un **connecteur de puissance** qui dispose habituellement de trois broches, la broche centrale étant inutilisée.
+- Un **morceau de cuivre massif** de 1.5 mm² de section.
   
 ```{figure} img/Kit-sortie.jpg
 :alt: Contenu d'un kit de sortie
@@ -66,39 +67,39 @@ Une soudure mal réalisée peut provoquer une défaillance immédiate de la cart
 
 ---
 ## Installation des *agrafes* en cuivre massif
-La première étape de l'assemblage consiste à installer une paire d'*agrafes* en cuivre massif qui renforcent la capacité de la carte à gérer des courants élevés.
+La première étape du montage consiste à installer des *agrafes* en cuivre pur pour augmenter la capacité de la carte à supporter des courants forts.
 
-La section transversale recommandée est de 1,5 mm² en raison de la très faible longueur entre le triac et le connecteur de puissance.
+Il est recommandé d'utiliser du cuivre d'une section transversale de 1,5 mm², compte tenu de la courte distance entre le triac et le connecteur de puissance.
 
-Les paires de trous appropriées sont indiquées par les lignes épaisses sur la couche de sérigraphie. Ces trous sont espacés d'environ 5 mm.
+Les emplacements pour ces agrafes sont marqués sur le circuit imprimé par des lignes épaisses sur la couche de sérigraphie, avec un espacement d'environ 5 mm entre les trous.
 
-Pour commencer, le fil est plié de manière à passer à travers ces trous.
+Pour installer les agrafes, commencez par plier le fil de cuivre afin qu'il traverse ces trous.
 
-Ensuite, les extrémités sont pliées vers l'extérieur et pressées fermement contre le dessous du {term}`PCB`.
+Puis, pliez les extrémités vers l'extérieur et pressez-les fermement contre la face inférieure du circuit imprimé. L'utilisation d'une pince multiprise facilitera cette tâche, tout en prenant soin de ne pas abîmer le circuit.
 
-Une fois les *agrafes* correctement positionnées, les quatre extrémités peuvent être coupées à la longueur appropriée.
+Une fois les agrafes correctement mises en place, coupez les quatre extrémités à la longueur nécessaire.
 
 ---
-## Soudure des composants faible puissance
+## Installation des composants de faible puissance
 
-Avec les agrafes en cuivre correctement positionnées, tous les composants de faible puissance peuvent maintenant être installés.
+Une fois les agrafes de cuivre mises en place, il est temps d'installer les composants qui nécessitent peu de puissance.
 
-Comme le montre le schéma du circuit :
-- **R1** doit être de **120 Ω** si le circuit fonctionne à partir d'une source de **3,3 V**, ou de **180 Ω** pour un fonctionnement à **5 V**.
-- **R2** doit être de **330 Ω**.
-- **R3** doit être de **360 Ω**.
+Selon le plan du circuit :
+- La résistance **R1** doit être de **120 Ω** si le circuit est alimenté en **3,3 V**, ou de **180 Ω** pour une alimentation en **5 V**.
+- La résistance **R2** doit avoir une valeur de **330 Ω**.
+- La résistance **R3** doit être de **360 Ω**.
 
-Si vous installez un connecteur DIL pour l'{term}`optocoupleur` ou le circuit intégré *déclencheur*, veillez à ce que l'encoche soit positionnée en bas, à côté du cercle sur le {term}`PCB`.
-
-Ces deux caractéristiques indiquent l'emplacement de la broche 1.
+```{note}
+Pour des besoins spécifiques, un autre type d'{term}`optocoupleur` pourrait être nécessaire.  
+Dans ce cas, les valeurs des résistances peuvent varier.
 
 ---
 ## Soudure de la partie *haute puissance*/*haute tension*
 
 ```{danger}
-La qualité des soudures est d'une importance capitale pour cette étape.
+La qualité des soudures est d'une importance **capitale** pour cette étape.
 
-Une soudure mal réalisée peut provoquer une défaillance immédiate de la carte lors de la mise sous tension, avec un risque potentiel d'incendie.
+Une soudure mal réalisée peut provoquer une défaillance immédiate de la carte lors de la mise sous tension, avec un risque d'incendie.
 ```
 
 ### Connecteur haute puissance
@@ -113,9 +114,9 @@ De la même manière, ce composant peut être maintenu provisoirement en place e
 
 Seuls 1 à 2 mm des pattes du triac devraient dépasser.
 
-Pour faciliter cette opération et aussi pour protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l'un des dissipateurs non encore montés que vous avez à disposition. Vous pouvez utiliser une pince à linge ou toute autre pince à ressort.
+Pour faciliter cette opération et aussi pour protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l'un des dissipateurs non encore monté que vous avez à disposition. Vous pouvez utiliser une pince à linge ou toute autre pince à ressort.
 
-Pour les connexions en contact avec chacune des agrafes, un bon fer chaud et beaucoup de soudure sont nécessaires.
+Pour les soudures au niveau de chacune des agrafes, un bon fer chaud et beaucoup de soudure seront nécessaires.
 
 ```{warning}
 Lors de la soudure du triac, veillez à bien vérifier que la soudure est *remontée* de l'autre côté du circuit.
