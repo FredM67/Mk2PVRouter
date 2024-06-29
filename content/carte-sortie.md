@@ -199,6 +199,14 @@ Le repère sur la puce (mis en évidence ici en rouge) doit être positionné à
 
 Si ce composant est monté à l'envers, le circuit ne fonctionnera pas. Cependant, grâce à la disposition de ses broches, il devrait survivre à cette erreur.
 
+```{figure} img/Carte-assemblée.jpg
+:alt: Carte assemblée
+:align: center
+:scale: 25%
+
+Carte assemblée
+```
+
 ---
 # Test
 
