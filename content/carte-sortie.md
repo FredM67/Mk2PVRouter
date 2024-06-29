@@ -123,6 +123,27 @@ Pour assurer que le support DIL soit correctement fixé et en contact total avec
 Vue dessus/dessous, résistances et support DIL soudés
 ```
 
+## Soudure des connecteurs type Molex
+Ces connecteurs ont une hauteur similaire au connecteur de puissance.  
+Il sera recommandé de souder la broche centrale du connecteur de puissance en premier. En effet, ce dernier peut être facilement maintenu pour cette opération grâce aux agrafes précédemment installées.  
+Une fois soudé, ce connecteur sera d'une grande aide pour souder les deux autres connecteurs type Molex.
+
+```{figure} img/Maintien-connecteur.jpg
+:alt: Connecteur de puissance, broche centrale soudée
+:align: center
+:scale: 25%
+
+Connecteur de puissance, broche centrale soudée
+```
+
+```{figure} img/Soudure-Molex.jpg
+:alt: Connecteurs type Molex soudés
+:align: center
+:scale: 25%
+
+Connecteurs type Molex soudés
+```
+
 ---
 ## Soudure de la partie *haute puissance*/*haute tension*
 
