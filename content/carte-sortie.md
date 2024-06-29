@@ -194,10 +194,11 @@ Triac et connecteur soudés
 ---
 ## Installation de l'{term}`optocoupleur`
 
-Ce petit composant à 6 broches fait office de *pont* entre les parties basse tension et haute tension du circuit.<br />
-Le repère sur la puce (mis en évidence ici en rouge) doit être positionné à côté du cercle sur le {term}`PCB`.
+L'{term}`optocoupleur`, un composant essentiel doté de 6 broches, sert de liaison entre les sections du circuit fonctionnant à basse et à haute tension.  
+Pour l'installer correctement, alignez le repère présent sur le composant (indiqué en rouge) avec le cercle sur le circuit imprimé ({term}`PCB`).
 
-Si ce composant est monté à l'envers, le circuit ne fonctionnera pas. Cependant, grâce à la disposition de ses broches, il devrait survivre à cette erreur.
+Une installation inversée de l'optocoupleur ne permettra pas au circuit de fonctionner correctement.  
+Toutefois, la conception des broches de l'optocoupleur est telle qu'il ne devrait pas être endommagé en cas d'erreur de montage.
 
 ```{figure} img/Carte-assemblée.jpg
 :alt: Carte assemblée
