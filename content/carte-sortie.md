@@ -167,12 +167,28 @@ Seuls 1 à 2 mm des pattes du triac devraient dépasser.
 
 Pour faciliter cette opération et aussi pour protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l'un des dissipateurs non encore monté que vous avez à disposition. Vous pouvez utiliser une pince à linge ou toute autre pince à ressort.
 
+```{figure} img/Positionnement-triac.jpg
+:alt: Positionnement du triac
+:align: center
+:scale: 25%
+
+Positionnement du triac
+```
+
 Pour les soudures au niveau de chacune des agrafes, un bon fer chaud et beaucoup de soudure seront nécessaires.
 
 ```{warning}
 Lors de la soudure du triac, veillez à bien vérifier que la soudure est *remontée* de l'autre côté du circuit.
 
 Cela assurera une continuité parfaite mais aussi une solidité accrue.
+```
+
+```{figure} img/Triac-connecteur-soudés.jpg
+:alt: Triac et connecteur soudés
+:align: center
+:scale: 25%
+
+Triac et connecteur soudés
 ```
 
 ---
