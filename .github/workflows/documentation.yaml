@@ -77,8 +77,8 @@ jobs:
             tex-gyre
             dvisvgm
             dvips
-          # anyfontsize
             latexmk
+          # anyfontsize
           # cmap
           # fncychap
           # float
