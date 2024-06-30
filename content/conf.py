@@ -112,8 +112,8 @@ html_context = {
         # ("stable", "/stable/"),
     ],
     "downloads": [
-        ("PDF1", "/_static/Manuel_1.pdf"),
-        ("PDF2", "/_static/Manuel_2.pdf"),
+        ("PDF1", "../_static/Manuel_1.pdf"),
+        ("PDF2", "../_static/Manuel_2.pdf"),
     ],
 }
 
