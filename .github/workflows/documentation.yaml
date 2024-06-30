@@ -78,7 +78,7 @@ jobs:
             dvisvgm
             dvips
             latexmk
-            inputenc
+            texlive-lang-greek
           # anyfontsize
           # cmap
           # fncychap
