@@ -78,6 +78,7 @@ jobs:
             dvisvgm
             dvips
             latexmk
+            inputenc
           # anyfontsize
           # cmap
           # fncychap
