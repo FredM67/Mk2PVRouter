@@ -1,3 +1,5 @@
+(boitier)=
+
 Les boîtiers utilisés pour ce routeur sont de type industriel, fabriqués en ABS avec un retardateur de flamme.<br />
 Ils sont conformes aux normes de sécurité industrielles.
 
