@@ -8,6 +8,7 @@ Avant d'installer les circuits intégrés, le fonctionnement de l'alimentation d
 
 ```{danger}
 **Alerte de sécurité**
+
 Pour poursuivre cette séquence de construction, un accès à la tension secteur **230 V** est requis.
 
 Veuillez ne pas passer à cette étape suivante à moins que vous soyez compétent pour le faire.

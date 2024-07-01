@@ -262,11 +262,11 @@ Il faudra veiller à relier son corps à la masse (prise de terre) et ne pas por
 
 ## Synthèse
 Voici l'inventaire spécifique à chaque configuration :
-- **A** : 1 à 12 sorties triac et/ou relais, **sans afficheur**, **sans module RF**
-- **B** : 1 à 2 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
-- **C** : 3 à 7 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
-- **D** : 0 à 2 sorties triac et/ou relais, **avec afficheur**, **avec module RF** (émetteur ou récepteur)
-- **E** : 0 à 7 sorties triac et/ou relais, **sans afficheur**, **avec module RF** (émetteur ou récepteur)
+- **{ref}`A <carte-mere-mono-A>`** : 1 à 12 sorties triac et/ou relais, **sans afficheur**, **sans module RF**
+- **{ref}`B <carte-mere-mono-B>`** : 1 à 2 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
+- **{ref}`C <carte-mere-mono-C>`** : 3 à 7 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
+- **{ref}`D <carte-mere-mono-D>`** : 0 à 2 sorties triac et/ou relais, **avec afficheur**, **avec module RF** (émetteur ou récepteur)
+- **{ref}`E <carte-mere-mono-E>`** : 0 à 7 sorties triac et/ou relais, **sans afficheur**, **avec module RF** (émetteur ou récepteur)
 
 ```{eval-rst}
 +---------------+---+---+---+---+---+
@@ -294,6 +294,46 @@ Voici l'inventaire spécifique à chaque configuration :
 Sourdure des composants communs
 -------------------------------
 .. include:: carte-mere-mono-commun.md
+   :parser: myst_parser.sphinx_
+```
+
+```{eval-rst}
+.. _carte-mere-mono-A:
+Soudure des composants de la configuration A
+--------------------------------------------
+.. include:: carte-mere-mono-A.md
+   :parser: myst_parser.sphinx_
+```
+
+```{eval-rst}
+.. _carte-mere-mono-B:
+Soudure des composants de la configuration B
+--------------------------------------------
+.. include:: carte-mere-mono-B.md
+   :parser: myst_parser.sphinx_
+```
+
+```{eval-rst}
+.. _carte-mere-mono-C:
+Soudure des composants de la configuration C
+--------------------------------------------
+.. include:: carte-mere-mono-C.md
+   :parser: myst_parser.sphinx_
+```
+
+```{eval-rst}
+.. _carte-mere-mono-D:
+Soudure des composants de la configuration D
+--------------------------------------------
+.. include:: carte-mere-mono-D.md
+   :parser: myst_parser.sphinx_
+```
+
+```{eval-rst}
+.. _carte-mere-mono-E:
+Soudure des composants de la configuration E
+--------------------------------------------
+.. include:: carte-mere-mono-E.md
    :parser: myst_parser.sphinx_
 ```
 
