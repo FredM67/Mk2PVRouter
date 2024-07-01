@@ -12,7 +12,11 @@ Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent avec une p
 ```
 
 ---
-## Soudure des composants
+## Inventaire complet des composants
+
+Ci-dessous, vous découvrirez la liste complète des composants qui pourraient être inclus dans votre kit.<br />
+Il est important de noter que votre kit ne contiendra pas tous ces composants simultanément, car il est techniquement impossible d'intégrer toutes les fonctionnalités disponibles dans un seul kit.<br />
+Seulement certaines configurations de composants sont réalisables.
 
 ### Résistances
 
@@ -66,7 +70,6 @@ Voici les 3 formules qui vous permettront de calculer une inconnue à partir des
 > ct\_turns = {2 * \sqrt{2} * I_{RMS} \over system\_voltage * burden\_resistor}
 > ```
 
-
 Dans notre cas précis, nous avons : {math}`ct\_turns = 2000`
 
 **{math}`I_{RMS}`** correspond à l'intensité efficace.<br />
@@ -85,9 +88,7 @@ En cas de fonctionnement en **5 V**, cette valeur doit être augmentée à **47
 
 ### Diodes
 
-Ensuite, les diodes peuvent être ajoutées.
-
-Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les CTs.
+Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les {term}`CT`s.
 
 ```{attention}
 Ces composants sont polarisés.
@@ -96,8 +97,6 @@ Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 ```
 
 ### Supports circuits intégrés
-
-Ensuite, on installe généralement les supports pour les circuits intégrés.
 
 Si l'option *pin-saving hardware* est utilisée, quatre circuits intégrés seront nécessaires (**IC1 - IC4**), sinon il n'y en aura que deux (**IC1** & **IC2**).
 Cette distinction est expliquée plus en détail ultérieurement.
@@ -210,7 +209,12 @@ Si ces deux composants sont inversés, les symptômes qui en résultent peuvent 
 
 ### Connecteurs secteur et porte-fusible
 
-Les connecteurs secteur (**TB1** & **TB2**) et le porte-fusible (**FS1**) peuvent maintenant être installés.<br />
+Le connecteur secteur repéré **TB1** recevra l'alimention électrique 230V.<br />
+Cette alimentation permettra à la fois d'alimenter la carte-mère, mais aussi la prise de mesure de la tension du secteur.
+
+Le porte-fusible repéré **FS1** peuvent maintenant être installés.<br />
+Il protégera le système en cas de défaillance du transformateur.
+
 En raison des pistes du plan masse, la broche centrale de **TB1** nécessitera plus de chaleur que les autres broches.
 Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage.<br />
 Il est très facile de se tromper de sens !
@@ -219,14 +223,20 @@ Si cela se produit, le plastique peut être soigneusement coupé avec un couteau
 
 Le porte-fusible, accompagné de son fusible de **100 mA**, est simple à mettre en place.
 
-### Régulateur de tension
+### Régulateur·s de tension
 
-Le régulateur de tension (**VR1**) doit être positionné de manière à ce que son ailette métallique soit éloignée du transformateur, comme indiqué sur la sérigraphie.<br />
+Le régulateur de tension **VR1** doit être positionné de manière à ce que son ailette métallique soit éloignée du transformateur, comme indiqué sur la sérigraphie.<br />
 En fonction de l'application, le **VR1** sera une version **3,3 V** ou **5 V**.<br />
 La version **5 V** est nécessaire chaque fois que l'option *pin-saving hardware* est utilisée.
 
 La soudure des broches du **VR1** nécessitera probablement une température plus élevée.<br />
 Pour réduire la quantité de métal à chauffer, il est possible de couper préalablement ces broches à la longueur requise.
+
+Le régulateur de tension **VR2** se présente sous la forme habituelle d'un transistor, soit un cylindre noir avec un méplat.
+
+### Varistance
+
+Ce composant non polarisé et repéré **RV1**, est une protection contre les surtensions qui pourraient venir du réseau électrique.
 
 ### Transformateur
 
@@ -237,63 +247,43 @@ Un transformateur de **6 V** peut prendre en charge un régulateur de tension d
 Lors de l'installation de ce composant, assurez-vous qu'il n'y ait aucun espace entre la base du transformateur et la carte de circuit imprimé {term}`PCB`.
 ```
 
+### Le module radiofréquence ou module RF
+
+Ce module de type RFM12B ou RFM69 existe sous plusieurs fréquences. Il permettra de faire communiquer deux cartes-mères distantes via radio.
+
+Lorsque ce module est livré, il sera accompagné d'un socle à souder (repéré **SMA**) pour l'antenne, ainsi qu'une antenne.
+
+```{important}
+Ce module est très sensible à l'électricité statique.<br />
+Il faudra veiller à relier son corps à la masse (prise de terre) et ne pas porter de vêtements synthétiques lors de l'opération d'assemblage.
+```
+
 ---
-## Tests électriques
 
-Une fois le transformateur en place, la carte est maintenant prête pour les tests électriques.<br />
+## Synthèse
+Voici l'inventaire spécifique à chaque configuration :
+- **A** : 1 à 12 sorties triac et/ou relais, **sans afficheur**, **sans module RF**
+- **B** : 1 à 2 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
+- **C** : 3 à 7 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
+- **D** : 0 à 2 sorties triac et/ou relais, **avec afficheur**, **avec module RF** (émetteur ou récepteur)
+- **E** : 0 à 7 sorties triac et/ou relais, **sans afficheur**, **avec module RF** (émetteur ou récepteur)
 
-C'est le bon moment pour vérifier que tous les joints soudés sont en bon état et que toutes les éclaboussures de soudure ont été éliminées.
-
-Avant d'installer les circuits intégrés, le fonctionnement de l'alimentation doit être vérifié.
-
-```{danger}
-**Alerte de sécurité**
-Pour poursuivre cette séquence de construction, un accès à la tension secteur **230 V** est requis.
-
-Veuillez ne pas passer à cette étape suivante à moins que vous soyez compétent pour le faire.
-```
-
-Sur la photo ci-dessous, une alimentation temporaire de 230 V CA via un fusible de 3 A a été connectée.<br />
-Bien que cela ne soit pas requis par ce {term}`PCB`, une connexion à la terre offre un certain degré de sécurité dans le cas où l'opérateur entrerait accidentellement en contact avec la ligne 230 V {term}`AC`.
-
-Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ **3,3 V**… ou **5 V** si un régulateur de tension **5 V** a été installé.
-
-Cette tension peut être facilement vérifiée au niveau du connecteur *access to power*, comme indiqué ici.
-
-```{hint}
-N'oubliez pas de mettre votre multimètre sur la position *courant continu*, **{term}`DC`**, symbole **⎓** !
-```
-
-À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.
-
-Avec la tension correcte en place, les circuits intégrés peuvent maintenant être installés, après avoir coupé l'alimentation.
-
-Le premier d’entre eux est IC2.<br />
-Il s'agit d'un amplificateur opérationnel qui fournit une tension de référence intermédiaire pour les capteurs de tension et de courant.
-
-Avec les packs Dual-in-Line, les broches devront peut-être être légèrement pliées vers l'intérieur pour s'insérer dans l'embase.
-Cela peut être fait en *faisant rouler* doucement la puce de chaque côté, tour à tour.
-
-Pour minimiser les risques de dommages électriques, cette opération doit être effectuée sur une surface protectrice telle qu'un sac antistatique.
-
-Avec les broches bien alignées, le circuit intégré peut être délicatement placé sur son connecteur, comme indiqué ici.
-
-```{warning}
-Les circuits intégrés doivent être installés dans le bon sens. Le point sur la puce doit être aligné avec l'encoche de l'image sérigraphiée.
-```
-
-Une fois que tout a été soigneusement vérifié, la puce peut être enfoncée fermement.
-
-Avec **IC2** en place et la carte alimentée à nouveau, la référence de tension peut être mesurée.<br />
-**Vref** doit être environ la moitié de la tension d'alimentation. Ici, nous testons une carte **3,3 V**.
-
-Un endroit pratique pour accéder à **Vref** se trouve à l’extrémité supérieure de **R6**. La prise jack SMA est un point de masse pratique.
-
-**Vref** est également accessible à divers autres endroits, comme indiqué sur le schéma de circuit de cette carte.
-
-Le processeur principal, **IC1**, est installé de la même manière que pour **IC2**, toujours après avoir coupé l'alimentation.
-Avec autant de broches, il est très facile pour l’une d’entre elles de se plier en dessous.
-
-```{caution}
-Si ce circuit intégré est dans le mauvais sens lors de la mise sous tension, il ne fonctionnera probablement plus jamais !
+```{eval-rst}
++---------------+---+---+---+---+---+
+|<br /><br /><br /><br /><br /><br /><br /> | A | B | C | D | E |
++===============+===+===+===+===+===+
+| **R11-R18**<br /> | - | X | X | X | - |
++---------------+---+---+---+---+---+
+| **CN1/Nappe** | - | X | X | X | - |
++---------------+---+---+---+---+---+
+| **IC3-IC4**<br /> | - | - | X | X | - |
++---------------+---+---+---+---+---+
+| **VR2**<br /><br /><br /> | - | - | - | X | X |
++---------------+---+---+---+---+---+
+| **C8-C9**<br /><br /> | - | - | - | X | X |
++---------------+---+---+---+---+---+
+| **RF**<br /><br /><br /><br />| - | - | - | X | X |
++---------------+---+---+---+---+---+
+| **R21-R26**<br /> | - | - | - | X | - |
++---------------+---+---+---+---+---+
 ```
