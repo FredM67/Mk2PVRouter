@@ -292,7 +292,7 @@ Voici l'inventaire spécifique à chaque configuration :
 ```{eval-rst}
 .. _carte-mere-mono-commun:
 Sourdure des composants communs
-------------------
+-------------------------------
 .. include:: carte-mere-mono-commun.md
    :parser: myst_parser.sphinx_
 ```
@@ -301,7 +301,7 @@ Sourdure des composants communs
 ```{eval-rst}
 .. _carte-mere-mono-test:
 Tests électriques
-------------------
+-----------------
 .. include:: carte-mere-mono-test.md
    :parser: myst_parser.sphinx_
 ```
