@@ -253,7 +253,7 @@ Ce module de type RFM12B ou RFM69 existe sous plusieurs fréquences. Il permettr
 
 Lorsque ce module est livré, il sera accompagné d'un socle à souder (repéré **SMA**) pour l'antenne, ainsi qu'une antenne.
 
-```{important}
+```{caution}
 Ce module est très sensible à l'électricité statique.<br />
 Il faudra veiller à relier son corps à la masse (prise de terre) et ne pas porter de vêtements synthétiques lors de l'opération d'assemblage.
 ```
@@ -272,7 +272,7 @@ Voici l'inventaire spécifique à chaque configuration :
 +---------------+---+---+---+---+---+
 |               | A | B | C | D | E |
 +===============+===+===+===+===+===+
-| **R11-R18**   | _ | X | X | X | - |
+| **R11-R18**   | - | X | X | X | - |
 +---------------+---+---+---+---+---+
 | **CN1/Nappe** | - | X | X | X | - |
 +---------------+---+---+---+---+---+
@@ -286,4 +286,22 @@ Voici l'inventaire spécifique à chaque configuration :
 +---------------+---+---+---+---+---+
 | **R21-R26**   | - | - | - | X | - |
 +---------------+---+---+---+---+---+
+```
+
+## Soudure
+```{eval-rst}
+.. _carte-mere-mono-commun:
+Sourdure des composants communs
+------------------
+.. include:: carte-mere-mono-commun.md
+   :parser: myst_parser.sphinx_
+```
+
+## Test
+```{eval-rst}
+.. _carte-mere-mono-test:
+Tests électriques
+------------------
+.. include:: carte-mere-mono-test.md
+   :parser: myst_parser.sphinx_
 ```

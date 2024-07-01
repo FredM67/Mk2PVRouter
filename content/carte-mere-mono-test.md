@@ -1,7 +1,5 @@
 (carte-mere-mono-test)=
 
-## Tests électriques
-
 Une fois le transformateur en place, la carte est maintenant prête pour les tests électriques.<br />
 
 C'est le bon moment pour vérifier que tous les joints soudés sont en bon état et que toutes les éclaboussures de soudure ont été éliminées.
