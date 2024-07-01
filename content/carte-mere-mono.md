@@ -291,38 +291,50 @@ Voici l'inventaire spécifique à chaque configuration :
 ## Soudure
 ```{eval-rst}
 .. _carte-mere-mono-commun:
-Soudure des composants communs
-------------------------------
+
+Composants communs
+------------------
+
 .. include:: carte-mere-mono-commun.md
    :parser: myst_parser.sphinx_
 
 .. _carte-mere-mono-A:
-Soudure des composants de la configuration A
---------------------------------------------
+
+Composants de la configuration A
+--------------------------------
+
 .. include:: carte-mere-mono-A.md
    :parser: myst_parser.sphinx_
 
 .. _carte-mere-mono-B:
-Soudure des composants de la configuration B
---------------------------------------------
+
+Composants de la configuration B
+--------------------------------
+
 .. include:: carte-mere-mono-B.md
    :parser: myst_parser.sphinx_
 
 .. _carte-mere-mono-C:
-Soudure des composants de la configuration C
---------------------------------------------
+
+Composants de la configuration C
+--------------------------------
+
 .. include:: carte-mere-mono-C.md
    :parser: myst_parser.sphinx_
 
 .. _carte-mere-mono-D:
-Soudure des composants de la configuration D
---------------------------------------------
+
+Composants de la configuration D
+--------------------------------
+
 .. include:: carte-mere-mono-D.md
    :parser: myst_parser.sphinx_
 
 .. _carte-mere-mono-E:
-Soudure des composants de la configuration E
---------------------------------------------
+
+Composants de la configuration E
+--------------------------------
+
 .. include:: carte-mere-mono-E.md
    :parser: myst_parser.sphinx_
 ```
