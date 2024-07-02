@@ -49,3 +49,12 @@ Glossaire
      | Résistance de rappel.
      | Une résistance de rappel permet de fixer une entrée numérique à un état *HIGH* ou *LOW* stable.
      | Elle permet aussi de réduire le bruit, d'éliminer les broches flottantes et surtout, d'établir deux états électriques clairs et distincts.
+
+   DIL
+      | *Dual In-line Package* ou boîtier double en ligne. 
+      | Un support DIL (Dual In-line Package) pour circuit intégré sert à plusieurs fins :
+      | 1. **Facilité de Remplacement** : Il permet de remplacer facilement un circuit intégré sans avoir à dessouder et ressouder le composant, ce qui est particulièrement utile en cas de défaillance ou de mise à jour.
+      | 2. **Protection Contre la Chaleur** : Lors de la soudure, il protège le circuit intégré de la chaleur excessive qui pourrait l'endommager.
+      | 3. **Réutilisabilité** : Il permet de réutiliser les circuits intégrés en les insérant et les retirant facilement du support.
+      | 4. **Alignement Précis** : Il assure un alignement précis des broches du circuit intégré avec les pistes du circuit imprimé.
+      | En résumé, un support DIL facilite l'installation, le remplacement et la protection des circuits intégrés dans un montage électronique.

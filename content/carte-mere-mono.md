@@ -6,17 +6,12 @@ Plusieurs versions du {term}`PCB` peuvent exister.
 
 Bien qu'elles fonctionnent toutes de la même manière, chaque nouvelle version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l’Arduino, …).
 
-```{hint}
-Après chaque étape, il conviendra de vérifier les soudures effectuées (l'utilisation d'une loupe facilitera la vérification).<br />
-Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent avec une petite pince coupante afin de faire place nette pour l'étape suivante.
-```
-
 ---
 ## Inventaire complet des composants
 
 Ci-dessous, vous découvrirez la liste complète des composants qui pourraient être inclus dans votre kit.<br />
-Il est important de noter que votre kit ne contiendra pas tous ces composants simultanément, car il est techniquement impossible d'intégrer toutes les fonctionnalités disponibles dans un seul kit.<br />
-Seulement certaines configurations de composants sont réalisables.
+Il est important de noter que votre kit ne contiendra pas tous ces composants simultanément, car il est techniquement impossible d'intégrer toutes les fonctionnalités disponibles dans un seul et même kit.<br />
+Seulement certaines combinaisons de composants sont réalisables.
 
 ### Résistances
 
@@ -96,9 +91,11 @@ Ces composants sont polarisés.
 Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 ```
 
-### Supports circuits intégrés
+### Supports {term}`DIL` pour circuits intégrés
 
-Si l'option *pin-saving hardware* est utilisée, quatre circuits intégrés seront nécessaires (**IC1 - IC4**), sinon il n'y en aura que deux (**IC1** & **IC2**).
+Les deux supports repérés **IC1** et **IC2** seront toujours présents. Ce sont ceux utilisés pour placer le microcontrôleur Atmega328P, le coeur du système, ainsi que l'amplificateur opérationnel qui permet d'obtenir des tensions stables nécessaires au fonctionnement du routeur.
+
+Si l'option *pin-saving hardware* est utilisée, deux autres circuits intégrés seront nécessaires (**IC3** et **IC4**).
 Cette distinction est expliquée plus en détail ultérieurement.
 
 ```{attention}
@@ -289,6 +286,12 @@ Voici l'inventaire spécifique à chaque configuration :
 ```
 
 ## Soudure
+
+```{hint}
+Après chaque étape, il conviendra de vérifier les soudures effectuées (l'utilisation d'une loupe facilitera la vérification).<br />
+Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent avec une petite pince coupante afin de faire place nette pour l'étape suivante.
+```
+
 ```{eval-rst}
 .. _carte-mere-mono-commun:
 
