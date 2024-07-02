@@ -245,9 +245,9 @@ Soudure
 
    Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent avec une petite pince coupante afin de faire place nette pour l'étape suivante.
 
-.. toctree::
-    :maxdepth: 1
-
+.. content::
+   :local:
+   
     carte-mere-mono-A
     carte-mere-mono-B
     carte-mere-mono-C
