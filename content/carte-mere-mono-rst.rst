@@ -27,14 +27,14 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 - **R3** = **10 kΩ**. Avec R2, cela fournit une tension de référence pour les capteurs d'entrée.
 - **R4** = **100 Ω** ou **180 Ω**. **R4** et **R5** réduisent la taille du signal :term:`AC` du transformateur.
 - **R5** = **1 kΩ**. **R4** et **R5** réduisent la taille du signal :term:`AC` du transformateur.
-- **R6** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge (ou *:term:`burden`*) du capteur de courant *grille*, qui utilise :term:`CT`1.
-- **R7** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge pour le capteur de courant *détourné*, qui utilise :term:`CT`2.
-- **R8** = **1 kΩ**. Cette résistance est en série avec :term:`CT`1 pour protéger le processeur des signaux importants.
+- **R6** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge (ou *:term:`burden`*) du capteur de courant *grille*, qui utilise :term:`CT`\1.
+- **R7** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge pour le capteur de courant *détourné*, qui utilise :term:`CT`\2.
+- **R8** = **1 kΩ**. Cette résistance est en série avec :term:`CT`\1 pour protéger le processeur des signaux importants.
 
 Diodes
 ~~~~~~
 
-Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les :term:`CT`s.
+Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les :term:`CT`\s.
 
 .. attention::
    Ces composants sont polarisés.
