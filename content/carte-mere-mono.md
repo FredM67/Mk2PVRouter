@@ -294,14 +294,14 @@ Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent avec une p
 
 ```{eval-rst}
 .. toctree::
-    :maxdepth: 1
-
-    carte-mere-mono-commun.md
-    carte-mere-mono-A.md
-    carte-mere-mono-B.md
-    carte-mere-mono-C.md
-    carte-mere-mono-D.md
-    carte-mere-mono-E.md
+   :maxdepth: 1
+   
+   carte-mere-mono-commun.md
+   carte-mere-mono-A.md
+   carte-mere-mono-B.md
+   carte-mere-mono-C.md
+   carte-mere-mono-D.md
+   carte-mere-mono-E.md
 ```
 
 ## Test
