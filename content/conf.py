@@ -42,7 +42,6 @@ extensions = [
 
 # Make sure the target is unique
 autosectionlabel_prefix_document = True
-autosectionlabel_maxdepth = 4
 
 imgmath_image_format = 'svg'
 imgmath_embed = True
