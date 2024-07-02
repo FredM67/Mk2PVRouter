@@ -167,7 +167,7 @@ Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel 
 Ils seront plus ou moins nombreux selon la configuration :
 - 3 connecteurs à **2 pôles** pour les pinces ampèremétriques, référencés **{term}`CT`1-{term}`CT`3**
 - 1 connecteur à **2 pôles** pour le bouton *reset*, référencé **Reset**
-- 1 connecteur à **6 pôles** pour le connecteur FTDI, référencé **FTDI**
+- 1 connecteur à **6 pôles** pour le connecteur {term}`FTDI`, référencé **FTDI**
 - 1 connecteur à **2 pôles** par sortie, référencé parmi **D3-D13**.
 
 ### Inductance

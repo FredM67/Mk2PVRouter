@@ -181,12 +181,18 @@ La broche la plus longue correspond au **+**.
 
 Comme pour l'oscillateur, il est courant de le souder légèrement au-dessus du {term}`PCB`.
 
-### Connecteurs SIL/Molex/Embase 14 broches
+### Connecteurs SIL/Molex
 
-Les connecteurs Molex ainsi que l'embase 14 broches sont *polarisés*, ils possèdent un détrompeur.<br />
+Les connecteurs type Molex sont *polarisés*, ils possèdent un détrompeur.<br />
 Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviront à la connexion d'autres composants ou modules polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
 
-Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel sens.
+Le connecteur {term}`SIL`, repéré **{term}`FTDI`**, peut être soudé dans n'importe quel sens.<br />
+Il permet de brancher la carte USB-{term}`FTDI` qui servira à la programmation du routeur.
+
+### Inductance
+
+Ce composant, repéré **L2**, n'est pas polarisé.<br />
+Son rôle est de filtrer la source de courant qui servira ensuite de référence pour les mesures.
 
 ### Condensateurs électrolytiques
 
@@ -206,7 +212,7 @@ Si ces deux composants sont inversés, les symptômes qui en résultent peuvent 
 
 ### Connecteurs secteur et porte-fusible
 
-Le connecteur secteur repéré **TB1** recevra l'alimention électrique 230V.<br />
+Le connecteur secteur repéré **TB1** recevra l’alimentation électrique 230 V.<br />
 Cette alimentation permettra à la fois d'alimenter la carte-mère, mais aussi la prise de mesure de la tension du secteur.
 
 Le porte-fusible repéré **FS1** peuvent maintenant être installés.<br />
@@ -265,26 +271,6 @@ Voici l'inventaire spécifique à chaque configuration :
 - **{ref}`D <carte-mere-mono-D>`** : 0 à 2 sorties triac et/ou relais, **avec afficheur**, **avec module RF** (émetteur ou récepteur)
 - **{ref}`E <carte-mere-mono-E>`** : 0 à 7 sorties triac et/ou relais, **sans afficheur**, **avec module RF** (émetteur ou récepteur)
 
-```{eval-rst}
-+---------------+---+---+---+---+---+
-|               | A | B | C | D | E |
-+===============+===+===+===+===+===+
-| **R11-R18**   | - | X | X | X | - |
-+---------------+---+---+---+---+---+
-| **CN1/Nappe** | - | X | X | X | - |
-+---------------+---+---+---+---+---+
-| **IC3-IC4**   | - | - | X | X | - |
-+---------------+---+---+---+---+---+
-| **VR2**       | - | - | - | X | X |
-+---------------+---+---+---+---+---+
-| **C8-C9**     | - | - | - | X | X |
-+---------------+---+---+---+---+---+
-| **RF**        | - | - | - | X | X |
-+---------------+---+---+---+---+---+
-| **R21-R26**   | - | - | - | X | - |
-+---------------+---+---+---+---+---+
-```
-
 |               | A | B | C | D | E |
 |---------------|---|---|---|---|---|
 | **R11-R18**   | - | X | X | X | - |
@@ -302,41 +288,20 @@ Après chaque étape, il conviendra de vérifier les soudures effectuées (l'uti
 Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent avec une petite pince coupante afin de faire place nette pour l'étape suivante.
 ```
 
-```{eval-rst}
-.. _carte-mere-mono-commun:
+Vous devrez souder les composants communs à toutes les configurations, ainsi que le lot de composants spécifiques à la configuration commandée.
 
-.. include:: carte-mere-mono-commun.md
-   :parser: myst_parser.sphinx_
+Il pourra être judicieux, de *mixer* les opérations de soudure entre les composants communs et les composants spécifiques.<br />
+En effet, il est toujours plus facile, de souder dans l'ordre de taille/d'épaisseur, en partant des composants les moins hauts/épais aux composants les plus hauts/épais.
 
-.. _carte-mere-mono-A:
-
-.. include:: carte-mere-mono-A.md
-   :parser: myst_parser.sphinx_
-
-.. _carte-mere-mono-B:
-
-.. include:: carte-mere-mono-B.md
-   :parser: myst_parser.sphinx_
-
-.. _carte-mere-mono-C:
-
-.. include:: carte-mere-mono-C.md
-   :parser: myst_parser.sphinx_
-
-.. _carte-mere-mono-D:
-
-.. include:: carte-mere-mono-D.md
-   :parser: myst_parser.sphinx_
-
-.. _carte-mere-mono-E:
-
-.. include:: carte-mere-mono-E.md
-   :parser: myst_parser.sphinx_
-```
+Ainsi, le connecteur **CN1** présent dans les configurations **B**, **C** et **D** est bien plus haut que les résistances par exemple, mais moins haut que l'inductance **L2**.<br />
+Il sera donc plus pratique de le souder après les résistances, entre autres, mais avant l'inductance.
 
 ## Test
 ```{eval-rst}
 .. _carte-mere-mono-test:
+
+Tests électriques
+-----------------
 
 .. include:: carte-mere-mono-test.md
    :parser: myst_parser.sphinx_

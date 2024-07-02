@@ -58,3 +58,14 @@ Glossaire
       | 3. **Réutilisabilité** : Il permet de réutiliser les circuits intégrés en les insérant et les retirant facilement du support.
       | 4. **Alignement Précis** : Il assure un alignement précis des broches du circuit intégré avec les pistes du circuit imprimé.
       | En résumé, un support DIL facilite l'installation, le remplacement et la protection des circuits intégrés dans un montage électronique.
+
+   SIL
+      | *Single In-line Package* ou boîtier simple en ligne ou aussi *pin-header*.
+      | Un support SIL (Single In-line Package) pour circuit intégré est un support à une seule rangée de broches qui permet d'insérer et de retirer facilement un circuit intégré d'un circuit imprimé.
+      | Il est utilisé pour les circuits intégrés ou modules à une seule rangée de broches.
+
+   FTDI
+      | *Future Technology Devices International*.
+      | FTDI est une société spécialisée dans la conception de circuits intégrés et de modules de communication USB. Les modules FTDI sont largement utilisés pour la programmation et la communication avec des microcontrôleurs et des circuits intégrés via une interface USB.
+
+      .. seealso:: `FTDI <https://www.ftdichip.com/>`_
