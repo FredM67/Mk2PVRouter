@@ -1,5 +1,7 @@
 (carte-mere-mono-A)=
 
+# Composants de la configuration A
+
 L’assemblage décrit dans cette partie est pour un routeur comprenant 1 à 12 sorties triac et/ou relais. Les options afficheur 7 segments et radiofréquence ne pourront pas être prises en compte.
 
 
@@ -8,7 +10,7 @@ Pour avoir une option sortie relais avec un afficheur une seconde carte mère pe
 Veuillez remplir un formulaire sur notre site internet pour cette demande.
 ```
 
-# Socles de sorties
+## Socles de sorties
 Deux sorties sont natives sur les programmes standards du routeur MK2.<br />
 Les emplacements **D3** et **D4** les représentent. Il faudra alors les utiliser en premier.
 
@@ -16,7 +18,7 @@ Soudez les socles **D3** et **D4** en fonction du nombre de sorties (triac et/ou
 
 Chaque sortie est dispose de deux emplacements :
 - un emplacement à 3 positions. Les 3 positions correspondent à la **masse** (ou **-**), la sortie du microcontrôleur ainsi que le **+** (tension de fonctionnement du système).
-- un emplacemnet à 2 positions. Les 2 positions correspondent à la **masse** et la sortie du microcontrôleur.
+- un emplacement à 2 positions. Les 2 positions correspondent à la **masse** et la sortie du microcontrôleur.
 
 Pour une sortie triac, on pourra utiliser indifféremment l'un ou l'autre emplacement, en veillant à souder/câbler les 2 broches **-** et centrale.<br />
 Le deuxième emplacement pourra recevoir le connecteur du témoin LED. Selon les préférences de chacun, ce témoin pourra aussi être câblé via la carte de sortie elle-même.
