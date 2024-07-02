@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2024-06-30T22:09:53+02:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Préparation du boîtier &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/minipres.js?v=a0d29692"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=bf059b8c"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="Carte-mère triphasée" href="../carte-mere-tri/" />
+    <link rel="prev" title="Étalonnage" href="../etalonnage-mono/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kit monophasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier-mono/">Préparation du boîtier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere-mono/">Carte-mère monophasée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-mono/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais-mono/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dissipateur-mono/">Dissipateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage_mono/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-mono/">Test logiciel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-mono/#test-de-la-partie-mesures">Test de la partie <em>mesures</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage-mono/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kit triphasé</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Préparation du boîtier</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#etapes-a-realiser">Étapes à réaliser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#outils-necessaires">Outils nécessaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#percage-pour-les-dissipateurs">Perçage pour le·s dissipateur·s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#percage-pour-chaque-etage-de-sortie-triac">Perçage pour chaque étage de sortie triac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#percage-pour-la-carte-mere">Perçage pour la carte-mère</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere-tri/">Carte-mère triphasée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais-tri/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dissipateur-tri/">Dissipateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage_tri/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-tri/">Test logiciel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-tri/#test-de-la-partie-mesures">Test de la partie <em>mesures</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage-tri/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Préparation du boîtier</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/boitier-tri.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="preparation-du-boitier">
+<span id="boitier-tri"></span><h1>Préparation du boîtier<a class="headerlink" href="#preparation-du-boitier" title="Lien vers cette rubrique"></a></h1>
+<p id="boitier">Les boîtiers utilisés pour ce routeur sont de type industriel, fabriqués en ABS avec un retardateur de flamme.<br />
+Ils sont conformes aux normes de sécurité industrielles.</p>
+<p>En fonction du nombre de sorties à contrôler, deux références peuvent être fournies :</p>
+<ul class="simple">
+<li><p>Thalassa <strong>NSYTBS24198</strong> : ce boîtier convient pour les configurations à <strong>1</strong> ou <strong>2</strong> sorties, pouvant être installées en mode portrait ou paysage.</p></li>
+<li><p>Thalassa <strong>NSYTBS29248</strong> : ce boîtier convient pour les configurations à <strong>3</strong> ou <strong>4</strong> sorties, à installer <strong>uniquement en mode portrait</strong>.</p></li>
+</ul>
+<p>Il y a peu de contraintes à respecter, voici la liste :</p>
+<ul class="simple">
+<li><p>Le <strong>presse-étoupe</strong> doit être installé sur le <strong>côté inférieur</strong> pour protéger contre la poussière et les éventuels ruissellements.</p></li>
+<li><p>Le·s <strong>dissipateur·s</strong> doit·vent être installé·s sur le·s côté·s <strong>vertical·aux</strong>. C’est <strong>impératif</strong> pour assurer un bon refroidissement.</p></li>
+</ul>
+<p>Pour le reste — témoins LED, etc. — ils peuvent être montés n’importe où, selon vos préférences !</p>
+<p>Cependant, ce guide décrira l’implantation la plus classique.</p>
+<hr class="docutils" />
+<section id="etapes-a-realiser">
+<h2>Étapes à réaliser<a class="headerlink" href="#etapes-a-realiser" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>Perçage pour le·s dissipateur·s<br />
+Vous devrez percer 2 trous de <strong>3 mm</strong> de diamètre et un autre de <strong>35 mm</strong> de diamètre.
+Voir <a class="reference internal" href="../dissipateur/#percage-du-boitier"><span class="std std-ref">Perçage du boîtier</span></a>.</p></li>
+<li><p>Perçage pour le ou les étage·s de sortie·s triac<br />
+Vous devrez percer 1 trou de <strong>3 mm</strong> de diamètre.</p></li>
+<li><p>Perçage pour la carte-mère<br />
+Vous devrez percer 4 trous de <strong>4 mm</strong> de diamètre.</p></li>
+<li><p>Perçage pour les presse-étoupe<br />
+Vous devrez percer des trous de <strong>20 mm</strong> de diamètre.</p></li>
+<li><p>Perçage pour le·s prise·s jack<br />
+Vous devrez percer des trous de <strong>8 mm</strong> de diamètre.</p></li>
+<li><p>Perçage pour le·s témoin·s LED et pour l’afficheur 4 Digits (<strong>Uniquement</strong> pour le routeur <strong>monophasé</strong>)<br />
+Vous devrez percer des trous de <strong>8 mm</strong> de diamètre.</p></li>
+<li><p>Perçage pour le bouton <em>marche</em> (<strong>Uniquement</strong> pour le routeur <strong>monophasé</strong>)<br />
+Vous devrez percer un trou de <strong>20 mm</strong> de diamètre.</p></li>
+<li><p>Perçage pour le bouton <em>reset</em> (<strong>Uniquement</strong> pour le routeur <strong>triphasé</strong>)<br />
+Vous devrez percer un trou de <strong>13 mm</strong> de diamètre.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="outils-necessaires">
+<h2>Outils nécessaires<a class="headerlink" href="#outils-necessaires" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>une perceuse à colonne si possible, sinon n’importe quelle perceuse.</p></li>
+<li><p>Foret de <strong>3 mm</strong></p></li>
+<li><p>Foret de <strong>4 mm</strong></p></li>
+<li><p>Foret de <strong>8 mm</strong></p></li>
+<li><p>Foret ou fraise de <strong>20 mm</strong></p></li>
+<li><p>Fraise de <strong>35 mm</strong></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="percage-pour-les-dissipateurs">
+<h2>Perçage pour le·s dissipateur·s<a class="headerlink" href="#percage-pour-les-dissipateurs" title="Lien vers cette rubrique"></a></h2>
+<p>Veuillez vous référer à la section <a class="reference internal" href="../dissipateur/#percage-du-boitier"><span class="std std-ref">Perçage du boîtier</span></a>.</p>
+</section>
+<hr class="docutils" />
+<section id="percage-pour-chaque-etage-de-sortie-triac">
+<h2>Perçage pour chaque étage de sortie triac<a class="headerlink" href="#percage-pour-chaque-etage-de-sortie-triac" title="Lien vers cette rubrique"></a></h2>
+<p>Le triac de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boitier.<br />
+L’étage de sortie doit aussi être fixé au fond du boitier à la bonne hauteur pour être en accord avec le point de fixation du triac.</p>
+<p>Pour ce faire, il faut fixer le dissipateur sur le boitier préalablement préparé et fixé l’étage de sortie sur celui-ci par l’intermédiaire du triac.</p>
+<p>Vu du dessus, il est possible de pointer le futur perçage à l’endroit le plus adéquat dans le trou oblong.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/Pointage-sortie-side.jpg"><img alt="Fixation dissipateur / étage de sortie" src="../_images/Pointage-sortie-side.jpg" style="width: 587.75px; height: 349.75px;" /></a>
+<figcaption>
+<p><span class="caption-text">Fixation dissipateur / étage de sortie</span><a class="headerlink" href="#id1" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/Pointage-sortie-top.jpg"><img alt="Pointage" src="../_images/Pointage-sortie-top.jpg" style="width: 275.75px; height: 193.25px;" /></a>
+<figcaption>
+<p><span class="caption-text">Pointage</span><a class="headerlink" href="#id2" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<p>Pour percer, l’étage de sortie doit être retiré.<br />
+Le perçage doit être effectué avec un foret de <strong>3 mm</strong> de diamètre.</p>
+<p>Pour ajuster la hauteur de la carte de sortie, un plot en plastique de 10 mm de haut est installé à l’aide d’une vis M3 en plastique.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/Entretoise-sortie.png"><img alt="Plot" src="../_images/Entretoise-sortie.png" style="width: 108.25px; height: 144.25px;" /></a>
+<figcaption>
+<p><span class="caption-text">Plot</span><a class="headerlink" href="#id3" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+<hr class="docutils" />
+<section id="percage-pour-la-carte-mere">
+<h2>Perçage pour la carte-mère<a class="headerlink" href="#percage-pour-la-carte-mere" title="Lien vers cette rubrique"></a></h2>
+<p>Une fois les étages de sortie correctement positionnés, vous pouvez placer la carte-mère de manière à ne pas entraver les futurs branchements et autres équipements.<br />
+En utilisant la même méthode, vous pouvez marquer et percer le boîtier aux dimensions appropriées.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/Implantation-Mono.png"><img alt="Pointage carte mère" src="../_images/Implantation-Mono.png" style="width: 118.5px; height: 131.75px;" /></a>
+<figcaption>
+<p><span class="caption-text">Pointage carte mère</span><a class="headerlink" href="#id4" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<p>éviter qu’elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de 10 mm de hauteur est installé à l’aide d’une vis M4 sur tous les trous percés, de la même manière que pour l’étage de sortie.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../etalonnage-mono/" class="btn btn-neutral float-left" title="Étalonnage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../carte-mere-tri/" class="btn btn-neutral float-right" title="Carte-mère triphasée" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2023, ENERGIE ROUTER &amp; F. Metrich (aka FredM67).
+      <span class="lastupdated">Mis à jour le juin 30, 2024.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/">latest</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="../_static/Manuel_1.pdf">PDF1</a></dd>
+        
+          <dd><a href="../_static/Manuel_2.pdf">PDF2</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/boitier-tri.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/boitier-tri.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
