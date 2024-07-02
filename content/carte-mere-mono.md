@@ -296,12 +296,10 @@ Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent avec une p
 .. toctree::
    :maxdepth: 1
 
-   carte-mere-mono-commun.md
-   carte-mere-mono-A.md
-   carte-mere-mono-B.md
-   carte-mere-mono-C.md
-   carte-mere-mono-D.md
-   carte-mere-mono-E.md
+   carte-mere-mono-B
+   carte-mere-mono-C
+   carte-mere-mono-D
+   carte-mere-mono-E
 ```
 
 ## Test
