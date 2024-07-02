@@ -295,7 +295,7 @@ Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent avec une p
 ```{eval-rst}
 .. toctree::
    :maxdepth: 1
-   
+
    carte-mere-mono-commun.md
    carte-mere-mono-A.md
    carte-mere-mono-B.md
