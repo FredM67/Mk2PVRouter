@@ -133,7 +133,7 @@ Comme pour l'oscillateur, il est courant de le souder légèrement au-dessus du 
 Connecteurs SIL/Molex/Embase 14 broches
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les connecteurs Molex ainsi que l'embase 14 broches sont *polarisés*, ils possèdent un détrompeur.<br />
+Les connecteurs Molex ainsi que l'embase 14 broches sont *polarisés*, ils possèdent un détrompeur.
 Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviront à la connexion d'autres composants ou modules polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
 
 Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel sens.
@@ -157,14 +157,14 @@ L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la 
 Connecteurs secteur et porte-fusible
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le connecteur secteur repéré **TB1** recevra l'alimentation électrique 230V.<br />
+Le connecteur secteur repéré **TB1** recevra l'alimentation électrique 230 V.
 Cette alimentation permettra à la fois d'alimenter la carte-mère, mais aussi la prise de mesure de la tension du secteur.
 
-Le porte-fusible repéré **FS1** peuvent maintenant être installés.<br />
+Le porte-fusible repéré **FS1** peuvent maintenant être installés.
 Il protégera le système en cas de défaillance du transformateur.
 
 En raison des pistes du plan masse, la broche centrale de **TB1** nécessitera plus de chaleur que les autres broches.
-Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage.<br />
+Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage.
 Il est très facile de se tromper de sens !
 
 Si cela se produit, le plastique peut être soigneusement coupé avec un couteau et chaque broche extraite séparément.
@@ -174,11 +174,11 @@ Le porte-fusible, accompagné de son fusible de **100 mA**, est simple à mettr
 Régulateur·s de tension
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Le régulateur de tension **VR1** doit être positionné de manière à ce que son ailette métallique soit éloignée du transformateur, comme indiqué sur la sérigraphie.<br />
-En fonction de l'application, le **VR1** sera une version **3,3 V** ou **5 V**.<br />
+Le régulateur de tension **VR1** doit être positionné de manière à ce que son ailette métallique soit éloignée du transformateur, comme indiqué sur la sérigraphie.
+En fonction de l'application, le **VR1** sera une version **3,3 V** ou **5 V**.
 La version **5 V** est nécessaire chaque fois que l'option *pin-saving hardware* est utilisée.
 
-La soudure des broches du **VR1** nécessitera probablement une température plus élevée.<br />
+La soudure des broches du **VR1** nécessitera probablement une température plus élevée.
 Pour réduire la quantité de métal à chauffer, il est possible de couper préalablement ces broches à la longueur requise.
 
 Le régulateur de tension **VR2** se présente sous la forme habituelle d'un transistor, soit un cylindre noir avec un méplat.
@@ -191,7 +191,7 @@ Ce composant non polarisé et repéré **RV1**, est une protection contre les su
 Transformateur
 ~~~~~~~~~~~~~~
 
-Le dernier composant à installer est le transformateur. Il s'agit d'un transformateur double **6 V** comme indiqué sur la couche sérigraphiée.<br />
+Le dernier composant à installer est le transformateur. Il s'agit d'un transformateur double **6 V** comme indiqué sur la couche sérigraphiée.
 Un transformateur de **6 V** peut prendre en charge un régulateur de tension de **3,3 V** ou de **5 V**.
 
 .. important::
@@ -213,11 +213,11 @@ Synthèse
 --------
 
 Voici l'inventaire spécifique à chaque configuration :
-- **{ref}`A <carte-mere-mono-A>`** : 1 à 12 sorties triac et/ou relais, **sans afficheur**, **sans module RF**
-- **{ref}`B <carte-mere-mono-B>`** : 1 à 2 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
-- **{ref}`C <carte-mere-mono-C>`** : 3 à 7 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
-- **{ref}`D <carte-mere-mono-D>`** : 0 à 2 sorties triac et/ou relais, **avec afficheur**, **avec module RF** (émetteur ou récepteur)
-- **{ref}`E <carte-mere-mono-E>`** : 0 à 7 sorties triac et/ou relais, **sans afficheur**, **avec module RF** (émetteur ou récepteur)
+- **:ref:`A <carte-mere-mono-A>`** : 1 à 12 sorties triac et/ou relais, **sans afficheur**, **sans module RF**
+- **:ref:`B <carte-mere-mono-B>`** : 1 à 2 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
+- **:ref:`C <carte-mere-mono-C>`** : 3 à 7 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
+- **:ref:`D <carte-mere-mono-D>`** : 0 à 2 sorties triac et/ou relais, **avec afficheur**, **avec module RF** (émetteur ou récepteur)
+- **:ref:`E <carte-mere-mono-E>`** : 0 à 7 sorties triac et/ou relais, **sans afficheur**, **avec module RF** (émetteur ou récepteur)
 
 +---------------+---+---+---+---+---+
 |               | A | B | C | D | E |
