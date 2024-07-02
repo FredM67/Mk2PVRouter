@@ -1,4 +1,4 @@
-.. _carte-mere-mono-C:
+.. _carte-mere-mono-C-rst:
 
 Composants de la configuration C
 ================================
