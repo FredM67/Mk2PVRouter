@@ -1,4 +1,4 @@
 .. _carte-mere-mono-D-rst:
 
-Composants de la configuration D
-================================
+Composants de la configuration D rst
+====================================

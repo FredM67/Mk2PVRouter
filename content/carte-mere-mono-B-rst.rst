@@ -1,4 +1,4 @@
 .. _carte-mere-mono-B-rst:
 
-Composants de la configuration B
-================================
+Composants de la configuration B rst
+====================================
