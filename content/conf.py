@@ -43,6 +43,9 @@ extensions = [
 # Make sure the target is unique
 autosectionlabel_prefix_document = True
 
+togglebutton_hint = ""
+togglebutton_hint_hide = ""
+
 imgmath_image_format = 'svg'
 imgmath_embed = True
 
