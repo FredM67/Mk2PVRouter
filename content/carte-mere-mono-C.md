@@ -54,8 +54,7 @@ Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 ```{warning}
 Circuits intégrés CD4543 et 74HC138<br />
 Ne pas installer ces composants pour le moment !
-```{warning}
-
+```
 
 ## Connecteur pour nappe
 
