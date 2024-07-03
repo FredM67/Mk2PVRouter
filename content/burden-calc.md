@@ -1,6 +1,8 @@
 (burden-calc)=
 
 ````{exercise} Un peu de mathématiques
+:class: dropdown
+
 Voici les 3 formules qui vous permettront de calculer une inconnue à partir des 2 autres données connues.
 
 > Calcul de la résistance de burden en fonction de l'intensité efficace maximale :
