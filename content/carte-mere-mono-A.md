@@ -2,8 +2,8 @@
 
 # Composants de la configuration A
 
-L’assemblage décrit dans cette partie est pour un routeur comprenant 1 à 12 sorties triac et/ou relais. Les options afficheur 7 segments et radiofréquence ne pourront pas être prises en compte.
-
+Cette section décrit l'assemblage d'un routeur pouvant comporter de 1 à 12 sorties triac et/ou relais.<br />
+Les options d'afficheur à 7 segments et de radiofréquence ne sont pas prises en charge.
 
 ```{hint}
 Pour avoir une option sortie relais avec un afficheur une seconde carte mère peut être installée.<br />
@@ -16,17 +16,10 @@ Les emplacements **D3** et **D4** les représentent. Il faudra alors les utilise
 
 Soudez les socles **D3** et **D4** en fonction du nombre de sorties (triac et/ou relais) utilisées dans le kit.
 
-Chaque sortie est dispose de deux emplacements :
-- un emplacement à 3 positions. Les 3 positions correspondent à la **masse** (ou **-**), la sortie du microcontrôleur ainsi que le **+** (tension de fonctionnement du système).
-- un emplacement à 2 positions. Les 2 positions correspondent à la **masse** et la sortie du microcontrôleur.
-
-Pour une sortie triac, on pourra utiliser indifféremment l'un ou l'autre emplacement, en veillant à souder/câbler les 2 broches **-** et centrale.<br />
-Le deuxième emplacement pourra recevoir le connecteur du témoin LED. Selon les préférences de chacun, ce témoin pourra aussi être câblé via la carte de sortie elle-même.
-
-Pour une sortie relais, il est nécessaire d'utiliser l'emplacement à 3 positions.<br />
-En effet, un relais nécessite pour fonctionnement une alimentation permanente, ainsi qu'un fil de commande.<br />
-Cette alimentation sera fournie par les broches **+**  et **-**, la commande sera câblée via la broche centrale.<br />
-Le deuxième emplacement recevra le connecteur du témoin LED.
+```{eval-rst}
+.. include:: sorties.md
+   :parser: myst_parser.sphinx_
+```
 
 ```{warning}
 L'utilisation des autres emplacements de sortie nécessitera la modification des programmes standards.
