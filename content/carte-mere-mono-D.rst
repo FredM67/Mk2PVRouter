@@ -47,6 +47,7 @@ Résistances
 
 .. admonition:: Rappel
    :class: warning
+   
    Si la carte mère est utilisée en mode récepteur radiofréquence, alors la résistance **R8** ne doit pas être soudée !
 
 Socles **IC3** et **IC4**
