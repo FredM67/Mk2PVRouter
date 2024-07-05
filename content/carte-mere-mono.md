@@ -274,14 +274,14 @@ Il sera donc plus pratique de le souder après les résistances, entre autres, m
 
 ```{eval-rst}
 .. toctree::
-    :maxdepth: 1
-    
-    carte-mere-mono-commun.md
-    carte-mere-mono-A
-    carte-mere-mono-B
-    carte-mere-mono-C
-    carte-mere-mono-D.md
-    carte-mere-mono-E.md
+   :maxdepth: 1
+   
+   carte-mere-mono-commun.md
+   carte-mere-mono-A
+   carte-mere-mono-B
+   carte-mere-mono-C
+   carte-mere-mono-D
+   carte-mere-mono-E
 ```
 
 ## Test

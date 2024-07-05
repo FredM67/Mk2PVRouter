@@ -10,10 +10,10 @@ Composants de la configuration C
 | Comme ces circuits ne sont pas disponibles en **3,3 V**, il est nécessaire d'alimenter le routeur en **5 V**.
 | Le régulateur de tension **VR1** doit être une version **5 V**.
 
-.. contents:: Contenu
+.. contents:: Sommaire
     :local:
     :depth: 1
-    
+
 Socles de sorties
 -----------------
 
@@ -29,9 +29,7 @@ Socles de sorties
 .. warning::
    Les emplacements **D5 à D9** ne sont pas utilisables, car ces pins sont utilisés par l'afficheur !
 
-
-.. include:: jumpers-Dx.md
-   :parser: myst_parser.sphinx_
+.. include:: jumpers-Dx.rst
 
 .. note::
    Ne soudez aucun autre *jumper* !

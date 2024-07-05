@@ -6,10 +6,10 @@ Composants de la configuration B
 | Cette section concerne l'assemblage d'un routeur avec 1 à 2 sorties triac et un afficheur à 7 segments.
 | L'option radiofréquence n'est pas prise en charge.
 
-.. contents:: Contenu
+.. contents:: Sommaire
     :local:
     :depth: 1
-    
+
 Socles de sorties
 -----------------
 

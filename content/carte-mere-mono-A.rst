@@ -10,7 +10,7 @@ Composants de la configuration A
    Pour avoir une option sortie relais avec un afficheur une seconde carte mère peut être installée.
    Veuillez remplir un formulaire sur notre site internet pour cette demande.
 
-.. contents:: Contenu
+.. contents:: Sommaire
     :local:
     :depth: 1
 
@@ -29,8 +29,7 @@ Socles de sorties
 
 Si vous avez besoin de plus de deux sorties triac et/ou relais, vous pouvez souder directement les socles **D5 à D9**.
 
-.. include:: jumpers-Dx.md
-   :parser: myst_parser.sphinx_
+.. include:: jumpers-Dx.rst
 
 Résistances
 -----------
