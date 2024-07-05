@@ -38,7 +38,9 @@ Alimentation secondaire **3,3 V**
 
 Dans le seul cas où la carte-mère est utilisée en **récepteur**, le *jumper* **J15** doit être soudé.
 
+```{warning}
 La résistance **R8** ne devra pas être mise en place.
+```
 
 ## Résistances
 
