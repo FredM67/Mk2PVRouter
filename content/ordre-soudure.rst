@@ -12,6 +12,7 @@ Ordre de soudure
 | Si vous soudez un composant haut en premier, par exemple un transformateur, tous les autres composants auront tendance à tomber lorsque vous retournerez le circuit imprimé pour les souder.
 
 Voici l'ordre de soudure recommandé :
+
 #. *jumper·s*,
 #. résistances,
 #. diodes
