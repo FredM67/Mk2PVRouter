@@ -47,18 +47,11 @@ Résistances
 
 .. admonition:: Rappel
    :class: warning
-   
+
    Si la carte mère est utilisée en mode récepteur radiofréquence, alors la résistance **R8** ne doit pas être soudée !
 
-Socles **IC3** et **IC4**
--------------------------
-
-Ils doivent être placés selon le repérage sur la couche sérigraphiée.
-
-.. warning::
-   Circuits intégrés CD4543 et 74HC138
-   Ne pas installer ces composants pour le moment !
-
+.. include:: ic3-ic4.rst
+   
 .. include:: connecteur-nappe.rst
    
 .. include:: module-rf.rst

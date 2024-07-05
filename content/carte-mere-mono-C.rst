@@ -47,13 +47,6 @@ Ponts ou *jumpers*
 | Pour ce faire, faites fondre de l'étain sur chaque partie du *jumper*, puis ajoutez-en suffisamment pour relier les deux parties ensemble.
 | Vous devez connecter les *jumpers* **J1 à J14**.
 
-Socles **IC3** et **IC4**
--------------------------
-
-Ils doivent être placés selon le repérage sur la couche sérigraphiée.
-
-.. warning::
-   Circuits intégrés CD4543 et 74HC138
-   Ne pas installer ces composants pour le moment !
+.. include:: ic3-ic4.rst
 
 .. include:: connecteur-nappe.rst
