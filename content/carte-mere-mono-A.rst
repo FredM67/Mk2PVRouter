@@ -10,6 +10,10 @@ Composants de la configuration A
    Pour avoir une option sortie relais avec un afficheur une seconde carte mère peut être installée.
    Veuillez remplir un formulaire sur notre site internet pour cette demande.
 
+.. contents:: Contenu
+    :local:
+    :depth: 1
+
 Socles de sorties
 -----------------
 

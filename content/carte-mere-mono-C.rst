@@ -10,6 +10,10 @@ Composants de la configuration C
 | Comme ces circuits ne sont pas disponibles en **3,3 V**, il est nécessaire d'alimenter le routeur en **5 V**.
 | Le régulateur de tension **VR1** doit être une version **5 V**.
 
+.. contents:: Contenu
+    :local:
+    :depth: 1
+    
 Socles de sorties
 -----------------
 
