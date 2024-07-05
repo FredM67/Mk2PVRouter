@@ -45,7 +45,6 @@ Résistances
 .. note::
    Si le système dispose d'une alimentation secondaire en **3,3 V**, un jeu de 6 résistances, repérées **R21 à R26**, devra être soudé aux emplacements correspondants.
 
-
 .. admonition:: Rappel
    Si la carte mère est utilisée en mode récepteur radiofréquence, alors la résistance **R8** ne doit pas être soudée !
 

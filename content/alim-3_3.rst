@@ -1,4 +1,4 @@
-(alim-3_3)=
+.. _alim-3_3:
 
 Alimentation secondaire **3,3 V**
 ---------------------------------
