@@ -11,8 +11,8 @@ Composants de la configuration A
    Veuillez remplir un formulaire sur notre site internet pour cette demande.
 
 .. contents:: Sommaire
-    :local:
-    :depth: 1
+   :local:
+   :depth: 1
 
 Socles de sorties
 -----------------

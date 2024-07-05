@@ -8,8 +8,8 @@ Composants de la configuration E
 | Ce montage peut inclure de 0 à 7 sorties triac et/ou relais. La tension d'alimentation du système doit être de **3,3 V**.
 
 .. contents:: Sommaire
-    :local:
-    :depth: 1
+   :local:
+   :depth: 1
 
 Socles de sorties
 -----------------

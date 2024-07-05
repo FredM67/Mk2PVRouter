@@ -12,8 +12,8 @@ Composants de la configuration D
 | Pour cela, nous abaissons la tension pour la partie alimentation de la carte RF en ajoutant un régulateur de tension supplémentaire.
 
 .. contents:: Sommaire
-    :local:
-    :depth: 1
+   :local:
+   :depth: 1
 
 Socles de sorties
 -----------------

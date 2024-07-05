@@ -7,8 +7,8 @@ Composants de la configuration B
 | L'option radiofréquence n'est pas prise en charge.
 
 .. contents:: Sommaire
-    :local:
-    :depth: 1
+   :local:
+   :depth: 1
 
 Socles de sorties
 -----------------

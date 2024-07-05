@@ -11,8 +11,8 @@ Composants de la configuration C
 | Le régulateur de tension **VR1** doit être une version **5 V**.
 
 .. contents:: Sommaire
-    :local:
-    :depth: 1
+   :local:
+   :depth: 1
 
 Socles de sorties
 -----------------
