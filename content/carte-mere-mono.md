@@ -272,6 +272,24 @@ En effet, il est toujours plus facile, de souder dans l'ordre de taille/d'épais
 Ainsi, le connecteur **CN1** présent dans les configurations **B**, **C** et **D** est bien plus haut que les résistances par exemple, mais moins haut que l'inductance **L2**.<br />
 Il sera donc plus pratique de le souder après les résistances, entre autres, mais avant l'inductance.
 
+```{eval-rst}
+.. include:: carte-mere-mono-A.md
+   :parser: myst_parser.sphinx_
+
+.. include:: carte-mere-mono-B.md
+   :parser: myst_parser.sphinx_
+
+.. include:: carte-mere-mono-C.md
+   :parser: myst_parser.sphinx_
+
+.. include:: carte-mere-mono-D.md
+   :parser: myst_parser.sphinx_
+
+.. include:: carte-mere-mono-E.md
+   :parser: myst_parser.sphinx_
+```
+
+
 ## Test
 ```{eval-rst}
 .. _carte-mere-mono-test:
