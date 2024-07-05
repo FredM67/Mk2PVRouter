@@ -40,7 +40,9 @@ Selon le mode de fonctionnement, des *jumpers* différents devront être soudés
 - mode **émetteur** : soudez les *jumpers* **J6 à J8**.
 - mode **récepteur** : soudez le *jumper* **J15**.
 
+```{warning}
 La résistance **R8** ne devra pas être mise en place.
+```
 
 ## Résistances
 
