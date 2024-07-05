@@ -12,8 +12,7 @@ Socles de sorties
 | Deux sorties sont natives sur les programmes standards du routeur MK2.
 | Les emplacements **D3** et **D4** les représentent.
 
-.. include:: sorties.md
-   :parser: myst_parser.sphinx_
+.. include:: sorties.rst
 
 Résistances
 -----------

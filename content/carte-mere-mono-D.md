@@ -16,8 +16,7 @@ Deux sorties sont natives sur les programmes standards du routeur MK2.<br />
 Les emplacements **D3** et **D4** les représentent.
 
 ```{eval-rst}
-.. include:: sorties.md
-   :parser: myst_parser.sphinx_
+.. include:: sorties.rst
 ```
 
 ```{warning}
@@ -25,13 +24,7 @@ Les emplacements **D2 et D5 à D13** ne sont pas utilisables, car ces pins sont 
 ```
 
 ```{eval-rst}
-.. _alim-3_3:
-
-Alimentation secondaire **3,3 V**
----------------------------------
-
-.. include:: alim-3_3.md
-   :parser: myst_parser.sphinx_
+.. include:: alim-3_3.rst
 ```
 
 ## Ponts ou *jumpers*

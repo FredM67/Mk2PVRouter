@@ -18,8 +18,7 @@ Socles de sorties
 | 
 | Soudez les socles **D3** et **D4** en fonction du nombre de sorties (triac et/ou relais) utilisées dans le kit.
 
-.. include:: sorties.md
-   :parser: myst_parser.sphinx_
+.. include:: sorties.rst
 
 .. warning::
    L'utilisation des autres emplacements de sortie nécessitera la modification des programmes standards.

@@ -14,8 +14,7 @@ Les emplacements **D3** et **D4** les représentent. Il faudra alors les utilise
 Soudez les socles **D3** et **D4** en fonction du nombre de sorties (triac et/ou relais) utilisées dans le kit.
 
 ```{eval-rst}
-.. include:: sorties.md
-   :parser: myst_parser.sphinx_
+.. include:: sorties.rst
 ```
 
 ```{warning}
@@ -25,13 +24,7 @@ L'utilisation des autres emplacements de sortie nécessitera la modification des
 Si vous avez besoin de plus de deux sorties triac et/ou relais, vous pouvez souder directement les socles **D5 à D9**.
 
 ```{eval-rst}
-.. _alim-3_3:
-
-Alimentation secondaire **3,3 V**
----------------------------------
-
-.. include:: alim-3_3.md
-   :parser: myst_parser.sphinx_
+.. include:: alim-3_3.rst
 ```
 
 ## Ponts ou *jumpers*

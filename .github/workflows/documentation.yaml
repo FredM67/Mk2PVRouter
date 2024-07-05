@@ -95,16 +95,16 @@ jobs:
       #     make pyppeteer
       #     mv _build/pyppeteer/*.pdf _build/dirhtml/_static/Manuel_1.pdf
 
-      - name: Generate PDF 1
-        run: |
-          pip install sphinx_pyppeteer_builder
-          make pyppeteer
-          mv _build/pyppeteer/*.pdf _build/dirhtml/_static/Manuel_1.pdf
+      # - name: Generate PDF 1
+      #   run: |
+      #     pip install sphinx_pyppeteer_builder
+      #     make pyppeteer
+      #     mv _build/pyppeteer/*.pdf _build/dirhtml/_static/Manuel_1.pdf
 
-      - name: Generate PDF 2
-        run: |
-          make simplepdf
-          mv _build/simplepdf/*.pdf _build/dirhtml/_static/Manuel_2.pdf
+      # - name: Generate PDF 2
+      #   run: |
+      #     make simplepdf
+      #     mv _build/simplepdf/*.pdf _build/dirhtml/_static/Manuel_2.pdf
 
       # - name: Generate PDF 3
       #   run: |

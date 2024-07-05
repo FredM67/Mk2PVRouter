@@ -280,8 +280,7 @@ Il sera donc plus pratique de le souder après les résistances, entre autres, m
 
 .. include:: carte-mere-mono-B.rst
 
-.. include:: carte-mere-mono-C.md
-   :parser: myst_parser.sphinx_
+.. include:: carte-mere-mono-C.rst
 
 .. include:: carte-mere-mono-D.md
    :parser: myst_parser.sphinx_
