@@ -26,9 +26,13 @@ Soudez les socles **D3** et **D4** en fonction du nombre de sorties (triac et/ou
 L'utilisation des autres emplacements de sortie nécessitera la modification des programmes standards.
 ```
 
-Si vous avez besoin de plus de deux sorties triac et/ou relais, vous pouvez souder directement les socles **D5**, **D6**, **D7**, **D8** et **D9**.
+Si vous avez besoin de plus de deux sorties triac et/ou relais, vous pouvez souder directement les socles **D5 à D9**.
 
 ```{eval-rst}
 .. include:: jumpers-Dx.md
    :parser: myst_parser.sphinx_
 ```
+
+## Résistances
+
+Aucune résistance n'est nécessaire.

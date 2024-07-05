@@ -68,11 +68,11 @@ Soudez le connecteur **CN1** pour l'afficheur.<br />
 Assurez-vous de le positionner correctement en suivant les indications sur la couche sérigraphiée.
 
 ```{eval-rst}
-.. _module-fr:
+.. _module-rf:
 
 Module radiofréquence
 ---------------------
 
-.. include:: module-fr.md
+.. include:: module-rf.md
    :parser: myst_parser.sphinx_
 ```
