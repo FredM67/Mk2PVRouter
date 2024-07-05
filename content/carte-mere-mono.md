@@ -273,22 +273,16 @@ Ainsi, le connecteur **CN1** présent dans les configurations **B**, **C** et **
 Il sera donc plus pratique de le souder après les résistances, entre autres, mais avant l'inductance.
 
 ```{eval-rst}
-.. include:: carte-mere-mono-commun.md
-   :parser: myst_parser.sphinx_
-
-.. include:: carte-mere-mono-A.rst
-
-.. include:: carte-mere-mono-B.rst
-
-.. include:: carte-mere-mono-C.rst
-
-.. include:: carte-mere-mono-D.md
-   :parser: myst_parser.sphinx_
-
-.. include:: carte-mere-mono-E.md
-   :parser: myst_parser.sphinx_
+.. toctree::
+    :maxdepth: 1
+    
+    carte-mere-mono-commun.md
+    carte-mere-mono-A
+    carte-mere-mono-B
+    carte-mere-mono-C
+    carte-mere-mono-D.md
+    carte-mere-mono-E.md
 ```
-
 
 ## Test
 ```{eval-rst}
