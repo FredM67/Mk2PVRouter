@@ -1,7 +1,7 @@
 .. _module-rf:
 
 Module radiofréquence
-=====================
+---------------------
 
 | La carte radiofréquence **RFM12B** ou **RFM69** est disponible en plusieurs fréquences.
 | 
