@@ -57,10 +57,6 @@ Ils doivent être placés selon le repérage sur la couche sérigraphiée.
    Circuits intégrés CD4543 et 74HC138
    Ne pas installer ces composants pour le moment !
 
-Connecteur pour nappe
----------------------
-
-| Soudez le connecteur **CN1** pour l'afficheur.
-| Assurez-vous de le positionner correctement en suivant les indications sur la couche sérigraphiée.
-
+.. include:: connecteur-nappe.rst
+   
 .. include:: module-rf.rst

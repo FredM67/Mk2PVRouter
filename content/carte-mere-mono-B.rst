@@ -31,8 +31,4 @@ Ponts ou *jumpers*
 | Pour ce faire, faites fondre de l'étain sur chaque partie du *jumper*, puis ajoutez-en suffisamment pour relier les deux parties ensemble.
 | Vous devez connecter les *jumpers* **J1 à J14**.
 
-Connecteur pour nappe
----------------------
-
-| Soudez le connecteur **CN1** pour l'afficheur.
-| Assurez-vous de le positionner correctement en suivant les indications sur la couche sérigraphiée.
+.. include:: connecteur-nappe.rst
