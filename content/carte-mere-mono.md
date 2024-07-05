@@ -273,6 +273,8 @@ Ainsi, le connecteur **CN1** présent dans les configurations **B**, **C** et **
 Il sera donc plus pratique de le souder après les résistances, entre autres, mais avant l'inductance.
 
 ```{eval-rst}
+.. include:: ordre-soudure.rst
+
 .. toctree::
    :maxdepth: 1
    
