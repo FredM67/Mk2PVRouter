@@ -274,7 +274,9 @@ Il sera donc plus pratique de le souder après les résistances, entre autres, m
 
 ```{eval-rst}
 .. include:: ordre-soudure.rst
+```
 
+```{eval-rst}
 .. toctree::
    :maxdepth: 1
    
