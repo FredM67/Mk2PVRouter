@@ -28,7 +28,7 @@
    
    Dans notre cas précis, nous avons : :math:`ct\_turns = 2000`
 
-   :math:`**I_{RMS}**` correspond à l'intensité efficace.
+   :math:`I_{RMS}` correspond à l'intensité efficace.
 
    Pour un appareil purement résistif (chauffe-eau, …), nous avons :math:`P_{RMS} = V_{RMS} \times I_{RMS}`.
 
