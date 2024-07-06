@@ -260,17 +260,17 @@ Voici l'inventaire spécifique à chaque configuration :
 ## Soudure
 
 ```{hint}
-Après chaque étape, il conviendra de vérifier les soudures effectuées (l'utilisation d'une loupe facilitera la vérification).<br />
-Ensuite, on pourra couper **à ras** toutes les pattes qui dépassent avec une petite pince coupante afin de faire place nette pour l'étape suivante.
+Après chaque étape, vérifiez soigneusement les soudures effectuées (l'utilisation d'une loupe peut faciliter cette vérification).<br />
+Ensuite, coupez **à ras** toutes les pattes qui dépassent à l'aide d'une petite pince coupante pour préparer la surface pour l'étape suivante.
 ```
 
-Vous devrez souder les composants communs à toutes les configurations, ainsi que le lot de composants spécifiques à la configuration commandée.
+Vous devrez souder les composants communs à toutes les configurations, ainsi que les composants spécifiques à la configuration commandée.
 
-Il pourra être judicieux, de *mixer* les opérations de soudure entre les composants communs et les composants spécifiques.<br />
-En effet, il est toujours plus facile, de souder dans l'ordre de taille/d'épaisseur, en partant des composants les moins hauts/épais aux composants les plus hauts/épais.
+Il peut être judicieux d'alterner les opérations de soudure entre les composants communs et les composants spécifiques.<br />
+En effet, il est toujours plus facile de souder dans l'ordre de taille/épaisseur, en commençant par les composants les moins hauts/épais et en terminant par les composants les plus hauts/épais.
 
-Ainsi, le connecteur **CN1** présent dans les configurations **B**, **C** et **D** est bien plus haut que les résistances par exemple, mais moins haut que l'inductance **L2**.<br />
-Il sera donc plus pratique de le souder après les résistances, entre autres, mais avant l'inductance.
+Par exemple, le connecteur **CN1** présent dans les configurations **B**, **C** et **D** est bien plus haut que les résistances, mais moins haut que l'inductance **L2**.<br />
+Il sera donc plus pratique de le souder après les résistances, mais avant l'inductance.
 
 ```{eval-rst}
 .. toctree::
