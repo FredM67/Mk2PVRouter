@@ -1,6 +1,6 @@
 .. _burden-calc:
 
-.. admonition:: Un peu de mathématiques
+.. exercise:: Un peu de mathématiques
    :class: dropdown
 
    Voici les 3 formules qui vous permettront de calculer une inconnue à partir des 2 autres données connues.
@@ -32,7 +32,7 @@
 
    Pour un appareil purement résistif (chauffe-eau, …), nous avons :math:`P_{RMS} = V_{RMS} \times I_{RMS}`.
 
-   Exemple pour un chauffe-eau de **3000 W**, nous aurons donc 
+   Exemple pour un chauffe-eau de **3000 W**, nous aurons donc :
    
    .. math::
 
