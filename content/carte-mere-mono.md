@@ -277,9 +277,7 @@ Il sera donc plus pratique de le souder après les résistances, mais avant l'in
    :maxdepth: 1
    
    ordre-soudure
-
-   carte-mere-mono-commun.md
-
+   carte-mere-mono-commun
    carte-mere-mono-A
    carte-mere-mono-B
    carte-mere-mono-C

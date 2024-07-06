@@ -1,5 +1,3 @@
-:ignorenav: next
-
 .. _carte-mere-mono-A:
 
 Composants de la configuration A
