@@ -48,8 +48,7 @@ Si un enregistrement de données dans toute la maison est nécessaire, la plage 
 Ces valeurs de résistance de charge s'appliquent lorsque le processeur fonctionne à **3,3 V**. S'il fonctionne à **5 V**, ces plages sont augmentées d'environ **50 %**.
 
 ```{eval-rst}
-.. include:: burden-calc.md
-   :parser: myst_parser.sphinx_
+.. include:: burden-calc.rst
 ```
 
 **R11 - R18** sont les résistances série pour l'affichage à 4 chiffres.<br />
