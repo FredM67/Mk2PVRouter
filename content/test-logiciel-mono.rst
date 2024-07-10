@@ -21,7 +21,7 @@ Le programme *RawSamplesTool_2chan* affiche les échantillons de tension alterna
 Si un courant important est mesuré ainsi que la tension, les résultats affichés sembleront plus intéressants.
 
 Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le :term:`CT` branché sur **CT2**.
-Lorsque le :term:`CT` a été déplacé vers le port **:term:`CT`1**, la sortie résultante semblait presque identique, mais avec les caractères "**1**" et "**2**" inversés.
+Lorsque le :term:`CT` a été déplacé vers le port :term:`**CT**`\1, la sortie résultante semblait presque identique, mais avec les caractères "**1**" et "**2**" inversés.
 
 RSResults_V_and_I2.txt
 
