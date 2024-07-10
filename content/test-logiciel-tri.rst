@@ -3,8 +3,7 @@
 Test logiciel
 -------------
 
-.. include:: test-logiciel.md
-   :parser: myst_parser.sphinx_
+.. include:: test-logiciel.rst
 
 Test de la partie *mesures*
 ---------------------------
