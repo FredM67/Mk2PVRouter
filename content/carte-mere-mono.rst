@@ -164,7 +164,7 @@ Connecteurs SIL/Molex
 | Les connecteurs type Molex sont *polarisés*, ils possèdent un détrompeur.
 | Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviront à la connexion d'autres composants ou modules polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
 
-| Le connecteur :term:`SIL`, repéré :term:`**FTDI**`, peut être soudé dans n'importe quel sens.
+| Le connecteur :term:`SIL`, repéré :term:`FTDI`, peut être soudé dans n'importe quel sens.
 | Il permet de brancher la carte USB-:term:`FTDI` qui servira à la programmation du routeur.
 
 Inductance
@@ -248,11 +248,11 @@ Synthèse
 
 Voici l'inventaire spécifique à chaque configuration :
 
-* :ref:`**A** <carte-mere-mono-A>` : 1 à 12 sorties triac et/ou relais, **sans afficheur**, **sans module RF**
-* :ref:`**B** <carte-mere-mono-B>` : 1 à 2 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
-* :ref:`**C** <carte-mere-mono-C>` : 3 à 7 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
-* :ref:`**D** <carte-mere-mono-D>` : 0 à 2 sorties triac et/ou relais, **avec afficheur**, **avec module RF** (émetteur ou récepteur)
-* :ref:`**E** <carte-mere-mono-E>` : 0 à 7 sorties triac et/ou relais, **sans afficheur**, **avec module RF** (émetteur ou récepteur)
+* :ref:`A <carte-mere-mono-A>` : 1 à 12 sorties triac et/ou relais, **sans afficheur**, **sans module RF**
+* :ref:`B <carte-mere-mono-B>` : 1 à 2 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
+* :ref:`C <carte-mere-mono-C>` : 3 à 7 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
+* :ref:`D <carte-mere-mono-D>` : 0 à 2 sorties triac et/ou relais, **avec afficheur**, **avec module RF** (émetteur ou récepteur)
+* :ref:`E <carte-mere-mono-E>` : 0 à 7 sorties triac et/ou relais, **sans afficheur**, **avec module RF** (émetteur ou récepteur)
 
 ============= = = = = =
 \             A B C D E
