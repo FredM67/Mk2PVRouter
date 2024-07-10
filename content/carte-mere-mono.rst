@@ -295,8 +295,10 @@ Vous devrez souder les composants communs à toutes les configurations, ainsi qu
 Tests
 -----
 
-.. include:: carte-mere-mono-test-elec.rst
+.. toctree::
+   :maxdepth: 1
 
-.. include:: carte-mere-mono-test-afficheur.rst
-
-.. include:: test-logiciel-mono.rst
+   carte-mere-mono-test-elec
+   carte-mere-mono-test-afficheur
+   test-logiciel-mono
+   
