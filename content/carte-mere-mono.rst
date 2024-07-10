@@ -27,12 +27,12 @@ Ces composants n'ont pas de sens et sont très peu sensibles à l'électricité 
 Les valeurs des résistances sont indiquées sur le schéma de circuit et sont répétées ici pour plus de commodité :
 (veuillez lire les notes ci-dessous qui concernent ces valeurs de composants)
 
-* **R1** = **47 kΩ**. Cela fournit le *:term:`pull-up`* pour la ligne de réinitialisation du processeur.
+* **R1** = **47 kΩ**. Cela fournit le :term:`pull-up` pour la ligne de réinitialisation du processeur.
 * **R2** = **10 kΩ**. Avec R3, cela fournit une tension de référence pour les capteurs d'entrée.
 * **R3** = **10 kΩ**. Avec R2, cela fournit une tension de référence pour les capteurs d'entrée.
 * **R4** = **100 Ω** ou **180 Ω**. **R4** et **R5** réduisent la taille du signal :term:`AC` du transformateur.
 * **R5** = **1 kΩ**. **R4** et **R5** réduisent la taille du signal :term:`AC` du transformateur.
-* **R6** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge (ou *:term:`burden`*) du capteur de courant *grille*, qui utilise :term:`CT`\1.
+* **R6** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge (ou :term:`burden`) du capteur de courant *grille*, qui utilise :term:`CT`\1.
 * **R7** = **120 Ω** ou **150 Ω**. Il s'agit de la résistance de charge pour le capteur de courant *détourné*, qui utilise :term:`CT`\2.
 * **R8** = **1 kΩ**. Cette résistance est en série avec :term:`CT`\1 pour protéger le processeur des signaux importants.
 
@@ -270,8 +270,8 @@ Soudure
 -------
 
 .. hint::
-   Après chaque étape, vérifiez soigneusement les soudures effectuées (l'utilisation d'une loupe peut faciliter cette vérification).
-   Ensuite, coupez **à ras** toutes les pattes qui dépassent à l'aide d'une petite pince coupante pour préparer la surface pour l'étape suivante.
+   | Après chaque étape, vérifiez soigneusement les soudures effectuées (l'utilisation d'une loupe peut faciliter cette vérification).
+   | Ensuite, coupez **à ras** toutes les pattes qui dépassent à l'aide d'une petite pince coupante pour préparer la surface pour l'étape suivante.
 
 Vous devrez souder les composants communs à toutes les configurations, ainsi que les composants spécifiques à la configuration commandée.
 
@@ -295,6 +295,8 @@ Vous devrez souder les composants communs à toutes les configurations, ainsi qu
 Tests
 -----
 
-.. include:: carte-mere-mono-test-elec
+.. include:: carte-mere-mono-test-elec.rst
 
-.. include:: carte-mere-mono-test-afficheur
+.. include:: carte-mere-mono-test-afficheur.rst
+
+.. include:: test-logiciel-mono.rst
