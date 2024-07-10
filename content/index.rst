@@ -54,7 +54,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :hidden:
 
    boitier-mono
-   carte-mere-mono.md
+   carte-mere-mono
    carte-sortie-mono
    carte-sortie-relais-mono
    dissipateur-mono
