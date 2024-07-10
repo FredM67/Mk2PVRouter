@@ -292,13 +292,9 @@ Vous devrez souder les composants communs à toutes les configurations, ainsi qu
    carte-mere-mono-D
    carte-mere-mono-E
 
-Test
-----
+Tests
+-----
 
-.. _carte-mere-mono-test:
+.. include:: carte-mere-mono-test-elec
 
-Tests électriques
-~~~~~~~~~~~~~~~~~
-
-.. include:: carte-mere-mono-test.md
-   :parser: myst_parser.sphinx_
+.. include:: carte-mere-mono-test-afficheur
