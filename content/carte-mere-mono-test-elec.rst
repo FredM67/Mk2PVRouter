@@ -1,7 +1,7 @@
 .. _carte-mere-mono-test-elec:
 
-Teste électriques
------------------
+Tests électriques
+~~~~~~~~~~~~~~~~~
 
 Une fois le transformateur en place, la carte est maintenant prête pour les tests électriques.
 

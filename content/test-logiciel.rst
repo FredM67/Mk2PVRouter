@@ -1,7 +1,7 @@
 .. _test-logiciel:
 
 Test logiciel
--------------
+~~~~~~~~~~~~~
 
 | Une fois le processeur installé, il serait judicieux de vérifier que l'alimentation électrique fonctionne toujours correctement.
 | Si c'est le cas, nous pouvons exécuter un croquis (programme) pour vérifier si le processeur fonctionne correctement.
