@@ -37,9 +37,9 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 * **R8** = **1 kΩ**. Cette résistance est en série avec :term:`CT`\1 pour protéger le processeur des signaux importants.
 
 .. note::
-   Des valeurs inférieures pour **R4** et **R5** sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.
-   **R4** = **100 Ω** convient pour un fonctionnement en **3,3 V**.
-   Pour une meilleure utilisation de la plage d'entrée de l':term:`ADC`, **R4** doit être augmenté à **180 Ω** pour un fonctionnement en **5 V**.
+   | Des valeurs inférieures pour **R4** et **R5** sont désormais utilisées pour augmenter la charge sur le transformateur. Cela peut l'empêcher d'entrer en saturation, ce qui déformerait la forme d'onde de sortie.
+   | **R4** = **100 Ω** convient pour un fonctionnement en **3,3 V**.
+   | Pour une meilleure utilisation de la plage d'entrée de l':term:`ADC`, **R4** doit être augmenté à **180 Ω** pour un fonctionnement en **5 V**.
 
    La valeur pour **R6** et **R7** a été initialement spécifiée comme étant **150 Ω**.
 
@@ -60,7 +60,6 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
    **R11 - R18** sont les résistances série pour l'affichage à 4 chiffres.
    Si la carte doit fonctionner à **3,3 V**, ces huit résistances doivent être de **220 Ω**.
    En cas de fonctionnement en **5 V**, cette valeur doit être augmentée à **470 Ω** pour maintenir un niveau de luminosité similaire.
-
 
 Diodes
 ~~~~~~
@@ -185,23 +184,23 @@ L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la 
 .. attention::
    Bien qu’ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
 
-   Le plus grand condensateur (**C1** = **100 μF**) est le plus proche du pont redresseur.
-   Le plus petit (**C2** = **10 μF**) est le plus proche de **IC2**.
+   | Le plus grand condensateur (**C1** = **100 μF**) est le plus proche du pont redresseur.
+   | Le plus petit (**C2** = **10 μF**) est le plus proche de **IC2**.
 
    Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
 
 Connecteurs secteur et porte-fusible
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le connecteur secteur repéré **TB1** recevra l’alimentation électrique 230 V.
-Cette alimentation permettra à la fois d'alimenter la carte-mère, mais aussi la prise de mesure de la tension du secteur.
+| Le connecteur secteur repéré **TB1** recevra l’alimentation électrique 230 V.
+| Cette alimentation permettra à la fois d'alimenter la carte-mère, mais aussi la prise de mesure de la tension du secteur.
 
-Le porte-fusible repéré **FS1** peuvent maintenant être installés.
-Il protégera le système en cas de défaillance du transformateur.
+| Le porte-fusible repéré **FS1** peuvent maintenant être installés.
+| Il protégera le système en cas de défaillance du transformateur.
 
-En raison des pistes du plan masse, la broche centrale de **TB1** nécessitera plus de chaleur que les autres broches.
-Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage.
-Il est très facile de se tromper de sens !
+| En raison des pistes du plan masse, la broche centrale de **TB1** nécessitera plus de chaleur que les autres broches.
+| Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage.
+| Il est très facile de se tromper de sens !
 
 Si cela se produit, le plastique peut être soigneusement coupé avec un couteau et chaque broche extraite séparément.
 
@@ -210,12 +209,12 @@ Le porte-fusible, accompagné de son fusible de **100 mA**, est simple à mettr
 Régulateur·s de tension
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Le régulateur de tension **VR1** doit être positionné de manière à ce que son ailette métallique soit éloignée du transformateur, comme indiqué sur la sérigraphie.
-En fonction de l'application, le **VR1** sera une version **3,3 V** ou **5 V**.
-La version **5 V** est nécessaire chaque fois que l'option *pin-saving hardware* est utilisée.
+| Le régulateur de tension **VR1** doit être positionné de manière à ce que son ailette métallique soit éloignée du transformateur, comme indiqué sur la sérigraphie.
+| En fonction de l'application, le **VR1** sera une version **3,3 V** ou **5 V**.
+| La version **5 V** est nécessaire chaque fois que l'option *pin-saving hardware* est utilisée.
 
-La soudure des broches du **VR1** nécessitera probablement une température plus élevée.
-Pour réduire la quantité de métal à chauffer, il est possible de couper préalablement ces broches à la longueur requise.
+| La soudure des broches du **VR1** nécessitera probablement une température plus élevée.
+| Pour réduire la quantité de métal à chauffer, il est possible de couper préalablement ces broches à la longueur requise.
 
 Le régulateur de tension **VR2** se présente sous la forme habituelle d'un transistor, soit un cylindre noir avec un méplat.
 
@@ -241,8 +240,8 @@ Ce module de type RFM12B ou RFM69 existe sous plusieurs fréquences. Il permettr
 Lorsque ce module est livré, il sera accompagné d'un socle à souder (repéré **SMA**) pour l'antenne, ainsi qu'une antenne.
 
 .. caution::
-   Ce module est très sensible à l'électricité statique.
-   Il faudra veiller à relier son corps à la masse (prise de terre) et ne pas porter de vêtements synthétiques lors de l'opération d'assemblage.
+   | Ce module est très sensible à l'électricité statique.
+   | Il faudra veiller à relier son corps à la masse (prise de terre) et ne pas porter de vêtements synthétiques lors de l'opération d'assemblage.
 
 Synthèse
 --------
@@ -258,7 +257,7 @@ Voici l'inventaire spécifique à chaque configuration :
 ============= = = = = =
 \             A B C D E
 ============= = = = = =
-**R11-R18**   _ X X X _
+**R11-R18**   - X X X -
 **CN1/Nappe** - X X X -
 **IC3-IC4**   - - X X -
 **VR2**       - - - X X
@@ -276,11 +275,11 @@ Soudure
 
 Vous devrez souder les composants communs à toutes les configurations, ainsi que les composants spécifiques à la configuration commandée.
 
-Il peut être judicieux d'alterner les opérations de soudure entre les composants communs et les composants spécifiques.
-En effet, il est toujours plus facile de souder dans l'ordre de taille/épaisseur, en commençant par les composants les moins hauts/épais et en terminant par les composants les plus hauts/épais.
+| Il peut être judicieux d'alterner les opérations de soudure entre les composants communs et les composants spécifiques.
+| En effet, il est toujours plus facile de souder dans l'ordre de taille/épaisseur, en commençant par les composants les moins hauts/épais et en terminant par les composants les plus hauts/épais.
 
-Par exemple, le connecteur **CN1** présent dans les configurations **B**, **C** et **D** est bien plus haut que les résistances, mais moins haut que l'inductance **L2**.
-Il sera donc plus pratique de le souder après les résistances, mais avant l'inductance.
+| Par exemple, le connecteur **CN1** présent dans les configurations **B**, **C** et **D** est bien plus haut que les résistances, mais moins haut que l'inductance **L2**.
+| Il sera donc plus pratique de le souder après les résistances, mais avant l'inductance.
 
 .. toctree::
    :maxdepth: 1
