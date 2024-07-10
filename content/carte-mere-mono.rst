@@ -248,11 +248,11 @@ Synthèse
 
 Voici l'inventaire spécifique à chaque configuration :
 
-* **:ref:`A <carte-mere-mono-A>`** : 1 à 12 sorties triac et/ou relais, **sans afficheur**, **sans module RF**
-* **:ref:`B <carte-mere-mono-B>`** : 1 à 2 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
-* **:ref:`C <carte-mere-mono-C>`** : 3 à 7 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
-* **:ref:`D <carte-mere-mono-D>`** : 0 à 2 sorties triac et/ou relais, **avec afficheur**, **avec module RF** (émetteur ou récepteur)
-* **:ref:`E <carte-mere-mono-E>`** : 0 à 7 sorties triac et/ou relais, **sans afficheur**, **avec module RF** (émetteur ou récepteur)
+* **`A <carte-mere-mono-A>`_** : 1 à 12 sorties triac et/ou relais, **sans afficheur**, **sans module RF**
+* **`B <carte-mere-mono-B>`_** : 1 à 2 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
+* **`C <carte-mere-mono-C>`_** : 3 à 7 sorties triac et/ou relais, **avec afficheur**, **sans module RF**
+* **`D <carte-mere-mono-D>`_** : 0 à 2 sorties triac et/ou relais, **avec afficheur**, **avec module RF** (émetteur ou récepteur)
+* **`E <carte-mere-mono-E>`_** : 0 à 7 sorties triac et/ou relais, **sans afficheur**, **avec module RF** (émetteur ou récepteur)
 
 ============= = = = = =
 \             A B C D E
