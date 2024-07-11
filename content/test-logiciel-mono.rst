@@ -81,6 +81,7 @@ Le fil noir est destiné à la connexion **GND** (ou **0 V**).
    Le routeur doit toujours être alimenté par sa propre source d'alimentation.
 
 .. toctree::
+   :maxdepth: 1
    :hidden:
    
    carte-mere-mono-test-afficheur
