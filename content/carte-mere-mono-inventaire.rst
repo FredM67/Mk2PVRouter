@@ -32,15 +32,15 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 
    La valeur pour **R6** et **R7** a été initialement spécifiée comme étant **150 Ω**.
 
-   Lorsque le processeur fonctionne à **3,3 V**, cela donne une plage de fonctionnement d'environ **4 kW**. En réduisant ces valeurs à **120 Ω**, la plage est augmentée à **^5 kW**.
+   Lorsque le processeur fonctionne à **3,3 V**, cela donne une plage de fonctionnement d'environ **4 kW**. En réduisant ces valeurs à **120 Ω**, la plage est augmentée à **~5 kW**.
 
    Pour un système **5 V**, la valeur originale de **150 Ω** donne une plage de fonctionnement d'environ **6 kW**.
 
    Si un enregistrement de données dans toute la maison est nécessaire, la plage de travail du capteur *grille* peut être augmentée en réduisant la valeur de R6. Il faut toutefois reconnaître que la sensibilité du système de mesure sera réduite d’autant.
    
-   * **R6** = **56 Ω** permettra des mesures jusqu'à **^10 kW**
-   * **R6** = **47 Ω** permettra des mesures jusqu'à **^12 kW**
-   * **R6** = **39 Ω** permettra des mesures jusqu'à **^14 kW**.
+   * **R6** = **56 Ω** permettra des mesures jusqu'à **~10 kW**
+   * **R6** = **47 Ω** permettra des mesures jusqu'à **~12 kW**
+   * **R6** = **39 Ω** permettra des mesures jusqu'à **~14 kW**.
 
    Ces valeurs de résistance de charge s'appliquent lorsque le processeur fonctionne à **3,3 V**. S'il fonctionne à **5 V**, ces plages sont augmentées d'environ **50 %**.
 
