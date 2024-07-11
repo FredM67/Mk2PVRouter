@@ -28,3 +28,23 @@ Il vous suffit de décompresser le fichier et de l'ouvrir avec le logiciel de pr
    | Le croquis devra se trouver dans un dossier nommé ``verification_afficheur``.
    | Il est impératif que le dossier ainsi que le croquis contenu dans ce même dossier aient le même nom.
 
+Vérification de l'afficheur
+***************************
+
+Une fois le croquis ouvert dans le logiciel de programmation, il faudra d'abord vérifier qu'il correspond à votre configuration.
+
+Si votre routeur est équipé des deux circuits intégrés **IC3** et **IC4**, vous devrez modifier le croquis en conséquence.
+La ligne suivante devra être activée de cette façon :
+
+.. code-block:: cpp
+   #define PIN_SAVING_HARDWARE
+
+Si votre routeur n'est **pas** équipé des deux circuits intégrés **IC3** et **IC4**, vous devrez modifier le croquis en conséquence.
+La ligne suivante devra être commentée de cette façon :
+
+.. code-block:: cpp
+   //#define PIN_SAVING_HARDWARE
+
+Une fois cette modification effectuée, vous pourrez compiler le croquis et le téléverser dans l'Arduino.
+
+Dès le téléversement terminé, vous pourrez observer l'afficheur qui affichera pour chaque bloc de 7 segments tous les chiffres dans l'ordre ainsi que le *point*.
