@@ -16,3 +16,8 @@ Vérifiez les points suivants avant de continuer :
 * Vous avez bien connecté l'adaptateur :term:`FTDI` à votre ordinateur.
 * Le logiciel de programmation installé et prêt à l'emploi.
 * Le routeur est alimenté en 230 V.
+
+Téléchargement du croquis
+*************************
+
+Le croquis à télécharger est disponible en cliquant sur le lien suivant : `Vérification afficheur https://mk2pvrouter.com/wp-content/uploads/2023/01/verification_afficheur.zip`_

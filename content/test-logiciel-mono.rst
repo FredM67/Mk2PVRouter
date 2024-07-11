@@ -58,7 +58,7 @@ Mise en place
 .. admonition:: Remarque
    :class: tip
 
-   La carte :term:`FTDI` dispose d'un commutation ou d'un cavalier pour choisir entre 3,3 V et 5 V.
+   La carte :term:`FTDI` dispose d'un commutateur ou d'un cavalier pour choisir entre **3,3 V** et **5 V**.
    Assurez-vous que le cavalier est correctement positionné pour la tension de fonctionnement de la carte-mère.
 
 | Un programmateur USB vers UART doit être connecté au connecteur :term:`FTDI` du :term:`PCB` comme indiqué ci-dessous.
