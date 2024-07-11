@@ -1,4 +1,4 @@
-.. _test-logiciel:
+.. _test-logiciel-mono:
 
 Tests logiciel
 ^^^^^^^^^^^^^^
@@ -10,6 +10,10 @@ Tests logiciel
 | Cela permettra à la fois de s'assurer que le processeur est opérationnel et de vérifier que les autres composants sont correctement installés et/ou assemblés.
 
 | Pour cette prochaine étape, un dispositif de programmation approprié doit être mis en place.
+
+.. contents:: Sommaire
+    :local:
+    :depth: 1
 
 Pré-requis
 """"""""""
@@ -80,9 +84,6 @@ Le fil noir est destiné à la connexion **GND** (ou **0 V**).
 
    Le routeur doit toujours être alimenté par sa propre source d'alimentation.
 
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   
-   carte-mere-mono-test-afficheur
-   test-mono-mesures
+.. include:: carte-mere-mono-test-afficheur
+
+.. include:: test-mono-mesures
