@@ -16,4 +16,7 @@ Bien qu'elles fonctionnent toutes de la même manière, chaque nouvelle version 
    carte-mere-mono-tests
 
 .. contents:: Sommaire
-   :depth: 2
+
+.. include:: carte-mere-mono-inventaire.rst
+
+.. include:: carte-mere-mono-synthese.rst
