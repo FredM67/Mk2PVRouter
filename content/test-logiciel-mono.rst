@@ -13,7 +13,7 @@ Tests logiciel
 
 .. contents:: Sommaire
     :local:
-    :depth: 1
+    :depth: 2
 
 Pré-requis
 """"""""""
