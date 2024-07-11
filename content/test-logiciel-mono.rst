@@ -41,7 +41,7 @@ Pour programmer l'Arduino, vous aurez besoin d'un logiciel de programmation.
 | Le logiciel le plus convivial et le plus simple pour accomplir cette tâche est l'Arduino IDE.
 | Il est facile à installer et à utiliser, et il est spécialement conçu pour programmer des cartes Arduino.
 
-| Cependant, vous pouvez également utiliser Visual Studio Code avec l'extension PlatformIO.
+| Cependant, vous pouvez également utiliser Visual Studio Code avec l'extension PlatformIO.
 | Cette combinaison offre un environnement de développement plus avancé et de nombreuses fonctionnalités supplémentaires pour les utilisateurs expérimentés.
 
 Assurez-vous d'installer l'un de ces logiciels avant de continuer avec la programmation de votre carte.
@@ -54,6 +54,12 @@ Assurez-vous d'installer l'un de ces logiciels avant de continuer avec la progra
 
 Mise en place
 *************
+
+.. admonition:: Remarque
+   :class: tip
+
+   La carte :term:`FTDI` dispose d'un commutation ou d'un cavalier pour choisir entre 3,3 V et 5 V.
+   Assurez-vous que le cavalier est correctement positionné pour la tension de fonctionnement de la carte-mère.
 
 | Un programmateur USB vers UART doit être connecté au connecteur :term:`FTDI` du :term:`PCB` comme indiqué ci-dessous.
 | L'autre extrémité du programmateur doit être connectée à l'ordinateur de programmation (PC ou équivalent) via un câble USB approprié.
