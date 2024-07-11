@@ -1,7 +1,7 @@
 .. _carte-sortie-mono:
 
 Étage de sortie
----------------
+===============
 
 .. contents:: Sommaire
    :local:
