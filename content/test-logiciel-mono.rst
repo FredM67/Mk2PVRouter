@@ -1,11 +1,5 @@
 .. _test-logiciel:
 
-.. toctree::
-   :hidden:
-   
-   carte-mere-mono-test-afficheur
-   test-mono-mesures
-
 Tests logiciel
 ^^^^^^^^^^^^^^
 
@@ -33,6 +27,8 @@ Le fil noir est destiné à la connexion **GND** (ou **0 V**).
 
    Le routeur doit toujours être alimenté par sa propre source d'alimentation.
 
-.. include:: carte-mere-mono-test-afficheur.rst
+.. toctree::
+   :hidden:
    
-.. include:: test-mono-mesures.rst
+   carte-mere-mono-test-afficheur
+   test-mono-mesures
