@@ -1,12 +1,5 @@
 .. _carte-mere-mono:
 
-.. toctree::
-   :hidden:
-
-   self
-   carte-mere-mono-soudure
-   carte-mere-mono-tests
-
 Carte-mère monophasée
 =====================
 
