@@ -20,4 +20,11 @@ Vérifiez les points suivants avant de continuer :
 Téléchargement du croquis
 *************************
 
-Le croquis à télécharger est disponible en cliquant sur le lien suivant : `Vérification afficheur https://mk2pvrouter.com/wp-content/uploads/2023/01/verification_afficheur.zip`_
+Le croquis à télécharger est disponible en cliquant sur le lien suivant : `Vérification afficheur <https://mk2pvrouter.com/wp-content/uploads/2023/01/verification_afficheur.zip>`_.
+
+Il vous suffit de décompresser le fichier et de l'ouvrir avec le logiciel de programmation.
+
+.. hint::
+   | Le croquis devra se trouver dans un dossier nommé ``verification_afficheur``.
+   | Il est impératif que le dossier ainsi que le croquis contenu dans ce même dossier aient le même nom.
+
