@@ -6,8 +6,52 @@ Tests logiciel
 | Une fois le processeur installé, il serait judicieux de vérifier que l'alimentation électrique fonctionne toujours correctement.
 | Si c'est le cas, nous pouvons exécuter un croquis (programme) pour vérifier si le processeur fonctionne correctement.
 
+| Nous allons maintenant tester le bon fonctionnement des autres parties matérielles de la carte-mère.
+| Cela permettra à la fois de s'assurer que le processeur est opérationnel et de vérifier que les autres composants sont correctement installés et/ou assemblés.
+
 | Pour cette prochaine étape, un dispositif de programmation approprié doit être mis en place.
-| Vous trouverez des détails sur la configuration de l'Environnement de Développement Intégré (IDE) Arduino en haut de cette page.
+
+Pré-requis
+""""""""""
+
+Pour cette étape, il vous faudra :
+
+* Un ordinateur (PC ou équivalent) avec un port USB libre. Cet ordinateur peut fonctionner sous Windows, MacOS ou Linux.
+* Un programmateur USB vers UART (par exemple, un programmateur :term:`FTDI`).
+* Un câble USB approprié pour connecter le programmateur à l'ordinateur de programmation.
+* Un câble d'alimentation électrique pour le routeur.
+
+Carte USB vers UART
+*******************
+
+| Un programmateur USB vers UART est nécessaire pour télécharger le croquis (programme) sur le processeur.
+| Ce programmateur est également utilisé pour surveiller les messages de débogage envoyés par le processeur.
+
+| Selon le système d'exploitation (Windows, MacOS ou Linux) de l'ordinateur de programmation, il peut être nécessaire d'installer un pilote pour le programmateur.
+| Les pilotes pour le programmateur :term:`FTDI` sont disponibles sur le site Web du fabricant.
+
+| Les pilotes disponibles sur le site `FTDI <https://www.ftdichip.com/>`_ devraient convenir à la plupart des cas d'utilisation.
+| Il conviendra de choisir les pilotes de type **VCP** (Virtual COM Port).
+
+Logiciel de programmation
+*************************
+
+Pour programmer l'Arduino, vous aurez besoin d'un logiciel de programmation.
+
+| Le logiciel le plus convivial et le plus simple pour accomplir cette tâche est l'IDE Arduino.
+| Il est facile à installer et à utiliser, et il est spécialement conçu pour programmer des cartes Arduino.
+
+| Cependant, vous pouvez également utiliser Visual Studio Code avec l'extension PlatformIO.
+| Cette combinaison offre un environnement de développement plus avancé et de nombreuses fonctionnalités supplémentaires pour les utilisateurs expérimentés.
+
+Assurez-vous d'installer l'un de ces logiciels avant de continuer avec la programmation de votre carte.
+
+| L'**Arduino IDE** peut être téléchargé à partir du site `Arduino <https://www.arduino.cc/en/software>`_.
+| Pour Windows, veillez à choisir la version **Windows** et non :strike:`Windows App`.
+
+Mise en place
+*************
+
 | Un programmateur USB vers UART doit être connecté au connecteur :term:`FTDI` du :term:`PCB` comme indiqué ci-dessous.
 | L'autre extrémité du programmateur doit être connectée à l'ordinateur de programmation (PC ou équivalent) via un câble USB approprié.
 
