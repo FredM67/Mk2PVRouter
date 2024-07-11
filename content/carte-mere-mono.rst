@@ -9,8 +9,16 @@ Bien qu'elles fonctionnent toutes de la même manière, chaque nouvelle version 
 
 .. contents:: Sommaire
    :local:
-   :depth: 1
+   :depth: 2
 .. include:: carte-mere-mono-inventaire.rst
 .. include:: carte-mere-mono-synthese.rst
 .. include:: carte-mere-mono-soudure.rst
 .. include:: carte-mere-mono-tests.rst
+
+.. toctree:: Sommaire2
+   :maxdepth: 2
+   
+   carte-mere-mono-inventaire.rst
+   carte-mere-mono-synthese.rst
+   carte-mere-mono-soudure.rst
+   carte-mere-mono-tests.rst
