@@ -1,6 +1,7 @@
 .. _sorties:
 
 Chaque sortie est dispose de deux emplacements :
+
 * un emplacement à **3 positions**. Les 3 positions correspondent à la **masse** (ou **GND** ou **-**), la sortie du microcontrôleur ainsi que le **+** ou **VCC** (tension de fonctionnement du système).
 * un emplacement à **2 positions**. Les 2 positions correspondent à la **masse** et la sortie du microcontrôleur.
 

@@ -3,5 +3,4 @@
 Étage de sortie
 ---------------
 
-.. include:: carte-sortie.md
-   :parser: myst_parser.sphinx_
+.. include:: carte-sortie.rst

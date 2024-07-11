@@ -38,7 +38,7 @@ Logiciel de programmation
 
 Pour programmer l'Arduino, vous aurez besoin d'un logiciel de programmation.
 
-| Le logiciel le plus convivial et le plus simple pour accomplir cette tâche est l'IDE Arduino.
+| Le logiciel le plus convivial et le plus simple pour accomplir cette tâche est l'Arduino IDE.
 | Il est facile à installer et à utiliser, et il est spécialement conçu pour programmer des cartes Arduino.
 
 | Cependant, vous pouvez également utiliser Visual Studio Code avec l'extension PlatformIO.

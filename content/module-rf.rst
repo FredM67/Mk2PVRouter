@@ -5,7 +5,7 @@ Module radiofréquence
 
 | La carte radiofréquence **RFM12B** ou **RFM69** est disponible en plusieurs fréquences.
 | 
-| Nous utiliserons principalement les fréquences **868 MHz** ou **433 MHz**.
+| Nous utiliserons principalement les fréquences **868 MHz** ou **433 MHz**.
 | 
 | Ces modules peuvent avoir différentes formes selon nos stocks.
 | 
