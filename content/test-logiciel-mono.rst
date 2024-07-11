@@ -13,7 +13,7 @@ Tests logiciel
 
 .. contents:: Sommaire
     :local:
-    :depth: 2
+    :depth: 1
 
 Pré-requis
 """"""""""
@@ -84,6 +84,6 @@ Le fil noir est destiné à la connexion **GND** (ou **0 V**).
 
    Le routeur doit toujours être alimenté par sa propre source d'alimentation.
 
-.. include:: carte-mere-mono-test-afficheur
+.. include:: carte-mere-mono-test-afficheur.rst
 
-.. include:: test-mono-mesures
+.. include:: test-mono-mesures.rst
