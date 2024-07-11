@@ -60,7 +60,6 @@ Bienvenue dans la documentation du Mk2PVRouter !
    dissipateur-mono
    confection-cables.md
    assemblage_mono.md
-   test-logiciel-mono
    etalonnage-mono.md
    
 .. toctree::
