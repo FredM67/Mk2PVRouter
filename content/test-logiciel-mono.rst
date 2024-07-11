@@ -3,7 +3,7 @@
 .. toctree::
    :hidden:
    
-   carte-mono-test-afficheur
+   carte-mere-mono-test-afficheur
    test-mono-mesures
 
 Tests logiciel
@@ -29,10 +29,10 @@ La broche à une extrémité du connecteur à 6 voies du programmateur sera éti
 Le fil noir est destiné à la connexion **GND** (ou **0 V**).
 
 .. note::
-   La carte FTDI ne peut pas alimenter la carte-mère.
+   La carte :term:`FTDI` ne peut pas alimenter la carte-mère.
 
    Le routeur doit toujours être alimenté par sa propre source d'alimentation.
 
-.. include:: carte-mono-test-afficheur.rst
+.. include:: carte-mere-mono-test-afficheur.rst
    
 .. include:: test-mono-mesures.rst
