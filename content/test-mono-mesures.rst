@@ -1,9 +1,7 @@
-.. _test-logiciel-mono:
-
-.. include:: test-logiciel.rst
+.. _test-mono-mesures:
 
 Test de la partie *mesures*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | Le transformateur a deux sorties : l'une pour l'alimentation CC, l'autre pour le capteur de tension CA qui devrait déjà fonctionner.
 | Cela peut être vérifié en exécutant un programme (croquis) qui affiche les mesures analogiques prises par le processeur Atmel (**IC1**).
