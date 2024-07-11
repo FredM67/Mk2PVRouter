@@ -49,7 +49,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    introduction.md
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Kit monophasé
    :hidden:
 
@@ -63,7 +63,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    etalonnage-mono.md
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Kit triphasé
    :hidden:
 

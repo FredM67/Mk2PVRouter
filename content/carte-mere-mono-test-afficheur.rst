@@ -36,11 +36,13 @@ Une fois le croquis ouvert dans le logiciel de programmation, il est important d
 Si votre routeur est équipé des deux circuits intégrés **IC3** et **IC4**, vous devrez activer la ligne suivante dans le croquis :
 
 .. code-block:: cpp
+    
    #define PIN_SAVING_HARDWARE
 
 Si votre routeur n'est **pas** équipé des deux circuits intégrés **IC3** et **IC4**, vous devrez commenter la ligne suivante dans le croquis :
 
 .. code-block:: cpp
+
    //#define PIN_SAVING_HARDWARE
 
 Après avoir effectué cette modification, compilez le croquis et téléversez-le dans l'Arduino.
