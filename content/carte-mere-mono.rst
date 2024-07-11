@@ -10,9 +10,10 @@ Bien qu'elles fonctionnent toutes de la même manière, chaque nouvelle version 
 .. toctree::
    :hidden:
 
+   self
    carte-mere-mono-soudure
    carte-mere-mono-tests
-   
+
 .. contents:: Sommaire
    :local:
    :depth: 1
