@@ -3,10 +3,8 @@
 Test logiciel
 -------------
 
-.. include:: test-logiciel.rst
-
 Test de la partie *mesures*
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note::
    À partir de maintenant, une alimentation triphasée devra être fournie à la carte-mère.
