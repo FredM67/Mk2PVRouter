@@ -299,9 +299,4 @@ Tests
    :maxdepth: 1
 
    carte-mere-mono-test-elec
-   test-logiciel
-
-   .. toctree::
-      :maxdepth: 1
-      carte-mere-mono-test-afficheur
-      test-mono-mesures
+   test-logiciel-mono

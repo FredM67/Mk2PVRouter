@@ -1,5 +1,11 @@
 .. _test-logiciel:
 
+.. toctree::
+   :hidden:
+   
+   carte-mono-test-afficheur
+   test-mono-mesures
+
 Tests logiciel
 ^^^^^^^^^^^^^^
 
@@ -26,3 +32,7 @@ Le fil noir est destiné à la connexion **GND** (ou **0 V**).
    La carte FTDI ne peut pas alimenter la carte-mère.
 
    Le routeur doit toujours être alimenté par sa propre source d'alimentation.
+
+.. include:: carte-mono-test-afficheur.rst
+   
+.. include:: test-mono-mesures.rst
