@@ -6,6 +6,7 @@ sphinx-mathjax-offline
 sphinx_rtd_theme_ext_color_contrast
 sphinx-simplepdf
 sphinxcontrib-drawio
+sphinxnotes-strike
 sphinx-hoverxref
 sphinx-new-tab-link
 sphinx-last-updated-by-git

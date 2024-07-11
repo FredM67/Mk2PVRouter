@@ -34,6 +34,7 @@ extensions = [
     'sphinx_copybutton',
     'sphinx_simplepdf',
     'sphinxcontrib.drawio',
+    'sphinxnotes-strike',
     'sphinx.ext.autosectionlabel',
     # 'hoverxref.extension',
     'sphinx_new_tab_link',

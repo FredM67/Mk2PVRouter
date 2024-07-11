@@ -49,6 +49,9 @@ Assurez-vous d'installer l'un de ces logiciels avant de continuer avec la progra
 | L'**Arduino IDE** peut être téléchargé à partir du site `Arduino <https://www.arduino.cc/en/software>`_.
 | Pour Windows, veillez à choisir la version **Windows** et non :strike:`Windows App`.
 
+| Si vous êtes totalement débutant dans le domaine de l'Arduino, nous vous recommandons de consulter le tutoriel `Découverte de l'Arduino <https://zestedesavoir.com/tutoriels/686/arduino-premiers-pas-en-informatique-embarquee/742_decouverte-de-larduino/>`_ par exemple.
+| Il y en a beaucoup d'autres disponibles sur Internet.
+
 Mise en place
 *************
 
