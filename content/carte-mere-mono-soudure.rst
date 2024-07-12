@@ -16,7 +16,7 @@ Vous devrez souder les composants communs à toutes les configurations, ainsi qu
 | Il sera donc plus pratique de le souder après les résistances, mais avant l'inductance.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    
    ordre-soudure
    carte-mere-mono-commun
