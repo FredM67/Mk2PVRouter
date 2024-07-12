@@ -1,7 +1,7 @@
 .. _carte-mere-mono-test-elec:
 
 Tests électriques
-^^^^^^^^^^^^^^^^^
+=================
 
 Une fois le transformateur installé, la carte est prête pour les tests électriques.
 
@@ -24,7 +24,7 @@ Avant d'installer les circuits intégrés, il est important de vérifier le bon 
    :depth: 1
 
 Test de l'alimentation principale
-*********************************
+---------------------------------
 
 Si tout a été correctement assemblé, la sortie de l'alimentation devrait être d'environ **3,3 V** ou **5 V** si un régulateur de tension **5 V** a été installé.
 
@@ -36,7 +36,7 @@ Cette tension peut être facilement vérifiée au niveau du connecteur *access t
 À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.
 
 Test de la tension de référence
-*******************************
+-------------------------------
 
 Avec la tension correcte en place, les circuits intégrés peuvent maintenant être installés, **après avoir coupé l'alimentation**.
 
@@ -63,7 +63,7 @@ Un endroit pratique pour accéder à **Vref** se trouve à l'extrémité supéri
 **Vref** est également accessible à divers autres endroits, comme indiqué sur le schéma de circuit de cette carte.
 
 Installation du processeur principal
-************************************
+------------------------------------
 
 Une fois la tension vérifiée et confirmée correcte, vous pouvez insérer le processeur principal, **IC1**.
 
