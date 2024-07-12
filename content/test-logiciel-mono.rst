@@ -1,7 +1,7 @@
 .. _test-logiciel-mono:
 
 Tests logiciel
-^^^^^^^^^^^^^^
+==============
 
 .. toctree::
    :maxdepth: 1
@@ -23,7 +23,7 @@ Tests logiciel
     :depth: 1
 
 Pré-requis
-""""""""""
+----------
 
 Pour cette étape, il vous faudra :
 
@@ -33,7 +33,7 @@ Pour cette étape, il vous faudra :
 * Un câble d'alimentation électrique pour le routeur.
 
 Carte USB vers UART
-*******************
+^^^^^^^^^^^^^^^^^^^
 
 | Un programmateur USB vers UART est nécessaire pour télécharger le croquis (programme) sur le processeur.
 | Ce programmateur est également utilisé pour surveiller les messages de débogage envoyés par le processeur.
@@ -45,7 +45,7 @@ Carte USB vers UART
 | Il conviendra de choisir les pilotes de type **VCP** (Virtual COM Port).
 
 Logiciel de programmation
-*************************
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Pour programmer l'Arduino, vous aurez besoin d'un logiciel de programmation.
 
@@ -64,7 +64,7 @@ Assurez-vous d'installer l'un de ces logiciels avant de continuer avec la progra
 | Il y en a beaucoup d'autres disponibles sur Internet.
 
 Mise en place
-*************
+^^^^^^^^^^^^^
 
 .. admonition:: Remarque
    :class: tip

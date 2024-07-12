@@ -1,14 +1,18 @@
-.. _carte-mono-test-afficheur:
+.. _carte-mere-mono-test-afficheur:
 
 Test de la partie *afficheur*
-"""""""""""""""""""""""""""""
+-----------------------------
 
 Vous allez maintenant devoir tester l'afficheur 7 segments.
 
 Pour cela, nous aurons besoin d'un croquis spécifique qui sera téléchargé dans l'Arduino.
 
+.. contents:: Sommaire
+   :local:
+   :depth: 1
+
 Pré-requis
-**********
+^^^^^^^^^^
 
 Vérifiez les points suivants avant de continuer :
 
@@ -18,7 +22,7 @@ Vérifiez les points suivants avant de continuer :
 * Le routeur est alimenté en 230 V.
 
 Téléchargement du croquis
-*************************
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Le croquis à télécharger est disponible en cliquant sur le lien suivant : `Vérification afficheur <https://mk2pvrouter.com/wp-content/uploads/2023/01/verification_afficheur.zip>`_.
 
@@ -29,7 +33,7 @@ Il vous suffit de décompresser le fichier et de l'ouvrir avec le logiciel de pr
    | Il est impératif que le dossier ainsi que le croquis contenu dans ce même dossier aient le même nom.
 
 Vérification de l'afficheur
-***************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Une fois le croquis ouvert dans le logiciel de programmation, il est important de vérifier qu'il correspond à votre configuration.
 
