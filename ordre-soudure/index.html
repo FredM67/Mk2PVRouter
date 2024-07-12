@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2024-07-05T23:39:50+02:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ordre de soudure &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/minipres.js?v=a0d29692"></script>
+        <script>let toggleHintShow = '';</script>
+        <script>let toggleHintHide = '';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=bf059b8c"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="Composants communs" href="../carte-mere-mono-commun/" />
+    <link rel="prev" title="Carte-mère monophasée" href="../carte-mere-mono/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kit monophasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier-mono/">Préparation du boîtier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere-mono/">Carte-mère monophasée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-mono/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais-mono/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dissipateur-mono/">Dissipateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage_mono/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage-mono/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kit triphasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier-tri/">Préparation du boîtier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere-tri/">Carte-mère triphasée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#principe-de-fonctionnement-d-une-sortie-triac">Principe de Fonctionnement d’une Sortie Triac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#controle-de-la-puissance">Contrôle de la Puissance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#applications-typiques">Applications typiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#considerations-techniques">Considérations Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#composition-d-un-kit-pour-etage-de-sortie-triac">Composition d’un kit pour étage de sortie triac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#assemblage-d-une-carte-de-sortie">Assemblage d’une carte de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#test">Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais-tri/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dissipateur-tri/">Dissipateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage_tri/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-tri/">Test logiciel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage-tri/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../carte-mere-mono/">Carte-mère monophasée</a></li>
+      <li class="breadcrumb-item active">Ordre de soudure</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/ordre-soudure.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ordre-de-soudure">
+<span id="ordre-soudure"></span><h1>Ordre de soudure<a class="headerlink" href="#ordre-de-soudure" title="Lien vers cette rubrique"></a></h1>
+<div class="line-block">
+<div class="line">Il est fortement recommandé de suivre l’ordre de soudure indiqué.</div>
+<div class="line"><br /></div>
+<div class="line">Cela vous vous épargnera des soucis par rapport au maintien des composants lors de la soudure.</div>
+<div class="line">En effet, les composants à souder sont insérés sur la face <em>avant</em> du circuit imprimé, tandis que la soudure se fait sur la face <em>arrière</em>.</div>
+<div class="line">Il faudra donc à chaque fois retourner le circuit imprimé pour souder les composants.</div>
+<div class="line"><br /></div>
+<div class="line">Si vous soudez un composant haut en premier, par exemple un transformateur, tous les autres composants auront tendance à tomber lorsque vous retournerez le circuit imprimé pour les souder.</div>
+</div>
+<p>Voici l’ordre de soudure recommandé :</p>
+<ol class="arabic simple">
+<li><p><em>jumper·s</em>,</p></li>
+<li><p>résistances,</p></li>
+<li><p>diodes</p></li>
+<li><p>socles de circuits intégrés,</p></li>
+<li><p>oscillateur et ses 2 condensateurs associés,</p></li>
+<li><p>condensateurs céramiques non polarisés,</p></li>
+<li><p>pont·s de diodes,</p></li>
+<li><p>régulateur de tension (format transistor),</p></li>
+<li><p>inductance,</p></li>
+<li><p>socle FTDI</p></li>
+<li><p>socles de CTs et socle·s de sortie,</p></li>
+<li><p>condensateurs électrolytiques polarisés,</p></li>
+<li><p>fusibles,</p></li>
+<li><p>connecteur·s d’alimentation,</p></li>
+<li><p>varistance·s,</p></li>
+<li><p>régulateur de tension,</p></li>
+<li><p>transformateur·s</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cette liste est exhaustive et peut varier en fonction de la configuration de votre carte mère.</p>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../carte-mere-mono/" class="btn btn-neutral float-left" title="Carte-mère monophasée" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../carte-mere-mono-commun/" class="btn btn-neutral float-right" title="Composants communs" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2023, ENERGIE ROUTER &amp; F. Metrich (aka FredM67).
+      <span class="lastupdated">Mis à jour le juil. 05, 2024.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/">latest</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="../_static/Manuel_1.pdf">PDF1</a></dd>
+        
+          <dd><a href="../_static/Manuel_2.pdf">PDF2</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/ordre-soudure.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/ordre-soudure.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
