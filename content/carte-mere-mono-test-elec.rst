@@ -19,6 +19,13 @@ Avant d'installer les circuits intégrés, il est important de vérifier le bon 
 | Sur la photo ci-dessous, une alimentation temporaire de 230 V CA via un fusible de 3 A a été connectée.
 | Bien que cela ne soit pas requis par ce :term:`PCB`, une connexion à la terre offre un certain degré de sécurité dans le cas où l'opérateur entrerait accidentellement en contact avec la ligne 230 V :term:`AC`.
 
+.. contents:: Sommaire
+   :local:
+   :depth: 1
+
+Test de l'alimentation principale
+*********************************
+
 Si tout a été correctement assemblé, la sortie de l'alimentation devrait être d'environ **3,3 V** ou **5 V** si un régulateur de tension **5 V** a été installé.
 
 Cette tension peut être facilement vérifiée au niveau du connecteur *access to power*, comme indiqué ici.
@@ -27,6 +34,9 @@ Cette tension peut être facilement vérifiée au niveau du connecteur *access t
    N'oubliez pas de mettre votre multimètre sur la position *courant continu*, :term:`DC`, symbole **⎓** !
 
 À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.
+
+Test de la tension de référence
+*******************************
 
 Avec la tension correcte en place, les circuits intégrés peuvent maintenant être installés, **après avoir coupé l'alimentation**.
 
@@ -51,6 +61,9 @@ Une fois que tout a été soigneusement vérifié, la puce peut être enfoncée 
 Un endroit pratique pour accéder à **Vref** se trouve à l'extrémité supérieure de **R6**. La prise d'antenne **SMA** est un point de masse pratique.
 
 **Vref** est également accessible à divers autres endroits, comme indiqué sur le schéma de circuit de cette carte.
+
+Installation du processeur principal
+************************************
 
 Une fois la tension vérifiée et confirmée correcte, vous pouvez insérer le processeur principal, **IC1**.
 
