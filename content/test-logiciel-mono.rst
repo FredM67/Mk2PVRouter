@@ -3,6 +3,13 @@
 Tests logiciel
 ^^^^^^^^^^^^^^
 
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   test-logiciel-mono-afficheur
+   test-logiciel-mono-mesures
+
 | Une fois le processeur installé, il serait judicieux de vérifier que l'alimentation électrique fonctionne toujours correctement.
 | Si c'est le cas, nous pouvons exécuter un croquis (programme) pour vérifier si le processeur fonctionne correctement.
 
