@@ -1,12 +1,14 @@
 # From: https://github.com/rkdarst/sphinx-actions-test/blob/master/.github/workflows/sphinx-build.yml
 name: Sphinx
 
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
-    branches: [ main ]
 
 # If these SPHINXOPTS are enabled, then be strict about the builds and
 # fail on any warnings
