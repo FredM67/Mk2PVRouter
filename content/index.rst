@@ -1,10 +1,9 @@
 .. _mk2pvrouter:
 
-************************************************
 Bienvenue dans la documentation du Mk2PVRouter !
-************************************************
+================================================
 
-| Le MK2 PV Router est l’accessoire indispensable lorsque l’on souhaite optimiser son autoconsommation.
+| Le MK2 PV Router est l’accessoire indispensable lorsque l’on souhaite optimiser son autoconsommation.
 |
 | Particulièrement adapté à l’alimentation de résistances (chauffe-eau, radiateur, sol chauffant) du fait de son alimentation à puissance variable, il saura orienter votre surplus vers le ou les équipements raccordés.
 |
@@ -46,7 +45,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 .. toctree::
    :hidden:
 
-   introduction.md
+   introduction
 
 .. toctree::
    :maxdepth: 3
