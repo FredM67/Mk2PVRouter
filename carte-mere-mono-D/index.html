@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2024-07-11T17:44:38+02:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Composants de la configuration D &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/minipres.js?v=a0d29692"></script>
+        <script>let toggleHintShow = '';</script>
+        <script>let toggleHintHide = '';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=041d0952"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="Composants de la configuration E" href="../carte-mere-mono-E/" />
+    <link rel="prev" title="Composants de la configuration C" href="../carte-mere-mono-C/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kit monophasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier-mono/">Préparation du boîtier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere-mono/">Carte-mère monophasée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-mono/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais-mono/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dissipateur-mono/">Dissipateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage_mono/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage-mono/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kit triphasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier-tri/">Préparation du boîtier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere-tri/">Carte-mère triphasée</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#principe-de-fonctionnement-d-une-sortie-triac">Principe de Fonctionnement d’une Sortie Triac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#controle-de-la-puissance">Contrôle de la Puissance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#applications-typiques">Applications typiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#considerations-techniques">Considérations Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#composition-d-un-kit-pour-etage-de-sortie-triac">Composition d’un kit pour étage de sortie triac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#assemblage-d-une-carte-de-sortie">Assemblage d’une carte de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tri/#test">Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais-tri/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dissipateur-tri/">Dissipateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage_tri/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-tri/">Test logiciel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage-tri/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../carte-mere-mono/">Carte-mère monophasée</a></li>
+      <li class="breadcrumb-item active">Composants de la configuration D</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere-mono-D.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="composants-de-la-configuration-d">
+<span id="carte-mere-mono-d"></span><h1>Composants de la configuration D<a class="headerlink" href="#composants-de-la-configuration-d" title="Lien vers cette rubrique"></a></h1>
+<div class="line-block">
+<div class="line">Cette section décrit l’assemblage d’un routeur équipé d’un émetteur ou récepteur radiofréquence. Cette option permet de contrôler une ou plusieurs charges à distance.</div>
+<div class="line"><br /></div>
+<div class="line">Le montage peut inclure de 0 à 2 sorties triac et/ou relais locales, ainsi qu’un afficheur à 7 segments avec des modules d’économie de broches.</div>
+<div class="line">La tension d’alimentation de la carte-mère doit être de <strong>5 V</strong>, un régulateur de tension approprié est fourni à cet effet.</div>
+<div class="line"><br /></div>
+<div class="line">Le module radiofréquence doit être alimenté en <strong>3,3 V</strong>.</div>
+<div class="line">Pour cela, nous abaissons la tension pour la partie alimentation de la carte RF en ajoutant un régulateur de tension supplémentaire.</div>
+</div>
+<nav class="contents local" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#socles-de-sorties" id="id1">Socles de sorties</a></p></li>
+<li><p><a class="reference internal" href="#alimentation-secondaire-3-3-v" id="id2">Alimentation secondaire <strong>3,3 V</strong></a></p></li>
+<li><p><a class="reference internal" href="#ponts-ou-jumpers" id="id3">Ponts ou <em>jumpers</em></a></p></li>
+<li><p><a class="reference internal" href="#resistances" id="id4">Résistances</a></p></li>
+<li><p><a class="reference internal" href="#socles-ic3-et-ic4" id="id5">Socles <strong>IC3</strong> et <strong>IC4</strong></a></p></li>
+<li><p><a class="reference internal" href="#connecteur-pour-nappe" id="id6">Connecteur pour nappe</a></p></li>
+<li><p><a class="reference internal" href="#module-radiofrequence" id="id7">Module radiofréquence</a></p></li>
+</ul>
+</nav>
+<section id="socles-de-sorties">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Socles de sorties</a><a class="headerlink" href="#socles-de-sorties" title="Lien vers cette rubrique"></a></h2>
+<div class="line-block">
+<div class="line">Deux sorties sont natives sur les programmes standards du routeur MK2.</div>
+<div class="line">Les emplacements <strong>D3</strong> et <strong>D4</strong> les représentent.</div>
+</div>
+<p id="sorties">Chaque sortie est dispose de deux emplacements :</p>
+<ul class="simple">
+<li><p>un emplacement à <strong>3 positions</strong>. Les 3 positions correspondent à la <strong>masse</strong> (ou <strong>GND</strong> ou <strong>-</strong>), la sortie du microcontrôleur ainsi que le <strong>+</strong> ou <strong>VCC</strong> (tension de fonctionnement du système).</p></li>
+<li><p>un emplacement à <strong>2 positions</strong>. Les 2 positions correspondent à la <strong>masse</strong> et la sortie du microcontrôleur.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Pour une sortie triac, on pourra utiliser indifféremment l’un ou l’autre emplacement, en veillant à souder/câbler les 2 broches <strong>GND/-</strong> et centrale.</div>
+<div class="line">Le deuxième emplacement pourra recevoir le connecteur du témoin LED. Selon les préférences de chacun, ce témoin pourra aussi être câblé via la carte de sortie elle-même.</div>
+<div class="line"><br /></div>
+<div class="line">Pour une sortie relais, il est nécessaire d’utiliser l’emplacement à <strong>3 positions</strong>.</div>
+<div class="line">En effet, un relais nécessite pour fonctionnement une alimentation permanente, ainsi qu’un fil de commande.</div>
+<div class="line">Cette alimentation sera fournie par les broches <strong>VCC/+</strong>  et <strong>GND/-</strong>, la commande sera câblée via la broche centrale.</div>
+<div class="line">Le deuxième emplacement recevra le connecteur du témoin LED.</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Les emplacements <strong>D2 et D5 à D13</strong> ne sont pas utilisables, car ces pins sont utilisés par l’afficheur ainsi que le module RF !</p>
+</div>
+</section>
+<section id="alimentation-secondaire-3-3-v">
+<span id="alim-3-3"></span><h2><a class="toc-backref" href="#id2" role="doc-backlink">Alimentation secondaire <strong>3,3 V</strong></a><a class="headerlink" href="#alimentation-secondaire-3-3-v" title="Lien vers cette rubrique"></a></h2>
+<p>Il y a 3 composants à souder concernant l’alimentation secondaire <strong>3,3 V</strong>.</p>
+<p>Certains doivent respecter une polarité.</p>
+<ul class="simple">
+<li><p>Le régulateur <strong>VR2</strong> a un sens, il doit être placé selon le repérage sur la couche sérigraphiée.</p></li>
+<li><p>Le condensateur <strong>C8</strong> d’une capacité de <strong>10 μF</strong> est polarisé. La broche la plus courte correspond à la <strong>masse</strong>. Sur le circuit imprimé, elle correspond au <strong>méplat blanc</strong> dans le cercle, mais aussi au <strong>trait blanc</strong> sur le côté du condensateur.</p></li>
+<li><p>Le condensateur <strong>C9</strong> d’une capacité de <strong>100 nF</strong> n’est pas polarisé et est marqué <strong>104</strong>.</p></li>
+</ul>
+</section>
+<section id="ponts-ou-jumpers">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Ponts ou <em>jumpers</em></a><a class="headerlink" href="#ponts-ou-jumpers" title="Lien vers cette rubrique"></a></h2>
+<p>Dans le seul cas où la carte-mère est utilisée en <strong>récepteur</strong>, le <em>jumper</em> <strong>J15</strong> doit être soudé.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>La résistance <strong>R8</strong> ne devra pas être mise en place.</p>
+</div>
+</section>
+<section id="resistances">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Résistances</a><a class="headerlink" href="#resistances" title="Lien vers cette rubrique"></a></h2>
+<div class="line-block">
+<div class="line">Associez les résistances fournies dans le kit aux emplacements indiqués sur la couche sérigraphiée. Il n’y a pas de polarité à respecter.</div>
+<div class="line">Les résistances à souder sont <strong>R11 à R18</strong>.</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si le système dispose d’une alimentation secondaire en <strong>3,3 V</strong>, un jeu de 6 résistances, repérées <strong>R21 à R26</strong>, devra être soudé aux emplacements correspondants.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Rappel</p>
+<p>Si la carte mère est utilisée en mode récepteur radiofréquence, alors la résistance <strong>R8</strong> ne doit pas être soudée !</p>
+</div>
+</section>
+<section id="socles-ic3-et-ic4">
+<span id="ic3-ic4"></span><h2><a class="toc-backref" href="#id5" role="doc-backlink">Socles <strong>IC3</strong> et <strong>IC4</strong></a><a class="headerlink" href="#socles-ic3-et-ic4" title="Lien vers cette rubrique"></a></h2>
+<p>Ils doivent être placés selon le repérage sur la couche sérigraphiée.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Circuits intégrés <strong>CD4543</strong> et <strong>74HC138</strong>
+Ne pas installer ces composants pour le moment !</p>
+</div>
+</section>
+<section id="connecteur-pour-nappe">
+<span id="conmnecteur-nappe"></span><h2><a class="toc-backref" href="#id6" role="doc-backlink">Connecteur pour nappe</a><a class="headerlink" href="#connecteur-pour-nappe" title="Lien vers cette rubrique"></a></h2>
+<div class="line-block">
+<div class="line">Soudez le connecteur <strong>CN1</strong> pour l’afficheur.</div>
+<div class="line">Assurez-vous de le positionner correctement en suivant les indications sur la couche sérigraphiée.</div>
+</div>
+</section>
+<section id="module-radiofrequence">
+<span id="module-rf"></span><h2><a class="toc-backref" href="#id7" role="doc-backlink">Module radiofréquence</a><a class="headerlink" href="#module-radiofrequence" title="Lien vers cette rubrique"></a></h2>
+<div class="line-block">
+<div class="line">La carte radiofréquence <strong>RFM12B</strong> ou <strong>RFM69</strong> est disponible en plusieurs fréquences.</div>
+<div class="line"><br /></div>
+<div class="line">Nous utiliserons principalement les fréquences <strong>868 MHz</strong> ou <strong>433 MHz</strong>.</div>
+<div class="line"><br /></div>
+<div class="line">Ces modules peuvent avoir différentes formes selon nos stocks.</div>
+<div class="line"><br /></div>
+<div class="line">Pour installer le module RF sur la carte mère, repérez le connecteur <strong>ANT</strong> (antenne) sur les deux parties, alignez-les, puis soudez délicatement tous les pins de connexion pour éviter de surchauffer les composants.</div>
+<div class="line"><br /></div>
+<div class="line">N’oubliez pas de souder la prise <strong>SMA</strong> à l’emplacement <strong>RF1</strong> pour connecter l’antenne au module.</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../carte-mere-mono-C/" class="btn btn-neutral float-left" title="Composants de la configuration C" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../carte-mere-mono-E/" class="btn btn-neutral float-right" title="Composants de la configuration E" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2023, ENERGIE ROUTER &amp; F. Metrich (aka FredM67).
+      <span class="lastupdated">Mis à jour le juil. 11, 2024.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/">latest</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="../_static/Manuel_1.pdf">PDF1</a></dd>
+        
+          <dd><a href="../_static/Manuel_2.pdf">PDF2</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere-mono-D.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/carte-mere-mono-D.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
