@@ -1,7 +1,7 @@
-.. _boitier-tri:
+.. _boitier-mono:
 
 Préparation du boîtier
 ----------------------
 
-.. include:: boitier.md
+.. include:: ../common/boitier.md
    :parser: myst_parser.sphinx_

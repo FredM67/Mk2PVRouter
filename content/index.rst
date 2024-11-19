@@ -53,29 +53,29 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: Kit monophasé
    :hidden:
 
-   boitier-mono
-   carte-mere-mono
-   carte-sortie-mono
-   carte-sortie-relais-mono
-   dissipateur-mono
-   confection-cables.md
-   assemblage_mono.md
-   etalonnage-mono.md
+   mono/boitier-mono
+   mono/carte-mere-mono
+   mono/carte-sortie-mono
+   mono/carte-sortie-relais-mono
+   mono/dissipateur-mono
+   common/confection-cables.md
+   mono/assemblage-mono.md
+   mono/etalonnage-mono.md
    
 .. toctree::
    :maxdepth: 3
    :caption: Kit triphasé
    :hidden:
 
-   boitier-tri
-   carte-mere-tri.md
-   carte-sortie-tri
-   carte-sortie-relais-tri
-   dissipateur-tri
-   confection-cables.md
-   assemblage_tri.md
-   test-logiciel-tri
-   etalonnage-tri.md
+   tri/boitier-tri
+   tri/carte-mere-tri.md
+   tri/carte-sortie-tri
+   tri/carte-sortie-relais-tri
+   tri/dissipateur-tri
+   common/confection-cables.md
+   tri/assemblage-tri.md
+   tri/test-logiciel-tri
+   tri/etalonnage-tri.md
 
 .. toctree::
    :caption: Glossaire

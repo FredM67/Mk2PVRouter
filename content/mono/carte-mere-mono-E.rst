@@ -19,14 +19,14 @@ Socles de sorties
 | 
 | Soudez les socles **D3** et **D4** en fonction du nombre de sorties (triac et/ou relais) utilisées dans le kit.
 
-.. include:: sorties.rst
+.. include:: ../common/sorties.rst
 
 .. warning::
    L'utilisation des autres emplacements de sortie nécessitera la modification des programmes standards.
 
 Si vous avez besoin de plus de deux sorties triac et/ou relais, vous pouvez souder directement les socles **D5 à D9**.
 
-.. include:: alim-3_3.inc.rst
+.. include:: ../common/alim-3_3.inc.rst
 
 Ponts ou *jumpers*
 ------------------
@@ -45,4 +45,4 @@ Aucune résistance n'est nécessaire.
 
 .. include:: connecteur-nappe.rst
 
-.. include:: module-rf.rst
+.. include:: ../common/module-rf.rst

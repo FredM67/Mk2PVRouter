@@ -18,7 +18,7 @@ Vous devrez souder les composants communs à toutes les configurations, ainsi qu
 .. toctree::
    :maxdepth: 3
    
-   ordre-soudure
+   ../common/ordre-soudure
    carte-mere-mono-commun
    carte-mere-mono-A
    carte-mere-mono-B

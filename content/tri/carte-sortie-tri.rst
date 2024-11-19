@@ -3,4 +3,4 @@
 Étage de sortie
 ---------------
 
-.. include:: carte-sortie.rst
+.. include:: ../common/carte-sortie.rst

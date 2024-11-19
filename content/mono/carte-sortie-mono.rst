@@ -7,4 +7,4 @@
    :local:
    :depth: 1
    
-.. include:: carte-sortie.rst
+.. include:: ../common/carte-sortie.rst

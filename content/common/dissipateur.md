@@ -13,14 +13,14 @@ Lors de l'installation finale du boîtier, il est **impératif** de positionner 
 
 Chaque dissipateur doit être percé de trois trous : deux pour la fixation sur le boîtier et un au milieu pour le triac.
 
-```{drawio-figure} drawio/dissipateur.drawio
+```{drawio-figure} ../drawio/dissipateur.drawio
 :alt: Gabarit de perçage
 :align: center
 :page-index: 0
 
 Gabarit de perçage
 ```
-{download}`Gabarit de perçage<pdf/dissipateur.pdf>`
+{download}`Gabarit de perçage<../pdf/dissipateur.pdf>`
 
 Comme indiqué, le perçage sera en 3 mm de diamètre. Pour le trou du milieu, percez d'abord entièrement en 3 mm, puis en 4 mm sur une profondeur de 2 mm.
 
@@ -41,20 +41,20 @@ Selon le cas, il sera possible d'installer le boîtier en mode paysage ou en mod
 
 Le boîtier doit être percé de trois trous : deux pour la fixation du dissipateur sur le boîtier et un au milieu pour laisser de la place au triac.
 
-```{drawio-figure} drawio/dissipateur.drawio
+```{drawio-figure} ../drawio/dissipateur.drawio
 :alt: Gabarit de perçage du boîtier
 :align: center
 :page-index: 1
 
 Gabarit de perçage du boîtier
 ```
-{download}`Gabarit de perçage<pdf/dissipateur.pdf>`
+{download}`Gabarit de perçage<../pdf/dissipateur.pdf>`
 
 Comme indiqué, le perçage sera en 3 mm de diamètre. Il est possible de percer en 3,5 mm pour avoir une petite marge en cas d'imprécision du perçage.
 
 Pour le trou du milieu, l'idéal est d'utiliser une fraise ou un foret à étage.
 
-```{figure} img/fraise.jpg
+```{figure} ../img/fraise.jpg
 :alt: Exemple de fraise
 :align: center
 :scale: 25%
@@ -69,7 +69,7 @@ Ce gabarit doit être imprimé à taille réelle. Assurez-vous que les dimension
 Le gabarit sera placé sur la face externe du boîtier, le bas du gabarit le long du bord inférieur du boîtier.<br />
 Bien placé, le dissipateur sera en contact avec la collerette périphérique du boîtier.
 
-```{figure} img/Gabarit-dissipateur-boitier.jpg
+```{figure} ../img/Gabarit-dissipateur-boitier.jpg
 :alt: Positionnement du gabarit sur le boîtier
 :align: center
 :scale: 25%

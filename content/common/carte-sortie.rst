@@ -68,7 +68,7 @@ Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 * Un **connecteur de puissance** qui dispose habituellement de trois broches, la broche centrale étant inutilisée.
 * Un **morceau de cuivre massif** de 1.5 mm² de section.
   
-.. figure:: img/Kit-sortie.jpg
+.. figure:: ../img/Kit-sortie.jpg
    :alt: Contenu d'un kit de sortie
    :align: center
    :scale: 25%
@@ -106,7 +106,7 @@ Puis, pliez les extrémités vers l'extérieur et pressez-les fermement contre l
 
 Une fois les agrafes correctement mises en place, coupez les quatre extrémités à la longueur nécessaire.
 
-.. figure:: img/Pose-agrafes.jpg
+.. figure:: ../img/Pose-agrafes.jpg
    :alt: Vue dessus/dessous, agrafes posées
    :align: center
    :scale: 25%
@@ -132,7 +132,7 @@ Selon le plan du circuit :
    Pour assurer que le support :term:`DIL` soit correctement fixé et en contact total avec le circuit imprimé, commencez par souder une seule de ses broches.
    Ensuite, vérifiez que le support est bien en place et parfaitement aligné avant de procéder à la soudure des cinq broches restantes.
 
-.. figure:: img/Soudure-Rs-DIL.jpg
+.. figure:: ../img/Soudure-Rs-DIL.jpg
    :alt: Vue dessus/dessous, résistances et support :term:`DIL` soudés
    :align: center
    :scale: 25%
@@ -146,14 +146,14 @@ Soudure des connecteurs type Molex
 | Il sera recommandé de souder la broche centrale du connecteur de puissance en premier. En effet, ce dernier peut être facilement maintenu pour cette opération grâce aux agrafes précédemment installées.
 | Une fois soudé, ce connecteur sera d'une grande aide pour souder les deux autres connecteurs type Molex.
 
-.. figure:: img/Maintien-connecteur.jpg
+.. figure:: ../img/Maintien-connecteur.jpg
    :alt: Connecteur de puissance, broche centrale soudée
    :align: center
    :scale: 25%
 
    Connecteur de puissance, broche centrale soudée
 
-.. figure:: img/Soudure-Molex.jpg
+.. figure:: ../img/Soudure-Molex.jpg
    :alt: Connecteurs type Molex soudés
    :align: center
    :scale: 25%
@@ -184,7 +184,7 @@ Seuls 1 à 2 mm des pattes du triac devraient dépasser.
 
 Pour faciliter cette opération et aussi pour protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l'un des dissipateurs non encore monté que vous avez à disposition. Vous pouvez utiliser une pince à linge ou toute autre pince à ressort.
 
-.. figure:: img/Positionnement-triac.jpg
+.. figure:: ../img/Positionnement-triac.jpg
    :alt: Positionnement du triac
    :align: center
    :scale: 25%
@@ -198,7 +198,7 @@ Pour les soudures au niveau de chacune des agrafes, un bon fer chaud et beaucoup
 
    Cela assurera une continuité parfaite mais aussi une solidité accrue.
 
-.. figure:: img/Triac-connecteur-soudés.jpg
+.. figure:: ../img/Triac-connecteur-soudés.jpg
    :alt: Triac et connecteur soudés
    :align: center
    :scale: 25%
@@ -214,7 +214,7 @@ Installation de l':term:`optocoupleur`
 | Une installation inversée de l'optocoupleur ne permettra pas au circuit de fonctionner correctement.
 | Toutefois, la conception des broches de l'optocoupleur est telle qu'il ne devrait pas être endommagé en cas d'erreur de montage.
 
-.. figure:: img/Carte-assemblée.jpg
+.. figure:: ../img/Carte-assemblée.jpg
    :alt: Carte assemblée
    :align: center
    :scale: 25%

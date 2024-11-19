@@ -10,7 +10,7 @@ import zoneinfo
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Documentation du Mk2PVRouter'
-copyright = '2023, ENERGIE ROUTER & F. Metrich (aka FredM67)'
+copyright = '2024, ENERGIE ROUTER & F. Metrich (aka FredM67)'
 author = 'ENERGIE ROUTER & F. Metrich (aka FredM67)'
 github_user = "FredM67"
 github_repo_name = "Mk2PVRouter"  # auto-detected from dirname if blank

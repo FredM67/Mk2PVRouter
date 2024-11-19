@@ -21,12 +21,12 @@ Socles de sorties
 | Deux sorties sont natives sur les programmes standards du routeur MK2.
 | Les emplacements **D3** et **D4** les représentent.
 
-.. include:: sorties.rst
+.. include:: ../common/sorties.rst
 
 .. warning::
    Les emplacements **D2 et D5 à D13** ne sont pas utilisables, car ces pins sont utilisés par l'afficheur ainsi que le module RF !
 
-.. include:: alim-3_3.inc.rst
+.. include:: ../common/alim-3_3.inc.rst
 
 Ponts ou *jumpers*
 ------------------
@@ -54,4 +54,4 @@ Résistances
    
 .. include:: connecteur-nappe.rst
    
-.. include:: module-rf.rst
+.. include:: ../common/module-rf.rst

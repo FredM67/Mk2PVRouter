@@ -20,7 +20,7 @@ Socles de sorties
 | Deux sorties sont natives sur les programmes standards du routeur MK2.
 | Les emplacements **D3** et **D4** les représentent. Il faudra alors les utiliser en premier.
 
-.. include:: sorties.rst
+.. include:: ../common/sorties.rst
 
 .. warning::
    L'utilisation des autres emplacements de sortie nécessitera la modification des programmes standards.
