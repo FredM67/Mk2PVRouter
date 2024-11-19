@@ -11,10 +11,10 @@ Bien qu'elles fonctionnent toutes de la même manière, chaque nouvelle version 
    :local:
    :depth: 1
 
-.. include:: carte-mere-mono-inventaire.rst
+.. toctree::
+   :maxdepth: 2
 
-.. include:: carte-mere-mono-synthese.rst
-
-.. include:: carte-mere-mono-soudure.rst
-
-.. include:: carte-mere-mono-tests.rst
+   carte-mere-mono-inventaire.rst
+   carte-mere-mono-synthese.rst
+   carte-mere-mono-soudure.rst
+   carte-mere-mono-tests.rst

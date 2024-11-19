@@ -26,7 +26,7 @@ Socles de sorties
 
 Si vous avez besoin de plus de deux sorties triac et/ou relais, vous pouvez souder directement les socles **D5 à D9**.
 
-.. include:: alim-3_3.rst
+.. include:: alim-3_3.inc.rst
 
 Ponts ou *jumpers*
 ------------------

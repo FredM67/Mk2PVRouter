@@ -26,7 +26,7 @@ Socles de sorties
 .. warning::
    Les emplacements **D2 et D5 à D13** ne sont pas utilisables, car ces pins sont utilisés par l'afficheur ainsi que le module RF !
 
-.. include:: alim-3_3.rst
+.. include:: alim-3_3.inc.rst
 
 Ponts ou *jumpers*
 ------------------

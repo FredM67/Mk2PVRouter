@@ -1,15 +1,19 @@
 .. _carte-mere-mono-inventaire:
 
 Inventaire complet des composants
----------------------------------
+=================================
 
 Ci-dessous, vous découvrirez la liste complète des composants qui pourraient être inclus dans votre kit.
 
 | Il est important de noter que votre kit ne contiendra pas tous ces composants simultanément, car il est techniquement impossible d'intégrer toutes les fonctionnalités disponibles dans un seul et même kit.
 | Seulement certaines combinaisons de composants sont réalisables.
 
+.. contents:: Sommaire
+   :local:
+   :depth: 1
+   
 Résistances
-^^^^^^^^^^^
+-----------
 
 Ces composants n'ont pas de sens et sont très peu sensibles à l'électricité statique.
 
@@ -51,7 +55,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
    En cas de fonctionnement en **5 V**, cette valeur doit être augmentée à **470 Ω** pour maintenir un niveau de luminosité similaire.
 
 Diodes
-^^^^^^
+------
 
 Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les :term:`CT`\s.
 
@@ -61,7 +65,7 @@ Celles-ci offrent un certain degré de protection au processeur lorsque des cour
    Ils doivent être placés selon le repérage sur la couche sérigraphiée.
 
 Supports :term:`DIL` pour circuits intégrés
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------
 
 | Les deux supports repérés **IC1** et **IC2** seront toujours présents. Ce sont ceux utilisés pour placer le microcontrôleur Atmega328P, le coeur du système, ainsi que l'amplificateur opérationnel qui permet d'obtenir des tensions stables nécessaires au fonctionnement du routeur.
 
@@ -105,7 +109,7 @@ Ici, l'un des :term:`PCB` d'origine est présenté avec uniquement ces supports 
    Ainsi, chaque fois que l'option *pin-saving hardware* doit être utilisée, le processeur doit fonctionner à **5 V**.
 
 Condensateurs céramiques et oscillateur
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------
 
 Ces composants ne sont pas polarisés.
 
@@ -124,7 +128,7 @@ Les condensateurs céramiques sont en général orange, et ont la forme d'une go
    | Pour ce faire, on pourra utiliser une allumette le temps d'effectuer la soudure.
 
 Pont redresseur ou pont de diodes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 | Le rôle de ce composant est de redresser le courant alternatif fourni par le transformateur.
 | C'est la première étape nécessaire pour obtenir une alimentation en courant continu.
@@ -148,7 +152,7 @@ La broche la plus longue correspond au **+**.
 Comme pour l'oscillateur, il est courant de le souder légèrement au-dessus du :term:`PCB`.
 
 Connecteurs SIL/Molex
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 | Les connecteurs type Molex sont *polarisés*, ils possèdent un détrompeur.
 | Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviront à la connexion d'autres composants ou modules polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
@@ -157,13 +161,13 @@ Connecteurs SIL/Molex
 | Il permet de brancher la carte USB-:term:`FTDI` qui servira à la programmation du routeur.
 
 Inductance
-^^^^^^^^^^
+----------
 
 Ce composant, repéré **L2**, n'est pas polarisé.
 Son rôle est de filtrer la source de courant qui servira ensuite de référence pour les mesures.
 
 Condensateurs électrolytiques
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 Les deux condensateurs électrolytiques, **C1** et **C2**, sont polarisés et doivent donc être installés dans le bon sens.
 La broche **-ve** est indiquée par une bande proéminente, en général blanche, sur toute la longueur du composant.
@@ -179,7 +183,7 @@ L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la 
    Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
 
 Connecteurs secteur et porte-fusible
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------
 
 | Le connecteur secteur repéré **TB1** recevra l’alimentation électrique 230 V.
 | Cette alimentation permettra à la fois d'alimenter la carte-mère, mais aussi la prise de mesure de la tension du secteur.
@@ -196,7 +200,7 @@ Si cela se produit, le plastique peut être soigneusement coupé avec un couteau
 Le porte-fusible, accompagné de son fusible de **100 mA**, est simple à mettre en place.
 
 Régulateur·s de tension
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 | Le régulateur de tension **VR1** doit être positionné de manière à ce que son ailette métallique soit éloignée du transformateur, comme indiqué sur la sérigraphie.
 | En fonction de l'application, le **VR1** sera une version **3,3 V** ou **5 V**.
@@ -208,12 +212,12 @@ Régulateur·s de tension
 Le régulateur de tension **VR2** se présente sous la forme habituelle d'un transistor, soit un cylindre noir avec un méplat.
 
 Varistance
-^^^^^^^^^^
+----------
 
 Ce composant non polarisé et repéré **RV1**, est une protection contre les surtensions qui pourraient venir du réseau électrique.
 
 Transformateur
-^^^^^^^^^^^^^^
+--------------
 
 Le dernier composant à installer est le transformateur. Il s'agit d'un transformateur double **6 V** comme indiqué sur la couche sérigraphiée.
 Un transformateur de **6 V** peut prendre en charge un régulateur de tension de **3,3 V** ou de **5 V**.
@@ -222,7 +226,7 @@ Un transformateur de **6 V** peut prendre en charge un régulateur de tension d
    Lors de l'installation de ce composant, assurez-vous qu'il n'y ait aucun espace entre la base du transformateur et la carte de circuit imprimé :term:`PCB`.
 
 Le module radiofréquence ou module RF
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 Ce module de type RFM12B ou RFM69 existe sous plusieurs fréquences. Il permettra de faire communiquer deux cartes-mères distantes via radio.
 

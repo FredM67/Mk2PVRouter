@@ -1,7 +1,7 @@
 .. _carte-mere-mono-soudure:
 
 Soudure
--------
+=======
 
 .. hint::
    | Après chaque étape, vérifiez soigneusement les soudures effectuées (l'utilisation d'une loupe peut faciliter cette vérification).

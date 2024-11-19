@@ -1,7 +1,7 @@
 .. _carte-mere-mono-synthese:
 
 Synthèse
---------
+========
 
 Voici l'inventaire spécifique à chaque configuration :
 

@@ -1,7 +1,7 @@
 .. _carte-mere-mono-tests:
 
 Tests
------
+=====
 
 À ce stade, tous les composants ont été soudés sur la carte mère.
 
