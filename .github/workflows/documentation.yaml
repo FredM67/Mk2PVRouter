@@ -24,6 +24,15 @@ jobs:
           fetch-depth: 0
           lfs: true
 
+      - name: Cache drawio
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/drawio
+          key: ${{ runner.os }}-drawio-${{ hashFiles('**/drawio-amd64-*.deb') }}
+          restore-keys: |
+            ${{ runner.os }}-drawio-
+            ${{ runner.os }}-
+
       - name: Install drawio
         run: |
           sudo apt-get update
