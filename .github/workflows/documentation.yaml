@@ -36,7 +36,7 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v5
         with:
-          python-version: '>=3.10' 
+          python-version: '>=3.12' 
 
       # https://docs.github.com/en/actions/guides/building-and-testing-python#caching-dependencies
       # ^-- How to set up caching for pip on Ubuntu
@@ -86,7 +86,7 @@ jobs:
           # float
     
       # Build
-      - uses: ammaraskar/sphinx-problem-matcher@master
+      - uses: sphinx-doc/github-problem-matcher@master
       - name: Build Sphinx documentation
         run: |
           make dirhtml
