@@ -1,4 +1,4 @@
-.. _conmnecteur-nappe:
+.. _connecteur-nappe:
 
 Connecteur pour nappe
 ---------------------
