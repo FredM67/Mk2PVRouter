@@ -27,7 +27,7 @@ jobs:
       - name: Cache drawio
         uses: actions/cache@v4
         with:
-          path: /usr/local/bin/drawio
+          path: /usr/bin/drawio
           key: ${{ runner.os }}-drawio-${{ hashFiles('**/drawio-amd64-*.deb') }}
           restore-keys: |
             ${{ runner.os }}-drawio-
