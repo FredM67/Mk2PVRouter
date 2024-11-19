@@ -49,7 +49,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    introduction.md
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Kit monophasé
    :hidden:
 
