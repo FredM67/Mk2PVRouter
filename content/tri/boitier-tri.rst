@@ -3,5 +3,4 @@
 Préparation du boîtier
 ----------------------
 
-.. include:: ../common/boitier.md
-   :parser: myst_parser.sphinx_
+.. include:: ../common/boitier.inc.rst

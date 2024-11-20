@@ -3,5 +3,4 @@
 Dissipateur
 -----------
 
-.. include:: ../common/dissipateur.md
-   :parser: myst_parser.sphinx_    
+.. include:: ../common/dissipateur.inc.rst
