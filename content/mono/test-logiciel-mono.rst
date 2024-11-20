@@ -15,8 +15,8 @@ Tests logiciel
     :local:
     :depth: 1
 
-.. include:: test-logiciel-mono-requirements.rst
+.. include:: test-logiciel-mono-requirements.inc.rst
 
-.. include:: carte-mere-mono-test-afficheur.rst
+.. include:: carte-mere-mono-test-afficheur.inc.rst
 
-.. include:: test-mono-mesures.rst
+.. include:: test-mono-mesures.inc.rst

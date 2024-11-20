@@ -1,5 +1,3 @@
-.. _test-mono-mesures:
-
 Test de la partie *mesures*
 ---------------------------
 

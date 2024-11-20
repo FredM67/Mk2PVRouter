@@ -1,5 +1,3 @@
-.. _carte-mere-mono-test-afficheur:
-
 Test de la partie *afficheur*
 -----------------------------
 
@@ -10,6 +8,8 @@ Pour cela, nous aurons besoin d'un croquis spécifique qui sera téléchargé da
 .. contents:: Sommaire
    :local:
    :depth: 1
+
+.. _test-logiciel-mono-display-requirements:
 
 Pré-requis
 ^^^^^^^^^^

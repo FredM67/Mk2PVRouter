@@ -5,10 +5,12 @@ Les boîtiers utilisés pour ce routeur sont de type industriel, fabriqués en A
 Ils sont conformes aux normes de sécurité industrielles.
 
 En fonction du nombre de sorties à contrôler, deux références peuvent être fournies :
+
 * Thalassa **NSYTBS24198** : ce boîtier convient pour les configurations à **1** ou **2** sorties, pouvant être installées en mode portrait ou paysage.
 * Thalassa **NSYTBS29248** : ce boîtier convient pour les configurations à **3** ou **4** sorties, à installer **uniquement en mode portrait**.
 
 Il y a peu de contraintes à respecter, voici la liste :
+
 * Le **presse-étoupe** doit être installé sur le **côté inférieur** pour protéger contre la poussière et les éventuels ruissellements.
 * Le·s **dissipateur·s** doit·vent être installé·s sur le·s côté·s **vertical·aux**. C'est **impératif** pour assurer un bon refroidissement.
 
@@ -51,8 +53,7 @@ Outils nécessaires
 Perçage pour le·s dissipateur·s
 -------------------------------
 
-  Veuillez vous référer à la section :ref:`percage-du-boitier`.
-
+Veuillez vous référer à la section :ref:`percage-du-boitier`.
 
 Perçage pour chaque étage de sortie triac
 -----------------------------------------
@@ -81,7 +82,7 @@ Vu du dessus, il est possible de pointer le futur perçage à l'endroit le plus 
 Pour percer, l'étage de sortie doit être retiré.
 Le perçage doit être effectué avec un foret de **3 mm** de diamètre.
 
-Pour ajuster la hauteur de la carte de sortie, un plot en plastique de 10 mm de haut est installé à l'aide d'une vis M3 en plastique.
+Pour ajuster la hauteur de la carte de sortie, un plot en plastique de **10 mm** de haut est installé à l'aide d'une vis **M3** en plastique.
 
 .. figure:: ../img/Entretoise-sortie.png
    :alt: Plot
@@ -105,4 +106,4 @@ En utilisant la même méthode, vous pouvez marquer et percer le boîtier aux di
    
    Pointage carte mère
 
-Pour éviter qu'elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de 10 mm de hauteur est installé à l'aide d'une vis M4 sur tous les trous percés, de la même manière que pour l'étage de sortie.
+Pour éviter qu'elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de **10 mm** de hauteur est installé à l'aide d'une vis **M4** sur tous les trous percés, de la même manière que pour l'étage de sortie.
