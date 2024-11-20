@@ -8,14 +8,14 @@ Lorsqu'il s'agit de contrôler un appareil contenant de l'électronique, l'utili
 Une sortie relais *tout-ou-rien* est composée d'une bobine qui, lorsqu'elle est alimentée en tension, génère un champ magnétique. Ce champ magnétique actionne un levier qui ferme un contact, permettant ainsi le passage du courant électrique. Lorsque la tension n'est plus appliquée à la bobine, un ressort ou un système similaire ramène le contact en position ouverte, ce qui interrompt le circuit et coupe le courant.
 
 Avantages pour les Appareils Électroniques
-------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **Isolation Galvanique** : La commande par relais *tout-ou-rien* offre une isolation galvanique entre le circuit de commande (la bobine) et le circuit de puissance (les contacts). Cette séparation est essentielle pour protéger les composants électroniques sensibles des hautes tensions et des interférences potentielles.
 * **Compatibilité avec Diverses Charges** : Contrairement aux sorties triac, qui sont optimales pour les charges résistives et peuvent présenter des problèmes avec des charges inductives ou capacitives, les relais peuvent commuter de manière fiable des appareils électroniques qui possèdent des alimentations à découpage, des moteurs, ou des composants inductifs sans risque de dysfonctionnement.
 * **Pas de Semi-Conduction** : Les sorties triac sont des dispositifs semi-conducteurs qui peuvent conduire partiellement, créant des situations où un appareil électronique pourrait recevoir une tension insuffisante ou erratique. Les relais, en revanche, offrent une commutation nette et complète, ce qui est préférable pour les appareils électroniques nécessitant une alimentation stable.
 
 Considérations Techniques
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Les cartes-relais que nous utilisons ne sont pas conçues pour commuter des charges de grande puissance.
 En effet, chaque action de commutation (passage de **fermé** à **ouvert**, ou d'**ouvert** à **fermé**) peut potentiellement créer un arc électrique entre les contacts du relais.
@@ -28,11 +28,11 @@ C'est pourquoi ces cartes-relais doivent être utilisées **uniquement** pour co
    Ne pas utiliser ces cartes-relais pour commander directement un appareil.
 
 Assemblage
-----------
+~~~~~~~~~~
 
 Les cartes-relais sont fournies entièrement assemblées.
 
 Elles seront fixées à l'aide de 4 vis **M3**, généralement au fond du boîtier. Pour éviter que le circuit imprimé de la carte ne soit en contact direct avec le boîtier, 4 entretoises seront utilisées.
 
 Test
-----
+~~~~
