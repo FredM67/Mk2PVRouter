@@ -29,7 +29,7 @@ Lorsque la valeur correcte a été trouvée pour ``powerCal_grid``, cette même 
 ----------------------
 
 Ayant obtenu la valeur correcte pour ``powerCal_grid``, le canal *grid* peut ensuite être utilisé pour étalonner le canal *diverted power* qui utilise **CT2**. |br|
-À cette fin, le matériel en cours de test doit exécuter le programme cal_CT2_v_CT1.ino, qui est disponible sur la page de téléchargements. |br|
+À cette fin, le matériel en cours de test doit exécuter le programme ``cal_CT2_v_CT1.ino``, qui est disponible sur la page de téléchargements. |br|
 Le paramètre ``powerCal_grid`` doit être réglé à la valeur correcte comme déterminé précédemment dans la première partie de ce processus.
 
 Les deux **CTs** devraient être montés autour du même fil porteur de courant. Si **CT2** a été intégré dans un système complet, le commutateur de marche forcée peut être utilisé pour forcer le courant à travers ce câblage. |br|
