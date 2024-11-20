@@ -1,3 +1,6 @@
+Préparation du boîtier
+======================
+
 Les boîtiers utilisés pour ce routeur sont de type industriel, fabriqués en ABS avec un retardateur de flamme.
 Ils sont conformes aux normes de sécurité industrielles.
 
@@ -14,7 +17,7 @@ Pour le reste — témoins LED, etc. — ils peuvent être montés n'importe où
 Cependant, ce guide décrira l'implantation la plus classique.
 
 Étapes à réaliser
-~~~~~~~~~~~~~~~~~
+-----------------
 
 * Perçage pour le·s dissipateur·s
   Vous devrez percer 2 trous de **3 mm** de diamètre et un autre de **35 mm** de diamètre.
@@ -35,7 +38,7 @@ Cependant, ce guide décrira l'implantation la plus classique.
   Vous devrez percer un trou de **13 mm** de diamètre.
 
 Outils nécessaires
-~~~~~~~~~~~~~~~~~~
+------------------
 
 * une perceuse à colonne si possible, sinon n'importe quelle perceuse.
 * Foret de **3 mm**
@@ -46,13 +49,13 @@ Outils nécessaires
 
 
 Perçage pour le·s dissipateur·s
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
   Veuillez vous référer à la section :ref:`perçage_du_boitier`.
 
 
 Perçage pour chaque étage de sortie triac
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------
 
 Le triac de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boitier.
 L'étage de sortie doit aussi être fixé au fond du boitier à la bonne hauteur pour être en accord avec le point de fixation du triac.
@@ -88,7 +91,7 @@ Pour ajuster la hauteur de la carte de sortie, un plot en plastique de 10 mm de
    Plot
 
 Perçage pour la carte-mère
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 Une fois les étages de sortie correctement positionnés, vous pouvez placer la carte-mère de manière à ne pas entraver les futurs branchements et autres équipements.
 En utilisant la même méthode, vous pouvez marquer et percer le boîtier aux dimensions appropriées.

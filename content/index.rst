@@ -46,7 +46,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 .. toctree::
    :hidden:
 
-   introduction.md
+   introduction
 
 .. toctree::
    :maxdepth: 3
@@ -59,8 +59,8 @@ Bienvenue dans la documentation du Mk2PVRouter !
    mono/carte-sortie-relais-mono
    mono/dissipateur-mono
    common/confection-cables
-   mono/assemblage-mono.md
-   mono/etalonnage-mono.md
+   mono/assemblage-mono
+   mono/etalonnage-mono
    
 .. toctree::
    :maxdepth: 3
@@ -68,14 +68,14 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :hidden:
 
    tri/boitier-tri
-   tri/carte-mere-tri.md
+   tri/carte-mere-tri
    tri/carte-sortie-tri
    tri/carte-sortie-relais-tri
    tri/dissipateur-tri
    common/confection-cables
-   tri/assemblage-tri.md
+   tri/assemblage-tri
    tri/test-logiciel-tri
-   tri/etalonnage-tri.md
+   tri/etalonnage-tri
 
 .. toctree::
    :caption: Glossaire

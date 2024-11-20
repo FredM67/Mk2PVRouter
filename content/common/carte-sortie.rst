@@ -1,7 +1,14 @@
 .. _carte-sortie:
 
+Étage de sortie
+===============
+
 | Le triac, également connu sous le nom de triode pour courant alternatif, appartient à la catégorie des thyristors et sert d'interrupteur semi-conducteur. Il a la capacité unique de gérer le courant dans les deux directions, ce qui le rend idéal pour les applications utilisant du courant alternatif (AC).
 | Utilisé pour ajuster la puissance fournie à des dispositifs purement résistifs comme des radiateurs, des chauffe-eau ou des lampes à incandescence, le triac permet de moduler avec précision l'énergie distribuée. Cela offre un contrôle fin sur le niveau de chaleur ou d'éclairage produit.
+
+.. contents:: Sommaire
+   :local:
+   :depth: 1
 
 Principe de Fonctionnement d'une Sortie Triac
 ---------------------------------------------
@@ -180,7 +187,7 @@ Triac
 
 De la même manière, ce composant peut être maintenu provisoirement en place en pliant légèrement les agrafes en cuivre pour qu'elles pincent les broches saillantes.
 
-Seuls 1 à 2 mm des pattes du triac devraient dépasser.
+Seuls **1** à **2 mm** des pattes du triac devraient dépasser.
 
 Pour faciliter cette opération et aussi pour protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l'un des dissipateurs non encore monté que vous avez à disposition. Vous pouvez utiliser une pince à linge ou toute autre pince à ressort.
 
