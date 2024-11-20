@@ -21,7 +21,7 @@ Cependant, ce guide décrira l'implantation la plus classique.
 
 * Perçage pour le·s dissipateur·s
   Vous devrez percer 2 trous de **3 mm** de diamètre et un autre de **35 mm** de diamètre.
-  Voir :ref:`perçage_du_boitier`.
+  Voir :ref:`percage-du-boitier`.
 * Perçage pour le ou les étage·s de sortie·s triac
   Vous devrez percer 1 trou de **3 mm** de diamètre.
 * Perçage pour la carte-mère
@@ -51,7 +51,7 @@ Outils nécessaires
 Perçage pour le·s dissipateur·s
 -------------------------------
 
-  Veuillez vous référer à la section :ref:`perçage_du_boitier`.
+  Veuillez vous référer à la section :ref:`percage-du-boitier`.
 
 
 Perçage pour chaque étage de sortie triac
@@ -89,6 +89,8 @@ Pour ajuster la hauteur de la carte de sortie, un plot en plastique de 10 mm de
    :scale: 25%
    
    Plot
+
+.. _percage-carte-mere:
 
 Perçage pour la carte-mère
 --------------------------

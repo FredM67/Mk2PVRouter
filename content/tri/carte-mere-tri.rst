@@ -31,7 +31,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 * **R1** = **47 kΩ**. Cela fournit le :term:`pull-up` pour la ligne de réinitialisation du processeur.
 * **R2-R4** = **100 Ω** ou **180 Ω**. Elles réduisent la taille du signal :term:`AC` de chaque transformateur.
 * **R5-R7** = **1 kΩ**. Elles réduisent la taille du signal :term:`AC` de chaque transformateur.
-* **R8-R10** = **120 Ω** ou **150 Ω** en général. Il s'agit des résistances de charge (ou :term:`burden`*) de chaque capteur de courant *grille*, qui utilisent :term:`CT`\1 - :term:`CT`\3.
+* **R8-R10** = **120 Ω** ou **150 Ω** en général. Il s'agit des résistances de charge (ou :term:`burden`) de chaque capteur de courant *grille*, qui utilisent :term:`CT`\1 - :term:`CT`\3.
 * **R11-R12** = **10 kΩ**. Ensemble, elles fournissent une tension de référence pour les capteurs d'entrée.
 * **R19-R21** = **1 kΩ**. Elles sont chacune en série avec un :term:`CT` pour protéger le processeur des signaux importants.
 * **R22** = **1 MΩ**. Cela fournit le :term:`pull-up` pour la ligne de réinitialisation du processeur.
@@ -130,7 +130,7 @@ La broche la plus longue correspond au **+**.
 Comme pour l'oscillateur, il est courant de les souder légèrement au-dessus du :term:`PCB`.
 
 .. tip::
-   On pourra "recycler" 2 des pattes coupées pour réaliser les :ref:`Ponts de neutre<carte-mere-tri:Ponts de neutre>`.
+   On pourra "recycler" 2 des pattes coupées pour réaliser les :ref:`ponts-de-neutre`.
 
 Connecteurs SIL/Molex
 ~~~~~~~~~~~~~~~~~~~~~
@@ -168,6 +168,8 @@ L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la 
 
    Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
 
+.. _ponts-de-neutre:
+
 Ponts de neutre
 ~~~~~~~~~~~~~~~
 
@@ -176,7 +178,7 @@ Les deux ponts sont référencés "**N**", entre les transformateurs. |br|
 De cette façon, il ne sera pas nécessaire d'introduire un fil de neutre dans chaque connecteur secteur, un seul suffira.
 
 .. warning::
-   Pour un raccordement triphasé **sans** neutre, essentiellement le 3 * 230 V en **Belgique**, il ne faudra pas souder ces ponts.
+   Pour un raccordement triphasé **sans** neutre, essentiellement le **3 * 230 V** en **Belgique**, il ne faudra pas souder ces ponts.
 
 .. hint::
    Pour réaliser ces ponts, on pourra utiliser le reliquat des pattes coupées de l'inductance.
@@ -238,7 +240,7 @@ Si tout a été correctement assemblé, la sortie de l'alimentation devrait êtr
 Cette tension peut être facilement vérifiée au niveau du point de test **Test VCC**, ainsi que **Test GND**, comme indiqué ici.
 
 .. hint::
-   N'oubliez pas de mettre votre multimètre sur la position *courant continu*, :term:`DC`, symbole **⎓* !
+   N'oubliez pas de mettre votre multimètre sur la position *courant continu*, :term:`DC`, symbole **⎓** !
 
 À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.
 

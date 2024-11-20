@@ -11,6 +11,8 @@ Il s'agit d'une pièce en aluminium dotée d'ailettes, ce qui augmente la surfac
 
 Étant donné la taille du dissipateur, il est recommandé de ne pas connecter plus de 3 kW à chaque sortie.
 
+.. _percage-du-dissipateur:
+
 Perçage du dissipateur
 ----------------------
 
@@ -34,7 +36,7 @@ Le gabarit sera placé sur la face pleine du dissipateur.
 
 L'utilisation d'une perceuse à colonne est recommandée.
 
-.. _perçage_du_boitier:
+.. _percage-du-boitier:
 
 Perçage du boîtier
 ------------------
