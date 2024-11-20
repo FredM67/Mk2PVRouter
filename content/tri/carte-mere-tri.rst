@@ -62,19 +62,18 @@ Ensuite, les diodes peuvent être ajoutées.
 
 Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les CTs.
 
-```{attention}
-Ces composants sont polarisés. |br|
-Ils doivent être placés selon le repérage sur la couche sérigraphiée.
-```
+.. attention::
+
+   Les diodes sont polarisées. |br|
+   Elles doivent être placées selon le repérage sur la couche sérigraphiée.
 
 Supports circuits intégrés
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ensuite, on installe généralement les supports pour les circuits intégrés.
 
-```{attention}
-Chaque support a une encoche à une extrémité. Celle-ci doit être alignée avec la marque correspondante sur la couche sérigraphiée, comme indiqué ici.
-```
+.. attention::
+   Chaque support a une encoche à une extrémité. Celle-ci doit être alignée avec la marque correspondante sur la couche sérigraphiée, comme indiqué ici.
 
 Avec le support convenablement soutenu par le bas (on peut aussi utiliser un morceau d'adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place. |br|
 Si un réalignement du composant est nécessaire, il doit être effectué **avant** que les broches restantes ne soient fixées.
@@ -86,19 +85,17 @@ Ces composants ne sont pas polarisés.
 
 Les condensateurs céramiques sont en général orange, et ont la forme d'une goutte d'eau, par opposition aux condensateurs électrolytiques polarisés de forme cylindriques et bleus ou noirs.
 
-```{note}
-Parmi le jeu de condensateurs céramiques, deux d'entre eux sont plus petits que les autres.
+.. note::
+   Parmi le jeu de condensateurs céramiques, deux d'entre eux sont plus petits que les autres.
 
-Il s'agit des deux condensateurs associés à l'oscillateur, leur valeur est de **22 pF** et sont référencés **C10** et **C11**.
+   Il s'agit des deux condensateurs associés à l'oscillateur, leur valeur est de **22 pF** et sont référencés **C10** et **C11**.
 
-**C4** et **C6-C9** sont des condensateurs céramiques de **100 nF**, généralement marqués *104*.
-```
+   **C4** et **C6-C9** sont des condensateurs céramiques de **100 nF**, généralement marqués *104*.
 
-```{note}
-L'oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du :term:`PCB`. |br|
-Ce n'est pas nécessaire pour le bon fonctionnement. |br|
-Pour ce faire, on pourra utiliser une allumette le temps d'effectuer la soudure.
-```
+.. note::
+   L'oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du :term:`PCB`. |br|
+   Ce n'est pas nécessaire pour le bon fonctionnement. |br|
+   Pour ce faire, on pourra utiliser une allumette le temps d'effectuer la soudure.
 
 Ponts redresseurs ou ponts de diodes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,35 +106,31 @@ C'est la première étape nécessaire pour obtenir une alimentation en courant c
 Sur la figure ci-après, la courbe du haut correspond à la tension fournie par le transformateur. |br|
 La courbe du bas est la tension fournie par le redresseur.
 
-```{figure} ../img/Redresseur-monophase.png
-:alt: Redressement double alternance monophasé
-:align: center
-:scale: 50%
+.. figure:: ../img/Redresseur-monophase.png
+   :alt: Redressement double alternance monophasé
+   :align: center
+   :scale: 50%
 
-Redressement double alternance monophasé
-```
+   Redressement double alternance monophasé
 
 Sur la version triphasée de ce routeur, ils sont au nombre de trois, un par phase. |br|
 
-```{note}
-Il aurait été possible de réaliser un redresseur double alternance triphasé. Ce type de redresseur ne nécessite que six diodes.
-Il y a cependant deux inconvénients :
-- un tel composant est relativement cher, plus de 3x de prix d'un redresseur standard.
-- la tension moyenne résultante est plus de 2 fois la tension moyenne de chaque entrée. Cela engendre un surcroît de "*travail*" du régulateur de tension qui chauffera bien plus.
-```
+.. note::
+   Il aurait été possible de réaliser un redresseur double alternance triphasé. Ce type de redresseur ne nécessite que six diodes.
+   Il y a cependant deux inconvénients :
+   * un tel composant est relativement cher, plus de 3x de prix d'un redresseur standard.
+   * la tension moyenne résultante est plus de 2 fois la tension moyenne de chaque entrée. Cela engendre un surcroît de "*travail*" du régulateur de tension qui chauffera bien plus.
 
-```{attention}
-Ces composants sont polarisés. |br|
-Il faudra bien veiller à faire correspondre le marquage sur le boîtier avec celui de la couche sérigraphiée.
-```
+.. attention::
+   Les ponts redresseurs sont polarisés. |br|
+   Il faudra bien veiller à faire correspondre le marquage sur le boîtier avec celui de la couche sérigraphiée.
 
 La broche la plus longue correspond au **+**.
 
 Comme pour l'oscillateur, il est courant de les souder légèrement au-dessus du :term:`PCB`.
 
-```{tip}
-On pourra "recycler" 2 des pattes coupées pour réaliser les {ref}`Ponts de neutre<carte-mere-tri:Ponts de neutre>`.
-```
+.. tip::
+   On pourra "recycler" 2 des pattes coupées pour réaliser les {ref}`Ponts de neutre<carte-mere-tri:Ponts de neutre>`.
 
 Connecteurs SIL/Molex
 ~~~~~~~~~~~~~~~~~~~~~
@@ -148,10 +141,11 @@ Physiquement, ce sont des composants passifs, mais étant donné qu'ils serviron
 Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n'importe quel sens.
 
 Ils seront plus ou moins nombreux selon la configuration :
-- 3 connecteurs à **2 pôles** pour les pinces ampèremétriques, référencés *:term:`CT`1-:term:`CT`3*
-- 1 connecteur à **2 pôles** pour le bouton *reset*, référencé **Reset**
-- 1 connecteur à **6 pôles** pour le connecteur :term:`FTDI`, référencé **FTDI**
-- 1 connecteur à **2 pôles** par sortie, référencé parmi **D3-D13**.
+
+* 3 connecteurs à **2 pôles** pour les pinces ampèremétriques, référencés :term:`CT`\1 - :term:`CT`\3
+* 1 connecteur à **2 pôles** pour le bouton *reset*, référencé **Reset**
+* 1 connecteur à **6 pôles** pour le connecteur :term:`FTDI`, référencé **FTDI**
+* 1 connecteur à **2 pôles** par sortie, référencé parmi **D3-D13**.
 
 Inductance
 ~~~~~~~~~~
@@ -166,14 +160,13 @@ La broche **-ve** est indiquée par une bande proéminente, en général blanche
 
 L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la couche sérigraphiée.
 
-```{attention}
-Bien qu’ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
+.. attention::
+   Bien qu’ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
 
-Le plus grand condensateur (**C1** = **100 μF**) est le plus proche du bord du :term:`PCB`. |br|
-Le plus petit (**C2** = **10 μF**) est le plus proche de **VR1**.
+   Le plus grand condensateur (**C1** = **100 μF**) est le plus proche du bord du :term:`PCB`. |br|
+   Le plus petit (**C2** = **10 μF**) est le plus proche de **VR1**.
 
-Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
-```
+   Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
 
 Ponts de neutre
 ~~~~~~~~~~~~~~~
@@ -182,13 +175,11 @@ Pour un raccordement triphasé **avec** neutre (en France et la plupart des pays
 Les deux ponts sont référencés "**N**", entre les transformateurs. |br|
 De cette façon, il ne sera pas nécessaire d'introduire un fil de neutre dans chaque connecteur secteur, un seul suffira.
 
-```{warning}
-Pour un raccordement triphasé **sans** neutre, essentiellement le 3 * 230 V en **Belgique**, il ne faudra pas souder ces ponts.
-```
+.. warning::
+   Pour un raccordement triphasé **sans** neutre, essentiellement le 3 * 230 V en **Belgique**, il ne faudra pas souder ces ponts.
 
-```{hint}
-Pour réaliser ces ponts, on pourra utiliser le reliquat des pattes coupées de l'inductance.
-```
+.. hint::
+   Pour réaliser ces ponts, on pourra utiliser le reliquat des pattes coupées de l'inductance.
 
 Connecteurs secteur et porte-fusible
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -215,9 +206,8 @@ Transformateurs
 Les derniers composants à installer sont les transformateurs. Ce sont des transformateurs doubles de **6 V**, comme indiqué sur la couche sérigraphiée.
 Ces transformateurs de **6 V** peuvent alimenter un régulateur de tension de **3,3 V** ou de **5 V**.
 
-```{important}
-Lors du montage de ces composants, il ne doit y avoir aucun espace entre la base du transformateur et la carte de circuit imprimé :term:`PCB`.
-```
+.. important::
+   Lors du montage de ces composants, il ne doit y avoir aucun espace entre la base du transformateur et la carte de circuit imprimé :term:`PCB`.
 
 -------------
 
@@ -228,16 +218,16 @@ Une fois les transformateurs en place, la carte est maintenant prête pour les t
 
 C'est le bon moment pour vérifier que tous les joints soudés sont en bon état et que toutes les éclaboussures de soudure ont été éliminées.
 
-### Test de chaque sous-alimentation
+Test de chaque sous-alimentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Avant d'installer les circuits intégrés, le fonctionnement de l'alimentation doit être vérifié.
 
-```{danger}
-**Alerte de sécurité**
-Pour poursuivre cette séquence de construction, un accès à la tension secteur **230 V** est requis.
+.. danger::
+   **Alerte de sécurité**
+   Pour poursuivre cette séquence de construction, un accès à la tension secteur **230 V** est requis.
 
-Veuillez ne pas passer à cette étape suivante à moins que vous soyez compétent pour le faire.
-```
+   Veuillez ne pas passer à cette étape suivante à moins que vous soyez compétent pour le faire.
 
 Nous effectuerons les tests suivants en alimentant le routeur via chacun des connecteurs secteur, l'un après l'autre. |br|
 Ainsi, si une tension est incorrecte, il sera plus facile d'identifier la partie du circuit qui est défectueuse.
@@ -246,9 +236,8 @@ Si tout a été correctement assemblé, la sortie de l’alimentation devrait ê
 
 Cette tension peut être facilement vérifiée au niveau du point de test **Test VCC**, ainsi que **Test GND**, comme indiqué ici.
 
-```{hint}
-N'oubliez pas de mettre votre multimètre sur la position *courant continu*, *:term:`DC`**, symbole **⎓* !
-```
+.. hint::
+   N'oubliez pas de mettre votre multimètre sur la position *courant continu*, :term:`DC`, symbole **⎓* !
 
 À l'exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d'augmentation notable de la température.
 
@@ -267,9 +256,8 @@ Pour minimiser les risques de dommages électriques, cette opération doit être
 
 Avec les broches bien alignées, le circuit intégré peut être délicatement placé sur son connecteur, comme indiqué ici.
 
-```{warning}
-Les circuits intégrés doivent être installés dans le bon sens. Le point sur la puce doit être aligné avec l'encoche de l'image sérigraphiée.
-```
+.. warning::
+   Les circuits intégrés doivent être installés dans le bon sens. Le point sur la puce doit être aligné avec l'encoche de l'image sérigraphiée.
 
 Une fois que tout a été soigneusement vérifié, la puce peut être enfoncée fermement.
 
@@ -284,9 +272,8 @@ Insertion du processeur principal
 Le processeur principal, **ATmega328-P**, est installé de la même manière que pour **LM358**, toujours après avoir coupé l'alimentation.
 Avec autant de broches, il est très facile pour l’une d’entre elles de se plier en dessous.
 
-```{caution}
-Si ce circuit intégré est dans le mauvais sens lors de la mise sous tension, il ne fonctionnera probablement plus jamais !
-```
+.. caution::
+   Si ce circuit intégré est dans le mauvais sens lors de la mise sous tension, il ne fonctionnera probablement plus jamais !
 
 .. |br| raw:: html
 
