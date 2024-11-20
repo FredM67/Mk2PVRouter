@@ -40,7 +40,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 
    Pour un système **5 V**, la valeur originale de **150 Ω** donne une plage de fonctionnement d'environ **6 kW**.
 
-   Si un enregistrement de données dans toute la maison est nécessaire, la plage de travail du capteur *grille* peut être augmentée en réduisant la valeur de R6. Il faut toutefois reconnaître que la sensibilité du système de mesure sera réduite d’autant.
+   Si un enregistrement de données dans toute la maison est nécessaire, la plage de travail du capteur *grille* peut être augmentée en réduisant la valeur de R6. Il faut toutefois reconnaître que la sensibilité du système de mesure sera réduite d'autant.
    
    * **R6** = **56 Ω** permettra des mesures jusqu'à **~10 kW**
    * **R6** = **47 Ω** permettra des mesures jusqu'à **~12 kW**
@@ -175,7 +175,7 @@ La broche **-ve** est indiquée par une bande proéminente, en général blanche
 L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la couche sérigraphiée.
 
 .. attention::
-   Bien qu’ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
+   Bien qu'ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
 
    | Le plus grand condensateur (**C1** = **100 μF**) est le plus proche du pont redresseur.
    | Le plus petit (**C2** = **10 μF**) est le plus proche de **IC2**.
@@ -185,7 +185,7 @@ L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la 
 Connecteurs secteur et porte-fusible
 ------------------------------------
 
-| Le connecteur secteur repéré **TB1** recevra l’alimentation électrique 230 V.
+| Le connecteur secteur repéré **TB1** recevra l'alimentation électrique 230 V.
 | Cette alimentation permettra à la fois d'alimenter la carte-mère, mais aussi la prise de mesure de la tension du secteur.
 
 | Le porte-fusible repéré **FS1** peuvent maintenant être installés.

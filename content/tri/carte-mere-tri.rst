@@ -5,7 +5,7 @@ Carte-mère triphasée
 
 Plusieurs versions du :term:`PCB` peuvent exister.
 
-Bien qu'elles fonctionnent toutes de la même manière, chaque nouvelle version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l’Arduino, …).
+Bien qu'elles fonctionnent toutes de la même manière, chaque nouvelle version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d'accès des entrées/sorties de l'Arduino, …).
 
 .. hint::
    | Après chaque étape, il conviendra de vérifier les soudures effectuées (l'utilisation d'une loupe facilitera la vérification).
@@ -130,7 +130,7 @@ La broche la plus longue correspond au **+**.
 Comme pour l'oscillateur, il est courant de les souder légèrement au-dessus du :term:`PCB`.
 
 .. tip::
-   On pourra "recycler" 2 des pattes coupées pour réaliser les {ref}`Ponts de neutre<carte-mere-tri:Ponts de neutre>`.
+   On pourra "recycler" 2 des pattes coupées pour réaliser les :ref:`Ponts de neutre<carte-mere-tri:Ponts de neutre>`.
 
 Connecteurs SIL/Molex
 ~~~~~~~~~~~~~~~~~~~~~
@@ -161,7 +161,7 @@ La broche **-ve** est indiquée par une bande proéminente, en général blanche
 L'autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur la couche sérigraphiée.
 
 .. attention::
-   Bien qu’ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
+   Bien qu'ils se ressemblent assez, il est important que ces deux condensateurs soient installés aux bons endroits.
 
    Le plus grand condensateur (**C1** = **100 μF**) est le plus proche du bord du :term:`PCB`. |br|
    Le plus petit (**C2** = **10 μF**) est le plus proche de **VR1**.
@@ -225,6 +225,7 @@ Avant d'installer les circuits intégrés, le fonctionnement de l'alimentation d
 
 .. danger::
    **Alerte de sécurité**
+
    Pour poursuivre cette séquence de construction, un accès à la tension secteur **230 V** est requis.
 
    Veuillez ne pas passer à cette étape suivante à moins que vous soyez compétent pour le faire.
@@ -232,7 +233,7 @@ Avant d'installer les circuits intégrés, le fonctionnement de l'alimentation d
 Nous effectuerons les tests suivants en alimentant le routeur via chacun des connecteurs secteur, l'un après l'autre. |br|
 Ainsi, si une tension est incorrecte, il sera plus facile d'identifier la partie du circuit qui est défectueuse.
 
-Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ **3,3 V**… ou **5 V** si un régulateur de tension **5 V** a été installé.
+Si tout a été correctement assemblé, la sortie de l'alimentation devrait être d'environ **3,3 V**… ou **5 V** si un régulateur de tension **5 V** a été installé.
 
 Cette tension peut être facilement vérifiée au niveau du point de test **Test VCC**, ainsi que **Test GND**, comme indiqué ici.
 
@@ -246,7 +247,7 @@ Insertion du LM358 et test de Vref
 
 Avec la tension correcte en place, les circuits intégrés peuvent maintenant être installés, après avoir coupé l'alimentation.
 
-Le premier d’entre eux est LM358. |br|
+Le premier d'entre eux est LM358. |br|
 Il s'agit d'un amplificateur opérationnel qui fournit une tension de référence intermédiaire pour les capteurs de tension et de courant.
 
 Avec les packs Dual-in-Line, les broches devront peut-être être légèrement pliées vers l'intérieur pour s'insérer dans l'embase.
@@ -270,7 +271,7 @@ Insertion du processeur principal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le processeur principal, **ATmega328-P**, est installé de la même manière que pour **LM358**, toujours après avoir coupé l'alimentation.
-Avec autant de broches, il est très facile pour l’une d’entre elles de se plier en dessous.
+Avec autant de broches, il est très facile pour l'une d'entre elles de se plier en dessous.
 
 .. caution::
    Si ce circuit intégré est dans le mauvais sens lors de la mise sous tension, il ne fonctionnera probablement plus jamais !

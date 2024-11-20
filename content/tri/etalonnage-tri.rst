@@ -100,7 +100,7 @@ Cette méthode nécessite un appareil de mesure, type wattmètre ou un autre com
 
 .. danger::
    **ALERTE SÉCURITÉ**
-   Potentiellement, selon l'appareil utilisé, il faudra modifier le câblage électrique. Avant toutes manipulations, il est impératif de couper l'alimentation au tableau électrique et de vérifier à l'aide d'un testeur de tension l’absence effective de tension.
+   Potentiellement, selon l'appareil utilisé, il faudra modifier le câblage électrique. Avant toutes manipulations, il est impératif de couper l'alimentation au tableau électrique et de vérifier à l'aide d'un testeur de tension l'absence effective de tension.
    Dans le doute, couper le disjoncteur principal.
 
 Pour cette méthode, le simple sera d'utiliser le chauffe-eau lui-même comme appareil d'étalonnage.
