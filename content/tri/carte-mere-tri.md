@@ -46,7 +46,7 @@ Ces valeurs de résistance de charge s'appliquent lorsque le processeur fonction
 Ces puissances s'entendent sur chaque phase.
 
 ```{eval-rst}
-.. include:: ../common/burden-calc.rst
+.. include:: ../common/burden-calc.inc.rst
 ```
 `````
 

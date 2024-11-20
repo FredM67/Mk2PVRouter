@@ -1,5 +1,3 @@
-.. _module-rf:
-
 Module radiofréquence
 ---------------------
 

@@ -1,5 +1,3 @@
-.. _burden-calc:
-
 .. exercise:: Un peu de mathématiques
    :class: dropdown
 

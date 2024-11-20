@@ -1,5 +1,3 @@
-.. _connecteur-nappe:
-
 Connecteur pour nappe
 ---------------------
 

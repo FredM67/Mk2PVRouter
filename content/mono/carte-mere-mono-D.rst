@@ -21,7 +21,7 @@ Socles de sorties
 | Deux sorties sont natives sur les programmes standards du routeur MK2.
 | Les emplacements **D3** et **D4** les représentent.
 
-.. include:: ../common/sorties.rst
+.. include:: ../common/sorties.inc.rst
 
 .. warning::
    Les emplacements **D2 et D5 à D13** ne sont pas utilisables, car ces pins sont utilisés par l'afficheur ainsi que le module RF !
@@ -50,8 +50,8 @@ Résistances
 
    Si la carte mère est utilisée en mode récepteur radiofréquence, alors la résistance **R8** ne doit pas être soudée !
 
-.. include:: ic3-ic4.rst
+.. include:: ic3-ic4.inc.rst
    
-.. include:: connecteur-nappe.rst
+.. include:: connecteur-nappe.inc.rst
    
-.. include:: ../common/module-rf.rst
+.. include:: ../common/module-rf.inc.rst

@@ -48,7 +48,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 
    Ces valeurs de résistance de charge s'appliquent lorsque le processeur fonctionne à **3,3 V**. S'il fonctionne à **5 V**, ces plages sont augmentées d'environ **50 %**.
 
-   .. include:: ../common/burden-calc.rst
+   .. include:: ../common/burden-calc.inc.rst
 
    **R11 - R18** sont les résistances série pour l'affichage à 4 chiffres.
    Si la carte doit fonctionner à **3,3 V**, ces huit résistances doivent être de **220 Ω**.
