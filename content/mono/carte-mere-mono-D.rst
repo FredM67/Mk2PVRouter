@@ -3,10 +3,10 @@
 Composants de la configuration D
 ================================
 
-| Cette section décrit l'assemblage d'un routeur équipé d'un émetteur ou récepteur radiofréquence. Cette option permet de contrôler une ou plusieurs charges à distance.
+| Cette section décrit l’assemblage d’un routeur équipé d’un émetteur ou récepteur radiofréquence. Cette option permet de contrôler une ou plusieurs charges à distance.
 | 
-| Le montage peut inclure de 0 à 2 sorties triac et/ou relais locales, ainsi qu'un afficheur à 7 segments avec des modules d'économie de broches.
-| La tension d'alimentation de la carte-mère doit être de **5 V**, un régulateur de tension approprié est fourni à cet effet.
+| Le montage peut inclure de 0 à 2 sorties triac et/ou relais locales, ainsi qu’un afficheur à 7 segments avec des modules d’économie de broches.
+| La tension d’alimentation de la carte-mère doit être de **5 V**, un régulateur de tension approprié est fourni à cet effet.
 | 
 | Le module radiofréquence doit être alimenté en **3,3 V**.
 | Pour cela, nous abaissons la tension pour la partie alimentation de la carte RF en ajoutant un régulateur de tension supplémentaire.
@@ -24,7 +24,7 @@ Socles de sorties
 .. include:: ../common/sorties.inc.rst
 
 .. warning::
-   Les emplacements **D2 et D5 à D13** ne sont pas utilisables, car ces pins sont utilisés par l'afficheur ainsi que le module RF !
+   Les emplacements **D2 et D5 à D13** ne sont pas utilisables, car ces pins sont utilisés par l’afficheur ainsi que le module RF !
 
 .. include:: ../common/alim-3_3.inc.rst
 
@@ -39,11 +39,11 @@ Dans le seul cas où la carte-mère est utilisée en **récepteur**, le *jumper*
 Résistances
 -----------
 
-| Associez les résistances fournies dans le kit aux emplacements indiqués sur la couche sérigraphiée. Il n'y a pas de polarité à respecter.
+| Associez les résistances fournies dans le kit aux emplacements indiqués sur la couche sérigraphiée. Il n’y a pas de polarité à respecter.
 | Les résistances à souder sont **R11 à R18**.
 
 .. note::
-   Si le système dispose d'une alimentation secondaire en **3,3 V**, un jeu de 6 résistances, repérées **R21 à R26**, devra être soudé aux emplacements correspondants.
+   Si le système dispose d’une alimentation secondaire en **3,3 V**, un jeu de 6 résistances, repérées **R21 à R26**, devra être soudé aux emplacements correspondants.
 
 .. admonition:: Rappel
    :class: warning

@@ -12,11 +12,11 @@ En fonction du nombre de sorties à contrôler, deux références peuvent être 
 Il y a peu de contraintes à respecter, voici la liste :
 
 * Le **presse-étoupe** doit être installé sur le **côté inférieur** pour protéger contre la poussière et les éventuels ruissellements.
-* Le·s **dissipateur·s** doit·vent être installé·s sur le·s côté·s **vertical·aux**. C'est **impératif** pour assurer un bon refroidissement.
+* Le·s **dissipateur·s** doit·vent être installé·s sur le·s côté·s **vertical·aux**. C’est **impératif** pour assurer un bon refroidissement.
 
-Pour le reste — témoins LED, etc. — ils peuvent être montés n'importe où, selon vos préférences !
+Pour le reste — témoins LED, etc. — ils peuvent être montés n’importe où, selon vos préférences !
 
-Cependant, ce guide décrira l'implantation la plus classique.
+Cependant, ce guide décrira l’implantation la plus classique.
 
 Étapes à réaliser
 -----------------
@@ -32,7 +32,7 @@ Cependant, ce guide décrira l'implantation la plus classique.
   Vous devrez percer des trous de **20 mm** de diamètre.
 * Perçage pour le·s prise·s jack
   Vous devrez percer des trous de **8 mm** de diamètre.
-* Perçage pour le·s témoin·s LED et pour l'afficheur 4 Digits (**Uniquement** pour le routeur **monophasé**)
+* Perçage pour le·s témoin·s LED et pour l’afficheur 4 Digits (**Uniquement** pour le routeur **monophasé**)
   Vous devrez percer des trous de **8 mm** de diamètre.
 * Perçage pour le bouton *marche* (**Uniquement** pour le routeur **monophasé**)
   Vous devrez percer un trou de **20 mm** de diamètre.
@@ -42,7 +42,7 @@ Cependant, ce guide décrira l'implantation la plus classique.
 Outils nécessaires
 ------------------
 
-* une perceuse à colonne si possible, sinon n'importe quelle perceuse.
+* une perceuse à colonne si possible, sinon n’importe quelle perceuse.
 * Foret de **3 mm**
 * Foret de **4 mm**
 * Foret de **8 mm**
@@ -59,11 +59,11 @@ Perçage pour chaque étage de sortie triac
 -----------------------------------------
 
 Le triac de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boitier.
-L'étage de sortie doit aussi être fixé au fond du boitier à la bonne hauteur pour être en accord avec le point de fixation du triac.
+L’étage de sortie doit aussi être fixé au fond du boitier à la bonne hauteur pour être en accord avec le point de fixation du triac.
 
-Pour ce faire, il faut fixer le dissipateur sur le boitier préalablement préparé et fixé l'étage de sortie sur celui-ci par l'intermédiaire du triac.
+Pour ce faire, il faut fixer le dissipateur sur le boitier préalablement préparé et fixé l’étage de sortie sur celui-ci par l’intermédiaire du triac.
 
-Vu du dessus, il est possible de pointer le futur perçage à l'endroit le plus adéquat dans le trou oblong.
+Vu du dessus, il est possible de pointer le futur perçage à l’endroit le plus adéquat dans le trou oblong.
 
 .. figure:: ../img/Pointage-sortie-side.jpg
    :alt: Fixation dissipateur / étage de sortie
@@ -79,10 +79,10 @@ Vu du dessus, il est possible de pointer le futur perçage à l'endroit le plus 
 
    Pointage
 
-Pour percer, l'étage de sortie doit être retiré.
+Pour percer, l’étage de sortie doit être retiré.
 Le perçage doit être effectué avec un foret de **3 mm** de diamètre.
 
-Pour ajuster la hauteur de la carte de sortie, un plot en plastique de **10 mm** de haut est installé à l'aide d'une vis **M3** en plastique.
+Pour ajuster la hauteur de la carte de sortie, un plot en plastique de **10 mm** de haut est installé à l’aide d’une vis **M3** en plastique.
 
 .. figure:: ../img/Entretoise-sortie.png
    :alt: Plot
@@ -106,4 +106,4 @@ En utilisant la même méthode, vous pouvez marquer et percer le boîtier aux di
    
    Pointage carte mère
 
-Pour éviter qu'elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de **10 mm** de hauteur est installé à l'aide d'une vis **M4** sur tous les trous percés, de la même manière que pour l'étage de sortie.
+Pour éviter qu’elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de **10 mm** de hauteur est installé à l’aide d’une vis **M4** sur tous les trous percés, de la même manière que pour l’étage de sortie.

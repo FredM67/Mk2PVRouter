@@ -3,7 +3,7 @@
 Confection des câbles
 =====================
 
-Il conviendra d'apporter un soin tout particulier pour la confection des multiples câbles nécessaires.
+Il conviendra d’apporter un soin tout particulier pour la confection des multiples câbles nécessaires.
 
 Voici la liste des câbles dont nous aurons besoin :
 
@@ -11,7 +11,7 @@ Voici la liste des câbles dont nous aurons besoin :
 * câble relié au bouton *reset* (uniquement triphasé)
 * câble de contrôle (un par étage de sortie)
 * câble de témoin LED (un par étage de sortie et/ou sortie relais).
-* câbles d'alimentation (uniquement version monophasé)
+* câbles d’alimentation (uniquement version monophasé)
 * fil de mise à la terre (un par dissipateur)
 
 .. note::
@@ -20,7 +20,7 @@ Voici la liste des câbles dont nous aurons besoin :
 .. admonition:: Conseil
 
    Les câbles très basse tension sont composés de 2 fils tressés.
-   Il est **fortement** recommandé de se fixer une convention de couleur, selon le contenu du kit et/ou les câbles que l'on utilisera de son propre stock.
+   Il est **fortement** recommandé de se fixer une convention de couleur, selon le contenu du kit et/ou les câbles que l’on utilisera de son propre stock.
    
    Par exemple :
 
@@ -30,7 +30,7 @@ Voici la liste des câbles dont nous aurons besoin :
 Fil de mise à la terre
 ----------------------
 
-Ce sont des fils passifs qui permettront d'assurer la sécurité des personnes en cas de défaut d'isolation d'un ou plusieurs triacs.
+Ce sont des fils passifs qui permettront d’assurer la sécurité des personnes en cas de défaut d’isolation d’un ou plusieurs triacs.
 
 .. admonition:: Longueurs conseillées
 
@@ -48,7 +48,7 @@ Câbles prise·s jack
 -------------------
 
 Ces câbles serviront à transmettre les mesures prises par la ou les pinces ampèremétriques (ou capteur de courant).
-Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'apparition de parasites.
+Il conviendra donc d’y apporter le plus grand soin, afin de minimiser l’apparition de parasites.
 
 .. admonition:: Longueurs conseillées
 
@@ -76,7 +76,7 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
 Câble·s de contrôle
 -------------------
 
-Ce sont des fils *actifs* qui permettront d'envoyer les commandes d'ouverture et fermeture aux triacs.
+Ce sont des fils *actifs* qui permettront d’envoyer les commandes d’ouverture et fermeture aux triacs.
 
 .. admonition:: Longueurs conseillées
 
@@ -111,11 +111,11 @@ Ce sont des fils *actifs* qui permettront d'envoyer les commandes d'ouverture et
 Câble·s de témoin·s LED
 -----------------------
 
-Ce sont des fils *actifs* qui sont repiqués sur la commande de l'étage de sortie et permettent de visualiser l'état de chaque sortie :
+Ce sont des fils *actifs* qui sont repiqués sur la commande de l’étage de sortie et permettent de visualiser l’état de chaque sortie :
 * **allumé** => le courant passe (triac **fermé**)
 * **éteint** => le courant ne passe pas (triac **ouvert**).
 
-Les longueurs indiquées permettent d'ouvrir le couvercle et de le déposer sur le dessus du boîtier sans qu'aucun fil ne soit tendu.
+Les longueurs indiquées permettent d’ouvrir le couvercle et de le déposer sur le dessus du boîtier sans qu’aucun fil ne soit tendu.
 Bien sûr, il est possible de faire des câbles plus courts, ou plus longs !
 
 .. admonition:: Longueurs conseillées

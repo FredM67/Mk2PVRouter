@@ -3,7 +3,7 @@
 Ordre de soudure
 ----------------
 
-| Il est fortement recommandé de suivre l'ordre de soudure indiqué.
+| Il est fortement recommandé de suivre l’ordre de soudure indiqué.
 |
 | Cela vous vous épargnera des soucis par rapport au maintien des composants lors de la soudure.
 | En effet, les composants à souder sont insérés sur la face *avant* du circuit imprimé, tandis que la soudure se fait sur la face *arrière*.
@@ -11,7 +11,7 @@ Ordre de soudure
 | 
 | Si vous soudez un composant haut en premier, par exemple un transformateur, tous les autres composants auront tendance à tomber lorsque vous retournerez le circuit imprimé pour les souder.
 
-Voici l'ordre de soudure recommandé :
+Voici l’ordre de soudure recommandé :
 
 #. *jumper·s*,
 #. résistances,
@@ -26,7 +26,7 @@ Voici l'ordre de soudure recommandé :
 #. socles de CTs et socle·s de sortie,
 #. condensateurs électrolytiques polarisés,
 #. fusibles,
-#. connecteur·s d'alimentation,
+#. connecteur·s d’alimentation,
 #. varistance·s,
 #. régulateur de tension,
 #. transformateur·s

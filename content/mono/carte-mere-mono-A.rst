@@ -3,8 +3,8 @@
 Composants de la configuration A
 ================================
 
-| Cette section décrit l'assemblage d'un routeur pouvant comporter de 1 à 12 sorties triac et/ou relais.
-| Les options d'afficheur à 7 segments et de radiofréquence ne sont pas prises en charge.
+| Cette section décrit l’assemblage d’un routeur pouvant comporter de 1 à 12 sorties triac et/ou relais.
+| Les options d’afficheur à 7 segments et de radiofréquence ne sont pas prises en charge.
 
 .. hint::
    Pour avoir une option sortie relais avec un afficheur une seconde carte mère peut être installée.
@@ -25,7 +25,7 @@ Socles de sorties
 .. include:: ../common/sorties.inc.rst
 
 .. warning::
-   L'utilisation des autres emplacements de sortie nécessitera la modification des programmes standards.
+   L’utilisation des autres emplacements de sortie nécessitera la modification des programmes standards.
 
 Si vous avez besoin de plus de deux sorties triac et/ou relais, vous pouvez souder directement les socles **D5 à D9**.
 
@@ -34,4 +34,4 @@ Si vous avez besoin de plus de deux sorties triac et/ou relais, vous pouvez soud
 Résistances
 -----------
 
-Aucune résistance n'est nécessaire.
+Aucune résistance n’est nécessaire.

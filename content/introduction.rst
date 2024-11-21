@@ -3,7 +3,7 @@
 Introduction
 ============
 
-| Cette documentation est applicable à toutes les versions du Mk2PVRouter, qu'elles soient monophasées ou triphasées.
+| Cette documentation est applicable à toutes les versions du Mk2PVRouter, qu’elles soient monophasées ou triphasées.
 | La majorité des informations sont pertinentes pour les deux versions.
 | Chaque version a son propre chapitre.
 
@@ -17,14 +17,14 @@ Dans le kit, vous trouverez :
 * le circuit imprimé (:term:`PCB`) de la carte-mère
 * un ou plusieurs circuits imprimés pour chaque sortie
 * des composants électroniques (résistances, condensateurs, …). |br|
-  Attention, certains sont sensibles à l'électricité statique, il faut donc les manipuler avec soin.
+  Attention, certains sont sensibles à l’électricité statique, il faut donc les manipuler avec soin.
 * un boîtier
 * des câbles
 
-Étapes d'assemblage
+Étapes d’assemblage
 -------------------
 
-L'assemblage complet va nécessiter plusieurs étapes :
+L’assemblage complet va nécessiter plusieurs étapes :
 
 * soudure et tests de la carte-mère
 * soudure et tests de la ou les cartes de sortie
@@ -39,31 +39,31 @@ L'assemblage complet va nécessiter plusieurs étapes :
 Recommandations pour les étapes de soudure
 ------------------------------------------
 
-Les composants nécessaires sont très variés. Certains sont passifs (comme les résistances), tandis que d'autres sont actifs (comme l'AtMega328P).
-Tous ces composants sont généralement sensibles à l'électricité statique.
+Les composants nécessaires sont très variés. Certains sont passifs (comme les résistances), tandis que d’autres sont actifs (comme l’AtMega328P).
+Tous ces composants sont généralement sensibles à l’électricité statique.
 Il est donc important de les manipuler avec soin et, si possible, de se mettre à la terre pour éviter toute décharge électrostatique.
 
-Certains composants sont polarisés (comme les diodes et certains condensateurs), tandis que d'autres ne le sont pas (comme les résistances et certains condensateurs). Il est donc crucial de faire attention à l'orientation des composants AVANT de les souder. L'orientation est généralement indiquée directement sur la carte mère.
+Certains composants sont polarisés (comme les diodes et certains condensateurs), tandis que d’autres ne le sont pas (comme les résistances et certains condensateurs). Il est donc crucial de faire attention à l’orientation des composants AVANT de les souder. L’orientation est généralement indiquée directement sur la carte mère.
 
 Les composants varient également en taille, allant de quelques millimètres à plusieurs centimètres (dans le cas des transformateurs).
 
 Pour des raisons pratiques, il est recommandé de procéder à la soudure en suivant un ordre précis basé sur la taille des composants.
 
-Ainsi, l'ordre de soudure recommandé est le suivant :
+Ainsi, l’ordre de soudure recommandé est le suivant :
 
 #. Résistances et diodes, et éventuellement les ponts
 #. Supports IC1 et IC2 (et éventuellement IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports à ce stade)
 #. Condensateurs non polarisés "orange", oscillateur
 #. Pont·s de diodes
-#. Tous les connecteurs SIL noirs et le connecteur d'affichage, le cas échéant
+#. Tous les connecteurs SIL noirs et le connecteur d’affichage, le cas échéant
 #. Condensateurs polarisés (noirs ou bleus)
-#. Le socle pour l'antenne, le cas échéant
+#. Le socle pour l’antenne, le cas échéant
 #. Les gros connecteurs "haute tension"
 #. Les porte-fusibles
 #. Les régulateurs de tension
 #. Enfin, les transformateurs
 
-Suivre cette séquence précise permet d'éviter de tordre les pattes des composants ou d'avoir à utiliser de l'adhésif, entre autres.
+Suivre cette séquence précise permet d’éviter de tordre les pattes des composants ou d’avoir à utiliser de l’adhésif, entre autres.
 
 Matériels nécessaires
 ---------------------
@@ -76,7 +76,7 @@ Matériels nécessaires
 * clé plate ou douille de **5,5**
 * clé plate de **10**
 * clé six pans de **2** et **2,5**
-* une perceuse à colonne si possible, sinon n'importe quelle perceuse.
+* une perceuse à colonne si possible, sinon n’importe quelle perceuse.
 * foret métal de **3 mm**
 * foret métal de **4 mm**
 * foret (bois ou métal) de **8 mm**

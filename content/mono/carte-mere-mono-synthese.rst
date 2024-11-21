@@ -3,7 +3,7 @@
 Synthèse
 ========
 
-Voici l'inventaire spécifique à chaque configuration :
+Voici l’inventaire spécifique à chaque configuration :
 
 * :ref:`A <carte-mere-mono-A>` : 1 à 12 sorties triac et/ou relais, **sans afficheur**, **sans module RF**
 * :ref:`B <carte-mere-mono-B>` : 1 à 2 sorties triac et/ou relais, **avec afficheur**, **sans module RF**

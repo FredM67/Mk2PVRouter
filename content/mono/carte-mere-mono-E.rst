@@ -3,9 +3,9 @@
 Composants de la configuration E
 ================================
 
-| Cette section décrit l'assemblage d'un routeur équipé d'un émetteur ou récepteur radiofréquence, permettant de contrôler une ou plusieurs charges à distance.
+| Cette section décrit l’assemblage d’un routeur équipé d’un émetteur ou récepteur radiofréquence, permettant de contrôler une ou plusieurs charges à distance.
 | 
-| Ce montage peut inclure de 0 à 7 sorties triac et/ou relais. La tension d'alimentation du système doit être de **3,3 V**.
+| Ce montage peut inclure de 0 à 7 sorties triac et/ou relais. La tension d’alimentation du système doit être de **3,3 V**.
 
 .. contents:: Sommaire
    :local:
@@ -22,7 +22,7 @@ Socles de sorties
 .. include:: ../common/sorties.inc.rst
 
 .. warning::
-   L'utilisation des autres emplacements de sortie nécessitera la modification des programmes standards.
+   L’utilisation des autres emplacements de sortie nécessitera la modification des programmes standards.
 
 Si vous avez besoin de plus de deux sorties triac et/ou relais, vous pouvez souder directement les socles **D5 à D9**.
 
@@ -41,7 +41,7 @@ Selon le mode de fonctionnement, des *jumpers* différents devront être soudés
 Résistances
 -----------
 
-Aucune résistance n'est nécessaire.
+Aucune résistance n’est nécessaire.
 
 .. include:: connecteur-nappe.inc.rst
 
