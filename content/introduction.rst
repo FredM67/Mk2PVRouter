@@ -39,11 +39,11 @@ L’assemblage complet va nécessiter plusieurs étapes :
 Recommandations pour les étapes de soudure
 ------------------------------------------
 
-Les composants nécessaires sont très variés. Certains sont passifs (comme les résistances), tandis que d’autres sont actifs (comme l’AtMega328P).
+Les composants électroniques nécessaires sont très divers. Certains sont passifs (comme les résistances), tandis que d’autres sont actifs (comme l’AtMega328P).
 Tous ces composants sont généralement sensibles à l’électricité statique.
-Il est donc important de les manipuler avec soin et, si possible, de se mettre à la terre pour éviter toute décharge électrostatique.
+Il est donc essentiel de les manipuler avec soin et, si possible, de se mettre à la terre pour éviter toute décharge électrostatique.
 
-Certains composants sont polarisés (comme les diodes et certains condensateurs), tandis que d’autres ne le sont pas (comme les résistances et certains condensateurs). Il est donc crucial de faire attention à l’orientation des composants AVANT de les souder. L’orientation est généralement indiquée directement sur la carte mère.
+Certains composants sont polarisés (comme les diodes et certains condensateurs), tandis que d’autres ne le sont pas (comme les résistances et d’autres condensateurs). Il est donc crucial de faire attention à l’orientation des composants AVANT de les souder. L’orientation est généralement indiquée directement sur la carte mère.
 
 Les composants varient également en taille, allant de quelques millimètres à plusieurs centimètres (dans le cas des transformateurs).
 
@@ -55,13 +55,13 @@ Ainsi, l’ordre de soudure recommandé est le suivant :
 #. Supports IC1 et IC2 (et éventuellement IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports à ce stade)
 #. Condensateurs non polarisés "orange", oscillateur
 #. Pont·s de diodes
+#. Les fusibles
 #. Tous les connecteurs SIL noirs et le connecteur d’affichage, le cas échéant
 #. Condensateurs polarisés (noirs ou bleus)
 #. Le socle pour l’antenne, le cas échéant
-#. Les gros connecteurs "haute tension"
-#. Les porte-fusibles
-#. Les régulateurs de tension
-#. Enfin, les transformateurs
+#. Le gros connecteur "haute tension"
+#. Le·s régulateur·s de tension
+#. Enfin, le·s transformateur·s
 
 Suivre cette séquence précise permet d’éviter de tordre les pattes des composants ou d’avoir à utiliser de l’adhésif, entre autres.
 
