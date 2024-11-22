@@ -49,7 +49,7 @@ Il faudra aller par tâtonnement. Si le flash du routeur est plus rapide que cel
 
 Il est possible également de relever la consommation affichée par le compteur sur la phase en cours d’étalonnage.
 Il faudra alors faire correspondre la puissance affichée par le routeur dans le Moniteur Série de l’Arduino IDE avec celle affichée par le compteur.
-D’où l’intérêt de ne pas avoir d’appareils qui vont se mettre en route sporadiquement (réfrigérateur, …).
+D’où l’intérêt de ne pas avoir d’appareils qui vont se mettre en route sporadiquement (réfrigérateur…).
 
 L’affichage dans le Moniteur Série se présente de comme ceci : ::
 

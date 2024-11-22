@@ -28,7 +28,7 @@
 
    :math:`I_{RMS}` correspond à l’intensité efficace.
 
-   Pour un appareil purement résistif (chauffe-eau, …), nous avons :math:`P_{RMS} = V_{RMS} \times I_{RMS}`.
+   Pour un appareil purement résistif (chauffe-eau…), nous avons :math:`P_{RMS} = V_{RMS} \times I_{RMS}`.
 
    Exemple pour un chauffe-eau de **3000 W**, nous aurons donc :
    
