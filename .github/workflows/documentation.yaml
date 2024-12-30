@@ -39,9 +39,6 @@ jobs:
           sudo apt-get -y install wget curl
           curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep `dpkg --print-architecture` | grep '\.deb' | cut -d '"' -f 4 | wget -i -
           sudo apt-get -f install ./drawio-amd64-*.deb
-          cd /opt/drawio/
-          sudo chown root chrome-sandbox
-          sudo chmod 4755 chrome-sandbox
 
       # https://github.com/marketplace/actions/setup-python
       # ^-- This gives info on matrix testing.
