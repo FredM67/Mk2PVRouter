@@ -51,7 +51,8 @@ imgmath_image_format = 'svg'
 imgmath_embed = True
 
 drawio_builder_export_format = {"simplepdf": "png"}
-drawio_no_sandbox = True
+#drawio_no_sandbox = True
+drawio_disable_verbose_electron = True
 
 # hoverxref_roles = [
 #     'term',
