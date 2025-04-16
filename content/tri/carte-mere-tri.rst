@@ -129,17 +129,20 @@ La broche la plus longue correspond au **+**.
 
 Comme pour l’oscillateur, il est courant de les souder légèrement au-dessus du :term:`PCB`.
 
-Connecteurs secteur et porte-fusible
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Fusibles
+~~~~~~~~
 
-Les connecteurs secteur (**PWR1-PWR3**) et les fusibles (**FS1-FS3**) peuvent maintenant être installés. |br|
+Les fusibles sont simples à mettre en place. Ils sont repérés **FS1-FS3**. |br|
+Cependant, il faudra veiller à ne pas trop les chauffer lors de la soudure, car ils risqueraient de fondre à l’intérieur. |br|
+En effet, c’est le principe même de fonctionnement d'un fusible !
+
+Connecteur secteur
+~~~~~~~~~~~~~~~~~~
+
+Le connecteur secteur et les fusibles (**FS1-FS3**) peuvent maintenant être installés. |br|
 En raison des pistes du plan masse, les broches référencées **PE** sur chacun des connecteurs nécessitera plus de chaleur que les autres broches.
 Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage. |br|
 Il est très facile de se tromper de sens !
-
-Les fusibles sont simples à mettre en place. |br|
-Cependant, il faudra veiller à ne pas trop les chauffer lors de la soudure, car ils risqueraient de fondre à l’intérieur. |br|
-En effet, c’est le principe même de fonctionnement d'un fusible !
 
 Connecteurs SIL/Molex
 ~~~~~~~~~~~~~~~~~~~~~
@@ -176,6 +179,12 @@ L’autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur l
    Le plus petit (**C2** = **10 μF**) est le plus proche de **VR1**.
 
    Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
+
+Varistances
+~~~~~~~~~~~
+
+Les varistances sont des composants de protection contre les surtensions. |br|
+Elles sont repérées **VR1**, **VR2** et **VR3**. Elles ne sont pas polarisées et peuvent être installées dans n’importe quel sens.
 
 Régulateur de tension
 ~~~~~~~~~~~~~~~~~~~~~
