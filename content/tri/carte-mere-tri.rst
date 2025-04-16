@@ -129,8 +129,17 @@ La broche la plus longue correspond au **+**.
 
 Comme pour l’oscillateur, il est courant de les souder légèrement au-dessus du :term:`PCB`.
 
-.. tip::
-   On pourra "recycler" 2 des pattes coupées pour réaliser les :ref:`ponts-de-neutre`.
+Connecteurs secteur et porte-fusible
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Les connecteurs secteur (**PWR1-PWR3**) et les fusibles (**FS1-FS3**) peuvent maintenant être installés. |br|
+En raison des pistes du plan masse, les broches référencées **PE** sur chacun des connecteurs nécessitera plus de chaleur que les autres broches.
+Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage. |br|
+Il est très facile de se tromper de sens !
+
+Les fusibles sont simples à mettre en place. |br|
+Cependant, il faudra veiller à ne pas trop les chauffer lors de la soudure, car ils risqueraient de fondre à l’intérieur. |br|
+En effet, c’est le principe même de fonctionnement d'un fusible !
 
 Connecteurs SIL/Molex
 ~~~~~~~~~~~~~~~~~~~~~
@@ -167,31 +176,6 @@ L’autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur l
    Le plus petit (**C2** = **10 μF**) est le plus proche de **VR1**.
 
    Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
-
-.. _ponts-de-neutre:
-
-Ponts de neutre
-~~~~~~~~~~~~~~~
-
-Pour un raccordement triphasé **avec** neutre (en France et la plupart des pays européens), il est possible de ponter le neutre entre chacune des 3 sous-alimentations. |br|
-Les deux ponts sont référencés "**N**", entre les transformateurs. |br|
-De cette façon, il ne sera pas nécessaire d’introduire un fil de neutre dans chaque connecteur secteur, un seul suffira.
-
-.. warning::
-   Pour un raccordement triphasé **sans** neutre, essentiellement le **3 * 230 V** en **Belgique**, il ne faudra pas souder ces ponts.
-
-.. hint::
-   Pour réaliser ces ponts, on pourra utiliser le reliquat des pattes coupées de l’inductance.
-
-Connecteurs secteur et porte-fusible
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Les connecteurs secteur (**PWR1-PWR3**) et les porte-fusible (**FS1-FS3**) peuvent maintenant être installés. |br|
-En raison des pistes du plan masse, les broches référencées **PE** sur chacun des connecteurs nécessitera plus de chaleur que les autres broches.
-Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage. |br|
-Il est très facile de se tromper de sens !
-
-Les porte-fusible, accompagnés de leur fusible de **100 mA**, sont simples à mettre en place.
 
 Régulateur de tension
 ~~~~~~~~~~~~~~~~~~~~~
