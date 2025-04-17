@@ -10,13 +10,13 @@ Les composants électroniques ne sont jamais parfaits. Ils ont chacun des caract
 
 Pour un étalonnage précis, une certaine forme de référence standard est nécessaire. Le compteur d’électricité installé peut souvent être utilisé à cette fin.
 
-La plupart des compteurs d’électricité génèrent un flux d’impulsions optiques pour indiquer le taux de consommation d’énergie. En plaçant un transformateur de courant :term:`CT` autour de l’un des câbles d’alimentation entrants, et en exécutant le logiciel approprié sur le matériel en cours de test, un flux d’impulsions optiques similaire peut être généré.
+La plupart des compteurs d’électricité génèrent un flux d’impulsions optiques pour indiquer le taux de consommation d’énergie. En plaçant un transformateur de courant :term:`CT` autour de l’un des câbles d’alimentation entrants, et en exécutant le logiciel approprié sur le matériel en cours de test, un flux d’impulsions optiques similaire peut être généré.
 
 Le taux du flux d’impulsions pour le matériel en cours de test peut être ajusté en modifiant la valeur ``f_powerCal`` pertinente. Lorsque les deux flux d’impulsions sont synchronisés, l’étalonnage correct a été atteint.
 
 .. admonition:: Ligne de mesure
 
-   Ensemble des composants constituants la prise de mesure. Elle part de l’Arduino jusqu’à la pince ampèremétrique en passant par les résistances, connecteurs et les câbles.
+   Ensemble des composants constituant la prise de mesure. Elle part de l’Arduino jusqu’à la pince ampèremétrique en passant par les résistances, connecteurs et les câbles.
 
 .. admonition:: Pré-requis
 
@@ -27,7 +27,7 @@ Principe de base
 
 Cet étalonnage peut être réalisé selon plusieurs méthodes, selon que l’on possède ou non certains appareils de mesure (ampèremètre, wattmètre, voltmètre).
 
-Pour simplifier la procédure, peu importe la méthode utilisée, il faudra veiller, si possible, à avoir une consommation constante pendant la phase d’étalonnage (brancher par exemple un radiateur électrique, une bouilloire, et débrancher tout le reste, y compris votre/vos système·s de production d’électricité).
+Pour simplifier la procédure, il est important d’avoir une consommation constante pendant l’étalonnage. Par exemple, branchez un radiateur électrique ou une bouilloire et débranchez tout le reste, y compris votre/vos système·s de production d’électricité.
 L’utilisation d’un appareil purement résistif, donc sans ventilateur ni autre chose qu’une résistance, simplifiera grandement l’étalonnage.
 
 Méthode avec le compteur de distribution
@@ -38,9 +38,9 @@ Cette méthode ne nécessite aucun appareil de mesure, mais n’est pas la plus 
 À l’aide des flash du compteur (1 flash = 1 Wh consommé)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La plupart des compteurs génèrent un flux d’impulsions optiques pour montrer le taux auquel l’énergie est consommée. En installant un :term:`CT` autour de l’un des câbles d’alimentation entrants et en exécutant le logiciel approprié sur le matériel testé, un flux similaire d’impulsions optiques peut être généré.
+La plupart des compteurs génèrent un flux d’impulsions optiques pour montrer le taux auquel l’énergie est consommée. En installant un :term:`CT` autour de l’un des câbles d’alimentation entrants et en exécutant le logiciel approprié sur le routeur, un flux similaire d’impulsions optiques peut être généré.
 
-Le débit du flux d’impulsions pour le matériel testé peut être ajusté en modifiant la valeur ``f_powerCal`` correspondante. Lorsque les deux flux d’impulsions sont synchronisés, un étalonnage correct a été réalisé.
+Le débit du flux d’impulsions pour le routeur peut être ajusté en modifiant la valeur ``f_powerCal`` correspondante. Lorsque les deux flux d’impulsions sont synchronisés, un étalonnage correct a été réalisé.
 
 Il faudra aller par tâtonnement. Si le flash du routeur est plus rapide que celui du compteur, il faut diminuer ``f_powerCal`` sinon l’augmenter.
 
@@ -51,7 +51,7 @@ Il est possible également de relever la consommation affichée par le compteur 
 Il faudra alors faire correspondre la puissance affichée par le routeur dans le Moniteur Série de l’Arduino IDE avec celle affichée par le compteur.
 D’où l’intérêt de ne pas avoir d’appareils qui vont se mettre en route sporadiquement (réfrigérateur…).
 
-L’affichage dans le Moniteur Série se présente de comme ceci : ::
+L’affichage dans le Moniteur Série se présente de comme ceci : ::
 
     1797.67, P:-21, P1:368, P2:-113, P3:-276, V1:233.24, V2:233.82, V3:233.84, (minSampleSets/MC 32, #ofSampleSets 8014)
     1793.61, P:-18, P1:367, P2:-110, P3:-275, V1:233.46, V2:233.93, V3:233.99, (minSampleSets/MC 32, #ofSampleSets 8013)
@@ -65,7 +65,7 @@ Si j’étalonne la phase **L1**, alors **P1** devra afficher la même valeur qu
    Les numéros de phase sont purement arbitraires, la phase **L1** du routeur correspondant à la phase branchée sur le connecteur **L1**, mais ce n’est pas forcément la phase branchée sur le bornier **L1** du compteur.
 
 Comment trouver le bon ``f_powerCal`` du premier coup
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Avant de télécharger le sketch d’étalonnage, je veille à définir les valeurs comme ceci :
 
@@ -96,34 +96,79 @@ Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu’
 Méthode avec un appareil de mesure annexe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Cette méthode nécessite un appareil de mesure, type wattmètre ou un autre compteur.
+Cette méthode nécessite un appareil de mesure, tel qu’un wattmètre, un compteur d’énergie portable, ou un autre dispositif de mesure de puissance.
 
-.. danger::
-   **ALERTE SÉCURITÉ**
-   Potentiellement, selon l’appareil utilisé, il faudra modifier le câblage électrique. Avant toutes manipulations, il est impératif de couper l’alimentation au tableau électrique et de vérifier à l’aide d’un testeur de tension l’absence effective de tension.
-   Dans le doute, couper le disjoncteur principal.
+### Appareils de mesure possibles
 
-Pour cette méthode, le simple sera d’utiliser le chauffe-eau lui-même comme appareil d’étalonnage.
-Sur le même principe que la première méthode, on va brancher l’appareil de mesure sur la ligne du chauffe-eau ainsi que l’une des pinces du routeur.
+- **Wattmètre portable** :
+  - Affiche directement la puissance consommée en watts.
+  - Idéal pour des mesures instantanées.
+- **Compteur d’énergie portable** :
+  - Permet de mesurer la consommation d’énergie sur une période donnée (kWh).
+  - Utile pour des mesures prolongées.
+- **Multimètre avec fonction wattmètre** :
+  - Polyvalent, peut également mesurer la tension et le courant.
+  - Peut nécessiter des calculs manuels pour obtenir la puissance (P = U × I).
+- **Compteur d’énergie triphasé** :
+  - Permet de mesurer directement les trois phases sans déplacer l’appareil.
+  - Idéal pour des installations triphasées complexes.
 
-.. attention::
-   La phase doit correspondre. Si j’étalonne la phase **L1**, le chauffe-eau DOIT être branché sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**.
+### Étapes pour l’étalonnage
 
-Selon que l’appareil affiche une puissance instantanée ou produit des flashs tous les Wh consommés, on appliquera la première méthode.
+1. **Préparation** :
+   - Coupez l’alimentation électrique au tableau pour garantir la sécurité.
+   - Installez l’appareil de mesure sur la phase correspondante (par exemple, **L1**).
+   - Connectez la pince ampèremétrique du routeur à la même phase.
 
-.. admonition:: Chauffe-eau triphasé
+2. **Mesure de la puissance** :
+   - Rétablissez l’alimentation électrique.
+   - Allumez un appareil purement résistif (par exemple, un radiateur ou une bouilloire).
+   - Relevez la puissance affichée par l’appareil de mesure.
 
-   Dans cette situation, on déplacera l’appareil de mesure sur chacune des phases — si cet appareil est triphasé, il ne sera pas nécessaire de le déplacer de phase en phase — et on prendra la pince du routeur associée à la bonne phase. Il ne sera pas nécessaire de décâbler le chauffe-eau.
+3. **Ajustement de ``f_powerCal``** :
+   - Comparez la puissance mesurée par l’appareil avec celle affichée dans le Moniteur Série de l’Arduino IDE.
+   - Utilisez la formule suivante pour ajuster la valeur de ``f_powerCal`` :
 
-| Sur le même principe que précédemment, supposons que le compteur/wattmètre affiche **2250**, et que le log du routeur affiche **2000**.
+     .. math::
+
+        f_{powerCal} = f_{powerCal\_initial} * \frac{P_{\text{mesuré}}}{P_{routeur}}
+
+     Où :
+     - ``f_{powerCal\_initial}`` est la valeur initiale définie dans le sketch Arduino.
+     - ``P_{mesuré}`` est la puissance mesurée par l’appareil.
+     - ``P_{routeur}`` est la puissance affichée par le routeur.
+
+4. **Validation** :
+   - Téléversez le sketch mis à jour sur le routeur.
+   - Vérifiez que la puissance affichée par le routeur correspond à celle mesurée par l’appareil.
+   - Répétez l’opération pour chaque phase (**L1**, **L2**, **L3**).
+
+### Chauffe-eau triphasé
+
+Si vous utilisez un chauffe-eau triphasé comme appareil d’étalonnage, suivez ces étapes spécifiques :
+
+- Branchez l’appareil de mesure sur une phase du chauffe-eau ainsi que la pince du routeur correspondante.
+- Si l’appareil de mesure est triphasé, il n’est pas nécessaire de le déplacer de phase en phase. Sinon, déplacez-le sur chaque phase pour effectuer les mesures.
+- Relevez les valeurs de puissance pour chaque phase et ajustez ``f_powerCal`` en conséquence.
+
+| Exemple : supposons que le compteur/wattmètre affiche **2250**, et que le log du routeur affiche **2000**.
 | On aura alors :
 
 .. math::
 
    f_{powerCal} = 0.05000 * {2250 \over 2000} = 0.05625
 
-| Comme précédemment, il faudra répéter l’opération sur chacune des phases (décâbler le chauffe-eau sur une autre phase…).
-| Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu’au convertisseur analogique du microcontrôleur.
+| Répétez l’opération pour chaque phase. Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu’au convertisseur analogique du microcontrôleur.
 
 .. important::
-   Chaque pince devra alors être marquée pour savoir à quelle ligne elle correspond.
+   Chaque pince devra être marquée pour savoir à quelle ligne elle correspond.
+
+### Sécurité
+
+.. danger::
+   **ALERTE SÉCURITÉ**
+   Potentiellement, selon l’appareil utilisé, il faudra modifier le câblage électrique. Avant toutes manipulations, il est impératif de couper l’alimentation au tableau électrique et de vérifier à l’aide d’un testeur de tension l’absence effective de tension.
+   Dans le doute, couper le disjoncteur principal.
+
+.. attention::
+   La phase doit correspondre. Si vous étalonnez la phase **L1**, le chauffe-eau DOIT être branché sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**.
