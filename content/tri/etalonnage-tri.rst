@@ -36,7 +36,7 @@ Méthode avec le compteur de distribution
 Cette méthode ne nécessite aucun appareil de mesure, mais n’est pas la plus rapide à réaliser.
 
 À l’aide des flash du compteur (1 flash = 1 Wh consommé)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La plupart des compteurs génèrent un flux d’impulsions optiques pour montrer le taux auquel l’énergie est consommée. En installant un :term:`CT` autour de l’un des câbles d’alimentation entrants et en exécutant le logiciel approprié sur le matériel testé, un flux similaire d’impulsions optiques peut être généré.
 

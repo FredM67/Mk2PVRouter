@@ -58,7 +58,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    mono/carte-sortie-mono
    mono/carte-sortie-relais-mono
    mono/dissipateur-mono
-   common/confection-cables
+   mono/confection-cables-mono
    mono/assemblage-mono
    mono/etalonnage-mono
    
@@ -72,7 +72,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    tri/carte-sortie-tri
    tri/carte-sortie-relais-tri
    tri/dissipateur-tri
-   common/confection-cables
+   tri/confection-cables-tri
    tri/assemblage-tri
    tri/test-logiciel-tri
    tri/etalonnage-tri
