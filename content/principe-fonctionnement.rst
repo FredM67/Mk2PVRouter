@@ -65,6 +65,7 @@ Le Mk2PVRouter est équipé de LED pour indiquer l’état des sorties triac. Ce
 - **LED fixe** :
   
   - Une LED allumée de manière fixe peut indiquer deux situations :
+
     1. La charge connectée consomme 100 % de l’énergie routée.
     2. La charge connectée ne consomme plus d’énergie, par exemple lorsque la température souhaitée est atteinte (dans le cas d’un chauffe-eau ou d’un radiateur).
 
