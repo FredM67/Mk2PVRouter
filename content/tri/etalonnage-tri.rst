@@ -22,6 +22,18 @@ Le taux du flux d’impulsions pour le matériel en cours de test peut être aju
 
    Les pinces doivent être installées sur chaque phase correspondante par rapport à l’alimentation du routeur.
 
+Sécurité
+--------
+Pour cette étape d’étalonnage, il faudra potentionnellement manipuler le câblage électrique. Il est donc impératif de respecter les consignes de sécurité.
+
+.. danger::
+   **ALERTE SÉCURITÉ**
+   Potentiellement, selon l’appareil utilisé, il faudra modifier le câblage électrique. Avant toutes manipulations, il est impératif de couper l’alimentation au tableau électrique et de vérifier à l’aide d’un testeur de tension l’absence effective de tension.
+   Dans le doute, couper le disjoncteur principal.
+
+.. attention::
+   La phase doit correspondre. Si vous étalonnez la phase **L1**, le chauffe-eau DOIT être branché sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**
+
 Principe de base
 ----------------
 
@@ -94,11 +106,12 @@ Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu’
    Chaque pince devra alors être marquée pour savoir à quelle ligne elle correspond.
 
 Méthode avec un appareil de mesure annexe
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------
 
 Cette méthode nécessite un appareil de mesure, tel qu’un wattmètre, un compteur d’énergie portable, ou un autre dispositif de mesure de puissance.
 
-### Appareils de mesure possibles
+Appareils de mesure possibles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Wattmètre portable** :
   - Affiche directement la puissance consommée en watts.
@@ -113,7 +126,8 @@ Cette méthode nécessite un appareil de mesure, tel qu’un wattmètre, un comp
   - Permet de mesurer directement les trois phases sans déplacer l’appareil.
   - Idéal pour des installations triphasées complexes.
 
-### Étapes pour l’étalonnage
+Étapes pour l’étalonnage
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Préparation** :
    - Coupez l’alimentation électrique au tableau pour garantir la sécurité.
@@ -134,16 +148,17 @@ Cette méthode nécessite un appareil de mesure, tel qu’un wattmètre, un comp
         f_{powerCal} = f_{powerCal\_initial} * \frac{P_{\text{mesuré}}}{P_{routeur}}
 
      Où :
-     - ``f_{powerCal\_initial}`` est la valeur initiale définie dans le sketch Arduino.
-     - ``P_{mesuré}`` est la puissance mesurée par l’appareil.
-     - ``P_{routeur}`` est la puissance affichée par le routeur.
+     - :math:`f_{powerCal\_initial}` est la valeur initiale définie dans le sketch Arduino.
+     - :math:`P_{\text{mesuré}}` est la puissance mesurée par l’appareil.
+     - :math:`P_{routeur}` est la puissance affichée par le routeur.
 
 4. **Validation** :
    - Téléversez le sketch mis à jour sur le routeur.
    - Vérifiez que la puissance affichée par le routeur correspond à celle mesurée par l’appareil.
    - Répétez l’opération pour chaque phase (**L1**, **L2**, **L3**).
 
-### Chauffe-eau triphasé
+Chauffe-eau triphasé
+~~~~~~~~~~~~~~~~~~~~
 
 Si vous utilisez un chauffe-eau triphasé comme appareil d’étalonnage, suivez ces étapes spécifiques :
 
@@ -162,13 +177,3 @@ Si vous utilisez un chauffe-eau triphasé comme appareil d’étalonnage, suivez
 
 .. important::
    Chaque pince devra être marquée pour savoir à quelle ligne elle correspond.
-
-### Sécurité
-
-.. danger::
-   **ALERTE SÉCURITÉ**
-   Potentiellement, selon l’appareil utilisé, il faudra modifier le câblage électrique. Avant toutes manipulations, il est impératif de couper l’alimentation au tableau électrique et de vérifier à l’aide d’un testeur de tension l’absence effective de tension.
-   Dans le doute, couper le disjoncteur principal.
-
-.. attention::
-   La phase doit correspondre. Si vous étalonnez la phase **L1**, le chauffe-eau DOIT être branché sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**.
