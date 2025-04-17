@@ -10,8 +10,8 @@ import zoneinfo
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Documentation du Mk2PVRouter'
-copyright = '2024, ENERGIE ROUTER & F. Metrich (aka FredM67)'
-author = 'ENERGIE ROUTER & F. Metrich (aka FredM67)'
+copyright = '2025, ENERGIE ROUTER & F. Metrich (aka github:FredM67)'
+author = 'ENERGIE ROUTER & F. Metrich (aka github:FredM67)'
 github_user = "FredM67"
 github_repo_name = "Mk2PVRouter"  # auto-detected from dirname if blank
 github_version = "main"
@@ -34,6 +34,7 @@ extensions = [
     'sphinx_copybutton',
     'sphinx_simplepdf',
     'sphinxcontrib.drawio',
+    'sphinx.ext.graphviz',
     'sphinxnotes.strike',
     'sphinx.ext.autosectionlabel',
     # 'hoverxref.extension',
@@ -47,8 +48,10 @@ autosectionlabel_prefix_document = True
 togglebutton_hint = ""
 togglebutton_hint_hide = ""
 
+imgmath_dpi = 150  # Increase DPI for higher resolution
 imgmath_image_format = 'svg'
 imgmath_embed = True
+imgmath_font_size = 16
 
 drawio_builder_export_format = {"simplepdf": "png"}
 #drawio_no_sandbox = True

@@ -6,8 +6,11 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 | Le MK2 PV Router est l’accessoire indispensable lorsque l’on souhaite optimiser son autoconsommation.
 |
-| Particulièrement adapté à l’alimentation de résistances (chauffe-eau, radiateur, sol chauffant) du fait de son alimentation à puissance variable, il saura orienter votre surplus vers le ou les équipements raccordés.
-|
+| Particulièrement adapté à :
+
+- L’alimentation de résistances (chauffe-eau, radiateur, sol chauffant).
+- La gestion des surplus d’énergie vers les équipements raccordés.
+
 | Le routeur surveille en permanence la production d’énergie de votre système en autoconsommation et redirige tout excédent d’électricité vers les charges branchées.
 | Grâce aux modules sortie-relais, il peut aussi gérer des installations de chauffage ou toutes sortes d’appareils avec ses fonctions de programmateurs horaire, temporisations, thermostats, préparation ECS, chauffage… toutes configurables librement.
 |
@@ -18,35 +21,58 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    Peu importe l’installation de production d’électricité (monophasée, biphasée, triphasée), le routeur **DOIT** correspondre au type de raccordement au réseau électrique.
 
-   Raccordement au réseau électrique triphasé = routeur triphasé
+   **Exemple** :
+
+   - Si votre raccordement au réseau est triphasé, vous devez utiliser un routeur triphasé, même si votre production est monophasée.
 
 .. figure:: img/Schema-dimplantation.png
    :align: center
-   :alt: Schéma d’implantation
+   :alt: Schéma d’implantation du Mk2PVRouter
    
-   Schéma d’implantation.
+   Schéma montrant l’implantation typique du Mk2PVRouter dans une installation domestique.
 
 | Les 2 graphiques suivants vous montrent une production et une consommation typiques d’un foyer.
 | Les pics importants représentent la consommation classique dûe au fonctionnement d’un chauffe-eau.
 
 .. figure:: img/Production-et-consommation-journaliere-sans-MK2-PV-Router.png
    :align: center
-   :alt: Sans Mk2PVRouter
+   :alt: Graphique de production et consommation sans Mk2PVRouter
 
-   Production et consommation typiques SANS Mk2PVRouter
+   Graphique montrant la production et la consommation typiques d’un foyer **sans** l’utilisation du Mk2PVRouter.
 
 .. figure:: img/Production-et-consommation-journaliere-avec-MK2-PV-Router.png
    :align: center
-   :alt: Avec Mk2PVRouter
+   :alt: Graphique de production et consommation avec Mk2PVRouter
 
-   Production et consommation typiques AVEC Mk2PVRouter
+   Graphique montrant la production et la consommation typiques d’un foyer **avec** l’utilisation du Mk2PVRouter.
 
-| Le routeur va permettre de décaler la consommation du chauffe-eau aux moments où l’on produit sa propre électricité gratuite (hors amortissement bien sûr du système de production).
+| Le routeur permet de décaler la consommation du chauffe-eau aux moments où l’on produit sa propre électricité gratuite (hors amortissement du système de production).
+
+.. admonition:: Démarrage rapide
+
+   Pour commencer avec le Mk2PVRouter, suivez ces étapes :
+
+   1. Assemblez le routeur en suivant les instructions de montage du kit.
+   2. Effectuez l’étalonnage (voir :ref:`etalonnage-mono` ou :ref:`etalonnage-tri`).
+   3. Configurez les paramètres de votre routeur et téléchargez le firmware.
+   4. Connectez le routeur à votre réseau électrique.
+   5. Vérifiez le bon fonctionnement du routeur.
+   6. Profitez de votre autoconsommation optimisée !
+   
+| Vous trouverez dans cette documentation toutes les informations nécessaires pour assembler, configurer et utiliser le Mk2PVRouter.
+| Si vous avez des questions ou des suggestions, n’hésitez pas à nous contacter.
 
 .. toctree::
    :hidden:
 
    introduction
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Principe de fonctionnement
+   :hidden:
+
+   principe-fonctionnement
 
 .. toctree::
    :maxdepth: 3

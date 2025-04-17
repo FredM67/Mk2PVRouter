@@ -1,0 +1,32 @@
+digraph Mk2PVRouter {
+    rankdir=TB; // Orientation de haut en bas
+    node [shape=box, style=rounded, fontname="Arial"];
+
+    // Début
+    start [shape=ellipse, label="Début"];
+
+    // Étapes principales
+    measure [label="Mesure du courant et de la tension\nau point de raccordement"];
+    calculate [label="Calcul du bilan énergétique"];
+    decision [shape=diamond, label="Le bilan énergétique est-il :\nPositif, Nul ou Négatif ?"];
+    redirect [label="Triac passant"];
+    no_action [label="Pas d'action"];
+    disable [label="Triac ouvert"];
+    end [shape=ellipse, label="Retour au début"];
+
+    // Connexions
+    start -> measure;
+    measure -> calculate;
+    calculate -> decision;
+
+    // Cas du bilan énergétique
+    decision -> redirect [label="Positif"];
+    decision -> no_action [label="Nul"];
+    decision -> disable [label="Négatif"];
+
+    // Suite des actions
+    redirect -> end;
+    no_action -> end;
+    disable -> end;
+    end -> start; // Retour au début
+}
