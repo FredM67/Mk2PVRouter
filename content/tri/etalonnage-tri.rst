@@ -31,9 +31,6 @@ Pour cette étape d’étalonnage, il faudra potentionnellement manipuler le câ
    Potentiellement, selon l’appareil utilisé, il faudra modifier le câblage électrique. Avant toutes manipulations, il est impératif de couper l’alimentation au tableau électrique et de vérifier à l’aide d’un testeur de tension l’absence effective de tension.
    Dans le doute, couper le disjoncteur principal.
 
-.. attention::
-   La phase doit correspondre. Si vous étalonnez la phase **L1**, le chauffe-eau DOIT être branché sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**
-
 Principe de base
 ----------------
 
@@ -113,16 +110,23 @@ Cette méthode nécessite un appareil de mesure, tel qu’un wattmètre, un comp
 Appareils de mesure possibles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Wattmètre portable** :
+* **Wattmètre portable** :
+  
   - Affiche directement la puissance consommée en watts.
   - Idéal pour des mesures instantanées.
-- **Compteur d’énergie portable** :
+
+* **Compteur d’énergie portable** :
+  
   - Permet de mesurer la consommation d’énergie sur une période donnée (kWh).
   - Utile pour des mesures prolongées.
-- **Multimètre avec fonction wattmètre** :
+  
+* **Multimètre avec fonction wattmètre** :
+  
   - Polyvalent, peut également mesurer la tension et le courant.
   - Peut nécessiter des calculs manuels pour obtenir la puissance (P = U × I).
-- **Compteur d’énergie triphasé** :
+  
+* **Compteur d’énergie triphasé** :
+  
   - Permet de mesurer directement les trois phases sans déplacer l’appareil.
   - Idéal pour des installations triphasées complexes.
 
@@ -130,41 +134,49 @@ Appareils de mesure possibles
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Préparation** :
+
    - Coupez l’alimentation électrique au tableau pour garantir la sécurité.
    - Installez l’appareil de mesure sur la phase correspondante (par exemple, **L1**).
    - Connectez la pince ampèremétrique du routeur à la même phase.
 
 2. **Mesure de la puissance** :
+   
    - Rétablissez l’alimentation électrique.
    - Allumez un appareil purement résistif (par exemple, un radiateur ou une bouilloire).
    - Relevez la puissance affichée par l’appareil de mesure.
 
 3. **Ajustement de ``f_powerCal``** :
+   
    - Comparez la puissance mesurée par l’appareil avec celle affichée dans le Moniteur Série de l’Arduino IDE.
    - Utilisez la formule suivante pour ajuster la valeur de ``f_powerCal`` :
 
      .. math::
 
-        f_{powerCal} = f_{powerCal\_initial} * \frac{P_{\text{mesuré}}}{P_{routeur}}
+        f_{powerCal} = f_{powerCal_{initial}} * \frac{P_{\text{mesuré}}}{P_{routeur}}
 
      Où :
-     - :math:`f_{powerCal\_initial}` est la valeur initiale définie dans le sketch Arduino.
+
+     - :math:`f_{powerCal_{initial}}` est la valeur initiale définie dans le sketch Arduino.
      - :math:`P_{\text{mesuré}}` est la puissance mesurée par l’appareil.
      - :math:`P_{routeur}` est la puissance affichée par le routeur.
 
 4. **Validation** :
+   
    - Téléversez le sketch mis à jour sur le routeur.
    - Vérifiez que la puissance affichée par le routeur correspond à celle mesurée par l’appareil.
    - Répétez l’opération pour chaque phase (**L1**, **L2**, **L3**).
+
+.. attention::
+   La phase doit correspondre. Si vous étalonnez la phase **L1**, le chauffe-eau DOIT être branché sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**
 
 Chauffe-eau triphasé
 ~~~~~~~~~~~~~~~~~~~~
 
 Si vous utilisez un chauffe-eau triphasé comme appareil d’étalonnage, suivez ces étapes spécifiques :
 
-- Branchez l’appareil de mesure sur une phase du chauffe-eau ainsi que la pince du routeur correspondante.
-- Si l’appareil de mesure est triphasé, il n’est pas nécessaire de le déplacer de phase en phase. Sinon, déplacez-le sur chaque phase pour effectuer les mesures.
-- Relevez les valeurs de puissance pour chaque phase et ajustez ``f_powerCal`` en conséquence.
+* Branchez l’appareil de mesure sur une phase du chauffe-eau ainsi que la pince du routeur correspondante.
+* Si l’appareil de mesure est triphasé, il n’est pas nécessaire de le déplacer de phase en phase. Sinon, déplacez-le sur chaque phase pour effectuer les mesures.
+* Relevez les valeurs de puissance pour chaque phase et ajustez ``f_powerCal`` en conséquence.
 
 | Exemple : supposons que le compteur/wattmètre affiche **2250**, et que le log du routeur affiche **2000**.
 | On aura alors :
