@@ -95,6 +95,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    tri/boitier-tri
    tri/carte-mere-tri
+   tri/tests-electriques
    tri/carte-sortie-tri
    tri/carte-sortie-relais-tri
    tri/dissipateur-tri
