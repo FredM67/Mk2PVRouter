@@ -14,7 +14,7 @@ Bien qu’elles fonctionnent toutes de la même manière, chaque nouvelle versio
 .. contents:: Sommaire
    :local:
    :depth: 1
-   
+
 -------------
 
 Soudure des composants
@@ -203,6 +203,10 @@ Ces transformateurs de **6 V** peuvent alimenter un régulateur de tension de *
 
 .. important::
    Lors du montage de ces composants, il ne doit y avoir aucun espace entre la base du transformateur et la carte de circuit imprimé :term:`PCB`.
+
+-------------
+
+.. include:: tests-electriques.rst
 
 .. |br| raw:: html
 
