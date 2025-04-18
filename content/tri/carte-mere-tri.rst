@@ -20,13 +20,6 @@ Bien qu’elles fonctionnent toutes de la même manière, chaque nouvelle versio
 Soudure des composants
 ----------------------
 
-.. figure:: ../img/Carte-mere-tri-01.png
-   :align: center
-   :alt: Carte-mère vierge
-   :scale: 50%
-
-   Carte-mère vierge
-
 Résistances
 ~~~~~~~~~~~
 
@@ -42,6 +35,13 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 * **R11-R12** = **10 kΩ**. Ensemble, elles fournissent une tension de référence pour les capteurs d’entrée.
 * **R19-R21** = **1 kΩ**. Elles sont chacune en série avec un :term:`CT` pour protéger le processeur des signaux importants.
 * **R22** = **1 MΩ**. Cela fournit le :term:`pull-up` pour la ligne de réinitialisation du processeur.
+
+.. figure:: ../img/Carte-mere-tri-01.png
+   :align: center
+   :alt: Résistances soudées
+   :scale: 50%
+
+   Carte-mère avec résistances soudées
 
 .. note::
 
@@ -76,10 +76,10 @@ Celles-ci offrent un certain degré de protection au processeur lorsque des cour
 
 .. figure:: ../img/Carte-mere-tri-02.png
    :align: center
-   :alt: Résistances et diodes soudées
+   :alt: Diodes soudées
    :scale: 50%
 
-   Carte-mère avec résistances et diodes soudées
+   Carte-mère avec diodes soudées
 
 Supports circuits intégrés
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
