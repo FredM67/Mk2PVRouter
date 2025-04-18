@@ -20,6 +20,13 @@ Bien qu’elles fonctionnent toutes de la même manière, chaque nouvelle versio
 Soudure des composants
 ----------------------
 
+.. figure:: ../img/Carte-mere-tri-01.png
+   :align: center
+   :alt: Carte-mère vierge
+   :scale: 50%
+
+   Carte-mère vierge
+
 Résistances
 ~~~~~~~~~~~
 
@@ -67,6 +74,13 @@ Celles-ci offrent un certain degré de protection au processeur lorsque des cour
    Les diodes sont polarisées. |br|
    Elles doivent être placées selon le repérage sur la couche sérigraphiée.
 
+.. figure:: ../img/Carte-mere-tri-02.png
+   :align: center
+   :alt: Résistances et diodes soudées
+   :scale: 50%
+
+   Carte-mère avec résistances et diodes soudées
+
 Supports circuits intégrés
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -77,6 +91,13 @@ Ensuite, on installe généralement les supports pour les circuits intégrés.
 
 Avec le support convenablement soutenu par le bas (on peut aussi utiliser un morceau d’adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place. |br|
 Si un réalignement du composant est nécessaire, il doit être effectué **avant** que les broches restantes ne soient fixées.
+
+.. figure:: ../img/Carte-mere-tri-03.png
+   :align: center
+   :alt: Supports CI soudés
+   :scale: 50%
+
+   Carte-mère avec supports CI soudés
 
 Condensateurs céramiques et oscillateur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -94,8 +115,23 @@ Les condensateurs céramiques sont en général orange, et ont la forme d’une 
 
 .. note::
    L’oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du :term:`PCB`. |br|
-   Ce n’est pas nécessaire pour le bon fonctionnement. |br|
+   C'est une habitude, mais ce n’est pas nécessaire pour le bon fonctionnement. |br|
    Pour ce faire, on pourra utiliser une allumette le temps d’effectuer la soudure.
+
+.. figure:: ../img/Carte-mere-tri-04.png
+   :align: center
+   :alt: Oscillateur et ses condensateurs associés soudés
+   :scale: 50%
+
+   Carte-mère avec oscillateur et ses condensateurs associés soudés
+
+
+.. figure:: ../img/Carte-mere-tri-05.png
+   :align: center
+   :alt: Condensateurs céramiques soudés
+   :scale: 50%
+
+   Carte-mère avec condensateurs céramiques soudés
 
 Ponts redresseurs ou ponts de diodes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -128,6 +164,13 @@ Sur la version triphasée de ce routeur, ils sont au nombre de trois, un par pha
 La broche la plus longue correspond au **+**.
 
 Comme pour l’oscillateur, il est courant de les souder légèrement au-dessus du :term:`PCB`.
+
+.. figure:: ../img/Carte-mere-tri-06.png
+   :align: center
+   :alt: Ponts redresseurs soudés
+   :scale: 50%
+
+   Carte-mère avec ponts redresseurs soudés
 
 Fusibles
 ~~~~~~~~
@@ -180,11 +223,25 @@ L’autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur l
 
    Si ces deux composants sont inversés, les symptômes qui en résultent peuvent être difficiles à diagnostiquer.
 
+.. figure:: ../img/Carte-mere-tri-12.png
+   :align: center
+   :alt: Condensateurs électrolytiques soudés
+   :scale: 50%
+
+   Carte-mère avec condensateurs électrolytiques soudés
+
 Varistances
 ~~~~~~~~~~~
 
 Les varistances sont des composants de protection contre les surtensions. |br|
 Elles sont repérées **VR1**, **VR2** et **VR3**. Elles ne sont pas polarisées et peuvent être installées dans n’importe quel sens.
+
+.. figure:: ../img/Carte-mere-tri-13.png
+   :align: center
+   :alt: Varistances soudées
+   :scale: 50%
+
+   Carte-mère avec varistances soudées
 
 Régulateur de tension
 ~~~~~~~~~~~~~~~~~~~~~
@@ -195,6 +252,13 @@ En fonction de l’application, le **VR1** sera une version **3,3 V** ou **5 V
 La soudure des broches du **VR1** nécessitera probablement une température plus élevée. |br|
 Pour réduire la quantité de métal à chauffer, il est possible de couper préalablement ces broches à la longueur requise.
 
+.. figure:: ../img/Carte-mere-tri-14.png
+   :align: center
+   :alt: Régulateur de tension soudé
+   :scale: 50%
+
+   Carte-mère avec régulateur de tension soudé
+
 Transformateurs
 ~~~~~~~~~~~~~~~
 
@@ -203,6 +267,13 @@ Ces transformateurs de **6 V** peuvent alimenter un régulateur de tension de *
 
 .. important::
    Lors du montage de ces composants, il ne doit y avoir aucun espace entre la base du transformateur et la carte de circuit imprimé :term:`PCB`.
+
+.. figure:: ../img/Carte-mere-tri-15.png
+   :align: center
+   :alt: Transformateurs soudés
+   :scale: 50%
+
+   Carte-mère avec transformateurs soudés
 
 -------------
 
