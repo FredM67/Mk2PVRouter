@@ -7,27 +7,27 @@ Le Mk2PVRouter est conçu pour optimiser l’autoconsommation d’énergie produ
 
 | Voici les étapes principales du fonctionnement du Mk2PVRouter :
 
-1. **Surveillance du bilan énergétique** :
+#. **Surveillance du bilan énergétique** :
 
    - Le routeur mesure en permanence le courant et la tension au point de raccordement au réseau électrique.
    - Il calcule le **bilan énergétique** en temps réel, c’est-à-dire la différence entre la puissance injectée dans le réseau et la puissance prélevée.
    - Si le bilan est positif (excédent d’énergie), cela signifie que la production dépasse la consommation.
 
-2. **Détection des surplus d’énergie** :
+#. **Détection des surplus d’énergie** :
 
    - Lorsque le bilan énergétique est positif, le Mk2PVRouter détecte un surplus d’énergie.
    - Ce surplus, qui serait normalement réinjecté dans le réseau, est redirigé vers des charges spécifiques.
 
-3. **Gestion des charges** :
+#. **Gestion des charges** :
 
    - Le Mk2PVRouter redirige l’énergie excédentaire vers des appareils résistifs tels que des chauffe-eaux, radiateurs ou planchers chauffants.
    - Grâce à ses modules de sortie-relais, il peut également activer ou désactiver des appareils en fonction de plages horaires, de températures ou d’autres paramètres configurables.
 
-4. **Étalonnage et précision** :
+#. **Étalonnage et précision** :
 
    - Pour garantir une gestion optimale, le routeur doit être étalonné en fonction des caractéristiques spécifiques de l’installation électrique (voir :ref:`etalonnage-mono` ou :ref:`etalonnage-tri`).
 
-5. **Avantages** :
+#. **Avantages** :
 
    - Réduction des pertes d’énergie en maximisant l’autoconsommation.
    - Diminution de la dépendance au réseau électrique.
@@ -66,8 +66,8 @@ Le Mk2PVRouter est équipé de LED pour indiquer l’état des sorties triac. Ce
   
   - Une LED allumée de manière fixe peut indiquer deux situations :
 
-    1. La charge connectée consomme 100 % de l’énergie routée.
-    2. La charge connectée ne consomme plus d’énergie, par exemple lorsque la température souhaitée est atteinte (dans le cas d’un chauffe-eau ou d’un radiateur).
+    #. La charge connectée consomme 100 % de l’énergie routée.
+    #. La charge connectée ne consomme plus d’énergie, par exemple lorsque la température souhaitée est atteinte (dans le cas d’un chauffe-eau ou d’un radiateur).
 
 .. note::
    Une LED fixe ne signifie pas nécessairement que l’énergie est toujours consommée. Cela peut également indiquer que la charge a atteint son seuil de fonctionnement (par exemple, un chauffe-eau ayant atteint sa température maximale).

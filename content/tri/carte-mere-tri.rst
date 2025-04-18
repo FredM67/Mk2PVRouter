@@ -17,6 +17,10 @@ Bien qu’elles fonctionnent toutes de la même manière, chaque nouvelle versio
 
 -------------
 
+.. include:: ../common/ordre-soudure.rst
+
+-------------
+
 Soudure des composants
 ----------------------
 
@@ -47,8 +51,8 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
 
    Des valeurs inférieures pour **R2-R4** et **R5-R7** sont désormais utilisées pour augmenter la charge sur le transformateur.
    Cela peut l’empêcher d’entrer en saturation, ce qui déformerait la forme d’onde de sortie. |br|
-   **R2-R4** = **100 Ω** convient pour un fonctionnement en **3,3 V**. |br|
-   Pour une meilleure utilisation de la plage d’entrée de l’:term:`ADC`, **R2-R4** doit être augmenté à **180 Ω** pour un fonctionnement en **5 V**.
+   **R2-R4** = **100 Ω** conviennent pour un fonctionnement en **3,3 V**. |br|
+   Pour une meilleure utilisation de la plage d’entrée de l’:term:`ADC`, **R2-R4** doivent être augmentées à **180 Ω** pour un fonctionnement en **5 V**.
    
    La valeur pour **R8-R10** a été initialement spécifiée comme étant **150 Ω**.
    
@@ -115,7 +119,7 @@ Les condensateurs céramiques sont en général orange, et ont la forme d’une 
 
 .. note::
    L’oscillateur ainsi que ses deux condensateurs associés peuvent être soudés légèrement au-dessus du :term:`PCB`. |br|
-   C'est une habitude, mais ce n’est pas nécessaire pour le bon fonctionnement. |br|
+   C’est une habitude, mais ce n’est pas nécessaire pour le bon fonctionnement. |br|
    Pour ce faire, on pourra utiliser une allumette le temps d’effectuer la soudure.
 
 .. figure:: ../img/Carte-mere-tri-04.png
@@ -177,15 +181,16 @@ Fusibles
 
 Les fusibles sont simples à mettre en place. Ils sont repérés **FS1-FS3**. |br|
 Cependant, il faudra veiller à ne pas trop les chauffer lors de la soudure, car ils risqueraient de fondre à l’intérieur. |br|
-En effet, c’est le principe même de fonctionnement d'un fusible !
+En effet, c’est le principe même de fonctionnement d’un fusible !
 
 Connecteur secteur
 ~~~~~~~~~~~~~~~~~~
 
-Le connecteur secteur et les fusibles (**FS1-FS3**) peuvent maintenant être installés. |br|
-En raison des pistes du plan masse, les broches référencées **PE** sur chacun des connecteurs nécessitera plus de chaleur que les autres broches.
-Ces borniers doivent être orientés correctement pour permettre un accès facile au câblage. |br|
-Il est très facile de se tromper de sens !
+Le connecteur secteur peut maintenant être installé. |br|
+En raison des pistes du plan masse, la broche référencé **PE** nécessitera plus de chaleur que les autres broches.
+Ce bornier doit être orienté correctement pour permettre un accès facile au câblage. |br|
+Il est très facile de se tromper de sens ! |br|
+Enfin, il faudra veiller à bien le plaquer contre le :term:`PCB` avant de souder, afin que la surface entière du connecteur soit en contact avec le :term:`PCB`.
 
 Connecteurs SIL/Molex
 ~~~~~~~~~~~~~~~~~~~~~
@@ -246,7 +251,7 @@ Elles sont repérées **VR1**, **VR2** et **VR3**. Elles ne sont pas polarisées
 Régulateur de tension
 ~~~~~~~~~~~~~~~~~~~~~
 
-Le régulateur de tension (**VR1**) doit être installé de manière à ce que son ailette métallique soit éloignée du transformateur, comme indiqué sur la sérigraphie. |br|
+Le régulateur de tension (**VR1**) doit être installé de manière à ce que son ailette métallique soit côté intérieur, comme indiqué sur la sérigraphie. |br|
 En fonction de l’application, le **VR1** sera une version **3,3 V** ou **5 V**.
 
 La soudure des broches du **VR1** nécessitera probablement une température plus élevée. |br|
@@ -277,7 +282,39 @@ Ces transformateurs de **6 V** peuvent alimenter un régulateur de tension de *
 
 -------------
 
-.. include:: tests-electriques.rst
+Tests électriques
+-----------------
+
+Une fois les transformateurs en place, la carte est maintenant prête pour les tests électriques. |br|
+
+C’est le bon moment pour vérifier que tous les joints soudés sont en bon état et que toutes les éclaboussures de soudure ont été éliminées.
+
+Test de chaque sous-alimentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Avant d’installer les circuits intégrés, le fonctionnement de l’alimentation doit être vérifié.
+
+.. danger::
+   **Alerte de sécurité**
+
+   Pour poursuivre cette séquence de construction, un accès à la tension secteur **230 V** est requis.
+
+   Veuillez ne pas passer à cette étape suivante à moins que vous soyez compétent pour le faire.
+
+Nous effectuerons les tests suivants en alimentant le routeur via le connecteur secteur. |br|
+Il est préférable de procéder phase par phase, en alimentant chaque transformateur séparément. |br|
+Ainsi, si une tension est incorrecte, il sera plus facile d’identifier la partie du circuit qui est défectueuse.
+
+Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ **3,3 V**… ou **5 V** si un régulateur de tension **5 V** a été installé.
+
+Cette tension peut être facilement vérifiée au niveau du point de test **Test VCC**, ainsi que **Test GND**, comme indiqué ici.
+
+.. hint::
+   N’oubliez pas de mettre votre multimètre sur la position *courant continu*, :term:`DC`, symbole **⎓** !
+
+À l’exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d’augmentation notable de la température.
+
+.. include:: ../common/tests-electriques.rst
 
 .. |br| raw:: html
 

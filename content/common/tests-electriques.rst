@@ -1,35 +1,4 @@
 
-Tests électriques
------------------
-
-Une fois les transformateurs en place, la carte est maintenant prête pour les tests électriques. |br|
-
-C’est le bon moment pour vérifier que tous les joints soudés sont en bon état et que toutes les éclaboussures de soudure ont été éliminées.
-
-Test de chaque sous-alimentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Avant d’installer les circuits intégrés, le fonctionnement de l’alimentation doit être vérifié.
-
-.. danger::
-   **Alerte de sécurité**
-
-   Pour poursuivre cette séquence de construction, un accès à la tension secteur **230 V** est requis.
-
-   Veuillez ne pas passer à cette étape suivante à moins que vous soyez compétent pour le faire.
-
-Nous effectuerons les tests suivants en alimentant le routeur via chacun des connecteurs secteur, l’un après l’autre. |br|
-Ainsi, si une tension est incorrecte, il sera plus facile d’identifier la partie du circuit qui est défectueuse.
-
-Si tout a été correctement assemblé, la sortie de l’alimentation devrait être d’environ **3,3 V**… ou **5 V** si un régulateur de tension **5 V** a été installé.
-
-Cette tension peut être facilement vérifiée au niveau du point de test **Test VCC**, ainsi que **Test GND**, comme indiqué ici.
-
-.. hint::
-   N’oubliez pas de mettre votre multimètre sur la position *courant continu*, :term:`DC`, symbole **⎓** !
-
-À l’exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d’augmentation notable de la température.
-
 Insertion du LM358 et test de Vref
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

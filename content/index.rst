@@ -52,12 +52,12 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    Pour commencer avec le Mk2PVRouter, suivez ces étapes :
 
-   1. Assemblez le routeur en suivant les instructions de montage du kit.
-   2. Effectuez l’étalonnage (voir :ref:`etalonnage-mono` ou :ref:`etalonnage-tri`).
-   3. Configurez les paramètres de votre routeur et téléchargez le firmware.
-   4. Connectez le routeur à votre réseau électrique.
-   5. Vérifiez le bon fonctionnement du routeur.
-   6. Profitez de votre autoconsommation optimisée !
+   #. Assemblez le routeur en suivant les instructions de montage du kit.
+   #. Effectuez l’étalonnage (voir :ref:`etalonnage-mono` ou :ref:`etalonnage-tri`).
+   #. Configurez les paramètres de votre routeur et téléchargez le firmware.
+   #. Connectez le routeur à votre réseau électrique.
+   #. Vérifiez le bon fonctionnement du routeur.
+   #. Profitez de votre autoconsommation optimisée !
    
 | Vous trouverez dans cette documentation toutes les informations nécessaires pour assembler, configurer et utiliser le Mk2PVRouter.
 | Si vous avez des questions ou des suggestions, n’hésitez pas à nous contacter.
@@ -86,6 +86,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    mono/dissipateur-mono
    mono/confection-cables-mono
    mono/assemblage-mono
+   mono/test-logiciel-mono
    mono/etalonnage-mono
    
 .. toctree::

@@ -133,19 +133,19 @@ Appareils de mesure possibles
 Étapes pour l’étalonnage
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. **Préparation** :
+#. **Préparation** :
 
    - Coupez l’alimentation électrique au tableau pour garantir la sécurité.
    - Installez l’appareil de mesure sur la phase correspondante (par exemple, **L1**).
    - Connectez la pince ampèremétrique du routeur à la même phase.
 
-2. **Mesure de la puissance** :
+#. **Mesure de la puissance** :
    
    - Rétablissez l’alimentation électrique.
    - Allumez un appareil purement résistif (par exemple, un radiateur ou une bouilloire).
    - Relevez la puissance affichée par l’appareil de mesure.
 
-3. **Ajustement de ``f_powerCal``** :
+#. **Ajustement de ``f_powerCal``** :
    
    - Comparez la puissance mesurée par l’appareil avec celle affichée dans le Moniteur Série de l’Arduino IDE.
    - Utilisez la formule suivante pour ajuster la valeur de ``f_powerCal`` :
@@ -160,7 +160,7 @@ Appareils de mesure possibles
      - :math:`P_{\text{mesuré}}` est la puissance mesurée par l’appareil.
      - :math:`P_{routeur}` est la puissance affichée par le routeur.
 
-4. **Validation** :
+#. **Validation** :
    
    - Téléversez le sketch mis à jour sur le routeur.
    - Vérifiez que la puissance affichée par le routeur correspond à celle mesurée par l’appareil.

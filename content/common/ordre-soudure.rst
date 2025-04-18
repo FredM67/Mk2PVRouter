@@ -1,4 +1,3 @@
-.. _ordre-soudure:
 
 Ordre de soudure
 ----------------
@@ -15,20 +14,19 @@ Voici l’ordre de soudure recommandé :
 
 #. *jumper·s*,
 #. résistances,
-#. diodes
+#. diodes,
 #. socles de circuits intégrés,
 #. oscillateur et ses 2 condensateurs associés,
 #. condensateurs céramiques non polarisés,
 #. pont·s de diodes,
-#. régulateur de tension (format transistor),
-#. inductance,
-#. socle FTDI
-#. socles de CTs et socle·s de sortie,
-#. condensateurs électrolytiques polarisés,
 #. fusibles,
 #. connecteur·s d’alimentation,
+#. socle FTDI,
+#. socles de CTs et socle·s de sortie,
+#. inductance,
+#. condensateurs électrolytiques polarisés,
 #. varistance·s,
-#. régulateur de tension,
+#. régulateur de tension (format transistor),
 #. transformateur·s
 
 .. note::
