@@ -79,11 +79,11 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: Kit monophasé
    :hidden:
 
+   mono/dissipateur-mono
    mono/boitier-mono
    mono/carte-mere-mono
    mono/carte-sortie-mono
    mono/carte-sortie-relais-mono
-   mono/dissipateur-mono
    mono/confection-cables-mono
    mono/assemblage-mono
    mono/test-logiciel-mono
@@ -94,11 +94,11 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: Kit triphasé
    :hidden:
 
+   tri/dissipateur-tri
    tri/boitier-tri
    tri/carte-mere-tri
    tri/carte-sortie-tri
    tri/carte-sortie-relais-tri
-   tri/dissipateur-tri
    tri/confection-cables-tri
    tri/assemblage-tri
    tri/test-logiciel-tri
