@@ -27,7 +27,7 @@ Le Mk2PVRouter est conçu pour optimiser l’autoconsommation d’énergie produ
 
    - Pour garantir une gestion optimale, le routeur doit être étalonné en fonction des caractéristiques spécifiques de l’installation électrique (voir :ref:`etalonnage-mono` ou :ref:`etalonnage-tri`).
 
-#. **Avantages** :
+#. **Avantages** :
 
    - Réduction des pertes d’énergie en maximisant l’autoconsommation.
    - Diminution de la dépendance au réseau électrique.
@@ -87,6 +87,7 @@ Avantages du *burst fire control*
   - Contrairement à d’autres modes de régulation (comme le contrôle en phase), le burst fire control ne génère pas d’harmoniques dans le réseau électrique. Cela permet de préserver la qualité du signal électrique et d’éviter les perturbations pour les autres appareils connectés.  
 
 - **Efficacité énergétique** :
+
   - En minimisant les pertes liées à la commutation, ce mode de régulation améliore l’efficacité globale du système.
 
 - **Compatibilité avec les charges résistives** :
@@ -118,3 +119,6 @@ Le Mk2PVRouter offre également des fonctionnalités avancées :
 
   - En ajoutant un module ESP32, le Mk2PVRouter peut être intégré à Home Assistant pour une gestion centralisée et une visualisation des données en temps réel.
   - Il est également possible de piloter certaines fonctions du routeur via Home Assistant, comme la **marche forcée**.
+
+  .. note::
+     Pour plus de détails sur l'intégration avec Home Assistant et pour accéder à un fichier YAML prêt à l'emploi pour ESPHome, consultez ce `Gist <https://gist.github.com/FredM67/986e1cb0fc020fa6324ccc151006af99>`_.
