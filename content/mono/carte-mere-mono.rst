@@ -19,6 +19,9 @@ Cependant, certains composants spécifiques à la version triphasée seront abse
    :local:
    :depth: 1
 
+.. note::
+   Une version courte de ce guide, contenant uniquement les photos des étapes de soudure, est disponible :ref:`ici <carte-mere-mono-short>`.
+
 -------------
 
 .. include:: ../common/ordre-soudure.rst

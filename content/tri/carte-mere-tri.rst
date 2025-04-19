@@ -15,6 +15,9 @@ Bien qu’elles fonctionnent toutes de la même manière, chaque nouvelle versio
    :local:
    :depth: 1
 
+.. note::
+   Une version courte de ce guide, contenant uniquement les photos des étapes de soudure, est disponible :ref:`ici <carte-mere-tri-short>`.
+
 -------------
 
 .. include:: ../common/ordre-soudure.rst
