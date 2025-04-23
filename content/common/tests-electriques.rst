@@ -32,3 +32,7 @@ Avec autant de broches, il est très facile pour l’une d’entre elles de se p
 
 .. caution::
    Si ce circuit intégré est dans le mauvais sens lors de la mise sous tension, il ne fonctionnera probablement plus jamais !
+
+.. |br| raw:: html
+
+  <br/>

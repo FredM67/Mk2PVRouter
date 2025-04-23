@@ -318,7 +318,3 @@ Cette tension peut être facilement vérifiée au niveau du point de test **Test
 À l’exception du transformateur, qui peut sembler légèrement chaud après plusieurs minutes, aucun des composants de la carte ne doit présenter d’augmentation notable de la température.
 
 .. include:: ../common/tests-electriques.rst
-
-.. |br| raw:: html
-
-  <br/>

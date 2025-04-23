@@ -63,7 +63,7 @@ drawio_disable_verbose_electron = True
 
 git_last_updated_timezone = 'Europe/Paris'
 
-version = "0.1"  # Will not be raised
+version = "0.2"  # Will not be raised
 
 # Settings for myst_nb:
 # https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution

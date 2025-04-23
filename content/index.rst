@@ -94,8 +94,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: Kit triphasé
    :hidden:
 
-   tri/dissipateur-tri
-   tri/boitier-tri
+   tri/percages
    tri/carte-mere-tri
    tri/carte-sortie-tri
    tri/carte-sortie-relais-tri

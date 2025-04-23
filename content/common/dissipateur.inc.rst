@@ -1,5 +1,5 @@
 Dissipateur
-===========
+-----------
 
 Le rôle du dissipateur est d’évacuer la chaleur produite par le courant traversant le triac.
 
@@ -14,7 +14,7 @@ Il s’agit d’une pièce en aluminium dotée d’ailettes, ce qui augmente la 
 .. _percage-du-dissipateur:
 
 Perçage du dissipateur
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Chaque dissipateur doit être percé de trois trous : deux pour la fixation sur le boîtier et un au milieu pour le triac.
 
@@ -39,7 +39,7 @@ L’utilisation d’une perceuse à colonne est recommandée.
 .. _percage-du-boitier:
 
 Perçage du boîtier
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Chaque dissipateur sera monté sur les côtés **verticaux** du boîtier. Selon le nombre de sorties, la taille du boîtier variera.
 
