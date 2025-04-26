@@ -79,9 +79,8 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: Kit monophasé
    :hidden:
 
+   mono/soudures-mono
    mono/percages-mono
-   mono/carte-mere-mono
-   mono/carte-sortie-mono
    mono/carte-sortie-relais-mono
    mono/confection-cables-mono
    mono/assemblage-mono
@@ -93,9 +92,8 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: Kit triphasé
    :hidden:
 
+   tri/soudures-tri
    tri/percages-tri
-   tri/carte-mere-tri
-   tri/carte-sortie-tri
    tri/carte-sortie-relais-tri
    tri/confection-cables-tri
    tri/assemblage-tri

@@ -1,7 +1,6 @@
-.. _carte-sortie:
 
 Étage de sortie
-===============
+---------------
 
 | Le triac, également connu sous le nom de triode pour courant alternatif, appartient à la catégorie des thyristors et sert d’interrupteur semi-conducteur. Il a la capacité unique de gérer le courant dans les deux directions, ce qui le rend idéal pour les applications utilisant du courant alternatif (AC).
 | Utilisé pour ajuster la puissance fournie à des dispositifs purement résistifs comme des radiateurs, des chauffe-eau ou des lampes à incandescence, le triac permet de moduler avec précision l’énergie distribuée. Cela offre un contrôle fin sur le niveau de chaleur ou d’éclairage produit.
@@ -11,7 +10,7 @@
    :depth: 1
 
 Principe de Fonctionnement d’une Sortie Triac
----------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Un triac est activé par un signal de déclenchement envoyé à sa broche de commande, également connue sous le nom de gâchette ou *gate*.
 | Lorsque ce signal dépasse un seuil spécifique, le triac s’active et commence à conduire le courant, permettant ainsi son passage.
@@ -19,7 +18,7 @@ Principe de Fonctionnement d’une Sortie Triac
 | Ce phénomène se produit automatiquement à la fin de chaque demi-cycle du courant alternatif, entraînant l’arrêt du passage du courant.
 
 Contrôle de la Puissance
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Pour contrôler la puissance fournie à un appareil résistif, on utilise souvent une technique appelée variation de phase ou gradation.
 | Elle consiste à retarder l’amorçage du triac dans chaque demi-cycle de la tension alternative. En ne déclenchant le triac que pendant une portion de chaque demi-cycle, on réduit la quantité d’énergie fournie à la charge.
@@ -41,7 +40,7 @@ Contrôle de la Puissance
 | Son **avantage principal** réside dans le fait qu’elle n’introduit pas d’harmoniques sur le réseau électrique.
 
 Applications typiques
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 * **Éclairage** : Les *dimmers*, ou variateurs de lumière, exploitent les triacs pour moduler l’intensité lumineuse. En ajustant le moment d’activation du triac, il est possible de faire varier la luminosité des lampes.
 * **Chauffage** : Dans le cas des chauffages électriques, les triacs servent à contrôler la température. En changeant la durée pendant laquelle le courant est conduit, on peut régler la quantité de chaleur émise par l’appareil de chauffage.
@@ -54,13 +53,13 @@ Avantages comparés à un relais
 * **Absence de Composants Mobiles** : Le fait qu’il n’y ait pas de composants mobiles diminue l’usure due au mouvement, ce qui rend le système de commutation plus fiable et prolonge sa durée de vie.
 
 Considérations Techniques
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **Dissipation Thermique** : L’utilisation des triacs entraîne une production de chaleur pendant leur fonctionnement. Il est crucial d’assurer une bonne évacuation de cette chaleur, généralement à l’aide de dispositifs tels que des radiateurs ou des dissipateurs thermiques.
 * **Compatibilité de Charge** : Du fait que le triac interrompt le courant de manière périodique, seuls les équipements résistifs (comme les chauffages ou les lampes) sont adaptés pour être contrôlés par un triac.
 
 Composition d’un kit pour étage de sortie triac
------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 
@@ -83,7 +82,7 @@ Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
    Contenu d’un kit de sortie
 
 Assemblage d’une carte de sortie
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet ordre :
 
@@ -228,8 +227,8 @@ Installation de l’:term:`optocoupleur`
 
    Carte assemblée
 
-Test
-----
+Tests
+~~~~~
 
 Lors de la construction d’un système complet, il peut être préférable de monter l’étage de sortie finalisé dans le boîtier avant de procéder à son test.
 

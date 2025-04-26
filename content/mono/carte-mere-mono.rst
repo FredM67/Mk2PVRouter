@@ -1,7 +1,7 @@
 .. _carte-mere-mono:
 
 Carte-mère monophasée
-=====================
+---------------------
 
 Plusieurs versions du :term:`PCB` peuvent exister.
 
@@ -24,15 +24,15 @@ Cependant, certains composants spécifiques à la version triphasée seront abse
 
 -------------
 
-.. include:: ../common/ordre-soudure.rst
+.. include:: ../common/ordre-soudure.inc.rst
 
 -------------
 
 Soudure des composants
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Résistances
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 Ces composants n’ont pas de sens et sont très peu sensibles à l’électricité statique.
 
@@ -64,7 +64,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
    
    La valeur pour **R8-R9** a été initialement spécifiée comme étant **150 Ω**.
    
-   Lorsque le processeur fonctionne à **3,3 V**, cela donne une plage de fonctionnement d’environ **4 kW**. En réduisant ces valeurs à **120 Ω**, la plage est augmentée à **~5 kW**.
+   Lorsque le processeur fonctionne à **3,3 V**, cela donne une plage de fonctionnement d’environ **4 kW**. En réduisant ces valeurs à **120 Ω**, la plage est augmentée à **^5 kW**.
    
    Pour un système **5 V**, la valeur originale de **150 Ω** donne une plage de fonctionnement d’environ **6 kW**.
    
@@ -75,7 +75,7 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
    .. include:: ../common/burden-calc.inc.rst
 
 Diodes
-~~~~~~
+^^^^^^
 
 Ensuite, les diodes **D1** à **D4** peuvent être ajoutées.
 
@@ -94,7 +94,7 @@ Celles-ci offrent un certain degré de protection au processeur lorsque des cour
    Carte-mère avec diodes soudées
 
 Supports circuits intégrés
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ensuite, on installe généralement les supports pour les circuits intégrés.
 
@@ -112,7 +112,7 @@ Si un réalignement du composant est nécessaire, il doit être effectué **avan
    Carte-mère avec supports CI soudés
 
 Condensateurs céramiques et oscillateur
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ces composants ne sont pas polarisés.
 
@@ -146,7 +146,7 @@ Les condensateurs céramiques sont en général orange, et ont la forme d’une 
    Carte-mère avec condensateurs céramiques soudés
 
 Pont redresseur ou pont de diodes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Le rôle de ce composant, repéré **BR1**, est de redresser le courant alternatif fourni par le transformateur. |br|
 C’est la première étape nécessaire pour obtenir une alimentation en courant continu.
@@ -177,14 +177,14 @@ Comme pour l’oscillateur, il est courant de les souder légèrement au-dessus 
    Carte-mère avec pont redresseur soudé
 
 Fusible
-~~~~~~~
+^^^^^^^
 
 Le fusible est simple à mettre en place. Il est repéré **FS1**. |br|
 Cependant, il faudra veiller à ne pas trop le chauffer lors de la soudure, car il risquerait de fondre à l’intérieur. |br|
 En effet, c’est le principe même de fonctionnement d’un fusible !
 
 Connecteur secteur
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 Le connecteur secteur peut maintenant être installé. |br|
 En raison des pistes du plan masse, la broche référencé **PE** nécessitera plus de chaleur que les autres broches.
@@ -198,7 +198,7 @@ Enfin, il faudra veiller à bien le plaquer contre le :term:`PCB` avant de soude
    Assurez-vous que les broches du connecteur correspondent aux marquages sur la couche sérigraphiée pour éviter tout problème de connexion.
 
 Connecteurs SIL/Molex
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 Les connecteurs Molex sont *polarisés*, ils possèdent un détrompeur. |br|
 Physiquement, ce sont des composants passifs, mais étant donné qu’ils serviront à la connexion d’autres composants ou modules polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
@@ -214,12 +214,12 @@ Ils seront plus ou moins nombreux selon la configuration :
 * 1 connecteur à **2 pôles** par sortie, référencé parmi **D3-D13**.
 
 Inductance
-~~~~~~~~~~
+^^^^^^^^^^
 
 Ce composant n’est pas polarisé. Il est référencé **L1**, à proximité de l’**ATmega328-P**.
 
 Condensateurs électrolytiques
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Les deux condensateurs électrolytiques, **C1** et **C2**, sont polarisés et doivent donc être installés dans le bon sens.
 La broche **-ve** est indiquée par une bande proéminente, en général blanche, sur toute la longueur du composant.
@@ -242,7 +242,7 @@ L’autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur l
    Carte-mère avec condensateurs électrolytiques soudés
 
 Varistance
-~~~~~~~~~~
+^^^^^^^^^^
 
 La varistance est un composant de protection contre les surtensions. |br|
 Elle est repérée **VR1**. Elle n’est pas polarisée et peut être installée dans n’importe quel sens.
@@ -255,7 +255,7 @@ Elle est repérée **VR1**. Elle n’est pas polarisée et peut être installée
    Carte-mère avec varistance soudée
 
 Régulateur de tension
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 Le régulateur de tension (**VR1**) doit être installé de manière à ce que son ailette métallique soit côté intérieur, comme indiqué sur la sérigraphie. |br|
 En fonction de l’application, le **VR1** sera une version **3,3 V** ou **5 V**.
@@ -271,7 +271,7 @@ Pour réduire la quantité de métal à chauffer, il est possible de couper pré
    Carte-mère avec régulateur de tension soudé
 
 Transformateur
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 Le dernier composant à installer est le transformateur, il est repéré **TXFR1**. C’est un transformateur double de **6 V**, comme indiqué sur la couche sérigraphiée.
 Ces transformateurs de **6 V** peuvent alimenter un régulateur de tension de **3,3 V** ou de **5 V**.
@@ -289,14 +289,14 @@ Ces transformateurs de **6 V** peuvent alimenter un régulateur de tension de *
 -------------
 
 Tests électriques
------------------
+~~~~~~~~~~~~~~~~~
 
 Une fois le transformateur en place, la carte est maintenant prête pour les tests électriques. |br|
 
 C’est le bon moment pour vérifier que tous les joints soudés sont en bon état et que toutes les éclaboussures de soudure ont été éliminées.
 
 Test de l’alimentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Avant d’installer les circuits intégrés, le fonctionnement de l’alimentation doit être vérifié.
 

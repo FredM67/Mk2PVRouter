@@ -1,6 +1,6 @@
 
 Ordre de soudure
-----------------
+~~~~~~~~~~~~~~~~
 
 | Il est fortement recommandé de suivre l’ordre de soudure indiqué.
 |
