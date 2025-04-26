@@ -1,5 +1,3 @@
-.. _ percages:
-
 Perçages
 ========
 

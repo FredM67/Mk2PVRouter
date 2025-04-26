@@ -36,6 +36,20 @@ Le gabarit sera placé sur la face pleine du dissipateur.
 
 L’utilisation d’une perceuse à colonne est recommandée.
 
+.. figure:: ../img/Gabarit-dissipateur.jpg
+   :alt: Positionnement du gabarit sur le dissipateur
+   :align: center
+   :scale: 25%
+   
+   Positionnement du gabarit sur le dissipateur
+
+.. figure:: ../img/Dissipateur-perce.jpg
+   :alt: Dissipateur percé
+   :align: center
+   :scale: 25%
+   
+   Dissipateur percé
+
 .. _percage-du-boitier:
 
 Perçage du boîtier
@@ -82,3 +96,17 @@ Bien placé, le dissipateur sera en contact avec la collerette périphérique du
    Positionnement du gabarit sur le boîtier
 
 L’utilisation d’une perceuse à colonne est recommandée.
+
+.. figure:: ../img/Boitier-marque.jpg
+   :alt: Boîtier marqué
+   :align: center
+   :scale: 25%
+   
+   Boîtier marqué
+
+.. figure:: ../img/Boitier-perce.jpg
+   :alt: Boîtier percé
+   :align: center
+   :scale: 25%
+   
+   Boîtier percé
