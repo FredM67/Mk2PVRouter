@@ -24,7 +24,7 @@ Le taux du flux d’impulsions pour le matériel en cours de test peut être aju
 
 Sécurité
 --------
-Pour cette étape d’étalonnage, il faudra potentionnellement manipuler le câblage électrique. Il est donc impératif de respecter les consignes de sécurité.
+Pour cette étape d’étalonnage, il faudra potentiellement manipuler le câblage électrique. Il est donc impératif de respecter les consignes de sécurité.
 
 .. danger::
    **ALERTE SÉCURITÉ**

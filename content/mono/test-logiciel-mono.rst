@@ -1,7 +1,7 @@
 .. _test-logiciel-mono:
 
-Tests logiciel
-==============
+Tests logiciels
+===============
 
 | Une fois le processeur installé, il serait judicieux de vérifier que l’alimentation électrique fonctionne toujours correctement.
 | Si c’est le cas, nous pouvons exécuter un croquis (programme) pour vérifier si le processeur fonctionne correctement.
@@ -16,7 +16,5 @@ Tests logiciel
     :depth: 1
 
 .. include:: test-logiciel-mono-requirements.inc.rst
-
-.. include:: carte-mere-mono-test-afficheur.inc.rst
 
 .. include:: test-mono-mesures.inc.rst

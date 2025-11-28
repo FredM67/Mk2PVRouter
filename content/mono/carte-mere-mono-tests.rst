@@ -13,5 +13,4 @@ Il est maintenant temps de procéder aux tests pour vérifier que tout fonctionn
 .. toctree::
    :maxdepth: 3
 
-   carte-mere-mono-test-elec
    test-logiciel-mono

@@ -7,6 +7,6 @@ Chaque sortie est dispose de deux emplacements :
 | Le deuxième emplacement pourra recevoir le connecteur du témoin LED. Selon les préférences de chacun, ce témoin pourra aussi être câblé via la carte de sortie elle-même.
 | 
 | Pour une sortie relais, il est nécessaire d’utiliser l’emplacement à **3 positions**.
-| En effet, un relais nécessite pour fonctionnement une alimentation permanente, ainsi qu’un fil de commande.
+| En effet, un relais nécessite pour son fonctionnement une alimentation permanente, ainsi qu’un fil de commande.
 | Cette alimentation sera fournie par les broches **VCC/+**  et **GND/-**, la commande sera câblée via la broche centrale.
 | Le deuxième emplacement recevra le connecteur du témoin LED.

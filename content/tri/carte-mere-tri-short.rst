@@ -9,7 +9,7 @@ Carte-mère triphasée
 
 -------------
 
-.. include:: ../common/ordre-soudure.rst
+.. include:: ../common/ordre-soudure.inc.rst
 
 -------------
 

@@ -15,7 +15,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 | Grâce aux modules sortie-relais, il peut aussi gérer des installations de chauffage ou toutes sortes d’appareils avec ses fonctions de programmateurs horaire, temporisations, thermostats, préparation ECS, chauffage… toutes configurables librement.
 |
 | Ce routeur existe en 2 versions, une version **monophasée**, exclusivement pour les raccordements monophasés, et une **triphasée** pour les raccordements en triphasé.
-| Seul le type de raccordement au réseau électrique (Enedis ou régie locale) est important, peu importe que la production d’électricité soit en monophasé ou que l’on utilise que des appareils monophasés.
+| Seul le type de raccordement au réseau électrique (Enedis ou régie locale) est important, peu importe que la production d’électricité soit en monophasé ou que l’on n’utilise que des appareils monophasés.
 
 .. admonition:: À retenir
 
@@ -32,7 +32,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    Schéma montrant l’implantation typique du Mk2PVRouter dans une installation domestique.
 
 | Les 2 graphiques suivants vous montrent une production et une consommation typiques d’un foyer.
-| Les pics importants représentent la consommation classique dûe au fonctionnement d’un chauffe-eau.
+| Les pics importants représentent la consommation classique due au fonctionnement d’un chauffe-eau.
 
 .. figure:: img/Production-et-consommation-journaliere-sans-MK2-PV-Router.png
    :align: center
@@ -73,6 +73,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :hidden:
 
    principe-fonctionnement
+   burst-fire-control
 
 .. toctree::
    :maxdepth: 3

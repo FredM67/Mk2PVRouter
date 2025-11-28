@@ -4,7 +4,7 @@ Ordre de soudure
 
 | Il est fortement recommandé de suivre l’ordre de soudure indiqué.
 |
-| Cela vous vous épargnera des soucis par rapport au maintien des composants lors de la soudure.
+| Cela vous épargnera des soucis par rapport au maintien des composants lors de la soudure.
 | En effet, les composants à souder sont insérés sur la face *avant* du circuit imprimé, tandis que la soudure se fait sur la face *arrière*.
 | Il faudra donc à chaque fois retourner le circuit imprimé pour souder les composants.
 | 

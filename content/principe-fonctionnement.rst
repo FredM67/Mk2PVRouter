@@ -5,7 +5,7 @@ Principe de fonctionnement
 
 Le Mk2PVRouter est conçu pour optimiser l’autoconsommation d’énergie produite par un système photovoltaïque. Son fonctionnement repose sur la surveillance en temps réel du **bilan énergétique au point de raccordement** et sur la gestion intelligente des surplus d’énergie.
 
-| Voici les étapes principales du fonctionnement du Mk2PVRouter :
+Voici les étapes principales du fonctionnement du Mk2PVRouter :
 
 #. **Surveillance du bilan énergétique** :
 
@@ -121,4 +121,4 @@ Le Mk2PVRouter offre également des fonctionnalités avancées :
   - Il est également possible de piloter certaines fonctions du routeur via Home Assistant, comme la **marche forcée**.
 
   .. note::
-     Pour plus de détails sur l'intégration avec Home Assistant et pour accéder à un fichier YAML prêt à l'emploi pour ESPHome, consultez ce `Gist <https://gist.github.com/FredM67/986e1cb0fc020fa6324ccc151006af99>`_.
+     Pour plus de détails sur l’intégration avec Home Assistant et pour accéder à un fichier YAML prêt à l’emploi pour ESPHome, consultez ce `Gist <https://gist.github.com/FredM67/986e1cb0fc020fa6324ccc151006af99>`_.

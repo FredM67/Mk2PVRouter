@@ -10,7 +10,7 @@ digraph Mk2PVRouter {
     calculate [label="Calcul du bilan énergétique"];
     decision [shape=diamond, label="Le bilan énergétique est-il :\nPositif, Nul ou Négatif ?"];
     redirect [label="Triac passant"];
-    no_action [label="Pas d'action"];
+    no_action [label="Pas d’action"];
     disable [label="Triac ouvert"];
     end [shape=ellipse, label="Retour au début"];
 

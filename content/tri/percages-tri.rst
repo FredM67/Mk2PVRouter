@@ -1,3 +1,3 @@
-.. _ percages-tri:
+.. _percages-tri:
 
 .. include:: ../common/percages.inc.rst

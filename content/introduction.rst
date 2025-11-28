@@ -86,7 +86,7 @@ Matériels nécessaires
 * gaine thermorétractable
 * multimètre (au minimum voltmètre et ohmmètre)
 
-Certains matériels sont optionnels (fraise de 35, colle, gaine). Cependant, ils faciliteront certaines étapes et permettront de réaliser un travail plus soigné et bien fini.
+Certains matériels sont optionnels (fraise de 35 mm, colle, gaine). Cependant, ils faciliteront certaines étapes et permettront de réaliser un travail plus soigné et mieux fini.
 
 .. |br| raw:: html
 

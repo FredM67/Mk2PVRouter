@@ -3,7 +3,7 @@
 Confection des câbles
 =====================
 
-Il conviendra d’apporter un soin tout particulier pour la confection des multiples câbles nécessaires.
+Il convient d’apporter un soin tout particulier pour la confection des multiples câbles nécessaires.
 
 Voici la liste des câbles dont nous aurons besoin :
 
@@ -11,7 +11,7 @@ Voici la liste des câbles dont nous aurons besoin :
 * câble relié au bouton *reset* (uniquement triphasé)
 * câble de contrôle (un par étage de sortie)
 * câble de témoin LED (un par étage de sortie et/ou sortie relais).
-* câbles d’alimentation (uniquement version monophasé)
+* câbles d’alimentation (uniquement pour la version monophasée)
 * fil de mise à la terre (un par dissipateur)
 
 .. note::

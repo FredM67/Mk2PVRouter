@@ -1,3 +1,3 @@
-.. _ percages-mono:
+.. _percages-mono:
 
 .. include:: ../common/percages.inc.rst
