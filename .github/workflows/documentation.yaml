@@ -35,21 +35,34 @@ jobs:
           fetch-depth: 0
           lfs: true
 
-      - name: Cache drawio
+      - name: Get drawio latest release version
+        id: drawio-version
+        run: |
+          VERSION=$(curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep '"tag_name"' | cut -d '"' -f 4)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "DrawIO version: $VERSION"
+
+      - name: Cache drawio deb package
+        id: cache-drawio
         uses: actions/cache@v4
         with:
-          path: ~/.
-          key: ${{ runner.os }}-drawio-${{ hashFiles('**/drawio-amd64-*.deb') }}
+          path: ~/drawio-cache
+          key: ${{ runner.os }}-drawio-${{ steps.drawio-version.outputs.version }}-${{ runner.arch }}
           restore-keys: |
             ${{ runner.os }}-drawio-
-            ${{ runner.os }}-
+
+      - name: Download drawio
+        if: steps.cache-drawio.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/drawio-cache
+          cd ~/drawio-cache
+          curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep `dpkg --print-architecture` | grep '\.deb' | cut -d '"' -f 4 | wget -i -
 
       - name: Install drawio & graphviz
         run: |
           sudo apt-get update
-          sudo apt-get -y install wget curl graphviz
-          curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep `dpkg --print-architecture` | grep '\.deb' | cut -d '"' -f 4 | wget -i -
-          sudo apt-get -f install ./drawio-amd64-*.deb
+          sudo apt-get -y install graphviz
+          sudo apt-get -f install ~/drawio-cache/drawio-amd64-*.deb
 
       # https://github.com/marketplace/actions/setup-python
       # ^-- This gives info on matrix testing.
