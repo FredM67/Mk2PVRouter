@@ -240,7 +240,7 @@ Compilation et Téléversement
 
 .. tip::
    Si la compilation échoue avec des erreurs sur `std::array` ou `constexpr`,
-   c’est que le fichier `platform.txt` n’a pas été correctement modifié (voir :ref:`install-etape3-cpp17`).
+   c’est que le fichier `platform.txt` n’a pas été correctement modifié (voir :ref:`arduino-cpp17-config`).
 
 Résolution des Problèmes
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -260,7 +260,7 @@ Erreur : `error: 'constexpr' does not name a type`
 
 Le fichier `platform.txt` n’a pas été modifié correctement.
 
-**Solution :** Reprendre :ref:`install-etape3-cpp17`.
+**Solution :** Reprendre :ref:`arduino-cpp17-config`.
 
 Port COM n’apparaît pas
 ~~~~~~~~~~~~~~~~~~~~~~~

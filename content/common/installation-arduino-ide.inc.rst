@@ -94,7 +94,9 @@ Alternative : Installation via le gestionnaire de paquets
    sudo apt install arduino
 
 .. warning::
-   La version des dépôts peut être ancienne. Privilégier l’AppImage pour avoir la dernière version.
+   La version des dépôts peut être ancienne. Privilégier l'AppImage pour avoir la dernière version.
+
+.. _arduino-cpp17-config:
 
 Configuration Arduino IDE pour C++17
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
