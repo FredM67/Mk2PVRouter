@@ -187,19 +187,19 @@ Si Tension Correcte mais Pas de Fonctionnement
 
  #. ☐ **ATmega328** bien inséré dans le support ?
 
- - Toutes les pattes dans les trous ?
- - Pas de patte pliée sous le boîtier ?
+    - Toutes les pattes dans les trous ?
+    - Pas de patte pliée sous le boîtier ?
 
  #. ☐ **ATmega328** dans le bon sens ?
 
- - ⚠️ **CRITIQUE** : Encoche alignée avec marquage PCB ?
- - Si inversé → **Puce détruite à la mise sous tension !**
- - Vérifier 3 fois avant d’alimenter
+    - ⚠️ **CRITIQUE** : Encoche alignée avec marquage PCB ?
+    - Si inversé → **Puce détruite à la mise sous tension !**
+    - Vérifier 3 fois avant d’alimenter
 
  #. ☐ **Firmware programmé ?**
 
- - Voir la section :ref:`test-logiciel-mono` ou :ref:`test-logiciel-tri`
- - ATmega328 vierge ne fait rien
+    - Voir la section :ref:`test-logiciel-mono` ou :ref:`test-logiciel-tri`
+    - ATmega328 vierge ne fait rien
 
 Causes Fréquentes — Résumé
 --------------------------
@@ -280,23 +280,23 @@ Problèmes Port USB Windows
 
 #. **Vérifier Gestionnaire de périphériques**
 
- - Ouvrir : Panneau de configuration → Gestionnaire de périphériques
- - Chercher : « Ports (COM et LPT) »
- - Doit afficher : « USB Serial Port (COMx) »
- - Si point d’exclamation jaune → Pilote problématique
+   - Ouvrir : Panneau de configuration → Gestionnaire de périphériques
+   - Chercher : « Ports (COM et LPT) »
+   - Doit afficher : « USB Serial Port (COMx) »
+   - Si point d’exclamation jaune → Pilote problématique
 
 #. **Réinstaller pilotes FTDI**
 
- - Désinstaller pilote actuel (clic droit → Désinstaller)
- - Débrancher FTDI
- - Redémarrer ordinateur
- - Rebrancher FTDI
- - Windows devrait installer automatiquement
+   - Désinstaller pilote actuel (clic droit → Désinstaller)
+   - Débrancher FTDI
+   - Redémarrer ordinateur
+   - Rebrancher FTDI
+   - Windows devrait installer automatiquement
 
 #. **Essayer autre port USB**
 
- - Certains ports USB peuvent avoir problèmes
- - Préférer ports USB directs (pas hub)
+   - Certains ports USB peuvent avoir problèmes
+   - Préférer ports USB directs (pas hub)
 
 Problèmes Arduino IDE
 ---------------------
@@ -635,21 +635,21 @@ Valeurs de Référence
 
 #. **Charge de référence instable**
 
- - Utiliser une résistance pure (radiateur, chauffe-eau)
- - Pas de charge à découpage (ordinateur, LED)
- - Puissance doit être stable ±2%
+   - Utiliser une résistance pure (radiateur, chauffe-eau)
+   - Pas de charge à découpage (ordinateur, LED)
+   - Puissance doit être stable ±2%
 
 #. **Mesure de référence inexacte**
 
- - Pince ampèremétrique : ±3% précision minimum
- - Wattmètre : Classe 1 minimum
- - Multimètre basique insuffisant
+   - Pince ampèremétrique : ±3% précision minimum
+   - Wattmètre : Classe 1 minimum
+   - Multimètre basique insuffisant
 
 #. **Interférences**
 
- - Variateurs de vitesse moteur
- - Plaques à induction
- - Équipements RF à proximité
+   - Variateurs de vitesse moteur
+   - Plaques à induction
+   - Équipements RF à proximité
 
 **Procédure recommandée :**
 
@@ -974,19 +974,19 @@ Si Aucune Solution ne Fonctionne
 Ressources Communautaires
 -------------------------
 
-#. **Forum communauté :** https://forum.example.com/mk2pvrouter
+#. **Communauté Facebook :** https://www.facebook.com/groups/3571488193062570
 
- - Moteur de recherche (problème déjà résolu ?)
- - Poster nouveau sujet avec détails
+   - Moteur de recherche (problème déjà résolu ?)
+   - Poster nouveau sujet avec détails
 
-#. **Email support :** support@example.com
+#. **Email support :** support@mk2pvrouter.fr
 
- - Temps réponse : 2-5 jours ouvrés
+   - Temps réponse : 2-5 jours ouvrés
 
-#. **GitHub Issues :** https://github.com/user/Mk2PVRouter/issues
+#. **GitHub Issues :** https://github.com/FredM67/Mk2PVRouter/issues
 
- - Pour bugs firmware
- - Améliorations suggestions
+   - Pour bugs firmware
+   - Améliorations suggestions
 
 Informations à Fournir
 ----------------------
