@@ -23,15 +23,15 @@ Ce chapitre détaille l’installation complète de l’environnement de dévelo
 Les pilotes FTDI sont **OBLIGATOIRES** pour communiquer avec le routeur via le programmateur USB.
 
 .. danger::
-   Sans ces pilotes, l’ordinateur ne détectera pas le routeur !
+   Sans ces pilotes, l’ordinateur ne détectera pas le routeur !
 
 Windows
 ~~~~~~~
 
-#. Ouvrir le navigateur : https://ftdichip.com/drivers/vcp-drivers/
-#. Cliquer sur **« Windows »** dans la colonne **« Available Drivers »**
+#. Ouvrir le navigateur : https://ftdichip.com/drivers/vcp-drivers/
+#. Cliquer sur **« Windows »** dans la colonne **« Available Drivers »**
 #. Télécharger la dernière version (fichier `.exe`)
-#. Exécuter le fichier téléchargé en tant qu’administrateur (clic droit → **« Exécuter en tant qu’administrateur »**)
+#. Exécuter le fichier téléchargé en tant qu’administrateur (clic droit → **« Exécuter en tant qu’administrateur »**)
 #. Suivre l’assistant d’installation
 #. **Redémarrer l’ordinateur** après l’installation
 
@@ -40,8 +40,8 @@ Vérification
 
 #. Connecter l’adaptateur FTDI à un port USB
 #. Ouvrir le **Gestionnaire de périphériques** (Win + X → Gestionnaire de périphériques)
-#. Développer **« Ports (COM et LPT) »**
-#. Vérifier la présence de **« USB Serial Port (COMx) »** où x est un numéro
+#. Développer **« Ports (COM et LPT) »**
+#. Vérifier la présence de **« USB Serial Port (COMx) »** où x est un numéro
 #. **Noter le numéro COMx** (exemple : COM3, COM4)
 
 macOS
@@ -82,7 +82,7 @@ Vérification
 
    lsusb
 
-Rechercher une ligne contenant « FTDI » ou « Future Technology Devices ».
+Rechercher une ligne contenant « FTDI » ou « Future Technology Devices ».
 
 Si le pilote n’est pas chargé
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -102,11 +102,35 @@ Ajouter l’utilisateur au groupe dialout
 .. note::
    Le redémarrage est nécessaire pour que les changements prennent effet.
 
+=========================================================
+Étape 2 : Choix de l’Environnement de Développement
+=========================================================
+
+Vous avez deux options pour programmer le Mk2PVRouter :
+
+**Option A : Arduino IDE** (recommandé pour les débutants)
+   - Interface simple et intuitive
+   - Configuration manuelle nécessaire (C++17, bibliothèques)
+   - Suivre les **Étapes 2A**, 3A et 4A ci-dessous
+
+**Option B : PlatformIO** (recommandé pour les utilisateurs avancés)
+   - Gestion automatique des dépendances
+   - Support C++17 natif (pas de configuration manuelle)
+   - Suivre uniquement l’**Étape 2B** ci-dessous (pas d’étapes 3B ou 4B)
+
+.. important::
+   **Choisissez UNE SEULE option** : soit Arduino IDE (2A+3A+4A), soit PlatformIO (2B uniquement).
+
+---
+
 .. _install-etape2-arduino:
 
-===================================
-Étape 2a : Installation Arduino IDE
-===================================
+================================================
+Option A : Installation avec Arduino IDE
+================================================
+
+Étape 2A : Installation Arduino IDE
+====================================
 
 L’Arduino IDE est le logiciel qui permet de programmer le routeur.
 
@@ -116,24 +140,24 @@ Windows
 Téléchargement
 ^^^^^^^^^^^^^^
 
-#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
-#. Cliquer sur **« Windows Win 10 and newer »** (fichier `.exe` ou `.zip`)
-#. ⚠️ **NE PAS** télécharger la version **« Windows app »** (incompatibilités connues)
-#. Attendre la fin du téléchargement (~200 MB)
+#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
+#. Cliquer sur **« Windows Win 10 and newer »** (fichier `.exe` ou `.zip`)
+#. ⚠️ **NE PAS** télécharger la version **« Windows app »** (incompatibilités connues)
+#. Attendre la fin du téléchargement (~200 MB)
 
 Installation
 ~~~~~~~~~~~~
 
 #. Double-cliquer sur le fichier téléchargé (`arduino-ide-xxxx.exe`)
 #. Accepter la licence
-#. **IMPORTANT :** Cocher **« Install USB drivers »** et tous les composants
+#. **IMPORTANT :** Cocher **« Install USB drivers »** et tous les composants
 #. Choisir le répertoire d’installation (laisser par défaut : `C:\\Program Files\\Arduino`)
-#. Cliquer sur **« Install »**
+#. Cliquer sur **« Install »**
 #. Attendre la fin de l’installation (5-10 minutes)
 #. Laisser l’installateur créer les raccourcis sur le bureau
 
 .. note::
-   Si Windows affiche un avertissement de sécurité, cliquer sur **« Exécuter quand même »**.
+   Si Windows affiche un avertissement de sécurité, cliquer sur **« Exécuter quand même »**.
    Le logiciel Arduino est sûr et largement utilisé.
 
 macOS
@@ -142,8 +166,8 @@ macOS
 Téléchargement
 ^^^^^^^^^^^^^^
 
-#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
-#. Cliquer sur **« macOS »** (fichier `.dmg`)
+#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
+#. Cliquer sur **« macOS »** (fichier `.dmg`)
 #. Attendre la fin du téléchargement
 
 Installation
@@ -156,7 +180,7 @@ Installation
 
 .. note::
    Au premier lancement, macOS peut demander l’autorisation d’ouvrir l’application.
-   Cliquer sur **« Ouvrir »** dans la fenêtre de sécurité.
+   Cliquer sur **« Ouvrir »** dans la fenêtre de sécurité.
 
 Linux (Ubuntu/Debian)
 ~~~~~~~~~~~~~~~~~~~~~
@@ -164,8 +188,8 @@ Linux (Ubuntu/Debian)
 Méthode recommandée : AppImage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
-#. Télécharger la version **« Linux AppImage »**
+#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
+#. Télécharger la version **« Linux AppImage »**
 #. Ouvrir un terminal
 #. Rendre le fichier exécutable :
 
@@ -186,16 +210,147 @@ Alternative : Installation via le gestionnaire de paquets
 .. warning::
    La version des dépôts peut être ancienne. Privilégier l’AppImage pour avoir la dernière version.
 
+.. _install-etape3-cpp17:
+
+Étape 3A : Configuration Arduino IDE pour C++17
+================================================
+
+.. danger::
+   **ÉTAPE CRITIQUE** — Le firmware nécessite le support C++17.
+
+   Sans cette modification, la compilation échouera avec des erreurs incompréhensibles !
+
+Le firmware du Mk2PVRouter utilise des fonctionnalités modernes du C++ (C++17) qui ne sont pas activées par défaut dans Arduino IDE.
+
+Localisation du fichier `platform.txt`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Le fichier à modifier se trouve à différents emplacements selon le système d’exploitation :
+
+Windows
+^^^^^^^
+
+Deux emplacements possibles :
+
+#. `C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\platform.txt`
+#. `%LOCALAPPDATA%\\Arduino15\\packages\\arduino\\hardware\\avr\\x.y.z\\platform.txt`
+
+   (remplacer `x.y.z` par la version installée, exemple : `1.8.6`)
+
+macOS
+^^^^^
+
+`/Users/[nom_utilisateur]/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/platform.txt`
+
 .. note::
-   **Alternative : PlatformIO** — Si vous préférez utiliser PlatformIO au lieu d’Arduino IDE, 
-   consultez l’Étape 2b ci-dessous. PlatformIO offre un support C++17 natif (pas besoin de modifier platform.txt)
-   et des fonctionnalités avancées.
+   Le dossier `Library` peut être caché. Pour y accéder :
+
+   #. Dans le Finder, menu **« Aller »** → maintenir **Option** → cliquer sur **« Bibliothèque »**
+
+   Ou taper dans le terminal :
+
+   .. code-block:: bash
+
+      open ~/Library/Arduino15/packages/arduino/hardware/avr/
+
+Linux
+^^^^^
+
+`~/.arduino15/packages/arduino/hardware/avr/1.8.6/platform.txt`
+
+Modification du fichier
+~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Faire une **copie de sauvegarde** du fichier `platform.txt` (exemple : `platform.txt.bak`)
+
+   .. code-block:: bash
+
+      # Linux/macOS
+      cp platform.txt platform.txt.bak
+
+#. Ouvrir le fichier `platform.txt` avec un éditeur de texte (Notepad++, nano, gedit, etc.)
+
+#. Rechercher la ligne contenant :
+
+   .. code-block:: text
+
+      "-std=gnu++11"
+
+#. Remplacer par :
+
+   .. code-block:: text
+
+      "-std=gnu++17"
+
+#. **Sauvegarder** le fichier
+
+#. **Redémarrer Arduino IDE** pour que le changement soit pris en compte
+
+.. tip::
+   Si vous ne trouvez pas le fichier, ouvrez Arduino IDE, allez dans **Fichier → Préférences**,
+   et regardez l’emplacement du **« Dossier de Sketchbook »**. Le fichier `platform.txt` est
+   généralement dans un sous-dossier relatif à cet emplacement.
+
+.. _install-etape4-bibliotheques:
+
+Étape 4A : Installation des Bibliothèques
+==========================================
+
+Le firmware nécessite plusieurs bibliothèques externes.
+
+Ouvrir le Gestionnaire de bibliothèques
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Lancer Arduino IDE
+#. Menu : **Outils → Gérer les bibliothèques...**
+#. Une fenêtre « Gestionnaire de bibliothèques » s’ouvre
+
+Installation de ArduinoJson
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Dans le champ de recherche, taper : `ArduinoJson`
+#. Trouver la bibliothèque **« ArduinoJson »** par Benoit Blanchon
+#. ⚠️ **IMPORTANT** : Installer la version **6.x** (PAS la version 7 !)
+
+   - Version 6.21.5 recommandée
+   - La version 7 est **incompatible** avec l’ATmega328P
+
+#. Cliquer sur **« Installer »**
+
+.. danger::
+   Ne pas installer ArduinoJson version 7.x — elle ne fonctionnera pas sur l’ATmega328P !
+
+Installation de OneWire
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Cette bibliothèque gère les sondes de température (optionnelles).
+
+#. Dans le champ de recherche, taper : `OneWire`
+#. Trouver **« OneWire »** par Paul Stoffregen
+#. ⚠️ Installer la version **2.3.7 ou supérieure**
+#. Cliquer sur **« Installer »**
+
+Vérification
+~~~~~~~~~~~~
+
+#. Menu : **Croquis → Inclure une bibliothèque**
+#. Vérifier la présence de : **ArduinoJson**, **OneWire**
+
+.. tip::
+   Si les bibliothèques n’apparaissent pas, redémarrer Arduino IDE.
+
+✅ **Configuration Arduino IDE terminée !** Passez maintenant aux étapes spécifiques à votre version (mono ou tri-phase).
+
+---
 
 .. _install-etape2-platformio:
 
-====================================
-Étape 2b : Alternative PlatformIO
-====================================
+================================================
+Option B : Installation avec PlatformIO
+================================================
+
+Étape 2B : Installation PlatformIO (Tout-en-Un)
+================================================
 
 Pour les Utilisateurs Avancés
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -205,11 +360,20 @@ Pour les Utilisateurs Avancés
 Avantages
 ~~~~~~~~~
 
-- Gestion automatique des bibliothèques
+- Gestion automatique des bibliothèques (ArduinoJson, OneWire, U8g2...)
 - Support C++17 natif (pas besoin de modifier `platform.txt`)
 - Compilations plus rapides
 - Meilleure intégration avec Git
 - Débogage avancé
+
+.. important::
+   Avec PlatformIO, **aucune étape supplémentaire n’est nécessaire**.
+
+   Vous n’avez **PAS** besoin de :
+   - Configurer C++17 manuellement (Étape 3A)
+   - Installer les bibliothèques manuellement (Étape 4A)
+
+   Tout est géré automatiquement par PlatformIO !
 
 Installation
 ~~~~~~~~~~~~
@@ -253,140 +417,4 @@ Pour changer d’environnement :
    PlatformIO est recommandé pour les utilisateurs avancés qui développent ou modifient le firmware.
    Pour un usage standard, Arduino IDE suffit amplement.
 
-
-.. _install-etape3-cpp17:
-
-================================================
-Étape 3 : Configuration Arduino IDE pour C++17
-================================================
-
-.. note::
-   Cette étape est uniquement nécessaire si vous utilisez Arduino IDE (:ref:`Étape 2a <install-etape2-arduino>`).
-
-   Si vous avez choisi PlatformIO (:ref:`Étape 2b <install-etape2-platformio>`), vous pouvez sauter cette étape car PlatformIO gère automatiquement le support C++17.
-
-.. danger::
-   **ÉTAPE CRITIQUE** — Le firmware nécessite le support C++17.
-
-   Sans cette modification, la compilation échouera avec des erreurs incompréhensibles !
-
-Le firmware du Mk2PVRouter utilise des fonctionnalités modernes du C++ (C++17) qui ne sont pas activées par défaut dans Arduino IDE.
-
-Localisation du fichier `platform.txt`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Le fichier à modifier se trouve à différents emplacements selon le système d’exploitation :
-
-Windows
-^^^^^^^
-
-Deux emplacements possibles :
-
-#. `C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\platform.txt`
-#. `%LOCALAPPDATA%\\Arduino15\\packages\\arduino\\hardware\\avr\\x.y.z\\platform.txt`
-
-   (remplacer `x.y.z` par la version installée, exemple : `1.8.6`)
-
-macOS
-^^^^^
-
-`/Users/[nom_utilisateur]/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/platform.txt`
-
-.. note::
-   Le dossier `Library` peut être caché. Pour y accéder :
-
-   #. Dans le Finder, menu **« Aller »** → maintenir **Option** → cliquer sur **« Bibliothèque »**
-
-   Ou taper dans le terminal :
-
-   .. code-block:: bash
-
-      open ~/Library/Arduino15/packages/arduino/hardware/avr/
-
-Linux
-^^^^^
-
-`~/.arduino15/packages/arduino/hardware/avr/1.8.6/platform.txt`
-
-Modification du fichier
-~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Faire une **copie de sauvegarde** du fichier `platform.txt` (exemple : `platform.txt.bak`)
-
-   .. code-block:: bash
-
-      # Linux/macOS
-      cp platform.txt platform.txt.bak
-
-#. Ouvrir le fichier `platform.txt` avec un éditeur de texte (Notepad++, nano, gedit, etc.)
-
-#. Rechercher la ligne contenant :
-
-   .. code-block:: text
-
-      "-std=gnu++11"
-
-#. Remplacer par :
-
-   .. code-block:: text
-
-      "-std=gnu++17"
-
-#. **Sauvegarder** le fichier
-
-#. **Redémarrer Arduino IDE** pour que le changement soit pris en compte
-
-.. tip::
-   Si vous ne trouvez pas le fichier, ouvrez Arduino IDE, allez dans **Fichier → Préférences**,
-   et regardez l’emplacement du **« Dossier de Sketchbook »**. Le fichier `platform.txt` est
-   généralement dans un sous-dossier relatif à cet emplacement.
-
-.. _install-etape4-bibliotheques:
-
-
-========================================
-Étape 4 : Installation des Bibliothèques
-========================================
-
-Le firmware nécessite plusieurs bibliothèques externes.
-
-Ouvrir le Gestionnaire de bibliothèques
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Lancer Arduino IDE
-#. Menu : **Outils → Gérer les bibliothèques...**
-#. Une fenêtre « Gestionnaire de bibliothèques » s’ouvre
-
-Installation de ArduinoJson
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Dans le champ de recherche, taper : `ArduinoJson`
-#. Trouver la bibliothèque **« ArduinoJson »** par Benoit Blanchon
-#. ⚠️ **IMPORTANT** : Installer la version **6.x** (PAS la version 7 !)
-
-   - Version 6.21.5 recommandée
-   - La version 7 est **incompatible** avec l’ATmega328P
-
-#. Cliquer sur **« Installer »**
-
-.. danger::
-   Ne pas installer ArduinoJson version 7.x — elle ne fonctionnera pas sur l’ATmega328P !
-
-Installation de OneWire
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Cette bibliothèque gère les sondes de température (optionnelles).
-
-#. Dans le champ de recherche, taper : `OneWire`
-#. Trouver **« OneWire »** par Paul Stoffregen
-#. ⚠️ Installer la version **2.3.7 ou supérieure**
-#. Cliquer sur **« Installer »**
-
-Vérification
-~~~~~~~~~~~~
-
-#. Menu : **Croquis → Inclure une bibliothèque**
-#. Vérifier la présence de : **ArduinoJson**, **OneWire**
-
-.. tip::
-   Si les bibliothèques n’apparaissent pas, redémarrer Arduino IDE.
+✅ **Configuration PlatformIO terminée !** Passez maintenant aux étapes spécifiques à votre version (mono ou tri-phase).
