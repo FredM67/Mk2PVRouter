@@ -18,7 +18,7 @@ Téléchargement
 #. Attendre la fin du téléchargement (~200 MB)
 
 Installation
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 #. Double-cliquer sur le fichier téléchargé (`arduino-ide-xxxx.exe`)
 #. Accepter la licence
@@ -43,7 +43,7 @@ Téléchargement
 #. Attendre la fin du téléchargement
 
 Installation
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 #. Ouvrir le fichier `.dmg` téléchargé
 #. Glisser l’icône Arduino dans le dossier **Applications**
