@@ -26,8 +26,8 @@ Ce chapitre couvre tous les aspects de sécurité liés à l’assemblage, aux t
 Dangers Principaux
 ==================
 
-1. **Électrocution (230 V AC)** - PEUT ÊTRE MORTEL
---------------------------------------------------
+1. **Électrisation (230 V AC)** — PEUT ÊTRE MORTELLE
+----------------------------------------------------
 
 Le courant alternatif 230 V présent dans les installations domestiques peut provoquer :
 
@@ -72,7 +72,7 @@ Plusieurs sources de risque d’incendie :
 4. **Blessures Mécaniques**
 ---------------------------
 
-- **Perceuse/Drill press** : Entraînement de pièces, projections
+- **Perceuse/à colonne** : Entraînement de pièces, projections
 - **Outils coupants** : Coupures, entailles
 - **Projections métalliques** : Blessures aux yeux
 
@@ -112,7 +112,7 @@ Plusieurs sources de risque d’incendie :
 - **Outils isolés** (tournevis, pinces avec poignées isolées)
 
 Équipement de Sécurité Général
--------------------------------
+------------------------------
 
 - **Extincteur** : Type ABC, 2 kg minimum, vérifié annuellement
 - **Détecteur de fumée** : Fonctionnel et testé
@@ -121,7 +121,7 @@ Plusieurs sources de risque d’incendie :
 
 =======================================
 Règles de Sécurité par Type d’Opération
-=====================
+=======================================
 
 Sécurité Soudure
 ================
@@ -199,7 +199,7 @@ Règles d’Or (230 V AC)
 
    1. **CONSIGNER** : Couper l’alimentation au disjoncteur
    2. **CONDAMNER** : Verrouiller le disjoncteur (cadenas si possible)
-   3. **IDENTIFIER** : Vérifier que c'est bien le bon circuit
+   3. **IDENTIFIER** : Vérifier que c’est bien le bon circuit
    4. **VÉRIFIER l’ABSENCE DE TENSION** : Avec testeur adapté
    5. **METTRE À LA TERRE** : Connecter la terre avant toute manipulation
 
@@ -212,11 +212,11 @@ Vérification Absence de Tension
 2. **Tester le testeur** sur une prise sous tension connue AVANT (vérifier qu’il fonctionne)
 3. Tester sur les conducteurs à manipuler
 4. Si le testeur indique présence tension → **NE PAS TOUCHER**
-5. **Tester le testeur** APRÈS pour s'assurer qu’il fonctionne toujours
+5. **Tester le testeur** APRÈS pour s’assurer qu’il fonctionne toujours
 
 .. warning::
    Un testeur défectueux peut indiquer « pas de tension » alors que le circuit est sous tension !
-   C'est pourquoi il faut le tester avant ET après.
+   C’est pourquoi il faut le tester avant ET après.
 
 Procédure de Consignation
 -------------------------
@@ -254,7 +254,7 @@ Distance de Sécurité
 
 Lors de tests sous tension :
 
-- **Garder une main dans le dos** (évite courant traversant le cœur)
+- **Garder une main dans le dos** (évite le courant traversant le cœur)
 - **Ne jamais toucher deux points** du circuit simultanément
 - **Rester à distance** : Utiliser sondes de test, pas les doigts
 - **Porter chaussures isolantes** ou être sur tapis isolant
@@ -264,7 +264,7 @@ Sécurité Perçage/Usinage
 ========================
 
 Perceuse à Colonne / Perceuse Manuelle
----------------------------------------
+--------------------------------------
 
 .. danger::
    **RISQUES MAJEURS**
@@ -284,7 +284,7 @@ Règles Obligatoires
    [ ] **PAS de gants** (risque entraînement)
    [ ] **Vêtements près du corps** (pas de manches larges)
    [ ] **Pièce FIXÉE** (étau, serre-joints) — JAMAIS tenue à la main
-   [ ] **Vitesse adaptée** au matériau (aluminium: lent, plastique: moyen)
+   [ ] **Vitesse adaptée** au matériau (aluminium : lent, plastique : moyen)
    [ ] **Zone dégagée** autour de la perceuse
 
 Technique Sûre
@@ -430,10 +430,10 @@ Le tableau suivant indique le niveau de compétence requis et les risques associ
 
 =====================
 Procédures d’Urgence
-=====================
+====================
 
-En Cas d’Électrocution
-=======================
+En Cas d’Électrisation
+======================
 
 .. danger::
    **VITALE : Chaque seconde compte !**
@@ -446,8 +446,8 @@ Si quelqu’un est électrocuté :
 4. **Si la victime ne respire pas** : Réanimation cardio-pulmonaire (si formation)
 5. **Position latérale de sécurité** si inconscient mais respire
 
-Signes d’Électrocution
------------------------
+Signes d’Électrisation
+----------------------
 
 - Perte de conscience
 - Arrêt respiratoire
@@ -457,7 +457,7 @@ Signes d’Électrocution
 - Confusion, désorientation
 
 .. warning::
-   **Même après électrocution « mineure »:**
+   **Même après électrisation « mineure »:**
 
    Consultez un médecin ! Des lésions cardiaques peuvent apparaître plusieurs heures après.
    Le courant électrique peut provoquer des troubles du rythme cardiaque différés.
@@ -490,7 +490,7 @@ Brûlures Graves (> 5 cm, profondes, électriques)
    Le courant provoque des dégâts internes invisibles (muscles, nerfs, vaisseaux).
 
 Numéros d’Urgence (France)
-===========================
+==========================
 
 - **SAMU** : 15
 - **Pompiers** : 18
@@ -501,13 +501,13 @@ Numéros d’Urgence (France)
 
 - Votre adresse exacte
 - Nombre de victimes
-- Nature de l’accident (électrocution, brûlure, etc.)
+- Nature de l’accident (électrisation, brûlure, etc.)
 - État de la victime (conscient ? respire ?)
 - Votre numéro de téléphone
 
-=====================
+====================================
 Liste de Contrôle Avant de Commencer
-=====================
+====================================
 
 Évaluation Personnelle
 ======================
@@ -538,7 +538,7 @@ Liste de Contrôle Avant de Commencer
    → Ou faites-vous aider par quelqu’un d’expérimenté
 
 Ressources de Formation
-------------------------
+-----------------------
 
 Si vous manquez de compétences, formez-vous d’abord :
 
@@ -594,7 +594,7 @@ Checklist Avant Assemblage
    [ ] Je connais les gestes premiers secours de base
 
 Reconnaissance de Risques
-==========================
+=========================
 
 .. admonition:: Déclaration de Compréhension des Risques
 
@@ -656,9 +656,9 @@ Cependant, il comporte des **risques réels et sérieux** qui ne doivent pas êt
 
    **Votre vie et celle de votre famille valent infiniment plus que le coût d’un professionnel.**
 
-=====================
+==================
 Prêt à Continuer ?
-=====================
+==================
 
 Si vous avez lu et compris ce chapitre, que vous possédez l’équipement de sécurité requis,
 et que vous vous sentez capable de procéder en toute sécurité, vous pouvez passer au chapitre suivant :
