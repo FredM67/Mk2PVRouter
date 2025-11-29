@@ -25,19 +25,28 @@
   - Covers: power issues, programming, electrical problems, heating/routing, RF communication
   - Help section with photo requirements and support info
 
-- ✅ **Task #4: Complete Software Installation Guide** - COMPLETE
-  - Created comprehensive `content/common/installation-logiciel.inc.rst` (776 lines)
-  - Covers Arduino IDE installation (Windows/macOS/Linux)
-  - FTDI driver installation with verification steps
-  - Critical C++17 configuration (platform.txt modification)
-  - Required libraries: ArduinoJson 6.x, U8g2, OneWire 2.3.7+
-  - Firmware download from GitHub (both mono and tri repositories)
-  - Configuration files (config.h, calibration.h) with detailed explanations
-  - Connection setup with safety warnings (FTDI wiring table)
-  - Programming steps with troubleshooting
-  - Verification with Serial Monitor
-  - PlatformIO alternative for advanced users
-  - Integrated into both mono/test-logiciel-mono.rst and tri/test-logiciel-tri.rst
+- ✅ **Task #4: Complete Software Installation Guide** - COMPLETE & REORGANIZED
+  - **Major Reorganization:** Restructured installation steps for logical flow
+  - **Common Installation File:** `content/installation-logiciel.rst` (319 lines)
+    - Step 1: FTDI drivers (was Step 2) - now first because needed for both IDEs
+    - Step 2a: Arduino IDE installation (Windows/macOS/Linux)
+    - Step 2b: PlatformIO alternative - NEW! Restored to common file
+    - Step 3: C++17 configuration (Arduino IDE only, with skip note for PlatformIO users)
+    - Step 4: Required libraries (ArduinoJson 6.x, OneWire 2.3.7+)
+  - **Version-Specific Files:** Firmware installation steps (trimmed, no duplicates)
+    - `content/mono/installation-logiciel-mono-specifique.inc.rst` (363 lines)
+      - U8g2 library installation (mono-only)
+      - Firmware download, configuration, connection, programming, verification
+    - `content/tri/installation-logiciel-tri-specifique.inc.rst` (348 lines)
+      - Same structure as mono but no U8g2
+  - **Key Improvements:**
+    - Logical step ordering: drivers first, then IDE choice, then configuration
+    - PlatformIO available to all users (was hidden in version-specific files)
+    - Clear guidance: which steps to skip based on IDE choice
+    - Clickable cross-references for all step numbers using `:ref:` directives
+    - Eliminated 172 lines of duplicate content (PlatformIO + Support sections)
+    - All reference labels updated: `install-etape1-ftdi`, `install-etape2-arduino`, `install-etape2-platformio`, etc.
+  - **Build Quality:** 23 warnings (down from 36), no duplicate label warnings
 
 **Additional Quality Improvements:**
 - ✅ French typography standardization (non-breaking spaces, guillemets, typographic apostrophes)
@@ -384,11 +393,13 @@ Start each chapter with:
 | 1 | Complete cable measurements | `confection-cables.rst` | 2-3 | ⬜ TODO |
 | 2 | Create unified safety chapter | `NEW: safety-overview.rst` | 6-8 | ✅ DONE |
 | 3 | Add troubleshooting guide | `NEW: troubleshooting.rst` | 8-10 | ✅ DONE |
-| 4 | Complete software installation guide | `NEW: installation-logiciel.inc.rst` | 6-8 | ✅ DONE |
+| 4 | Complete software installation guide | `installation-logiciel.rst` | 6-8 | ✅ DONE (+ reorganization) |
 | 5 | Rewrite assembly section | `assemblage-mono.rst` | 8-12 | ⬜ TODO |
 | 6 | Add final installation safety guide | `NEW: installation-finale.rst` | 6-8 | ⬜ TODO |
 
 **Total Phase 1:** 36-49 hours
+**Completed:** 20-26 hours (Tasks #2, #3, #4)
+**Remaining:** 16-23 hours (Tasks #1, #5, #6)
 
 **Deliverable:** Documentation safe to publish (minimum viable)
 
