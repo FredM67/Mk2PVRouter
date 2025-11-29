@@ -1,12 +1,86 @@
 # Mk2PVRouter Documentation - Comprehensive Review
 **Date:** 2025-11-29
-**Last Updated:** 2025-11-29
+**Last Updated:** 2025-11-29 (Session 2)
 **Target Audience:** Non-specialists with minimal electrical/electronics knowledge
-**Overall Score:** 7/10 (significant improvements made, more needed)
+**Overall Score:** 7.5/10 (significant improvements made, more needed)
 
 ---
 
-## 🎉 PROGRESS UPDATE (2025-11-29)
+## 🎉 LATEST UPDATE - Session 2 (2025-11-29 Afternoon)
+
+### Documentation Build Quality Improvements ✅
+
+**Major Refactoring & Build Health:**
+- ✅ **Complete Installation Guide Restructuring** - DONE
+  - Split monolithic 505-line file into modular include files
+  - Created `content/common/installation-arduino-ide.inc.rst` (209 lines)
+  - Created `content/common/installation-platformio.inc.rst` (163 lines)
+  - Main file reduced to 134 lines (73% reduction)
+  - Removed complex step numbering (Étape 2A, 3A, 4A, 2B-1, 2B-2)
+  - Simplified to clear section titles without artificial numbering
+
+- ✅ **RST Title Hierarchy Fixes** - COMPLETE
+  - Fixed 11 CRITICAL "Title level inconsistent" errors
+  - Applied consistent hierarchy across all files
+  - Fixed version-specific files (mono & tri)
+  - Build now succeeds with 0 CRITICAL errors
+
+- ✅ **Duplicate Label Resolution** - COMPLETE
+  - Eliminated all 14+ duplicate label warnings
+  - Added `autosectionlabel_maxdepth = 2` to conf.py
+  - Created explicit unique labels for all OS sections
+  - Updated all cross-references (`:ref:`install-etape3-cpp17`` → `:ref:`arduino-cpp17-config``)
+  - Total warnings reduced from 29 to 10 (66% reduction)
+
+**UX & Accessibility Improvements:**
+- ✅ **OS Emojis for Visual Navigation** - DONE
+  - Added 🪟 Windows, 🍎 macOS, 🐧 Linux emojis to all installation sections
+  - Applied to FTDI drivers, Arduino IDE, and PlatformIO sections
+  - Instant visual recognition for users
+
+- ✅ **Warning Severity Corrections** - DONE
+  - Changed C++17 configuration from `danger` to `warning` directive
+  - Reserve `danger` for actual physical safety hazards only
+  - Prevents "warning fatigue" from overused critical alerts
+
+- ✅ **Clarified IDE Installation Options** - DONE
+  - Removed misleading "choose ONE option" statement
+  - Users can now install both Arduino IDE and PlatformIO if desired
+  - More accurate and flexible guidance
+
+**French Typography & Language:**
+- ✅ **Proper French Typography** - DONE
+  - Applied inclusive writing with interpunct (Pont·s redresseur·s)
+  - SI unit spacing (10 nF instead of 10nF)
+  - Non-breaking spaces (\xa0) handled correctly
+  - Simplified redundant titles
+
+**Build Status After Session 2:**
+- ✅ 0 CRITICAL errors (was 11)
+- ✅ 0 duplicate label warnings (was 14+)
+- ✅ 10 total warnings (was 29) - 66% reduction
+- ✅ Clean build succeeds
+
+**Git Commits (Session 2):**
+```
+86ae6b8 docs: improve French typography and simplify title
+63a072d docs: improve installation guide UX with OS emojis and clearer warnings
+4ef0a45 Some indent fixes
+c0fc3a1 fix: eliminate all duplicate label warnings with autosectionlabel config
+548c7c7 fix: add unique labels to prevent duplicate label warnings
+5a71533 fix: correct title hierarchy in version-specific installation includes
+45ab909 docs: refactor installation guide - split into modular include files
+```
+
+**Technical Challenges Solved:**
+- Non-breaking spaces in French text requiring Python scripts for replacement
+- RST hierarchy understanding and proper level application
+- Sphinx autosectionlabel configuration for large documents with includes
+- Label scoping issues across include files
+
+---
+
+## 🎉 PROGRESS UPDATE (2025-11-29 Morning - Session 1)
 
 ### Completed Today ✅
 
