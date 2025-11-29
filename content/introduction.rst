@@ -3,9 +3,30 @@
 Introduction
 ============
 
-| Cette documentation est applicable à toutes les versions du Mk2PVRouter, qu’elles soient monophasées ou triphasées.
+| Cette documentation est applicable à toutes les versions du Mk2PVRouter, qu'elles soient monophasées ou triphasées.
 | La majorité des informations sont pertinentes pour les deux versions.
 | Chaque version a son propre chapitre.
+
+.. danger::
+   ⚠️ **SÉCURITÉ AVANT TOUT** : Avant de commencer l'assemblage, lisez impérativement le chapitre :ref:`safety-overview`.
+
+   Ce projet implique la manipulation de composants électroniques sensibles et, plus tard, de tensions dangereuses (230 V).
+
+**Niveau de difficulté :** 🔧🔧🔧 Intermédiaire
+
+- Nécessite des compétences de base en soudure
+- Une bonne dextérité manuelle
+- De la patience et de la minutie
+
+**Durée totale estimée :**
+
+⏱️ **Temps d'assemblage complet :**
+   - Débutant en soudure : 12-15 heures (réparties sur plusieurs sessions)
+   - Expérience intermédiaire : 8-10 heures
+   - Expérimenté : 5-7 heures
+
+.. tip::
+   Il est recommandé de travailler par sessions de 2-3 heures maximum pour maintenir concentration et précision.
 
 -------------
 
@@ -26,15 +47,41 @@ Dans le kit, vous trouverez :
 
 L’assemblage complet va nécessiter plusieurs étapes :
 
-* soudure et tests de la carte-mère
-* soudure et tests de la ou les cartes de sortie
-* perçage du boîtier
-* perçage du ou des dissipateurs thermiques
-* montage des circuits soudés dans le boîtier
-* confection des câbles
-* câblage
-* étalonnage
-* programmation finale
+#. Soudure et tests de la carte-mère
+#. Soudure et tests de la ou les cartes de sortie
+#. Perçage du boîtier et des dissipateurs thermiques
+#. Montage des circuits soudés dans le boîtier
+#. Confection des câbles et câblage
+#. Installation du logiciel et firmware (voir chapitre :ref:`installation-logiciel`)
+#. Tests et étalonnage
+
+**Durées indicatives par étape :**
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50 25 25
+
+   * - Étape
+     - Débutant
+     - Expérimenté
+   * - Soudure carte-mère + tests
+     - 3-4 h
+     - 1,5-2 h
+   * - Soudure cartes sortie + tests
+     - 1,5-2 h
+     - 45 min-1 h
+   * - Perçages
+     - 2-3 h
+     - 1-1,5 h
+   * - Montage dans boîtier
+     - 1-2 h
+     - 30 min-1 h
+   * - Câblage
+     - 2-3 h
+     - 1-1,5 h
+   * - Logiciel + étalonnage
+     - 3-4 h
+     - 2-3 h
 
 Recommandations pour les étapes de soudure
 ------------------------------------------
