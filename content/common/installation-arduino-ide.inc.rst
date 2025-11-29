@@ -8,8 +8,8 @@ L’Arduino IDE est le logiciel qui permet de programmer le routeur.
 
 .. _arduino-ide-windows:
 
-Windows
-~~~~~~~
+🪟 Windows
+~~~~~~~~~~
 
 .. _arduino-ide-windows-telechargement:
 
@@ -40,8 +40,8 @@ Installation
 
 .. _arduino-ide-macos:
 
-macOS
-~~~~~
+🍎 macOS
+~~~~~~~~
 
 .. _arduino-ide-macos-telechargement:
 
@@ -94,7 +94,7 @@ Alternative : Installation via le gestionnaire de paquets
    sudo apt install arduino
 
 .. warning::
-   La version des dépôts peut être ancienne. Privilégier l'AppImage pour avoir la dernière version.
+   La version des dépôts peut être ancienne. Privilégier l’AppImage pour avoir la dernière version.
 
 .. _arduino-cpp17-config:
 
@@ -104,7 +104,7 @@ Configuration Arduino IDE pour C++17
 .. danger::
    **ÉTAPE CRITIQUE** — Le firmware nécessite le support C++17.
 
-   Sans cette modification, la compilation échouera avec des erreurs incompréhensibles !
+   Sans cette modification, la compilation échouera avec des erreurs incompréhensibles !
 
 Le firmware du Mk2PVRouter utilise des fonctionnalités modernes du C++ (C++17) qui ne sont pas activées par défaut dans Arduino IDE.
 
@@ -196,7 +196,7 @@ Installation de ArduinoJson
 
 #. Dans le champ de recherche, taper : `ArduinoJson`
 #. Trouver la bibliothèque **« ArduinoJson »** par Benoit Blanchon
-#. ⚠️ **IMPORTANT** : Installer la version **6.x** (PAS la version 7 !)
+#. ⚠️ **IMPORTANT** : Installer la version **6.x** (PAS la version 7 !)
 
    - Version 6.21.5 recommandée
    - La version 7 est **incompatible** avec l’ATmega328P
@@ -204,7 +204,7 @@ Installation de ArduinoJson
 #. Cliquer sur **« Installer »**
 
 .. danger::
-   Ne pas installer ArduinoJson version 7.x — elle ne fonctionnera pas sur l’ATmega328P !
+   Ne pas installer ArduinoJson version 7.x — elle ne fonctionnera pas sur l’ATmega328P !
 
 Installation de OneWire
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -225,4 +225,4 @@ Vérification
 .. tip::
    Si les bibliothèques n’apparaissent pas, redémarrer Arduino IDE.
 
-✅ **Configuration Arduino IDE terminée !** Passez maintenant aux étapes spécifiques à votre version (mono ou tri-phase).
+✅ **Configuration Arduino IDE terminée !** Passez maintenant aux étapes spécifiques à votre version (mono ou tri-phase).

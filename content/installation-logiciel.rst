@@ -23,12 +23,12 @@ Ce chapitre détaille l’installation complète de l’environnement de dévelo
 Les pilotes FTDI sont **OBLIGATOIRES** pour communiquer avec le routeur via le programmateur USB.
 
 .. danger::
-   Sans ces pilotes, l'ordinateur ne détectera pas le routeur !
+   Sans ces pilotes, l'ordinateur ne détectera pas le routeur !
 
 .. _ftdi-windows:
 
-Windows
--------
+🪟 Windows
+----------
 
 #. Ouvrir le navigateur : https://ftdichip.com/drivers/vcp-drivers/
 #. Cliquer sur **« Windows »** dans la colonne **« Available Drivers »**
@@ -50,8 +50,8 @@ Vérification
 
 .. _ftdi-macos:
 
-macOS
------
+🍎 macOS
+--------
 
 Les pilotes FTDI sont généralement inclus dans macOS moderne.
 
@@ -80,8 +80,8 @@ Si aucun périphérique n’apparaît
 
 .. _ftdi-linux:
 
-Linux
------
+🐧 Linux
+--------
 
 Les pilotes FTDI sont généralement inclus dans le noyau Linux.
 
@@ -128,8 +128,8 @@ Vous avez deux options pour programmer le Mk2PVRouter :
    - Support C++17 natif (pas de configuration manuelle)
    - Suivre les sous-sections de l'**Option B**' ci-dessous
 
-.. important::
-   **Choisissez UNE SEULE option** : soit Arduino IDE, soit PlatformIO.
+.. note::
+   Vous pouvez choisir l'une ou l'autre option, ou même installer les deux environnements si vous le souhaitez.
 
 
 

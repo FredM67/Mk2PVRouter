@@ -22,7 +22,7 @@ Avantages
    - Configurer C++17 manuellement (voir ci-dessus)
    - Installer les bibliothèques manuellement (voir ci-dessus)
 
-   Tout est géré automatiquement par PlatformIO !
+   Tout est géré automatiquement par PlatformIO !
 
 Installation Visual Studio Code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,7 +98,7 @@ Installation de l’Extension
 
 .. note::
    Au premier lancement après installation, PlatformIO téléchargera des outils supplémentaires.
-   Cela peut prendre quelques minutes. Soyez patient !
+   Cela peut prendre quelques minutes. Soyez patient !
 
 Vérification de l’Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -107,7 +107,7 @@ Après le redémarrage de VS Code :
 
 #. Une icône PlatformIO (alien/extraterrestre) devrait apparaître dans la barre latérale gauche
 #. Cliquer sur cette icône ouvre le **PIO Home**
-#. Si vous voyez le **PIO Home**, l’installation est réussie !
+#. Si vous voyez le **PIO Home**, l’installation est réussie !
 
 Ouverture du Projet
 ~~~~~~~~~~~~~~~~~~~
@@ -163,4 +163,4 @@ Pour changer d’environnement :
 
 .. _platformio-termine:
 
-✅ **Configuration PlatformIO terminée !** Passez maintenant aux étapes spécifiques à votre version (mono ou tri-phase).
+✅ **Configuration PlatformIO terminée !** Passez maintenant aux étapes spécifiques à votre version (mono ou tri-phase).
