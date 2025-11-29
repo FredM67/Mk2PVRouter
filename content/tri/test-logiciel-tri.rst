@@ -5,7 +5,7 @@ Tests logiciels
 
 .. include:: ../common/test-logiciel-requirements.inc.rst
 
-Installation du Logiciel et Firmware
+Installation du Firmware
 ------------------------------------
 
 **Étapes communes à toutes les versions** : :ref:`installation-logiciel`

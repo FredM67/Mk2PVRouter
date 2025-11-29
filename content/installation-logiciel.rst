@@ -295,15 +295,6 @@ Installation de ArduinoJson
 .. danger::
    Ne pas installer ArduinoJson version 7.x — elle ne fonctionnera pas sur l’ATmega328P !
 
-Installation de U8g2
-~~~~~~~~~~~~~~~~~~~~
-
-Cette bibliothèque gère l’affichage sur écran (si équipé).
-
-#. Dans le champ de recherche, taper : `U8g2`
-#. Trouver **« U8g2 »** par oliver
-#. Cliquer sur **« Installer »**
-
 Installation de OneWire
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -318,7 +309,7 @@ Vérification
 ~~~~~~~~~~~~
 
 #. Menu : **Croquis → Inclure une bibliothèque**
-#. Vérifier la présence de : **ArduinoJson**, **U8g2**, **OneWire**
+#. Vérifier la présence de : **ArduinoJson**, **OneWire**
 
 .. tip::
    Si les bibliothèques n’apparaissent pas, redémarrer Arduino IDE.

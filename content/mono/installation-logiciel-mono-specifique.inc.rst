@@ -1,3 +1,18 @@
+Installation de U8g2 (Monophasé uniquement)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+   Cette bibliothèque est **uniquement nécessaire pour les PCB monophasés** équipés d'un affichage.
+   Les versions triphasées n'utilisent pas cette bibliothèque.
+
+Cette bibliothèque gère l'affichage sur écran.
+
+#. Dans le Gestionnaire de bibliothèques d'Arduino IDE
+#. Dans le champ de recherche, taper : `U8g2`
+#. Trouver **« U8g2 »** par oliver
+#. Cliquer sur **« Installer »**
+
+
 Étape 1 : Téléchargement du Firmware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
