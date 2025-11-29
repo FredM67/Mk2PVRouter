@@ -76,16 +76,16 @@ Effectuez ces vérifications dans l’ordre :
  #. ☐ Le disjoncteur est-il enclenché ?
  #. ☐ **Fusibles intacts ?**
 
-   - Mono : FS1
-   - Tri : FS1, FS2, FS3
-   - Vérifier avec multimètre en mode continuité
-   - Un fusible grillé indique un court-circuit
+    - Mono : FS1
+    - Tri : FS1, FS2, FS3
+    - Vérifier avec multimètre en mode continuité
+    - Un fusible grillé indique un court-circuit
 
  #. ☐ Tension au point Test VCC = 3.3 V ou 5 V ?
 
-   - Multimètre en mode tension continue (DC)
-   - Mesurer entre VCC et GND
-   - Si pas de tension → Problème alimentation
+    - Multimètre en mode tension continue (DC)
+    - Mesurer entre VCC et GND
+    - Si pas de tension → Problème alimentation
 
 Si Pas de Tension au Test VCC
 -----------------------------
@@ -99,26 +99,26 @@ Vérifier les composants d’alimentation :
 
  #. ☐ **Pont(s) redresseur(s) dans le bon sens ?**
 
-   - Mono : BR1
-   - Tri : BR1, BR2, BR3
-   - Repérer la bande ou marquage sur la diode
+    - Mono : BR1
+    - Tri : BR1, BR2, BR3
+    - Repérer la bande ou marquage sur la diode
 
  #. ☐ **Régulateur VR1** dans le bon sens ?
 
-   - Vérifier orientation selon schéma
-   - Les 3 pattes doivent correspondre (E-C-B ou G-S-D)
+    - Vérifier orientation selon schéma
+    - Les 3 pattes doivent correspondre (E-C-B ou G-S-D)
 
  #. ☐ **Condensateurs C1/C2** polarité correcte ?
 
-   - Bande blanche = côté négatif (-)
-   - Vérifier marquage sur PCB
-   - ⚠️ Si inversés : risque d’explosion à la mise sous tension !
+    - Bande blanche = côté négatif (-)
+    - Vérifier marquage sur PCB
+    - ⚠️ Si inversés : risque d’explosion à la mise sous tension !
 
  #. ☐ **Transformateur(s) bien soudé(s) ?**
 
-   - Mono : TXFR1
-   - Tri : TXFR1, TXFR2, TXFR3
-   - Soudures brillantes et lisses (pas ternes) ?
+    - Mono : TXFR1
+    - Tri : TXFR1, TXFR2, TXFR3
+    - Soudures brillantes et lisses (pas ternes) ?
 
 Qualité des Soudures
 --------------------
@@ -245,31 +245,31 @@ Vérifications de la Connexion FTDI
 
  #. ☐ **Câblage FTDI correct ?**
 
-   - **GND (noir)** → **GND** sur PCB
-   - **TX (vert)** → **RX** sur PCB
-   - **RX (blanc)** → **TX** sur PCB
-   - ⚠️ **NE PAS** connecter VCC si routeur alimenté !
+    - **GND (noir)** → **GND** sur PCB
+    - **TX (vert)** → **RX** sur PCB
+    - **RX (blanc)** → **TX** sur PCB
+    - ⚠️ **NE PAS** connecter VCC si routeur alimenté !
 
  #. ☐ **ATmega328 bien inséré ?**
 
-   - Toutes les pattes dans le support ?
-   - Orientation correcte (encoche) ?
+    - Toutes les pattes dans le support ?
+    - Orientation correcte (encoche) ?
 
  #. ☐ **Routeur alimenté en 230 V ?**
 
-   - Le FTDI ne fournit **PAS** assez de courant
-   - Alimentation secteur obligatoire
+    - Le FTDI ne fournit **PAS** assez de courant
+    - Alimentation secteur obligatoire
 
  #. ☐ **Bon port COM sélectionné dans Arduino IDE ?**
 
-   - Menu : Outils → Port → COMX
-   - Essayer chaque port disponible
+    - Menu : Outils → Port → COMX
+    - Essayer chaque port disponible
 
  #. ☐ **Pilotes FTDI installés ?**
 
-   - Télécharger sur ftdichip.com
-   - Windows : Gestionnaire de périphériques doit montrer « USB Serial Port »
-   - Linux : ``dmesg | grep tty`` doit montrer nouveau périphérique
+    - Télécharger sur ftdichip.com
+    - Windows : Gestionnaire de périphériques doit montrer « USB Serial Port »
+    - Linux : ``dmesg | grep tty`` doit montrer nouveau périphérique
 
 Problèmes Port USB Windows
 --------------------------
@@ -305,16 +305,16 @@ Problèmes Arduino IDE
 
  #. ☐ **Type de carte correct ?**
 
-   - Menu : Outils → Type de carte → **Arduino Uno**
-   - Pas Arduino Nano, pas Mega
+    - Menu : Outils → Type de carte → **Arduino Uno**
+    - Pas Arduino Nano, pas Mega
 
  #. ☐ **Processeur correct ?** (si option disponible)
 
-   - ATmega328P
+    - ATmega328P
 
  #. ☐ **Vitesse correcte ?**
 
-   - 9600 bauds pour Moniteur Série
+    - 9600 bauds pour Moniteur Série
 
 **Solutions supplémentaires :**
 
@@ -344,13 +344,13 @@ Vérification via Moniteur Série
 
 #. **Vous devriez voir :**
 
- .. code-block:: text
+   .. code-block:: text
 
- Mk2PVRouter v3.1 — Mono
- Initialisation...
- CT1: 0 W
- CT2: 0 W
- Sortie 1: OFF
+      Mk2PVRouter v3.1 — Mono
+      Initialisation...
+      CT1: 0 W
+      CT2: 0 W
+      Sortie 1: OFF
 
 **Si pas de messages :**
 
@@ -360,17 +360,17 @@ Vérification via Moniteur Série
 
  #. ☐ **Quartz/résonateur bien soudé ?**
 
-   - Composant à 2 pattes près de l’ATmega328
-   - Soudures correctes ?
+    - Composant à 2 pattes près de l’ATmega328
+    - Soudures correctes ?
 
  #. ☐ **Condensateurs C6/C7 présents ?** (si quartz externe)
 
-   - Condensateurs 22pF de chaque côté du quartz
-   - Valeur correcte ?
+    - Condensateurs 22pF de chaque côté du quartz
+    - Valeur correcte ?
 
 **Si messages bizarres/illisibles :**
 
-- Vérifier baud rate = 115200
+- Vérifier baud rate = 9600
 - Si toujours illisible → Problème oscillateur (fréquence incorrecte)
 
 Erreur « Out of Memory » lors de la Compilation
@@ -389,12 +389,12 @@ Erreur « Out of Memory » lors de la Compilation
 #. Ouvrir onglet ``config.h`` dans Arduino IDE
 #. Désactiver fonctionnalités non nécessaires :
 
- .. code-block:: cpp
+   .. code-block:: cpp
 
- // Commenter les lignes avec //
- // #define ENABLE_DEBUG // Désactive messages debug
- // #define ENABLE_RF_MODULE // Désactive module RF
- // #define ENABLE_RELAY_OUTPUT // Si que sorties triac
+      // Commenter les lignes avec //
+      // #define ENABLE_DEBUG // Désactive messages debug
+      // #define ENABLE_RF_MODULE // Désactive module RF
+      // #define ENABLE_RELAY_OUTPUT // Si que sorties triac
 
 #. Recompiler et téléverser
 
@@ -422,8 +422,8 @@ Causes Possibles
 
  #. ☐ **Court-circuit dans transformateur(s)**
 
-   - Mono : TXFR1
-   - Tri : TXFR1, TXFR2, TXFR3
+    - Mono : TXFR1
+    - Tri : TXFR1, TXFR2, TXFR3
 
  - Mesurer résistance enroulements (doit être ~1-10 kΩ)
  - Si <10 Ω → Transformateur défectueux
@@ -455,33 +455,33 @@ Procédure de Diagnostic
 
 #. **Mesurer résistance entre phase et neutre**
 
-   - Multimètre en mode Ohm (Ω)
-   - Mesurer à l’entrée du transformateur
-   - Valeur attendue : **> 1 kΩ**
-   - Si **< 100 Ω** → Court-circuit présent
+    - Multimètre en mode Ohm (Ω)
+    - Mesurer à l’entrée du transformateur
+    - Valeur attendue : **> 1 kΩ**
+    - Si **< 100 Ω** → Court-circuit présent
 
 #. **Inspection visuelle minutieuse**
 
-   - Loupe recommandée
-   - Chercher :
+    - Loupe recommandée
+    - Chercher :
 
-     - Traces de brûlure
-     - Soudures touchant plusieurs pistes
-     - Composants noircis
-     - Fils dénudés touchant boîtier métallique
+      - Traces de brûlure
+      - Soudures touchant plusieurs pistes
+      - Composants noircis
+      - Fils dénudés touchant boîtier métallique
 
 #. **Test par élimination**
 
-   - Dessouder un côté du/des transformateur·s (TXFR1 pour mono, ou TXFR1/TXFR2/TXFR3 pour tri)
-   - Remesurer résistance
-   - Si court-circuit persiste → Problème sur PCB
-   - Si disparaît → Transformateur défectueux
+    - Dessouder un côté du/des transformateur·s (TXFR1 pour mono, ou TXFR1/TXFR2/TXFR3 pour tri)
+    - Remesurer résistance
+    - Si court-circuit persiste → Problème sur PCB
+    - Si disparaît → Transformateur défectueux
 
 #. **Remplacement fusible**
 
-   - Utiliser **même valeur** que fusible d’origine
-   - Type : temporisé (slow-blow) recommandé
-   - ⚠️ Jamais de fusible plus fort !
+    - Utiliser **même valeur** que fusible d’origine
+    - Type : temporisé (slow-blow) recommandé
+    - ⚠️ Jamais de fusible plus fort !
 
 Tensions Incorrectes aux Points de Test
 =======================================
@@ -548,30 +548,30 @@ Vérifications CT (Current Transformer)
 
  #. ☐ **CT dans le bon sens ?**
 
-   - Flèche sur CT doit pointer vers **source** (compteur/disjoncteur)
-   - Pas vers la charge
-   - ⚠️ Si inversé : valeurs négatives ou erronées
+    - Flèche sur CT doit pointer vers **source** (compteur/disjoncteur)
+    - Pas vers la charge
+    - ⚠️ Si inversé : valeurs négatives ou erronées
 
  #. ☐ **CT sur la bonne phase ?**
 
-   - Version mono : CT sur phase principale
-   - Version tri : CT sur chacune des 3 phases
+    - Version mono : CT sur phase principale
+    - Version tri : CT sur chacune des 3 phases
 
  #. ☐ **CT bien fermé ?**
 
-   - Le noyau magnétique doit être complètement fermé
-   - Pas d’espace/jeu
-   - Clip bien enclenché
+    - Le noyau magnétique doit être complètement fermé
+    - Pas d’espace/jeu
+    - Clip bien enclenché
 
  #. ☐ **CT sur UN SEUL câble ?**
 
-   - Ne jamais entourer phase + neutre ensemble
-   - Annulerait la mesure (courant total = 0)
+    - Ne jamais entourer phase + neutre ensemble
+    - Annulerait la mesure (courant total = 0)
 
  #. ☐ **Connexion CT sur PCB correcte ?**
 
-   - Connecteur jack bien enfoncé
-   - Pas de faux contact
+    - Connecteur jack bien enfoncé
+    - Pas de faux contact
 
 Vérifications Électroniques
 ---------------------------
@@ -580,19 +580,19 @@ Vérifications Électroniques
 
  #. ☐ **Burden résistances correctes ?**
 
-   - R8/R9 : Typiquement 120 Ω pour système 3.3 V
-   - Vérifier valeur avec multimètre
-   - Code couleur : Marron-Rouge-Marron-Or = 120 Ω
+    - R8/R9 : Typiquement 120 Ω pour système 3.3 V
+    - Vérifier valeur avec multimètre
+    - Code couleur : Marron-Rouge-Marron-Or = 120 Ω
 
  #. ☐ **Condensateurs C11/C12/C13 bien soudés ?**
 
-   - Forment filtre passe-bas anti-repliement
-   - Valeurs typiques : 10nF ou 100nF
+    - Forment filtre passe-bas anti-repliement
+    - Valeurs typiques : 10nF ou 100nF
 
  #. ☐ **Pas de pont de soudure autour ADC ?**
 
-   - Zone très sensible
-   - Vérifier à la loupe
+    - Zone très sensible
+    - Vérifier à la loupe
 
 Valeurs de Référence
 --------------------
@@ -676,27 +676,27 @@ Vérifications de Base
 
  #. ☐ **LED bien soudée ?**
 
-   - Soudures brillantes ?
-   - Contact avec pastilles ?
+    - Soudures brillantes ?
+    - Contact avec pastilles ?
 
  #. ☐ **LED dans le bon sens ?**
 
-   - Patte longue = Anode (+)
-   - Patte courte = Cathode (-)
-   - Repère plat sur LED = côté cathode (-)
-   - ⚠️ Si inversée : ne s’allumera JAMAIS
+    - Patte longue = Anode (+)
+    - Patte courte = Cathode (-)
+    - Repère plat sur LED = côté cathode (-)
+    - ⚠️ Si inversée : ne s’allumera JAMAIS
 
  #. ☐ **Résistance série LED présente ?**
 
-   - Typiquement 220 Ω ou 470 Ω
-   - Protège la LED
-   - Si absente : LED peut griller
+    - Typiquement 220 Ω ou 470 Ω
+    - Protège la LED
+    - Si absente : LED peut griller
 
  #. ☐ **Carte sortie triac fonctionne ?**
 
-   - Tester routage avec charge
-   - Si charge activée mais pas LED → Problème LED/résistance
-   - Si charge pas activée → Problème triac (voir section suivante)
+    - Tester routage avec charge
+    - Si charge activée mais pas LED → Problème LED/résistance
+    - Si charge pas activée → Problème triac (voir section suivante)
 
 Test de la LED
 --------------
@@ -784,29 +784,29 @@ Vérifications Triac
 
  #. ☐ **Triac bien soudé sur dissipateur ?**
 
-   - Contact thermique ET électrique
-   - Pas de jeu mécanique
+    - Contact thermique ET électrique
+    - Pas de jeu mécanique
 
  #. ☐ **Isolant électrique présent ?**
 
-   - Mica ou silicone entre triac et dissipateur
-   - Évite court-circuit (dissipateur relié terre)
+    - Mica ou silicone entre triac et dissipateur
+    - Évite court-circuit (dissipateur relié terre)
 
  #. ☐ **Vis triac bien serrée ?**
 
-   - Couple serrage important pour contact thermique
-   - Pas trop serré (risque fissure boîtier triac)
+    - Couple serrage important pour contact thermique
+    - Pas trop serré (risque fissure boîtier triac)
 
  #. ☐ **Pâte thermique appliquée ?**
 
-   - Mince couche uniforme
-   - Améliore transfert thermique
+    - Mince couche uniforme
+    - Améliore transfert thermique
 
  #. ☐ **Câblage haute puissance correct ?**
 
-   - **Phase** sur borne **L**
-   - **Neutre** sur borne **N**
-   - Vis bornier bien serrées
+    - **Phase** sur borne **L**
+    - **Neutre** sur borne **N**
+    - Vis bornier bien serrées
 
 Test du Triac
 -------------
