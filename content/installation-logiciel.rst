@@ -14,94 +14,10 @@ Ce chapitre détaille l'installation complète de l'environnement de développem
    :local:
    :depth: 2
 
-.. _install-etape1-arduino:
+.. _install-etape1-ftdi:
 
 ===================================
-Étape 1 : Installation Arduino IDE
-===================================
-
-L’Arduino IDE est le logiciel qui permet de programmer le routeur.
-
-Windows
-~~~~~~~
-
-Téléchargement
-^^^^^^^^^^^^^^
-
-#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
-#. Cliquer sur **« Windows Win 10 and newer »** (fichier `.exe` ou `.zip`)
-#. ⚠️ **NE PAS** télécharger la version **« Windows app »** (incompatibilités connues)
-#. Attendre la fin du téléchargement (~200 MB)
-
-Installation
-^^^^^^^^^^^^
-
-#. Double-cliquer sur le fichier téléchargé (`arduino-ide-xxxx.exe`)
-#. Accepter la licence
-#. **IMPORTANT :** Cocher **« Install USB drivers »** et tous les composants
-#. Choisir le répertoire d’installation (laisser par défaut : `C:\\Program Files\\Arduino`)
-#. Cliquer sur **« Install »**
-#. Attendre la fin de l’installation (5-10 minutes)
-#. Laisser l’installateur créer les raccourcis sur le bureau
-
-.. note::
-   Si Windows affiche un avertissement de sécurité, cliquer sur **« Exécuter quand même »**.
-   Le logiciel Arduino est sûr et largement utilisé.
-
-macOS
-~~~~~
-
-Téléchargement
-^^^^^^^^^^^^^^
-
-#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
-#. Cliquer sur **« macOS »** (fichier `.dmg`)
-#. Attendre la fin du téléchargement
-
-Installation
-^^^^^^^^^^^^
-
-#. Ouvrir le fichier `.dmg` téléchargé
-#. Glisser l’icône Arduino dans le dossier **Applications**
-#. Attendre la copie des fichiers
-#. Éjecter l’image disque
-
-.. note::
-   Au premier lancement, macOS peut demander l’autorisation d’ouvrir l’application.
-   Cliquer sur **« Ouvrir »** dans la fenêtre de sécurité.
-
-Linux (Ubuntu/Debian)
-~~~~~~~~~~~~~~~~~~~~~
-
-Méthode recommandée : AppImage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
-#. Télécharger la version **« Linux AppImage »**
-#. Ouvrir un terminal
-#. Rendre le fichier exécutable :
-
-   .. code-block:: bash
-
-      cd ~/Téléchargements
-      chmod +x arduino-ide-*-linux-x64.AppImage
-      ./arduino-ide-*-linux-x64.AppImage
-
-Alternative : Installation via le gestionnaire de paquets
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: bash
-
-   sudo apt update
-   sudo apt install arduino
-
-.. warning::
-   La version des dépôts peut être ancienne. Privilégier l’AppImage pour avoir la dernière version.
-
-.. _install-etape2-ftdi:
-
-===================================
-Étape 2 : Installation Pilotes FTDI
+Étape 1 : Installation Pilotes FTDI
 ===================================
 
 Les pilotes FTDI sont **OBLIGATOIRES** pour communiquer avec le routeur via le programmateur USB.
@@ -186,11 +102,169 @@ Ajouter l’utilisateur au groupe dialout
 .. note::
    Le redémarrage est nécessaire pour que les changements prennent effet.
 
+.. _install-etape2-arduino:
+
+====================================
+Étape 2a : Installation Arduino IDE
+===================================
+
+L’Arduino IDE est le logiciel qui permet de programmer le routeur.
+
+Windows
+~~~~~~~
+
+Téléchargement
+^^^^^^^^^^^^^^
+
+#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
+#. Cliquer sur **« Windows Win 10 and newer »** (fichier `.exe` ou `.zip`)
+#. ⚠️ **NE PAS** télécharger la version **« Windows app »** (incompatibilités connues)
+#. Attendre la fin du téléchargement (~200 MB)
+
+Installation
+^^^^^^^^^^^^
+
+#. Double-cliquer sur le fichier téléchargé (`arduino-ide-xxxx.exe`)
+#. Accepter la licence
+#. **IMPORTANT :** Cocher **« Install USB drivers »** et tous les composants
+#. Choisir le répertoire d’installation (laisser par défaut : `C:\\Program Files\\Arduino`)
+#. Cliquer sur **« Install »**
+#. Attendre la fin de l’installation (5-10 minutes)
+#. Laisser l’installateur créer les raccourcis sur le bureau
+
+.. note::
+   Si Windows affiche un avertissement de sécurité, cliquer sur **« Exécuter quand même »**.
+   Le logiciel Arduino est sûr et largement utilisé.
+
+macOS
+~~~~~
+
+Téléchargement
+^^^^^^^^^^^^^^
+
+#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
+#. Cliquer sur **« macOS »** (fichier `.dmg`)
+#. Attendre la fin du téléchargement
+
+Installation
+^^^^^^^^^^^^
+
+#. Ouvrir le fichier `.dmg` téléchargé
+#. Glisser l’icône Arduino dans le dossier **Applications**
+#. Attendre la copie des fichiers
+#. Éjecter l’image disque
+
+.. note::
+   Au premier lancement, macOS peut demander l’autorisation d’ouvrir l’application.
+   Cliquer sur **« Ouvrir »** dans la fenêtre de sécurité.
+
+Linux (Ubuntu/Debian)
+~~~~~~~~~~~~~~~~~~~~~
+
+Méthode recommandée : AppImage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Ouvrir le navigateur web : https://www.arduino.cc/en/software
+#. Télécharger la version **« Linux AppImage »**
+#. Ouvrir un terminal
+#. Rendre le fichier exécutable :
+
+   .. code-block:: bash
+
+      cd ~/Téléchargements
+      chmod +x arduino-ide-*-linux-x64.AppImage
+      ./arduino-ide-*-linux-x64.AppImage
+
+Alternative : Installation via le gestionnaire de paquets
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+   sudo apt update
+   sudo apt install arduino
+
+.. warning::
+   La version des dépôts peut être ancienne. Privilégier l’AppImage pour avoir la dernière version.
+
+.. note::
+   **Alternative : PlatformIO** — Si vous préférez utiliser PlatformIO au lieu d'Arduino IDE, 
+   consultez l'Étape 2b ci-dessous. PlatformIO offre un support C++17 natif (pas besoin de modifier platform.txt)
+   et des fonctionnalités avancées.
+
+.. _install-etape2-platformio:
+
+====================================
+Étape 2b : Alternative PlatformIO
+====================================
+
+Pour les Utilisateurs Avancés
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**PlatformIO** est un environnement de développement plus complet que l'Arduino IDE.
+
+Avantages
+^^^^^^^^^
+
+- Gestion automatique des bibliothèques
+- Support C++17 natif (pas besoin de modifier `platform.txt`)
+- Compilations plus rapides
+- Meilleure intégration avec Git
+- Débogage avancé
+
+Installation
+^^^^^^^^^^^^
+
+#. Installer **Visual Studio Code** : https://code.visualstudio.com/
+#. Ouvrir VS Code
+#. Aller dans l'onglet **Extensions** (Ctrl+Shift+X)
+#. Rechercher **« PlatformIO IDE »**
+#. Cliquer sur **« Installer »**
+#. Redémarrer VS Code
+
+Ouverture du Projet
+^^^^^^^^^^^^^^^^^^^
+
+#. Menu PlatformIO : **PIO Home → Open Project**
+#. Sélectionner le dossier du firmware
+#. PlatformIO détecte automatiquement le fichier `platformio.ini`
+
+Compilation et Téléversement
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Cliquer sur l'icône **« Upload »** (→) dans la barre inférieure
+#. PlatformIO télécharge automatiquement les bibliothèques nécessaires
+#. La compilation et le téléversement se font automatiquement
+
+Sélection de la Configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Le firmware contient plusieurs environnements préconfigurés :
+
+- `env:release` : Version normale
+- `env:temperature` : Version avec support sondes de température
+- `env:debug` : Version avec messages de débogage supplémentaires
+
+Pour changer d'environnement :
+
+#. Cliquer sur le sélecteur d'environnement (barre inférieure)
+#. Choisir la configuration désirée
+
+.. tip::
+   PlatformIO est recommandé pour les utilisateurs avancés qui développent ou modifient le firmware.
+   Pour un usage standard, Arduino IDE suffit amplement.
+
+
 .. _install-etape3-cpp17:
 
 ================================================
 Étape 3 : Configuration Arduino IDE pour C++17
 ================================================
+
+.. note::
+   **Cette étape est uniquement nécessaire si vous utilisez Arduino IDE (Étape 2a).**
+   
+   Si vous avez choisi PlatformIO (Étape 2b), vous pouvez sauter cette étape car PlatformIO
+   gère automatiquement le support C++17.
 
 .. danger::
    **ÉTAPE CRITIQUE** — Le firmware nécessite le support C++17.
@@ -317,4 +391,3 @@ Vérification
 
 .. tip::
    Si les bibliothèques n’apparaissent pas, redémarrer Arduino IDE.
-

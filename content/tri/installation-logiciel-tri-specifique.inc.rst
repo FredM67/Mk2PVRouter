@@ -265,7 +265,7 @@ Le fichier `platform.txt` n’a pas été modifié correctement.
 Port COM n’apparaît pas
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Vérifier que les pilotes FTDI sont installés (:ref:`install-etape2-ftdi`)
+#. Vérifier que les pilotes FTDI sont installés (:ref:`install-etape1-ftdi`)
 #. Débrancher/rebrancher l’adaptateur FTDI
 #. Redémarrer l’ordinateur
 
