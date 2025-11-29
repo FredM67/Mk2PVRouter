@@ -4,7 +4,7 @@
 Installation du Logiciel et du Firmware
 ==========================================
 
-Ce chapitre détaille l'installation complète de l'environnement de développement Arduino et la programmation du firmware du Mk2PVRouter.
+Ce chapitre détaille l’installation complète de l’environnement de développement Arduino et la programmation du firmware du Mk2PVRouter.
 
 ⏱️ **Temps estimé :**
    - Débutant : 2-3 heures
@@ -187,8 +187,8 @@ Alternative : Installation via le gestionnaire de paquets
    La version des dépôts peut être ancienne. Privilégier l’AppImage pour avoir la dernière version.
 
 .. note::
-   **Alternative : PlatformIO** — Si vous préférez utiliser PlatformIO au lieu d'Arduino IDE, 
-   consultez l'Étape 2b ci-dessous. PlatformIO offre un support C++17 natif (pas besoin de modifier platform.txt)
+   **Alternative : PlatformIO** — Si vous préférez utiliser PlatformIO au lieu d’Arduino IDE, 
+   consultez l’Étape 2b ci-dessous. PlatformIO offre un support C++17 natif (pas besoin de modifier platform.txt)
    et des fonctionnalités avancées.
 
 .. _install-etape2-platformio:
@@ -200,7 +200,7 @@ Alternative : Installation via le gestionnaire de paquets
 Pour les Utilisateurs Avancés
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**PlatformIO** est un environnement de développement plus complet que l'Arduino IDE.
+**PlatformIO** est un environnement de développement plus complet que l’Arduino IDE.
 
 Avantages
 ~~~~~~~~~
@@ -216,7 +216,7 @@ Installation
 
 #. Installer **Visual Studio Code** : https://code.visualstudio.com/
 #. Ouvrir VS Code
-#. Aller dans l'onglet **Extensions** (Ctrl+Shift+X)
+#. Aller dans l’onglet **Extensions** (Ctrl+Shift+X)
 #. Rechercher **« PlatformIO IDE »**
 #. Cliquer sur **« Installer »**
 #. Redémarrer VS Code
@@ -231,7 +231,7 @@ Ouverture du Projet
 Compilation et Téléversement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Cliquer sur l'icône **« Upload »** (→) dans la barre inférieure
+#. Cliquer sur l’icône **« Upload »** (→) dans la barre inférieure
 #. PlatformIO télécharge automatiquement les bibliothèques nécessaires
 #. La compilation et le téléversement se font automatiquement
 
@@ -240,13 +240,13 @@ Sélection de la Configuration
 
 Le firmware contient plusieurs environnements préconfigurés :
 
-- `env:release` : Version normale
-- `env:temperature` : Version avec support sondes de température
-- `env:debug` : Version avec messages de débogage supplémentaires
+- `env:release` : Version normale
+- `env:temperature` : Version avec support sondes de température
+- `env:debug` : Version avec messages de débogage supplémentaires
 
-Pour changer d'environnement :
+Pour changer d’environnement :
 
-#. Cliquer sur le sélecteur d'environnement (barre inférieure)
+#. Cliquer sur le sélecteur d’environnement (barre inférieure)
 #. Choisir la configuration désirée
 
 .. tip::
