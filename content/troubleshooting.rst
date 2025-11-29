@@ -105,7 +105,7 @@ Vérifier les composants d’alimentation :
 
  #. ☐ **Régulateur VR1** dans le bon sens ?
 
-    - Vérifier orientation selon schéma
+    - Vérifier l'orientation selon le schéma
     - Les 3 pattes doivent correspondre (E-C-B ou G-S-D)
 
  #. ☐ **Condensateurs C1/C2** polarité correcte ?
@@ -163,7 +163,7 @@ Pont de Soudure (Court-Circuit)
 
 **Détection :**
 
-- Inspection visuelle avec loupe
+- Inspection visuelle avec une loupe
 - Multimètre en mode continuité entre broches qui ne devraient pas être connectées
 
 **Solution — Retrait avec tresse à dessouder :**
@@ -198,7 +198,7 @@ Si Tension Correcte mais Pas de Fonctionnement
 
  #. ☐ **Firmware programmé ?**
 
- - Voir section :ref:`test-logiciel-mono` ou :ref:`test-logiciel-tri`
+ - Voir la section :ref:`test-logiciel-mono` ou :ref:`test-logiciel-tri`
  - ATmega328 vierge ne fait rien
 
 Causes Fréquentes — Résumé
@@ -213,16 +213,16 @@ Causes Fréquentes — Résumé
    - Solution
  * - Aucune tension VCC
    - Fusible grillé
-   - Trouver court-circuit, remplacer fusible
+   - Trouver le court-circuit, remplacer le fusible
  * - Tension VCC faible (<3 V)
    - Régulateur défectueux
-   - Vérifier orientation, remplacer
+   - Vérifier l'orientation, remplacer
  * - Tension OK, rien ne fonctionne
    - ATmega328 mal inséré/inversé
-   - Vérifier orientation, réinsérer
+   - Vérifier l'orientation, réinsérer
  * - Soudures ternes
    - Soudure froide
-   - Refaire avec plus de chaleur
+   - Refaire les soudures avec plus de chaleur
 
 ======================================
 Problèmes de Programmation du Firmware
@@ -267,7 +267,7 @@ Vérifications de la Connexion FTDI
 
  #. ☐ **Pilotes FTDI installés ?**
 
-    - Télécharger sur ftdichip.com
+    - Télécharger les pilotes sur ftdichip.com
     - Windows : Gestionnaire de périphériques doit montrer « USB Serial Port »
     - Linux : ``dmesg | grep tty`` doit montrer nouveau périphérique
 
@@ -370,7 +370,7 @@ Vérification via Moniteur Série
 
 **Si messages bizarres/illisibles :**
 
-- Vérifier baud rate = 9600
+- Vérifier que le baud rate = 9600
 - Si toujours illisible → Problème oscillateur (fréquence incorrecte)
 
 Erreur « Out of Memory » lors de la Compilation
@@ -425,12 +425,12 @@ Causes Possibles
     - Mono : TXFR1
     - Tri : TXFR1, TXFR2, TXFR3
 
- - Mesurer résistance enroulements (doit être ~1-10 kΩ)
+ - Mesurer la résistance des enroulements (doit être ~1-10 kΩ)
  - Si <10 Ω → Transformateur défectueux
 
  #. ☐ **Pont de soudure sur pistes haute tension**
 
- - Inspecter visuellement avec loupe
+ - Inspecter visuellement avec une loupe
  - Zone 230 V particulièrement critique
 
  #. ☐ **Condensateur en court-circuit**
@@ -453,7 +453,7 @@ Procédure de Diagnostic
 
 #. **Retirer le fusible**
 
-#. **Mesurer résistance entre phase et neutre**
+#. **Mesurer la résistance entre phase et neutre**
 
     - Multimètre en mode Ohm (Ω)
     - Mesurer à l’entrée du transformateur
@@ -524,7 +524,7 @@ Diagnostic par Tension
 
 - ⚠️ **DANGER** pour ATmega328 (max absolu = 6 V)
 - Régulateur absent ou court-circuité
-- **COUPER ALIMENTATION IMMÉDIATEMENT**
+- **COUPER L'ALIMENTATION IMMÉDIATEMENT**
 
 **Tension ADC incorrecte (pas à VCC/2) :**
 
@@ -581,7 +581,7 @@ Vérifications Électroniques
  #. ☐ **Burden résistances correctes ?**
 
     - R8/R9 : Typiquement 120 Ω pour système 3.3 V
-    - Vérifier valeur avec multimètre
+    - Vérifier la valeur avec un multimètre
     - Code couleur : Marron-Rouge-Marron-Or = 120 Ω
 
  #. ☐ **Condensateurs C11/C12/C13 bien soudés ?**
@@ -635,7 +635,7 @@ Valeurs de Référence
 
 #. **Charge de référence instable**
 
- - Utiliser résistance pure (radiateur, chauffe-eau)
+ - Utiliser une résistance pure (radiateur, chauffe-eau)
  - Pas de charge à découpage (ordinateur, LED)
  - Puissance doit être stable ±2%
 
@@ -654,11 +654,11 @@ Valeurs de Référence
 **Procédure recommandée :**
 
 #. Couper TOUS les autres appareils
-#. Utiliser charge purement résistive 1500-2000 W
+#. Utiliser une charge purement résistive 1500-2000 W
 #. Laisser stabiliser 5 minutes
-#. Mesurer avec instrument calibré
+#. Mesurer avec un instrument calibré
 #. Ajuster calibration
-#. Vérifier avec autre charge différente
+#. Vérifier avec une autre charge différente
 
 ==============================
 Problèmes LED et Signalisation
@@ -694,7 +694,7 @@ Vérifications de Base
 
  #. ☐ **Carte sortie triac fonctionne ?**
 
-    - Tester routage avec charge
+    - Tester le routage avec une charge
     - Si charge activée mais pas LED → Problème LED/résistance
     - Si charge pas activée → Problème triac (voir section suivante)
 
@@ -724,17 +724,17 @@ LED Toujours Allumée
 #. **Triac en court-circuit**
 
    - Triac défectueux ou détruit
-   - Mesurer résistance MT1-MT2 (doit être >1 MΩ à froid)
+   - Mesurer la résistance MT1-MT2 (doit être >1 MΩ à froid)
 
 #. **Opto-coupleur défectueux**
 
    - MOC3041/MOC3043 en court-circuit
-   - Remplacer composant
+   - Remplacer le composant
 
 #. **Problème firmware**
 
    - Sortie forcée ON dans configuration
-   - Vérifier Moniteur Série Arduino IDE
+   - Vérifier le Moniteur Série Arduino IDE
    - Commandes de test actives ?
 
 LED Clignote Bizarrement
@@ -751,7 +751,7 @@ LED Clignote Bizarrement
    - Action
  * - Toutes éteintes permanent
    - Pas d’excédent OU routeur non fonctionnel
-   - Vérifier production solaire et moniteur série
+   - Vérifier la production solaire et le moniteur série
  * - Toutes allumées permanent
    - Excédent max OU charge saturée
    - Normal si chauffe-eau à température
@@ -763,7 +763,7 @@ LED Clignote Bizarrement
    - Normal début/fin journée
  * - Clignotement erratique
    - Mesures instables
-   - Vérifier CT, étalonnage
+   - Vérifier le CT et l'étalonnage
 
 ============================================
 Problèmes de Routage — Charge ne Chauffe Pas
@@ -778,7 +778,7 @@ Vérifications Triac
 -------------------
 
 .. danger::
- Manipulation haute tension ! Couper disjoncteur avant intervention.
+ Manipulation haute tension ! Couper le disjoncteur avant intervention.
 
 .. admonition:: Diagnostic étage de puissance
 
@@ -813,9 +813,9 @@ Test du Triac
 
 **Mesure à froid (hors tension) :**
 
-#. Couper alimentation
+#. Couper l'alimentation
 #. Multimètre en mode Ohm (Ω)
-#. Mesurer résistance MT1-MT2 :
+#. Mesurer la résistance MT1-MT2 :
 
    - Doit être **> 1 MΩ** (quasi ouvert)
    - Si < 100 Ω → Triac en court-circuit (détruit)
@@ -864,7 +864,7 @@ Vérifications Charge
 
 #. Déconnecter charge du routeur
 #. Brancher directement sur prise secteur
-#. Vérifier fonctionnement
+#. Vérifier le fonctionnement
 #. Si charge ne chauffe pas → Problème charge, pas routeur
 
 Triac Surchauffe
@@ -879,24 +879,24 @@ Triac Surchauffe
 
 #. **Dissipateur sous-dimensionné**
 
- - Surface minimum requise selon puissance :
+   - Surface minimum requise selon puissance :
 
- - 500 W : 50 cm²
- - 1000 W : 100 cm²
- - 2000 W : 200 cm²
- - 3000 W : 300 cm²
+     - 500 W : 50 cm²
+     - 1000 W : 100 cm²
+     - 2000 W : 200 cm²
+     - 3000 W : 300 cm²
 
 #. **Contact thermique insuffisant**
 
- - Pâte thermique absente/mal appliquée
- - Vissage insuffisant
- - Surface dissipateur pas plane
+   - Pâte thermique absente/mal appliquée
+   - Vissage insuffisant
+   - Surface dissipateur pas plane
 
 #. **Ventilation insuffisante**
 
- - Boîtier trop confiné
- - Ajouter trous ventilation
- - Dissipateur orienté pour convection naturelle
+   - Boîtier trop confiné
+   - Ajouter trous ventilation
+   - Dissipateur orienté pour convection naturelle
 
 **Solutions :**
 
@@ -924,23 +924,23 @@ Vérifications Matérielles
 
  #. ☐ **Module RF bien soudé/enfiché ?**
 
- - Toutes broches en contact ?
- - Orientation correcte ?
+    - Toutes broches en contact ?
+    - Orientation correcte ?
 
  #. ☐ **Antenne connectée ?**
 
- - Module 433 MHz : antenne filaire 17 cm
- - Module 868 MHz : antenne filaire 8.6 cm
+    - Module 433 MHz : antenne filaire 17 cm
+    - Module 868 MHz : antenne filaire 8.6 cm
 
  #. ☐ **Firmware compilé avec RF activé ?**
 
- - Dans ``config.h`` : ``#define ENABLE_RF_MODULE``
- - Recompiler et téléverser si nécessaire
+    - Dans ``config.h`` : ``#define ENABLE_RF_MODULE``
+    - Recompiler et téléverser si nécessaire
 
  #. ☐ **Messages RF dans Moniteur Série ?**
 
- - Doit afficher : « RF initialized » au démarrage
- - Si « RF init failed » → Problème communication
+    - Doit afficher : « RF initialized » au démarrage
+    - Si « RF init failed » → Problème communication
 
 Dépannage Communication
 -----------------------
@@ -1060,7 +1060,7 @@ Multimètre — Utilisation de Base
 
 **Mode Tension Continue (V⎓ ou VDC) :**
 
-- Mesurer VCC, tensions alimentation
+- Mesurer VCC et les tensions d'alimentation
 - Sonde noire sur GND, rouge sur point à mesurer
 - Calibres : 20 V pour 3.3 V/5 V, 200 V pour >12 V
 
@@ -1072,7 +1072,7 @@ Multimètre — Utilisation de Base
 
 **Mode Résistance (Ω) :**
 
-- Mesurer résistances, tester continuité
+- Mesurer les résistances, tester la continuité
 - ⚠️ Toujours hors tension !
 - Calibres : 200 Ω, 2 kΩ, 20 kΩ, 200 kΩ
 
@@ -1089,7 +1089,7 @@ Loupe ou Microscope USB
 
 - Inspecter qualité soudures
 - Détecter ponts microscopiques
-- Vérifier orientation composants CMS
+- Vérifier l'orientation des composants CMS
 
 **Recommandation :**
 
@@ -1144,7 +1144,7 @@ Ce guide de dépannage couvre les problèmes les plus fréquents rencontrés lor
 **En cas de doute sérieux :**
 
 - Ne pas prendre de risques avec 230 V
-- Faire appel à électricien qualifié
+- Faire appel à un électricien qualifié
 - Votre sécurité prime sur tout le reste
 
 .. tip::
@@ -1152,7 +1152,7 @@ Ce guide de dépannage couvre les problèmes les plus fréquents rencontrés lor
 
  - Vérifier 3 fois avant de souder
  - Tester progressivement (pas tout d’un coup)
- - Noter modifications (traçabilité)
- - Prendre pauses (fatigue = erreurs)
+ - Noter les modifications (traçabilité)
+ - Prendre des pauses (fatigue = erreurs)
 
 Bon courage dans votre dépannage ! 🔧
