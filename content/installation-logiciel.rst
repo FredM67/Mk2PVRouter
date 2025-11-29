@@ -14,6 +14,8 @@ Ce chapitre détaille l'installation complète de l'environnement de développem
    :local:
    :depth: 2
 
+.. _install-etape1-arduino:
+
 ===================================
 Étape 1 : Installation Arduino IDE
 ===================================
@@ -95,6 +97,8 @@ Alternative : Installation via le gestionnaire de paquets
 
 .. warning::
    La version des dépôts peut être ancienne. Privilégier l’AppImage pour avoir la dernière version.
+
+.. _install-etape2-ftdi:
 
 ===================================
 Étape 2 : Installation Pilotes FTDI
@@ -182,6 +186,8 @@ Ajouter l’utilisateur au groupe dialout
 .. note::
    Le redémarrage est nécessaire pour que les changements prennent effet.
 
+.. _install-etape3-cpp17:
+
 ================================================
 Étape 3 : Configuration Arduino IDE pour C++17
 ================================================
@@ -261,6 +267,8 @@ Modification du fichier
    Si vous ne trouvez pas le fichier, ouvrez Arduino IDE, allez dans **Fichier → Préférences**,
    et regardez l’emplacement du **« Dossier de Sketchbook »**. Le fichier `platform.txt` est
    généralement dans un sous-dossier relatif à cet emplacement.
+
+.. _install-etape4-bibliotheques:
 
 
 ========================================

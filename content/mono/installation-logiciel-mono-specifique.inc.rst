@@ -255,7 +255,7 @@ Compilation et Téléversement
 
 .. tip::
    Si la compilation échoue avec des erreurs sur `std::array` ou `constexpr`,
-   c’est que le fichier `platform.txt` n’a pas été correctement modifié (voir Étape 3 du chapitre :ref:`installation-logiciel`).
+   c’est que le fichier `platform.txt` n’a pas été correctement modifié (voir :ref:`install-etape3-cpp17`).
 
 Résolution des Problèmes
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -275,12 +275,12 @@ Erreur : `error: 'constexpr' does not name a type`
 
 Le fichier `platform.txt` n’a pas été modifié correctement.
 
-**Solution :** Reprendre l’Étape 3.
+**Solution :** Reprendre :ref:`install-etape3-cpp17`.
 
 Port COM n’apparaît pas
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Vérifier que les pilotes FTDI sont installés (Étape 2)
+#. Vérifier que les pilotes FTDI sont installés (:ref:`install-etape2-ftdi`)
 #. Débrancher/rebrancher l’adaptateur FTDI
 #. Redémarrer l’ordinateur
 
