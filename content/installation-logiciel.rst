@@ -26,7 +26,7 @@ Les pilotes FTDI sont **OBLIGATOIRES** pour communiquer avec le routeur via le p
    Sans ces pilotes, l’ordinateur ne détectera pas le routeur !
 
 Windows
-~~~~~~~
+-------
 
 #. Ouvrir le navigateur : https://ftdichip.com/drivers/vcp-drivers/
 #. Cliquer sur **« Windows »** dans la colonne **« Available Drivers »**
@@ -36,7 +36,7 @@ Windows
 #. **Redémarrer l’ordinateur** après l’installation
 
 Vérification
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 #. Connecter l’adaptateur FTDI à un port USB
 #. Ouvrir le **Gestionnaire de périphériques** (Win + X → Gestionnaire de périphériques)
@@ -45,12 +45,12 @@ Vérification
 #. **Noter le numéro COMx** (exemple : COM3, COM4)
 
 macOS
-~~~~~
+-----
 
 Les pilotes FTDI sont généralement inclus dans macOS moderne.
 
 Vérification
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 #. Connecter l’adaptateur FTDI à un port USB
 #. Ouvrir un terminal
@@ -63,7 +63,7 @@ Vérification
 #. Rechercher une ligne contenant `tty.usbserial` (exemple : `/dev/tty.usbserial-A50285BI`)
 
 Si aucun périphérique n’apparaît
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Télécharger les pilotes sur https://ftdichip.com/drivers/vcp-drivers/
 #. Choisir la version macOS
@@ -71,12 +71,12 @@ Si aucun périphérique n’apparaît
 #. Redémarrer le Mac
 
 Linux
-~~~~~
+-----
 
 Les pilotes FTDI sont généralement inclus dans le noyau Linux.
 
 Vérification
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -85,14 +85,14 @@ Vérification
 Rechercher une ligne contenant « FTDI » ou « Future Technology Devices ».
 
 Si le pilote n’est pas chargé
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
    sudo modprobe ftdi_sio
 
 Ajouter l’utilisateur au groupe dialout
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -110,25 +110,25 @@ Vous avez deux options pour programmer le Mk2PVRouter :
 
 **Option A : Arduino IDE** (recommandé pour les débutants)
    - Configuration manuelle nécessaire (C++17, bibliothèques)
-   - Suivre les **Étapes 2A**, 3A et 4A ci-dessous
+   - Suivre les sous-sections de l'**Option A** ci-dessous
 
 **Option B : PlatformIO** (recommandé pour les utilisateurs avancés)
    - Support C++17 natif (pas de configuration manuelle)
-   - Suivre uniquement l’**Étape 2B** ci-dessous (pas d’étapes 3B ou 4B)
+   - Suivre les sous-sections de l'**Option B**' ci-dessous
 
 .. important::
-   **Choisissez UNE SEULE option** : soit Arduino IDE (2A+3A+4A), soit PlatformIO (2B uniquement).
+   **Choisissez UNE SEULE option** : soit Arduino IDE, soit PlatformIO.
 
 
 
-.. _install-etape2-arduino:
+.. _install-arduino:
 
 
 Option A : Installation avec Arduino IDE
 ----------------------------------------
 
-Étape 2A : Installation Arduino IDE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installation Arduino IDE
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 L’Arduino IDE est le logiciel qui permet de programmer le routeur.
 
@@ -208,10 +208,8 @@ Alternative : Installation via le gestionnaire de paquets
 .. warning::
    La version des dépôts peut être ancienne. Privilégier l’AppImage pour avoir la dernière version.
 
-.. _install-etape3-cpp17:
-
-Étape 3A : Configuration Arduino IDE pour C++17
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Configuration Arduino IDE pour C++17
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. danger::
    **ÉTAPE CRITIQUE** — Le firmware nécessite le support C++17.
@@ -289,10 +287,8 @@ Modification du fichier
    et regardez l’emplacement du **« Dossier de Sketchbook »**. Le fichier `platform.txt` est
    généralement dans un sous-dossier relatif à cet emplacement.
 
-.. _install-etape4-bibliotheques:
-
-Étape 4A : Installation des Bibliothèques
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installation des Bibliothèques
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le firmware nécessite plusieurs bibliothèques externes.
 
@@ -342,7 +338,7 @@ Vérification
 
 
 
-.. _install-etape2-platformio:
+.. _install-platformio:
 
 
 Option B : Installation avec PlatformIO
@@ -366,15 +362,13 @@ Avantages
    Avec PlatformIO, **aucune configuration manuelle n’est nécessaire**.
 
    Vous n’avez **PAS** besoin de :
-   - Configurer C++17 manuellement (Étape 3A)
-   - Installer les bibliothèques manuellement (Étape 4A)
+   - Configurer C++17 manuellement (voir ci-dessus)
+   - Installer les bibliothèques manuellement (voir ci-dessus)
 
    Tout est géré automatiquement par PlatformIO !
 
-.. _install-etape2b1-vscode:
-
-Étape 2B-1 : Installation Visual Studio Code
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installation Visual Studio Code
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Visual Studio Code est l’éditeur de code qui hébergera PlatformIO.
 
@@ -427,10 +421,8 @@ Méthode 2 : Installation via le gestionnaire de paquets
    sudo apt update
    sudo apt install code
 
-.. _install-etape2b2-platformio:
-
-Étape 2B-2 : Installation PlatformIO IDE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installation PlatformIO IDE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 PlatformIO s’installe comme une extension dans Visual Studio Code.
 
