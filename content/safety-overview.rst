@@ -505,9 +505,9 @@ Numéros d’Urgence (France)
 - État de la victime (conscient ? respire ?)
 - Votre numéro de téléphone
 
-======================================
+========================================
 ✅ Liste de Contrôle Avant de Commencer
-======================================
+========================================
 
 Évaluation Personnelle
 ======================

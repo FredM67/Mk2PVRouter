@@ -23,7 +23,9 @@ Ce chapitre détaille l’installation complète de l’environnement de dévelo
 Les pilotes FTDI sont **OBLIGATOIRES** pour communiquer avec le routeur via le programmateur USB.
 
 .. danger::
-   Sans ces pilotes, l’ordinateur ne détectera pas le routeur !
+   Sans ces pilotes, l'ordinateur ne détectera pas le routeur !
+
+.. _ftdi-windows:
 
 Windows
 -------
@@ -33,21 +35,27 @@ Windows
 #. Télécharger la dernière version (fichier `.exe`)
 #. Exécuter le fichier téléchargé en tant qu’administrateur (clic droit → **« Exécuter en tant qu’administrateur »**)
 #. Suivre l’assistant d’installation
-#. **Redémarrer l’ordinateur** après l’installation
+#. **Redémarrer l'ordinateur** après l'installation
+
+.. _ftdi-windows-verif:
 
 Vérification
 ~~~~~~~~~~~~
 
-#. Connecter l’adaptateur FTDI à un port USB
+#. Connecter l'adaptateur FTDI à un port USB
 #. Ouvrir le **Gestionnaire de périphériques** (Win + X → Gestionnaire de périphériques)
 #. Développer **« Ports (COM et LPT) »**
 #. Vérifier la présence de **« USB Serial Port (COMx) »** où x est un numéro
 #. **Noter le numéro COMx** (exemple : COM3, COM4)
 
+.. _ftdi-macos:
+
 macOS
 -----
 
 Les pilotes FTDI sont généralement inclus dans macOS moderne.
+
+.. _ftdi-macos-verif:
 
 Vérification
 ~~~~~~~~~~~~
@@ -70,10 +78,14 @@ Si aucun périphérique n’apparaît
 #. Installer le fichier `.dmg`
 #. Redémarrer le Mac
 
+.. _ftdi-linux:
+
 Linux
 -----
 
 Les pilotes FTDI sont généralement inclus dans le noyau Linux.
+
+.. _ftdi-linux-verif:
 
 Vérification
 ~~~~~~~~~~~~

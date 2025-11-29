@@ -6,8 +6,12 @@ Installation Arduino IDE
 
 L’Arduino IDE est le logiciel qui permet de programmer le routeur.
 
+.. _arduino-ide-windows:
+
 Windows
 ~~~~~~~
+
+.. _arduino-ide-windows-telechargement:
 
 Téléchargement
 ^^^^^^^^^^^^^^
@@ -16,6 +20,8 @@ Téléchargement
 #. Cliquer sur **« Windows Win 10 and newer »** (fichier `.exe` ou `.zip`)
 #. ⚠️ **NE PAS** télécharger la version **« Windows app »** (incompatibilités connues)
 #. Attendre la fin du téléchargement (~200 MB)
+
+.. _arduino-ide-windows-installation:
 
 Installation
 ^^^^^^^^^^^^
@@ -32,8 +38,12 @@ Installation
    Si Windows affiche un avertissement de sécurité, cliquer sur **« Exécuter quand même »**.
    Le logiciel Arduino est sûr et largement utilisé.
 
+.. _arduino-ide-macos:
+
 macOS
 ~~~~~
+
+.. _arduino-ide-macos-telechargement:
 
 Téléchargement
 ^^^^^^^^^^^^^^
@@ -41,6 +51,8 @@ Téléchargement
 #. Ouvrir le navigateur web : https://www.arduino.cc/en/software
 #. Cliquer sur **« macOS »** (fichier `.dmg`)
 #. Attendre la fin du téléchargement
+
+.. _arduino-ide-macos-installation:
 
 Installation
 ^^^^^^^^^^^^
@@ -53,6 +65,8 @@ Installation
 .. note::
    Au premier lancement, macOS peut demander l’autorisation d’ouvrir l’application.
    Cliquer sur **« Ouvrir »** dans la fenêtre de sécurité.
+
+.. _arduino-ide-linux:
 
 Linux (Ubuntu/Debian)
 ~~~~~~~~~~~~~~~~~~~~~
@@ -122,6 +136,8 @@ macOS
    .. code-block:: bash
 
       open ~/Library/Arduino15/packages/arduino/hardware/avr/
+
+.. _cpp17-linux:
 
 Linux
 ^^^^^

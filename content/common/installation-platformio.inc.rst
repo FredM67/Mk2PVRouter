@@ -55,6 +55,8 @@ macOS
 #. Glisser **Visual Studio Code.app** dans le dossier **Applications**
 #. Lancer VS Code depuis le dossier Applications
 
+.. _platformio-vscode-linux:
+
 Linux (Ubuntu/Debian)
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -158,5 +160,7 @@ Pour changer d’environnement :
 .. tip::
    PlatformIO est recommandé pour les utilisateurs avancés qui développent ou modifient le firmware.
    Pour un usage standard, Arduino IDE suffit amplement.
+
+.. _platformio-termine:
 
 ✅ **Configuration PlatformIO terminée !** Passez maintenant aux étapes spécifiques à votre version (mono ou tri-phase).
