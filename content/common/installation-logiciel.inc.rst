@@ -1,10 +1,6 @@
 .. _installation-logiciel:
 
-====================================
-Installation du Logiciel et Firmware
-====================================
-
-Ce chapitre détaille l’installation complète de l’environnement de développement Arduino et la programmation du firmware du Mk2PVRouter.
+Ce chapitre détaille l'installation complète de l'environnement de développement Arduino et la programmation du firmware du Mk2PVRouter.
 
 ⏱️ **Temps estimé :**
    - Débutant : 2-3 heures
@@ -21,10 +17,10 @@ Ce chapitre détaille l’installation complète de l’environnement de dévelo
 L’Arduino IDE est le logiciel qui permet de programmer le routeur.
 
 Windows
--------
+~~~~~~~
 
 Téléchargement
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 #. Ouvrir le navigateur web : https://www.arduino.cc/en/software
 #. Cliquer sur **« Windows Win 10 and newer »** (fichier `.exe` ou `.zip`)
@@ -32,7 +28,7 @@ Téléchargement
 #. Attendre la fin du téléchargement (~200 MB)
 
 Installation
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 #. Double-cliquer sur le fichier téléchargé (`arduino-ide-xxxx.exe`)
 #. Accepter la licence
@@ -47,17 +43,17 @@ Installation
    Le logiciel Arduino est sûr et largement utilisé.
 
 macOS
------
+~~~~~
 
 Téléchargement
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 #. Ouvrir le navigateur web : https://www.arduino.cc/en/software
 #. Cliquer sur **« macOS »** (fichier `.dmg`)
 #. Attendre la fin du téléchargement
 
 Installation
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 #. Ouvrir le fichier `.dmg` téléchargé
 #. Glisser l’icône Arduino dans le dossier **Applications**
@@ -69,10 +65,10 @@ Installation
    Cliquer sur **« Ouvrir »** dans la fenêtre de sécurité.
 
 Linux (Ubuntu/Debian)
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 Méthode recommandée : AppImage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ouvrir le navigateur web : https://www.arduino.cc/en/software
 #. Télécharger la version **« Linux AppImage »**
@@ -86,7 +82,7 @@ Méthode recommandée : AppImage
       ./arduino-ide-*-linux-x64.AppImage
 
 Alternative : Installation via le gestionnaire de paquets
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -106,7 +102,7 @@ Les pilotes FTDI sont **OBLIGATOIRES** pour communiquer avec le routeur via le p
    Sans ces pilotes, l’ordinateur ne détectera pas le routeur !
 
 Windows
--------
+~~~~~~~
 
 #. Ouvrir le navigateur : https://ftdichip.com/drivers/vcp-drivers/
 #. Cliquer sur **« Windows »** dans la colonne **« Available Drivers »**
@@ -116,7 +112,7 @@ Windows
 #. **Redémarrer l’ordinateur** après l’installation
 
 Vérification
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 #. Connecter l’adaptateur FTDI à un port USB
 #. Ouvrir le **Gestionnaire de périphériques** (Win + X → Gestionnaire de périphériques)
@@ -125,12 +121,12 @@ Vérification
 #. **Noter le numéro COMx** (exemple : COM3, COM4)
 
 macOS
------
+~~~~~
 
 Les pilotes FTDI sont généralement inclus dans macOS moderne.
 
 Vérification
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 #. Connecter l’adaptateur FTDI à un port USB
 #. Ouvrir un terminal
@@ -143,7 +139,7 @@ Vérification
 #. Rechercher une ligne contenant `tty.usbserial` (exemple : `/dev/tty.usbserial-A50285BI`)
 
 Si aucun périphérique n’apparaît
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Télécharger les pilotes sur https://ftdichip.com/drivers/vcp-drivers/
 #. Choisir la version macOS
@@ -151,12 +147,12 @@ Si aucun périphérique n’apparaît
 #. Redémarrer le Mac
 
 Linux
------
+~~~~~
 
 Les pilotes FTDI sont généralement inclus dans le noyau Linux.
 
 Vérification
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -165,14 +161,14 @@ Vérification
 Rechercher une ligne contenant « FTDI » ou « Future Technology Devices ».
 
 Si le pilote n’est pas chargé
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
    sudo modprobe ftdi_sio
 
 Ajouter l’utilisateur au groupe dialout
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -194,12 +190,12 @@ Ajouter l’utilisateur au groupe dialout
 Le firmware du Mk2PVRouter utilise des fonctionnalités modernes du C++ (C++17) qui ne sont pas activées par défaut dans Arduino IDE.
 
 Localisation du fichier `platform.txt`
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le fichier à modifier se trouve à différents emplacements selon le système d’exploitation :
 
 Windows
-~~~~~~~
+^^^^^^^
 
 Deux emplacements possibles :
 
@@ -209,7 +205,7 @@ Deux emplacements possibles :
    (remplacer `x.y.z` par la version installée, exemple : `1.8.6`)
 
 macOS
-~~~~~
+^^^^^
 
 `/Users/[nom_utilisateur]/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/platform.txt`
 
@@ -225,12 +221,12 @@ macOS
       open ~/Library/Arduino15/packages/arduino/hardware/avr/
 
 Linux
-~~~~~
+^^^^^
 
 `~/.arduino15/packages/arduino/hardware/avr/1.8.6/platform.txt`
 
 Modification du fichier
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Faire une **copie de sauvegarde** du fichier `platform.txt` (exemple : `platform.txt.bak`)
 
@@ -263,7 +259,7 @@ Modification du fichier
    généralement dans un sous-dossier relatif à cet emplacement.
 
 Vérification
-------------
+~~~~~~~~~~~~
 
 La modification sera validée lors de la compilation du firmware (étape 7).
 
@@ -274,14 +270,14 @@ La modification sera validée lors de la compilation du firmware (étape 7).
 Le firmware nécessite plusieurs bibliothèques externes.
 
 Ouvrir le Gestionnaire de bibliothèques
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Lancer Arduino IDE
 #. Menu : **Outils → Gérer les bibliothèques...**
 #. Une fenêtre « Gestionnaire de bibliothèques » s’ouvre
 
 Installation de ArduinoJson
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Dans le champ de recherche, taper : `ArduinoJson`
 #. Trouver la bibliothèque **« ArduinoJson »** par Benoit Blanchon
@@ -296,7 +292,7 @@ Installation de ArduinoJson
    Ne pas installer ArduinoJson version 7.x — elle ne fonctionnera pas sur l’ATmega328P !
 
 Installation de U8g2
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Cette bibliothèque gère l’affichage sur écran (si équipé).
 
@@ -305,7 +301,7 @@ Cette bibliothèque gère l’affichage sur écran (si équipé).
 #. Cliquer sur **« Installer »**
 
 Installation de OneWire
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Cette bibliothèque gère les sondes de température (optionnelles).
 
@@ -315,7 +311,7 @@ Cette bibliothèque gère les sondes de température (optionnelles).
 #. Cliquer sur **« Installer »**
 
 Vérification
-------------
+~~~~~~~~~~~~
 
 #. Menu : **Croquis → Inclure une bibliothèque**
 #. Vérifier la présence de : **ArduinoJson**, **U8g2**, **OneWire**
@@ -328,7 +324,7 @@ Vérification
 ======================================
 
 Firmware Monophasé
-------------------
+~~~~~~~~~~~~~~~~~~
 
 #. Ouvrir le navigateur : https://github.com/FredM67/PVRouter-1-phase
 #. Cliquer sur le bouton vert **« Code »** → **« Download ZIP »**
@@ -337,7 +333,7 @@ Firmware Monophasé
 #. Le firmware se trouve dans : `PVRouter-1-phase-main/Mk2_fasterControl_Full/`
 
 Firmware Triphasé
------------------
+~~~~~~~~~~~~~~~~~
 
 #. Ouvrir le navigateur : https://github.com/FredM67/PVRouter-3-phase
 #. Cliquer sur le bouton vert **« Code »** → **« Download ZIP »**
@@ -346,7 +342,7 @@ Firmware Triphasé
 #. Le firmware se trouve dans : `PVRouter-3-phase-main/Mk2_3phase_RFdatalog_temp/`
 
 Structure du Firmware
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 Après extraction, vous devriez avoir :
 
@@ -373,7 +369,7 @@ Après extraction, vous devriez avoir :
 ========================================
 
 Ouverture du Projet
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 #. Lancer Arduino IDE
 #. Menu : **Fichier → Ouvrir**
@@ -389,12 +385,12 @@ Ouverture du Projet
    Les autres fichiers (`.cpp`, `.h`) s’affichent automatiquement dans des onglets séparés.
 
 Configuration dans `config.h`
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cliquer sur l’onglet **`config.h`** pour le modifier.
 
 Version du PCB
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 Selon la version de votre PCB :
 
@@ -410,7 +406,7 @@ Selon la version de votre PCB :
    Si vous avez reçu votre kit après 2023, mettez `false`.
 
 Format de Sortie Série
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Pour débuter, laisser le mode lisible par un humain :
 
@@ -425,7 +421,7 @@ Options disponibles :
 - `JSON` : Format JSON pour intégration domotique
 
 Type d’Affichage
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^
 
 Si vous n’avez pas d’afficheur :
 
@@ -440,7 +436,7 @@ Options disponibles :
 - `SEG_HW` : Afficheur 7 segments (matériel)
 
 Configuration des Sorties Triac
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Définir le nombre de sorties et leurs broches :
 
@@ -455,7 +451,7 @@ Définir le nombre de sorties et leurs broches :
    };
 
 Ordre de Démarrage
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 Définir la priorité des charges :
 
@@ -466,7 +462,7 @@ Définir la priorité des charges :
 Signification : Démarrer d’abord la sortie 0, puis la sortie 1.
 
 Sondes de Température (Optionnel)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Si vous utilisez des sondes DS18B20, décommenter la ligne :
 
@@ -489,7 +485,7 @@ Et configurer les adresses des sondes :
    Les adresses des sondes seront trouvées lors du premier lancement (voir Moniteur Série).
 
 Configuration dans `calibration.h`
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ce fichier contient les paramètres d’étalonnage.
 
@@ -504,7 +500,7 @@ Les paramètres par défaut permettent de tester le routeur.
 ====================================
 
 Préparation
------------
+~~~~~~~~~~~
 
 .. danger::
    **ORDRE IMPORTANT** :
@@ -515,7 +511,7 @@ Préparation
    L’adaptateur FTDI ne peut **PAS** alimenter le routeur seul !
 
 Connexion du Routeur
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 #. ⚠️ **Couper l’alimentation secteur** du routeur (disjoncteur)
 #. Brancher l’adaptateur FTDI sur le routeur :
@@ -547,7 +543,7 @@ Connexion du Routeur
 #. **Mettre le routeur sous tension** (réenclencher le disjoncteur)
 
 Configuration Arduino IDE
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Menu : **Outils → Type de carte → Arduino AVR Boards → Arduino Uno**
 
@@ -559,7 +555,7 @@ Configuration Arduino IDE
 #. Menu : **Outils → Programmateur → AVRISP mkII** (ou laisser par défaut)
 
 Compilation et Téléversement
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Checklist avant téléversement
 
@@ -585,10 +581,10 @@ Compilation et Téléversement
    c’est que le fichier `platform.txt` n’a pas été correctement modifié (voir Étape 3).
 
 Résolution des Problèmes
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Erreur : `avrdude: stk500_recv(): programmer is not responding`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Causes possibles :**
 
@@ -598,14 +594,14 @@ Erreur : `avrdude: stk500_recv(): programmer is not responding`
 #. ATmega328 mal inséré → Vérifier l’orientation et l’insertion complète
 
 Erreur : `error: 'constexpr' does not name a type`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Le fichier `platform.txt` n’a pas été modifié correctement.
 
 **Solution :** Reprendre l’Étape 3.
 
 Port COM n’apparaît pas
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Vérifier que les pilotes FTDI sont installés (Étape 2)
 #. Débrancher/rebrancher l’adaptateur FTDI
@@ -616,7 +612,7 @@ Port COM n’apparaît pas
 ========================================
 
 Ouverture du Moniteur Série
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Menu : **Outils → Moniteur série**
 #. Configurer en bas à droite :
@@ -625,7 +621,7 @@ Ouverture du Moniteur Série
    - **Fin de ligne** : `Retour chariot et Nouvelle ligne` (NL & CR)
 
 Messages Attendus
------------------
+~~~~~~~~~~~~~~~~~
 
 Si tout fonctionne, vous devriez voir des messages s’afficher :
 
@@ -644,7 +640,7 @@ Si tout fonctionne, vous devriez voir des messages s’afficher :
    Les valeurs exactes dépendent de votre installation et de l’étalonnage.
 
 Si Aucun Message n’Apparaît
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Vérifier que le bon baud rate est sélectionné (9600 ou 115200)
 #. Vérifier le câblage FTDI (TX ↔ RX)
@@ -652,7 +648,7 @@ Si Aucun Message n’Apparaît
 #. Vérifier l’oscillateur 16 MHz et les condensateurs C6/C7
 
 Adresses des Sondes de Température
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Si vous avez activé `TEMP_ENABLED`, le moniteur série affichera les adresses détectées :
 
@@ -692,12 +688,12 @@ Annexe : Alternative PlatformIO
 ===================================
 
 Pour les Utilisateurs Avancés
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **PlatformIO** est un environnement de développement plus complet que l’Arduino IDE.
 
 Avantages
-~~~~~~~~~
+^^^^^^^^^
 
 - Gestion automatique des bibliothèques
 - Support C++17 natif (pas besoin de modifier `platform.txt`)
@@ -706,7 +702,7 @@ Avantages
 - Débogage avancé
 
 Installation
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 #. Installer **Visual Studio Code** : https://code.visualstudio.com/
 #. Ouvrir VS Code
@@ -716,21 +712,21 @@ Installation
 #. Redémarrer VS Code
 
 Ouverture du Projet
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 #. Menu PlatformIO : **PIO Home → Open Project**
 #. Sélectionner le dossier du firmware
 #. PlatformIO détecte automatiquement le fichier `platformio.ini`
 
 Compilation et Téléversement
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Cliquer sur l’icône **« Upload »** (→) dans la barre inférieure
 #. PlatformIO télécharge automatiquement les bibliothèques nécessaires
 #. La compilation et le téléversement se font automatiquement
 
 Sélection de la Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Le firmware contient plusieurs environnements préconfigurés :
 
@@ -752,14 +748,14 @@ Support et Aide
 ===================================
 
 En Cas de Problème
-------------------
+~~~~~~~~~~~~~~~~~~
 
 #. Relire attentivement les étapes ci-dessus
 #. Consulter le chapitre :ref:`troubleshooting` (section programmation)
 #. Vérifier le forum GitHub Discussions : https://github.com/FredM67/PVRouter-1-phase/discussions
 
 Pour Rapporter un Bug
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 GitHub Issues :
 

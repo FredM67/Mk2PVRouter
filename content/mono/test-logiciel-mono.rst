@@ -17,6 +17,9 @@ Tests logiciels
 
 .. include:: test-logiciel-mono-requirements.inc.rst
 
+Installation du Logiciel et Firmware
+------------------------------------
+
 .. include:: ../common/installation-logiciel.inc.rst
 
 .. include:: test-mono-mesures.inc.rst

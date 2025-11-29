@@ -1,7 +1,10 @@
 .. _test-logiciel-tri:
 
-Test logiciel
--------------
+Tests logiciels
+===============
+
+Installation du Logiciel et Firmware
+-------------------------------------
 
 .. include:: ../common/installation-logiciel.inc.rst
 
