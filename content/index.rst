@@ -63,6 +63,12 @@ Bienvenue dans la documentation du Mk2PVRouter !
 | Si vous avez des questions ou des suggestions, n’hésitez pas à nous contacter.
 
 .. toctree::
+   :caption: ⚠️ Sécurité (À LIRE EN PREMIER!)
+   :hidden:
+
+   safety-overview
+
+.. toctree::
    :hidden:
 
    introduction
