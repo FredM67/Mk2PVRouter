@@ -8,7 +8,7 @@
 #. Le firmware se trouve dans : `PVRouter-3-phase-main/Mk2_3phase_RFdatalog_temp/`
 
 Structure du Firmware
-^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""
 
 Après extraction, vous devriez avoir :
 
@@ -17,7 +17,7 @@ Après extraction, vous devriez avoir :
    Mk2_3phase_RFdatalog_temp/
    ├── Mk2_3phase_RFdatalog_temp.ino  (fichier principal)
    ├── config.h                     (configuration utilisateur)
-   ├── calibration.h                (paramètres d'étalonnage)
+   ├── calibration.h                (paramètres d’étalonnage)
    ├── dualtarif.h
    ├── processing.cpp
    ├── temperature.cpp
@@ -35,7 +35,7 @@ Après extraction, vous devriez avoir :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ouverture du Projet
-^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""
 
 #. Lancer Arduino IDE
 #. Menu : **Fichier → Ouvrir**
@@ -47,12 +47,12 @@ Ouverture du Projet
    Les autres fichiers (`.cpp`, `.h`) s’affichent automatiquement dans des onglets séparés.
 
 Configuration dans `config.h`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""
 
 Cliquer sur l’onglet **`config.h`** pour le modifier.
 
 Version du PCB
-~~~~~~~~~~~~~~
+##############
 
 Selon la version de votre PCB :
 
@@ -68,7 +68,7 @@ Selon la version de votre PCB :
    Si vous avez reçu votre kit après 2023, mettez `false`.
 
 Format de Sortie Série
-~~~~~~~~~~~~~~~~~~~~~~
+######################
 
 Pour débuter, laisser le mode lisible par un humain :
 
@@ -82,23 +82,9 @@ Options disponibles :
 - `IoT` : Format compact pour IoT
 - `JSON` : Format JSON pour intégration domotique
 
-Type d’Affichage
-~~~~~~~~~~~~~~~~
-
-Si vous n’avez pas d’afficheur :
-
-.. code-block:: cpp
-
-   inline constexpr DisplayType TYPE_OF_DISPLAY{ DisplayType::NONE };
-
-Options disponibles :
-
-- `NONE` : Pas d’affichage
-- `SEG` : Afficheur 7 segments (logiciel)
-- `SEG_HW` : Afficheur 7 segments (matériel)
 
 Configuration des Sorties Triac
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+###############################
 
 Définir le nombre de sorties et leurs broches :
 
@@ -113,7 +99,7 @@ Définir le nombre de sorties et leurs broches :
    };
 
 Ordre de Démarrage
-~~~~~~~~~~~~~~~~~~
+##################
 
 Définir la priorité des charges :
 
@@ -124,7 +110,7 @@ Définir la priorité des charges :
 Signification : Démarrer d’abord la sortie 0, puis la sortie 1.
 
 Sondes de Température (Optionnel)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#################################
 
 Si vous utilisez des sondes DS18B20, décommenter la ligne :
 
@@ -147,13 +133,13 @@ Et configurer les adresses des sondes :
    Les adresses des sondes seront trouvées lors du premier lancement (voir Moniteur Série).
 
 Configuration dans `calibration.h`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""
 
 Ce fichier contient les paramètres d’étalonnage.
 
 .. warning::
    Ne modifiez **PAS** ce fichier maintenant — les valeurs seront déterminées lors de l’étalonnage
-   (voir chapitre :ref:`etalonnage-tri` ou :ref:`etalonnage-tri`).
+   (voir chapitre :ref:`etalonnage-tri` ou :ref:`etalonnage-tri`).
 
 Les paramètres par défaut permettent de tester le routeur.
 
@@ -162,7 +148,7 @@ Les paramètres par défaut permettent de tester le routeur.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Préparation
-^^^^^^^^^^^
+"""""""""""
 
 .. danger::
    **ORDRE IMPORTANT** :
@@ -173,7 +159,7 @@ Préparation
    L’adaptateur FTDI ne peut **PAS** alimenter le routeur seul !
 
 Connexion du Routeur
-^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""
 
 #. ⚠️ **Couper l’alimentation secteur** du routeur (disjoncteur)
 #. Brancher l’adaptateur FTDI sur le routeur :
@@ -205,19 +191,19 @@ Connexion du Routeur
 #. **Mettre le routeur sous tension** (réenclencher le disjoncteur)
 
 Configuration Arduino IDE
-^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""
 
 #. Menu : **Outils → Type de carte → Arduino AVR Boards → Arduino Uno**
 
 #. Menu : **Outils → Port → COMx** (Windows) ou `/dev/tty.usbserial-xxx` (Mac/Linux)
 
    - Choisir le port correspondant à l’adaptateur FTDI
-   - Si plusieurs ports : essayer chacun jusqu'à ce que ça fonctionne
+   - Si plusieurs ports : essayer chacun jusqu’à ce que ça fonctionne
 
 #. Menu : **Outils → Programmateur → AVRISP mkII** (ou laisser par défaut)
 
 Compilation et Téléversement
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""
 
 .. admonition:: Checklist avant téléversement
 
@@ -243,10 +229,10 @@ Compilation et Téléversement
    c’est que le fichier `platform.txt` n’a pas été correctement modifié (voir :ref:`arduino-cpp17-config`).
 
 Résolution des Problèmes
-^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""
 
 Erreur : `avrdude: stk500_recv(): programmer is not responding`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+###############################################################
 
 **Causes possibles :**
 
@@ -255,15 +241,15 @@ Erreur : `avrdude: stk500_recv(): programmer is not responding`
 #. Câblage FTDI incorrect → Vérifier TX ↔ RX inversés
 #. ATmega328 mal inséré → Vérifier l’orientation et l’insertion complète
 
-Erreur : `error: 'constexpr' does not name a type`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Erreur : `error: ’constexpr’ does not name a type`
+##################################################
 
 Le fichier `platform.txt` n’a pas été modifié correctement.
 
-**Solution :** Reprendre :ref:`arduino-cpp17-config`.
+**Solution :** Reprendre :ref:`arduino-cpp17-config`.
 
 Port COM n’apparaît pas
-~~~~~~~~~~~~~~~~~~~~~~~
+#######################
 
 #. Vérifier que les pilotes FTDI sont installés (:ref:`install-etape1-ftdi`)
 #. Débrancher/rebrancher l’adaptateur FTDI
@@ -274,7 +260,7 @@ Port COM n’apparaît pas
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ouverture du Moniteur Série
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""
 
 #. Menu : **Outils → Moniteur série**
 #. Configurer en bas à droite :
@@ -283,7 +269,7 @@ Ouverture du Moniteur Série
    - **Fin de ligne** : `Retour chariot et Nouvelle ligne` (NL & CR)
 
 Messages Attendus
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 Si tout fonctionne, vous devriez voir des messages s’afficher :
 
@@ -302,7 +288,7 @@ Si tout fonctionne, vous devriez voir des messages s’afficher :
    Les valeurs exactes dépendent de votre installation et de l’étalonnage.
 
 Si Aucun Message n’Apparaît
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""
 
 #. Vérifier que le bon baud rate est sélectionné (9600 bauds)
 #. Vérifier le câblage FTDI (TX ↔ RX)
@@ -310,7 +296,7 @@ Si Aucun Message n’Apparaît
 #. Vérifier l’oscillateur 16 MHz et les condensateurs C6/C7
 
 Adresses des Sondes de Température
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""""""
 
 Si vous avez activé `TEMP_ENABLED`, le moniteur série affichera les adresses détectées :
 
@@ -322,14 +308,14 @@ Si vous avez activé `TEMP_ENABLED`, le moniteur série affichera les adresses d
 Copier ces adresses dans `config.h` (section sondes de température).
 
 
-Étape 1 : Prochaines Étapes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Prochaines Étapes
+^^^^^^^^^^^^^^^^^
 
 ✅ Le firmware est maintenant installé et fonctionnel !
 
 **Prochaines étapes :**
 
-#. **Étalonnage** : Voir chapitre :ref:`etalonnage-tri` ou :ref:`etalonnage-tri`
+#. **Étalonnage** : Voir chapitre :ref:`etalonnage-tri` ou :ref:`etalonnage-tri`
 
    L’étalonnage est **OBLIGATOIRE** pour que le routeur fonctionne correctement.
 
@@ -345,5 +331,5 @@ Copier ces adresses dans `config.h` (section sondes de température).
    - [ ] Fait appel à un électricien qualifié (fortement recommandé)
 
 .. important::
-   **FONCTIONNALITÉ** : L'étalonnage doit être effectué après l'installation électrique pour que le routeur mesure correctement et fonctionne de manière optimale. Le routeur peut être connecté sans étalonnage (pas de danger), mais ne fonctionnera pas correctement.
+   **FONCTIONNALITÉ** : L’étalonnage doit être effectué après l’installation électrique pour que le routeur mesure correctement et fonctionne de manière optimale. Le routeur peut être connecté sans étalonnage (pas de danger), mais ne fonctionnera pas correctement.
 
