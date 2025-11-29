@@ -1,11 +1,11 @@
 .. _safety-overview:
 
-***********************************************
-Sécurité — À Lire Absolument Avant de Commencer
-***********************************************
+**************************************************
+⚠️ Sécurité — À Lire Absolument Avant de Commencer
+**************************************************
 
 .. danger::
-   **AVERTISSEMENT IMPORTANT**
+   ⚡ **AVERTISSEMENT IMPORTANT**
 
    Ce projet implique la manipulation de tensions MORTELLES (230 V AC) et l’utilisation d’outils potentiellement dangereux. Des blessures graves, voire mortelles, peuvent survenir en cas de non-respect des consignes de sécurité.
 
@@ -51,7 +51,7 @@ Situations à Risque Électrique dans ce Projet
 - Installation finale dans le tableau électrique
 
 2. **Brûlures (Fer à Souder 200-450 °C)**
-----------------------------------------
+-----------------------------------------
 
 Un fer à souder peut causer :
 
@@ -59,8 +59,8 @@ Un fer à souder peut causer :
 - Incendie si laissé sans surveillance
 - Inhalation de fumées toxiques (flux de soudure)
 
-3. **Incendie**
----------------
+3. 🔥 **Incendie**
+------------------
 
 Plusieurs sources de risque d’incendie :
 
@@ -69,16 +69,16 @@ Plusieurs sources de risque d’incendie :
 - **Fer à souder** laissé sans surveillance → Ignition matériaux
 - **Surcharge électrique** lors des tests → Composants en feu
 
-4. **Blessures Mécaniques**
----------------------------
+4. 🔧 **Blessures Mécaniques**
+------------------------------
 
 - **Perceuse/à colonne** : Entraînement de pièces, projections
 - **Outils coupants** : Coupures, entailles
 - **Projections métalliques** : Blessures aux yeux
 
-====================================
-Équipement de Protection Obligatoire
-====================================
+========================================
+🛡️ Équipement de Protection Obligatoire
+========================================
 
 Équipement de Base (Toutes Étapes)
 ==================================
@@ -505,9 +505,9 @@ Numéros d’Urgence (France)
 - État de la victime (conscient ? respire ?)
 - Votre numéro de téléphone
 
-====================================
-Liste de Contrôle Avant de Commencer
-====================================
+======================================
+✅ Liste de Contrôle Avant de Commencer
+======================================
 
 Évaluation Personnelle
 ======================

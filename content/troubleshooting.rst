@@ -1,8 +1,8 @@
 .. _troubleshooting:
 
-******************
-Guide de Dépannage
-******************
+*********************
+🔧 Guide de Dépannage
+*********************
 
 Ce chapitre vous aide à diagnostiquer et résoudre les problèmes courants rencontrés lors de l’assemblage et de l’utilisation du Mk2PVRouter.
 
@@ -19,7 +19,7 @@ Ce chapitre vous aide à diagnostiquer et résoudre les problèmes courants renc
  :depth: 2
 
 ==============================
-Différences Mono/Tri Phases
+📋 Différences Mono/Tri Phases
 ==============================
 
 Ce guide couvre les versions **monophasée** et **triphasée** du Mk2PVRouter.
@@ -56,9 +56,9 @@ Ce guide couvre les versions **monophasée** et **triphasée** du Mk2PVRouter.
  - **Mono :** composants pour version monophasée
  - **Tri :** composants pour version triphasée
 
-===================================
-Problèmes Après Soudure de la Carte
-===================================
+======================================
+🔌 Problèmes Après Soudure de la Carte
+======================================
 
 La Carte ne s’Allume Pas
 ========================
@@ -398,9 +398,9 @@ Erreur « Out of Memory » lors de la Compilation
 
 #. Recompiler et téléverser
 
-======================================
-Problèmes Électriques — Tests et Usage
-======================================
+=========================================
+⚡ Problèmes Électriques — Tests et Usage
+=========================================
 
 Fusible Saute Immédiatement
 ===========================
@@ -765,9 +765,9 @@ LED Clignote Bizarrement
    - Mesures instables
    - Vérifier le CT et l'étalonnage
 
-============================================
-Problèmes de Routage — Charge ne Chauffe Pas
-============================================
+===============================================
+🔥 Problèmes de Routage — Charge ne Chauffe Pas
+===============================================
 
 Routeur Fonctionne mais Charge Pas Alimentée
 ============================================
@@ -905,9 +905,9 @@ Triac Surchauffe
 - Ajouter ventilation forcée (ventilateur 12 V)
 - Réduire puissance charge si possible
 
-=============================
-Problèmes de Communication RF
-=============================
+================================
+💻 Problèmes de Communication RF
+================================
 
 Module RF ne Répond Pas
 =======================
@@ -985,7 +985,7 @@ Informations à Fournir
 ----------------------
 
 .. important::
- **Pour obtenir aide efficace, inclure :**
+ **📞 Pour obtenir une aide efficace, inclure :**
 
  ☐ **Description détaillée problème**
 
@@ -1015,8 +1015,8 @@ Informations à Fournir
  - Version kit (mono/tri, nombre sorties)
  - Système 3.3 V ou 5 V ?
 
-Photos Utiles — Exemples
-------------------------
+📸 Photos Utiles — Exemples
+---------------------------
 
 **Photo dessus (composants) :**
 
@@ -1051,9 +1051,9 @@ Avant de Poster
 .. tip::
  Plus votre demande est précise et documentée, plus rapide sera la résolution !
 
-========================================
-Annexe — Outils de Diagnostic Essentiels
-========================================
+============================================
+🛠️ Annexe — Outils de Diagnostic Essentiels
+============================================
 
 Multimètre — Utilisation de Base
 ================================
@@ -1148,7 +1148,7 @@ Ce guide de dépannage couvre les problèmes les plus fréquents rencontrés lor
 - Votre sécurité prime sur tout le reste
 
 .. tip::
- **Prévention > Réparation**
+ 💡 **Prévention > Réparation**
 
  - Vérifier 3 fois avant de souder
  - Tester progressivement (pas tout d’un coup)
