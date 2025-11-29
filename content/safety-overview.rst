@@ -131,13 +131,13 @@ Avant de Commencer
 
 .. admonition:: Checklist Pré-Soudure
 
-   [ ] Espace de travail dégagé (pas de papiers, tissus, produits inflammables)
-   [ ] Surface de travail ininflammable
-   [ ] Ventilation suffisante (fenêtre ouverte ou extracteur)
-   [ ] Lunettes de protection portées
-   [ ] Support fer à souder à portée de main
-   [ ] Extincteur accessible (< 3 mètres)
-   [ ] Quelqu’un informé que vous soudez (en cas d’urgence)
+   - [ ] Espace de travail dégagé (pas de papiers, tissus, produits inflammables)
+   - [ ] Surface de travail ininflammable
+   - [ ] Ventilation suffisante (fenêtre ouverte ou extracteur)
+   - [ ] Lunettes de protection portées
+   - [ ] Support fer à souder à portée de main
+   - [ ] Extincteur accessible (< 3 mètres)
+   - [ ] Quelqu’un informé que vous soudez (en cas d’urgence)
 
 Pendant la Soudure
 ------------------
@@ -279,13 +279,13 @@ Règles Obligatoires
 
 .. admonition:: Checklist Perçage
 
-   [ ] **Lunettes de protection** portées (OBLIGATOIRE !)
-   [ ] **Cheveux attachés** si longs
-   [ ] **PAS de gants** (risque entraînement)
-   [ ] **Vêtements près du corps** (pas de manches larges)
-   [ ] **Pièce FIXÉE** (étau, serre-joints) — JAMAIS tenue à la main
-   [ ] **Vitesse adaptée** au matériau (aluminium : lent, plastique : moyen)
-   [ ] **Zone dégagée** autour de la perceuse
+   - [ ] **Lunettes de protection** portées (OBLIGATOIRE !)
+   - [ ] **Cheveux attachés** si longs
+   - [ ] **PAS de gants** (risque entraînement)
+   - [ ] **Vêtements près du corps** (pas de manches larges)
+   - [ ] **Pièce FIXÉE** (étau, serre-joints) — JAMAIS tenue à la main
+   - [ ] **Vitesse adaptée** au matériau (aluminium : lent, plastique : moyen)
+   - [ ] **Zone dégagée** autour de la perceuse
 
 Technique Sûre
 --------------
@@ -517,25 +517,29 @@ Liste de Contrôle Avant de Commencer
    **Avant d’acheter le kit, évaluez honnêtement vos compétences:**
 
    Soudure :
-   [ ] J’ai déjà soudé des composants électroniques (au moins 10 fois)
-   [ ] Je sais reconnaître une bonne soudure d’une mauvaise
-   [ ] Je sais comment dessouder un composant
+   
+   - [ ] J’ai déjà soudé des composants électroniques (au moins 10 fois)
+   - [ ] Je sais reconnaître une bonne soudure d’une mauvaise
+   - [ ] Je sais comment dessouder un composant
 
    Électricité :
-   [ ] Je comprends la différence entre AC et DC
-   [ ] Je sais utiliser un multimètre (mesurer tension, continuité)
-   [ ] Je connais les dangers du 230 V AC
-   [ ] Je sais comment couper l’alimentation au tableau électrique
-   [ ] J’ai déjà câblé un circuit domestique OU je serai supervisé par un électricien
+   
+   - [ ] Je comprends la différence entre AC et DC
+   - [ ] Je sais utiliser un multimètre (mesurer tension, continuité)
+   - [ ] Je connais les dangers du 230 V AC
+   - [ ] Je sais comment couper l’alimentation au tableau électrique
+   - [ ] J’ai déjà câblé un circuit domestique OU je serai supervisé par un électricien
 
    Mécanique :
-   [ ] J’ai déjà utilisé une perceuse
-   [ ] Je sais comment sécuriser une pièce pour perçage
-   [ ] Je possède ou ai accès aux outils nécessaires
+   
+   - [ ] J’ai déjà utilisé une perceuse
+   - [ ] Je sais comment sécuriser une pièce pour perçage
+   - [ ] Je possède ou ai accès aux outils nécessaires
 
    **Si vous avez coché NON à plus de 2 questions :**
-   → Formez-vous AVANT de commencer ce projet
-   → Ou faites-vous aider par quelqu’un d’expérimenté
+
+   - → Formez-vous AVANT de commencer ce projet
+   - → Ou faites-vous aider par quelqu’un d’expérimenté
 
 Ressources de Formation
 -----------------------
@@ -568,30 +572,34 @@ Checklist Avant Assemblage
    **Avant de commencer l’assemblage du Mk2PVRouter :**
 
    Lecture :
-   [ ] J’ai lu et compris ce chapitre sécurité ENTIÈREMENT
-   [ ] J’ai lu la documentation technique pertinente (mono ou tri)
-   [ ] Je comprends les étapes du projet
+   
+   - [ ] J’ai lu et compris ce chapitre sécurité ENTIÈREMENT
+   - [ ] J’ai lu la documentation technique pertinente (mono ou tri)
+   - [ ] Je comprends les étapes du projet
 
    Équipement de sécurité :
-   [ ] Lunettes de protection
-   [ ] Extincteur ABC (2 kg min, vérifié)
-   [ ] Détecteur de fumée fonctionnel
-   [ ] Trousse premiers secours
-   [ ] Testeur de tension (pour étapes 230 V)
-   [ ] Gants isolants (pour étapes 230 V)
+   
+   - [ ] Lunettes de protection
+   - [ ] Extincteur ABC (2 kg min, vérifié)
+   - [ ] Détecteur de fumée fonctionnel
+   - [ ] Trousse premiers secours
+   - [ ] Testeur de tension (pour étapes 230 V)
+   - [ ] Gants isolants (pour étapes 230 V)
 
    Environnement :
-   [ ] Espace de travail dégagé et bien éclairé
-   [ ] Surface de travail ininflammable
-   [ ] Ventilation suffisante
-   [ ] Quelqu’un informé de mon activité (en cas d’urgence)
-   [ ] Téléphone à portée pour appel secours
+   
+   - [ ] Espace de travail dégagé et bien éclairé
+   - [ ] Surface de travail ininflammable
+   - [ ] Ventilation suffisante
+   - [ ] Quelqu’un informé de mon activité (en cas d’urgence)
+   - [ ] Téléphone à portée pour appel secours
 
    Compétences :
-   [ ] Je possède les compétences requises OU j’ai supervision adaptée
-   [ ] J’ai pratiqué la soudure sur kit d’entraînement
-   [ ] Je connais l’emplacement du disjoncteur principal
-   [ ] Je connais les gestes premiers secours de base
+
+   - [ ] Je possède les compétences requises OU j’ai supervision adaptée
+   - [ ] J’ai pratiqué la soudure sur kit d’entraînement
+   - [ ] Je connais l’emplacement du disjoncteur principal
+   - [ ] Je connais les gestes premiers secours de base
 
 Reconnaissance de Risques
 =========================
