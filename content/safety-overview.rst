@@ -158,8 +158,8 @@ Pendant la Soudure
 - ✗ Respirer directement les fumées de soudure
 - ✗ Poser le fer sur des surfaces combustibles
 
-En Cas de Brûlure
------------------
+En Cas de Brûlure au Fer à Souder
+---------------------------------
 
 1. **Refroidir immédiatement** : Eau froide courante 10-15 minutes
 2. **Ne pas percer les cloques**
