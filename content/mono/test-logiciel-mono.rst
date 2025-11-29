@@ -20,6 +20,6 @@ Tests logiciels
 Installation du Logiciel et Firmware
 ------------------------------------
 
-.. include:: ../common/installation-logiciel.inc.rst
+Suivez le guide complet d'installation : :ref:`installation-logiciel`
 
 .. include:: test-mono-mesures.inc.rst

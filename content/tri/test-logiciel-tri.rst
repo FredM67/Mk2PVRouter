@@ -6,9 +6,9 @@ Tests logiciels
 .. include:: ../common/test-logiciel-requirements.inc.rst
 
 Installation du Logiciel et Firmware
--------------------------------------
+------------------------------------
 
-.. include:: ../common/installation-logiciel.inc.rst
+Suivez le guide complet d'installation : :ref:`installation-logiciel`
 
 Test de la partie *mesures*
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

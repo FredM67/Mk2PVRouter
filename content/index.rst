@@ -85,6 +85,13 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 3
+   :caption: 💻 Logiciel
+   :hidden:
+
+   installation-logiciel
+
+.. toctree::
+   :maxdepth: 3
    :caption: 1~ Kit monophasé
    :hidden:
 
