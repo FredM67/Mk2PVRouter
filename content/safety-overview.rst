@@ -50,7 +50,7 @@ Situations à Risque Électrique dans ce Projet
 - Étalonnage du routeur (manipulation du câblage domestique)
 - Installation finale dans le tableau électrique
 
-2. **Brûlures (Fer à Souder 200-450°C)**
+2. **Brûlures (Fer à Souder 200-450 °C)**
 ----------------------------------------
 
 Un fer à souder peut causer :
@@ -152,7 +152,7 @@ Pendant la Soudure
 
 **À NE JAMAIS FAIRE:**
 
-- ❌ Toucher la panne ou le fil chauffant (200-450°C !)
+- ❌ Toucher la panne ou le fil chauffant (200-450 °C !)
 - ❌ Laisser le fer allumé sans surveillance
 - ❌ Souder près de matériaux inflammables
 - ❌ Respirer directement les fumées de soudure

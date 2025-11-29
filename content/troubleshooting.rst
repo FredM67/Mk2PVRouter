@@ -18,6 +18,44 @@ Ce chapitre vous aide à diagnostiquer et résoudre les problèmes courants renc
  :local:
  :depth: 2
 
+==============================
+Différences Mono/Tri Phases
+==============================
+
+Ce guide couvre les versions **monophasée** et **triphasée** du Mk2PVRouter.
+
+.. list-table:: Composants selon la version
+ :widths: 40 30 30
+ :header-rows: 1
+
+ * - Composant
+   - Monophasé
+   - Triphasé
+ * - Fusibles
+   - FS1
+   - FS1, FS2, FS3
+ * - Transformateurs
+   - TXFR1
+   - TXFR1, TXFR2, TXFR3
+ * - Ponts redresseurs
+   - BR1
+   - BR1, BR2, BR3
+ * - Régulateur 3.3 V/5 V
+   - VR1
+   - VR1 (commun)
+ * - Capteurs de courant (CT)
+   - 1 CT (phase principale)
+   - 3 CT (un par phase)
+ * - Sorties triac
+   - 1 ou plusieurs
+   - 3 ou plus (selon modèle)
+
+.. note::
+ Dans ce guide, les instructions utilisent la notation :
+
+ - **Mono :** composants pour version monophasée
+ - **Tri :** composants pour version triphasée
+
 ===================================
 Problèmes Après Soudure de la Carte
 ===================================
@@ -36,8 +74,10 @@ Effectuez ces vérifications dans l’ordre :
 
  #. ☐ L’alimentation secteur est-elle branchée ?
  #. ☐ Le disjoncteur est-il enclenché ?
- #. ☐ Le·s fusible·s (FS1 pour mono, FS1/FS2/FS3 pour tri) sont-ils intacts ?
+ #. ☐ **Fusibles intacts ?**
 
+   - Mono : FS1
+   - Tri : FS1, FS2, FS3
    - Vérifier avec multimètre en mode continuité
    - Un fusible grillé indique un court-circuit
 
@@ -57,11 +97,11 @@ Vérifier les composants d’alimentation :
 
 .. admonition:: Composants à vérifier
 
- #. ☐ **Pont redresseur BR1** dans le bon sens ?
+ #. ☐ **Pont(s) redresseur(s) dans le bon sens ?**
 
+   - Mono : BR1
+   - Tri : BR1, BR2, BR3
    - Repérer la bande ou marquage sur la diode
-   - Doit correspondre au symbole sur le PCB
-   - ⚠️ Si inversé : peut être détruit
 
  #. ☐ **Régulateur VR1** dans le bon sens ?
 
@@ -74,11 +114,11 @@ Vérifier les composants d’alimentation :
    - Vérifier marquage sur PCB
    - ⚠️ Si inversés : risque d’explosion à la mise sous tension !
 
- #. ☐ **Transformateur TXFR1** bien soudé ?
+ #. ☐ **Transformateur(s) bien soudé(s) ?**
 
-   - Soudures brillantes et lisses (pas ternes) ?
-   - Contact complet avec le cuivre du PCB ?
-   - Pas de soudure froide ?
+   - Mono : TXFR1
+   - Tri : TXFR1, TXFR2, TXFR3
+   - Soudures brillantes et lisses (pas ternes) ?
 
 Qualité des Soudures
 --------------------
@@ -380,7 +420,10 @@ Causes Possibles
 
 .. admonition:: Diagnostics court-circuit
 
- #. ☐ **Court-circuit dans transformateur TXFR1**
+ #. ☐ **Court-circuit dans transformateur(s)**
+
+   - Mono : TXFR1
+   - Tri : TXFR1, TXFR2, TXFR3
 
  - Mesurer résistance enroulements (doit être ~1-10 kΩ)
  - Si <10 Ω → Transformateur défectueux
@@ -429,7 +472,7 @@ Procédure de Diagnostic
 
 #. **Test par élimination**
 
-   - Dessouder un côté du transformateur TXFR1
+   - Dessouder un côté du/des transformateur·s (TXFR1 pour mono, ou TXFR1/TXFR2/TXFR3 pour tri)
    - Remesurer résistance
    - Si court-circuit persiste → Problème sur PCB
    - Si disparaît → Transformateur défectueux
