@@ -1,6 +1,6 @@
 .. _installation-logiciel:
 
-========================
+
 Installation du Logiciel
 ========================
 
@@ -16,7 +16,7 @@ Ce chapitre détaille l’installation complète de l’environnement de dévelo
 
 .. _install-etape1-ftdi:
 
-===================================
+
 Étape 1 : Installation Pilotes FTDI
 ===================================
 
@@ -63,7 +63,7 @@ Vérification
 #. Rechercher une ligne contenant `tty.usbserial` (exemple : `/dev/tty.usbserial-A50285BI`)
 
 Si aucun périphérique n’apparaît
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Télécharger les pilotes sur https://ftdichip.com/drivers/vcp-drivers/
 #. Choisir la version macOS
@@ -102,35 +102,33 @@ Ajouter l’utilisateur au groupe dialout
 .. note::
    Le redémarrage est nécessaire pour que les changements prennent effet.
 
-=========================================================
+
 Étape 2 : Choix de l’Environnement de Développement
-=========================================================
+===================================================
 
 Vous avez deux options pour programmer le Mk2PVRouter :
 
 **Option A : Arduino IDE** (recommandé pour les débutants)
-   - Interface simple et intuitive
    - Configuration manuelle nécessaire (C++17, bibliothèques)
    - Suivre les **Étapes 2A**, 3A et 4A ci-dessous
 
 **Option B : PlatformIO** (recommandé pour les utilisateurs avancés)
-   - Gestion automatique des dépendances
    - Support C++17 natif (pas de configuration manuelle)
    - Suivre uniquement l’**Étape 2B** ci-dessous (pas d’étapes 3B ou 4B)
 
 .. important::
    **Choisissez UNE SEULE option** : soit Arduino IDE (2A+3A+4A), soit PlatformIO (2B uniquement).
 
----
+
 
 .. _install-etape2-arduino:
 
-================================================
+
 Option A : Installation avec Arduino IDE
-================================================
+----------------------------------------
 
 Étape 2A : Installation Arduino IDE
-====================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 L’Arduino IDE est le logiciel qui permet de programmer le routeur.
 
@@ -213,7 +211,7 @@ Alternative : Installation via le gestionnaire de paquets
 .. _install-etape3-cpp17:
 
 Étape 3A : Configuration Arduino IDE pour C++17
-================================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. danger::
    **ÉTAPE CRITIQUE** — Le firmware nécessite le support C++17.
@@ -223,7 +221,7 @@ Alternative : Installation via le gestionnaire de paquets
 Le firmware du Mk2PVRouter utilise des fonctionnalités modernes du C++ (C++17) qui ne sont pas activées par défaut dans Arduino IDE.
 
 Localisation du fichier `platform.txt`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le fichier à modifier se trouve à différents emplacements selon le système d’exploitation :
 
@@ -294,12 +292,12 @@ Modification du fichier
 .. _install-etape4-bibliotheques:
 
 Étape 4A : Installation des Bibliothèques
-==========================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le firmware nécessite plusieurs bibliothèques externes.
 
 Ouvrir le Gestionnaire de bibliothèques
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Lancer Arduino IDE
 #. Menu : **Outils → Gérer les bibliothèques...**
@@ -341,19 +339,19 @@ Vérification
 
 ✅ **Configuration Arduino IDE terminée !** Passez maintenant aux étapes spécifiques à votre version (mono ou tri-phase).
 
----
+
 
 
 .. _install-etape2-platformio:
 
-================================================
+
 Option B : Installation avec PlatformIO
-================================================
+---------------------------------------
 
 Pour les Utilisateurs Avancés
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**PlatformIO** est un environnement de développement plus complet que l'Arduino IDE.
+**PlatformIO** est un environnement de développement plus complet que l’Arduino IDE.
 
 Avantages
 ~~~~~~~~~
@@ -365,9 +363,9 @@ Avantages
 - Débogage avancé
 
 .. important::
-   Avec PlatformIO, **aucune configuration manuelle n'est nécessaire**.
+   Avec PlatformIO, **aucune configuration manuelle n’est nécessaire**.
 
-   Vous n'avez **PAS** besoin de :
+   Vous n’avez **PAS** besoin de :
    - Configurer C++17 manuellement (Étape 3A)
    - Installer les bibliothèques manuellement (Étape 4A)
 
@@ -376,9 +374,9 @@ Avantages
 .. _install-etape2b1-vscode:
 
 Étape 2B-1 : Installation Visual Studio Code
-=============================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Visual Studio Code est l'éditeur de code qui hébergera PlatformIO.
+Visual Studio Code est l’éditeur de code qui hébergera PlatformIO.
 
 Windows
 ~~~~~~~
@@ -391,10 +389,10 @@ Windows
 
    - Ajouter à PATH
    - Créer une icône sur le bureau
-   - Ajouter l'action « Ouvrir avec Code » au menu contextuel
+   - Ajouter l’action « Ouvrir avec Code » au menu contextuel
 
 #. Cliquer sur **« Installer »**
-#. Attendre la fin de l'installation
+#. Attendre la fin de l’installation
 #. Lancer VS Code
 
 macOS
@@ -407,10 +405,10 @@ macOS
 #. Lancer VS Code depuis le dossier Applications
 
 Linux (Ubuntu/Debian)
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Méthode 1 : Installation via le site officiel (recommandé)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ouvrir le navigateur web : https://code.visualstudio.com/
 #. Cliquer sur **« .deb »** (pour Ubuntu/Debian)
@@ -422,7 +420,7 @@ Méthode 1 : Installation via le site officiel (recommandé)
       sudo apt-get install -f
 
 Méthode 2 : Installation via le gestionnaire de paquets
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -432,33 +430,33 @@ Méthode 2 : Installation via le gestionnaire de paquets
 .. _install-etape2b2-platformio:
 
 Étape 2B-2 : Installation PlatformIO IDE
-=========================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-PlatformIO s'installe comme une extension dans Visual Studio Code.
+PlatformIO s’installe comme une extension dans Visual Studio Code.
 
-Installation de l'Extension
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installation de l’Extension
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Ouvrir **Visual Studio Code**
-#. Cliquer sur l'icône **Extensions** dans la barre latérale gauche (ou Ctrl+Shift+X / Cmd+Shift+X)
+#. Cliquer sur l’icône **Extensions** dans la barre latérale gauche (ou Ctrl+Shift+X / Cmd+Shift+X)
 #. Dans le champ de recherche, taper : `PlatformIO IDE`
-#. Trouver l'extension **« PlatformIO IDE »** par PlatformIO
+#. Trouver l’extension **« PlatformIO IDE »** par PlatformIO
 #. Cliquer sur **« Install »**
-#. Attendre la fin de l'installation (peut prendre 2-5 minutes)
+#. Attendre la fin de l’installation (peut prendre 2-5 minutes)
 #. Une fois terminé, cliquer sur **« Reload »** pour redémarrer VS Code
 
 .. note::
    Au premier lancement après installation, PlatformIO téléchargera des outils supplémentaires.
    Cela peut prendre quelques minutes. Soyez patient !
 
-Vérification de l'Installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Vérification de l’Installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Après le redémarrage de VS Code :
 
 #. Une icône PlatformIO (alien/extraterrestre) devrait apparaître dans la barre latérale gauche
 #. Cliquer sur cette icône ouvre le **PIO Home**
-#. Si vous voyez le **PIO Home**, l'installation est réussie !
+#. Si vous voyez le **PIO Home**, l’installation est réussie !
 
 Ouverture du Projet
 ~~~~~~~~~~~~~~~~~~~
@@ -470,10 +468,10 @@ Ouverture du Projet
    - Tri : `PVRouter-3-phase-main/Mk2_3phase_RFdatalog_temp/`
 
 #. PlatformIO détecte automatiquement le fichier `platformio.ini`
-#. Le projet s'ouvre avec tous les fichiers visibles dans l'explorateur
+#. Le projet s’ouvre avec tous les fichiers visibles dans l’explorateur
 
 Configuration du Projet
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 PlatformIO télécharge **automatiquement** :
 
@@ -488,13 +486,13 @@ PlatformIO télécharge **automatiquement** :
 Compilation et Téléversement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Connecter le routeur via l'adaptateur FTDI (voir étapes communes dans la version-specific include)
-#. Dans la barre inférieure de VS Code, cliquer sur l'icône **« Upload »** (→)
+#. Connecter le routeur via l’adaptateur FTDI (voir étapes communes dans la version-specific include)
+#. Dans la barre inférieure de VS Code, cliquer sur l’icône **« Upload »** (→)
 #. PlatformIO compile automatiquement et téléverse le firmware
 #. Surveiller le terminal pour les messages de progression
 
 Sélection de la Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le firmware contient plusieurs environnements préconfigurés :
 
@@ -502,9 +500,9 @@ Le firmware contient plusieurs environnements préconfigurés :
 - `env:temperature` : Version avec support sondes de température
 - `env:debug` : Version avec messages de débogage supplémentaires
 
-Pour changer d'environnement :
+Pour changer d’environnement :
 
-#. Cliquer sur le sélecteur d'environnement dans la barre inférieure
+#. Cliquer sur le sélecteur d’environnement dans la barre inférieure
 #. Choisir la configuration désirée
 #. Recompiler le projet
 
