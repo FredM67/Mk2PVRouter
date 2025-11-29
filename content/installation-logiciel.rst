@@ -343,19 +343,17 @@ Vérification
 
 ---
 
+
 .. _install-etape2-platformio:
 
 ================================================
 Option B : Installation avec PlatformIO
 ================================================
 
-Étape 2B : Installation PlatformIO (Tout-en-Un)
-================================================
-
 Pour les Utilisateurs Avancés
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**PlatformIO** est un environnement de développement plus complet que l’Arduino IDE.
+**PlatformIO** est un environnement de développement plus complet que l'Arduino IDE.
 
 Avantages
 ~~~~~~~~~
@@ -367,37 +365,133 @@ Avantages
 - Débogage avancé
 
 .. important::
-   Avec PlatformIO, **aucune étape supplémentaire n’est nécessaire**.
+   Avec PlatformIO, **aucune configuration manuelle n'est nécessaire**.
 
-   Vous n’avez **PAS** besoin de :
+   Vous n'avez **PAS** besoin de :
    - Configurer C++17 manuellement (Étape 3A)
    - Installer les bibliothèques manuellement (Étape 4A)
 
    Tout est géré automatiquement par PlatformIO !
 
-Installation
-~~~~~~~~~~~~
+.. _install-etape2b1-vscode:
 
-#. Installer **Visual Studio Code** : https://code.visualstudio.com/
-#. Ouvrir VS Code
-#. Aller dans l’onglet **Extensions** (Ctrl+Shift+X)
-#. Rechercher **« PlatformIO IDE »**
+Étape 2B-1 : Installation Visual Studio Code
+=============================================
+
+Visual Studio Code est l'éditeur de code qui hébergera PlatformIO.
+
+Windows
+~~~~~~~
+
+#. Ouvrir le navigateur web : https://code.visualstudio.com/
+#. Cliquer sur **« Download for Windows »**
+#. Double-cliquer sur le fichier téléchargé (`VSCodeSetup-xxx.exe`)
+#. Accepter la licence
+#. **Recommandé** : Cocher toutes les options additionnelles :
+
+   - Ajouter à PATH
+   - Créer une icône sur le bureau
+   - Ajouter l'action « Ouvrir avec Code » au menu contextuel
+
 #. Cliquer sur **« Installer »**
-#. Redémarrer VS Code
+#. Attendre la fin de l'installation
+#. Lancer VS Code
+
+macOS
+~~~~~
+
+#. Ouvrir le navigateur web : https://code.visualstudio.com/
+#. Cliquer sur **« Download for Mac »**
+#. Ouvrir le fichier `.zip` téléchargé
+#. Glisser **Visual Studio Code.app** dans le dossier **Applications**
+#. Lancer VS Code depuis le dossier Applications
+
+Linux (Ubuntu/Debian)
+~~~~~~~~~~~~~~~~~~~~~~
+
+Méthode 1 : Installation via le site officiel (recommandé)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Ouvrir le navigateur web : https://code.visualstudio.com/
+#. Cliquer sur **« .deb »** (pour Ubuntu/Debian)
+#. Installer le paquet téléchargé :
+
+   .. code-block:: bash
+
+      sudo dpkg -i code_*.deb
+      sudo apt-get install -f
+
+Méthode 2 : Installation via le gestionnaire de paquets
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+   sudo apt update
+   sudo apt install code
+
+.. _install-etape2b2-platformio:
+
+Étape 2B-2 : Installation PlatformIO IDE
+=========================================
+
+PlatformIO s'installe comme une extension dans Visual Studio Code.
+
+Installation de l'Extension
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Ouvrir **Visual Studio Code**
+#. Cliquer sur l'icône **Extensions** dans la barre latérale gauche (ou Ctrl+Shift+X / Cmd+Shift+X)
+#. Dans le champ de recherche, taper : `PlatformIO IDE`
+#. Trouver l'extension **« PlatformIO IDE »** par PlatformIO
+#. Cliquer sur **« Install »**
+#. Attendre la fin de l'installation (peut prendre 2-5 minutes)
+#. Une fois terminé, cliquer sur **« Reload »** pour redémarrer VS Code
+
+.. note::
+   Au premier lancement après installation, PlatformIO téléchargera des outils supplémentaires.
+   Cela peut prendre quelques minutes. Soyez patient !
+
+Vérification de l'Installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Après le redémarrage de VS Code :
+
+#. Une icône PlatformIO (alien/extraterrestre) devrait apparaître dans la barre latérale gauche
+#. Cliquer sur cette icône ouvre le **PIO Home**
+#. Si vous voyez le **PIO Home**, l'installation est réussie !
 
 Ouverture du Projet
 ~~~~~~~~~~~~~~~~~~~
 
-#. Menu PlatformIO : **PIO Home → Open Project**
-#. Sélectionner le dossier du firmware
+#. Dans **PIO Home**, cliquer sur **« Open Project »**
+#. Naviguer vers le dossier du firmware :
+
+   - Mono : `PVRouter-1-phase-main/Mk2_fasterControl_Full/`
+   - Tri : `PVRouter-3-phase-main/Mk2_3phase_RFdatalog_temp/`
+
 #. PlatformIO détecte automatiquement le fichier `platformio.ini`
+#. Le projet s'ouvre avec tous les fichiers visibles dans l'explorateur
+
+Configuration du Projet
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+PlatformIO télécharge **automatiquement** :
+
+- Le compilateur AVR-GCC avec support C++17
+- Les bibliothèques nécessaires (ArduinoJson 6.x, OneWire, U8g2...)
+- Les outils de programmation
+
+.. note::
+   Le premier téléchargement des dépendances peut prendre 5-10 minutes selon votre connexion Internet.
+   PlatformIO affiche la progression dans le terminal intégré.
 
 Compilation et Téléversement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Cliquer sur l’icône **« Upload »** (→) dans la barre inférieure
-#. PlatformIO télécharge automatiquement les bibliothèques nécessaires
-#. La compilation et le téléversement se font automatiquement
+#. Connecter le routeur via l'adaptateur FTDI (voir étapes communes dans la version-specific include)
+#. Dans la barre inférieure de VS Code, cliquer sur l'icône **« Upload »** (→)
+#. PlatformIO compile automatiquement et téléverse le firmware
+#. Surveiller le terminal pour les messages de progression
 
 Sélection de la Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -408,10 +502,11 @@ Le firmware contient plusieurs environnements préconfigurés :
 - `env:temperature` : Version avec support sondes de température
 - `env:debug` : Version avec messages de débogage supplémentaires
 
-Pour changer d’environnement :
+Pour changer d'environnement :
 
-#. Cliquer sur le sélecteur d’environnement (barre inférieure)
+#. Cliquer sur le sélecteur d'environnement dans la barre inférieure
 #. Choisir la configuration désirée
+#. Recompiler le projet
 
 .. tip::
    PlatformIO est recommandé pour les utilisateurs avancés qui développent ou modifient le firmware.
