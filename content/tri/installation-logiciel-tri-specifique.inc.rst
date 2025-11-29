@@ -1,4 +1,4 @@
-Étape 5 : Téléchargement du Firmware
+Étape 1 : Téléchargement du Firmware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Ouvrir le navigateur : https://github.com/FredM67/PVRouter-3-phase
@@ -31,7 +31,7 @@ Après extraction, vous devriez avoir :
    - **calibration.h** — Paramètres d’étalonnage (à remplir après l’étalonnage)
 
 
-Étape 6 : Configuration du Firmware
+Étape 2 : Configuration du Firmware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ouverture du Projet
@@ -40,11 +40,7 @@ Ouverture du Projet
 #. Lancer Arduino IDE
 #. Menu : **Fichier → Ouvrir**
 #. Naviguer vers le dossier du firmware
-#. Ouvrir le fichier `.ino` :
-
-   - Mono : `Mk2_3phase_RFdatalog_temp.ino`
-   - Tri : `Mk2_3phase_RFdatalog_temp.ino`
-
+#. Ouvrir le fichier `Mk2_3phase_RFdatalog_temp.ino`
 #. Arduino IDE ouvre plusieurs onglets (c’est normal)
 
 .. note::
@@ -162,7 +158,7 @@ Ce fichier contient les paramètres d’étalonnage.
 Les paramètres par défaut permettent de tester le routeur.
 
 
-Étape 7 : Connexion et Programmation
+Étape 3 : Connexion et Programmation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Préparation
@@ -244,7 +240,7 @@ Compilation et Téléversement
 
 .. tip::
    Si la compilation échoue avec des erreurs sur `std::array` ou `constexpr`,
-   c’est que le fichier `platform.txt` n’a pas été correctement modifié (voir Étape 3).
+   c’est que le fichier `platform.txt` n’a pas été correctement modifié (voir Étape 3 du chapitre :ref:`installation-logiciel`).
 
 Résolution des Problèmes
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -274,7 +270,7 @@ Port COM n’apparaît pas
 #. Redémarrer l’ordinateur
 
 
-Étape 8 : Vérification du Fonctionnement
+Étape 4 : Vérification du Fonctionnement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ouverture du Moniteur Série
@@ -326,7 +322,7 @@ Si vous avez activé `TEMP_ENABLED`, le moniteur série affichera les adresses d
 Copier ces adresses dans `config.h` (section sondes de température).
 
 
-Étape 9 : Prochaines Étapes
+Étape 1 : Prochaines Étapes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ✅ Le firmware est maintenant installé et fonctionnel !
