@@ -69,13 +69,15 @@ Bienvenue dans la documentation du Mk2PVRouter !
    safety-overview
 
 .. toctree::
+   :maxdepth: 2
+   :caption: 📖 Introduction
    :hidden:
 
    introduction
 
 .. toctree::
    :maxdepth: 2
-   :caption: Principe de fonctionnement
+   :caption: ⚙️ Principe de fonctionnement
    :hidden:
 
    principe-fonctionnement
@@ -83,7 +85,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 3
-   :caption: Kit monophasé
+   :caption: 1~ Kit monophasé
    :hidden:
 
    mono/soudures-mono
@@ -93,10 +95,10 @@ Bienvenue dans la documentation du Mk2PVRouter !
    mono/assemblage-mono
    mono/test-logiciel-mono
    mono/etalonnage-mono
-   
+
 .. toctree::
    :maxdepth: 3
-   :caption: Kit triphasé
+   :caption: 3~ Kit triphasé
    :hidden:
 
    tri/soudures-tri
@@ -114,6 +116,6 @@ Bienvenue dans la documentation du Mk2PVRouter !
    troubleshooting
 
 .. toctree::
-   :caption: Glossaire
+   :caption: 📚 Glossaire
 
    glossary.rst
