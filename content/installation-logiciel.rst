@@ -194,7 +194,7 @@ Alternative : Installation via le gestionnaire de paquets
 .. _install-etape2-platformio:
 
 ====================================
-Étape 2b : Alternative PlatformIO
+Étape 2b : Alternative PlatformIO
 ====================================
 
 Pour les Utilisateurs Avancés
@@ -224,7 +224,7 @@ Installation
 Ouverture du Projet
 ~~~~~~~~~~~~~~~~~~~
 
-#. Menu PlatformIO : **PIO Home → Open Project**
+#. Menu PlatformIO : **PIO Home → Open Project**
 #. Sélectionner le dossier du firmware
 #. PlatformIO détecte automatiquement le fichier `platformio.ini`
 
@@ -238,13 +238,13 @@ Compilation et Téléversement
 Sélection de la Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le firmware contient plusieurs environnements préconfigurés :
+Le firmware contient plusieurs environnements préconfigurés :
 
 - `env:release` : Version normale
 - `env:temperature` : Version avec support sondes de température
 - `env:debug` : Version avec messages de débogage supplémentaires
 
-Pour changer d'environnement :
+Pour changer d'environnement :
 
 #. Cliquer sur le sélecteur d'environnement (barre inférieure)
 #. Choisir la configuration désirée
@@ -254,7 +254,7 @@ Pour changer d'environnement :
    Pour un usage standard, Arduino IDE suffit amplement.
 
 
-.. _install-etape3-cpp17:.. _install-etape3-cpp17:
+.. _install-etape3-cpp17:
 
 ================================================
 Étape 3 : Configuration Arduino IDE pour C++17
@@ -263,8 +263,7 @@ Pour changer d'environnement :
 .. note::
    **Cette étape est uniquement nécessaire si vous utilisez Arduino IDE (Étape 2a).**
    
-   Si vous avez choisi PlatformIO (Étape 2b), vous pouvez sauter cette étape car PlatformIO
-   gère automatiquement le support C++17.
+   Si vous avez choisi PlatformIO (Étape 2b), vous pouvez sauter cette étape car PlatformIO gère automatiquement le support C++17.
 
 .. danger::
    **ÉTAPE CRITIQUE** — Le firmware nécessite le support C++17.
