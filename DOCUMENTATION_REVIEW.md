@@ -377,20 +377,21 @@ Elles ne remplacent PAS une formation professionnelle en électricité.
 
 ---
 
-### 6. ✅ TOOL USAGE & SAFETY GUIDE - COMPLETE
-**File:** `content/introduction.rst`
-**Status:** ✅ DONE
-**Completed:** 2025-11-29
+### 6. ⬜ TOOL USAGE & SAFETY GUIDE - TODO
+**File:** `content/introduction.rst` (or create separate `content/tool-usage.rst`)
+**Status:** ⬜ TODO
+**Priority:** 🟡 HIGH
+**Effort:** 4-5 hours
 
-**What was added:**
-- ✅ "Sécurité et Utilisation des Outils" comprehensive section
-- ✅ Soldering iron safety (temperature settings, burns, ventilation, fire prevention)
-- ✅ Drill safety (securing workpiece, eye protection, proper technique)
-- ✅ Wire cutters safety (eye protection, projectile prevention)
-- ✅ Multimeter safety basics (voltage ranges, proper usage)
-- ✅ General workshop safety practices
+**What needs to be added:**
+- [ ] Comprehensive tool safety section
+- [ ] Soldering iron safety (temperature settings, burns, ventilation, fire prevention)
+- [ ] Drill safety (securing workpiece, eye protection, proper technique)
+- [ ] Wire cutters safety (eye protection, projectile prevention)
+- [ ] Multimeter safety basics (voltage ranges, proper usage)
+- [ ] General workshop safety practices
 
-**Impact:** Score improvement 5/10 → 8.5/10
+**Current state:** Introduction has basic tool list but no detailed safety instructions
 
 ---
 
@@ -588,14 +589,14 @@ Start each chapter with:
 | 7 | Create prerequisite assessment | `NEW: prerequisite-quiz.rst` | 3-4 | ⬜ TODO |
 | 8 | Add component identification guide | `NEW: component-id.rst` | 6-8 | ⬜ TODO |
 | 9 | Add soldering tutorial | `NEW: soldering-tutorial.rst` | 8-12 | ⬜ TODO |
-| 10 | Add tool usage & safety guides | `introduction.rst` | 4-5 | ✅ DONE |
+| 10 | Add tool usage & safety guides | `introduction.rst` or `tool-usage.rst` | 4-5 | ⬜ TODO |
 | 11 | Expand glossary with basic terms | `glossary.rst` | 6-8 | ✅ DONE |
-| 12 | Improve introduction chapter | `introduction.rst` | 4-5 | ✅ DONE |
+| 12 | Improve introduction chapter | `introduction.rst` | 4-5 | 🔄 PARTIAL |
 | 13 | Add "common mistakes" callouts | All assembly files | 6-8 | ⬜ TODO |
 
 **Total Phase 2:** 39-53 hours
-**Completed:** 14-18 hours (Tasks #10, #11, #12)
-**Remaining:** 25-35 hours (Tasks #7, #8, #9, #13)
+**Completed:** 10-13 hours (Tasks #11 fully, #12 partially)
+**Remaining:** 29-40 hours (Tasks #7, #8, #9, #10 fully, #12 completion, #13)
 
 **Deliverable:** Documentation accessible to true beginners
 
@@ -627,13 +628,13 @@ Start each chapter with:
 | Phase | Description | Original Hours | Completed | Remaining | Priority |
 |-------|------------|----------------|-----------|-----------|----------|
 | **Phase 1** | Critical gaps (safety, completeness) | 36-49 | 20-26 | 16-23 | 🔴 MUST DO |
-| **Phase 2** | Beginner accessibility | 39-53 | 14-18 | 25-35 | 🟡 SHOULD DO |
+| **Phase 2** | Beginner accessibility | 39-53 | 10-13 | 29-40 | 🟡 SHOULD DO |
 | **Phase 3** | Polish & enhancement | 51-74 | 1-2 | 50-72 | 🟢 NICE TO HAVE |
-| **TOTAL** | All improvements | **126-176** | **35-46** | **91-130** | - |
+| **TOTAL** | All improvements | **126-176** | **31-41** | **95-135** | - |
 
 **Progress Summary:**
-- ✅ **35-46 hours completed** (28-37% of total work)
-- 📋 **91-130 hours remaining** (63-72% of total work)
+- ✅ **31-41 hours completed** (25-33% of total work)
+- 📋 **95-135 hours remaining** (67-75% of total work)
 
 **Remaining Milestones:**
 - **Minimum viable:** Complete Phase 1 remaining tasks (16-23 hours)
