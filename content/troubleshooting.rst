@@ -51,10 +51,10 @@ Ce guide couvre les versions **monophasée** et **triphasée** du Mk2PVRouter.
    - 3 ou plus (selon modèle)
 
 .. note::
- Dans ce guide, les instructions utilisent la notation :
+ Dans ce guide, les instructions utilisent la notation :
 
- - **Mono :** composants pour version monophasée
- - **Tri :** composants pour version triphasée
+ - **Mono :** composants pour version monophasée
+ - **Tri :** composants pour version triphasée
 
 ======================================
 🔌 Problèmes Après Soudure de la Carte
@@ -74,10 +74,10 @@ Effectuez ces vérifications dans l’ordre :
 
  #. ☐ L’alimentation secteur est-elle branchée ?
  #. ☐ Le disjoncteur est-il enclenché ?
- #. ☐ **Fusibles intacts ?**
+ #. ☐ **Fusibles intacts ?**
 
-    - Mono : FS1
-    - Tri : FS1, FS2, FS3
+    - Mono : FS1
+    - Tri : FS1, FS2, FS3
     - Vérifier avec multimètre en mode continuité
     - Un fusible grillé indique un court-circuit
 
@@ -97,10 +97,10 @@ Vérifier les composants d’alimentation :
 
 .. admonition:: Composants à vérifier
 
- #. ☐ **Pont(s) redresseur(s) dans le bon sens ?**
+ #. ☐ **Pont(s) redresseur(s) dans le bon sens ?**
 
-    - Mono : BR1
-    - Tri : BR1, BR2, BR3
+    - Mono : BR1
+    - Tri : BR1, BR2, BR3
     - Repérer la bande ou marquage sur la diode
 
  #. ☐ **Régulateur VR1** dans le bon sens ?
@@ -114,11 +114,11 @@ Vérifier les composants d’alimentation :
     - Vérifier marquage sur PCB
     - ⚠️ Si inversés : risque d’explosion à la mise sous tension !
 
- #. ☐ **Transformateur(s) bien soudé(s) ?**
+ #. ☐ **Transformateur(s) bien soudé(s) ?**
 
-    - Mono : TXFR1
-    - Tri : TXFR1, TXFR2, TXFR3
-    - Soudures brillantes et lisses (pas ternes) ?
+    - Mono : TXFR1
+    - Tri : TXFR1, TXFR2, TXFR3
+    - Soudures brillantes et lisses (pas ternes) ?
 
 Qualité des Soudures
 --------------------
@@ -422,8 +422,8 @@ Causes Possibles
 
  #. ☐ **Court-circuit dans transformateur(s)**
 
-    - Mono : TXFR1
-    - Tri : TXFR1, TXFR2, TXFR3
+    - Mono : TXFR1
+    - Tri : TXFR1, TXFR2, TXFR3
 
  - Mesurer la résistance des enroulements (doit être ~1-10 kΩ)
  - Si <10 Ω → Transformateur défectueux
@@ -877,33 +877,40 @@ Triac Surchauffe
 
 **Causes possibles :**
 
-#. **Dissipateur sous-dimensionné**
+#. **Puissance de la charge trop élevée**
 
-   - Surface minimum requise selon puissance :
+   - Les dissipateurs fournis sont dimensionnés pour un **maximum de 3 kW**
+   - Vérifier que la charge connectée ne dépasse pas cette limite
+   - Exemples :
 
-     - 500 W : 50 cm²
-     - 1000 W : 100 cm²
-     - 2000 W : 200 cm²
-     - 3000 W : 300 cm²
+     - ✅ Chauffe-eau 2000-3000 W : OK
+     - ✅ Radiateur électrique 2000 W : OK
+     - ❌ Charge >3 kW : Dépasse les spécifications !
+
+#. **Dissipateur mal orienté**
+
+   - ⚠️ **IMPORTANT** : Le dissipateur **DOIT être en position verticale**
+   - Permet la convection naturelle de l’air
+   - Si horizontal : refroidissement insuffisant → surchauffe
+
+   .. note::
+      Les dissipateurs sont vissés sur l’**extérieur** du boîtier.
+      Aucun trou de ventilation n’est nécessaire dans le boîtier.
 
 #. **Contact thermique insuffisant**
 
    - Pâte thermique absente/mal appliquée
    - Vissage insuffisant
-   - Surface dissipateur pas plane
-
-#. **Ventilation insuffisante**
-
-   - Boîtier trop confiné
-   - Ajouter trous ventilation
-   - Dissipateur orienté pour convection naturelle
+   - Surface du dissipateur pas plane
+   - Isolant électrique (mica/silicone) mal positionné
 
 **Solutions :**
 
-- Ajouter dissipateur plus grand
-- Améliorer contact thermique (pâte, serrage)
-- Ajouter ventilation forcée (ventilateur 12 V)
-- Réduire puissance charge si possible
+- Vérifier que la charge ≤ 3 kW (mesurer avec pince ampèremétrique)
+- **S'assurer que le dissipateur est vertical**
+- Améliorer le contact thermique (pâte, serrage correct)
+- Si charge >3 kW : utiliser plusieurs sorties en parallèle ou réduire la puissance
+
 
 ================================
 💻 Problèmes de Communication RF
