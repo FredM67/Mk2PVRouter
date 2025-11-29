@@ -81,7 +81,7 @@ Plusieurs sources de risque d’incendie :
 ====================================
 
 Équipement de Base (Toutes Étapes)
-----------------------------------
+==================================
 
 .. admonition:: Équipement Minimum Requis
 
@@ -91,7 +91,7 @@ Plusieurs sources de risque d’incendie :
    - **Cheveux attachés** : Si cheveux longs (risque entraînement outils rotatifs)
 
 Équipement pour Soudure
------------------------
+=======================
 
 - **Lunettes de protection** (obligatoire)
 - **Support fer à souder** incombustible
@@ -100,7 +100,7 @@ Plusieurs sources de risque d’incendie :
 - **Éponge ou laine de laiton** pour nettoyer panne
 
 Équipement pour Manipulation 230 V
-----------------------------------
+==================================
 
 .. danger::
    **Équipement OBLIGATOIRE pour toute manipulation haute tension**
@@ -112,7 +112,7 @@ Plusieurs sources de risque d’incendie :
 - **Outils isolés** (tournevis, pinces avec poignées isolées)
 
 Équipement de Sécurité Général
-------------------------------
+==============================
 
 - **Extincteur** : Type ABC, 2 kg minimum, vérifié annuellement
 - **Détecteur de fumée** : Fonctionnel et testé
@@ -144,19 +144,19 @@ Pendant la Soudure
 
 **À FAIRE:**
 
-- ✓ Toujours reposer le fer sur son support
-- ✓ Souder dans un endroit bien ventilé
-- ✓ Prendre des pauses toutes les 30-45 minutes
-- ✓ Garder une éponge humide pour nettoyer la panne
-- ✓ Tenir le fer par la poignée isolée uniquement
+- ✅ Toujours reposer le fer sur son support
+- ✅ Souder dans un endroit bien ventilé
+- ✅ Prendre des pauses toutes les 30-45 minutes
+- ✅ Garder une éponge humide pour nettoyer la panne
+- ✅ Tenir le fer par la poignée isolée uniquement
 
 **À NE JAMAIS FAIRE:**
 
-- ✗ Toucher la panne ou le fil chauffant (200-450°C !)
-- ✗ Laisser le fer allumé sans surveillance
-- ✗ Souder près de matériaux inflammables
-- ✗ Respirer directement les fumées de soudure
-- ✗ Poser le fer sur des surfaces combustibles
+- ❌ Toucher la panne ou le fil chauffant (200-450°C !)
+- ❌ Laisser le fer allumé sans surveillance
+- ❌ Souder près de matériaux inflammables
+- ❌ Respirer directement les fumées de soudure
+- ❌ Poser le fer sur des surfaces combustibles
 
 En Cas de Brûlure au Fer à Souder
 ---------------------------------
@@ -428,7 +428,7 @@ Le tableau suivant indique le niveau de compétence requis et les risques associ
    **En France, l’installation finale DOIT être réalisée par un électricien certifié**
    pour la conformité NF C 15-100 et la couverture d’assurance.
 
-=====================
+====================
 Procédures d’Urgence
 ====================
 

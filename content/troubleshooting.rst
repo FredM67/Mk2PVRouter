@@ -38,14 +38,14 @@ Effectuez ces vérifications dans l’ordre :
  #. ☐ Le disjoncteur est-il enclenché ?
  #. ☐ Le·s fusible·s (FS1 pour mono, FS1/FS2/FS3 pour tri) sont-ils intacts ?
 
- - Vérifier avec multimètre en mode continuité
- - Un fusible grillé indique un court-circuit
+   - Vérifier avec multimètre en mode continuité
+   - Un fusible grillé indique un court-circuit
 
  #. ☐ Tension au point Test VCC = 3.3 V ou 5 V ?
 
- - Multimètre en mode tension continue (DC)
- - Mesurer entre VCC et GND
- - Si pas de tension → Problème alimentation
+   - Multimètre en mode tension continue (DC)
+   - Mesurer entre VCC et GND
+   - Si pas de tension → Problème alimentation
 
 Si Pas de Tension au Test VCC
 -----------------------------
@@ -59,26 +59,26 @@ Vérifier les composants d’alimentation :
 
  #. ☐ **Pont redresseur BR1** dans le bon sens ?
 
- - Repérer la bande ou marquage sur la diode
- - Doit correspondre au symbole sur le PCB
- - ⚠️ Si inversé : peut être détruit
+   - Repérer la bande ou marquage sur la diode
+   - Doit correspondre au symbole sur le PCB
+   - ⚠️ Si inversé : peut être détruit
 
  #. ☐ **Régulateur VR1** dans le bon sens ?
 
- - Vérifier orientation selon schéma
- - Les 3 pattes doivent correspondre (E-C-B ou G-S-D)
+   - Vérifier orientation selon schéma
+   - Les 3 pattes doivent correspondre (E-C-B ou G-S-D)
 
  #. ☐ **Condensateurs C1/C2** polarité correcte ?
 
- - Bande blanche = côté négatif (-)
- - Vérifier marquage sur PCB
- - ⚠️ Si inversés : risque d’explosion à la mise sous tension !
+   - Bande blanche = côté négatif (-)
+   - Vérifier marquage sur PCB
+   - ⚠️ Si inversés : risque d’explosion à la mise sous tension !
 
  #. ☐ **Transformateur TXFR1** bien soudé ?
 
- - Soudures brillantes et lisses (pas ternes) ?
- - Contact complet avec le cuivre du PCB ?
- - Pas de soudure froide ?
+   - Soudures brillantes et lisses (pas ternes) ?
+   - Contact complet avec le cuivre du PCB ?
+   - Pas de soudure froide ?
 
 Qualité des Soudures
 --------------------
@@ -358,7 +358,7 @@ Erreur « Out of Memory » lors de la Compilation
 
 #. Recompiler et téléverser
 
-=======================================
+======================================
 Problèmes Électriques — Tests et Usage
 ======================================
 
