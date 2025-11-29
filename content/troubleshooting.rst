@@ -954,7 +954,7 @@ Dépannage Communication
 
 **Test émetteur :**
 
-#. Ouvrir Moniteur Série (115200 bauds)
+#. Ouvrir Moniteur Série (9600 bauds)
 #. Forcer émission commande test
 #. Observer messages debug
 

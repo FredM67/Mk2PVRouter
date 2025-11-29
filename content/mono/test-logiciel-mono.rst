@@ -20,6 +20,8 @@ Tests logiciels
 Installation du Logiciel et Firmware
 ------------------------------------
 
-Suivez le guide complet d'installation : :ref:`installation-logiciel`
+**Étapes communes à toutes les versions** : :ref:`installation-logiciel`
+
+.. include:: installation-logiciel-mono-specifique.inc.rst
 
 .. include:: test-mono-mesures.inc.rst
