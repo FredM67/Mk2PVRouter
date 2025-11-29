@@ -101,10 +101,10 @@ Alternative : Installation via le gestionnaire de paquets
 Configuration Arduino IDE pour C++17
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. danger::
-   **ÉTAPE CRITIQUE** — Le firmware nécessite le support C++17.
+.. warning::
+   **ÉTAPE OBLIGATOIRE** — Le firmware nécessite le support C++17.
 
-   Sans cette modification, la compilation échouera avec des erreurs incompréhensibles !
+   Sans cette modification, la compilation échouera avec des erreurs incompréhensibles !
 
 Le firmware du Mk2PVRouter utilise des fonctionnalités modernes du C++ (C++17) qui ne sont pas activées par défaut dans Arduino IDE.
 
@@ -203,7 +203,7 @@ Installation de ArduinoJson
 
 #. Cliquer sur **« Installer »**
 
-.. danger::
+.. warning::
    Ne pas installer ArduinoJson version 7.x — elle ne fonctionnera pas sur l’ATmega328P !
 
 Installation de OneWire

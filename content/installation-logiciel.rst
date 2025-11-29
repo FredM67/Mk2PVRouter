@@ -22,8 +22,8 @@ Ce chapitre détaille l’installation complète de l’environnement de dévelo
 
 Les pilotes FTDI sont **OBLIGATOIRES** pour communiquer avec le routeur via le programmateur USB.
 
-.. danger::
-   Sans ces pilotes, l'ordinateur ne détectera pas le routeur !
+.. important::
+   Sans ces pilotes, l'ordinateur ne détectera pas le routeur !
 
 .. _ftdi-windows:
 
