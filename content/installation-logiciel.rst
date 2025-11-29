@@ -85,14 +85,14 @@ Vérification
 Rechercher une ligne contenant « FTDI » ou « Future Technology Devices ».
 
 Si le pilote n’est pas chargé
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
    sudo modprobe ftdi_sio
 
 Ajouter l’utilisateur au groupe dialout
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -104,7 +104,7 @@ Ajouter l’utilisateur au groupe dialout
 
 .. _install-etape2-arduino:
 
-====================================
+===================================
 Étape 2a : Installation Arduino IDE
 ===================================
 
@@ -162,7 +162,7 @@ Linux (Ubuntu/Debian)
 ~~~~~~~~~~~~~~~~~~~~~
 
 Méthode recommandée : AppImage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ouvrir le navigateur web : https://www.arduino.cc/en/software
 #. Télécharger la version **« Linux AppImage »**
@@ -176,7 +176,7 @@ Méthode recommandée : AppImage
       ./arduino-ide-*-linux-x64.AppImage
 
 Alternative : Installation via le gestionnaire de paquets
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -193,9 +193,9 @@ Alternative : Installation via le gestionnaire de paquets
 
 .. _install-etape2-platformio:
 
-====================================
+=================================
 Étape 2b : Alternative PlatformIO
-====================================
+=================================
 
 Pour les Utilisateurs Avancés
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
