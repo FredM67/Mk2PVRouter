@@ -1,8 +1,8 @@
 .. _installation-logiciel:
 
-==========================================
-Installation du Logiciel et du Firmware
-==========================================
+========================
+Installation du Logiciel
+========================
 
 Ce chapitre détaille l’installation complète de l’environnement de développement Arduino et la programmation du firmware du Mk2PVRouter.
 
@@ -261,9 +261,9 @@ Pour changer d’environnement :
 ================================================
 
 .. note::
-   **Cette étape est uniquement nécessaire si vous utilisez Arduino IDE (Étape 2a).**
-   
-   Si vous avez choisi PlatformIO (Étape 2b), vous pouvez sauter cette étape car PlatformIO gère automatiquement le support C++17.
+   Cette étape est uniquement nécessaire si vous utilisez Arduino IDE (:ref:`Étape 2a <install-etape2-arduino>`).
+
+   Si vous avez choisi PlatformIO (:ref:`Étape 2b <install-etape2-platformio>`), vous pouvez sauter cette étape car PlatformIO gère automatiquement le support C++17.
 
 .. danger::
    **ÉTAPE CRITIQUE** — Le firmware nécessite le support C++17.
