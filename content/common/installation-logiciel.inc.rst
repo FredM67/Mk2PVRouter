@@ -678,10 +678,12 @@ Copier ces adresses dans `config.h` (section sondes de température).
 .. danger::
    Ne pas connecter le routeur au réseau électrique domestique avant d’avoir :
 
-   - [ ] Effectué l’étalonnage complet
-   - [ ] Vérifié toutes les soudures
+   - [ ] Vérifié toutes les soudures (pas de pont, pas de soudure froide)
    - [ ] Lu le chapitre de sécurité
-   - [ ] Fait appel à un électricien qualifié (recommandé)
+   - [ ] Fait appel à un électricien qualifié (fortement recommandé)
+
+.. important::
+   **FONCTIONNALITÉ** : L'étalonnage doit être effectué après l'installation électrique pour que le routeur mesure correctement et fonctionne de manière optimale. Le routeur peut être connecté sans étalonnage (pas de danger), mais ne fonctionnera pas correctement.
 
 ===================================
 Annexe : Alternative PlatformIO
