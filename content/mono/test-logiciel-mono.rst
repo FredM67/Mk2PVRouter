@@ -17,4 +17,6 @@ Tests logiciels
 
 .. include:: test-logiciel-mono-requirements.inc.rst
 
+.. include:: ../common/installation-logiciel.inc.rst
+
 .. include:: test-mono-mesures.inc.rst

@@ -3,6 +3,8 @@
 Test logiciel
 -------------
 
+.. include:: ../common/installation-logiciel.inc.rst
+
 Test de la partie *mesures*
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
