@@ -26,7 +26,7 @@ Ce chapitre couvre tous les aspects de sécurité liés à l’assemblage, aux t
 Dangers Principaux
 ==================
 
-1. **Électrocution (230 V AC)** — PEUT ÊTRE MORTEL
+1. **Électrocution (230 V AC)** - PEUT ÊTRE MORTEL
 --------------------------------------------------
 
 Le courant alternatif 230 V présent dans les installations domestiques peut provoquer :
@@ -85,10 +85,10 @@ Plusieurs sources de risque d’incendie :
 
 .. admonition:: Équipement Minimum Requis
 
-   — **Lunettes de protection** : Protection contre projections (soudure, perçage)
-   — **Vêtements adaptés** : Manches longues, pas de vêtements synthétiques (fondent facilement)
-   — **Chaussures fermées** : Protection contre chutes d’objets, outils électriques
-   — **Cheveux attachés** : Si cheveux longs (risque entraînement outils rotatifs)
+   - **Lunettes de protection** : Protection contre projections (soudure, perçage)
+   - **Vêtements adaptés** : Manches longues, pas de vêtements synthétiques (fondent facilement)
+   - **Chaussures fermées** : Protection contre chutes d’objets, outils électriques
+   - **Cheveux attachés** : Si cheveux longs (risque entraînement outils rotatifs)
 
 Équipement pour Soudure
 -----------------------
@@ -269,10 +269,10 @@ Perceuse à Colonne / Perceuse Manuelle
 .. danger::
    **RISQUES MAJEURS**
 
-   — **Entraînement** de la pièce (rotation violente si perceuse attrape)
-   — **Projection** de copeaux métalliques (risque yeux)
-   — **Entraînement** de cheveux, vêtements, gants
-   — **Électrocution** si câblage défectueux
+   - **Entraînement** de la pièce (rotation violente si perceuse attrape)
+   - **Projection** de copeaux métalliques (risque yeux)
+   - **Entraînement** de cheveux, vêtements, gants
+   - **Électrocution** si câblage défectueux
 
 Règles Obligatoires
 -------------------
@@ -357,10 +357,10 @@ Intervention Incendie
 .. danger::
    **Ne tentez d’éteindre un feu QUE si :**
 
-   — Il est de petite taille (< 1 m²)
-   — Vous avez un extincteur adapté
-   — Vous savez l’utiliser
-   — Une issue de secours est accessible
+   - Il est de petite taille (< 1 m²)
+   - Vous avez un extincteur adapté
+   - Vous savez l’utiliser
+   - Une issue de secours est accessible
 
    **Sinon : ÉVACUEZ et appelez les pompiers (18)**
 
@@ -388,45 +388,45 @@ Le tableau suivant indique le niveau de compétence requis et les risques associ
    :header-rows: 1
    :widths: 30 20 20 30
 
-   * — Chapitre
-     — Compétence Requise
-     — Risques
-     — Supervision Recommandée
-   * — Soudure carte-mère
-     — Débutant+ (avec pratique)
-     — Brûlures (moyen)
-     — Oui (1ʳᵉ fois)
-   * — Soudure carte-sortie
-     — Intermédiaire
-     — Brûlures, incendie (élevé)
-     — Oui
-   * — Perçage boîtier
-     — Débutant
-     — Projections (faible)
-     — Optionnel
-   * — Assemblage
-     — Débutant
-     — Minimal
-     — Non
-   * — **Tests électriques (230 V)**
-     — **Intermédiaire+**
-     — **MORTEL**
-     — **OUI — Électricien**
-   * — **Étalonnage**
-     — **Avancé**
-     — **MORTEL**
-     — **OUI — Électricien**
-   * — **Installation finale**
-     — **Expert**
-     — **MORTEL**
-     — **ÉLECTRICIEN CERTIFIÉ**
+   * - Chapitre
+     - Compétence Requise
+     - Risques
+     - Supervision Recommandée
+   * - Soudure carte-mère
+     - Débutant+ (avec pratique)
+     - Brûlures (moyen)
+     - Oui (1ʳᵉ fois)
+   * - Soudure carte-sortie
+     - Intermédiaire
+     - Brûlures, incendie (élevé)
+     - Oui
+   * - Perçage boîtier
+     - Débutant
+     - Projections (faible)
+     - Optionnel
+   * - Assemblage
+     - Débutant
+     - Minimal
+     - Non
+   * - **Tests électriques (230 V)**
+     - **Intermédiaire+**
+     - **MORTEL**
+     - **OUI — Électricien**
+   * - **Étalonnage**
+     - **Avancé**
+     - **MORTEL**
+     - **OUI — Électricien**
+   * - **Installation finale**
+     - **Expert**
+     - **MORTEL**
+     - **ÉLECTRICIEN CERTIFIÉ**
 
 .. danger::
    Les étapes marquées « MORTEL » nécessitent une **formation en électricité** ou
    la **supervision d’un électricien qualifié**.
 
    **En France, l’installation finale DOIT être réalisée par un électricien certifié**
-   pour la conformité NF C 15-100 et la couverture d’assurance.
+   pour la conformité NF C 15-100 et la couverture d’assurance.
 
 =====================
 Procédures d’Urgence
@@ -600,14 +600,14 @@ Reconnaissance de Risques
 
    **En poursuivant ce projet, je reconnais avoir compris que :**
 
-   — Ce projet implique des **tensions MORTELLES** (230 V AC)
-   — Des **brûlures graves** peuvent survenir (fer à souder, composants chauds)
-   — Un **risque d’incendie** existe à plusieurs étapes
-   — Des **blessures mécaniques** peuvent se produire (outils)
-   — Je dois **respecter scrupuleusement** toutes les consignes de sécurité
-   — En cas de doute, je dois **ARRÊTER** et demander conseil
-   — J’assume l’**entière responsabilité** de ma sécurité
-   — Je ne tiendrai pas les auteurs de la documentation responsables en cas d’accident
+   - Ce projet implique des **tensions MORTELLES** (230 V AC)
+   - Des **brûlures graves** peuvent survenir (fer à souder, composants chauds)
+   - Un **risque d’incendie** existe à plusieurs étapes
+   - Des **blessures mécaniques** peuvent se produire (outils)
+   - Je dois **respecter scrupuleusement** toutes les consignes de sécurité
+   - En cas de doute, je dois **ARRÊTER** et demander conseil
+   - J’assume l’**entière responsabilité** de ma sécurité
+   - Je ne tiendrai pas les auteurs de la documentation responsables en cas d’accident
 
    **Si vous n’êtes pas d’accord avec ces points, NE POURSUIVEZ PAS ce projet.**
 
@@ -650,9 +650,9 @@ Cependant, il comporte des **risques réels et sérieux** qui ne doivent pas êt
 
    **Si vous avez le moindre doute sur votre capacité à réaliser ce projet en sécurité :**
 
-   — Faites-vous aider par quelqu’un d’expérimenté
-   — Suivez des formations (Fab Labs, associations)
-   — Pour les parties 230 V : Faites appel à un électricien
+   - Faites-vous aider par quelqu’un d’expérimenté
+   - Suivez des formations (Fab Labs, associations)
+   - Pour les parties 230 V : Faites appel à un électricien
 
    **Votre vie et celle de votre famille valent infiniment plus que le coût d’un professionnel.**
 
