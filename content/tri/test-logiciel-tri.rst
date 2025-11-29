@@ -3,6 +3,8 @@
 Tests logiciels
 ===============
 
+.. include:: ../common/test-logiciel-requirements.inc.rst
+
 Installation du Logiciel et Firmware
 -------------------------------------
 

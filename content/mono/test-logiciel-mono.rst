@@ -15,7 +15,7 @@ Tests logiciels
     :local:
     :depth: 1
 
-.. include:: test-logiciel-mono-requirements.inc.rst
+.. include:: ../common/test-logiciel-requirements.inc.rst
 
 Installation du Logiciel et Firmware
 ------------------------------------

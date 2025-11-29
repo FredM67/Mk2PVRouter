@@ -1,4 +1,4 @@
-.. _test-logiciel-mono-requirements:
+.. _test-logiciel-requirements:
 
 Pré-requis
 ----------
