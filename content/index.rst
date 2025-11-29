@@ -108,6 +108,12 @@ Bienvenue dans la documentation du Mk2PVRouter !
    tri/etalonnage-tri
 
 .. toctree::
+   :caption: 🔧 Dépannage
+   :hidden:
+
+   troubleshooting
+
+.. toctree::
    :caption: Glossaire
 
    glossary.rst
