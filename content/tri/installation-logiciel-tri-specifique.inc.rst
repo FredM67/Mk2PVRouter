@@ -150,13 +150,11 @@ Les paramètres par défaut permettent de tester le routeur.
 Préparation
 """""""""""
 
-.. danger::
-   **ORDRE IMPORTANT** :
-
-   #. D’abord, alimenter le routeur avec sa propre alimentation 230 V
-   #. Ensuite, connecter l’adaptateur FTDI
+.. note::
 
    L’adaptateur FTDI ne peut **PAS** alimenter le routeur seul !
+   
+   Le routeur doit être alimenté par sa propre alimentation triphasée.
 
 Connexion du Routeur
 """"""""""""""""""""
