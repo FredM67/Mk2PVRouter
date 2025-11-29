@@ -122,7 +122,7 @@ Téléchargement
 #. Attendre la fin du téléchargement (~200 MB)
 
 Installation
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 #. Double-cliquer sur le fichier téléchargé (`arduino-ide-xxxx.exe`)
 #. Accepter la licence
@@ -147,7 +147,7 @@ Téléchargement
 #. Attendre la fin du téléchargement
 
 Installation
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 #. Ouvrir le fichier `.dmg` téléchargé
 #. Glisser l’icône Arduino dans le dossier **Applications**
@@ -193,17 +193,17 @@ Alternative : Installation via le gestionnaire de paquets
 
 .. _install-etape2-platformio:
 
-=================================
-Étape 2b : Alternative PlatformIO
-=================================
+====================================
+Étape 2b : Alternative PlatformIO
+====================================
 
 Pour les Utilisateurs Avancés
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **PlatformIO** est un environnement de développement plus complet que l'Arduino IDE.
 
 Avantages
-^^^^^^^^^
+~~~~~~~~~
 
 - Gestion automatique des bibliothèques
 - Support C++17 natif (pas besoin de modifier `platform.txt`)
@@ -212,7 +212,7 @@ Avantages
 - Débogage avancé
 
 Installation
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 #. Installer **Visual Studio Code** : https://code.visualstudio.com/
 #. Ouvrir VS Code
@@ -222,21 +222,21 @@ Installation
 #. Redémarrer VS Code
 
 Ouverture du Projet
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 
 #. Menu PlatformIO : **PIO Home → Open Project**
 #. Sélectionner le dossier du firmware
 #. PlatformIO détecte automatiquement le fichier `platformio.ini`
 
 Compilation et Téléversement
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Cliquer sur l'icône **« Upload »** (→) dans la barre inférieure
 #. PlatformIO télécharge automatiquement les bibliothèques nécessaires
 #. La compilation et le téléversement se font automatiquement
 
 Sélection de la Configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le firmware contient plusieurs environnements préconfigurés :
 
@@ -254,7 +254,7 @@ Pour changer d'environnement :
    Pour un usage standard, Arduino IDE suffit amplement.
 
 
-.. _install-etape3-cpp17:
+.. _install-etape3-cpp17:.. _install-etape3-cpp17:
 
 ================================================
 Étape 3 : Configuration Arduino IDE pour C++17
