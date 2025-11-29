@@ -61,7 +61,7 @@
 - ✅ 10 total warnings (was 29) - 66% reduction
 - ✅ Clean build succeeds
 
-**Git Commits (Session 2):**
+**Git Commits (Session 2 - Part 1: Morning):**
 ```
 86ae6b8 docs: improve French typography and simplify title
 63a072d docs: improve installation guide UX with OS emojis and clearer warnings
@@ -71,6 +71,50 @@ c0fc3a1 fix: eliminate all duplicate label warnings with autosectionlabel config
 5a71533 fix: correct title hierarchy in version-specific installation includes
 45ab909 docs: refactor installation guide - split into modular include files
 ```
+
+**Git Commits (Session 2 - Part 2: Afternoon Continuation):**
+```
+39f1e86 refactor: extract 4 common Arduino IDE sections to include files
+047fa44 refactor: extract common FTDI connection section to include file
+7f81229 fix: remove false "ORDRE IMPORTANT" danger about connection order
+e11af41 fix: replace inappropriate danger directives with correct levels
+6ffd4d6 docs: update documentation review with Session 2 improvements
+```
+
+**Additional Improvements (Afternoon Continuation):**
+
+- ✅ **Comprehensive Danger Directive Cleanup** - COMPLETE
+  - Fixed ALL inappropriate danger directives throughout documentation
+  - Software requirements: `danger` → `warning` (C++17, ArduinoJson version)
+  - Non-critical info: `danger` → `important` (FTDI drivers)
+  - False claims: `danger` → `note` (connection order doesn't matter)
+  - Only real electrical/hardware hazards remain as `danger` directives
+  - Prevents "warning fatigue" where users ignore too many danger alerts
+
+- ✅ **Major Code Deduplication - 365 Lines Eliminated** - COMPLETE
+  - Created 5 new common include files:
+    - `content/common/connexion-ftdi.inc.rst` (36 lines)
+    - `content/common/configuration-arduino-ide.inc.rst` (12 lines)
+    - `content/common/compilation-televerement.inc.rst` (26 lines)
+    - `content/common/resolution-problemes-upload.inc.rst` (31 lines)
+    - `content/common/moniteur-serie.inc.rst` (49 lines)
+  - Mono file: 364 → 223 lines (141 lines saved, 39% reduction)
+  - Tri file: 348 → 194 lines (154 lines saved, 44% reduction)
+  - Total duplicate content eliminated: 365 lines
+  - Single source of truth for all common procedures
+
+- ✅ **FTDI Connection Clarity** - COMPLETE
+  - Added 6-pin connector option (simplest method for users)
+  - Clarified VCC warning applies only to manual wiring
+  - Tri-phase power correctly described (triphasée, not 230V)
+  - Removed false "ORDRE IMPORTANT" claim (order doesn't matter)
+
+**Final File Statistics:**
+- Common include files: 8 total (572 lines reusable content)
+- Main installation file: 134 lines (was 505, 73% reduction)
+- Mono-specific: 223 lines (was 364, 39% reduction)
+- Tri-specific: 194 lines (was 348, 44% reduction)
+- Total documentation reduction while improving maintainability
 
 **Technical Challenges Solved:**
 - Non-breaking spaces in French text requiring Python scripts for replacement
