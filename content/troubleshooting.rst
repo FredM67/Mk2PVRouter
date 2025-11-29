@@ -97,7 +97,7 @@ Vérifier les composants d’alimentation :
 
 .. admonition:: Composants à vérifier
 
- #. ☐ **Pont(s) redresseur(s) dans le bon sens ?**
+ #. ☐ **Pont·s redresseur·s dans le bon sens ?**
 
     - Mono : BR1
     - Tri : BR1, BR2, BR3
@@ -114,7 +114,7 @@ Vérifier les composants d’alimentation :
     - Vérifier marquage sur PCB
     - ⚠️ Si inversés : risque d’explosion à la mise sous tension !
 
- #. ☐ **Transformateur(s) bien soudé(s) ?**
+ #. ☐ **Transformateur·s bien soudé·s ?**
 
     - Mono : TXFR1
     - Tri : TXFR1, TXFR2, TXFR3
@@ -420,7 +420,7 @@ Causes Possibles
 
 .. admonition:: Diagnostics court-circuit
 
- #. ☐ **Court-circuit dans transformateur(s)**
+ #. ☐ **Court-circuit dans transformateur·s**
 
     - Mono : TXFR1
     - Tri : TXFR1, TXFR2, TXFR3
@@ -587,7 +587,7 @@ Vérifications Électroniques
  #. ☐ **Condensateurs C11/C12/C13 bien soudés ?**
 
     - Forment filtre passe-bas anti-repliement
-    - Valeurs typiques : 10nF ou 100nF
+    - Valeurs typiques : 10 nF ou 100 nF
 
  #. ☐ **Pas de pont de soudure autour ADC ?**
 

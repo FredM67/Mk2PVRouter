@@ -1,5 +1,5 @@
-Installation de U8g2 (Monophasé uniquement)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Installation de U8g2
+^^^^^^^^^^^^^^^^^^^^
 
 .. note::
    Cette bibliothèque est **uniquement nécessaire pour les PCB monophasés** équipés d’un affichage.
