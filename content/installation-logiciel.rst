@@ -262,10 +262,6 @@ Modification du fichier
    et regardez l’emplacement du **« Dossier de Sketchbook »**. Le fichier `platform.txt` est
    généralement dans un sous-dossier relatif à cet emplacement.
 
-Vérification
-~~~~~~~~~~~~
-
-La modification sera validée lors de la compilation du firmware (étape 7).
 
 ========================================
 Étape 4 : Installation des Bibliothèques
