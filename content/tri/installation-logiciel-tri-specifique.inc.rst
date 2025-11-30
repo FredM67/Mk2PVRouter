@@ -65,7 +65,7 @@ Selon la version de votre PCB :
    inline constexpr bool OLD_PCB{ false };
 
 .. tip::
-   Si vous avez reçu votre kit après 2023, mettez `false`.
+   Si vous avez reçu votre kit après 2 023, mettez `false`.
 
 Format de Sortie Série
 ######################

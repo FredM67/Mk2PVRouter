@@ -25,14 +25,14 @@ Termes de Base pour Débutants
 
    Courant (A)
      | Le **courant électrique**, mesuré en **ampères (A)**, représente la quantité d’électrons qui circulent dans un conducteur.
-     | Un appareil de 2000 W sous 230 V consomme environ 8,7 A.
+     | Un appareil de 2 000 W sous 230 V consomme environ 8,7 A.
 
      💡 **Analogie** : Comme le débit d’eau dans un tuyau. Plus le débit est élevé, plus il y a d’eau qui passe.
 
    Puissance (W)
      | La **puissance électrique**, mesurée en **watts (W)**, représente l’énergie consommée ou produite par un appareil.
      | **Formule** : Puissance (W) = Tension (V) × Courant (A)
-     | Exemple : Un chauffe-eau de 2000 W sous 230 V consomme environ 8,7 A.
+     | Exemple : Un chauffe-eau de 2 000 W sous 230 V consomme environ 8,7 A.
 
    Résistance (Ω)
      | Une **résistance**, mesurée en **ohms (Ω)**, est un composant qui limite le passage du courant électrique.
@@ -243,8 +243,8 @@ Termes Techniques Avancés
 
    ADC
      | *Analog Digital Converter* ou convertisseur analogique/numérique.
-     | Il permet de convertir un signal analogique, par exemple une tension, en un signal numérique, par exemple une valeur entre 0 et 1023.
-     | Supposons que la plage de mesure aille de 0 à 5 V, alors, une tension d’entrée de 2,5 V correspondra à la valeur 511. Une tension de 5 V correspondra à une valeur de 1023.
+     | Il permet de convertir un signal analogique, par exemple une tension, en un signal numérique, par exemple une valeur entre 0 et 1 023.
+     | Supposons que la plage de mesure aille de 0 à 5 V, alors, une tension d’entrée de 2,5 V correspondra à la valeur 511. Une tension de 5 V correspondra à une valeur de 1 023.
 
    AC
      | *Alternating Current* ou courant alternatif.
@@ -332,4 +332,4 @@ Termes Techniques Avancés
 
    Baud rate
       | Vitesse de communication série, mesurée en bits par seconde.
-      | Le Mk2PVRouter utilise généralement 9600 ou 115200 bauds pour la communication avec l’ordinateur.
+      | Le Mk2PVRouter utilise généralement 9 600 ou 1 15200 bauds pour la communication avec l’ordinateur.

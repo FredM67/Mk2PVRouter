@@ -107,7 +107,7 @@ Plusieurs sources de risque d’incendie :
 
 - **Testeur de tension** sans contact (détecteur VAT)
 - **Multimètre** avec protection CAT II 300 V minimum
-- **Gants isolants** (classe 0 minimum, 1000 V)
+- **Gants isolants** (classe 0 minimum, 1 000 V)
 - **Tapis isolant** ou chaussures isolantes
 - **Outils isolés** (tournevis, pinces avec poignées isolées)
 
