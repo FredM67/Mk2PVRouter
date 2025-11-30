@@ -95,12 +95,12 @@ Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 * Un **triac**, adapté aux exigences spécifiques de l’application.
 * Un **connecteur de puissance** qui dispose habituellement de trois broches, la broche centrale étant inutilisée.
 * Un **morceau de cuivre massif** de 1.5 mm² de section.
-  
+
 .. figure:: ../img/Kit-sortie.jpg
    :alt: Contenu d’un kit de sortie
    :align: center
    :scale: 25%
-   
+
    Contenu d’un kit de sortie
 
 Assemblage d’une carte de sortie
@@ -151,7 +151,7 @@ Avant de commencer cette section :
 Pendant le Premier Test
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-- ⚠️ Rester à côté pendant les 5 premières minutes de fonctionnement
+- ⚠️ Rester à côté pendant les 5 premières minutes de fonctionnement
 - ⚠️ Surveiller odeurs inhabituelles (plastique brûlé)
 - ⚠️ Surveiller fumée
 - ⚠️ Écouter grésillements anormaux
@@ -163,7 +163,7 @@ En Cas de Fumée ou Odeur de Brûlé
 #. **NE PAS TOUCHER le routeur** (peut être très chaud)
 #. **Si flammes visibles** → Utiliser extincteur CO₂ ou poudre (PAS D’EAU !)
 #. **Si fumée importante** → Évacuer et appeler pompiers (18)
-#. **Laisser refroidir 30 minutes** minimum avant d’inspecter
+#. **Laisser refroidir 30 minutes** minimum avant d’inspecter
 
 Vérification de Qualité
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -182,7 +182,7 @@ Avant de mettre sous tension, vérifiez (loupe recommandée) :
 
 ⚠️ **Si UN SEUL point n’est pas parfait → REFAIRE LA SOUDURE !**
 
-**Votre vie et votre maison valent plus que 5 minutes de travail supplémentaire.**
+**Votre vie et votre maison valent plus que 5 minutes de travail supplémentaire.**
 
 Installation des *agrafes* en cuivre massif
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -224,9 +224,9 @@ Une fois les agrafes de cuivre mises en place, il est temps d’installer les co
 
 Selon le plan du circuit :
 
-* La résistance **R1** doit être de **120 Ω** si le circuit est alimenté en **3,3 V**, ou de **180 Ω** pour une alimentation en **5 V**.
-* La résistance **R2** doit avoir une valeur de **330 Ω**.
-* La résistance **R3** doit être de **360 Ω**.
+* La résistance **R1** doit être de **120 Ω** si le circuit est alimenté en **3,3 V**, ou de **180 Ω** pour une alimentation en **5 V**.
+* La résistance **R2** doit avoir une valeur de **330 Ω**.
+* La résistance **R3** doit être de **360 Ω**.
 
 .. note::
    Pour des besoins spécifiques, un autre type d’:term:`optocoupleur` pourrait être nécessaire.
@@ -247,7 +247,7 @@ Selon le plan du circuit :
 
    Avant de continuer, vérifiez :
 
-   ☐ Résistances R1, R2, R3 aux bons emplacements (valeurs correctes pour tension système)
+   ☐ Résistances R1, R2, R3 aux bons emplacements (valeurs correctes pour tension système)
    ☐ Support :term:`DIL` bien plaqué contre le :term:`PCB`
    ☐ **Encoche du support DIL** correctement orientée
    ☐ Toutes les soudures propres et brillantes
@@ -272,7 +272,7 @@ Soudure des connecteurs type Molex
    :alt: Connecteurs type Molex soudés
    :align: center
    :scale: 25%
-   
+
    Connecteurs type Molex soudés
 
 .. admonition:: ✅ Point de Contrôle — Connecteurs Molex
@@ -292,7 +292,7 @@ Soudure de la partie *haute puissance*/*haute tension*
 .. danger::
    La qualité des soudures est d’une importance **capitale** pour cette étape.
 
-   **Rappel :** Voir les mesures de sécurité OBLIGATOIRES et la vérification de qualité au début de ce chapitre.
+   **Rappel :** Voir les mesures de sécurité OBLIGATOIRES et la vérification de qualité au début de ce chapitre.
 
    Une soudure défectueuse peut provoquer un incendie lors de la mise sous tension !
 
@@ -349,7 +349,7 @@ Pour les soudures au niveau de chacune des agrafes, un bon fer chaud et beaucoup
 Installation de l’:term:`optocoupleur`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-| L’:term:`optocoupleur`, un composant essentiel doté de 6 broches, sert de liaison entre les sections du circuit fonctionnant à basse et à haute tension.
+| L’:term:`optocoupleur`, un composant essentiel doté de 6 broches, sert de liaison entre les sections du circuit fonctionnant à basse et à haute tension.
 | Pour l’installer correctement, alignez le repère présent sur le composant (indiqué en rouge) avec le cercle sur le circuit imprimé (:term:`PCB`).
 
 | Une installation inversée de l’:term:`optocoupleur` ne permettra pas au circuit de fonctionner correctement.
@@ -387,8 +387,447 @@ Les conseils suivants sont destinés aux situations où un étage de sortie doit
 
    Faites preuve de la plus grande prudence et n’entamez cette étape que si vous avez les compétences nécessaires pour le faire en toute sécurité.
 
-Voici une plate-forme construite qui permet de tester les cartes de sortie avec ou sans le triac soudé en place.
+Voici une plate-forme construite qui permet de tester les cartes de sortie avec ou sans le :term:`triac` soudé en place.
 
-Lors du test d’une carte de sortie, il est important que le triac fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit :term:`optocoupleur` et un ou plusieurs composants seront alors détruits immédiatement.
+Lors du test d’une carte de sortie, il est important que le :term:`triac` fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit :term:`optocoupleur` et un ou plusieurs composants seront alors détruits immédiatement.
 
 En tenant dûment compte de l’avertissement de sécurité ci-dessus, l’approche simple illustrée ci-dessous devrait convenir pour tester des cartes individuelles.
+
+Configuration du Banc de Test
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Matériel nécessaire pour le test :**
+
+☐ **Lampe à incandescence** 40-100 W (ou résistance chauffante équivalente)
+
+☐ **Douille E27** avec câble secteur
+
+☐ **Arduino ou microcontrôleur** (pour générer signal de commande)
+
+☐ **Câbles de connexion** dupont mâle-femelle
+
+☐ **Multimètre** (pour vérifier tensions)
+
+☐ **Extincteur** à portée de main
+
+☐ **Surface ininflammable** (métal, céramique)
+
+Schéma de Montage du Test
+""""""""""""""""""""""""""
+
+.. code-block:: text
+
+   CARTE DE SORTIE SOUS TEST
+   ┌───────────────────────────────────────────┐
+   │                                           │
+   │  ENTRÉE COMMANDE        SORTIE PUISSANCE  │
+   │  (Basse Tension)        (Haute Tension)   │
+   │                                           │
+   │  ┌──────┐              ┌────────┐         │
+   │  │ Molex│◄─────────────┤ Triac  │         │
+   │  │  IN  │  Optocoupleur│        │         │
+   │  └──┬───┘              └───┬────┘         │
+   │     │                      │              │
+   └─────┼──────────────────────┼──────────────┘
+         │                      │
+         │                      │
+    ┌────▼────┐            ┌───▼────────┐
+    │ Arduino │            │   230 V    │
+    │  Pin 9  │            │   Secteur  │
+    │   GND   │            │            │
+    └─────────┘            └───┬────────┘
+                               │
+                          ┌────▼─────┐
+                          │  LAMPE   │
+                          │  100 W   │
+                          └──────────┘
+
+Procédure de Test Complète
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. danger::
+   ⚠️ **RAPPEL SÉCURITÉ — 230 V SECTEUR**
+
+   - Extincteur à portée de main
+   - Aucun contact avec les parties sous tension
+   - Disjoncteur facilement accessible
+   - Personne présente pour surveiller
+   - Premier test : durée maximale 2 minutes
+
+Étape 1 : Vérifications Préalables (HORS TENSION)
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+#. **Inspection visuelle complète de la carte**
+
+   ☐ Toutes les soudures haute puissance re-vérifiées
+
+   ☐ Pas de court-circuit visible
+
+   ☐ Pas de composant mal orienté
+
+   ☐ :term:`Optocoupleur` correctement inséré (repère aligné)
+
+#. **Test de continuité au multimètre**
+
+   ☐ Mesurer résistance entre bornes connecteur puissance : **doit être ∞ Ω** (circuit ouvert)
+
+   ☐ Mesurer résistance :term:`optocoupleur` côté commande : **quelques kΩ** (LED interne)
+
+   ☐ Vérifier absence de court-circuit entre pistes basse/haute tension
+
+#. **Montage du banc de test**
+
+   ☐ Connecter lampe au connecteur de puissance de la carte
+
+   ☐ Connecter Arduino pin 9 → Molex IN (signal commande)
+
+   ☐ Connecter Arduino GND → Molex GND
+
+Étape 2 : Test Sans Tension Secteur
+""""""""""""""""""""""""""""""""""""
+
+#. **Programmer Arduino avec signal test**
+
+   .. code-block:: cpp
+
+      void setup() {
+        pinMode(9, OUTPUT);
+      }
+
+      void loop() {
+        digitalWrite(9, HIGH);  // Commande ON
+        delay(2000);            // 2 secondes
+        digitalWrite(9, LOW);   // Commande OFF
+        delay(2000);            // 2 secondes
+      }
+
+#. **Alimenter Arduino uniquement (PAS de secteur 230 V)**
+
+#. **Mesurer tension aux bornes du :term:`triac`** avec multimètre
+
+   - **Signal HIGH** : Devrait y avoir quelques volts (LED :term:`optocoupleur` allumée)
+   - **Signal LOW** : 0 V (LED optocoupleur éteinte)
+
+   ✅ Si OK : L’:term:`optocoupleur` fonctionne correctement
+
+   ❌ Si pas de variation : Vérifier soudures, orientation optocoupleur, résistances R1-R3
+
+Étape 3 : Premier Test Sous Tension 230 V
+""""""""""""""""""""""""""""""""""""""""""
+
+.. danger::
+   ⚠️⚠️⚠️ **DANGER — TENSION MORTELLE 230 V** ⚠️⚠️⚠️
+
+   À partir de maintenant, **AUCUN CONTACT** avec la carte ou la lampe.
+
+   Restez à **50 cm minimum** de la zone de test.
+
+#. **Vérifier une dernière fois :**
+
+   ☐ Lampe correctement connectée
+
+   ☐ Arduino alimenté et programme en cours
+
+   ☐ Extincteur à portée
+
+   ☐ Disjoncteur accessible
+
+#. **Brancher la lampe sur secteur 230 V**
+
+#. **Observer pendant 30 secondes**
+
+   **✅ Comportement NORMAL attendu :**
+
+   - Lampe s’allume et s’éteint toutes les 2 secondes (suivant programme Arduino)
+   - Pas d’odeur de brûlé
+   - Pas de fumée
+   - Pas de grésillement
+   - Commutation silencieuse (pas de clic)
+
+   **❌ Comportement ANORMAL — COUPER IMMÉDIATEMENT :**
+
+   - Lampe reste allumée en permanence → :term:`Triac` en court-circuit
+   - Lampe ne s’allume jamais → Triac ne conduit pas (défaut ou mal soudé)
+   - Fumée ou odeur → Composant en surchauffe
+   - Grésillement → Mauvais contact, arc électrique
+
+#. **Si test réussi : Laisser fonctionner 2 minutes**
+
+   - Surveiller température carte (main au-dessus, sans toucher)
+   - Carte doit rester froide ou tiède (légèrement chaude acceptable)
+   - :term:`Triac` peut être tiède après 2 minutes (normal)
+
+#. **Couper alimentation secteur**
+
+#. **Attendre 1 minute** (décharge condensateurs éventuels)
+
+Étape 4 : Test de Charge Progressive
+"""""""""""""""""""""""""""""""""""""
+
+Si le test précédent a réussi, vous pouvez tester avec une charge plus importante.
+
+#. **Remplacer lampe 60 W par lampe 100 W** (ou radiateur 500-1 000 W)
+
+#. **Répéter test pendant 5 minutes**
+
+   - Surveiller température :term:`triac` (devrait rester < 60 °C au toucher)
+   - Vérifier commutation toujours fonctionnelle
+
+
+Résultats Attendus du Test
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Carte Fonctionnelle
+"""""""""""""""""""
+
+**✅ SUCCÈS — La carte fonctionne correctement si :**
+
+☑ Lampe s’allume/s’éteint selon signal Arduino
+
+☑ Commutation silencieuse (pas de clic mécanique comme relais)
+
+☑ Aucune odeur ou fumée pendant 5 minutes de fonctionnement
+
+☑ Température carte reste raisonnable (< 60 °C)
+
+
+☑ Pas de grésillement ni arc électrique
+
+**➜ La carte est prête pour l’installation dans le boîtier**
+
+Carte Défectueuse
+"""""""""""""""""
+
+**❌ ÉCHEC — La carte a un problème si :**
+
+☒ Lampe reste allumée en permanence
+
+   **Diagnostic** : :term:`Triac` en court-circuit (détruit ou mal soudé)
+
+   **Action** : Remplacer triac
+
+☒ Lampe ne s’allume jamais
+
+   **Diagnostic** : Circuit :term:`optocoupleur` défectueux ou :term:`triac` ouvert
+
+   **Action** : Vérifier optocoupleur (sens, soudures), vérifier résistances R1-R3
+
+☒ Lampe clignote aléatoirement
+
+   **Diagnostic** : Mauvais contact, soudure froide
+
+   **Action** : Re-vérifier toutes les soudures haute puissance
+
+☒ Fumée ou odeur de brûlé
+
+   **Diagnostic** : Surchauffe composant (soudure insuffisante, court-circuit)
+
+   **Action** : **ARRÊTER IMMÉDIATEMENT**, inspecter visuellement, refaire soudures
+
+☒ Carte chauffe excessivement (> 80 °C)
+
+   **Diagnostic** : Résistance de contact trop élevée (agrafes mal soudées)
+
+   **Action** : Refaire soudures agrafes cuivre avec fer très chaud
+
+Dépannage — Problèmes Courants
+-------------------------------
+
+Problème 1 : Lampe Ne S’Allume Jamais
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Causes possibles :**
+
+☐ :term:`Optocoupleur` mal inséré (sens inversé)
+
+   **Test** : Retirer optocoupleur, vérifier repère alignement, réinsérer
+
+☐ :term:`Optocoupleur` défectueux
+
+   **Test** : Remplacer par optocoupleur neuf
+
+☐ Résistance R1 mal soudée ou mauvaise valeur
+
+   **Test** : Vérifier continuité, mesurer résistance (120 Ω pour 3,3 V, 180 Ω pour 5 V)
+
+☐ :term:`Triac` défectueux (circuit ouvert)
+
+   **Test** : Mesurer résistance bornes triac (devrait être quelques Ω dans un sens)
+
+☐ Soudure froide sur patte :term:`triac`
+
+   **Action** : Refaire soudures triac avec fer très chaud (450 °C)
+
+Problème 2 : Lampe Reste Allumée en Permanence
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Causes possibles :**
+
+☐ :term:`Triac` en court-circuit (détruit)
+
+   **Cause probable** : Surchauffe lors soudure, décharge électrostatique
+
+   **Action** : Remplacer triac (attention ESD lors manipulation)
+
+☐ Pont de soudure entre bornes :term:`triac`
+
+   **Test** : Inspection visuelle loupe, vérifier continuité
+
+   **Action** : Retirer excédent soudure avec tresse
+
+☐ Condensateur parasite (rare)
+
+   **Action** : Vérifier pistes :term:`PCB` pas de court-circuit
+
+Problème 3 : Grésillement ou Arc Électrique
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Causes possibles :**
+
+☐ Soudure insuffisante sur agrafes cuivre
+
+   **Symptôme** : Arc entre agrafe et piste :term:`PCB`
+
+   **Action** : **ARRÊTER IMMÉDIATEMENT**, refaire soudures avec beaucoup de soudure
+
+☐ Écart entre :term:`triac` et :term:`PCB` (mauvais contact)
+
+   **Action** : Dessouder triac, aplatir pattes, ressouder avec triac bien plaqué
+
+☐ Condensateur de snubber manquant (si prévu sur schéma)
+
+   **Action** : Ajouter condensateur + résistance snubber selon schéma
+
+Problème 4 : Carte Chauffe Excessivement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Causes possibles :**
+
+☐ Résistance de contact trop élevée
+
+   **Diagnostic** : Mesurer tension chute entre agrafe et piste (< 0,1 V attendu)
+
+   **Action** : Refaire soudures avec fer 450 °C + soudure abondante
+
+☐ Section agrafes cuivre insuffisante
+
+   **Action** : Remplacer par cuivre 2,5 mm² au lieu de 1,5 mm²
+
+☐ Charge trop importante pour le dissipateur (> 3 000 W ~ 13 A)
+
+   **Action** : Vérifier puissance charge (doit être ≤ 3 000 W), utiliser dissipateur plus grand si besoin
+
+Validation Finale de la Carte
+------------------------------
+
+Checklist Avant Installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: ✅ Validation Complète — Carte de Sortie
+
+   Avant de considérer la carte comme validée :
+
+   ☐ **Test fonctionnel réussi** : Lampe s’allume/s’éteint correctement
+
+   ☐ **Test charge 100 W réussi** : 5 minutes sans problème
+
+   ☐ **Température acceptable** : Carte et :term:`triac` < 60 °C
+
+   ☐ **Aucune odeur ou fumée** durant tous les tests
+
+   ☐ **Soudures haute puissance re-vérifiées** visuellement (loupe)
+
+   ☐ **Pas de grésillement** ni arc électrique
+
+   ☐ **Commutation silencieuse** (caractéristique du triac)
+
+   ☐ **Documentation** : Valeurs R1-R3 notées, tension système (3,3 V ou 5 V) notée
+
+   **Si TOUS les points sont cochés → La carte est validée et prête pour montage final**
+
+Documentation de la Carte Testée
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Il est recommandé de noter sur un papier (à conserver avec la carte) :
+
+- **Date du test** : ___/___/______
+- **Tension système** : ☐ 3,3 V  ☐ 5 V
+- **Valeur R1** : _____ Ω (120 Ω pour 3,3 V, 180 Ω pour 5 V)
+- **Valeur R2** : _____ Ω (330 Ω)
+- **Valeur R3** : _____ Ω (360 Ω)
+- **Référence :term:`triac`** : __________ (ex :  BTA41-600B)
+- **Charge testée** : _____ W (ex : 100 W)
+- **Durée test** : _____ minutes
+- **Résultat** : ☐ ✅ Validée  ☐ ❌ Défectueuse
+
+Prochaines Étapes
+-----------------
+
+Après Validation de TOUTES les Cartes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Une fois que vous avez assemblé et testé avec succès :
+
+✅ **Carte-mère** (monophasée ou triphasée) — testée électriquement
+
+✅ **Toutes les cartes de sortie** (autant que de sorties souhaitées) — testées individuellement
+
+**Vous pouvez passer aux chapitres suivants :**
+
+#. **Perçages du boîtier** — :ref:`percage-carte-mere`
+
+   Préparer le boîtier pour accueillir les cartes et les dissipateurs
+
+#. **Câblage interne**
+
+   Connexion carte-mère ↔ cartes de sortie ↔ secteur
+
+#. **Montage des dissipateurs**
+
+   Fixation des triacs sur dissipateurs thermiques en façade
+
+#. **Installation du logiciel**
+
+   Téléversement firmware, configuration, étalonnage
+
+#. **Tests système complet**
+
+   Validation fonctionnelle de l’ensemble avant installation finale
+
+.. tip::
+   💡 **Conseil Important**
+
+   **Conservez les cartes de sortie testées dans un endroit propre et sec.**
+
+   Évitez de toucher les pistes haute tension avec les doigts (graisse → oxydation).
+
+   Si stockage prolongé (> 1 mois), protégez avec film antistatique.
+
+Ressources Complémentaires
+---------------------------
+
+Documentation Technique
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Datasheet :term:`triac`  BTA41** : Caractéristiques électriques, courbes thermiques
+- **Datasheet :term:`optocoupleur` MOC3043** : Schéma interne, caractéristiques LED
+- **Guide soudure haute puissance** : :ref:`soldering-tutorial`
+
+.. admonition:: 🎯 Récapitulatif Final
+
+   **Vous avez maintenant assemblé une carte de sortie triac fonctionnelle !**
+
+   Cette carte utilise un :term:`triac` BTA41 (40 A nominaux) mais, en raison de la taille du dissipateur, la charge est limitée à **3 000 W** (~13 A à 230 V) pour un fonctionnement sûr et fiable.
+
+   **Points clés à retenir :**
+
+   - Soudures haute puissance = **CRITIQUE** pour sécurité
+   - Test progressif (sans tension → basse charge → haute charge)
+   - :term:`Triac` fonctionne UNIQUEMENT avec charges résistives
+   - Commutation silencieuse = avantage majeur vs relais mécanique
+
+   **Félicitations pour votre travail minutieux ! 🎉**
+
+.. |br| raw:: html
+
+  <br/>
