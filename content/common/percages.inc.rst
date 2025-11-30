@@ -46,10 +46,10 @@ Cependant, ce guide décrira l’implantation la plus classique.
 
 .. include:: ../common/dissipateur.inc.rst
 
-Perçage pour chaque étage de sortie triac
+Perçage pour chaque étage de sortie :term:`triac`
 -----------------------------------------
 
-Le triac de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boitier.
+Le :term:`triac` de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boitier.
 L’étage de sortie doit aussi être fixé au fond du boitier à la bonne hauteur pour être en accord avec le point de fixation du triac.
 
 Pour ce faire, il faut fixer le dissipateur sur le boitier préalablement préparé et fixé l’étage de sortie sur celui-ci par l’intermédiaire du triac.

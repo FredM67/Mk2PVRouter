@@ -27,14 +27,14 @@ Le taux des impulsions peut être modifié en changeant la valeur de ``powerCal_
 
 Pour avancer un flux d’impulsions par rapport à l’autre, un second chemin pour le courant devra passer à travers **CT1**. |br|
 La puissance consommée par n’importe quel petit appareil fera l’affaire — un seul de ses cœurs actifs doit passer à travers **CT1** — et le courant peut circuler dans les deux sens. |br|
-Lorsque l’appareil est éteint, le fil supplémentaire n’aura aucun effet sur les performances du CT, car aucun courant ne le traverse.
+Lorsque l’appareil est éteint, le fil supplémentaire n’aura aucun effet sur les performances du :term:`CT`, car aucun courant ne le traverse.
 
 Lorsque la valeur correcte a été trouvée pour ``powerCal_grid``, cette même valeur peut être utilisée avec n’importe quel croquis de routeur Mk2PVRouter qui doit être exécuté sur le **même matériel**.
 
 
 .. admonition:: ✅ Point de Contrôle — Étalonnage CT Grille
 
-   Avant de passer à l’étalonnage du CT diversion, vérifiez :
+   Avant de passer à l’étalonnage du :term:`CT` diversion, vérifiez :
 
    ☐ **Programme cal_CT1_v_meter.ino** téléversé et fonctionnel
    ☐ **Valeur powerCal_grid trouvée** et notée (à conserver précieusement)
@@ -61,9 +61,9 @@ Lorsque la valeur correcte a été trouvée pour ``powerCal_diverted``, cette m�
 
    ☐ **Programme cal_CT2_v_CT1.ino** téléversé avec powerCal_grid correct
    ☐ **Valeur powerCal_diverted trouvée** et notée
-   ☐ Deux CTs montés autour du même fil donnent mesures identiques
+   ☐ Deux :term:`CT`s montés autour du même fil donnent mesures identiques
    ☐ Documentation des valeurs : powerCal_grid et powerCal_diverted conservées
-   ☐ **CTs marqués** (CT1 = grille, CT2 = diversion)
+   ☐ **:term:`CT`s marqués** (CT1 = grille, CT2 = diversion)
 
 .. |br| raw:: html
 

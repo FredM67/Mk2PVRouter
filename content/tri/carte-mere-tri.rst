@@ -105,7 +105,7 @@ Diodes
 
 Ensuite, les diodes peuvent être ajoutées.
 
-Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les CTs.
+Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les :term:`CT`s.
 
 .. attention::
 
@@ -300,13 +300,13 @@ Ce bornier doit être orienté correctement pour permettre un accès facile au c
 Il est très facile de se tromper de sens ! |br|
 Enfin, il faudra veiller à bien le plaquer contre le :term:`PCB` avant de souder, afin que la surface entière du connecteur soit en contact avec le :term:`PCB`.
 
-Connecteurs SIL/Molex
+Connecteurs :term:`SIL`/Molex
 ^^^^^^^^^^^^^^^^^^^^^
 
 Les connecteurs Molex sont *polarisés*, ils possèdent un détrompeur. |br|
 Physiquement, ce sont des composants passifs, mais étant donné qu’ils serviront à la connexion d’autres composants ou modules polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.
 
-Les connecteurs SIL, ou *pin header*, peuvent être soudés dans n’importe quel sens.
+Les connecteurs :term:`SIL`, ou *pin header*, peuvent être soudés dans n’importe quel sens.
 
 Ils seront plus ou moins nombreux selon la configuration :
 

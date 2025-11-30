@@ -3,14 +3,14 @@
 Installation Finale dans le Système Électrique
 ===============================================
 
-⚠️⚠️⚠️ **DANGER DE MORT — HAUTE TENSION 230 V AC** ⚠️⚠️⚠️
+⚠️⚠️⚠️ **DANGER DE MORT — HAUTE TENSION 230 V :term:`AC`** ⚠️⚠️⚠️
 
 Cette section décrit la connexion du Mk2PVRouter au réseau électrique de votre habitation.
 
 **Cette opération présente des RISQUES MORTELS par électrocution.**
 
 .. danger::
-   ⚡ **TENSION MORTELLE 230 V AC, 380 V AC en triphasé** ⚡
+   ⚡ **TENSION MORTELLE 230 V :term:`AC`, 380 V :term:`AC` en triphasé** ⚡
 
    Le contact avec des conducteurs sous tension peut provoquer :
 
@@ -114,7 +114,7 @@ Matériel de Sécurité Requis
 Équipement de Protection Individuelle (EPI)
 """"""""""""""""""""""""""""""""""""""""""""
 
-☐ **Gants isolants classe 00** (minimum 500 V AC)
+☐ **Gants isolants classe 00** (minimum 500 V :term:`AC`)
 
 ☐ **Chaussures de sécurité isolantes** (semelle isolée)
 
@@ -137,12 +137,12 @@ Matériel de Sécurité Requis
 
 ☐ **Lampe de poche** (en cas de coupure secteur)
 
-Installation des Capteurs de Courant (CT)
+Installation des Capteurs de Courant (:term:`CT`)
 ------------------------------------------
 
 Les capteurs de courant (Current Transformers) se placent sur les câbles d’alimentation principale.
 
-Emplacement des CT
+Emplacement des :term:`CT`
 ^^^^^^^^^^^^^^^^^^
 
 .. figure:: img/schema-installation-ct.png
@@ -152,26 +152,26 @@ Emplacement des CT
 
    Position recommandée des capteurs de courant sur l’installation
 
-**CT Grille — Mesure de la consommation/injection réseau**
+**:term:`CT` Grille — Mesure de la consommation/injection réseau**
 
-   CT·s à clip installé·s sur le câble de **phase** principal arrivant du compteur Linky/Enedis
+   :term:`CT`·s à clip installé·s sur le câble de **phase** principal arrivant du compteur Linky/Enedis
 
-   - **Monophasé** : 1 CT à clip sur la phase unique (CT1)
-   - **Triphasé** : 3 CT à clip sur les 3 phases (CT1, CT2, CT3)
+   - **Monophasé** : 1 :term:`CT` à clip sur la phase unique (CT1)
+   - **Triphasé** : 3 :term:`CT` à clip sur les 3 phases (CT1, CT2, CT3)
 
-**CT Diversion — Mesure de la puissance routée** (optionnel)
+**:term:`CT` Diversion — Mesure de la puissance routée** (optionnel)
 
-   CT **intégré dans le boîtier** du Mk2PVRouter, connecté sur le câble relié à la charge
+   :term:`CT` **intégré dans le boîtier** du Mk2PVRouter, connecté sur le câble relié à la charge
 
-   ⚠️ Ce CT n’est **PAS** un CT à clip externe comme les CT Grille
+   ⚠️ Ce :term:`CT` n’est **PAS** un :term:`CT` à clip externe comme les :term:`CT` Grille
 
-Sens d’Installation des CT
+Sens d’Installation des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. danger::
-   ⚠️ **LE SENS DES CT EST CRUCIAL**
+   ⚠️ **LE SENS DES :term:`CT` EST CRUCIAL**
 
-   Un CT installé à l’envers inversera le signe de la mesure :
+   Un :term:`CT` installé à l’envers inversera le signe de la mesure :
 
    - Le routeur verra une **production** alors qu’il y a **consommation**
    - Le routeur verra une **consommation** alors qu’il y a **production**
@@ -179,41 +179,41 @@ Sens d’Installation des CT
 
 **Règle de base :**
 
-La **flèche** gravée sur le CT doit pointer dans le **sens du flux d’énergie** :
+La **flèche** gravée sur le :term:`CT` doit pointer dans le **sens du flux d’énergie** :
 
-- **CT Grille** : Flèche pointant **VERS la maison** (depuis le compteur)
-- **CT Diversion** : Flèche pointant **VERS la charge** (chauffe-eau)
+- **:term:`CT` Grille** : Flèche pointant **VERS la maison** (depuis le compteur)
+- **:term:`CT` Diversion** : Flèche pointant **VERS la charge** (chauffe-eau)
 
-Procédure d’Installation des CT
+Procédure d’Installation des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning::
    ⚠️ **DISJONCTEUR GÉNÉRAL COUPÉ OBLIGATOIRE**
 
-   Ne JAMAIS installer les CT sous tension !
+   Ne JAMAIS installer les :term:`CT` sous tension !
 
 #. **Couper le disjoncteur général** et vérifier absence de tension
 
 #. **Identifier le câble de phase** principal (généralement rouge, marron ou noir)
 
-   ⚠️ Ne PAS placer le CT sur le neutre (bleu) ou la terre (vert/jaune)
+   ⚠️ Ne PAS placer le :term:`CT` sur le neutre (bleu) ou la terre (vert/jaune)
 
-#. **Ouvrir le CT** en appuyant sur le clip de fermeture
+#. **Ouvrir le :term:`CT`** en appuyant sur le clip de fermeture
 
-#. **Placer le CT autour du câble de phase UNIQUEMENT**
+#. **Placer le :term:`CT` autour du câble de phase UNIQUEMENT**
 
-   - Un seul conducteur doit passer dans le CT
+   - Un seul conducteur doit passer dans le :term:`CT`
    - Ne pas passer plusieurs câbles ensemble (sauf si intentionnel pour mesure différentielle)
 
-#. **Vérifier le sens** : Flèche vers la maison pour CT Grille
+#. **Vérifier le sens** : Flèche vers la maison pour :term:`CT` Grille
 
-#. **Refermer fermement le CT** jusqu’au clic de verrouillage
+#. **Refermer fermement le :term:`CT`** jusqu’au clic de verrouillage
 
-#. **Vérifier que le CT est bien clipsé** (tirer légèrement pour tester)
+#. **Vérifier que le :term:`CT` est bien clipsé** (tirer légèrement pour tester)
 
-#. **Fixer le câble du CT** pour éviter qu’il se débranche par traction
+#. **Fixer le câble du :term:`CT`** pour éviter qu’il se débranche par traction
 
-Vérification du Sens des CT (Après Installation)
+Vérification du Sens des :term:`CT` (Après Installation)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Une fois le routeur sous tension (après toutes les connexions) :
@@ -224,8 +224,8 @@ Une fois le routeur sous tension (après toutes les connexions) :
 
 #. **Vérifier que la puissance affichée est POSITIVE** quand vous consommez
 
-   - Si la puissance est **négative** alors que vous consommez → **CT à l’envers**
-   - Couper le disjoncteur, retourner le CT, retester
+   - Si la puissance est **négative** alors que vous consommez → **:term:`CT` à l’envers**
+   - Couper le disjoncteur, retourner le :term:`CT`, retester
 
 Connexions Électriques au Tableau
 ----------------------------------
@@ -397,7 +397,7 @@ Liste de Vérification Finale
 
    ☐ Aucun brin de cuivre apparent
 
-   ☐ CT installés dans le bon sens (flèche vérifiée)
+   ☐ :term:`CT` installés dans le bon sens (flèche vérifiée)
 
    ☐ Câbles de section correcte pour la puissance
 
@@ -435,7 +435,7 @@ Procédure de Mise Sous Tension
 
 #. **Vérifier le fonctionnement du Mk2PVRouter** :
 
-   - LED d’alimentation allumée
+   - LED d'alimentation allumée
    - Écran affiche des données (si présent)
    - Pas de bruit anormal
 
@@ -481,10 +481,10 @@ Test de Détection de Production
    - Si injection réseau détectée → Le routeur doit activer la charge
    - Puissance doit être affichée en négatif (injection)
 
-Test de Sécurité Triac
+Test de Sécurité :term:`triac`
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Si le routeur utilise un triac pour moduler la puissance :
+Si le routeur utilise un :term:`triac` pour moduler la puissance :
 
 #. **Vérifier que la charge ne s’active PAS** en l’absence de production
 
@@ -544,12 +544,12 @@ Le routeur fonctionne à l’envers
 
 **Symptôme :** Le routeur active la charge quand vous consommez et la désactive quand vous produisez
 
-**Cause :** CT installé à l’envers
+**Cause :** :term:`CT` installé à l’envers
 
 **Solution :**
 
 #. Couper le disjoncteur général
-#. Retourner le CT (inverser le sens de la flèche)
+#. Retourner le :term:`CT` (inverser le sens de la flèche)
 #. Remettre sous tension et retester
 
 La charge ne s’active jamais
@@ -557,7 +557,7 @@ La charge ne s’active jamais
 
 **Causes possibles :**
 
-☐ Triac défectueux (court-circuit ou ouvert)
+☐ :term:`triac` défectueux (court-circuit ou ouvert)
 
 ☐ Connexion charge desserrée
 
@@ -627,9 +627,9 @@ Vérifications Périodiques
 
 ☐ Vérifier l’étalonnage du routeur
 
-☐ Contrôler l’usure des contacts du triac
+☐ Contrôler l’usure des contacts du :term:`triac`
 
-☐ Vérifier les CT (clip de fermeture pas cassé)
+☐ Vérifier les :term:`CT` (clip de fermeture pas cassé)
 
 Signes d’Alerte
 ^^^^^^^^^^^^^^^^
@@ -659,7 +659,7 @@ Si vous devez déposer le routeur :
 
 #. **Vérifier l’absence de tension**
 
-#. **Débrancher les CT** en premier
+#. **Débrancher les :term:`CT`** en premier
 
 #. **Débrancher l’alimentation** du routeur
 
