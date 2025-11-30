@@ -677,12 +677,33 @@ Added to :
 
 **Commit :** 60a0601 - docs : add comprehensive verification checkpoints to assembly guides
 
-### 4. ⬜ Systematically Link Glossary (1-2 hours) - TODO
-Replace plain text with `:term:` directive :
-```rst
-Le :term:`PCB` doit être...
-Connecter le :term:`CT` sur...
-```
+### 4. ✅ Systematically Link Glossary (1-2 hours) - COMPLETE
+**Total : 67 lines modified across 6 documentation files**
+
+Technical terms linked to glossary definitions :
+
+- ✅ **Hardware terms** : PCB, CT, triac, optocoupleur, DIL, SIL, FTDI
+- ✅ **Electrical terms** : AC, DC, burden, pull-up
+- ✅ **Technical terms** : ADC, ATmega328P, EEPROM, PWM, RMS, zero-crossing
+- ✅ **Software terms** : IoT, JSON, RF
+
+Files modified :
+
+- ✅ installation-finale.rst (41 glossary links)
+- ✅ carte-sortie.inc.rst (14 glossary links)
+- ✅ etalonnage-mono.rst (4 glossary links)
+- ✅ etalonnage-tri.rst (3 glossary links)
+- ✅ carte-mere-tri.rst (3 glossary links)
+- ✅ percages.inc.rst (2 glossary links)
+
+Link strategy :
+
+- Comprehensive linking of standalone acronyms (CT, PCB, AC, DC, ADC)
+- Maintains readability (not every occurrence linked)
+- Preserves French typography (nbsp, apostrophes)
+- No broken glossary links
+
+**Commit :** a4ed3e4 - docs : systematically link technical terms to glossary
 
 ### 5. ✅ Add Prerequisites Boxes (2-3 hours) - DONE
 Added to all 6 major sections :
