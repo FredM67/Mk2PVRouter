@@ -225,4 +225,4 @@ Vérification
 .. tip::
    Si les bibliothèques n’apparaissent pas, redémarrer Arduino IDE.
 
-✅ **Configuration Arduino IDE terminée !** Passez maintenant aux étapes spécifiques à votre version (mono ou tri-phase).
+✅ **Configuration Arduino IDE terminée !** Passez maintenant aux étapes spécifiques à votre version :term:`monophasé` ou :term:`triphasé`).
