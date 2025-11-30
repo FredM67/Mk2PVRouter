@@ -100,10 +100,10 @@ Certains composants ont un **SENS OBLIGATOIRE** (comme une pile : + et -).
 
    - Le routeur NE FONCTIONNERA PAS
    - Le composant peut **EXPLOSER** (condensateurs électrolytiques)
-   - Vous devrez tout refaire
+   - Vous devrez potentiellement tout refaire
 
 Composants à Surveiller
-’’’’’’’’’’’’’’’’’’’’’’’’
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 **1. Diodes** — Repérer la bande
 

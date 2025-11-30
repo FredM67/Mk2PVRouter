@@ -150,7 +150,7 @@ Ensuite, on installe généralement les supports pour les circuits intégrés.
    Chaque support a une encoche à une extrémité. Celle-ci doit être alignée avec la marque correspondante sur la couche sérigraphiée, comme indiqué ici.
 
 Méthode Recommandée pour Débutants
-’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Découpez un morceau de ruban adhésif de masquage (scotch beige/papier)
 

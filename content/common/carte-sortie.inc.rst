@@ -130,7 +130,7 @@ Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet o
    **La carte peut prendre feu SANS AVERTISSEMENT à la mise sous tension !**
 
 Mesures de Sécurité OBLIGATOIRES
-’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Avant de commencer cette section :
 
@@ -149,7 +149,7 @@ Avant de commencer cette section :
 ☐ **Connaître itinéraire évacuation** — Ne jamais bloquer sorties
 
 Pendant le Premier Test
-’’’’’’’’’’’’’’’’’’’’’’’’
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 - ⚠️ Rester à côté pendant les 5 premières minutes de fonctionnement
 - ⚠️ Surveiller odeurs inhabituelles (plastique brûlé)
@@ -157,7 +157,7 @@ Pendant le Premier Test
 - ⚠️ Écouter grésillements anormaux
 
 En Cas de Fumée ou Odeur de Brûlé
-’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. **COUPER ALIMENTATION IMMÉDIATEMENT** (disjoncteur)
 #. **NE PAS TOUCHER le routeur** (peut être très chaud)
@@ -166,7 +166,7 @@ En Cas de Fumée ou Odeur de Brûlé
 #. **Laisser refroidir 30 minutes** minimum avant d’inspecter
 
 Vérification de Qualité
-’’’’’’’’’’’’’’’’’’’’’’’’
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Avant de mettre sous tension, vérifiez (loupe recommandée) :
 
