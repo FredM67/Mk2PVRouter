@@ -92,7 +92,7 @@ Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 * Un **support** :term:`DIL` pour l’optocoupleur, comportant deux rangées de trois broches.
 * Deux paires de **connecteurs type Molex**.
 * Un **isolant** qui assure à la fois l’isolation électrique et la conduction thermique.
-* Un **:term:`triac`**, adapté aux exigences spécifiques de l’application.
+* Un **triac**, adapté aux exigences spécifiques de l’application.
 * Un **connecteur de puissance** qui dispose habituellement de trois broches, la broche centrale étant inutilisée.
 * Un **morceau de cuivre massif** de 1.5 mm² de section.
   
@@ -249,7 +249,7 @@ Selon le plan du circuit :
 
    ☐ Résistances R1, R2, R3 aux bons emplacements (valeurs correctes pour tension système)
    ☐ Support :term:`DIL` bien plaqué contre le :term:`PCB`
-   ☐ **Encoche du support :term:`DIL`** correctement orientée
+   ☐ **Encoche du support DIL** correctement orientée
    ☐ Toutes les soudures propres et brillantes
    ☐ Pas de pont de soudure entre les pistes
 
@@ -338,7 +338,7 @@ Pour les soudures au niveau de chacune des agrafes, un bon fer chaud et beaucoup
    ⚠️ **VÉRIFICATION OBLIGATOIRE AVANT MISE SOUS TENSION** ⚠️
 
    ☐ **Connecteur haute puissance : soudure ABONDANTE et brillante**
-   ☐ **Triac : soudure remontée de l’autre côté du :term:`PCB`** (continuité vérifiée)
+   ☐ **Triac : soudure remontée de l’autre côté du PCB** (continuité vérifiée)
    ☐ **Soudures agrafes : généreuses et solides** (fer très chaud utilisé)
    ☐ **Aucun brin de cuivre apparent** risquant court-circuit
    ☐ **Inspection visuelle loupe : pas de fissure ni joint froid**
@@ -366,7 +366,7 @@ Installation de l’:term:`optocoupleur`
 
    Avant le test sous tension, vérifiez :
 
-   ☐ **:term:`Optocoupleur` correctement orienté** (repère rouge aligné avec cercle :term:`PCB`)
+   ☐ **Optocoupleur correctement orienté** (repère rouge aligné avec cercle :term:`PCB`)
    ☐ Toutes les soudures haute puissance re-vérifiées (connecteur, :term:`triac`, agrafes)
    ☐ Pas de court-circuit visible (inspection visuelle complète)
    ☐ Pas de flux de soudure résiduel conducteur

@@ -105,7 +105,7 @@ Diodes
 
 Ensuite, les diodes peuvent être ajoutées.
 
-Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les :term:`CT`s.
+Celles-ci offrent un certain degré de protection au processeur lorsque des courants élevés traversent les :term:`CT`\\s.
 
 .. attention::
 

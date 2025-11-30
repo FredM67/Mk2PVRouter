@@ -176,25 +176,25 @@ Configuration Optimale
 
 .. code-block:: text
 
-   ┌──────────────────────────────────────────────────────┐
-   │                  POSTE DE SOUDURE                    │
-   │                                                      │
+   ┌────────────────────────────────────────────────────┐
+   │                  POSTE DE SOUDURE                  │
+   │                                                    │
    │  ┌─────────┐        ┌──────────┐     ┌──────────┐  │
-   │  │ Lampe   │        │  :term:`PCB` sur  │     │ Support  │  │
+   │  │ Lampe   │        │ PCB sur  │     │ Support  │  │
    │  │   LED   │──────> │  support │ <── │   fer    │  │
    │  └─────────┘        └──────────┘     └──────────┘  │
-   │                           ↑                          │
-   │                    ┌──────┴──────┐                  │
-   │                    │ Extracteur  │                  │
-   │                    │  de fumées  │                  │
-   │                    └─────────────┘                  │
-   │                                                      │
-   │  À GAUCHE :                À DROITE :               │
-   │  - Composants              - Outils (pince,         │
-   │  - Fil soudure               coupante)              │
-   │  - Flux                    - Éponge/laine cuivre    │
-   │                                                      │
-   └──────────────────────────────────────────────────────┘
+   │                           ↑                        │
+   │                    ┌──────┴──────┐                 │
+   │                    │ Extracteur  │                 │
+   │                    │  de fumées  │                 │
+   │                    └─────────────┘                 │
+   │                                                    │
+   │  À GAUCHE :                À DROITE :              │
+   │  - Composants              - Outils (pince,        │
+   │  - Fil soudure               coupante)             │
+   │  - Flux                    - Éponge/laine cuivre   │
+   │                                                    │
+   └────────────────────────────────────────────────────┘
 
 Checklist Avant de Commencer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -501,7 +501,7 @@ Dessoudage — Corriger ses Erreurs
 Soudure de Composants Sensibles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Circuits intégrés (:term:`DIL`, :term:`SIL`)**
+**Circuits intégrés** (:term:`DIL`, :term:`SIL`)
 
 - ⚠️ Très sensibles à la chaleur (< 3 secondes par broche)
 - ✅ Utiliser support de CI (évite de souder le CI directement)

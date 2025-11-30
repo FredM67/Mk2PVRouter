@@ -61,9 +61,9 @@ Lorsque la valeur correcte a été trouvée pour ``powerCal_diverted``, cette m�
 
    ☐ **Programme cal_CT2_v_CT1.ino** téléversé avec powerCal_grid correct
    ☐ **Valeur powerCal_diverted trouvée** et notée
-   ☐ Deux :term:`CT`s montés autour du même fil donnent mesures identiques
+   ☐ Deux :term:`CT`\\s montés autour du même fil donnent mesures identiques
    ☐ Documentation des valeurs : powerCal_grid et powerCal_diverted conservées
-   ☐ **:term:`CT`s marqués** (CT1 = grille, CT2 = diversion)
+   ☐ **:term:`CT`\\s marqués** (CT1 = grille, CT2 = diversion)
 
 .. |br| raw:: html
 

@@ -3,14 +3,14 @@
 Installation Finale dans le Système Électrique
 ===============================================
 
-⚠️⚠️⚠️ **DANGER DE MORT — HAUTE TENSION 230 V :term:`AC`** ⚠️⚠️⚠️
+⚠️⚠️⚠️ **DANGER DE MORT — HAUTE TENSION 230 V AC** ⚠️⚠️⚠️
 
 Cette section décrit la connexion du Mk2PVRouter au réseau électrique de votre habitation.
 
 **Cette opération présente des RISQUES MORTELS par électrocution.**
 
 .. danger::
-   ⚡ **TENSION MORTELLE 230 V :term:`AC`, 380 V :term:`AC` en triphasé** ⚡
+   ⚡ **TENSION MORTELLE 230 V AC, 380 V AC en triphasé** ⚡
 
    Le contact avec des conducteurs sous tension peut provoquer :
 
@@ -152,14 +152,14 @@ Emplacement des :term:`CT`
 
    Position recommandée des capteurs de courant sur l’installation
 
-**:term:`CT` Grille — Mesure de la consommation/injection réseau**
+**CT Grille — Mesure de la consommation/injection réseau**
 
    :term:`CT`·s à clip installé·s sur le câble de **phase** principal arrivant du compteur Linky/Enedis
 
    - **Monophasé** : 1 :term:`CT` à clip sur la phase unique (CT1)
    - **Triphasé** : 3 :term:`CT` à clip sur les 3 phases (CT1, CT2, CT3)
 
-**:term:`CT` Diversion — Mesure de la puissance routée** (optionnel)
+**CT Diversion — Mesure de la puissance routée** (optionnel)
 
    :term:`CT` **intégré dans le boîtier** du Mk2PVRouter, connecté sur le câble relié à la charge
 
@@ -169,7 +169,7 @@ Sens d’Installation des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. danger::
-   ⚠️ **LE SENS DES :term:`CT` EST CRUCIAL**
+   ⚠️ **LE SENS DES CT EST CRUCIAL**
 
    Un :term:`CT` installé à l’envers inversera le signe de la mesure :
 
@@ -181,8 +181,8 @@ Sens d’Installation des :term:`CT`
 
 La **flèche** gravée sur le :term:`CT` doit pointer dans le **sens du flux d’énergie** :
 
-- **:term:`CT` Grille** : Flèche pointant **VERS la maison** (depuis le compteur)
-- **:term:`CT` Diversion** : Flèche pointant **VERS la charge** (chauffe-eau)
+- **CT Grille** : Flèche pointant **VERS la maison** (depuis le compteur)
+- **CT Diversion** : Flèche pointant **VERS la charge** (chauffe-eau)
 
 Procédure d’Installation des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -198,20 +198,20 @@ Procédure d’Installation des :term:`CT`
 
    ⚠️ Ne PAS placer le :term:`CT` sur le neutre (bleu) ou la terre (vert/jaune)
 
-#. **Ouvrir le :term:`CT`** en appuyant sur le clip de fermeture
+#. **Ouvrir le CT** en appuyant sur le clip de fermeture
 
-#. **Placer le :term:`CT` autour du câble de phase UNIQUEMENT**
+#. **Placer le CT autour du câble de phase UNIQUEMENT**
 
    - Un seul conducteur doit passer dans le :term:`CT`
    - Ne pas passer plusieurs câbles ensemble (sauf si intentionnel pour mesure différentielle)
 
 #. **Vérifier le sens** : Flèche vers la maison pour :term:`CT` Grille
 
-#. **Refermer fermement le :term:`CT`** jusqu’au clic de verrouillage
+#. **Refermer fermement le CT** jusqu’au clic de verrouillage
 
-#. **Vérifier que le :term:`CT` est bien clipsé** (tirer légèrement pour tester)
+#. **Vérifier que le CT est bien clipsé** (tirer légèrement pour tester)
 
-#. **Fixer le câble du :term:`CT`** pour éviter qu’il se débranche par traction
+#. **Fixer le câble du CT** pour éviter qu’il se débranche par traction
 
 Vérification du Sens des :term:`CT` (Après Installation)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -224,7 +224,7 @@ Une fois le routeur sous tension (après toutes les connexions) :
 
 #. **Vérifier que la puissance affichée est POSITIVE** quand vous consommez
 
-   - Si la puissance est **négative** alors que vous consommez → **:term:`CT` à l’envers**
+   - Si la puissance est **négative** alors que vous consommez → **CT à l’envers**
    - Couper le disjoncteur, retourner le :term:`CT`, retester
 
 Connexions Électriques au Tableau
@@ -659,7 +659,7 @@ Si vous devez déposer le routeur :
 
 #. **Vérifier l’absence de tension**
 
-#. **Débrancher les :term:`CT`** en premier
+#. **Débrancher les CT** en premier
 
 #. **Débrancher l’alimentation** du routeur
 
