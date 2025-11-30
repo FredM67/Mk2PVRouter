@@ -82,6 +82,17 @@ Pour ajuster la hauteur de la carte de sortie, un plot en plastique de **10 mm*
    
    Plot
 
+.. admonition:: ✅ Point de Contrôle — Perçage Étages de Sortie
+
+   Avant de continuer, vérifiez :
+
+   ☐ **Tous les trous percés à 3 mm** de diamètre
+   ☐ **Plots 10 mm installés** avec vis M3 plastique
+   ☐ Hauteur des cartes de sortie correcte (alignement avec dissipateur)
+   ☐ Cartes de sortie se fixent solidement
+   ☐ Pas d’interférence avec les dissipateurs
+
+
 .. _percage-carte-mere:
 
 Perçage pour la carte-mère
@@ -98,3 +109,14 @@ En utilisant la même méthode, vous pouvez marquer et percer le boîtier aux di
    Pointage carte mère
 
 Pour éviter qu’elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de **10 mm** de hauteur est installé à l’aide d’une vis **M4** sur tous les trous percés, de la même manière que pour l’étage de sortie.
+
+.. admonition:: ✅ Point de Contrôle — Perçage Carte-Mère
+
+   Avant de passer au câblage, vérifiez :
+
+   ☐ **Tous les trous percés** aux dimensions appropriées
+   ☐ **Plots 10 mm installés** avec vis M4 plastique
+   ☐ Carte-mère positionnée sans entraver les branchements
+   ☐ Carte-mère ne touche pas les points de fixation du boîtier
+   ☐ Espace suffisant pour le câblage autour de la carte-mère
+

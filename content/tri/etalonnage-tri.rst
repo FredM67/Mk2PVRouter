@@ -108,6 +108,18 @@ Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu’
 .. important::
    Chaque pince devra alors être marquée pour savoir à quelle ligne elle correspond.
 
+
+.. admonition:: ✅ Point de Contrôle — Étalonnage Méthode Compteur
+
+   Après avoir étalonné les 3 phases avec le compteur, vérifiez :
+
+   ☐ **f_powerCal trouvé pour CHAQUE phase** (L1, L2, L3)
+   ☐ Valeur de chaque phase synchronisée avec compteur
+   ☐ **Chaque CT marqué** avec son numéro de phase correspondant
+   ☐ Documentation complète : f_powerCal[0], f_powerCal[1], f_powerCal[2]
+   ☐ Test de vérification sur les 3 phases (somme = puissance totale compteur)
+
+
 Méthode avec un appareil de mesure annexe
 -----------------------------------------
 
@@ -195,3 +207,16 @@ Si vous utilisez un chauffe-eau triphasé comme appareil d’étalonnage, suivez
 
 .. important::
    Chaque pince devra être marquée pour savoir à quelle ligne elle correspond.
+
+.. admonition:: ✅ Point de Contrôle Final — Étalonnage Complet (Tri)
+
+   Avant de passer à l’installation finale, vérifiez :
+
+   ☐ **f_powerCal validé pour L1, L2, L3** avec appareil de mesure
+   ☐ Chaque phase mesure correctement (écart < 2 %)
+   ☐ **CTs marqués de manière PERMANENTE** (L1, L2, L3)
+   ☐ Test avec charge équilibrée : somme des phases = mesure compteur
+   ☐ Documentation finale complète et conservée en lieu sûr
+
+   ⚠️ **CRITIQUE : Ne JAMAIS intervertir les CTs après étalonnage** ⚠️
+

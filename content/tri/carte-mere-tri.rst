@@ -89,6 +89,17 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
    
    .. include:: ../common/burden-calc.inc.rst
 
+.. admonition:: ✅ Point de Contrôle — Résistances
+
+   Avant de continuer, vérifiez :
+
+   ☐ Toutes les résistances sont soudées aux bons emplacements (R1-R12, R19-R22)
+   ☐ Les valeurs des résistances correspondent au schéma (codes couleurs vérifiés)
+   ☐ Soudures brillantes et lisses (pas ternes/granuleuses)
+   ☐ Pas de pont entre les pistes adjacentes
+   ☐ Pattes coupées à ras du :term:`PCB`
+
+
 Diodes
 ^^^^^^
 
@@ -107,6 +118,17 @@ Celles-ci offrent un certain degré de protection au processeur lorsque des cour
    :scale: 50%
 
    Carte-mère avec diodes soudées
+
+.. admonition:: ✅ Point de Contrôle — Diodes
+
+   Avant de continuer, vérifiez :
+
+   ☐ Toutes les diodes sont soudées aux bons emplacements
+   ☐ **Sens des diodes vérifié** (bande alignée avec marquage :term:`PCB`)
+   ☐ Soudures propres et brillantes
+   ☐ Pas de court-circuit entre les pistes
+   ☐ Pattes coupées à ras du :term:`PCB`
+
 
 Supports circuits intégrés
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -167,6 +189,17 @@ Méthode Recommandée pour Débutants
 
    Carte-mère avec supports CI soudés
 
+.. admonition:: ✅ Point de Contrôle — Supports Circuits Intégrés
+
+   Avant de continuer, vérifiez :
+
+   ☐ Tous les supports CI sont bien plaqués contre le :term:`PCB` (pas d’espace)
+   ☐ **Encoches correctement orientées** selon le marquage sérigraphié
+   ☐ Toutes les broches correctement soudées
+   ☐ Pas de pont de soudure entre les broches
+   ☐ Ruban adhésif retiré complètement
+
+
 Condensateurs céramiques et oscillateur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -200,6 +233,17 @@ Les condensateurs céramiques sont en général orange, et ont la forme d’une 
    :scale: 50%
 
    Carte-mère avec condensateurs céramiques soudés
+
+.. admonition:: ✅ Point de Contrôle — Condensateurs Céramiques et Oscillateur
+
+   Avant de continuer, vérifiez :
+
+   ☐ Tous les condensateurs céramiques soudés (C4, C6-C11)
+   ☐ Condensateurs 22 pF (C10, C11) correctement identifiés et placés
+   ☐ Oscillateur installé et soudé
+   ☐ Soudures propres sans excès de flux
+   ☐ Pattes coupées à ras (ou légèrement surélevés si souhaité)
+
 
 Ponts redresseurs ou ponts de diodes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -298,6 +342,17 @@ L’autre broche est la **+ve**, qui doit aller dans le trou marqué **+** sur l
    :scale: 50%
 
    Carte-mère avec condensateurs électrolytiques soudés
+
+.. admonition:: ✅ Point de Contrôle — Condensateurs Électrolytiques
+
+   Avant de continuer, vérifiez :
+
+   ☐ **C1 (100 μF) au bon emplacement** (le plus proche du bord du :term:`PCB`)
+   ☐ **C2 (10 μF) au bon emplacement** (le plus proche de VR1)
+   ☐ **Polarité respectée** (bande -ve alignée correctement)
+   ☐ Condensateurs bien plaqués contre le :term:`PCB`
+   ☐ Soudures solides et propres
+
 
 Varistances
 ^^^^^^^^^^^

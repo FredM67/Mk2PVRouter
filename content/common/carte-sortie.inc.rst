@@ -206,6 +206,17 @@ Une fois les agrafes correctement mises en place, coupez les quatre extrémités
 
    Vue dessus/dessous, agrafes posées
 
+.. admonition:: ✅ Point de Contrôle — Agrafes en Cuivre
+
+   Avant de continuer, vérifiez :
+
+   ☐ Agrafes en cuivre massif 1,5 mm² correctement installées
+   ☐ Extrémités pliées fermement contre le :term:`PCB`
+   ☐ Longueur des extrémités coupée correctement
+   ☐ Pas de court-circuit avec les pistes adjacentes
+   ☐ Agrafes bien fixées et stables
+
+
 Installation des composants de faible puissance, support :term:`DIL`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -232,6 +243,17 @@ Selon le plan du circuit :
 
    Vue dessus/dessous, résistances et support :term:`DIL` soudés
 
+.. admonition:: ✅ Point de Contrôle — Composants Faible Puissance
+
+   Avant de continuer, vérifiez :
+
+   ☐ Résistances R1, R2, R3 aux bons emplacements (valeurs correctes pour tension système)
+   ☐ Support :term:`DIL` bien plaqué contre le :term:`PCB`
+   ☐ **Encoche du support :term:`DIL`** correctement orientée
+   ☐ Toutes les soudures propres et brillantes
+   ☐ Pas de pont de soudure entre les pistes
+
+
 Soudure des connecteurs type Molex
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -252,6 +274,17 @@ Soudure des connecteurs type Molex
    :scale: 25%
    
    Connecteurs type Molex soudés
+
+.. admonition:: ✅ Point de Contrôle — Connecteurs Molex
+
+   Avant de continuer, vérifiez :
+
+   ☐ Connecteur de puissance broche centrale soudée
+   ☐ Deux connecteurs type Molex soudés
+   ☐ **Détrompeur correctement orienté** (Molex polarisés)
+   ☐ Connecteurs bien plaqués contre le :term:`PCB`
+   ☐ Soudures solides et propres
+
 
 Soudure de la partie *haute puissance*/*haute tension*
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -300,6 +333,19 @@ Pour les soudures au niveau de chacune des agrafes, un bon fer chaud et beaucoup
 
    Triac et connecteur soudés
 
+.. admonition:: ✅ Point de Contrôle — CRITIQUE — Haute Puissance
+
+   ⚠️ **VÉRIFICATION OBLIGATOIRE AVANT MISE SOUS TENSION** ⚠️
+
+   ☐ **Connecteur haute puissance : soudure ABONDANTE et brillante**
+   ☐ **Triac : soudure remontée de l’autre côté du :term:`PCB`** (continuité vérifiée)
+   ☐ **Soudures agrafes : généreuses et solides** (fer très chaud utilisé)
+   ☐ **Aucun brin de cuivre apparent** risquant court-circuit
+   ☐ **Inspection visuelle loupe : pas de fissure ni joint froid**
+
+   🔥 Une soudure défectueuse = RISQUE D’INCENDIE 🔥
+
+
 Installation de l’:term:`optocoupleur`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -315,6 +361,17 @@ Installation de l’:term:`optocoupleur`
    :scale: 25%
 
    Carte assemblée
+
+.. admonition:: ✅ Point de Contrôle Final — Carte de Sortie Complète
+
+   Avant le test sous tension, vérifiez :
+
+   ☐ **:term:`Optocoupleur` correctement orienté** (repère rouge aligné avec cercle :term:`PCB`)
+   ☐ Toutes les soudures haute puissance re-vérifiées (connecteur, triac, agrafes)
+   ☐ Pas de court-circuit visible (inspection visuelle complète)
+   ☐ Pas de flux de soudure résiduel conducteur
+   ☐ **Extincteur à portée de main pour le premier test**
+
 
 Tests
 ~~~~~

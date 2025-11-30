@@ -31,6 +31,17 @@ Lorsque l’appareil est éteint, le fil supplémentaire n’aura aucun effet su
 
 Lorsque la valeur correcte a été trouvée pour ``powerCal_grid``, cette même valeur peut être utilisée avec n’importe quel croquis de routeur Mk2PVRouter qui doit être exécuté sur le **même matériel**.
 
+
+.. admonition:: ✅ Point de Contrôle — Étalonnage CT Grille
+
+   Avant de passer à l’étalonnage du CT diversion, vérifiez :
+
+   ☐ **Programme cal_CT1_v_meter.ino** téléversé et fonctionnel
+   ☐ **Valeur powerCal_grid trouvée** et notée (à conserver précieusement)
+   ☐ Flux d’impulsions synchronisé avec le compteur
+   ☐ Test de vérification effectué (appareil de puissance connue)
+   ☐ Valeur stable et reproductible
+
 :term:`CT` *diversion*
 ----------------------
 
@@ -42,6 +53,17 @@ Les deux **CTs** devraient être montés autour du même fil porteur de courant.
 Le canal **CT2** d’une carte autonome peut être étalonné en utilisant simplement un câble d’extension modifié qui fonctionne entre n’importe quelle prise de courant pratique et un appareil approprié.
 
 Lorsque la valeur correcte a été trouvée pour ``powerCal_diverted``, cette même valeur peut être utilisée avec n’importe quel croquis de routeur Mk2PVRouter qui doit être exécuté sur le **même matériel**.
+
+
+.. admonition:: ✅ Point de Contrôle Final — Étalonnage Complet (Mono)
+
+   Avant de passer à l’installation finale, vérifiez :
+
+   ☐ **Programme cal_CT2_v_CT1.ino** téléversé avec powerCal_grid correct
+   ☐ **Valeur powerCal_diverted trouvée** et notée
+   ☐ Deux CTs montés autour du même fil donnent mesures identiques
+   ☐ Documentation des valeurs : powerCal_grid et powerCal_diverted conservées
+   ☐ **CTs marqués** (CT1 = grille, CT2 = diversion)
 
 .. |br| raw:: html
 
