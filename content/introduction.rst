@@ -103,7 +103,7 @@ Certains composants ont un **SENS OBLIGATOIRE** (comme une pile : + et -).
    - Vous devrez potentiellement tout refaire
 
 Composants à Surveiller
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 **1. Diodes** — Repérer la bande
 
@@ -139,13 +139,13 @@ Ainsi, l’ordre de soudure recommandé est le suivant :
 
 #. Résistances et diodes, et éventuellement les ponts
 #. Supports IC1 et IC2 (et éventuellement IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports à ce stade)
-#. Condensateurs non polarisés "orange", oscillateur
+#. Condensateurs non polarisés « orange », oscillateur
 #. Pont·s de diodes
 #. Les fusibles
 #. Tous les connecteurs SIL noirs et le connecteur d’affichage, le cas échéant
 #. Condensateurs polarisés (noirs ou bleus)
 #. Le socle pour l’antenne, le cas échéant
-#. Le gros connecteur "haute tension"
+#. Le gros connecteur « haute tension »
 #. Le·s régulateur·s de tension
 #. Enfin, le·s transformateur·s
 
