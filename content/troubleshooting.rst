@@ -317,7 +317,7 @@ Problèmes Arduino IDE
 
  #. ☐ **Vitesse correcte ?**
 
-    - 9600 bauds pour Moniteur Série
+    - 9 600 bauds pour Moniteur Série
 
 **Solutions supplémentaires :**
 
@@ -340,8 +340,8 @@ Vérification via Moniteur Série
 
 #. **Régler paramètres en bas à droite :**
 
-   - **Baud rate :** 9600
-   - **Line ending :** « Les deux, NL & CR »
+   - **Baud rate :** 9 600
+   - **Fin de ligne :** « Les deux, CR+LF »
 
 #. **Appuyer sur bouton Reset du routeur**
 
@@ -368,12 +368,12 @@ Vérification via Moniteur Série
 
  #. ☐ **Condensateurs C6/C7 présents ?** (si quartz externe)
 
-    - Condensateurs 22pF de chaque côté du quartz
+    - Condensateurs 22 pF de chaque côté du quartz
     - Valeur correcte ?
 
 **Si messages bizarres/illisibles :**
 
-- Vérifier que le baud rate = 9600
+- Vérifier que le baud rate = 9 600
 - Si toujours illisible → Problème oscillateur (fréquence incorrecte)
 
 Erreur « Out of Memory » lors de la Compilation
@@ -612,11 +612,11 @@ Valeurs de Référence
  * - Sans charge (0 W réel)
    - 0 W ±10 W
    - Normal
- * - Avec charge 2000 W
-   - 1900-2100 W
+ * - Avec charge 2 000 W
+   - 1 900-2100 W
    - ±5% après étalonnage
- * - Production 3000 W
-   - 2850-3150 W
+ * - Production 3 000 W
+   - 2 850-3150 W
    - ±5%
  * - Écart >20%
    - Problème matériel
@@ -657,7 +657,7 @@ Valeurs de Référence
 **Procédure recommandée :**
 
 #. Couper TOUS les autres appareils
-#. Utiliser une charge purement résistive 1500-2000 W
+#. Utiliser une charge purement résistive 1 500-2000 W
 #. Laisser stabiliser 5 minutes
 #. Mesurer avec un instrument calibré
 #. Ajuster calibration
@@ -855,7 +855,7 @@ Vérifications Charge
 - ☐ Thermostat pas coupé manuellement ?
 - ☐ Résistance chauffe-eau fonctionnelle ?
 
- - Tester résistance : doit être ~25-30 Ω pour 2000 W
+ - Tester résistance : doit être ~25-30 Ω pour 2 000 W
  - Si infinie → Résistance coupée/brûlée
 
 **Radiateur électrique :**
@@ -886,8 +886,8 @@ Triac Surchauffe
    - Vérifier que la charge connectée ne dépasse pas cette limite
    - Exemples :
 
-     - ✅ Chauffe-eau 2000-3000 W : OK
-     - ✅ Radiateur électrique 2000 W : OK
+     - ✅ Chauffe-eau 2 000-3000 W : OK
+     - ✅ Radiateur électrique 2 000 W : OK
      - ❌ Charge >3 kW : Dépasse les spécifications !
 
 #. **Dissipateur mal orienté**
