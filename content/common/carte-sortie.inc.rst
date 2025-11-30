@@ -8,8 +8,8 @@
 
 ⚠️ **Niveau de risque** : Élevé (haute puissance, risque d’incendie)
 
-| Le triac, également connu sous le nom de triode pour courant alternatif, appartient à la catégorie des thyristors et sert d'interrupteur semi-conducteur. Il a la capacité unique de gérer le courant dans les deux directions, ce qui le rend idéal pour les applications utilisant du courant alternatif (AC).
-| Utilisé pour ajuster la puissance fournie à des dispositifs purement résistifs comme des radiateurs, des chauffe-eau ou des lampes à incandescence, le triac permet de moduler avec précision l'énergie distribuée. Cela offre un contrôle fin sur le niveau de chaleur ou d'éclairage produit.
+| Le triac, également connu sous le nom de triode pour courant alternatif, appartient à la catégorie des thyristors et sert d’interrupteur semi-conducteur. Il a la capacité unique de gérer le courant dans les deux directions, ce qui le rend idéal pour les applications utilisant du courant alternatif (AC).
+| Utilisé pour ajuster la puissance fournie à des dispositifs purement résistifs comme des radiateurs, des chauffe-eau ou des lampes à incandescence, le triac permet de moduler avec précision l’énergie distribuée. Cela offre un contrôle fin sur le niveau de chaleur ou d’éclairage produit.
 
 .. contents:: Sommaire
    :local:
@@ -115,9 +115,74 @@ Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet o
 #. triac
 
 .. danger::
+   ⚠️⚠️⚠️ **DANGER — RISQUE D’INCENDIE** ⚠️⚠️⚠️
+
    Il est crucial de prêter une attention particulière à la **qualité** des soudures sur la section **haute tension** de cette carte.
 
-   Une soudure mal réalisée peut provoquer une défaillance immédiate de la carte lors de la mise sous tension, avec un risque d’incendie.
+   Une soudure haute puissance défectueuse peut provoquer :
+
+   **Scénarios Dangereux**
+
+   #. **Surchauffe** → Fonte des plastiques → Dégagement toxique → Incendie
+   #. **Arc électrique** → Étincelles → Ignition matériaux → Incendie
+   #. **Court-circuit** → Chaleur intense → Fusion composants → Incendie
+
+   **La carte peut prendre feu SANS AVERTISSEMENT à la mise sous tension !**
+
+Mesures de Sécurité OBLIGATOIRES
+’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’
+
+Avant de commencer cette section :
+
+☐ **Extincteur présent** — Type ABC minimum, à portée de main
+
+☐ **Détecteur de fumée** — Fonctionnel et testé
+
+☐ **Surface ininflammable** — Travailler sur métal, céramique (PAS bois/plastique)
+
+☐ **Quelqu’un d’autre présent** — En cas d’urgence
+
+☐ **Savoir où est le tableau électrique** — Pour couper alimentation si fumée
+
+☐ **Fenêtres ouvertes** — Pour ventilation et évacuation fumée
+
+☐ **Connaître itinéraire évacuation** — Ne jamais bloquer sorties
+
+Pendant le Premier Test
+’’’’’’’’’’’’’’’’’’’’’’’’
+
+- ⚠️ Rester à côté pendant les 5 premières minutes de fonctionnement
+- ⚠️ Surveiller odeurs inhabituelles (plastique brûlé)
+- ⚠️ Surveiller fumée
+- ⚠️ Écouter grésillements anormaux
+
+En Cas de Fumée ou Odeur de Brûlé
+’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’
+
+#. **COUPER ALIMENTATION IMMÉDIATEMENT** (disjoncteur)
+#. **NE PAS TOUCHER le routeur** (peut être très chaud)
+#. **Si flammes visibles** → Utiliser extincteur CO₂ ou poudre (PAS D’EAU !)
+#. **Si fumée importante** → Évacuer et appeler pompiers (18)
+#. **Laisser refroidir 30 minutes** minimum avant d’inspecter
+
+Vérification de Qualité
+’’’’’’’’’’’’’’’’’’’’’’’’
+
+Avant de mettre sous tension, vérifiez (loupe recommandée) :
+
+☐ Soudure brillante et lisse (pas terne/granuleuse)
+
+☐ Remplissage complet du trou traversant
+
+☐ Soudure visible des DEUX côtés du :term:`PCB`
+
+☐ Pas de micro-fissures
+
+☐ Pas de soudure débordant sur pistes voisines
+
+⚠️ **Si UN SEUL point n’est pas parfait → REFAIRE LA SOUDURE !**
+
+**Votre vie et votre maison valent plus que 5 minutes de travail supplémentaire.**
 
 Installation des *agrafes* en cuivre massif
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -194,7 +259,9 @@ Soudure de la partie *haute puissance*/*haute tension*
 .. danger::
    La qualité des soudures est d’une importance **capitale** pour cette étape.
 
-   Une soudure mal réalisée peut provoquer une défaillance immédiate de la carte lors de la mise sous tension, avec un risque d’incendie.
+   **Rappel :** Voir les mesures de sécurité OBLIGATOIRES et la vérification de qualité au début de ce chapitre.
+
+   Une soudure défectueuse peut provoquer un incendie lors de la mise sous tension !
 
 Connecteur haute puissance
 """"""""""""""""""""""""""

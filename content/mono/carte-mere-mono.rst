@@ -149,8 +149,49 @@ Ensuite, on installe généralement les supports pour les circuits intégrés.
 .. attention::
    Chaque support a une encoche à une extrémité. Celle-ci doit être alignée avec la marque correspondante sur la couche sérigraphiée, comme indiqué ici.
 
-Avec le support convenablement soutenu par le bas (on peut aussi utiliser un morceau d’adhésif), les deux broches situées dans les coins opposés peuvent être soudées en place. |br|
-Si un réalignement du composant est nécessaire, il doit être effectué **avant** que les broches restantes ne soient fixées.
+Méthode Recommandée pour Débutants
+’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’’
+
+#. Découpez un morceau de ruban adhésif de masquage (scotch beige/papier)
+
+   Taille : environ 2 cm × 2 cm
+
+#. Insérez le support IC dans le :term:`PCB`
+
+   ⚠️ Vérifiez l’alignement de l’encoche avec le marquage :term:`PCB`
+
+#. Retournez le :term:`PCB` (face soudure dessous)
+
+#. Collez le ruban sur le support pour le maintenir en place
+
+   Le ruban doit maintenir fermement le support contre le :term:`PCB`
+
+#. Soudez UNE broche dans un coin
+
+   Choisissez n’importe quel coin pour commencer
+
+#. Vérifiez l’alignement
+
+   - Support bien plaqué contre le :term:`PCB` (pas d’espace)
+   - Encoche correctement orientée
+   - Toutes les broches bien insérées dans les trous
+
+#. Si OK : Soudez la broche du coin opposé en diagonale
+
+   Cela bloque définitivement le support en position
+
+#. Si NOK : Refondez la première soudure et réalignez
+
+   Vous pouvez chauffer la soudure et ajuster doucement
+
+#. Retirez le ruban adhésif
+
+#. Soudez toutes les broches restantes
+
+   Faites le tour méthodiquement, vérifiez chaque soudure
+
+.. tip::
+   **Alternative sans ruban :** Vous pouvez maintenir le support avec votre doigt (côté composant) pendant que vous soudez la première broche. Attention à ne pas vous brûler !
 
 .. figure:: ../img/Carte-mere-mono-03.png
    :align: center
@@ -167,7 +208,7 @@ Si un réalignement du composant est nécessaire, il doit être effectué **avan
 
    ☐ Orientation correcte : encoche alignée avec marquage PCB
 
-   ☐ Supports bien plaqués contre le PCB (pas d'espace)
+   ☐ Supports bien plaqués contre le PCB (pas d’espace)
 
    ☐ Soudures brillantes et lisses
 

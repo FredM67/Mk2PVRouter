@@ -3,27 +3,27 @@
 Introduction
 ============
 
-| Cette documentation est applicable à toutes les versions du Mk2PVRouter, qu'elles soient monophasées ou triphasées.
+| Cette documentation est applicable à toutes les versions du Mk2PVRouter, qu’elles soient monophasées ou triphasées.
 | La majorité des informations sont pertinentes pour les deux versions.
 | Chaque version a son propre chapitre.
 
 .. danger::
-   ⚠️ **SÉCURITÉ AVANT TOUT** : Avant de commencer l'assemblage, lisez impérativement le chapitre :ref:`safety-overview`.
+   ⚠️ **SÉCURITÉ AVANT TOUT** : Avant de commencer l’assemblage, lisez impérativement le chapitre :ref:`safety-overview`.
 
    Ce projet implique la manipulation de composants électroniques sensibles et, plus tard, de tensions dangereuses (230 V).
 
-**Niveau de difficulté :** 🔧🔧🔧 Intermédiaire
+**Niveau de difficulté :** 🔧🔧🔧 Intermédiaire
 
 - Nécessite des compétences de base en soudure
 - Une bonne dextérité manuelle
 - De la patience et de la minutie
 
-**Durée totale estimée :**
+**Durée totale estimée :**
 
-⏱️ **Temps d'assemblage complet :**
-   - Débutant en soudure : 12-15 heures (réparties sur plusieurs sessions)
-   - Expérience intermédiaire : 8-10 heures
-   - Expérimenté : 5-7 heures
+⏱️ **Temps d’assemblage complet :**
+   - Débutant en soudure : 12-15 heures (réparties sur plusieurs sessions)
+   - Expérience intermédiaire : 8-10 heures
+   - Expérimenté : 5-7 heures
 
 .. tip::
    Il est recommandé de travailler par sessions de 2-3 heures maximum pour maintenir concentration et précision.
@@ -55,7 +55,7 @@ L’assemblage complet va nécessiter plusieurs étapes :
 #. Installation du logiciel et firmware (voir chapitre :ref:`installation-logiciel`)
 #. Tests et étalonnage
 
-**Durées indicatives par étape :**
+**Durées indicatives par étape :**
 
 .. list-table::
    :header-rows: 1
@@ -90,7 +90,46 @@ Les composants électroniques nécessaires sont très divers. Certains sont pass
 Tous ces composants sont généralement sensibles à l’électricité statique.
 Il est donc essentiel de les manipuler avec soin et, si possible, de se mettre à la terre pour éviter toute décharge électrostatique.
 
-Certains composants sont polarisés (comme les diodes et certains condensateurs), tandis que d’autres ne le sont pas (comme les résistances et d’autres condensateurs). Il est donc crucial de faire attention à l’orientation des composants AVANT de les souder. L’orientation est généralement indiquée directement sur la carte mère.
+Composants Polarisés — Explication pour Débutants
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Certains composants ont un **SENS OBLIGATOIRE** (comme une pile : + et -).
+
+.. danger::
+   ⚠️ Si installés à l’envers :
+
+   - Le routeur NE FONCTIONNERA PAS
+   - Le composant peut **EXPLOSER** (condensateurs électrolytiques)
+   - Vous devrez tout refaire
+
+Composants à Surveiller
+’’’’’’’’’’’’’’’’’’’’’’’’
+
+**1. Diodes** — Repérer la bande
+
+   La bande sur la diode DOIT correspondre à la bande sur le :term:`PCB`.
+
+   Les diodes ne laissent passer le courant que dans un sens. Si inversées, elles empêchent le circuit de fonctionner.
+
+**2. Condensateurs électrolytiques** — Repérer la bande blanche (-)
+
+   La bande blanche (parfois avec des signes -) indique le côté négatif.
+
+   Ces condensateurs peuvent exploser s’ils sont soudés à l’envers !
+
+**3. Circuits intégrés (IC)** — Repérer l’encoche ou le point
+
+   L’encoche (ou le point marquant la broche 1) doit correspondre au dessin sur le :term:`PCB`.
+
+   Les IC mal orientés ne fonctionneront pas et peuvent être endommagés.
+
+**4. Régulateurs de tension** — Forme du boîtier
+
+   Le régulateur a une forme particulière qui doit correspondre au dessin sur le :term:`PCB`.
+
+💡 **Règle d’or :** VÉRIFIER 3 FOIS AVANT DE SOUDER !
+
+Les composants non polarisés (résistances, condensateurs céramiques) peuvent être soudés dans n’importe quel sens.
 
 Les composants varient également en taille, allant de quelques millimètres à plusieurs centimètres (dans le cas des transformateurs).
 

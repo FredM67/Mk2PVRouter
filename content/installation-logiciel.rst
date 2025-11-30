@@ -1,8 +1,8 @@
 .. _installation-logiciel:
 
 
-Installation du Logiciel
-========================
+Installation des Logiciels
+==========================
 
 Ce chapitre détaille l’installation complète de l’environnement de développement Arduino et la programmation du firmware du Mk2PVRouter.
 
@@ -17,8 +17,8 @@ Ce chapitre détaille l’installation complète de l’environnement de dévelo
 .. _install-etape1-ftdi:
 
 
-Étape 1 : Installation Pilotes FTDI
-===================================
+Installation Pilotes FTDI
+=========================
 
 Les pilotes FTDI sont **OBLIGATOIRES** pour communiquer avec le routeur via le programmateur USB.
 
@@ -115,8 +115,8 @@ Ajouter l’utilisateur au groupe dialout
    Le redémarrage est nécessaire pour que les changements prennent effet.
 
 
-Étape 2 : Choix de l’Environnement de Développement
-===================================================
+Choix de l’Environnement de Développement
+=========================================
 
 Vous avez deux options pour programmer le Mk2PVRouter :
 
