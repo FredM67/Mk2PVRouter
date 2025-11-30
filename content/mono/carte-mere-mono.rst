@@ -94,6 +94,20 @@ Les valeurs des résistances sont indiquées sur le schéma de circuit et sont r
    
    .. include:: ../common/burden-calc.inc.rst
 
+.. admonition:: ✅ Point de Contrôle — Résistances
+
+   Avant de continuer, vérifiez :
+
+   ☐ Toutes les résistances sont soudées aux bons emplacements
+
+   ☐ Les valeurs des résistances correspondent au schéma
+
+   ☐ Soudures brillantes et lisses (pas ternes/granuleuses)
+
+   ☐ Pas de pont entre les pistes
+
+   ☐ Pattes coupées à ras du PCB
+
 Diodes
 ^^^^^^
 
@@ -113,6 +127,20 @@ Celles-ci offrent un certain degré de protection au processeur lorsque des cour
 
    Carte-mère avec diodes soudées
 
+.. admonition:: ✅ Point de Contrôle — Diodes
+
+   Avant de continuer, vérifiez :
+
+   ☐ Les 4 diodes (D1-D4) sont soudées
+
+   ☐ Orientation correcte : bande sur diode alignée avec marquage PCB
+
+   ☐ Soudures brillantes et lisses
+
+   ☐ Pas de pont entre les pistes
+
+   ☐ Pattes coupées à ras du PCB
+
 Supports circuits intégrés
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -130,6 +158,20 @@ Si un réalignement du composant est nécessaire, il doit être effectué **avan
    :scale: 50%
 
    Carte-mère avec supports CI soudés
+
+.. admonition:: ✅ Point de Contrôle — Supports CI
+
+   Avant de continuer, vérifiez :
+
+   ☐ Tous les supports CI sont soudés
+
+   ☐ Orientation correcte : encoche alignée avec marquage PCB
+
+   ☐ Supports bien plaqués contre le PCB (pas d'espace)
+
+   ☐ Soudures brillantes et lisses
+
+   ☐ Pas de pont entre les broches
 
 Condensateurs céramiques et oscillateur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -164,6 +206,20 @@ Les condensateurs céramiques sont en général orange, et ont la forme d’une 
    :scale: 50%
 
    Carte-mère avec condensateurs céramiques soudés
+
+.. admonition:: ✅ Point de Contrôle — Condensateurs et oscillateur
+
+   Avant de continuer, vérifiez :
+
+   ☐ Oscillateur et ses 2 condensateurs (C10, C11 = 22 pF) soudés
+
+   ☐ Tous les condensateurs céramiques soudés (C4, C6-C9 = 100 nF)
+
+   ☐ Soudures brillantes et lisses
+
+   ☐ Pas de pont entre les pistes
+
+   ☐ Pattes coupées à ras du PCB
 
 Pont redresseur ou pont de diodes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
