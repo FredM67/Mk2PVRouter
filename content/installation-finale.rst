@@ -129,7 +129,7 @@ Matériel de Sécurité Requis
 
 ☐ **Multimètre numérique** CAT III ou CAT IV (600 V minimum)
 
-☐ **Testeur de tension sans contact** (VAT - Voltage Alert Tester)
+☐ **Testeur de tension sans contact** (VAT — Voltage Alert Tester)
 
 ☐ **Tournevis isolés** 1 000 V
 
@@ -154,7 +154,7 @@ Emplacement des CT
 
 **CT Grille — Mesure de la consommation/injection réseau**
 
-   CT(s) à clip installé(s) sur le câble de **phase** principal arrivant du compteur Linky/Enedis
+   CT·s à clip installé·s sur le câble de **phase** principal arrivant du compteur Linky/Enedis
 
    - **Monophasé** : 1 CT à clip sur la phase unique (CT1)
    - **Triphasé** : 3 CT à clip sur les 3 phases (CT1, CT2, CT3)
