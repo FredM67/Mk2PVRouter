@@ -3,7 +3,13 @@
 Étalonnage
 ==========
 
-Lorsqu’il fonctionne avec les paramètres par défaut, le routeur Mk2PVRouter peut dévier de manière fiable l’énergie excédentaire sans nécessiter d’étalonnage. Cependant, pour fournir une indication précise de l’énergie déviée, le système doit être étalonné.
+⏱️ **Temps estimé** : 45 min-1 heure (débutant), 20-30 min (expérimenté)
+
+🔧 **Niveau de difficulté** : Intermédiaire
+
+⚠️ **Niveau de risque** : Élevé (manipulation 230 V sous tension)
+
+Lorsqu'il fonctionne avec les paramètres par défaut, le routeur Mk2PVRouter peut dévier de manière fiable l'énergie excédentaire sans nécessiter d'étalonnage. Cependant, pour fournir une indication précise de l'énergie déviée, le système doit être étalonné.
 
 Pour un étalonnage précis, une certaine forme de référence standard est nécessaire. Le compteur d’électricité installé peut souvent être utilisé à cette fin.
 

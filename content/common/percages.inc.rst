@@ -1,6 +1,12 @@
 Perçages
 ========
 
+⏱️ **Temps estimé** : 1,5-2 heures (débutant), 45 min-1 heure (expérimenté)
+
+🔧 **Niveau de difficulté** : Intermédiaire
+
+⚠️ **Niveau de risque** : Moyen (perceuse, copeaux, bruit)
+
 Les boîtiers utilisés pour ce routeur sont de type industriel, fabriqués en ABS avec un retardateur de flamme.
 Ils sont conformes aux normes de sécurité industrielles.
 
@@ -19,6 +25,22 @@ Pour le reste — témoins LED, etc. — ils peuvent être montés n’importe o
 Cependant, ce guide décrira l’implantation la plus classique.
 
 .. include:: ../common/outils.inc.rst
+
+.. admonition:: 📋 Prérequis
+
+   Avant de commencer ce chapitre :
+
+   ☐ Chapitre :ref:`safety-overview` lu et compris (section perçage)
+
+   ☐ Cartes assemblées et testées
+
+   ☐ Outils de perçage à disposition (perceuse, mèches, gabarits)
+
+   ☐ Temps disponible (1,5-2 heures pour débutant)
+
+   ☐ Équipement de protection (lunettes, gants)
+
+   ☐ Espace de travail propre avec étau ou serre-joints
 
 .. include:: ../common/etapes-prepa.inc.rst
 

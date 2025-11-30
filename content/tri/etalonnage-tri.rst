@@ -3,7 +3,13 @@
 Étalonnage
 ==========
 
-Contrairement à la version monophasée, le modèle triphasé ne peut pas dévier de manière fiable l’énergie excédentaire sans nécessiter un étalonnage aussi précis que possible.
+⏱️ **Temps estimé** : 1-2 heures (débutant), 30-45 min (expérimenté)
+
+🔧 **Niveau de difficulté** : Avancé
+
+⚠️ **Niveau de risque** : Très élevé (manipulation 230 V sous tension)
+
+Contrairement à la version monophasée, le modèle triphasé ne peut pas dévier de manière fiable l'énergie excédentaire sans nécessiter un étalonnage aussi précis que possible.
 En effet, étant donné qu’en triphasé, le routeur calcule la somme algébrique des puissances instantanées sur chaque phase, il faut que les mesures soient aussi précises que possible.
 
 Les composants électroniques ne sont jamais parfaits. Ils ont chacun des caractéristiques données accompagnées d’une tolérance. Les tolérances classiques sont de 5 ou 10 %. Il convient donc d’étalonner chaque ligne de mesure afin que la somme finale soit la plus juste possible.

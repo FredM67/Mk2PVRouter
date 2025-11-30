@@ -2,12 +2,34 @@
 Étage de sortie
 ---------------
 
-| Le triac, également connu sous le nom de triode pour courant alternatif, appartient à la catégorie des thyristors et sert d’interrupteur semi-conducteur. Il a la capacité unique de gérer le courant dans les deux directions, ce qui le rend idéal pour les applications utilisant du courant alternatif (AC).
-| Utilisé pour ajuster la puissance fournie à des dispositifs purement résistifs comme des radiateurs, des chauffe-eau ou des lampes à incandescence, le triac permet de moduler avec précision l’énergie distribuée. Cela offre un contrôle fin sur le niveau de chaleur ou d’éclairage produit.
+⏱️ **Temps estimé** : 2-3 heures (débutant), 1-1,5 heures (expérimenté)
+
+🔧 **Niveau de difficulté** : Avancé
+
+⚠️ **Niveau de risque** : Élevé (haute puissance, risque d’incendie)
+
+| Le triac, également connu sous le nom de triode pour courant alternatif, appartient à la catégorie des thyristors et sert d'interrupteur semi-conducteur. Il a la capacité unique de gérer le courant dans les deux directions, ce qui le rend idéal pour les applications utilisant du courant alternatif (AC).
+| Utilisé pour ajuster la puissance fournie à des dispositifs purement résistifs comme des radiateurs, des chauffe-eau ou des lampes à incandescence, le triac permet de moduler avec précision l'énergie distribuée. Cela offre un contrôle fin sur le niveau de chaleur ou d'éclairage produit.
 
 .. contents:: Sommaire
    :local:
    :depth: 1
+
+.. admonition:: 📋 Prérequis
+
+   Avant de commencer ce chapitre :
+
+   ☐ Chapitre :ref:`safety-overview` lu et compris
+
+   ☐ Carte-mère complètement assemblée et testée
+
+   ☐ Outils nécessaires à disposition (fer à souder haute puissance, pince coupante, tournevis)
+
+   ☐ Temps disponible (2-3 heures pour débutant)
+
+   ☐ Extincteur à proximité (soudure haute puissance)
+
+   ☐ Lecture complète du chapitre avant de commencer
 
 Principe de Fonctionnement d’une Sortie Triac
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

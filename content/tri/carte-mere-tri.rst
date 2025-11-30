@@ -3,6 +3,12 @@
 Carte-mère triphasée
 --------------------
 
+⏱️ **Temps estimé** : 4-5 heures (débutant), 2,5-3,5 heures (expérimenté)
+
+🔧 **Niveau de difficulté** : Intermédiaire
+
+⚠️ **Niveau de risque** : Moyen (soudure, composants sensibles)
+
 Plusieurs versions du :term:`PCB` peuvent exister.
 
 Bien qu’elles fonctionnent toutes de la même manière, chaque nouvelle version offre plus de flexibilité que la précédente ainsi que quelques améliorations mineures, essentiellement des aspects pratiques (facilité d’accès des entrées/sorties de l’Arduino…).
@@ -17,6 +23,20 @@ Bien qu’elles fonctionnent toutes de la même manière, chaque nouvelle versio
 
 .. note::
    Une version courte de ce guide, contenant uniquement les photos des étapes de soudure, est disponible :ref:`ici <carte-mere-tri-short>`.
+
+.. admonition:: 📋 Prérequis
+
+   Avant de commencer ce chapitre :
+
+   ☐ Chapitre :ref:`safety-overview` lu et compris
+
+   ☐ Outils nécessaires à disposition (fer à souder, pince coupante, loupe)
+
+   ☐ Temps disponible (4-5 heures pour débutant)
+
+   ☐ Espace de travail propre et organisé
+
+   ☐ Lecture complète du chapitre avant de commencer
 
 -------------
 
