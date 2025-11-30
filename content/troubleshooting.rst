@@ -47,8 +47,11 @@ Ce guide couvre les versions **monophasée** et **triphasée** du Mk2PVRouter.
    - 1 CT (phase principale)
    - 3 CT (un par phase)
  * - Sorties triac
-   - 1 ou plusieurs
-   - 3 ou plus (selon modèle)
+   - 1 ou plusieurs (selon modèle)
+   - 1 ou plusieurs (selon modèle)
+ * - Sorties relais
+   - 0 ou plusieurs (selon modèle)
+   - 0 ou plusieurs (selon modèle)
 
 .. note::
  Dans ce guide, les instructions utilisent la notation :
@@ -257,7 +260,7 @@ Vérifications de la Connexion FTDI
 
  #. ☐ **Routeur alimenté en 230 V ?**
 
-    - Le FTDI ne fournit **PAS** assez de courant
+    - Le FTDI ne fournit **PAS** de courant
     - Alimentation secteur obligatoire
 
  #. ☐ **Bon port COM sélectionné dans Arduino IDE ?**

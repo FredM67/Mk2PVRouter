@@ -70,6 +70,13 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 2
+   :caption: 🔧 Tutoriel Soudure
+   :hidden:
+
+   soldering-tutorial
+
+.. toctree::
+   :maxdepth: 2
    :caption: 📖 Introduction
    :hidden:
 
