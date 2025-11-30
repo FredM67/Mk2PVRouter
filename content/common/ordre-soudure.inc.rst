@@ -12,7 +12,6 @@ Ordre de soudure
 
 Voici l’ordre de soudure recommandé :
 
-#. *jumper·s*,
 #. résistances,
 #. diodes,
 #. socles de circuits intégrés,
