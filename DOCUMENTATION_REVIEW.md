@@ -344,19 +344,24 @@ Elles ne remplacent PAS une formation professionnelle en électricité.
 
 ## 🟡 IMPORTANT ISSUES (Should Fix Soon)
 
-### 4. NO COMPONENT IDENTIFICATION GUIDE
-**Missing:** Visual guide to identify components before soldering
-**Impact:** Wrong components soldered, polarity errors
-**Priority:** 🟡 HIGH
-**Effort:** 6-8 hours
+### 4. 🔄 COMPONENT IDENTIFICATION GUIDE - PARTIAL
+**Status:** Resistors pre-labeled, other components need guide
+**Impact:** Reduced risk for resistors, but other components still need identification help
+**Priority:** 🟡 MEDIUM (reduced from HIGH due to resistor labeling)
+**Effort:** 4-6 hours (reduced from 6-8)
+
+**What exists:**
+- ✅ Resistors delivered taped on paper with references and values
+- ✅ Other components loose or stuck in foam (visual identification possible but no guide)
 
 **Action Required:**
-- [ ] Create new file: `content/component-identification.rst`
-- [ ] Photo of each component type in kit
-- [ ] How to read resistor color codes
+- [ ] Create component identification section in introduction or separate file
+- [ ] Focus on non-resistor components (capacitors, ICs, diodes, transformers)
 - [ ] How to identify capacitor values and polarity
 - [ ] How to identify IC orientation (pin 1, notch)
-- [ ] Add before introduction chapter
+- [ ] How to identify diode polarity (band marking)
+- [ ] Photos of each component type as delivered in kit
+- [ ] Resistor color code reference (as backup if labels damaged)
 
 ---
 
@@ -587,7 +592,7 @@ Start each chapter with:
 | # | Task | File | Hours | Status |
 |---|------|------|-------|--------|
 | 7 | Create prerequisite assessment | `NEW: prerequisite-quiz.rst` | 3-4 | ⬜ TODO |
-| 8 | Add component identification guide | `NEW: component-id.rst` | 6-8 | ⬜ TODO |
+| 8 | Add component identification guide | `NEW: component-id.rst` | 4-6 | 🔄 PARTIAL |
 | 9 | Add soldering tutorial | `NEW: soldering-tutorial.rst` | 8-12 | ⬜ TODO |
 | 10 | Add tool usage & safety guides | `safety-overview.rst` | 4-5 | ✅ DONE |
 | 11 | Expand glossary with basic terms | `glossary.rst` | 6-8 | ✅ DONE |
