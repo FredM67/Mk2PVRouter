@@ -494,13 +494,13 @@ Elles ne remplacent PAS une formation professionnelle en électricité.
 **Effort:** 8-12 hours
 
 **Action Required:**
-- [ ] Create new file: `content/soldering-tutorial.rst`
-- [ ] Basic soldering technique (how to hold iron, apply solder)
-- [ ] Good vs bad solder joints (photos)
-- [ ] Temperature settings
-- [ ] Common mistakes
-- [ ] Desoldering techniques (fixing mistakes)
-- [ ] Practice recommendations (buy cheap kit to practice)
+- [x] Create new file: `content/soldering-tutorial.rst` (780 lines)
+- [x] Basic soldering technique (5-step process, hold iron, timing)
+- [x] Good vs bad solder joints (detailed descriptions)
+- [x] Temperature settings (320-380°C depending on solder type)
+- [x] Common mistakes (TOP 10 beginner errors)
+- [x] Desoldering techniques (pump, wick, fresh solder method)
+- [x] Practice recommendations (kit 5-15€, 3 exercises with success criteria)
 
 ---
 
@@ -607,7 +607,7 @@ Elles ne remplacent PAS une formation professionnelle en électricité.
 | `installation-logiciel.rst` | Software installation guide | 🔴 CRITICAL | 6-8h | ✅ DONE |
 | `installation-finale.rst` | Mains connection safety | 🔴 CRITICAL | 6-8h | ✅ COMPLETE |
 | `component-identification.rst` | Visual component guide | 🟡 HIGH | 4-6h | 🔄 PARTIAL |
-| `soldering-tutorial.rst` | Beginner soldering | 🟡 HIGH | 8-12h | ⬜ TODO |
+| `soldering-tutorial.rst` | Beginner soldering | 🟡 HIGH | 8-12h | ✅ COMPLETE |
 
 ---
 
