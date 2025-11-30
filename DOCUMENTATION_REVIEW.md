@@ -457,6 +457,8 @@ Elles ne remplacent PAS une formation professionnelle en électricité.
 | `installation-logiciel.rst` | 9/10 ✅ | **NEW:** Comprehensive installation guide with logical step ordering. |
 | `safety-overview.rst` | 9/10 ✅ | **NEW:** Comprehensive safety chapter covering all hazards (684 lines). |
 | `troubleshooting.rst` | 8.5/10 ✅ | **NEW:** Detailed troubleshooting guide with mono/tri comparison (1,159 lines). |
+| `mono/test-logiciel-mono.rst` | 8/10 ✅ | **COMPLETE:** Properly structured with includes to common requirements and installation guide. |
+| `tri/test-logiciel-tri.rst` | 8/10 ✅ | **COMPLETE:** Properly structured with includes and testing procedures. |
 
 ### ⚠️ Needs Improvement
 
@@ -473,7 +475,6 @@ Elles ne remplacent PAS une formation professionnelle en électricité.
 |------|--------------|--------|----------|
 | `common/confection-cables.rst` | 2/10 | ❌ Missing measurements | 🔴 BLOCKING |
 | `mono/assemblage-mono.rst` | 1/10 | ❌ Only 17 lines | 🔴 HIGH |
-| `mono/test-logiciel-mono.rst` | 3/10 | ❌ No software guide | 🔴 BLOCKING |
 
 ### 🚫 Missing Sections (Must Create)
 
@@ -481,11 +482,10 @@ Elles ne remplacent PAS une formation professionnelle en électricité.
 |----------------|---------|----------|--------|--------|
 | `safety-overview.rst` | Unified safety chapter | 🔴 CRITICAL | 6-8h | ✅ DONE |
 | `troubleshooting.rst` | Problem diagnosis | 🔴 CRITICAL | 8-10h | ✅ DONE |
-| `installation-logiciel.inc.rst` | Software installation guide | 🔴 CRITICAL | 6-8h | ✅ DONE |
+| `installation-logiciel.rst` | Software installation guide | 🔴 CRITICAL | 6-8h | ✅ DONE |
 | `installation-finale.rst` | Mains connection safety | 🔴 CRITICAL | 6-8h | ⬜ TODO |
-| `component-identification.rst` | Visual component guide | 🟡 HIGH | 6-8h | ⬜ TODO |
+| `component-identification.rst` | Visual component guide | 🟡 HIGH | 4-6h | 🔄 PARTIAL |
 | `soldering-tutorial.rst` | Beginner soldering | 🟡 HIGH | 8-12h | ⬜ TODO |
-| `tool-usage.rst` | Tool safety & usage | 🟡 HIGH | 4-5h | ⬜ TODO |
 
 ---
 
