@@ -152,16 +152,18 @@ Emplacement des CT
 
    Position recommandée des capteurs de courant sur l’installation
 
-**CT1 (CT Grille) — Mesure de la consommation/injection réseau**
+**CT Grille — Mesure de la consommation/injection réseau**
 
-   Se place sur le câble de **phase** principal arrivant du compteur Linky/Enedis
+   CT(s) à clip installé(s) sur le câble de **phase** principal arrivant du compteur Linky/Enedis
 
-   - **Monophasé** : 1 CT sur la phase unique
-   - **Triphasé** : 3 CT sur les 3 phases (CT1, CT2, CT3)
+   - **Monophasé** : 1 CT à clip sur la phase unique (CT1)
+   - **Triphasé** : 3 CT à clip sur les 3 phases (CT1, CT2, CT3)
 
-**CT2 (CT Diversion) — Mesure de la puissance routée** (optionnel mais recommandé)
+**CT Diversion — Mesure de la puissance routée** (optionnel)
 
-   Se place sur le câble de **phase** alimentant la charge (chauffe-eau)
+   CT **intégré dans le boîtier** du Mk2PVRouter, connecté sur le câble relié à la charge
+
+   ⚠️ Ce CT n’est **PAS** un CT à clip externe comme les CT Grille
 
 Sens d’Installation des CT
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -237,28 +239,51 @@ Connexions Électriques au Tableau
 
    Faites appel à un professionnel certifié.
 
-Protection par Disjoncteur Dédié
+Protection Électrique du Système
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Le Mk2PVRouter **DOIT** être protégé par un disjoncteur dédié :
+.. note::
+   **Architecture du système :**
+
+   - Le **Mk2PVRouter lui-même** consomme moins de **5 W** (alimentation électronique uniquement)
+   - Les **circuits de puissance** (triacs) sont **indépendants** et pilotent les charges
+   - Chaque **charge** (chauffe-eau, radiateur) conserve sa **propre protection** existante
+
+Le Mk2PVRouter **électronique** nécessite un disjoncteur dédié pour son alimentation :
 
 - **Type** : Disjoncteur divisionnaire bipolaire (Phase + Neutre)
-- **Calibre** : 16 A (pour charge jusqu’à 3 680 W en 230 V)
+- **Calibre** : 2 A ou 6 A (suffisant pour l’électronique < 5 W)
 - **Courbe** : Type C (protection usage courant)
 - **Pouvoir de coupure** : Minimum 4,5 kA (6 kA ou 10 kA recommandé)
 
 .. important::
    ⚠️ **POURQUOI UN DISJONCTEUR DÉDIÉ ?**
 
-   - Isolation : Permet de couper uniquement le routeur sans affecter le reste de la maison
-   - Protection : Coupe en cas de surcharge ou court-circuit
-   - Maintenance : Facilite les interventions futures
-   - Sécurité : En cas de défaut, seul le routeur est déconnecté
+   - **Isolation** : Permet de couper uniquement le routeur sans affecter les charges
+   - **Protection** : Protège l’électronique du routeur uniquement
+   - **Maintenance** : Facilite les interventions futures
+   - **Sécurité** : En cas de défaut électronique, seul le routeur est déconnecté
 
-Section de Câbles Requise
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. warning::
+   **Les charges restent protégées par leurs disjoncteurs d’origine**
 
-La section des câbles dépend de la **puissance maximale** de la charge :
+   Le Mk2PVRouter ne remplace PAS la protection existante des charges :
+
+   - Chauffe-eau : Conserve son disjoncteur 16 A ou 20 A
+   - Radiateur : Conserve son disjoncteur adapté à sa puissance
+   - Le routeur **pilote** les triacs, mais ne **protège pas** les charges
+
+Câblage du Mk2PVRouter
+^^^^^^^^^^^^^^^^^^^^^^^
+
+**Pour l’alimentation du Mk2PVRouter électronique (< 5 W) :**
+
+- **Section** : 0,75 mm² ou 1,5 mm² (largement suffisant)
+- **Protection** : Disjoncteur 2 A ou 6 A
+
+**Pour les charges pilotées (les câbles existants sont conservés) :**
+
+La section des câbles des charges dépend de leur puissance (ces câbles sont normalement **déjà installés**) :
 
 .. list-table::
    :header-rows: 1
@@ -281,7 +306,11 @@ La section des câbles dépend de la **puissance maximale** de la charge :
      - 32 A
 
 .. note::
-   Pour un **chauffe-eau classique 2 000-3 000 W**, utiliser du **2,5 mm²** avec disjoncteur **16 A**.
+   **Ces sections concernent les charges uniquement, PAS le Mk2PVRouter.**
+
+   Pour un **chauffe-eau classique 2 000-3 000 W**, les câbles existants sont normalement en **2,5 mm²** avec disjoncteur **16 A** ou **20 A**.
+
+   Le Mk2PVRouter se branche **en parallèle** pour piloter la charge, il ne remplace pas ces câbles.
 
 Schéma de Raccordement
 ^^^^^^^^^^^^^^^^^^^^^^
