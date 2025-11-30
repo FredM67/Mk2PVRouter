@@ -124,7 +124,7 @@ f02215d docs: improve French phrasing in IC socket procedure
 - ✅ **Proper French Typography** - DONE
   - Applied inclusive writing with interpunct (Pont·s redresseur·s)
   - SI unit spacing (10 nF instead of 10nF)
-  - Non-breaking spaces (\xa0) handled correctly
+  - Non-breaking spaces ( ) handled correctly
   - Simplified redundant titles
 
 **Build Status After Session 2:**
@@ -202,34 +202,34 @@ ead0826 docs: correct tool safety status after thorough review
 
 - ✅ **Time Estimates & Skill Levels** - COMPLETE
   - Added time estimates to 6 major assembly/calibration sections
-  - Format\xa0: "X-Y\xa0heures (débutant), A-B\xa0heures (expérimenté)"
-  - Skill level indicators\xa0: Débutant / Intermédiaire / Avancé
-  - Risk level indicators\xa0: Faible / Moyen / Élevé / Très élevé
+  - Format : "X-Y heures (débutant), A-B heures (expérimenté)"
+  - Skill level indicators : Débutant / Intermédiaire / Avancé
+  - Risk level indicators : Faible / Moyen / Élevé / Très élevé
   - Proper French typography with non-breaking spaces and comma decimals
 
 - ✅ **Prerequisites Boxes** - COMPLETE
   - Added to all 6 major sections (carte-mère mono/tri, carte-sortie, perçages, étalonnage mono/tri)
-  - Each includes\xa0: safety chapter reference, required tools, time availability, workspace requirements
+  - Each includes : safety chapter reference, required tools, time availability, workspace requirements
   - Checkboxes (☐) for user self-verification
   - Proper French typography throughout
 
 - ✅ **Verification Checkpoints** - PARTIAL (1 of 6 files)
   - Added 4 comprehensive checkpoints to carte-mere-mono.rst
-  - After\xa0: Résistances, Diodes, Supports CI, Condensateurs et oscillateur
-  - Each checkpoint\xa0: ✅ green check symbol + 5 actionable verification items
-  - Still needed\xa0: carte-mere-tri.rst, carte-sortie sections, perçages, étalonnages
+  - After : Résistances, Diodes, Supports CI, Condensateurs et oscillateur
+  - Each checkpoint : ✅ green check symbol + 5 actionable verification items
+  - Still needed : carte-mere-tri.rst, carte-sortie sections, perçages, étalonnages
 
 - ⬜ **Glossary Terms Linking** - TODO
   - Not yet started
   - Would replace plain text with `:term:` directive throughout documentation
 
 **Files Modified (Quick Wins):**
-- content/mono/carte-mere-mono.rst\xa0: metadata + prerequisites + 4 checkpoints (56 lines added)
-- content/tri/carte-mere-tri.rst\xa0: metadata + prerequisites
-- content/common/carte-sortie.inc.rst\xa0: metadata + prerequisites
-- content/common/percages.inc.rst\xa0: metadata + prerequisites
-- content/tri/etalonnage-tri.rst\xa0: metadata
-- content/mono/etalonnage-mono.rst\xa0: metadata
+- content/mono/carte-mere-mono.rst : metadata + prerequisites + 4 checkpoints (56 lines added)
+- content/tri/carte-mere-tri.rst : metadata + prerequisites
+- content/common/carte-sortie.inc.rst : metadata + prerequisites
+- content/common/percages.inc.rst : metadata + prerequisites
+- content/tri/etalonnage-tri.rst : metadata
+- content/mono/etalonnage-mono.rst : metadata
 
 **Build Status After Quick Wins:**
 - ✅ 0 CRITICAL errors
@@ -242,7 +242,7 @@ ead0826 docs: correct tool safety status after thorough review
 - RST hierarchy understanding and proper level application
 - Sphinx autosectionlabel configuration for large documents with includes
 - Label scoping issues across include files
-- Literal `\xa0` in RST files vs actual non-breaking space character
+- Literal ` ` in RST files vs actual non-breaking space character
 
 ---
 
@@ -637,27 +637,36 @@ Elles ne remplacent PAS une formation professionnelle en électricité.
 
 ## ⚡ QUICK WINS (Low Effort, High Impact)
 
-**Status\xa0: 4 of 5 completed! 🎉**
+**Status : 4 of 5 completed! 🎉**
 
 ### 1. ✅ Add Time Estimates (1-2 hours) - DONE
-Added to 6 major sections\xa0:
+Added to 6 major sections :
 ```rst
-⏱️ **Temps estimé**\xa0: 2-3\xa0heures (débutant), 1-2\xa0heures (expérimenté)
+⏱️ **Temps estimé** : 2-3 heures (débutant), 1-2 heures (expérimenté)
 ```
 
 ### 2. ✅ Add Skill Level Indicators (1 hour) - DONE
-Added to 6 major sections\xa0:
+Added to 6 major sections :
 ```rst
-🔧 **Niveau de difficulté**\xa0: Débutant / Intermédiaire / Avancé
-⚠️ **Niveau de risque**\xa0: Faible / Moyen / Élevé / Très élevé
+🔧 **Niveau de difficulté** : Débutant / Intermédiaire / Avancé
+⚠️ **Niveau de risque** : Faible / Moyen / Élevé / Très élevé
 ```
 
-### 3. 🔄 Add Verification Checkpoints (2-3 hours) - PARTIAL
-Completed for carte-mere-mono.rst (4 checkpoints)\xa0:
+### 3. ✅ Add Verification Checkpoints (2-3 hours) - COMPLETE
+**Total : 16 verification checkpoints added across all assembly guides**
+
+Added to :
+- ✅ carte-mere-mono.rst (4 checkpoints) - Session 2
+- ✅ carte-mere-tri.rst (5 checkpoints) - Session 3
+- ✅ carte-sortie.inc.rst (5 checkpoints) - Session 3
+- ✅ percages.inc.rst (2 checkpoints) - Session 3
+- ✅ etalonnage-mono.rst (2 checkpoints) - Session 3
+- ✅ etalonnage-tri.rst (2 checkpoints) - Session 3
+
 ```rst
 .. admonition:: ✅ Point de Contrôle — Résistances
 
-   Avant de continuer, vérifiez\xa0:
+   Avant de continuer, vérifiez :
 
    ☐ Toutes les résistances sont soudées aux bons emplacements
    ☐ Les valeurs des résistances correspondent au schéma
@@ -665,32 +674,33 @@ Completed for carte-mere-mono.rst (4 checkpoints)\xa0:
    ☐ Pas de pont entre les pistes
    ☐ Pattes coupées à ras du PCB
 ```
-Still needed\xa0: carte-mere-tri, carte-sortie, perçages, étalonnages
+
+**Commit :** 60a0601 - docs : add comprehensive verification checkpoints to assembly guides
 
 ### 4. ⬜ Systematically Link Glossary (1-2 hours) - TODO
-Replace plain text with `:term:` directive\xa0:
+Replace plain text with `:term:` directive :
 ```rst
 Le :term:`PCB` doit être...
 Connecter le :term:`CT` sur...
 ```
 
 ### 5. ✅ Add Prerequisites Boxes (2-3 hours) - DONE
-Added to all 6 major sections\xa0:
+Added to all 6 major sections :
 ```rst
 .. admonition:: 📋 Prérequis
 
-   Avant de commencer ce chapitre\xa0:
+   Avant de commencer ce chapitre :
 
    ☐ Chapitre :ref:`safety-overview` lu et compris
    ☐ Outils nécessaires à disposition (fer à souder, pince coupante, loupe)
-   ☐ Temps disponible (3-4\xa0heures pour débutant)
+   ☐ Temps disponible (3-4 heures pour débutant)
    ☐ Espace de travail propre et organisé
    ☐ Lecture complète du chapitre avant de commencer
 ```
 
-**Total Quick Wins\xa0:** 7-11 hours estimated
-**Completed\xa0:** ~6-8 hours (4 of 5 tasks, 1 partial)
-**Remaining\xa0:** ~2-3 hours (finish checkpoints + glossary linking)
+**Total Quick Wins :** 7-11 hours estimated
+**Completed :** ~6-8 hours (4 of 5 tasks, 1 partial)
+**Remaining :** ~2-3 hours (finish checkpoints + glossary linking)
 
 ---
 
@@ -771,7 +781,7 @@ Added to all 6 major sections\xa0:
 **Progress Summary:**
 - ✅ **51-70 hours completed** (38-50% of total work)
 - 📋 **75-120 hours remaining** (50-62% of total work)
-- 🎉 **Quick Wins\xa0:** 4 of 5 completed (80% done)
+- 🎉 **Quick Wins :** 4 of 5 completed (80% done)
 
 **Remaining Milestones:**
 - **Minimum viable:** Complete Phase 1 remaining tasks (16-23 hours)
