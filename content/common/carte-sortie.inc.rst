@@ -304,7 +304,7 @@ Ce composant peut être maintenu provisoirement en place en pliant légèrement 
 Ensuite, avec un fer à souder bien chaud (réglez la température à 450 °C si possible), appliquez généreusement de la soudure.
 
 :term:`triac`
-"""""
+"""""""""""""
 
 De la même manière, ce composant peut être maintenu provisoirement en place en pliant légèrement les agrafes en cuivre pour qu’elles pincent les broches saillantes.
 

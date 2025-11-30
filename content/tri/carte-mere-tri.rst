@@ -301,7 +301,7 @@ Il est très facile de se tromper de sens ! |br|
 Enfin, il faudra veiller à bien le plaquer contre le :term:`PCB` avant de souder, afin que la surface entière du connecteur soit en contact avec le :term:`PCB`.
 
 Connecteurs :term:`SIL`/Molex
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Les connecteurs Molex sont *polarisés*, ils possèdent un détrompeur. |br|
 Physiquement, ce sont des composants passifs, mais étant donné qu’ils serviront à la connexion d’autres composants ou modules polarisés, il est important de les souder selon le marquage sur la couche sérigraphiée.

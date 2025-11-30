@@ -138,12 +138,12 @@ Matériel de Sécurité Requis
 ☐ **Lampe de poche** (en cas de coupure secteur)
 
 Installation des Capteurs de Courant (:term:`CT`)
-------------------------------------------
+-------------------------------------------------
 
 Les capteurs de courant (Current Transformers) se placent sur les câbles d’alimentation principale.
 
 Emplacement des :term:`CT`
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: img/schema-installation-ct.png
    :align: center
@@ -166,7 +166,7 @@ Emplacement des :term:`CT`
    ⚠️ Ce :term:`CT` n’est **PAS** un :term:`CT` à clip externe comme les :term:`CT` Grille
 
 Sens d’Installation des :term:`CT`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. danger::
    ⚠️ **LE SENS DES CT EST CRUCIAL**
@@ -185,7 +185,7 @@ La **flèche** gravée sur le :term:`CT` doit pointer dans le **sens du flux d�
 - **CT Diversion** : Flèche pointant **VERS la charge** (chauffe-eau)
 
 Procédure d’Installation des :term:`CT`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning::
    ⚠️ **DISJONCTEUR GÉNÉRAL COUPÉ OBLIGATOIRE**
@@ -214,7 +214,7 @@ Procédure d’Installation des :term:`CT`
 #. **Fixer le câble du CT** pour éviter qu’il se débranche par traction
 
 Vérification du Sens des :term:`CT` (Après Installation)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Une fois le routeur sous tension (après toutes les connexions) :
 
@@ -482,7 +482,7 @@ Test de Détection de Production
    - Puissance doit être affichée en négatif (injection)
 
 Test de Sécurité :term:`triac`
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Si le routeur utilise un :term:`triac` pour moduler la puissance :
 
