@@ -154,13 +154,13 @@ Méthode Recommandée pour Débutants
 
 #. Découpez un morceau de ruban adhésif de masquage (scotch beige/papier)
 
-   Taille : environ 2 cm × 2 cm
+   Taille : environ 2 cm × 2 cm
 
 #. Insérez le support IC dans le :term:`PCB`
 
    ⚠️ Vérifiez l’alignement de l’encoche avec le marquage :term:`PCB`
 
-#. Retournez le :term:`PCB` (face soudure dessous)
+#. Retournez-le :term:`PCB` (face soudure dessous)
 
 #. Collez le ruban sur le support pour le maintenir en place
 
@@ -176,13 +176,13 @@ Méthode Recommandée pour Débutants
    - Encoche correctement orientée
    - Toutes les broches bien insérées dans les trous
 
-#. Si OK : Soudez la broche du coin opposé en diagonale
+#. Si l'alignement est correct : Soudez la broche du coin opposé en diagonale
 
    Cela bloque définitivement le support en position
 
-#. Si NOK : Refondez la première soudure et réalignez
+#. Si l'alignement n'est pas correct : Refondez la première soudure et réalignez
 
-   Vous pouvez chauffer la soudure et ajuster doucement
+   Vous pouvez chauffer la soudure et ajuster doucement le support
 
 #. Retirez le ruban adhésif
 
