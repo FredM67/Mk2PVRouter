@@ -117,6 +117,12 @@ Bienvenue dans la documentation du Mk2PVRouter !
    tri/etalonnage-tri
 
 .. toctree::
+   :caption: ⚡ Installation Finale
+   :hidden:
+
+   installation-finale
+
+.. toctree::
    :caption: 🔧 Dépannage
    :hidden:
 
