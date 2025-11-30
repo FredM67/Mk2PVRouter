@@ -60,6 +60,7 @@
 
 **Git Commits (Session 3 - 2025-11-30):**
 ```
+3caaf10 docs: complete carte-sortie testing section (ON/OFF switching, 3kW thermal limit)
 60a0601 docs: add comprehensive verification checkpoints to assembly guides
 deb69f1 docs: fix technical errors in installation-finale guide
 1dce608 docs: add comprehensive final installation safety guide
@@ -584,12 +585,12 @@ Elles ne remplacent PAS une formation professionnelle en électricité.
 
 ### ⚠️ Needs Improvement
 
-| File | Current Score | Issues | Priority |
-|------|--------------|--------|----------|
-| `mono/carte-mere-mono.rst` | 6/10 | Missing: component ID guide, better safety | 🟡 MEDIUM |
-| `common/carte-sortie.inc.rst` | 6/10 | Needs: detailed staple instructions, fire safety | 🟡 MEDIUM |
-| `common/percages.inc.rst` | 5/10 | Missing: safety section, drilling techniques | 🟡 MEDIUM |
-| `mono/etalonnage-mono.rst` | 5/10 | Too brief vs tri version, needs expansion | 🟡 LOW |
+| File | Current Score | Issues | Priority | Status |
+|------|--------------|--------|----------|--------|
+| `mono/carte-mere-mono.rst` | 7/10 → 8/10 | ~~Missing: component ID guide~~, ~~better safety~~ | 🟡 MEDIUM | 🔄 PARTIAL (has 4 checkpoints, still needs component ID guide) |
+| `common/carte-sortie.inc.rst` | 6/10 → 9/10 | ~~Needs: detailed staple instructions, fire safety~~ | 🟡 MEDIUM | ✅ DONE (Session 3: 5 checkpoints + comprehensive testing ~453 lines) |
+| `common/percages.inc.rst` | 5/10 → 8/10 | ~~Missing: safety section, drilling techniques~~ | 🟡 MEDIUM | ✅ DONE (Session 3: 2 checkpoints, safety in prerequisites) |
+| `mono/etalonnage-mono.rst` | 5/10 → 8/10 | ~~Too brief vs tri version, needs expansion~~ | 🟡 LOW | ✅ DONE (Session 3: 2 checkpoints added) |
 
 ### ❌ Incomplete / Critical Gaps
 
@@ -753,16 +754,16 @@ Added to all 6 major sections :
 | # | Task | File | Hours | Status |
 |---|------|------|-------|--------|
 | 7 | Create prerequisite assessment | `NEW: prerequisite-quiz.rst` | 3-4 | ⬜ TODO |
-| 8 | Add component identification guide | `NEW: component-id.rst` | 4-6 | 🔄 PARTIAL |
-| 9 | Add soldering tutorial | `NEW: soldering-tutorial.rst` | 8-12 | ⬜ TODO |
+| 8 | Add component identification guide | `NEW: component-id.rst` | 4-6 | 🔄 PARTIAL (resistors pre-labeled) |
+| 9 | Add soldering tutorial | `NEW: soldering-tutorial.rst` | 8-12 | ✅ DONE (Session 1, 780 lines) |
 | 10 | Add tool usage & safety guides | `safety-overview.rst` | 4-5 | ✅ DONE |
 | 11 | Expand glossary with basic terms | `glossary.rst` | 6-8 | ✅ DONE |
 | 12 | Improve introduction chapter | `introduction.rst` | 4-5 | ✅ DONE |
 | 13 | Add "common mistakes" callouts | All assembly files | 6-8 | ⬜ TODO |
 
 **Total Phase 2:** 39-53 hours
-**Completed:** 18-26 hours (Tasks #10, #11, #12 fully)
-**Remaining:** 13-27 hours (Tasks #7, #8, #9, #13)
+**Completed:** 26-38 hours (Tasks #9, #10, #11, #12 fully done; Task #8 partial)
+**Remaining:** 13-15 hours (Tasks #7, #8 completion, #13)
 
 **Deliverable:** Documentation accessible to true beginners
 
@@ -793,21 +794,24 @@ Added to all 6 major sections :
 
 | Phase | Description | Original Hours | Completed | Remaining | Priority |
 |-------|------------|----------------|-----------|-----------|----------|
-| **Phase 1** | Critical gaps (safety, completeness) | 36-49 | 20-26 | 16-23 | 🔴 MUST DO |
-| **Phase 2** | Beginner accessibility | 39-53 | 18-26 | 13-27 | 🟡 SHOULD DO |
+| **Phase 1** | Critical gaps (safety, completeness) | 36-49 | 26-32 | 10-17 | 🔴 MUST DO |
+| **Phase 2** | Beginner accessibility | 39-53 | 26-38 | 13-15 | 🟡 SHOULD DO |
 | **Phase 3** | Polish & enhancement | 51-74 | 7-10 | 44-67 | 🟢 NICE TO HAVE |
-| **Quick Wins** | Low-effort improvements | 7-11 | 6-8 | 2-3 | ⚡ BONUS |
-| **TOTAL** | All improvements | **133-187** | **51-70** | **75-120** | - |
+| **Quick Wins** | Low-effort improvements | 7-11 | 10-11 | 0-1 | ⚡ BONUS |
+| **TOTAL** | All improvements | **133-187** | **69-91** | **67-100** | - |
 
 **Progress Summary:**
-- ✅ **51-70 hours completed** (38-50% of total work)
-- 📋 **75-120 hours remaining** (50-62% of total work)
-- 🎉 **Quick Wins :** 4 of 5 completed (80% done)
+- ✅ **69-91 hours completed** (52-67% of total work) — **Up from 51-70 hours (38-50%)**
+- 📋 **67-100 hours remaining** (33-48% of total work) — **Down from 75-120 hours (50-62%)** 
+- 🎉 **Quick Wins:** 5 of 5 completed (100% done) ✅
+- 🎊 **Phase 1:** 5.5 of 6 tasks completed (Task #6 installation-finale done but needs technical corrections)
+- 🎊 **Phase 2:** 4.5 of 7 tasks completed (64%)
+
 
 **Remaining Milestones:**
-- **Minimum viable:** Complete Phase 1 remaining tasks (16-23 hours)
-- **Truly beginner-friendly:** Complete Phase 1 + Phase 2 (29-50 hours)
-- **Professional grade:** Complete all phases (79-122 hours)
+- **Minimum viable:** Complete Phase 1 remaining tasks (10-17 hours) — installation-finale corrections + cable measurements
+- **Truly beginner-friendly:** Complete Phase 1 + Phase 2 (23-32 hours)
+- **Professional grade:** Complete all phases (67-100 hours)
 
 ---
 
@@ -1199,5 +1203,5 @@ Use this final checklist before declaring documentation "done":
 ---
 
 **Version:** 1.0
-**Last Updated:** 2025-11-29
+**Last Updated:** 2025-11-30 (Session 3 - Status indicators added)
 **Reviewed By:** Claude Code (Comprehensive AI Analysis)
