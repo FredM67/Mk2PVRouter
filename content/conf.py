@@ -56,6 +56,9 @@ imgmath_image_format = 'svg'
 imgmath_embed = True
 imgmath_font_size = 16
 
+# Graphviz output format - SVG for scalable, clickable diagrams
+graphviz_output_format = 'svg'
+
 drawio_builder_export_format = {"simplepdf": "png"}
 #drawio_no_sandbox = True
 drawio_disable_verbose_electron = True
