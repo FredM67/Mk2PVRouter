@@ -16,7 +16,7 @@ Erreur : `error: ’constexpr’ does not name a type`
 
 Le fichier `platform.txt` n’a pas été modifié correctement.
 
-**Solution :** Reprendre :ref:`arduino-cpp17-config`.
+**Solution :** Reprendre :ref:`arduino-cpp17-config`.
 
 Port COM n’apparaît pas
 #######################

@@ -16,7 +16,7 @@ Les composants électroniques ne sont jamais parfaits. Ils ont chacun des caract
 
 Pour un étalonnage précis, une certaine forme de référence standard est nécessaire. Le compteur d’électricité installé peut souvent être utilisé à cette fin.
 
-La plupart des compteurs d’électricité génèrent un flux d’impulsions optiques pour indiquer le taux de consommation d’énergie. En plaçant un transformateur de courant :term:`CT` autour de l’un des câbles d’alimentation entrants, et en exécutant le logiciel approprié sur le matériel en cours de test, un flux d’impulsions optiques similaire peut être généré.
+La plupart des compteurs d’électricité génèrent un flux d’impulsions optiques pour indiquer le taux de consommation d’énergie. En plaçant un transformateur de courant :term:`CT` autour de l’un des câbles d’alimentation entrants, et en exécutant le logiciel approprié sur le matériel en cours de test, un flux d’impulsions optiques similaire peut être généré.
 
 Le taux du flux d’impulsions pour le matériel en cours de test peut être ajusté en modifiant la valeur ``f_powerCal`` pertinente. Lorsque les deux flux d’impulsions sont synchronisés, l’étalonnage correct a été atteint.
 
@@ -53,7 +53,7 @@ Cette méthode ne nécessite aucun appareil de mesure, mais n’est pas la plus 
 À l’aide des flash du compteur (1 flash = 1 Wh consommé)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La plupart des compteurs génèrent un flux d’impulsions optiques pour montrer le taux auquel l’énergie est consommée. En installant un :term:`CT` autour de l’un des câbles d’alimentation entrants et en exécutant le logiciel approprié sur le routeur, un flux similaire d’impulsions optiques peut être généré.
+La plupart des compteurs génèrent un flux d’impulsions optiques pour montrer le taux auquel l’énergie est consommée. En installant un :term:`CT` autour de l’un des câbles d’alimentation entrants et en exécutant le logiciel approprié sur le routeur, un flux similaire d’impulsions optiques peut être généré.
 
 Le débit du flux d’impulsions pour le routeur peut être ajusté en modifiant la valeur ``f_powerCal`` correspondante. Lorsque les deux flux d’impulsions sont synchronisés, un étalonnage correct a été réalisé.
 

@@ -77,22 +77,22 @@ Pont redresseur ou pont de diodes
 Fusible
 ~~~~~~~
 
-!! Manque photo !!
+!! Manque photo !!
 
 Connecteur secteur
 ~~~~~~~~~~~~~~~~~~
 
-!! Manque photo !!
+!! Manque photo !!
 
 Connecteurs SIL/Molex
 ~~~~~~~~~~~~~~~~~~~~~
 
-!! Manque photo !!
+!! Manque photo !!
 
 Inductance
 ~~~~~~~~~~
 
-!! Manque photo !!
+!! Manque photo !!
 
 Condensateurs électrolytiques
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -114,7 +114,7 @@ Matériel de Sécurité Requis
 Équipement de Protection Individuelle (EPI)
 """"""""""""""""""""""""""""""""""""""""""""
 
-☐ **Gants isolants classe 00** (minimum 500 V :term:`AC`)
+☐ **Gants isolants classe 00** (minimum 500 V :term:`AC`)
 
 ☐ **Chaussures de sécurité isolantes** (semelle isolée)
 
@@ -315,17 +315,17 @@ La section des câbles des charges dépend de leur puissance (ces câbles sont n
 Schéma de Raccordement
 ^^^^^^^^^^^^^^^^^^^^^^
 
-**Monophasé (230 V) :**
+**Monophasé (230 V) :**
 
-Connexions entre le tableau électrique et le MK2PVRouter :
+Connexions entre le tableau électrique et le MK2PVRouter :
 
 - **L (Phase)** : du disjoncteur 16 A bipolaire → entrée L du routeur → vers charge (chauffe-eau)
 - **N (Neutre)** : du disjoncteur → entrée N du routeur
 - **⏚ (Terre)** : du disjoncteur → entrée terre du routeur
 
-**Triphasé (3 × 230 V = 400 V) :**
+**Triphasé (3 × 230 V = 400 V) :**
 
-Connexions entre le tableau électrique et le MK2PVRouter :
+Connexions entre le tableau électrique et le MK2PVRouter :
 
 - **L1 (Phase 1)** : du disjoncteur tétrapolaire 16 A → entrée L1 du routeur → charge phase 1
 - **L2 (Phase 2)** : du disjoncteur → entrée L2 du routeur
@@ -416,7 +416,7 @@ Procédure de Mise Sous Tension
 
 #. **Vérifier le fonctionnement du Mk2PVRouter** :
 
-   - LED d'alimentation allumée
+   - LED d’alimentation allumée
    - Écran affiche des données (si présent)
    - Pas de bruit anormal
 

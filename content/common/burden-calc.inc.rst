@@ -24,7 +24,7 @@
       ct\_turns = \frac{2 \times \sqrt{2} \times I_{RMS}}{system\_voltage \times burden\_resistor}
 
    | 
-   | Dans notre cas précis, nous avons : :math:`ct\_turns = 2000`
+   | Dans notre cas précis, nous avons : :math:`ct\_turns = 2000`
 
    :math:`I_{RMS}` correspond à l’intensité efficace.
 

@@ -168,7 +168,7 @@ Ce fichier contient les paramètres d’étalonnage.
 
 .. warning::
    Ne modifiez **PAS** ce fichier maintenant — les valeurs seront déterminées lors de l’étalonnage
-   (voir chapitre :ref:`etalonnage-mono` ou :ref:`etalonnage-tri`).
+   (voir chapitre :ref:`etalonnage-mono` ou :ref:`etalonnage-tri`).
 
 Les paramètres par défaut permettent de tester le routeur.
 
@@ -203,7 +203,7 @@ Prochaines Étapes
 
 **Prochaines étapes :**
 
-#. **Étalonnage** : Voir chapitre :ref:`etalonnage-mono` ou :ref:`etalonnage-tri`
+#. **Étalonnage** : Voir chapitre :ref:`etalonnage-mono` ou :ref:`etalonnage-tri`
 
    L’étalonnage est **OBLIGATOIRE** pour que le routeur fonctionne correctement.
 

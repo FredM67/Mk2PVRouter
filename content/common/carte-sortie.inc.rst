@@ -292,7 +292,7 @@ Soudure de la partie *haute puissance*/*haute tension*
 .. danger::
    La qualité des soudures est d’une importance **capitale** pour cette étape.
 
-   **Rappel :** Voir les mesures de sécurité OBLIGATOIRES et la vérification de qualité au début de ce chapitre.
+   **Rappel :** Voir les mesures de sécurité OBLIGATOIRES et la vérification de qualité au début de ce chapitre.
 
    Une soudure défectueuse peut provoquer un incendie lors de la mise sous tension !
 
@@ -396,7 +396,7 @@ En tenant dûment compte de l’avertissement de sécurité ci-dessus, l’appro
 Configuration du Banc de Test
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Matériel nécessaire pour le test :**
+**Matériel nécessaire pour le test :**
 
 ☐ **Lampe à incandescence** 40-100 W (ou résistance chauffante équivalente)
 
@@ -478,7 +478,7 @@ Schéma de Montage du Test
            molex -> opto [label="  Signal 3.3V-5V  ", color="#4CAF50", fontcolor="#2E7D32", fontsize=9];
            opto -> triac [label="  Déclenchement  ", color="#FF9800", fontcolor="#E65100", style="dashed", fontsize=9, constraint=true];
 
-           // Forcer l'alignement horizontal des deux colonnes
+           // Forcer l’alignement horizontal des deux colonnes
            {rank=same; molex; opto; triac;}
        }
 
@@ -502,7 +502,7 @@ Schéma de Montage du Test
        secteur -> lampe [label="  Charge 100W  ", color="#FF5722", fontcolor="#BF360C", penwidth=1.5, fontsize=9];
 
        // Positionner la légende à gauche, secteur au centre, lampe à droite
-       // Utiliser des arêtes invisibles pour forcer l'ordre gauche-droite
+       // Utiliser des arêtes invisibles pour forcer l’ordre gauche-droite
        {
            rank=same;
            legend -> secteur -> lampe [style=invis];
@@ -589,7 +589,7 @@ Procédure de Test Complète
 
    Restez à **50 cm minimum** de la zone de test.
 
-#. **Vérifier une dernière fois :**
+#. **Vérifier une dernière fois :**
 
    ☐ Lampe correctement connectée
 
@@ -603,7 +603,7 @@ Procédure de Test Complète
 
 #. **Observer pendant 30 secondes**
 
-   **✅ Comportement NORMAL attendu :**
+   **✅ Comportement NORMAL attendu :**
 
    - Lampe s’allume et s’éteint toutes les 2 secondes (suivant programme Arduino)
    - Pas d’odeur de brûlé
@@ -611,7 +611,7 @@ Procédure de Test Complète
    - Pas de grésillement
    - Commutation silencieuse (pas de clic)
 
-   **❌ Comportement ANORMAL — COUPER IMMÉDIATEMENT :**
+   **❌ Comportement ANORMAL — COUPER IMMÉDIATEMENT :**
 
    - Lampe reste allumée en permanence → :term:`Triac` en court-circuit
    - Lampe ne s’allume jamais → Triac ne conduit pas (défaut ou mal soudé)
@@ -647,7 +647,7 @@ Résultats Attendus du Test
 Carte Fonctionnelle
 """""""""""""""""""
 
-**✅ SUCCÈS — La carte fonctionne correctement si :**
+**✅ SUCCÈS — La carte fonctionne correctement si :**
 
 ☑ Lampe s’allume/s’éteint selon signal Arduino
 
@@ -665,7 +665,7 @@ Carte Fonctionnelle
 Carte Défectueuse
 """""""""""""""""
 
-**❌ ÉCHEC — La carte a un problème si :**
+**❌ ÉCHEC — La carte a un problème si :**
 
 ☒ Lampe reste allumée en permanence
 
@@ -703,7 +703,7 @@ Dépannage — Problèmes Courants
 Problème 1 : Lampe Ne S’Allume Jamais
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Causes possibles :**
+**Causes possibles :**
 
 ☐ :term:`Optocoupleur` mal inséré (sens inversé)
 
@@ -728,7 +728,7 @@ Problème 1 : Lampe Ne S’Allume Jamais
 Problème 2 : Lampe Reste Allumée en Permanence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Causes possibles :**
+**Causes possibles :**
 
 ☐ :term:`Triac` en court-circuit (détruit)
 
@@ -749,7 +749,7 @@ Problème 2 : Lampe Reste Allumée en Permanence
 Problème 3 : Grésillement ou Arc Électrique
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Causes possibles :**
+**Causes possibles :**
 
 ☐ Soudure insuffisante sur agrafes cuivre
 
@@ -768,7 +768,7 @@ Problème 3 : Grésillement ou Arc Électrique
 Problème 4 : Carte Chauffe Excessivement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Causes possibles :**
+**Causes possibles :**
 
 ☐ Résistance de contact trop élevée
 
@@ -839,7 +839,7 @@ Une fois que vous avez assemblé et testé avec succès :
 
 ✅ **Toutes les cartes de sortie** (autant que de sorties souhaitées) — testées individuellement
 
-**Vous pouvez passer aux chapitres suivants :**
+**Vous pouvez passer aux chapitres suivants :**
 
 #. **Perçages du boîtier** — :ref:`percage-carte-mere`
 
@@ -886,7 +886,7 @@ Documentation Technique
 
    Cette carte utilise un :term:`triac` BTA41 (40 A nominaux) mais, en raison de la taille du dissipateur, la charge est limitée à **3 000 W** (~13 A à 230 V) pour un fonctionnement sûr et fiable.
 
-   **Points clés à retenir :**
+   **Points clés à retenir :**
 
    - Soudures haute puissance = **CRITIQUE** pour sécurité
    - Test progressif (sans tension → basse charge → haute charge)

@@ -108,7 +108,7 @@ Vérifier les composants d’alimentation :
 
  #. ☐ **Régulateur VR1** dans le bon sens ?
 
-    - Vérifier l'orientation selon le schéma
+    - Vérifier l’orientation selon le schéma
     - Les 3 pattes doivent correspondre (E-C-B ou G-S-D)
 
  #. ☐ **Condensateurs C1/C2** polarité correcte ?
@@ -201,7 +201,7 @@ Si Tension Correcte mais Pas de Fonctionnement
 
  #. ☐ **Firmware programmé ?**
 
-    - Voir la section :ref:`test-logiciel-mono` ou :ref:`test-logiciel-tri`
+    - Voir la section :ref:`test-logiciel-mono` ou :ref:`test-logiciel-tri`
     - ATmega328 vierge ne fait rien
 
 Causes Fréquentes — Résumé
@@ -219,10 +219,10 @@ Causes Fréquentes — Résumé
    - Trouver le court-circuit, remplacer le fusible
  * - Tension VCC faible (<3 V)
    - Régulateur défectueux
-   - Vérifier l'orientation, remplacer
+   - Vérifier l’orientation, remplacer
  * - Tension OK, rien ne fonctionne
    - ATmega328 mal inséré/inversé
-   - Vérifier l'orientation, réinsérer
+   - Vérifier l’orientation, réinsérer
  * - Soudures ternes
    - Soudure froide
    - Refaire les soudures avec plus de chaleur
@@ -527,7 +527,7 @@ Diagnostic par Tension
 
 - ⚠️ **DANGER** pour ATmega328 (max absolu = 6 V)
 - Régulateur absent ou court-circuité
-- **COUPER L'ALIMENTATION IMMÉDIATEMENT**
+- **COUPER L’ALIMENTATION IMMÉDIATEMENT**
 
 **Tension ADC incorrecte (pas à VCC/2) :**
 
@@ -766,7 +766,7 @@ LED Clignote Bizarrement
    - Normal début/fin journée
  * - Clignotement erratique
    - Mesures instables
-   - Vérifier le CT et l'étalonnage
+   - Vérifier le CT et $1’$2talonnage
 
 ===============================================
 🔥 Problèmes de Routage — Charge ne Chauffe Pas
@@ -816,7 +816,7 @@ Test du Triac
 
 **Mesure à froid (hors tension) :**
 
-#. Couper l'alimentation
+#. Couper l’alimentation
 #. Multimètre en mode Ohm (Ω)
 #. Mesurer la résistance MT1-MT2 :
 
@@ -910,7 +910,7 @@ Triac Surchauffe
 **Solutions :**
 
 - Vérifier que la charge ≤ 3 kW (mesurer avec pince ampèremétrique)
-- **S'assurer que le dissipateur est vertical**
+- **S’assurer que le dissipateur est vertical**
 - Améliorer le contact thermique (pâte, serrage correct)
 - Si charge >3 kW : utiliser plusieurs sorties en parallèle ou réduire la puissance
 
@@ -1070,7 +1070,7 @@ Multimètre — Utilisation de Base
 
 **Mode Tension Continue (V⎓ ou VDC) :**
 
-- Mesurer VCC et les tensions d'alimentation
+- Mesurer VCC et les tensions d’alimentation
 - Sonde noire sur GND, rouge sur point à mesurer
 - Calibres : 20 V pour 3.3 V/5 V, 200 V pour >12 V
 
@@ -1099,7 +1099,7 @@ Loupe ou Microscope USB
 
 - Inspecter qualité soudures
 - Détecter ponts microscopiques
-- Vérifier l'orientation des composants CMS
+- Vérifier l’orientation des composants CMS
 
 **Recommandation :**
 

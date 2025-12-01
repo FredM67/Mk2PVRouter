@@ -12,8 +12,8 @@ Guide de Soudure pour Débutants
 Ce guide complet vous apprendra les bases de la soudure électronique, une compétence essentielle pour assembler votre Mk2PVRouter. Même si vous n’avez jamais soudé auparavant, ce tutoriel vous guidera pas à pas.
 
 .. contents:: Sommaire
-   :local:
-   :depth: 2
+   :local:
+   :depth: 2
 
 Pourquoi Apprendre à Souder ?
 ------------------------------
@@ -96,21 +96,21 @@ Matériel Nécessaire
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. danger::
-   ⚠️ **N'ACHETEZ PAS D'ÉQUIPEMENT PREMIER PRIX !**
+   ⚠️ **N’ACHETEZ PAS D'ÉQUIPEMENT PREMIER PRIX !**
 
-   **Les fers à souder bas de gamme (< 20 €) et la soudure de mauvaise qualité rendront l'apprentissage BEAUCOUP PLUS DIFFICILE.**
+   **Les fers à souder bas de gamme (< 20 €) et la soudure de mauvaise qualité rendront l’apprentissage BEAUCOUP PLUS DIFFICILE.**
 
    Symptômes du matériel bas de gamme :
 
    - **Fer sans thermostat** : Température incontrôlée, composants détruits
    - **Chauffe irrégulière** : Soudures froides ou surchauffe aléatoire
-   - **Panne qui s'oxyde immédiatement** : Impossible de souder proprement
+   - **Panne qui s’oxyde immédiatement** : Impossible de souder proprement
    - **Soudure sans flux** : Ne coule pas, ne « mouille » pas les pistes
    - **Soudure contaminée** : Crache, fait des bulles, joints granuleux
 
-   **Résultat** : Vous penserez que c'est de votre faute, alors que c'est le matériel !
+   **Résultat** : Vous penserez que c’est de votre faute, alors que c’est le matériel !
 
-   **Investissez dans du matériel correct (40-80 €)** — c'est la différence entre réussir et abandonner par frustration.
+   **Investissez dans du matériel correct (40-80 €)** — c’est la différence entre réussir et abandonner par frustration.
 
 
 **1. Station de soudure** (40-80 €)
@@ -177,7 +177,7 @@ Configuration Optimale
 .. graphviz::
    :caption: Organisation du poste de soudure (cliquer pour agrandir)
    :align: center
-   :alt: Schéma d'organisation du poste de soudure avec équipements et zones de travail
+   :alt: Schéma d’organisation du poste de soudure avec équipements et zones de travail
 
    digraph soldering_station {
        // Configuration générale
@@ -244,7 +244,7 @@ Configuration Optimale
            // Organisation verticale
            extractor -> left_zone [style=invis];
 
-           // Force l'alignement horizontal bas
+           // Force l’alignement horizontal bas
            left_zone -> right_zone [style=invis];
        }
    }
@@ -313,12 +313,12 @@ Les 5 Étapes d’une Bonne Soudure
 
    **La soudure coule vers la chaleur**
 
-   Il faut chauffer **à la fois** la piste :term:`PCB` **et** la patte du composant. Si un seul élément est chaud, la soudure ne s’étalera pas correctement.
+   Il faut chauffer **à la fois** la piste :term:`PCB` **et** la patte du composant. Si un seul élément est chaud, la soudure ne s’étalera pas correctement.
 
 **Étape 1 : Insérer le composant**
 
 - Plier les pattes si nécessaire (angle 90°)
-- Insérer dans les trous du :term:`PCB`
+- Insérer dans les trous du :term:`PCB`
 - Composant bien plaqué contre le PCB (pas d’espace)
 - Retourner le PCB (soudure côté pistes)
 
@@ -458,7 +458,7 @@ Soudures Défectueuses — Comment les Reconnaître
 
 **Cause** :
 
-- :term:`PCB` ou composant bougé **pendant la solidification**
+- :term:`PCB` ou composant bougé **pendant la solidification**
 - Vibration ou choc
 
 **Conséquence** :
@@ -497,7 +497,7 @@ Soudures Défectueuses — Comment les Reconnaître
 
 **Apparence** :
 
-- Piste :term:`PCB` **décolle** ou se soulève
+- Piste :term:`PCB` **décolle** ou se soulève
 - Couleur brunie autour du joint
 - Composant fondu/déformé
 
@@ -554,7 +554,7 @@ Dessoudage — Corriger ses Erreurs
 Soudure de Composants Sensibles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Circuits intégrés** (:term:`DIL`, :term:`SIL`)
+**Circuits intégrés** (:term:`DIL`, :term:`SIL`)
 
 - ⚠️ Très sensibles à la chaleur (< 3 secondes par broche)
 - ✅ Utiliser support de CI (évite de souder le CI directement)
@@ -588,7 +588,7 @@ Le flux est un produit chimique qui :
 
 **Quand ajouter du flux ?**
 
-- Piste :term:`PCB` oxydée (terne, pas brillante)
+- Piste :term:`PCB` oxydée (terne, pas brillante)
 - Soudure qui ne « mouille » pas correctement
 - Composant ancien (pattes oxydées)
 - Dessoudage difficile
@@ -666,12 +666,12 @@ Exercice 1 : Souder 10 Résistances
 - Observer la qualité de chaque soudure
 - **Critère de réussite** : 8/10 soudures brillantes et lisses
 
-Exercice 2 : Souder des Composants :term:`DIL`
+Exercice 2 : Souder des Composants :term:`DIL`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Objectif** : Souder plusieurs broches proches sans faire de ponts
 
-**Matériel** : Support :term:`DIL` 8 ou 16 broches
+**Matériel** : Support :term:`DIL` 8 ou 16 broches
 
 **Consigne** :
 
@@ -689,7 +689,7 @@ Exercice 3 : Dessouder et Resouder
 **Consigne** :
 
 - Dessouder un composant (pompe ou tresse)
-- Nettoyer les trous du :term:`PCB`
+- Nettoyer les trous du :term:`PCB`
 - Resouder le composant proprement
 
 Où Trouver des Kits de Pratique ?
@@ -734,7 +734,7 @@ Problème : La Soudure Ne Coule Pas
 
 ☐ Mauvais fil de soudure (vérifier flux intégré)
 
-Problème : Composants Tombent Quand Je Retourne le :term:`PCB`
+Problème : Composants Tombent Quand Je Retourne le :term:`PCB`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Solutions** :
@@ -808,7 +808,7 @@ Checklist Finale — Prêt à Souder Votre Mk2PVRouter ?
 
    ☐ Je connais les règles de sécurité (ne pas toucher panne, ventiler)
 
-   ☐ J’ai lu le chapitre :ref:`safety-overview` (sécurité générale)
+   ☐ J’ai lu le chapitre :ref:`safety-overview` (sécurité générale)
 
    ☐ Je suis prêt à prendre mon temps (pas de précipitation)
 
@@ -819,8 +819,8 @@ Prochaines Étapes
 
 Maintenant que vous maîtrisez les bases de la soudure, passez aux chapitres d’assemblage :
 
-- **Monophasé** : :ref:`carte-mere-mono` puis :ref:`carte-sortie`
-- **Triphasé** : :ref:`carte-mere-tri` puis :ref:`carte-sortie`
+- **Monophasé** : :ref:`carte-mere-mono` puis :ref:`carte-sortie`
+- **Triphasé** : :ref:`carte-mere-tri` puis :ref:`carte-sortie`
 
 .. tip::
    💡 **Conseil Final**

@@ -96,7 +96,7 @@ Avantages du *burst fire control*
 
 Ce mode de régulation garantit un fonctionnement stable et respectueux des normes électriques tout en optimisant l’utilisation de l’énergie excédentaire.
 
-Pour plus d’informations sur le *burst fire control*, consultez la section :ref:`burst-fire-control`.
+Pour plus d’informations sur le *burst fire control*, consultez la section :ref:`burst-fire-control`.
 
 Fonctionnalités avancées
 ------------------------

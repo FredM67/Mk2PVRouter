@@ -671,7 +671,7 @@ Prêt à Continuer ?
 Si vous avez lu et compris ce chapitre, que vous possédez l’équipement de sécurité requis,
 et que vous vous sentez capable de procéder en toute sécurité, vous pouvez passer au chapitre suivant :
 
-- :ref:`introduction` : Vue d’ensemble du projet et liste du matériel
+- :ref:`introduction` : Vue d’ensemble du projet et liste du matériel
 
 **En cas de doute, relisez ce chapitre ou demandez conseil avant de poursuivre.**
 

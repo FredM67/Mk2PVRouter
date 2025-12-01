@@ -237,7 +237,7 @@ Termes Techniques Avancés
 
    Burden
      | Résistance de charge.
-     | Si le capteur :term:`CT` est du type « sortie courant » tel que le YHDC SCT-013-000, le signal de courant doit être converti en signal de tension avec une résistance de charge.
+     | Si le capteur :term:`CT` est du type « sortie courant » tel que le YHDC SCT-013-000, le signal de courant doit être converti en signal de tension avec une résistance de charge.
 
      .. seealso:: `CT Sensors - Interfacing with an Arduino <https://docs.openenergymonitor.org/electricity-monitoring/ct-sensors/interface-with-arduino.html>`_
 

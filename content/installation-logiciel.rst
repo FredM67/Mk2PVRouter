@@ -23,26 +23,26 @@ Installation Pilotes FTDI
 Les pilotes FTDI sont **OBLIGATOIRES** pour communiquer avec le routeur via le programmateur USB.
 
 .. important::
-   Sans ces pilotes, l'ordinateur ne détectera pas le routeur !
+   Sans ces pilotes, l’ordinateur ne détectera pas le routeur !
 
 .. _ftdi-windows:
 
 🪟 Windows
 ----------
 
-#. Ouvrir le navigateur : https://ftdichip.com/drivers/vcp-drivers/
+#. Ouvrir le navigateur : https://ftdichip.com/drivers/vcp-drivers/
 #. Cliquer sur **« Windows »** dans la colonne **« Available Drivers »**
 #. Télécharger la dernière version (fichier `.exe`)
 #. Exécuter le fichier téléchargé en tant qu’administrateur (clic droit → **« Exécuter en tant qu’administrateur »**)
 #. Suivre l’assistant d’installation
-#. **Redémarrer l'ordinateur** après l'installation
+#. **Redémarrer l’ordinateur** après l’installation
 
 .. _ftdi-windows-verif:
 
 Vérification
 ~~~~~~~~~~~~
 
-#. Connecter l'adaptateur FTDI à un port USB
+#. Connecter l’adaptateur FTDI à un port USB
 #. Ouvrir le **Gestionnaire de périphériques** (Win + X → Gestionnaire de périphériques)
 #. Développer **« Ports (COM et LPT) »**
 #. Vérifier la présence de **« USB Serial Port (COMx) »** où x est un numéro
@@ -129,7 +129,7 @@ Vous avez deux options pour programmer le Mk2PVRouter :
    - Suivre les sous-sections de l'**Option B**' ci-dessous
 
 .. note::
-   Vous pouvez choisir l'une ou l'autre option, ou même installer les deux environnements si vous le souhaitez.
+   Vous pouvez choisir l’une ou l’autre option, ou même installer les deux environnements si vous le souhaitez.
 
 
 

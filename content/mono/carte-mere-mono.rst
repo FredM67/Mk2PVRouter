@@ -176,11 +176,11 @@ Méthode Recommandée pour Débutants
    - Encoche correctement orientée
    - Toutes les broches bien insérées dans les trous
 
-#. Si l'alignement est correct : Soudez la broche du coin opposé en diagonale
+#. Si l’alignement est correct : Soudez la broche du coin opposé en diagonale
 
    Cela bloque définitivement le support en position
 
-#. Si l'alignement n'est pas correct : Refondez la première soudure et réalignez
+#. Si l’alignement n’est pas correct : Refondez la première soudure et réalignez
 
    Vous pouvez chauffer la soudure et ajuster doucement le support
 
