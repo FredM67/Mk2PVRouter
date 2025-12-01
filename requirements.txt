@@ -10,4 +10,5 @@ sphinxnotes-strike
 sphinx-hoverxref
 sphinx-new-tab-link
 sphinx-last-updated-by-git
+sphinx-multiversion
 tzdata
