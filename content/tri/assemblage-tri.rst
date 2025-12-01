@@ -1,16 +1,6 @@
 .. _assemblage-tri:
 
-Assemblage
-==========
+.. include:: ../common/assemblage.inc.rst
 
-Après avoir effectué toutes les étapes précédentes, :ref:`Soudure de la carte-mère triphasée <carte-mere-tri>`, :ref:`Préparation du boîtier <percages-tri>`, :ref:`Perçage du dissipateur <percage-du-dissipateur>`, :ref:`étage·s de sortie <carte-sortie-tri>` et :ref:`Confection des câbles <confection-cables>`, il est temps d’assembler le tout.
-
-Il est possible de réaliser l’assemblage dans n’importe quel ordre, cependant, il sera plus pratique de le réaliser comme ceci :
-
-#. Mise en place des presse-étoupe
-#. Fixation du ou des dissipateurs sur le boîtier, y compris fils de terre.
-#. Fixation du ou des étages de sortie sur chaque dissipateur (visser le triac)
-#. Fixation du ou des étages de sortie dans le boîtier (visser le :term:`PCB`)
-#. Mise en place des prises jack et du bouton *reset*
-#. Fixation de la carte-mère dans le boîtier.
+5. Mise en place des **prises jack** (3 CT Grille : L1, L2, L3) et du bouton **reset**
 #. Mise en place des câbles.
