@@ -18,7 +18,7 @@ En fonction du nombre de sorties à contrôler, deux références peuvent être 
 Il y a peu de contraintes à respecter, voici la liste :
 
 * Le **presse-étoupe** doit être installé sur le **côté inférieur** pour protéger contre la poussière et les éventuels ruissellements.
-* Le·s **dissipateur·s** doit·vent être installé·s sur le·s côté·s **vertical·aux**. C’est **impératif** pour assurer un bon refroidissement.
+* Les **dissipateurs** doivent être installés sur les côtés **verticaux**. C’est **impératif** pour assurer un bon refroidissement.
 
 Pour le reste — témoins LED, etc. — ils peuvent être montés n’importe où, selon vos préférences !
 
@@ -49,10 +49,13 @@ Cependant, ce guide décrira l’implantation la plus classique.
 Perçage pour chaque étage de sortie :term:`triac`
 -------------------------------------------------
 
-Le :term:`triac` de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boitier.
-L’étage de sortie doit aussi être fixé au fond du boitier à la bonne hauteur pour être en accord avec le point de fixation du triac.
+Le :term:`triac` de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boîtier.
+L’étage de sortie doit aussi être fixé au fond du boîtier à la bonne hauteur pour être en accord avec le point de fixation du triac.
 
-Pour ce faire, il faut fixer le dissipateur sur le boitier préalablement préparé et fixé l’étage de sortie sur celui-ci par l’intermédiaire du triac.
+Pour ce faire :
+
+1. Fixer le dissipateur sur le boîtier préalablement préparé
+2. Fixer l’étage de sortie sur le dissipateur par l’intermédiaire du triac
 
 Vu du dessus, il est possible de pointer le futur perçage à l’endroit le plus adéquat dans le trou oblong.
 
@@ -86,12 +89,13 @@ Pour ajuster la hauteur de la carte de sortie, un plot en plastique de **10 mm*
 
    Avant de continuer, vérifiez :
 
-   ☐ **Tous les trous percés à 3 mm** de diamètre
+   ☐ **Dissipateurs fixés solidement** sur les côtés verticaux du boîtier
+   ☐ **Triacs montés** sur les dissipateurs avec pâte thermique
+   ☐ **Tous les trous de montage percés à 3 mm** de diamètre
    ☐ **Plots 10 mm installés** avec vis M3 plastique
-   ☐ Hauteur des cartes de sortie correcte (alignement avec dissipateur)
-   ☐ Cartes de sortie se fixent solidement
-   ☐ Pas d’interférence avec les dissipateurs
-
+   ☐ **Hauteur des cartes de sortie correcte** (alignement avec dissipateur)
+   ☐ **Cartes de sortie se fixent solidement** sans forcer
+   ☐ **Pas d’interférence** avec les dissipateurs ou autres composants
 
 .. _percage-carte-mere:
 
@@ -108,14 +112,14 @@ En utilisant la même méthode, vous pouvez marquer et percer le boîtier aux di
    
    Pointage carte mère
 
-Pour éviter qu’elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de **10 mm** de hauteur est installé à l’aide d’une vis **M4** sur tous les trous percés, de la même manière que pour l’étage de sortie.
+Pour éviter qu’elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de **10 mm** de hauteur est installé à l’aide d’une vis **M3** sur tous les trous de montage percés, de la même manière que pour l’étage de sortie.
 
 .. admonition:: ✅ Point de Contrôle — Perçage Carte-Mère
 
    Avant de passer au câblage, vérifiez :
 
    ☐ **Tous les trous percés** aux dimensions appropriées
-   ☐ **Plots 10 mm installés** avec vis M4 plastique
+   ☐ **Plots 10 mm installés** avec vis M3 plastique
    ☐ Carte-mère positionnée sans entraver les branchements
    ☐ Carte-mère ne touche pas les points de fixation du boîtier
    ☐ Espace suffisant pour le câblage autour de la carte-mère
