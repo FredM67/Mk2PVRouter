@@ -108,6 +108,12 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = [
     'img/cover.jpg',
+    '_static',
+]
+
+# Add custom JavaScript to make Graphviz diagrams clickable
+html_js_files = [
+    'clickable-graphviz.js',
 ]
 
 html_theme_options = {
