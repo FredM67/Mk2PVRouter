@@ -21,10 +21,12 @@
             div.style.cursor = 'pointer';
             div.title = 'Cliquer pour agrandir';
 
+            // CRITICAL: Make the object transparent to pointer events
+            // so clicks pass through to the div
+            obj.style.pointerEvents = 'none';
+
             // Add click handler directly
             div.onclick = function(e) {
-                e.preventDefault();
-                e.stopPropagation();
                 console.log('Graphviz clicked, opening:', svgUrl);
                 window.open(svgUrl, '_blank');
                 return false;
