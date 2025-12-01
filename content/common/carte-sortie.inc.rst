@@ -415,32 +415,67 @@ Configuration du Banc de Test
 Schéma de Montage du Test
 """"""""""""""""""""""""""
 
-.. code-block:: text
+.. graphviz::
+   :caption: Configuration du banc de test pour carte de sortie triac
+   :align: center
 
-   CARTE DE SORTIE SOUS TEST
-   ┌───────────────────────────────────────────┐
-   │                                           │
-   │  ENTRÉE COMMANDE        SORTIE PUISSANCE  │
-   │  (Basse Tension)        (Haute Tension)   │
-   │                                           │
-   │  ┌──────┐              ┌────────┐         │
-   │  │ Molex│◄─────────────┤ Triac  │         │
-   │  │  IN  │  Optocoupleur│        │         │
-   │  └──┬───┘              └───┬────┘         │
-   │     │                      │              │
-   └─────┼──────────────────────┼──────────────┘
-         │                      │
-         │                      │
-    ┌────▼────┐            ┌───▼────────┐
-    │ Arduino │            │   230 V    │
-    │  Pin 9  │            │   Secteur  │
-    │   GND   │            │            │
-    └─────────┘            └───┬────────┘
-                               │
-                          ┌────▼─────┐
-                          │  LAMPE   │
-                          │  100 W   │
-                          └──────────┘
+   digraph test_bench {
+       // Configuration générale
+       rankdir=LR;
+       node [shape=box, style="rounded,filled", fontname="Arial"];
+       edge [fontname="Arial", fontsize=10];
+
+       // Cluster pour la carte de sortie
+       subgraph cluster_card {
+           label="CARTE DE SORTIE SOUS TEST";
+           style="filled,rounded";
+           fillcolor="#FFF9E6";
+           color="#666666";
+           fontsize=12;
+           fontcolor="#333333";
+           labelloc="t";
+
+           // Zone basse tension (gauche)
+           molex [label="Connecteur\nMolex IN", fillcolor="#90EE90", color="#2E7D32"];
+
+           // Composant central (isolation galvanique)
+           opto [label="Optocoupleur\nMOC3043", shape=diamond, fillcolor="#FFD54F", color="#F57C00", fontsize=10];
+
+           // Zone haute tension (droite)
+           triac [label="Triac\nBTA41", fillcolor="#FF6B6B", fontcolor=white, color="#C62828"];
+           power_conn [label="Connecteur\nPuissance", fillcolor="#FFB6C1", color="#C2185B"];
+
+           // Connexions internes carte
+           molex -> opto [label="Signal 5V", color="#4CAF50", fontcolor="#2E7D32"];
+           opto -> triac [label="Déclenchement", color="#FF9800", fontcolor="#E65100", style=dashed];
+           triac -> power_conn [label="Contrôle AC", color="#F44336", fontcolor="#B71C1C", penwidth=2];
+       }
+
+       // Composants externes - Zone basse tension (bleu)
+       arduino [label="Arduino\nPin 9 (signal)\nGND", fillcolor="#64B5F6", color="#1976D2", fontcolor=white];
+
+       // Composants externes - Zone haute tension (rouge)
+       secteur [label="⚠️ 230 V ⚠️\nSecteur", fillcolor="#D32F2F", fontcolor=white, color="#B71C1C", penwidth=2];
+       lampe [label="Lampe\nIncandescence\n100 W", shape=ellipse, fillcolor="#FFF59D", color="#F9A825"];
+
+       // Connexions externes
+       arduino -> molex [label="Câble dupont\n(5V logique)", color="#2196F3", fontcolor="#1565C0"];
+       secteur -> power_conn [label="230V AC", color="#D32F2F", fontcolor="#B71C1C", penwidth=2];
+       power_conn -> lampe [label="230V\ncontrôlé", color="#FF5722", fontcolor="#BF360C", penwidth=1.5];
+
+       // Légende
+       {
+           rank=same;
+           legend [shape=none, margin=0, label=<
+               <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+               <tr><td colspan="2" bgcolor="#E0E0E0"><b>Légende</b></td></tr>
+               <tr><td bgcolor="#90EE90">Vert</td><td>Basse tension (5V)</td></tr>
+               <tr><td bgcolor="#FF6B6B"><font color="white">Rouge</font></td><td>Haute tension (230V)</td></tr>
+               <tr><td bgcolor="#FFD54F">Jaune</td><td>Isolation galvanique</td></tr>
+               </table>
+           >];
+       }
+   }
 
 Procédure de Test Complète
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
