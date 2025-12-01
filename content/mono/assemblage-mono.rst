@@ -1,7 +1,6 @@
 .. _assemblage-mono:
 
 .. include:: ../common/assemblage.inc.rst
-
 #. **Mise en place de la prise jack** (CT Grille) et du bouton **ON-OFF**
 
    - Prise jack : pour le CT de mesure du réseau électrique
