@@ -416,16 +416,23 @@ Schéma de Montage du Test
 """"""""""""""""""""""""""
 
 .. graphviz::
-   :caption: Configuration du banc de test pour carte de sortie triac
+   :caption: Configuration du banc de test pour carte de sortie triac (cliquer pour agrandir)
    :align: center
+   :alt: Schéma de test complet pour carte de sortie triac
 
    digraph test_bench {
-       // Configuration générale
-       rankdir=LR;
+       // Configuration générale - Top to Bottom
+       rankdir=TB;
        node [shape=box, style="rounded,filled", fontname="Arial"];
        edge [fontname="Arial", fontsize=10];
+       splines=ortho;
+       nodesep=0.8;
+       ranksep=1.0;
 
-       // Cluster pour la carte de sortie
+       // Arduino en haut (zone basse tension)
+       arduino [label="Arduino\nPin 9 (signal)\nGND", fillcolor="#64B5F6", color="#1976D2", fontcolor=white, width=2];
+
+       // Cluster pour la carte de sortie au centre
        subgraph cluster_card {
            label="CARTE DE SORTIE SOUS TEST";
            style="filled,rounded";
@@ -434,46 +441,71 @@ Schéma de Montage du Test
            fontsize=12;
            fontcolor="#333333";
            labelloc="t";
+           margin=20;
 
-           // Zone basse tension (gauche)
-           molex [label="Connecteur\nMolex IN", fillcolor="#90EE90", color="#2E7D32"];
+           // Sous-cluster: Colonne BASSE TENSION (gauche)
+           subgraph cluster_low_voltage {
+               label="Basse Tension";
+               style="filled,dashed";
+               fillcolor="#E8F5E9";
+               color="#2E7D32";
+               fontsize=10;
+               fontcolor="#2E7D32";
 
-           // Composant central (isolation galvanique)
-           opto [label="Optocoupleur\nMOC3043", shape=diamond, fillcolor="#FFD54F", color="#F57C00", fontsize=10];
+               molex [label="Connecteur\nMolex IN", fillcolor="#90EE90", color="#2E7D32", width=1.5];
+           }
 
-           // Zone haute tension (droite)
-           triac [label="Triac\nBTA41", fillcolor="#FF6B6B", fontcolor=white, color="#C62828"];
-           power_conn [label="Connecteur\nPuissance", fillcolor="#FFB6C1", color="#C2185B"];
+           // Isolation galvanique (zone critique au centre)
+           opto [label="Optocoupleur\nMOC3043\n━━━━━━━━━━━━━\nISOLATION\nGALVANIQUE", shape=box, fillcolor="#FFD54F", color="#F57C00", fontsize=10, style="filled,bold", width=2.2, height=1.2];
 
-           // Connexions internes carte
-           molex -> opto [label="Signal 5V", color="#4CAF50", fontcolor="#2E7D32"];
-           opto -> triac [label="Déclenchement", color="#FF9800", fontcolor="#E65100", style=dashed];
-           triac -> power_conn [label="Contrôle AC", color="#F44336", fontcolor="#B71C1C", penwidth=2];
+           // Sous-cluster: Colonne HAUTE TENSION (droite)
+           subgraph cluster_high_voltage {
+               label="Haute Tension";
+               style="filled,dashed";
+               fillcolor="#FFEBEE";
+               color="#C62828";
+               fontsize=10;
+               fontcolor="#C62828";
+
+               triac [label="Triac\nBTA41", fillcolor="#FF6B6B", fontcolor=white, color="#C62828", width=1.5];
+               power_conn [label="Connecteur\nPuissance", fillcolor="#FFB6C1", color="#C2185B", width=1.5];
+
+               // Organisation dans la colonne haute tension
+               triac -> power_conn [label="", color="#F44336", penwidth=2];
+           }
+
+           // Connexions entre les zones
+           molex -> opto [label="  Signal 3.3V-5V  ", color="#4CAF50", fontcolor="#2E7D32", fontsize=9];
+           opto -> triac [label="  Déclenchement  ", color="#FF9800", fontcolor="#E65100", style="dashed", fontsize=9, constraint=true];
+
+           // Forcer l'alignement horizontal des deux colonnes
+           {rank=same; molex; opto; triac;}
        }
 
-       // Composants externes - Zone basse tension (bleu)
-       arduino [label="Arduino\nPin 9 (signal)\nGND", fillcolor="#64B5F6", color="#1976D2", fontcolor=white];
+       // Légende en bas à gauche sous la carte
+       legend [shape=none, margin=0, label=<
+           <table border="0" cellborder="1" cellspacing="0" cellpadding="6">
+           <tr><td colspan="2" bgcolor="#E0E0E0"><b>Légende</b></td></tr>
+           <tr><td bgcolor="#90EE90">Vert</td><td align="left">Basse tension (3.3V-5V)</td></tr>
+           <tr><td bgcolor="#FF6B6B"><font color="white">Rouge</font></td><td align="left">Haute tension (230V)</td></tr>
+           <tr><td bgcolor="#FFD54F">Jaune</td><td align="left">Isolation galvanique</td></tr>
+           </table>
+       >];
 
-       // Composants externes - Zone haute tension (rouge)
-       secteur [label="⚠️ 230 V ⚠️\nSecteur", fillcolor="#D32F2F", fontcolor=white, color="#B71C1C", penwidth=2];
-       lampe [label="Lampe\nIncandescence\n100 W", shape=ellipse, fillcolor="#FFF59D", color="#F9A825"];
+       // Secteur et lampe en bas (zone haute tension)
+       secteur [label="⚠️ 230 V ⚠️\nSecteur", fillcolor="#D32F2F", fontcolor=white, color="#B71C1C", penwidth=2, width=2];
+       lampe [label="Lampe\nIncandescence\n100 W", shape=ellipse, fillcolor="#FFF59D", color="#F9A825", width=1.8];
 
-       // Connexions externes
-       arduino -> molex [label="Câble dupont\n(5V logique)", color="#2196F3", fontcolor="#1565C0"];
-       secteur -> power_conn [label="230V AC", color="#D32F2F", fontcolor="#B71C1C", penwidth=2];
-       power_conn -> lampe [label="230V\ncontrôlé", color="#FF5722", fontcolor="#BF360C", penwidth=1.5];
+       // Connexions externes verticales
+       arduino -> molex [label="  Câble dupont (3.3V-5V)  ", color="#2196F3", fontcolor="#1565C0", fontsize=9];
+       power_conn -> secteur [label="  Entrée 230V AC  ", color="#D32F2F", fontcolor="#B71C1C", penwidth=2, fontsize=9, dir=back];
+       secteur -> lampe [label="  Charge 100W  ", color="#FF5722", fontcolor="#BF360C", penwidth=1.5, fontsize=9];
 
-       // Légende
+       // Positionner la légende à gauche, secteur au centre, lampe à droite
+       // Utiliser des arêtes invisibles pour forcer l'ordre gauche-droite
        {
            rank=same;
-           legend [shape=none, margin=0, label=<
-               <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-               <tr><td colspan="2" bgcolor="#E0E0E0"><b>Légende</b></td></tr>
-               <tr><td bgcolor="#90EE90">Vert</td><td>Basse tension (5V)</td></tr>
-               <tr><td bgcolor="#FF6B6B"><font color="white">Rouge</font></td><td>Haute tension (230V)</td></tr>
-               <tr><td bgcolor="#FFD54F">Jaune</td><td>Isolation galvanique</td></tr>
-               </table>
-           >];
+           legend -> secteur -> lampe [style=invis];
        }
    }
 
