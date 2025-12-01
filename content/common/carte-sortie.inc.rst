@@ -876,8 +876,8 @@ Ressources Complémentaires
 Documentation Technique
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Datasheet :term:`triac`  BTA41** : Caractéristiques électriques, courbes thermiques
-- **Datasheet :term:`optocoupleur` MOC3043** : Schéma interne, caractéristiques LED
+- **Datasheet** :term:`triac` BTA41 : Caractéristiques électriques, courbes thermiques
+- **Datasheet** :term:`optocoupleur` MOC3043 : Schéma interne, caractéristiques LED
 - **Guide soudure haute puissance** : :ref:`soldering-tutorial`
 
 .. admonition:: 🎯 Récapitulatif Final

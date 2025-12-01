@@ -174,27 +174,80 @@ Préparation du Poste de Travail
 Configuration Optimale
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. code-block:: text
+.. graphviz::
+   :caption: Organisation du poste de soudure (cliquer pour agrandir)
+   :align: center
+   :alt: Schéma d'organisation du poste de soudure avec équipements et zones de travail
 
-   ┌────────────────────────────────────────────────────┐
-   │                  POSTE DE SOUDURE                  │
-   │                                                    │
-   │  ┌─────────┐        ┌──────────┐     ┌──────────┐  │
-   │  │ Lampe   │        │ PCB sur  │     │ Support  │  │
-   │  │   LED   │──────> │  support │ <── │   fer    │  │
-   │  └─────────┘        └──────────┘     └──────────┘  │
-   │                           ↑                        │
-   │                    ┌──────┴──────┐                 │
-   │                    │ Extracteur  │                 │
-   │                    │  de fumées  │                 │
-   │                    └─────────────┘                 │
-   │                                                    │
-   │  À GAUCHE :                À DROITE :              │
-   │  - Composants              - Outils (pince,        │
-   │  - Fil soudure               coupante)             │
-   │  - Flux                    - Éponge/laine cuivre   │
-   │                                                    │
-   └────────────────────────────────────────────────────┘
+   digraph soldering_station {
+       // Configuration générale
+       rankdir=TB;
+       node [shape=box, style="rounded,filled", fontname="Arial"];
+       edge [fontname="Arial", fontsize=10];
+       splines=ortho;
+       nodesep=0.8;
+       ranksep=0.6;
+
+       // Titre du poste dans un cluster global
+       subgraph cluster_workstation {
+           label="POSTE DE SOUDURE";
+           style="filled,rounded";
+           fillcolor="#F5F5F5";
+           color="#333333";
+           fontsize=14;
+           fontcolor="#333333";
+           labelloc="t";
+           margin=25;
+
+           // Zone supérieure - Équipements principaux
+           lamp [label="Lampe\nLED", fillcolor="#FFF9C4", color="#F9A825", width=1.3, height=0.8];
+           pcb [label="PCB sur\nsupport", fillcolor="#E3F2FD", color="#1976D2", fontcolor="#0D47A1", width=1.5, height=0.8, penwidth=2];
+           iron_stand [label="Support\nfer", fillcolor="#FFCCBC", color="#D84315", width=1.3, height=0.8];
+
+           // Force strict left-to-right ordering with weighted invisible edges
+           {rank=same; lamp; pcb; iron_stand;}
+           lamp -> pcb [style=invis, weight=100];
+           pcb -> iron_stand [style=invis, weight=100];
+
+           // Extracteur de fumées au centre, en dessous
+           extractor [label="Extracteur\nde fumées", fillcolor="#C8E6C9", color="#388E3C", width=1.6, height=0.8];
+
+           // Zones de rangement - gauche et droite
+           subgraph cluster_storage {
+               style=invis;
+
+               left_zone [shape=none, margin=0, label=<
+                   <table border="0" cellborder="1" cellspacing="0" cellpadding="8" bgcolor="#E8EAF6">
+                   <tr><td bgcolor="#5C6BC0"><font color="white"><b>À GAUCHE</b></font></td></tr>
+                   <tr><td align="left">• Composants</td></tr>
+                   <tr><td align="left">• Fil soudure</td></tr>
+                   <tr><td align="left">• Flux</td></tr>
+                   </table>
+               >];
+
+               right_zone [shape=none, margin=0, label=<
+                   <table border="0" cellborder="1" cellspacing="0" cellpadding="8" bgcolor="#FFF3E0">
+                   <tr><td bgcolor="#FB8C00"><font color="white"><b>À DROITE</b></font></td></tr>
+                   <tr><td align="left">• Outils (pince, coupante)</td></tr>
+                   <tr><td align="left">• Éponge/laine cuivre</td></tr>
+                   </table>
+               >];
+
+               {rank=same; left_zone; right_zone;}
+           }
+
+           // Connexions avec flèches (attention: ordre des arêtes affecte le layout!)
+           lamp -> pcb [label="  Éclaire  ", color="#F9A825", fontcolor="#F57F17", fontsize=9, weight=1];
+           pcb -> iron_stand [label="  Accès  ", color="#D84315", fontcolor="#BF360C", fontsize=9, dir=back, weight=1];
+           pcb -> extractor [label="  Aspire fumées  ", color="#388E3C", fontcolor="#1B5E20", fontsize=9, dir=back, weight=1];
+
+           // Organisation verticale
+           extractor -> left_zone [style=invis];
+
+           // Force l'alignement horizontal bas
+           left_zone -> right_zone [style=invis];
+       }
+   }
 
 Checklist Avant de Commencer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
