@@ -143,6 +143,7 @@ html_context = {
 import os
 if os.environ.get('GITHUB_REF', '') == 'refs/heads/'+github_version:
     html_js_files = [
+        'clickable-graphviz.js',
         ('https://plausible.cs.aalto.fi/js/script.js', {"data-domain": "fredm67.github.io", "defer": "defer"}),
     ]
 
