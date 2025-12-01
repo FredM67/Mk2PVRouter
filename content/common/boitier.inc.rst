@@ -21,7 +21,6 @@ Cependant, ce guide décrira l’implantation la plus classique.
 Étapes à réaliser
 -----------------
 
-
 **Dissipateurs**
    - 2 trous de **3 mm** + 1 trou de **35 mm** par dissipateur
    - Voir :ref:`percage-du-boitier`
