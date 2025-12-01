@@ -1,32 +1,44 @@
 // Make Graphviz SVG diagrams clickable to open in new window
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Clickable graphviz script loaded');
+(function() {
+    function makeGraphvizClickable() {
+        console.log('Clickable graphviz script loaded');
 
-    // Find all graphviz divs
-    var graphvizDivs = document.querySelectorAll('div.graphviz');
-    console.log('Found ' + graphvizDivs.length + ' graphviz divs');
+        // Find all graphviz divs
+        var graphvizDivs = document.querySelectorAll('div.graphviz');
+        console.log('Found ' + graphvizDivs.length + ' graphviz divs');
 
-    graphvizDivs.forEach(function(div) {
-        var obj = div.querySelector('object[type="image/svg+xml"]');
-        if (!obj) return;
+        graphvizDivs.forEach(function(div) {
+            var obj = div.querySelector('object[type="image/svg+xml"]');
+            if (!obj) {
+                console.log('No object found in div');
+                return;
+            }
 
-        var svgUrl = obj.getAttribute('data');
-        console.log('Setting up clickable graphviz:', svgUrl);
+            var svgUrl = obj.getAttribute('data');
+            console.log('Setting up clickable graphviz:', svgUrl);
 
-        // Style the container
-        div.style.cursor = 'pointer';
-        div.style.display = 'inline-block';
-        div.title = 'Cliquer pour agrandir';
+            // Style the container
+            div.style.cursor = 'pointer';
+            div.title = 'Cliquer pour agrandir';
 
-        // Wrap in a link
-        var link = document.createElement('a');
-        link.href = svgUrl;
-        link.target = '_blank';
-        link.style.display = 'block';
-        link.style.textDecoration = 'none';
+            // Add click handler directly
+            div.onclick = function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Graphviz clicked, opening:', svgUrl);
+                window.open(svgUrl, '_blank');
+                return false;
+            };
+        });
+    }
 
-        // Move object into link
-        div.parentNode.insertBefore(link, div);
-        link.appendChild(div);
-    });
-});
+    // Try multiple times in case of timing issues
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', makeGraphvizClickable);
+    } else {
+        makeGraphvizClickable();
+    }
+
+    // Also try after a short delay
+    setTimeout(makeGraphvizClickable, 100);
+})();
