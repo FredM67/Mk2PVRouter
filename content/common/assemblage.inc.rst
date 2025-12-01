@@ -38,4 +38,3 @@ Il est possible de réaliser l’assemblage dans n’importe quel ordre, cependa
 
    - Aligner les trous de montage du PCB avec les entretoises
    - Visser le PCB aux entretoises
-
