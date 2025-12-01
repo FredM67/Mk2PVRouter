@@ -1,23 +1,32 @@
 // Make Graphviz SVG diagrams clickable to open in new window
 document.addEventListener('DOMContentLoaded', function() {
-    // Find all graphviz object elements
-    var graphvizObjects = document.querySelectorAll('.graphviz object[type="image/svg+xml"]');
+    console.log('Clickable graphviz script loaded');
 
-    graphvizObjects.forEach(function(obj) {
-        // Make the container clickable
-        obj.style.cursor = 'zoom-in';
-        obj.parentElement.style.cursor = 'zoom-in';
+    // Find all graphviz divs
+    var graphvizDivs = document.querySelectorAll('div.graphviz');
+    console.log('Found ' + graphvizDivs.length + ' graphviz divs');
 
-        // Add click handler to open SVG in new tab
-        var clickHandler = function(e) {
-            e.preventDefault();
-            var svgUrl = obj.data;
-            if (svgUrl) {
-                window.open(svgUrl, '_blank');
-            }
-        };
+    graphvizDivs.forEach(function(div) {
+        var obj = div.querySelector('object[type="image/svg+xml"]');
+        if (!obj) return;
 
-        obj.addEventListener('click', clickHandler);
-        obj.parentElement.addEventListener('click', clickHandler);
+        var svgUrl = obj.getAttribute('data');
+        console.log('Setting up clickable graphviz:', svgUrl);
+
+        // Style the container
+        div.style.cursor = 'pointer';
+        div.style.display = 'inline-block';
+        div.title = 'Cliquer pour agrandir';
+
+        // Wrap in a link
+        var link = document.createElement('a');
+        link.href = svgUrl;
+        link.target = '_blank';
+        link.style.display = 'block';
+        link.style.textDecoration = 'none';
+
+        // Move object into link
+        div.parentNode.insertBefore(link, div);
+        link.appendChild(div);
     });
 });
