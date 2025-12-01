@@ -12,7 +12,7 @@ En fonction du nombre de sorties à contrôler, deux références peuvent être 
 Il y a peu de contraintes à respecter, voici la liste :
 
 * Le **presse-étoupe** doit être installé sur le **côté inférieur** pour protéger contre la poussière et les éventuels ruissellements.
-* Le·s **dissipateur·s** doit·vent être installé·s sur le·s côté·s **vertical·aux**. C’est **impératif** pour assurer un bon refroidissement.
+* Les **dissipateurs** doivent être installés sur les côtés **verticaux**. C’est **impératif** pour assurer un bon refroidissement.
 
 Pour le reste — témoins LED, etc. — ils peuvent être montés n’importe où, selon vos préférences !
 
@@ -21,23 +21,32 @@ Cependant, ce guide décrira l’implantation la plus classique.
 Étapes à réaliser
 -----------------
 
-* Perçage pour le·s dissipateur·s
-  Vous devrez percer 2 trous de **3 mm** de diamètre et un autre de **35 mm** de diamètre.
-  Voir :ref:`percage-du-boitier`.
-* Perçage pour le ou les étage·s de sortie·s triac
-  Vous devrez percer 1 trou de **3 mm** de diamètre.
-* Perçage pour la carte-mère
-  Vous devrez percer 4 trous de **4 mm** de diamètre.
-* Perçage pour les presse-étoupe
-  Vous devrez percer des trous de **20 mm** de diamètre.
-* Perçage pour le·s prise·s jack
-  Vous devrez percer des trous de **8 mm** de diamètre.
-* Perçage pour le·s témoin·s LED et pour l’afficheur 4 Digits (**Uniquement** pour le routeur **monophasé**)
-  Vous devrez percer des trous de **8 mm** de diamètre.
-* Perçage pour le bouton *marche* (**Uniquement** pour le routeur **monophasé**)
-  Vous devrez percer un trou de **20 mm** de diamètre.
-* Perçage pour le bouton *reset* (**Uniquement** pour le routeur **triphasé**)
-  Vous devrez percer un trou de **13 mm** de diamètre.
+
+**Dissipateurs**
+   - 2 trous de **3 mm** + 1 trou de **35 mm** par dissipateur
+   - Voir :ref:`percage-du-boitier`
+
+**Étages de sortie triac**
+   - 1 trou de **3 mm** par étage de sortie
+
+**Carte-mère**
+   - 4 trous de **4 mm**
+
+**Presse-étoupe**
+   - Trous de **20 mm** (quantité selon câblage)
+
+**Prises jack** (CT de mesure)
+   - Trous de **8 mm**
+   - 1 prise pour monophasé, 3 prises pour triphasé
+
+**Témoins LED et afficheur 4 Digits** (*Monophasé uniquement*)
+   - Trous de **8 mm**
+
+**Bouton marche/arrêt** (*Monophasé uniquement*)
+   - 1 trou de **20 mm**
+
+**Bouton reset** (*Triphasé uniquement*)
+   - 1 trou de **13 mm**
 
 Outils nécessaires
 ------------------
@@ -50,7 +59,7 @@ Outils nécessaires
 * Fraise de **35 mm**
 
 
-Perçage pour le·s dissipateur·s
+Perçage pour les dissipateurs
 -------------------------------
 
 Veuillez vous référer à la section :ref:`percage-du-boitier`.
