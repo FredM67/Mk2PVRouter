@@ -119,7 +119,7 @@ Pour éviter qu’elle ne repose sur les points de fixation au fond du boîtier,
    Avant de passer au câblage, vérifiez :
 
    ☐ **Tous les trous percés** aux dimensions appropriées
-   ☐ **Plots 10 mm installés** avec vis M3 plastique
+   ☐ **Plots 10 mm installés** avec vis M3 plastique
    ☐ Carte-mère positionnée sans entraver les branchements
    ☐ Carte-mère ne touche pas les points de fixation du boîtier
    ☐ Espace suffisant pour le câblage autour de la carte-mère
