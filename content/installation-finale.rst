@@ -315,42 +315,23 @@ La section des câbles des charges dépend de leur puissance (ces câbles sont n
 Schéma de Raccordement
 ^^^^^^^^^^^^^^^^^^^^^^
 
-**Monophasé (230 V) :**
+**Monophasé (230 V) :**
 
-.. code-block:: text
+Connexions entre le tableau électrique et le MK2PVRouter :
 
-   TABLEAU ÉLECTRIQUE                    MK2PVROUTER
-   ┌─────────────────┐                  ┌───────────────┐
-   │                 │                  │               │
-   │  Disjoncteur    │                  │  Entrée 230 V │
-   │  16 A Bipolaire │                  │               │
-   │                 │                  │  L  ──────────┼─── Vers charge
-   │   L ────────────┼──────────────────┼─ Phase        │    (chauffe-eau)
-   │                 │                  │               │
-   │   N ────────────┼──────────────────┼─ Neutre       │
-   │                 │                  │               │
-   │  ⏚ ─────────────┼──────────────────┼─ Terre        │
-   │                 │                  │               │
-   └─────────────────┘                  └───────────────┘
+- **L (Phase)** : du disjoncteur 16 A bipolaire → entrée L du routeur → vers charge (chauffe-eau)
+- **N (Neutre)** : du disjoncteur → entrée N du routeur
+- **⏚ (Terre)** : du disjoncteur → entrée terre du routeur
 
-**Triphasé (3 × 230 V = 400 V) :**
+**Triphasé (3 × 230 V = 400 V) :**
 
-.. code-block:: text
+Connexions entre le tableau électrique et le MK2PVRouter :
 
-   TABLEAU ÉLECTRIQUE                    MK2PVROUTER
-   ┌─────────────────┐                  ┌──────────────┐
-   │                 │                  │              │
-   │  Disjoncteur    │                  │  Entrée 3~   │
-   │  Tétrapolaire   │                  │              │
-   │  16 A           │                  │  L1 ─────────┼─── Charge phase 1
-   │                 │                  │              │
-   │   L1 ───────────┼──────────────────┼─ Phase 1     │
-   │   L2 ───────────┼──────────────────┼─ Phase 2     │
-   │   L3 ───────────┼──────────────────┼─ Phase 3     │
-   │   N  ───────────┼──────────────────┼─ Neutre      │
-   │   ⏚  ───────────┼──────────────────┼─ Terre       │
-   │                 │                  │              │
-   └─────────────────┘                  └──────────────┘
+- **L1 (Phase 1)** : du disjoncteur tétrapolaire 16 A → entrée L1 du routeur → charge phase 1
+- **L2 (Phase 2)** : du disjoncteur → entrée L2 du routeur
+- **L3 (Phase 3)** : du disjoncteur → entrée L3 du routeur
+- **N (Neutre)** : du disjoncteur → entrée N du routeur
+- **⏚ (Terre)** : du disjoncteur → entrée terre du routeur
 
 Procédure de Connexion (Électricien Qualifié)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
