@@ -138,7 +138,7 @@ Avant de commencer cette section :
 
 ☐ **Détecteur de fumée** — Fonctionnel et testé
 
-☐ **Surface ininflammable** — Travailler sur métal, céramique (PAS bois/plastique)
+☐ **Surface isolante et ininflammable** — Travailler sur céramique, bois sec (PAS métal/plastique)
 
 ☐ **Quelqu’un d’autre présent** — En cas d’urgence
 
@@ -410,7 +410,7 @@ Configuration du Banc de Test
 
 ☐ **Extincteur** à portée de main
 
-☐ **Surface ininflammable** (métal, céramique)
+☐ **Surface isolante et ininflammable** (céramique, bois sec — PAS métal)
 
 Schéma de Montage du Test
 """"""""""""""""""""""""""
