@@ -1,9 +1,8 @@
 .. _assemblage-mono:
 
 .. include:: ../common/assemblage.inc.rst
-   :literal:
 
-#. **Mise en place de la prise jack** (CT Grille) et du bouton **ON-OFF**
+6. **Mise en place de la prise jack** (CT Grille) et du bouton **ON-OFF**
 
    - Prise jack : pour le CT de mesure du réseau électrique
    - Bouton ON-OFF : alimentation du routeur
