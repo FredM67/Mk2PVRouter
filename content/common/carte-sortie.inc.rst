@@ -493,8 +493,8 @@ Schéma de Montage du Test
        >];
 
        // Secteur et lampe en bas (zone haute tension)
-       secteur [label="⚠️ 230 V ⚠️\nSecteur", fillcolor="#D32F2F", fontcolor=white, color="#B71C1C", penwidth=2, width=2];
-       lampe [label="Lampe\nIncandescence\n100 W", shape=ellipse, fillcolor="#FFF59D", color="#F9A825", width=1.8];
+       secteur [label="⚠️ 230 V ⚠️\nSecteur", fillcolor="#D32F2F", fontcolor=white, color="#B71C1C", penwidth=2, width=2];
+       lampe [label="Lampe\nIncandescence\n100 W", shape=ellipse, fillcolor="#FFF59D", color="#F9A825", width=1.8];
 
        // Connexions externes verticales
        arduino -> molex [label="  Câble dupont (3.3V-5V)  ", color="#2196F3", fontcolor="#1565C0", fontsize=9];
@@ -780,9 +780,9 @@ Problème 4 : Carte Chauffe Excessivement
 
    **Action** : Remplacer par cuivre 2,5 mm² au lieu de 1,5 mm²
 
-☐ Charge trop importante pour le dissipateur (> 3 000 W ~ 13 A)
+☐ Charge trop importante pour le dissipateur (> 3 000 W ~ 13 A)
 
-   **Action** : Vérifier puissance charge (doit être ≤ 3 000 W), utiliser dissipateur plus grand si besoin
+   **Action** : Vérifier puissance charge (doit être ≤ 3 000 W), utiliser dissipateur plus grand si besoin
 
 Validation Finale de la Carte
 ------------------------------
@@ -798,7 +798,7 @@ Checklist Avant Installation
 
    ☐ **Test charge 100 W réussi** : 5 minutes sans problème
 
-   ☐ **Température acceptable** : Carte et :term:`triac` < 60 °C
+   ☐ **Température acceptable** : Carte et :term:`triac` < 60 °C
 
    ☐ **Aucune odeur ou fumée** durant tous les tests
 
@@ -819,9 +819,9 @@ Il est recommandé de noter sur un papier (à conserver avec la carte) :
 
 - **Date du test** : ___/___/______
 - **Tension système** : ☐ 3,3 V  ☐ 5 V
-- **Valeur R1** : _____ Ω (120 Ω pour 3,3 V, 180 Ω pour 5 V)
-- **Valeur R2** : _____ Ω (330 Ω)
-- **Valeur R3** : _____ Ω (360 Ω)
+- **Valeur R1** : _____ Ω (120 Ω pour 3,3 V, 180 Ω pour 5 V)
+- **Valeur R2** : _____ Ω (330 Ω)
+- **Valeur R3** : _____ Ω (360 Ω)
 - **Référence :term:`triac`** : __________ (ex :  BTA41-600B)
 - **Charge testée** : _____ W (ex : 100 W)
 - **Durée test** : _____ minutes

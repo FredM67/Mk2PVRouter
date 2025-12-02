@@ -183,7 +183,7 @@ Préparation
 
    L’adaptateur FTDI ne peut **PAS** alimenter le routeur seul !
    
-   Le routeur doit être alimenté par sa propre alimentation 230 V.
+   Le routeur doit être alimenté par sa propre alimentation 230 V.
 
 .. include:: ../common/connexion-ftdi.inc.rst
 

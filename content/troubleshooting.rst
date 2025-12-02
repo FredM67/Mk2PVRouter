@@ -19,7 +19,7 @@ Ce chapitre vous aide à diagnostiquer et résoudre les problèmes courants renc
  :depth: 2
 
 ==============================
-📋 Différences Mono/Tri Phases
+📋 Différences Monophasé/Triphasé
 ==============================
 
 Ce guide couvre les versions **monophasée** et **triphasée** du Mk2PVRouter.
@@ -40,7 +40,7 @@ Ce guide couvre les versions **monophasée** et **triphasée** du Mk2PVRouter.
  * - Ponts redresseurs
    - BR1
    - BR1, BR2, BR3
- * - Régulateur 3.3 V/5 V
+ * - Régulateur 3.3 V/5 V
    - VR1
    - VR1 (commun)
  * - Capteurs de courant (CT)
@@ -929,7 +929,7 @@ Dépannage Communication
 
 **Test émetteur :**
 
-#. Ouvrir Moniteur Série (9600 bauds)
+#. Ouvrir Moniteur Série (9 600 bauds)
 #. Forcer émission commande test
 #. Observer messages debug
 

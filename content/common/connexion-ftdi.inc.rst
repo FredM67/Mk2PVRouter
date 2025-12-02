@@ -11,7 +11,7 @@ Si vous utilisez des fils individuels, suivez les instructions ci-dessous.
    +----------------+---------------------+------------------------+
    | Broche FTDI    | Broche PCB          | Couleur câble (FTDI)   |
    +================+=====================+========================+
-   | GND            | 0 V (ou GND)        | Noir                   |
+   | GND            | 0 V (ou GND)        | Noir                   |
    +----------------+---------------------+------------------------+
    | TX (Transmit)  | RX (Receive)        | Vert ou Orange         |
    +----------------+---------------------+------------------------+
@@ -27,8 +27,8 @@ Si vous utilisez des fils individuels, suivez les instructions ci-dessous.
 
 #. Vérifier le cavalier ou switch de l’adaptateur FTDI :
 
-   - Position **3.3 V** si routeur en 3.3 V
-   - Position **5 V** si routeur en 5 V
+   - Position **3.3 V** si routeur en 3.3 V
+   - Position **5 V** si routeur en 5 V
 
 #. Connecter l’adaptateur FTDI à l’ordinateur (port USB)
 

@@ -315,19 +315,19 @@ La section des câbles des charges dépend de leur puissance (ces câbles sont n
 Schéma de Raccordement
 ^^^^^^^^^^^^^^^^^^^^^^
 
-**Monophasé (230 V) :**
+**Monophasé (230 V) :**
 
 Connexions entre le tableau électrique et le MK2PVRouter :
 
-- **L (Phase)** : du disjoncteur 16 A bipolaire → entrée L du routeur → vers charge (chauffe-eau)
+- **L (Phase)** : du disjoncteur 16 A bipolaire → entrée L du routeur → vers charge (chauffe-eau)
 - **N (Neutre)** : du disjoncteur → entrée N du routeur
 - **⏚ (Terre)** : du disjoncteur → entrée terre du routeur
 
-**Triphasé (3 × 230 V = 400 V) :**
+**Triphasé (3 × 230 V = 400 V) :**
 
 Connexions entre le tableau électrique et le MK2PVRouter :
 
-- **L1 (Phase 1)** : du disjoncteur tétrapolaire 16 A → entrée L1 du routeur → charge phase 1
+- **L1 (Phase 1)** : du disjoncteur tétrapolaire 16 A → entrée L1 du routeur → charge phase 1
 - **L2 (Phase 2)** : du disjoncteur → entrée L2 du routeur
 - **L3 (Phase 3)** : du disjoncteur → entrée L3 du routeur
 - **N (Neutre)** : du disjoncteur → entrée N du routeur
@@ -340,7 +340,7 @@ Procédure de Connexion (Électricien Qualifié)
 
 #. **Vérifier l’absence de tension** avec multimètre ET testeur sans contact
 
-#. **Attendre 5 minutes** (décharge des condensateurs éventuels)
+#. **Attendre 5 minutes** (décharge des condensateurs éventuels)
 
 #. **Porter les EPI** (gants isolants, chaussures de sécurité)
 
@@ -438,7 +438,7 @@ Pendant les **premières 24 heures** :
 
   #. Couper IMMÉDIATEMENT le disjoncteur du Mk2PVRouter
   #. Couper le disjoncteur général si fumée ou odeur forte
-  #. Laisser refroidir 30 minutes
+  #. Laisser refroidir 30 minutes
   #. Inspecter visuellement toutes les connexions
   #. Faire vérifier par un électricien avant de remettre sous tension
 

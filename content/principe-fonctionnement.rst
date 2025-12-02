@@ -77,7 +77,7 @@ Ces indications permettent de vérifier visuellement le fonctionnement du routeu
 Mode de régulation des triacs
 -----------------------------
 
-Le Mk2PVRouter utilise un mode de régulation appelé **burst fire control** pour piloter les triacs. Ce mode consiste à envoyer des trains complets d’ondes sinusoïdales au lieu de découper chaque cycle. En d’autres termes, le triac est activé ou désactivé pour des périodes complètes de la fréquence du réseau (par exemple, 50 Hz en Europe).
+Le Mk2PVRouter utilise un mode de régulation appelé **burst fire control** pour piloter les triacs. Ce mode consiste à envoyer des trains complets d’ondes sinusoïdales au lieu de découper chaque cycle. En d’autres termes, le triac est activé ou désactivé pour des périodes complètes de la fréquence du réseau (par exemple, 50 Hz en Europe).
 
 Avantages du *burst fire control*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

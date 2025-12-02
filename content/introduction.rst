@@ -10,7 +10,7 @@ Introduction
 .. danger::
    ⚠️ **SÉCURITÉ AVANT TOUT** : Avant de commencer l’assemblage, lisez impérativement le chapitre :ref:`safety-overview`.
 
-   Ce projet implique la manipulation de composants électroniques sensibles et, plus tard, de tensions dangereuses (230 V).
+   Ce projet implique la manipulation de composants électroniques sensibles et, plus tard, de tensions dangereuses (230 V).
 
 **Niveau de difficulté :** 🔧🔧🔧 Intermédiaire
 
@@ -21,12 +21,12 @@ Introduction
 **Durée totale estimée :**
 
 ⏱️ **Temps d’assemblage complet :**
-   - Débutant en soudure : 12-15 heures (réparties sur plusieurs sessions)
-   - Expérience intermédiaire : 8-10 heures
-   - Expérimenté : 5-7 heures
+   - Débutant en soudure : 12-15 heures (réparties sur plusieurs sessions)
+   - Expérience intermédiaire : 8-10 heures
+   - Expérimenté : 5-7 heures
 
 .. tip::
-   Il est recommandé de travailler par sessions de 2-3 heures maximum pour maintenir concentration et précision.
+   Il est recommandé de travailler par sessions de 2-3 heures maximum pour maintenir concentration et précision.
 
 -------------
 
@@ -65,23 +65,23 @@ L’assemblage complet va nécessiter plusieurs étapes :
      - Débutant
      - Expérimenté
    * - Soudure carte-mère + tests
-     - 3-4 h
-     - 1,5-2 h
+     - 3-4 h
+     - 1,5-2 h
    * - Soudure cartes sortie + tests
-     - 1,5-2 h
-     - 45 min-1 h
+     - 1,5-2 h
+     - 45 min-1 h
    * - Perçages
-     - 2-3 h
-     - 1-1,5 h
+     - 2-3 h
+     - 1-1,5 h
    * - Montage dans boîtier
-     - 1-2 h
-     - 30 min-1 h
+     - 1-2 h
+     - 30 min-1 h
    * - Câblage
-     - 2-3 h
-     - 1-1,5 h
+     - 2-3 h
+     - 1-1,5 h
    * - Logiciel + étalonnage
-     - 3-4 h
-     - 2-3 h
+     - 3-4 h
+     - 2-3 h
 
 Recommandations pour les étapes de soudure
 ------------------------------------------

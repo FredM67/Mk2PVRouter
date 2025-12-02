@@ -7,8 +7,8 @@ Installation des Logiciels
 Ce chapitre détaille l’installation complète de l’environnement de développement Arduino et la programmation du firmware du Mk2PVRouter.
 
 ⏱️ **Temps estimé :**
-   - Débutant : 2-3 heures
-   - Expérimenté : 1-2 heures
+   - Débutant : 2-3 heures
+   - Expérimenté : 1-2 heures
 
 .. contents:: Sommaire de l’installation
    :local:

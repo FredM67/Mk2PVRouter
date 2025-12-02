@@ -12,7 +12,7 @@ Le principe du burst fire control repose sur l’envoi de **trains complets d’
 
 - **Activation par périodes complètes** :
 
-  - Le triac (composant électronique utilisé pour contrôler la puissance) est activé ou désactivé pour des périodes complètes correspondant à la fréquence du réseau (par exemple, 50 Hz en Europe ou 60 Hz en Amérique du Nord).
+  - Le triac (composant électronique utilisé pour contrôler la puissance) est activé ou désactivé pour des périodes complètes correspondant à la fréquence du réseau (par exemple, 50 Hz en Europe ou 60 Hz en Amérique du Nord).
   - Cela signifie que le courant passe pendant un certain nombre de cycles complets de la sinusoïde, puis est coupé pendant d’autres cycles.
 
 - **Pas de découpage intra-cycle** :

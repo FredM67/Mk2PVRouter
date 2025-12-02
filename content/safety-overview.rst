@@ -146,7 +146,7 @@ Pendant la Soudure
 
 - ✅ Toujours reposer le fer sur son support
 - ✅ Souder dans un endroit bien ventilé
-- ✅ Prendre des pauses toutes les 30-45 minutes
+- ✅ Prendre des pauses toutes les 30-45 minutes
 - ✅ Garder une éponge humide pour nettoyer la panne
 - ✅ Tenir le fer par la poignée isolée uniquement
 
@@ -161,7 +161,7 @@ Pendant la Soudure
 En Cas de Brûlure au Fer à Souder
 ---------------------------------
 
-1. **Refroidir immédiatement** : Eau froide courante 10-15 minutes
+1. **Refroidir immédiatement** : Eau froide courante 10-15 minutes
 2. **Ne pas percer les cloques**
 3. **Couvrir avec compresse stérile**
 4. **Si brûlure >5 cm ou profonde** : Consulter médecin/urgences
@@ -468,7 +468,7 @@ En Cas de Brûlure
 Brûlures Mineures (< 5 cm, superficielles)
 ------------------------------------------
 
-1. Refroidir immédiatement à l’eau froide courante (15-20 minutes)
+1. Refroidir immédiatement à l’eau froide courante (15-20 minutes)
 2. Retirer bijoux/vêtements avant gonflement
 3. Ne pas percer les cloques
 4. Couvrir avec compresse stérile non adhérente

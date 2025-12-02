@@ -4,7 +4,7 @@ Assemblage
 Après avoir effectué toutes les étapes précédentes (soudure de la carte-mère, préparation du boîtier, perçage du dissipateur, étage·s de sortie et confection des câbles), il est temps d’assembler le tout.
 
 .. tip::
-   **Durée estimée** : 30 à 45 minutes
+   **Durée estimée** : 30 à 45 minutes
 
    **Outils nécessaires** :
 

@@ -243,7 +243,7 @@ Les condensateurs céramiques sont en général orange, et ont la forme d’une 
    Avant de continuer, vérifiez :
 
    ☐ Tous les condensateurs céramiques soudés (C4, C6-C11)
-   ☐ Condensateurs 22 pF (C10, C11) correctement identifiés et placés
+   ☐ Condensateurs 22 pF (C10, C11) correctement identifiés et placés
    ☐ Oscillateur installé et soudé
    ☐ Soudures propres sans excès de flux
    ☐ Pattes coupées à ras (ou légèrement surélevés si souhaité)
