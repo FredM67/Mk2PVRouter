@@ -42,8 +42,6 @@ Cependant, ce guide décrira l’implantation la plus classique.
 
    ☐ Espace de travail propre avec étau ou serre-joints
 
-.. include:: ../common/etapes-prepa.inc.rst
-
 .. include:: ../common/dissipateur.inc.rst
 
 Perçage pour chaque étage de sortie :term:`triac`
