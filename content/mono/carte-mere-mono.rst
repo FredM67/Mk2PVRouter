@@ -48,6 +48,10 @@ Cependant, certains composants spécifiques à la version triphasée seront abse
 
 -------------
 
+.. include:: ../common/qualite-soudures.inc.rst
+
+-------------
+
 Soudure des composants
 ~~~~~~~~~~~~~~~~~~~~~~
 

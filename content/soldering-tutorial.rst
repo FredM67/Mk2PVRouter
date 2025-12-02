@@ -360,6 +360,12 @@ Les 5 Étapes d’une Bonne Soudure
 Reconnaître une Bonne Soudure
 ------------------------------
 
+.. figure:: img/soudure-bonne-vs-mauvaise.png
+   :align: center
+   :alt: Comparaison soudure bonne vs mauvaise
+
+   Exemples de bonnes et mauvaises soudures
+
 Caractéristiques d’une Soudure Parfaite
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -679,7 +685,7 @@ Exercice 2 : Souder des Composants :term:`DIL`
 - **Aucun pont** entre broches adjacentes
 - Vérifier avec multimètre (mode continuité)
 
-Exercice 3 : Dessouder et Resouder
+Exercice 3 : Dessouder et Ressouder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Objectif** : Apprendre à corriger ses erreurs
@@ -819,8 +825,8 @@ Prochaines Étapes
 
 Maintenant que vous maîtrisez les bases de la soudure, passez aux chapitres d’assemblage :
 
-- **Monophasé** : :ref:`carte-mere-mono` puis :ref:`carte-sortie`
-- **Triphasé** : :ref:`carte-mere-tri` puis :ref:`carte-sortie`
+- **Monophasé** : :ref:`carte-mere-mono` puis :ref:`carte-sortie-mono`
+- **Triphasé** : :ref:`carte-mere-tri` puis :ref:`carte-sortie-tri`
 
 .. tip::
    💡 **Conseil Final**

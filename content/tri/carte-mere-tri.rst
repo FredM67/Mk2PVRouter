@@ -44,6 +44,10 @@ Bien qu’elles fonctionnent toutes de la même manière, chaque nouvelle versio
 
 -------------
 
+.. include:: ../common/qualite-soudures.inc.rst
+
+-------------
+
 Soudure des composants
 ~~~~~~~~~~~~~~~~~~~~~~
 
