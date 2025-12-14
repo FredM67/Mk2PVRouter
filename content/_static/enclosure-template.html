@@ -88,6 +88,13 @@
         .btn-clamp:hover {
             background: #45a049;
         }
+        .btn-clamp-small {
+            background: #8BC34A;
+            color: white;
+        }
+        .btn-clamp-small:hover {
+            background: #7cb342;
+        }
         .btn-rj45 {
             background: #2196F3;
             color: white;
@@ -144,6 +151,11 @@
             background: #e8f5e9;
             border: 2px solid #4CAF50;
             color: #2e7d32;
+        }
+        .chip-clamp-small {
+            background: #f1f8e9;
+            border: 2px solid #8BC34A;
+            color: #558b2f;
         }
         .chip-rj45 {
             background: #e3f2fd;
@@ -223,13 +235,14 @@
     <div class="card">
         <h2>Layout</h2>
         <div class="button-row">
-            <button class="btn btn-clamp" onclick="addChip('C')">+ Clamp</button>
+            <button class="btn btn-clamp" onclick="addChip('C')">+ Large Clamp</button>
+            <button class="btn btn-clamp-small" onclick="addChip('S')">+ Small Clamp</button>
             <button class="btn btn-rj45" onclick="addChip('R')">+ RJ45</button>
         </div>
         <div class="layout-container" id="layout-container">
             <span class="layout-empty">Click buttons above to add components, drag to reorder</span>
         </div>
-        <p class="info">Clamp: 20mm hole (26mm mounted) | RJ45: 24mm hole + 2x3mm mounting (43mm plate)</p>
+        <p class="info">Large clamp: 20mm (26mm mounted) | Small clamp: 12.5mm (18mm mounted) | RJ45: 24mm + 2x3mm (43mm plate)</p>
     </div>
 
     <div class="card">
@@ -252,11 +265,13 @@
         // Constants (matching Python script)
         const HEIGHT = 60.0;
         const JACK_DIAMETER = 8.0;
-        const CLAMP_DIAMETER = 20.0;
+        const CLAMP_LARGE_DIAMETER = 20.0;
+        const CLAMP_SMALL_DIAMETER = 12.5;
         const RJ45_DIAMETER = 24.0;
         const RJ45_MOUNTING_DISTANCE = 32.5;
         const RJ45_PLATE_WIDTH = 43.0;
-        const CLAMP_MOUNTED_DIAMETER = 26.0;
+        const CLAMP_LARGE_MOUNTED = 26.0;
+        const CLAMP_SMALL_MOUNTED = 18.0;
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
@@ -310,8 +325,17 @@
                 return;
             }
             container.innerHTML = layout.map((type, index) => {
-                const chipClass = type === 'C' ? 'chip-clamp' : 'chip-rj45';
-                const label = type === 'C' ? 'Clamp' : 'RJ45';
+                let chipClass, label;
+                if (type === 'C') {
+                    chipClass = 'chip-clamp';
+                    label = 'Large';
+                } else if (type === 'S') {
+                    chipClass = 'chip-clamp-small';
+                    label = 'Small';
+                } else {
+                    chipClass = 'chip-rj45';
+                    label = 'RJ45';
+                }
                 return `<div class="chip ${chipClass}" draggable="true" data-index="${index}">
                     <span>${label}</span>
                     <button class="chip-remove" onclick="event.stopPropagation(); removeChip(${index})">×</button>
@@ -420,13 +444,21 @@
                         if (rightClearance < halfPlate) {
                             warnings.push(`RJ45 at position ${i + 1} has only ${rightClearance.toFixed(1)}mm right clearance (needs ${halfPlate}mm for plate)`);
                         }
-                    } else {
-                        const halfClamp = CLAMP_MOUNTED_DIAMETER / 2;
-                        if (leftClearance < halfClamp) {
-                            warnings.push(`Clamp at position ${i + 1} has only ${leftClearance.toFixed(1)}mm left clearance (needs ${halfClamp}mm when mounted)`);
+                    } else if (type === 'C') {
+                        const half = CLAMP_LARGE_MOUNTED / 2;
+                        if (leftClearance < half) {
+                            warnings.push(`Large clamp at position ${i + 1} has only ${leftClearance.toFixed(1)}mm left clearance (needs ${half}mm when mounted)`);
                         }
-                        if (rightClearance < halfClamp) {
-                            warnings.push(`Clamp at position ${i + 1} has only ${rightClearance.toFixed(1)}mm right clearance (needs ${halfClamp}mm when mounted)`);
+                        if (rightClearance < half) {
+                            warnings.push(`Large clamp at position ${i + 1} has only ${rightClearance.toFixed(1)}mm right clearance (needs ${half}mm when mounted)`);
+                        }
+                    } else if (type === 'S') {
+                        const half = CLAMP_SMALL_MOUNTED / 2;
+                        if (leftClearance < half) {
+                            warnings.push(`Small clamp at position ${i + 1} has only ${leftClearance.toFixed(1)}mm left clearance (needs ${half}mm when mounted)`);
+                        }
+                        if (rightClearance < half) {
+                            warnings.push(`Small clamp at position ${i + 1} has only ${rightClearance.toFixed(1)}mm right clearance (needs ${half}mm when mounted)`);
                         }
                     }
 
@@ -471,7 +503,10 @@
                 if (hole.type === 'C') {
                     svg += `\n  <circle cx="${hole.x.toFixed(1)}" cy="${hole.y}" r="0.5" class="center-mark"/>`;
                     svg += `\n  <text x="${hole.x.toFixed(1)}" y="${hole.y + 5}" class="hole-size">20</text>`;
-                } else {
+                } else if (hole.type === 'S') {
+                    svg += `\n  <circle cx="${hole.x.toFixed(1)}" cy="${hole.y}" r="0.5" class="center-mark"/>`;
+                    svg += `\n  <text x="${hole.x.toFixed(1)}" y="${hole.y + 5}" class="hole-size">12.5</text>`;
+                } else if (hole.type === 'R') {
                     // Main hole
                     svg += `\n  <circle cx="${hole.x.toFixed(1)}" cy="${hole.y}" r="0.5" class="center-mark"/>`;
                     svg += `\n  <text x="${hole.x.toFixed(1)}" y="${hole.y + 5}" class="hole-size">24</text>`;
