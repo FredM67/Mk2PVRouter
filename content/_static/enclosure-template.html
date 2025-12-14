@@ -494,6 +494,30 @@
 
                     holePositions.push({ x, y, type });
                 });
+
+                // Check for collisions between adjacent components
+                for (let i = 0; i < layout.length - 1; i++) {
+                    const curr = layout[i];
+                    const next = layout[i + 1];
+                    const currX = remainingStart + d / 2 + i * d;
+                    const nextX = remainingStart + d / 2 + (i + 1) * d;
+                    const gap = nextX - currX;
+
+                    // Get half-widths for each component
+                    const currHalf = curr === 'R' ? RJ45_PLATE_WIDTH / 2 :
+                                     curr === 'C' ? CLAMP_LARGE_MOUNTED / 2 :
+                                     CLAMP_SMALL_MOUNTED / 2;
+                    const nextHalf = next === 'R' ? RJ45_PLATE_WIDTH / 2 :
+                                     next === 'C' ? CLAMP_LARGE_MOUNTED / 2 :
+                                     CLAMP_SMALL_MOUNTED / 2;
+
+                    const minGap = currHalf + nextHalf;
+                    if (gap < minGap) {
+                        const currName = curr === 'R' ? 'RJ45' : curr === 'C' ? 'Large clamp' : 'Small clamp';
+                        const nextName = next === 'R' ? 'RJ45' : next === 'C' ? 'Large clamp' : 'Small clamp';
+                        warnings.push(`Collision: ${currName} at position ${i + 1} and ${nextName} at position ${i + 2} overlap by ${(minGap - gap).toFixed(1)}mm`);
+                    }
+                }
             }
 
             // Generate SVG
