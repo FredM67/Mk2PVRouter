@@ -111,6 +111,22 @@
         .btn-download:hover {
             background: #8e24aa;
         }
+        .btn-toggle {
+            background: #e0e0e0;
+            color: #666;
+        }
+        .btn-toggle:hover {
+            background: #d0d0d0;
+        }
+        .btn-toggle.active {
+            background: #607D8B;
+            color: white;
+        }
+        .preview-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
         .layout-container {
             min-height: 50px;
             border: 2px dashed #ddd;
@@ -247,6 +263,10 @@
 
     <div class="card">
         <h2>Preview</h2>
+        <div class="preview-toggle">
+            <button class="btn btn-toggle active" id="btn-drill" onclick="setPreviewMode('drill')">Drill Template</button>
+            <button class="btn btn-toggle" id="btn-mounted" onclick="setPreviewMode('mounted')">Mounted Preview</button>
+        </div>
         <div class="preview-container" id="preview-container">
             <!-- SVG will be rendered here -->
         </div>
@@ -261,6 +281,7 @@
         // State
         let layout = [];
         let draggedIndex = null;
+        let previewMode = 'drill'; // 'drill' or 'mounted'
 
         // Constants (matching Python script)
         const HEIGHT = 60.0;
@@ -272,6 +293,8 @@
         const RJ45_PLATE_WIDTH = 43.0;
         const CLAMP_LARGE_MOUNTED = 26.0;
         const CLAMP_SMALL_MOUNTED = 18.0;
+        const RJ45_PLATE_HEIGHT = 34.0;
+        const JACK_MOUNTED_DIAMETER = 10.0;
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
@@ -303,6 +326,13 @@
 
         function getWidth() {
             return parseFloat(document.getElementById('width-input').value);
+        }
+
+        function setPreviewMode(mode) {
+            previewMode = mode;
+            document.getElementById('btn-drill').classList.toggle('active', mode === 'drill');
+            document.getElementById('btn-mounted').classList.toggle('active', mode === 'mounted');
+            generatePreview();
         }
 
         // Chip management
@@ -467,7 +497,9 @@
             }
 
             // Generate SVG
-            const svg = generateSVG(width, jackPositions, holePositions);
+            const svg = previewMode === 'drill'
+                ? generateSVG(width, jackPositions, holePositions)
+                : generateMountedSVG(width, jackPositions, holePositions);
             document.getElementById('preview-container').innerHTML = svg;
 
             // Show warnings
@@ -517,6 +549,42 @@
                     svg += `\n  <text x="${xLeft.toFixed(1)}" y="${hole.y + 3}" class="hole-size-small">3</text>`;
                     svg += `\n  <circle cx="${xRight.toFixed(1)}" cy="${hole.y}" r="0.5" class="center-mark"/>`;
                     svg += `\n  <text x="${xRight.toFixed(1)}" y="${hole.y + 3}" class="hole-size-small">3</text>`;
+                }
+            });
+
+            svg += `\n</svg>`;
+            return svg;
+        }
+
+        function generateMountedSVG(width, jackPositions, holePositions) {
+            let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}mm" height="${HEIGHT}mm" viewBox="0 0 ${width} ${HEIGHT}">
+  <style>
+    .outline { fill: none; stroke: #000; stroke-width: 0.5; }
+    .mounted { fill: #e0e0e0; stroke: #666; stroke-width: 0.3; }
+    .mounted-jack { fill: #333; stroke: #000; stroke-width: 0.2; }
+    .mounted-clamp { fill: #888; stroke: #555; stroke-width: 0.3; }
+    .mounted-rj45 { fill: #c0c0c0; stroke: #666; stroke-width: 0.3; }
+  </style>
+  <rect x="0" y="0" width="${width}" height="${HEIGHT}" class="outline"/>`;
+
+            // Jacks (mounted view - 10mm diameter circles)
+            jackPositions.forEach(jack => {
+                svg += `\n  <circle cx="${jack.x}" cy="${jack.y}" r="${JACK_MOUNTED_DIAMETER / 2}" class="mounted-jack"/>`;
+            });
+
+            // Clamps and RJ45
+            holePositions.forEach(hole => {
+                if (hole.type === 'C') {
+                    // Large clamp - 26mm diameter circle
+                    svg += `\n  <circle cx="${hole.x.toFixed(1)}" cy="${hole.y}" r="${CLAMP_LARGE_MOUNTED / 2}" class="mounted-clamp"/>`;
+                } else if (hole.type === 'S') {
+                    // Small clamp - 18mm diameter circle
+                    svg += `\n  <circle cx="${hole.x.toFixed(1)}" cy="${hole.y}" r="${CLAMP_SMALL_MOUNTED / 2}" class="mounted-clamp"/>`;
+                } else if (hole.type === 'R') {
+                    // RJ45 plate - 43mm x 34mm rectangle
+                    const rx = hole.x - RJ45_PLATE_WIDTH / 2;
+                    const ry = hole.y - RJ45_PLATE_HEIGHT / 2;
+                    svg += `\n  <rect x="${rx.toFixed(1)}" y="${ry.toFixed(1)}" width="${RJ45_PLATE_WIDTH}" height="${RJ45_PLATE_HEIGHT}" rx="2" class="mounted-rj45"/>`;
                 }
             });
 
