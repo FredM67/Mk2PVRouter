@@ -206,8 +206,9 @@
         <h2>Configuration</h2>
         <div class="control-row">
             <label for="width">Width:</label>
-            <input type="range" id="width" min="80" max="300" value="200">
-            <span class="width-value"><span id="width-display">200</span> mm</span>
+            <input type="range" id="width-slider" min="80" max="300" value="190">
+            <input type="number" id="width-input" min="80" max="300" value="190" style="width: 70px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+            <span>mm</span>
         </div>
         <div class="control-row">
             <label>Jacks:</label>
@@ -259,7 +260,21 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('width').addEventListener('input', updateWidthDisplay);
+            const slider = document.getElementById('width-slider');
+            const input = document.getElementById('width-input');
+
+            slider.addEventListener('input', () => {
+                input.value = slider.value;
+                generatePreview();
+            });
+
+            input.addEventListener('input', () => {
+                let value = parseInt(input.value) || 80;
+                value = Math.max(80, Math.min(300, value));
+                slider.value = value;
+                generatePreview();
+            });
+
             document.querySelectorAll('input[name="jacks"]').forEach(radio => {
                 radio.addEventListener('change', generatePreview);
             });
@@ -267,18 +282,12 @@
             generatePreview();
         });
 
-        function updateWidthDisplay() {
-            const width = document.getElementById('width').value;
-            document.getElementById('width-display').textContent = width;
-            generatePreview();
-        }
-
         function getJacks() {
             return parseInt(document.querySelector('input[name="jacks"]:checked').value);
         }
 
         function getWidth() {
-            return parseFloat(document.getElementById('width').value);
+            return parseFloat(document.getElementById('width-input').value);
         }
 
         // Chip management
