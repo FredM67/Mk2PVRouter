@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enclosure Drilling Template Generator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+        .control-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .control-row label {
+            min-width: 80px;
+            font-weight: 500;
+        }
+        input[type="range"] {
+            flex: 1;
+            min-width: 150px;
+        }
+        .width-value {
+            font-weight: bold;
+            min-width: 60px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            min-width: auto;
+            font-weight: normal;
+        }
+        .button-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn-clamp {
+            background: #4CAF50;
+            color: white;
+        }
+        .btn-clamp:hover {
+            background: #45a049;
+        }
+        .btn-rj45 {
+            background: #2196F3;
+            color: white;
+        }
+        .btn-rj45:hover {
+            background: #1e88e5;
+        }
+        .btn-download {
+            background: #9C27B0;
+            color: white;
+            padding: 12px 30px;
+            font-size: 16px;
+        }
+        .btn-download:hover {
+            background: #8e24aa;
+        }
+        .layout-container {
+            min-height: 50px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .layout-container.drag-over {
+            border-color: #2196F3;
+            background: #e3f2fd;
+        }
+        .layout-empty {
+            color: #999;
+            font-style: italic;
+        }
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+            cursor: grab;
+            user-select: none;
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+        .chip:active {
+            cursor: grabbing;
+        }
+        .chip.dragging {
+            opacity: 0.5;
+            transform: scale(1.05);
+        }
+        .chip-clamp {
+            background: #e8f5e9;
+            border: 2px solid #4CAF50;
+            color: #2e7d32;
+        }
+        .chip-rj45 {
+            background: #e3f2fd;
+            border: 2px solid #2196F3;
+            color: #1565c0;
+        }
+        .chip-remove {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1;
+            padding: 0;
+            color: inherit;
+            opacity: 0.6;
+        }
+        .chip-remove:hover {
+            opacity: 1;
+        }
+        .preview-container {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+        }
+        .preview-container svg {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .warnings {
+            margin-top: 15px;
+        }
+        .warning {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-radius: 0 4px 4px 0;
+            font-size: 14px;
+        }
+        .download-section {
+            text-align: center;
+            padding: 10px;
+        }
+        .info {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enclosure Drilling Template Generator</h1>
+    <p class="subtitle">Generate SVG templates for drilling ABS enclosures</p>
+
+    <div class="card">
+        <h2>Configuration</h2>
+        <div class="control-row">
+            <label for="width">Width:</label>
+            <input type="range" id="width" min="80" max="300" value="200">
+            <span class="width-value"><span id="width-display">200</span> mm</span>
+        </div>
+        <div class="control-row">
+            <label>Jacks:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="jacks" value="0"> None</label>
+                <label><input type="radio" name="jacks" value="1"> Single-phase (1)</label>
+                <label><input type="radio" name="jacks" value="3" checked> Three-phase (3)</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Layout</h2>
+        <div class="button-row">
+            <button class="btn btn-clamp" onclick="addChip('C')">+ Clamp</button>
+            <button class="btn btn-rj45" onclick="addChip('R')">+ RJ45</button>
+        </div>
+        <div class="layout-container" id="layout-container">
+            <span class="layout-empty">Click buttons above to add components, drag to reorder</span>
+        </div>
+        <p class="info">Clamp: 20mm hole (26mm mounted) | RJ45: 24mm hole + 2x3mm mounting (43mm plate)</p>
+    </div>
+
+    <div class="card">
+        <h2>Preview</h2>
+        <div class="preview-container" id="preview-container">
+            <!-- SVG will be rendered here -->
+        </div>
+        <div class="warnings" id="warnings"></div>
+    </div>
+
+    <div class="card download-section">
+        <button class="btn btn-download" onclick="downloadSVG()">Download SVG</button>
+    </div>
+
+    <script>
+        // State
+        let layout = [];
+        let draggedIndex = null;
+
+        // Constants (matching Python script)
+        const HEIGHT = 60.0;
+        const JACK_DIAMETER = 8.0;
+        const CLAMP_DIAMETER = 20.0;
+        const RJ45_DIAMETER = 24.0;
+        const RJ45_MOUNTING_DISTANCE = 32.5;
+        const RJ45_PLATE_WIDTH = 43.0;
+        const CLAMP_MOUNTED_DIAMETER = 26.0;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('width').addEventListener('input', updateWidthDisplay);
+            document.querySelectorAll('input[name="jacks"]').forEach(radio => {
+                radio.addEventListener('change', generatePreview);
+            });
+            setupDragAndDrop();
+            generatePreview();
+        });
+
+        function updateWidthDisplay() {
+            const width = document.getElementById('width').value;
+            document.getElementById('width-display').textContent = width;
+            generatePreview();
+        }
+
+        function getJacks() {
+            return parseInt(document.querySelector('input[name="jacks"]:checked').value);
+        }
+
+        function getWidth() {
+            return parseFloat(document.getElementById('width').value);
+        }
+
+        // Chip management
+        function addChip(type) {
+            layout.push(type);
+            renderChips();
+            generatePreview();
+        }
+
+        function removeChip(index) {
+            layout.splice(index, 1);
+            renderChips();
+            generatePreview();
+        }
+
+        function renderChips() {
+            const container = document.getElementById('layout-container');
+            if (layout.length === 0) {
+                container.innerHTML = '<span class="layout-empty">Click buttons above to add components, drag to reorder</span>';
+                return;
+            }
+            container.innerHTML = layout.map((type, index) => {
+                const chipClass = type === 'C' ? 'chip-clamp' : 'chip-rj45';
+                const label = type === 'C' ? 'Clamp' : 'RJ45';
+                return `<div class="chip ${chipClass}" draggable="true" data-index="${index}">
+                    <span>${label}</span>
+                    <button class="chip-remove" onclick="event.stopPropagation(); removeChip(${index})">×</button>
+                </div>`;
+            }).join('');
+            setupDragAndDrop();
+        }
+
+        // Drag and drop
+        function setupDragAndDrop() {
+            const container = document.getElementById('layout-container');
+            const chips = container.querySelectorAll('.chip');
+
+            chips.forEach(chip => {
+                chip.addEventListener('dragstart', handleDragStart);
+                chip.addEventListener('dragend', handleDragEnd);
+                chip.addEventListener('dragover', handleDragOver);
+                chip.addEventListener('drop', handleDrop);
+            });
+
+            container.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                container.classList.add('drag-over');
+            });
+            container.addEventListener('dragleave', () => {
+                container.classList.remove('drag-over');
+            });
+            container.addEventListener('drop', () => {
+                container.classList.remove('drag-over');
+            });
+        }
+
+        function handleDragStart(e) {
+            draggedIndex = parseInt(e.target.dataset.index);
+            e.target.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'move';
+        }
+
+        function handleDragEnd(e) {
+            e.target.classList.remove('dragging');
+            draggedIndex = null;
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            const targetIndex = parseInt(e.target.closest('.chip').dataset.index);
+            if (draggedIndex !== null && draggedIndex !== targetIndex) {
+                const item = layout.splice(draggedIndex, 1)[0];
+                layout.splice(targetIndex, 0, item);
+                renderChips();
+                generatePreview();
+            }
+        }
+
+        // SVG Generation
+        function generatePreview() {
+            const width = getWidth();
+            const numJacks = getJacks();
+            const warnings = [];
+
+            // Calculate jack positions
+            let jackPositions = [];
+            let jackSectionWidth = 0;
+            const jackCenterY = HEIGHT / 2;
+
+            if (numJacks === 3) {
+                const jackX = 20.0;
+                jackSectionWidth = 35.0;
+                jackPositions = [
+                    { x: jackX, y: jackCenterY - 15, label: 'L1' },
+                    { x: jackX, y: jackCenterY, label: 'L2' },
+                    { x: jackX, y: jackCenterY + 15, label: 'L3' }
+                ];
+            } else if (numJacks === 1) {
+                const jackX = 10.0;
+                jackSectionWidth = 25.0;
+                jackPositions = [
+                    { x: jackX, y: jackCenterY, label: null }
+                ];
+            }
+
+            const remainingStart = jackSectionWidth;
+            const remainingWidth = width - remainingStart;
+
+            // Calculate hole positions
+            let holePositions = [];
+            if (layout.length > 0) {
+                const d = remainingWidth / layout.length;
+                const y = HEIGHT / 2;
+
+                layout.forEach((type, i) => {
+                    const x = remainingStart + d / 2 + i * d;
+                    const leftClearance = x - remainingStart;
+                    const rightClearance = (remainingStart + remainingWidth) - x;
+
+                    if (type === 'R') {
+                        const halfPlate = RJ45_PLATE_WIDTH / 2;
+                        if (leftClearance < halfPlate) {
+                            warnings.push(`RJ45 at position ${i + 1} has only ${leftClearance.toFixed(1)}mm left clearance (needs ${halfPlate}mm for plate)`);
+                        }
+                        if (rightClearance < halfPlate) {
+                            warnings.push(`RJ45 at position ${i + 1} has only ${rightClearance.toFixed(1)}mm right clearance (needs ${halfPlate}mm for plate)`);
+                        }
+                    } else {
+                        const halfClamp = CLAMP_MOUNTED_DIAMETER / 2;
+                        if (leftClearance < halfClamp) {
+                            warnings.push(`Clamp at position ${i + 1} has only ${leftClearance.toFixed(1)}mm left clearance (needs ${halfClamp}mm when mounted)`);
+                        }
+                        if (rightClearance < halfClamp) {
+                            warnings.push(`Clamp at position ${i + 1} has only ${rightClearance.toFixed(1)}mm right clearance (needs ${halfClamp}mm when mounted)`);
+                        }
+                    }
+
+                    holePositions.push({ x, y, type });
+                });
+            }
+
+            // Generate SVG
+            const svg = generateSVG(width, jackPositions, holePositions);
+            document.getElementById('preview-container').innerHTML = svg;
+
+            // Show warnings
+            const warningsContainer = document.getElementById('warnings');
+            warningsContainer.innerHTML = warnings.map(w => `<div class="warning">${w}</div>`).join('');
+        }
+
+        function generateSVG(width, jackPositions, holePositions) {
+            let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}mm" height="${HEIGHT}mm" viewBox="0 0 ${width} ${HEIGHT}">
+  <style>
+    .outline { fill: none; stroke: #000; stroke-width: 0.5; }
+    .center-mark { fill: none; stroke: #000; stroke-width: 0.3; }
+    .label { font-family: "Arial Narrow", sans-serif; font-size: 14px; font-weight: bold; text-anchor: end; dominant-baseline: middle; }
+    .hole-size { font-family: sans-serif; font-size: 4px; text-anchor: middle; dominant-baseline: middle; }
+    .hole-size-small { font-family: sans-serif; font-size: 2.5px; text-anchor: middle; dominant-baseline: middle; }
+  </style>
+  <rect x="0" y="0" width="${width}" height="${HEIGHT}" class="outline"/>`;
+
+            // Jacks
+            if (jackPositions.length > 0) {
+                svg += `\n  <!-- 3.5mm Jacks (8mm holes) -->`;
+                jackPositions.forEach(jack => {
+                    svg += `\n  <circle cx="${jack.x}" cy="${jack.y}" r="0.5" class="center-mark"/>`;
+                    if (jack.label) {
+                        svg += `\n  <text x="${jack.x - 5.5}" y="${jack.y + 1}" class="label">${jack.label}</text>`;
+                    }
+                    svg += `\n  <text x="${jack.x + 2}" y="${jack.y}" class="hole-size-small">8</text>`;
+                });
+            }
+
+            // Clamps and RJ45
+            holePositions.forEach(hole => {
+                if (hole.type === 'C') {
+                    svg += `\n  <circle cx="${hole.x.toFixed(1)}" cy="${hole.y}" r="0.5" class="center-mark"/>`;
+                    svg += `\n  <text x="${hole.x.toFixed(1)}" y="${hole.y + 5}" class="hole-size">20</text>`;
+                } else {
+                    // Main hole
+                    svg += `\n  <circle cx="${hole.x.toFixed(1)}" cy="${hole.y}" r="0.5" class="center-mark"/>`;
+                    svg += `\n  <text x="${hole.x.toFixed(1)}" y="${hole.y + 5}" class="hole-size">24</text>`;
+                    // Mounting holes
+                    const xLeft = hole.x - RJ45_MOUNTING_DISTANCE / 2;
+                    const xRight = hole.x + RJ45_MOUNTING_DISTANCE / 2;
+                    svg += `\n  <circle cx="${xLeft.toFixed(1)}" cy="${hole.y}" r="0.5" class="center-mark"/>`;
+                    svg += `\n  <text x="${xLeft.toFixed(1)}" y="${hole.y + 3}" class="hole-size-small">3</text>`;
+                    svg += `\n  <circle cx="${xRight.toFixed(1)}" cy="${hole.y}" r="0.5" class="center-mark"/>`;
+                    svg += `\n  <text x="${xRight.toFixed(1)}" y="${hole.y + 3}" class="hole-size-small">3</text>`;
+                }
+            });
+
+            svg += `\n</svg>`;
+            return svg;
+        }
+
+        // Download
+        function downloadSVG() {
+            const svgContent = document.getElementById('preview-container').innerHTML;
+            const blob = new Blob([svgContent], { type: 'image/svg+xml' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'drilling_template.svg';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
