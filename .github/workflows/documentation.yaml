@@ -36,6 +36,7 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
+          submodules: true
 
       - name: Get drawio latest release version
         id: drawio-version
