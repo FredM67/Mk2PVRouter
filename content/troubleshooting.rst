@@ -18,9 +18,9 @@ Ce chapitre vous aide à diagnostiquer et résoudre les problèmes courants renc
  :local:
  :depth: 2
 
-==============================
+==================================
 📋 Différences Monophasé/Triphasé
-==============================
+==================================
 
 Ce guide couvre les versions **monophasée** et **triphasée** du Mk2PVRouter.
 
@@ -130,11 +130,7 @@ Pont de Soudure (Court-Circuit)
 
 **Symptôme :** Deux pistes ou broches reliées par erreur
 
-.. figure:: img/pont-de-soudure.png
- :align: center
- :alt: Exemple de pont de soudure
-
- Pont de soudure entre deux broches
+.. todo:: Ajouter photo de pont de soudure (img/pont-de-soudure.png)
 
 **Détection :**
 

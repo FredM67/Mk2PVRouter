@@ -145,12 +145,7 @@ Les capteurs de courant (Current Transformers) se placent sur les câbles d’al
 Emplacement des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: img/schema-installation-ct.png
-   :align: center
-   :alt: Schéma d’installation des capteurs de courant
-   :scale: 50 %
-
-   Position recommandée des capteurs de courant sur l’installation
+.. todo:: Ajouter schéma d’installation des capteurs de courant (img/schema-installation-ct.png)
 
 **CT Grille — Mesure de la consommation/injection réseau**
 

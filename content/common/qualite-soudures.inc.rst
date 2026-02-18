@@ -1,7 +1,7 @@
 Qualité des Soudures
 --------------------
 
-.. figure:: ../img/soudure-bonne-vs-mauvaise.png
+.. figure:: /img/soudure-bonne-vs-mauvaise.png
    :align: center
    :alt: Comparaison soudure bonne vs mauvaise
 
