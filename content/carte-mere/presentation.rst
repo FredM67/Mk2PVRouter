@@ -339,7 +339,7 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
    </div>
    </details>
 
-.. include:: ../../common/burden-calc.inc.rst
+.. include:: ../common/burden-calc.inc.rst
 
 Alimentation
 ------------
