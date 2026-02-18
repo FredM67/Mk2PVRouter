@@ -6,7 +6,7 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "postCreateCommand": "pip install --upgrade pip && pip install -U -r requirements.txt",
+  "postCreateCommand": "pip install --upgrade pip && pip install -U -r requirements.txt && git config --global url.\"https://github.com/\".insteadOf \"git@github.com:\"",
   "postAttachCommand": "gh auth setup-git 2>/dev/null || echo 'Run \"gh auth login\" to enable git push/pull'",
   "customizations": {
     "vscode": {
