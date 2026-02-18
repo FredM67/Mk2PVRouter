@@ -4,7 +4,7 @@
 Installation des Logiciels
 ==========================
 
-Ce chapitre détaille l’installation complète de l’environnement de développement Arduino et la programmation du firmware du Mk2PVRouter.
+Ce chapitre détaille l'installation de l'environnement de développement nécessaire pour programmer le Mk2PVRouter. Pour le téléchargement et la configuration du firmware, voir :ref:`test-logiciel`.
 
 ⏱️ **Temps estimé :**
    - Débutant : 2-3 heures

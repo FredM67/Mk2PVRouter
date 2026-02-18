@@ -132,7 +132,7 @@ html_context = {
     "conf_py_path": conf_py_path,
     "versions": [
         ("latest", "/"),
-        # ("stable", "/stable/"),
+        ("legacy (mono/tri)", "/branch/legacy/"),
     ],
     "downloads": [
         ("PDF1", "../_static/Manuel_1.pdf"),

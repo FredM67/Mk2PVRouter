@@ -221,6 +221,66 @@ Termes Techniques Avancés
 .. glossary::
    :sorted:
 
+   CMS
+     | *Composant Monté en Surface* (ou SMD en anglais : *Surface-Mount Device*).
+     | Composant électronique miniaturisé soudé directement sur la surface du circuit imprimé, sans traverser la carte.
+     | Sur la carte universelle 3phaseDiverter, les composants CMS sont assemblés en usine.
+
+   LDO
+     | *Low Drop-Out regulator* ou régulateur linéaire à faible chute de tension.
+     | Composant qui convertit une tension continue en une tension plus basse avec un minimum de pertes.
+     | Le Mk2PVRouter utilise un **AP2112K-3.3** pour convertir 5 V en 3,3 V.
+
+   GDT
+     | *Gas Discharge Tube* ou éclateur à gaz.
+     | Composant de protection contre les surtensions qui s'amorce lorsqu'une tension transitoire dépasse son seuil.
+     | Les GDT0–GDT3 sur la carte universelle forment la première ligne de défense parafoudre.
+
+   MOV
+     | *Metal Oxide Varistor* ou varistance à oxyde métallique.
+     | Composant de protection qui écrête les surtensions en absorbant l'énergie excédentaire.
+     | Les varistances RV0–RV3 et les modules GM1–GM3 protègent les circuits de mesure du Mk2PVRouter.
+
+   TVS
+     | *Transient Voltage Suppressor* ou suppresseur de surtension transitoire.
+     | Diode spécialisée qui protège les circuits sensibles contre les surtensions rapides.
+     | La carte universelle utilise des diodes TVS (DF2B7AE, CDSOD323-T03C) pour protéger les entrées :term:`ADC` de l'ATmega328P.
+
+   SMA
+     | *SubMiniature version A*.
+     | Type de connecteur coaxial utilisé pour les connexions radiofréquences (:term:`RF`).
+     | Le connecteur CN1 (SMA) de la carte universelle reçoit l'antenne du module RFM69CW.
+
+   OTA
+     | *Over-The-Air* ou mise à jour sans fil.
+     | Technique permettant de mettre à jour le firmware d'un appareil via WiFi, sans connexion physique.
+     | Le module mk2Wifi supporte les mises à jour OTA après le premier chargement par USB-C.
+
+   ESP32-C3
+     | Microcontrôleur RISC-V simple cœur de la société Espressif, intégrant WiFi 4 et Bluetooth LE 5.
+     | Le module **mk2Wifi** utilise un ESP32-C3-MINI-1 pour ajouter la connectivité sans fil au Mk2PVRouter.
+
+   Split-phase
+     | Système électrique nord-américain composé de deux phases à 180° fournissant 120 V entre chaque phase et le neutre, et 240 V entre les deux phases.
+     | La carte universelle 3phaseDiverter supporte cette configuration.
+
+   mk2Wifi
+     | Module d'extension WiFi/BLE pour le Mk2PVRouter, basé sur un :term:`ESP32-C3`.
+     | Se branche sur les connecteurs TRIG_EXT et UART_EXT de la carte principale.
+     | Ajoute la connectivité sans fil, un écran OLED optionnel et la gestion du capteur de température DS18B20.
+
+   Carte universelle
+     | Carte principale **3phaseDiverter** (rév. 6.0) qui remplace les anciennes cartes monophasée et triphasée séparées.
+     | Supporte 4 configurations : monophasé, triphasé avec neutre, triphasé sans neutre et split-phase.
+
+   ZMPT101K
+     | Transformateur de tension miniature (rapport 1000:1000) utilisé pour mesurer la tension secteur.
+     | La carte universelle en utilise 1 (monophasé) à 3 (triphasé) pour la mesure de tension sur chaque phase.
+
+   Cavalier de soudure
+     | Pont conducteur réalisé en soudant deux pastilles adjacentes sur le :term:`PCB`.
+     | Les cavaliers JP0–JP4 sur la carte universelle permettent de configurer le mode de fonctionnement (monophasé/triphasé, alimentation, capteur de température).
+
    CT
      | *Current Transformer* ou dans notre cas **pince ampèremétrique**.
      | La pince ampèremétrique, aussi appelée capteur de courant sans contact, est un type d’ampèremètre permettant de mesurer l’intensité du courant électrique circulant dans un fil conducteur sans avoir à ouvrir le circuit pour y placer un ampèremètre classique.

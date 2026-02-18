@@ -229,7 +229,7 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     needs: [Update_gh-pages]
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/legacy' }}
     steps:
       - uses: actions/download-artifact@v4
         with:

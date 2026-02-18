@@ -3,9 +3,9 @@
 Introduction
 ============
 
-| Cette documentation est applicable à toutes les versions du Mk2PVRouter, qu’elles soient monophasées ou triphasées.
-| La majorité des informations sont pertinentes pour les deux versions.
-| Chaque version a son propre chapitre.
+| Cette documentation couvre le Mk2PVRouter basé sur la carte universelle **3phaseDiverter**.
+| Une seule carte-mère supporte toutes les configurations : monophasé, triphasé avec neutre, triphasé sans neutre et split-phase.
+| La configuration se fait par le choix des composants à souder et la position des cavaliers (voir :ref:`choix-configuration`).
 
 .. danger::
    ⚠️ **SÉCURITÉ AVANT TOUT** : Avant de commencer l’assemblage, lisez impérativement le chapitre :ref:`safety-overview`.
@@ -35,8 +35,9 @@ Contenu du kit
 
 Dans le kit, vous trouverez :
 
-* le circuit imprimé (:term:`PCB`) de la carte-mère
-* un ou plusieurs circuits imprimés pour chaque sortie
+* le circuit imprimé (:term:`PCB`) de la carte-mère universelle (composants :term:`CMS` déjà soudés en usine)
+* les composants traversants à souder (le nombre dépend de votre configuration, voir :ref:`choix-configuration`)
+* un ou plusieurs circuits imprimés pour chaque sortie :term:`triac`
 * des composants électroniques (résistances, condensateurs…). |br|
   Attention, certains sont sensibles à l’électricité statique, il faut donc les manipuler avec soin.
 * un boîtier
@@ -47,13 +48,14 @@ Dans le kit, vous trouverez :
 
 L’assemblage complet va nécessiter plusieurs étapes :
 
-#. Soudure et tests de la carte-mère
-#. Soudure et tests de la ou les cartes de sortie
-#. Perçage du boîtier et des dissipateurs thermiques
-#. Montage des circuits soudés dans le boîtier
-#. Confection des câbles et câblage
+#. Soudure des composants traversants sur la carte-mère (voir :ref:`assemblage-carte-mere`)
+#. Tests électriques de la carte-mère (voir :ref:`tests-electriques`)
+#. Soudure et tests de la ou les cartes de sortie (voir :ref:`carte-sortie`)
+#. Perçage du boîtier et des dissipateurs thermiques (voir :ref:`percages`)
+#. Montage des circuits soudés dans le boîtier (voir :ref:`assemblage-boitier`)
+#. Confection des câbles et câblage (voir :ref:`confection-cables`)
 #. Installation du logiciel et firmware (voir chapitre :ref:`installation-logiciel`)
-#. Tests et étalonnage
+#. Tests logiciels et étalonnage (voir :ref:`test-logiciel` et :ref:`etalonnage`)
 
 **Durées indicatives par étape :**
 

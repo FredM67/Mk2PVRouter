@@ -18,11 +18,11 @@ Ce chapitre vous aide à diagnostiquer et résoudre les problèmes courants renc
  :local:
  :depth: 2
 
-==================================
-📋 Différences Monophasé/Triphasé
-==================================
+==========================================
+📋 Composants selon la configuration
+==========================================
 
-Ce guide couvre les versions **monophasée** et **triphasée** du Mk2PVRouter.
+Ce guide couvre la carte universelle **3phaseDiverter** du Mk2PVRouter.
 
 .. list-table:: Composants selon la version
  :widths: 40 30 30
@@ -32,17 +32,17 @@ Ce guide couvre les versions **monophasée** et **triphasée** du Mk2PVRouter.
    - Monophasé
    - Triphasé
  * - Fusibles
-   - FS1
-   - FS1, FS2, FS3
+   - FS0, FS1
+   - FS0, FS1, FS2, FS3
  * - Transformateurs
-   - TXFR1
-   - TXFR1, TXFR2, TXFR3
- * - Ponts redresseurs
-   - BR1
-   - BR1, BR2, BR3
+   - TR1
+   - TR1, TR2, TR3
+ * - Modules de protection
+   - GM1
+   - GM1, GM2, GM3
  * - Régulateur 3.3 V/5 V
-   - VR1
-   - VR1 (commun)
+   - PS1 (RAC05E)
+   - PS1 (RAC05E, commun)
  * - Capteurs de courant (CT)
    - 1 CT (phase principale)
    - 3 CT (un par phase)
@@ -102,11 +102,11 @@ Vérifier les composants d’alimentation :
 
  #. ☐ **Pont·s redresseur·s dans le bon sens ?**
 
-    - Mono : BR1
-    - Tri : BR1, BR2, BR3
+    - Mono : (pas de pont redresseur sur la carte universelle)
+    - Tri : (pas de pont redresseur sur la carte universelle)
     - Repérer la bande ou marquage sur la diode
 
- #. ☐ **Régulateur VR1** dans le bon sens ?
+ #. ☐ **Module PS1 (RAC05E)** dans le bon sens ?
 
     - Vérifier l’orientation selon le schéma
     - Les 3 pattes doivent correspondre (E-C-B ou G-S-D)
@@ -119,8 +119,8 @@ Vérifier les composants d’alimentation :
 
  #. ☐ **Transformateur·s bien soudé·s ?**
 
-    - Mono : TXFR1
-    - Tri : TXFR1, TXFR2, TXFR3
+    - Mono : TR1
+    - Tri : TR1, TR2, TR3
     - Soudures brillantes et lisses (pas ternes) ?
 
 .. include:: common/qualite-soudures.inc.rst
@@ -169,7 +169,7 @@ Si Tension Correcte mais Pas de Fonctionnement
 
  #. ☐ **Firmware programmé ?**
 
-    - Voir la section :ref:`test-logiciel-mono` ou :ref:`test-logiciel-tri`
+    - Voir la section :ref:`test-logiciel`
     - ATmega328 vierge ne fait rien
 
 Causes Fréquentes — Résumé
@@ -393,8 +393,8 @@ Causes Possibles
 
  #. ☐ **Court-circuit dans transformateur·s**
 
-    - Mono : TXFR1
-    - Tri : TXFR1, TXFR2, TXFR3
+    - Mono : TR1
+    - Tri : TR1, TR2, TR3
 
  - Mesurer la résistance des enroulements (doit être ~1-10 kΩ)
  - Si <10 Ω → Transformateur défectueux
@@ -409,7 +409,7 @@ Causes Possibles
  - C1 ou C2 défectueux
  - Rare mais possible
 
- #. ☐ **Régulateur VR1 défectueux**
+ #. ☐ **Module PS1 (RAC05E) défectueux**
 
  - Peut être en court-circuit si défaut fabrication
  - Ou endommagé par soudure trop chaude
@@ -443,7 +443,7 @@ Procédure de Diagnostic
 
 #. **Test par élimination**
 
-    - Dessouder un côté du/des transformateur·s (TXFR1 pour mono, ou TXFR1/TXFR2/TXFR3 pour tri)
+    - Dessouder un côté du/des transformateur·s (TR1 pour mono, ou TR1/TR2/TR3 pour tri)
     - Remesurer résistance
     - Si court-circuit persiste → Problème sur PCB
     - Si disparaît → Transformateur défectueux
@@ -487,7 +487,7 @@ Diagnostic par Tension
 
 **VCC trop faible (<3 V pour système 3.3 V) :**
 
-- Régulateur VR1 défectueux ou mal orienté
+- Module PS1 (RAC05E) défectueux ou mal orienté
 - Court-circuit partiel consommant trop de courant
 - Transformateur sous-dimensionné (mauvaise référence)
 
@@ -990,7 +990,7 @@ Informations à Fournir
  ☐ **Informations configuration**
 
  - Version firmware (voir Moniteur Série au démarrage)
- - Version kit (mono/tri, nombre sorties)
+ - Configuration (mono/tri, nombre sorties)
  - Système 3.3 V ou 5 V ?
 
 📸 Photos Utiles — Exemples

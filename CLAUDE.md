@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **Sphinx documentation repository** for the **Mk2PVRouter** project - a DIY solar PV router for optimizing self-consumption of solar energy. The documentation is written entirely in **French** and covers assembly, installation, calibration, and troubleshooting of electronic kits for both single-phase (monophasé) and three-phase (triphasé) systems.
+This is a **Sphinx documentation repository** for the **Mk2PVRouter** project - a DIY solar PV router for optimizing self-consumption of solar energy. The documentation is written entirely in **French** and covers assembly, installation, calibration, and troubleshooting of the universal **3phaseDiverter** board, which supports 4 configurations: single-phase (monophasé), 3-phase with neutral, 3-phase without neutral, and split-phase.
 
 The actual firmware code and hardware designs are maintained in separate repositories linked as git submodules:
 - `1-phase/`: https://github.com/FredM67/PVRouter-1-phase
@@ -112,39 +112,67 @@ content/
 ├── installation-logiciel.rst  # Software installation guide
 ├── installation-finale.rst    # Final electrical installation (high voltage)
 ├── troubleshooting.rst        # Comprehensive troubleshooting guide
+├── etalonnage.rst            # Unified calibration (mono + tri)
 ├── glossary.rst              # Technical terms glossary
 ├── soldering-tutorial.rst    # Beginner soldering guide
-├── common/                   # Shared content for both mono and tri versions
-│   ├── *.inc.rst            # Include files (assembly, calibration, testing)
-│   └── ...
-├── mono/                     # Single-phase specific content
-│   ├── carte-mere-mono.rst
-│   ├── etalonnage-mono.rst
-│   └── ...
-└── tri/                      # Three-phase specific content
-    ├── carte-mere-tri.rst
-    ├── etalonnage-tri.rst
-    └── ...
+├── carte-mere/               # Universal motherboard (3phaseDiverter)
+│   ├── presentation.rst      # Board overview, renders, connectors, pinout
+│   ├── choix-configuration.rst # Decision guide for 4 configurations
+│   ├── assemblage-carte-mere.rst # Through-hole assembly
+│   ├── tests-electriques.rst # Electrical tests
+│   └── cavaliers.rst         # Solder jumper configuration
+├── firmware/                  # Firmware choice, upload, test
+│   ├── test-logiciel.rst     # Unified software test + firmware choice
+│   ├── firmware-monophase.inc.rst  # 1-phase firmware specifics
+│   └── firmware-triphase.inc.rst   # 3-phase firmware specifics
+├── etage-sortie/              # Output stage boards
+│   ├── carte-sortie.rst      # Triac output board assembly
+│   └── carte-sortie-relais.rst # Relay board
+├── mk2wifi/                   # ESP32-C3 expansion module
+│   ├── presentation-mk2wifi.rst # Module overview
+│   └── installation-mk2wifi.rst # Install + firmware flash
+├── boitier/                   # Case & cabling
+│   ├── percages.rst          # Drilling (case + heatsink)
+│   ├── confection-cables.rst # Cable fabrication
+│   └── assemblage.rst        # Final case assembly
+├── common/                    # Shared include snippets
+│   ├── connexion-ftdi.inc.rst
+│   ├── installation-arduino-ide.inc.rst
+│   ├── installation-platformio.inc.rst
+│   ├── compilation-televerement.inc.rst
+│   ├── moniteur-serie.inc.rst
+│   ├── resolution-problemes-upload.inc.rst
+│   ├── qualite-soudures.inc.rst
+│   ├── burden-calc.inc.rst
+│   ├── test-logiciel-requirements.inc.rst
+│   ├── configuration-arduino-ide.inc.rst
+│   └── outils.inc.rst
+├── img/                       # Images (build-copied renders + static images)
+└── drawio/                    # DrawIO diagram sources
 ```
 
 ### Include File Pattern
 
-To minimize duplication, shared procedures are extracted into **include files** (`.inc.rst`) in `content/common/`:
+Shared procedures are extracted into **include files** (`.inc.rst`) in `content/common/`:
 
-- `ordre-soudure.inc.rst` - Soldering order recommendations
-- `carte-sortie.inc.rst` - Output board assembly (36KB, most detailed)
-- `percages.inc.rst` - Drilling procedures
 - `connexion-ftdi.inc.rst` - FTDI connection for programming
 - `installation-arduino-ide.inc.rst` - Arduino IDE setup
 - `installation-platformio.inc.rst` - PlatformIO alternative
 - `compilation-televerement.inc.rst` - Firmware compilation and upload
 - `moniteur-serie.inc.rst` - Serial monitor usage
 - `resolution-problemes-upload.inc.rst` - Upload troubleshooting
+- `qualite-soudures.inc.rst` - Solder quality guidelines
+- `burden-calc.inc.rst` - Burden resistor calculations
+- `test-logiciel-requirements.inc.rst` - Test prerequisites
 
-These are included in version-specific files using:
+These are included in standalone files using:
 ```rst
 .. include:: ../common/filename.inc.rst
 ```
+
+Firmware-specific includes live in `content/firmware/`:
+- `firmware-monophase.inc.rst` - 1-phase firmware specifics
+- `firmware-triphase.inc.rst` - 3-phase firmware specifics
 
 ### Documentation Structure Philosophy
 
@@ -206,7 +234,8 @@ Technical terms are defined in `content/glossary.rst` and should be linked using
 Cross-references between sections use:
 ```rst
 :ref:`safety-overview`
-:ref:`etalonnage-mono`
+:ref:`etalonnage`
+:ref:`choix-configuration`
 ```
 
 ### French Language Conventions
@@ -254,7 +283,7 @@ Key configuration in `content/conf.py`:
 
 ### Adding a New Assembly Section
 
-1. Create the file in `content/mono/` or `content/tri/` (or `content/common/` if shared)
+1. Create the file in the appropriate subdirectory (`content/carte-mere/`, `content/firmware/`, `content/etage-sortie/`, `content/boitier/`, `content/mk2wifi/`, or `content/common/` for shared includes)
 2. Add frontmatter with metadata:
    ```rst
    ⏱️ **Temps estimé** : X-Y heures (débutant), A-B heures (expérimenté)
@@ -291,12 +320,12 @@ Key configuration in `content/conf.py`:
 
 ### Modifying Shared Content
 
-If you need to modify content that's shared between mono and tri versions:
+If you need to modify shared content:
 
-1. **Check if it's an include file**: Look for `.. include::` directives in mono/tri files
-2. **Edit the include file** in `content/common/*.inc.rst`
-3. **Test both versions**: Build and check that changes work correctly in both contexts
-4. **Verify section levels**: Include files should start at level 3 (`~~~`) or deeper since they're included in level 2 sections
+1. **Check if it's an include file**: Look for `.. include::` directives in the parent files
+2. **Edit the include file** in `content/common/*.inc.rst` or `content/firmware/*.inc.rst`
+3. **Test the build**: Ensure changes work correctly in all contexts where the include is used
+4. **Verify section levels**: Include files should start at the appropriate heading level for their inclusion context
 
 ### Adding Safety Warnings
 
@@ -393,7 +422,7 @@ Build process:
 2. Installs Graphviz for graph diagrams
 3. Installs Python dependencies from `requirements.txt`
 4. Builds HTML documentation with Sphinx
-5. Deploys to GitHub Pages (on main branch only)
+5. Deploys to GitHub Pages (on main and legacy branches)
 
 **Note**: Changes to submodules (`1-phase/`, `3-phase/`, `hardware/`) do NOT trigger documentation builds since they're maintained separately.
 
@@ -407,9 +436,11 @@ Both deployments ensure diagrams (`.drawio` files) are properly rendered to PNG/
 
 ### Recent Major Improvements
 
-The documentation has undergone significant improvements (see `DOCUMENTATION_REVIEW.md`):
-- **Phase 1** (mostly complete): Critical safety content, troubleshooting, software installation guide
-- **Phase 2** (in progress): Beginner accessibility improvements
+The documentation has undergone significant improvements:
+- **Universal board restructure**: Replaced separate mono/tri documentation with unified structure for the 3phaseDiverter universal board. Old mono/tri docs preserved on the `legacy` branch.
+- **New sections**: `carte-mere/`, `mk2wifi/`, `firmware/`, `etage-sortie/`, `boitier/` directories with standalone content files.
+- **Build-time asset pipeline**: Hardware renders copied from `hardware/` submodule at build time via `make copy-assets`.
+- **Version selector**: `legacy` branch deployed alongside `main` for users with older mono/tri-specific boards.
 - Build quality improved from 73 warnings → 5 warnings (93% reduction)
 - Added 16 verification checkpoints across assembly guides
 - Created comprehensive safety chapter (684 lines)

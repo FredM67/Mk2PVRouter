@@ -825,8 +825,7 @@ Prochaines Étapes
 
 Maintenant que vous maîtrisez les bases de la soudure, passez aux chapitres d’assemblage :
 
-- **Monophasé** : :ref:`carte-mere-mono` puis :ref:`carte-sortie-mono`
-- **Triphasé** : :ref:`carte-mere-tri` puis :ref:`carte-sortie-tri`
+- :ref:`assemblage-carte-mere` puis :ref:`carte-sortie`
 
 .. tip::
    💡 **Conseil Final**
