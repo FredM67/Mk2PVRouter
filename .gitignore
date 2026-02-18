@@ -1,6 +1,7 @@
 .jupyter_cache/
 _build/
 venv/
+.venv/
 .*.sw?
 *.drawio.bkp
 *.res.txt
