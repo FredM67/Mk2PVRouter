@@ -246,6 +246,101 @@ CT1 / CT2 / CT3 — Transformateurs de courant (1×2 Molex SL)
 
 CT1 est utilisé en monophasé et en triphasé. CT2 et CT3 sont utilisés uniquement en triphasé.
 
+Types de capteurs de courant supportés
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+La carte universelle est conçue pour fonctionner avec deux types de capteurs de courant :
+
+**CT à sortie tension (333 mV)** — recommandé
+   Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de :term:`burden`. Le signal de tension est directement compatible avec l'entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n'est nécessaire** sur la carte — les emplacements R18 / R28 / R38 restent vides.
+
+   C'est le type de CT recommandé pour la carte universelle.
+
+**CT à sortie courant** — avec burden THT
+   Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden` soudée sur la carte (emplacements **R18** / **R28** / **R38**).
+
+   La valeur du burden doit être calculée pour que la tension crête ne dépasse pas **0,55 V** (soit la moitié de la plage :term:`ADC` avec VREF = 1,1 V) :
+
+   .. math::
+
+      R_{burden} = \frac{V_{REF}}{2 \times \sqrt{2} \times I_{secondaire\_RMS}} = \frac{0{,}55}{I_{secondaire\_crête}}
+
+   Où :math:`I_{secondaire\_RMS} = I_{primaire\_RMS} / N` (N = rapport de transformation du CT).
+
+   **Exemple** : CT de 100 A / 50 mA (N = 2000), courant max souhaité = 50 A :
+
+   .. math::
+
+      I_{sec} = \frac{50}{2000} = 25\,\text{mA RMS} \quad \Rightarrow \quad R_{burden} = \frac{1{,}1 \times 2000}{2 \times \sqrt{2} \times 50} \approx 15{,}6\,\Omega
+
+   On choisira la valeur standard la plus proche **inférieure** (15 Ω) pour garder une marge de sécurité.
+
+   .. warning::
+      Si le courant mesuré dépasse la valeur prévue, la tension aux bornes du burden dépassera la plage de l'ADC. Les diodes TVS (DF2B7AE) protègent l'entrée du microcontrôleur, mais ne limitent pas le courant dans le burden — la résistance peut surchauffer.
+
+.. raw:: html
+
+   <details style="margin: 1em 0; border: 1px solid #ccc; border-radius: 4px; padding: 0;">
+   <summary style="cursor: pointer; padding: 0.75em 1em; background: #f8f8f8; font-weight: bold;">🧮 Calculateur de résistance de burden</summary>
+   <div style="padding: 1em;">
+   <p>Entrez les caractéristiques de votre CT pour calculer la résistance de burden adaptée.</p>
+   <table style="border-collapse: collapse; width: 100%;">
+   <tr>
+     <td style="padding: 6px 8px;"><label for="ct_ratio_primary">Courant primaire nominal du CT (A) :</label></td>
+     <td style="padding: 6px 8px;"><input type="number" id="ct_ratio_primary" value="100" min="1" step="1" style="width: 100px; padding: 4px;"></td>
+   </tr>
+   <tr>
+     <td style="padding: 6px 8px;"><label for="ct_ratio_secondary">Courant secondaire nominal (mA) :</label></td>
+     <td style="padding: 6px 8px;"><input type="number" id="ct_ratio_secondary" value="50" min="1" step="1" style="width: 100px; padding: 4px;"></td>
+   </tr>
+   <tr>
+     <td style="padding: 6px 8px;"><label for="i_max">Courant max souhaité côté primaire (A) :</label></td>
+     <td style="padding: 6px 8px;"><input type="number" id="i_max" value="50" min="1" step="1" style="width: 100px; padding: 4px;"></td>
+   </tr>
+   </table>
+   <p style="margin-top: 0.75em;">
+     <button onclick="calcBurden()" style="padding: 6px 16px; cursor: pointer; background: #2980b9; color: white; border: none; border-radius: 3px;">Calculer</button>
+   </p>
+   <div id="burden_result" style="margin-top: 0.5em; padding: 0.75em; background: #eef; border-radius: 4px; display: none;"></div>
+   <script>
+   function calcBurden() {
+     var Ip = parseFloat(document.getElementById('ct_ratio_primary').value);
+     var Is_mA = parseFloat(document.getElementById('ct_ratio_secondary').value);
+     var Imax = parseFloat(document.getElementById('i_max').value);
+     var N = Ip / (Is_mA / 1000);
+     var Vref = 1.1;
+     var R = (Vref * N) / (2 * Math.sqrt(2) * Imax);
+     var Imax_sec_rms = Imax / N * 1000;
+     var Vpeak = Imax_sec_rms / 1000 * Math.sqrt(2) * R;
+
+     /* E24 standard resistor values */
+     var e24 = [1.0,1.1,1.2,1.3,1.5,1.6,1.8,2.0,2.2,2.4,2.7,3.0,3.3,3.6,3.9,4.3,4.7,5.1,5.6,6.2,6.8,7.5,8.2,9.1];
+     var std = [];
+     for (var dec = 0.1; dec <= 10000; dec *= 10) {
+       for (var j = 0; j < e24.length; j++) std.push(+(e24[j] * dec).toPrecision(2));
+     }
+     std.sort(function(a,b){return a-b;});
+     var Rstd = std[0];
+     for (var k = 0; k < std.length; k++) {
+       if (std[k] <= R) Rstd = std[k];
+       else break;
+     }
+     var Imax_with_std = (Vref * N) / (2 * Math.sqrt(2) * Rstd);
+
+     var res = document.getElementById('burden_result');
+     res.style.display = 'block';
+     res.innerHTML =
+       '<b>Rapport de transformation N</b> = ' + N.toFixed(0) + '<br>' +
+       '<b>R<sub>burden</sub> calculé</b> = ' + R.toFixed(1) + ' Ω<br>' +
+       '<b>Valeur standard E24 recommandée</b> = <b style="color: #c0392b;">' + Rstd + ' Ω</b> (valeur inférieure la plus proche)<br>' +
+       '<b>Courant max mesurable avec ' + Rstd + ' Ω</b> = ' + Imax_with_std.toFixed(1) + ' A RMS';
+   }
+   </script>
+   </div>
+   </details>
+
+.. include:: ../../common/burden-calc.inc.rst
+
 Alimentation
 ------------
 
