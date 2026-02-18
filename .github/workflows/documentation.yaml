@@ -107,20 +107,6 @@ jobs:
         run: |
           pip list
 
-      - name: Setup TeX Live
-        uses: TeX-Live/setup-texlive-action@v3
-        with:
-          packages: >-
-            collection-latexextra
-            tex-gyre
-            dvisvgm
-            dvips
-            latexmk
-          # anyfontsize
-          # cmap
-          # fncychap
-          # float
-    
       # Build
       - uses: sphinx-doc/github-problem-matcher@master
       - name: Build Sphinx documentation
