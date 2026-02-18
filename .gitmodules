@@ -4,3 +4,6 @@
 [submodule "3-phase"]
 	path = 3-phase
 	url = https://github.com/FredM67/PVRouter-3-phase
+[submodule "hardware"]
+	path = hardware
+	url = https://github.com/FredM67/PVRouter-KiCad.git
