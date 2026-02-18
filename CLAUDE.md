@@ -93,7 +93,7 @@ make html 2>&1 | grep -i "title level inconsistent"
 make html 2>&1 | grep WARNING | wc -l
 ```
 
-The goal is to keep warnings to a minimum (currently ~11 warnings is baseline).
+The goal is to keep warnings to a minimum (currently ~5 warnings is baseline).
 
 ## High-Level Architecture
 
@@ -410,7 +410,7 @@ Both deployments ensure diagrams (`.drawio` files) are properly rendered to PNG/
 The documentation has undergone significant improvements (see `DOCUMENTATION_REVIEW.md`):
 - **Phase 1** (mostly complete): Critical safety content, troubleshooting, software installation guide
 - **Phase 2** (in progress): Beginner accessibility improvements
-- Build quality improved from 73 warnings → 11 warnings (85% reduction)
+- Build quality improved from 73 warnings → 5 warnings (93% reduction)
 - Added 16 verification checkpoints across assembly guides
 - Created comprehensive safety chapter (684 lines)
 - Added detailed troubleshooting guide (1,159 lines)
