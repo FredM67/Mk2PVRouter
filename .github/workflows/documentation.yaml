@@ -174,7 +174,7 @@ jobs:
 
       # https://github.com/marketplace/actions/checkout
       - name: Clone old gh-pages
-        if: ${{ github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
         run: |
           set -x
           git fetch
@@ -184,7 +184,7 @@ jobs:
       # If a push and main, copy build to _gh-pages/ as the "main"
       # deployment.
       - name: Copy new build (main)
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
         run: |
           set -x
           # Delete everything under _gh-pages/ that is from the
@@ -196,7 +196,7 @@ jobs:
       # If a push and not on main, then copy the build to
       # _gh-pages/branch/$brname (transforming '/' into '--')
       - name: Copy new build (branch)
-        if: ${{ github.event_name == 'push' && github.ref != 'refs/heads/main' }}
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref != 'refs/heads/main' }}
         run: |
           set -x
           #brname=$(git rev-parse --abbrev-ref HEAD)
@@ -208,7 +208,7 @@ jobs:
       # Go through each branch in _gh-pages/branch/, if it's not a
       # ref, then delete it.
       - name: Delete old feature branches
-        if: ${{ github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
         run: |
           set -x
           for brdir in `ls _gh-pages/branch/` ; do
@@ -229,7 +229,7 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     needs: [Update_gh-pages]
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/legacy' }}
     steps:
       - uses: actions/download-artifact@v4
         with:
@@ -238,7 +238,7 @@ jobs:
           
       - name: Deploy gh-pages
         uses: peaceiris/actions-gh-pages@v4
-        if: ${{ github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
         #if: ${{ success() && github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: gh-pages
