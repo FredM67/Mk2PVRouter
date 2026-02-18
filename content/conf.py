@@ -131,8 +131,8 @@ html_context = {
     "github_version": github_version,
     "conf_py_path": conf_py_path,
     "versions": [
-        ("latest", "/"),
-        # ("stable", "/stable/"),
+        ("latest", "/Mk2PVRouter/"),
+        ("legacy (mono/tri)", "/Mk2PVRouter/branch/legacy/"),
     ],
     "downloads": [
         ("PDF1", "../_static/Manuel_1.pdf"),
