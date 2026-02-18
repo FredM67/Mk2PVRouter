@@ -26,9 +26,9 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.todo',
     'sphinx_lesson',
-    # 'sphinx.ext.mathjax',
+    'sphinx.ext.mathjax',
     # 'sphinx-mathjax-offline',
-    'sphinx.ext.imgmath',
+    # 'sphinx.ext.imgmath',
     'sphinx_rtd_theme',
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_copybutton',
@@ -51,10 +51,10 @@ autosectionlabel_maxdepth = 2
 togglebutton_hint = ""
 togglebutton_hint_hide = ""
 
-imgmath_dpi = 150  # Increase DPI for higher resolution
-imgmath_image_format = 'svg'
-imgmath_embed = True
-imgmath_font_size = 16
+# imgmath_dpi = 150  # Increase DPI for higher resolution
+# imgmath_image_format = 'svg'
+# imgmath_embed = True
+# imgmath_font_size = 16
 
 # Graphviz output format - SVG for scalable, clickable diagrams
 graphviz_output_format = 'svg'
