@@ -6,9 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a **Sphinx documentation repository** for the **Mk2PVRouter** project - a DIY solar PV router for optimizing self-consumption of solar energy. The documentation is written entirely in **French** and covers assembly, installation, calibration, and troubleshooting of electronic kits for both single-phase (monophasé) and three-phase (triphasé) systems.
 
-The actual firmware code is maintained in separate repositories linked as git submodules:
+The actual firmware code and hardware designs are maintained in separate repositories linked as git submodules:
 - `1-phase/`: https://github.com/FredM67/PVRouter-1-phase
 - `3-phase/`: https://github.com/FredM67/PVRouter-3-phase
+- `hardware/`: https://github.com/FredM67/PVRouter-KiCad
 
 ### Firmware Structure
 
@@ -333,7 +334,7 @@ After making changes:
 
 ### Git Submodules
 
-The `1-phase/` and `3-phase/` directories are git submodules pointing to external repositories. They are not actively developed in this repository. If you need to work on the firmware code, clone the respective repository directly.
+The `1-phase/`, `3-phase/`, and `hardware/` directories are git submodules pointing to external repositories. They are not actively developed in this repository. If you need to work on the firmware or hardware design, clone the respective repository directly.
 
 #### Submodule Management
 
@@ -354,21 +355,25 @@ If you need to modify firmware code:
 
 1. **For documentation purposes only**: The submodules are read-only references. Do NOT modify them in this repository.
 
-2. **For firmware development**: Clone the firmware repository directly:
+2. **For firmware/hardware development**: Clone the respective repository directly:
    ```bash
    # Single-phase firmware
    git clone https://github.com/FredM67/PVRouter-1-phase.git
 
    # Three-phase firmware
    git clone https://github.com/FredM67/PVRouter-3-phase.git
+
+   # Hardware designs (KiCad)
+   git clone https://github.com/FredM67/PVRouter-KiCad.git
    ```
 
 3. **For documentation cross-references**: You can reference firmware files in documentation using relative paths like `../../1-phase/Mk2_fasterControl_Full/` but avoid duplicating firmware documentation in this repository.
 
 The submodules are primarily included for:
 - Easy access to firmware version information
+- Reference to PCB designs and schematics (KiCad)
 - Generating cross-references in documentation
-- Ensuring documentation matches firmware capabilities
+- Ensuring documentation matches firmware and hardware capabilities
 
 ### Continuous Integration & Deployment
 
@@ -390,7 +395,7 @@ Build process:
 4. Builds HTML documentation with Sphinx
 5. Deploys to GitHub Pages (on main branch only)
 
-**Note**: Changes to submodules (`1-phase/`, `3-phase/`) do NOT trigger documentation builds since they're maintained separately.
+**Note**: Changes to submodules (`1-phase/`, `3-phase/`, `hardware/`) do NOT trigger documentation builds since they're maintained separately.
 
 #### 2. ReadTheDocs
 

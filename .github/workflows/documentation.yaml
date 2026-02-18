@@ -7,11 +7,13 @@ on:
       - '.gitmodules'
       - '1-phase/**'
       - '3-phase/**'
+      - 'hardware/**'
   pull_request:
     paths-ignore:
       - '.gitmodules'
       - '1-phase/**'
       - '3-phase/**'
+      - 'hardware/**'
   workflow_dispatch: {}
 
 # If these SPHINXOPTS are enabled, then be strict about the builds and
