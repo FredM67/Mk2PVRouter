@@ -34,10 +34,6 @@ Avant toute mise sous tension, effectuez les vérifications suivantes au multim�
 
    ☐ +3,3 V ↔ GND : doit être **circuit ouvert** (pas de continuité)
 
-#. **Vérifiez le cavalier GND_LINK** :
-
-   ☐ GND ↔ AGND : doit être en **court-circuit** (continuité)
-
 #. **Vérifiez les fusibles** (si soudés) :
 
    ☐ Continuité à travers chaque porte-fusible (FS0, FS1, et FS2, FS3 en triphasé)
@@ -52,7 +48,6 @@ Premier test sous tension
 
    - Disjoncteur facilement accessible
    - Aucun contact avec la carte sous tension
-   - Multimètre en mode voltmètre DC
 
 .. warning::
    Le support IC1 doit être **VIDE** (pas d'ATmega328P) pendant ce test. L'insertion du microcontrôleur se fait après validation de l'alimentation.
@@ -63,10 +58,11 @@ Premier test sous tension
 Test du rail +5 V
 ~~~~~~~~~~~~~~~~~~~
 
-#. Mesurez la tension entre **+5 V** et **GND** sur le connecteur FTDI (broches 3 et 1)
+#. Réglez le multimètre en mode **voltmètre DC** (tension continue)
+#. Mesurez la tension entre les points de test marqués **+5V** et **GND** sur le :term:`PCB`
 #. **Valeur attendue** : **5,0 V ± 0,2 V**
 
-   ✅ Si la tension est correcte, le module d'alimentation RAC05E fonctionne
+   ✅ Si la tension est correcte, le module d'alimentation PS1 (RAC05E) fonctionne
 
    ❌ Si la tension est absente ou très différente :
 
@@ -74,28 +70,25 @@ Test du rail +5 V
    - Vérifiez les soudures du module PS1
    - Vérifiez la diode TVS D1
 
+#. **Vérifiez le condensateur C3** (polarisé) : après quelques secondes sous tension, vérifiez que C3 ne chauffe pas au toucher
+
+   .. danger::
+      Un condensateur électrolytique monté **à l'envers** peut chauffer, gonfler et éclater. Si C3 est chaud ou gonflé, **coupez immédiatement l'alimentation** et corrigez la polarité.
+
 Test du rail +3,3 V
 ~~~~~~~~~~~~~~~~~~~~~
 
-#. Mesurez la tension entre **+3,3 V** et **GND** (disponible sur le connecteur OLED, broche 2)
+#. Mesurez la tension entre les points de test marqués **+3.3V** et **GND** sur le :term:`PCB`
 #. **Valeur attendue** : **3,3 V ± 0,1 V**
 
-   ✅ Si la tension est correcte, le régulateur :term:`LDO` AP2112K fonctionne
+   ✅ Si la tension est correcte, le régulateur :term:`LDO` U1 (AP2112K) fonctionne
 
    ❌ Si la tension est absente, vérifiez le rail +5 V d'abord
 
-Test de la référence AREF (1,1 V)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-La tension de référence analogique est bufferisée par l'amplificateur opérationnel LMV321A.
-
-#. Mesurez la tension VREF sur le point de test approprié
-#. **Valeur attendue** : environ **0,55 V** (point milieu VREF/2, car l'ATmega328P n'est pas encore inséré et la référence 1,1 V n'est pas activée)
+#. **Coupez l'alimentation secteur** et attendez 1 minute avant toute manipulation
 
 .. note::
-   La référence 1,1 V complète ne sera disponible qu'après insertion de l'ATmega328P et exécution du firmware. À ce stade, on vérifie principalement que le circuit de polarisation fonctionne.
-
-#. **Coupez l'alimentation secteur** et attendez 1 minute avant toute manipulation
+   La tension de référence VREF (1,1 V, bufferisée par l'amplificateur opérationnel LMV321A) ne peut être vérifiée qu'après insertion de l'ATmega328P **et** exécution du firmware. C'est le firmware qui active la référence interne 1,1 V du microcontrôleur. Ce test sera effectué lors de la phase :ref:`test-logiciel`.
 
 Insertion de l'ATmega328P
 --------------------------

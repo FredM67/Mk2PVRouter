@@ -57,7 +57,7 @@ Cependant, ce guide décrira l'implantation la plus classique.
    - 1 trou de **3 mm** par étage de sortie
 
 **Carte-mère**
-   - 4 trous de **4 mm**
+   - 4 trous de **3 mm**
 
 **Presse-étoupe**
    - Trous de **20 mm** (quantité selon câblage)

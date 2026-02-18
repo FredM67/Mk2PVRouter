@@ -94,6 +94,8 @@ Bienvenue dans la documentation du Mk2PVRouter !
    carte-mere/presentation
    carte-mere/choix-configuration
    carte-mere/assemblage-carte-mere
+   carte-mere/assemblage-monophase
+   carte-mere/assemblage-triphase
    carte-mere/tests-electriques
    carte-mere/cavaliers
 

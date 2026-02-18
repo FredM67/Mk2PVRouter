@@ -262,6 +262,26 @@ Le secteur entre par le connecteur **PWR1** et traverse une chaîne de protectio
           → D1 (SMBJ7.0A) : protection TVS côté 5 V
           → U1 (AP2112K-3.3) : 5 V → 3,3 V, 600 mA
 
+Protection contre les surtensions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+La carte intègre plusieurs niveaux de protection contre les surtensions transitoires (foudre, commutations sur le réseau). Deux niveaux sont obligatoires, un troisième est optionnel.
+
+**Niveau 1 — Modules de protection GM1–GM3** (obligatoire)
+
+Chaque phase est protégée par un module combiné :term:`GDT`\+\ :term:`MOV`. Ces modules constituent la protection principale des circuits de mesure. GM1 protège la phase L1, GM2 la phase L2, GM3 la phase L3 (triphasé avec neutre uniquement).
+
+**Niveau 2 — Fusibles FS0–FS3** (obligatoire)
+
+Les fusibles protègent les circuits de mesure contre les surintensités. Ils sont dimensionnés pour couper en cas de court-circuit ou de défaut sur un transformateur :term:`ZMPT101K`.
+
+**Niveau 3 — Varistances RV0–RV3 et éclateurs GDT0–GDT3** (optionnel)
+
+Ce niveau de protection supplémentaire est recommandé pour les installations exposées aux surtensions (zones rurales, lignes aériennes, régions à forte activité orageuse). Les éclateurs :term:`GDT` constituent la première ligne de défense et dévient les surtensions les plus violentes. Les varistances :term:`MOV` écrêtent les surtensions résiduelles.
+
+.. note::
+   Les composants optionnels (RV0–RV3, GDT0–GDT3) ne sont pas fournis dans le kit de base. Ils peuvent être ajoutés ultérieurement sans modifier le reste du circuit.
+
 Rails d'alimentation
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -286,7 +306,7 @@ Rails d'alimentation
      - Masse numérique
    * - AGND
      - 0 V
-     - Masse analogique (reliée à GND par GND_LINK)
+     - Masse analogique
 
 Intégration du module mk2Wifi
 ------------------------------

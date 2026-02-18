@@ -106,7 +106,7 @@ La mk2Wifi se branche sur les connecteurs **TRIG_EXT** et **UART_EXT** de la car
 - Le bus I2C (SCL/SDA) est **local à la mk2Wifi uniquement** — il relie l'ESP32-C3 à l'écran OLED et n'est pas routé vers la carte principale
 
 .. note::
-   La gestion du capteur DS18B20 est sélectionnée par le cavalier **JP4** sur la carte principale (voir :ref:`cavaliers`). En position « TEMP », c'est l'ESP32-C3 de la mk2Wifi qui gère le capteur.
+   La gestion du capteur DS18B20 est sélectionnée par le cavalier **TEMP** sur la carte principale (voir :ref:`cavaliers`). En position 3–centre, c'est l'ESP32-C3 de la mk2Wifi qui gère le capteur.
 
 .. |br| raw:: html
 

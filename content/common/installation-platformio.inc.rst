@@ -19,6 +19,7 @@ Avantages
    Avec PlatformIO, **aucune configuration manuelle n’est nécessaire**.
 
    Vous n’avez **PAS** besoin de :
+
    - Configurer C++17 manuellement (voir ci-dessus)
    - Installer les bibliothèques manuellement (voir ci-dessus)
 

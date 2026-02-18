@@ -21,9 +21,10 @@ Introduction
 **Durée totale estimée :**
 
 ⏱️ **Temps d’assemblage complet :**
-   - Débutant en soudure : 12-15 heures (réparties sur plusieurs sessions)
-   - Expérience intermédiaire : 8-10 heures
-   - Expérimenté : 5-7 heures
+
+- Débutant en soudure : 7-9 heures (réparties sur plusieurs sessions)
+- Expérience intermédiaire : 5-6 heures
+- Expérimenté : 3-4 heures
 
 .. tip::
    Il est recommandé de travailler par sessions de 2-3 heures maximum pour maintenir concentration et précision.
@@ -88,70 +89,21 @@ L’assemblage complet va nécessiter plusieurs étapes :
 Recommandations pour les étapes de soudure
 ------------------------------------------
 
-Les composants électroniques nécessaires sont très divers. Certains sont passifs (comme les résistances), tandis que d’autres sont actifs (comme l’AtMega328P).
-Tous ces composants sont généralement sensibles à l’électricité statique.
-Il est donc essentiel de les manipuler avec soin et, si possible, de se mettre à la terre pour éviter toute décharge électrostatique.
+La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Vous n'avez qu'à souder les composants **traversants** (through-hole). Ces composants sont généralement sensibles à l'électricité statique — manipulez-les avec soin et, si possible, mettez-vous à la terre pour éviter toute décharge électrostatique.
 
-Composants Polarisés — Explication pour Débutants
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Composants polarisés
+~~~~~~~~~~~~~~~~~~~~
 
-Certains composants ont un **SENS OBLIGATOIRE** (comme une pile : + et -).
+Sur la carte-mère, un seul composant traversant est polarisé : le **condensateur électrolytique C3**.
 
-.. danger::
-   ⚠️ Si installés à l’envers :
+.. warning::
+   La bande blanche (signes −) sur le condensateur indique le côté **négatif**. Respectez la polarité indiquée sur le :term:`PCB`. Un condensateur électrolytique monté à l'envers peut chauffer, gonfler et éclater.
 
-   - Le routeur NE FONCTIONNERA PAS
-   - Le composant peut **EXPLOSER** (condensateurs électrolytiques)
-   - Vous devrez potentiellement tout refaire
+Le **support IC1** (ATmega328P) possède une encoche d'orientation qui doit correspondre au repère sur le :term:`PCB`. Le microcontrôleur sera inséré dans le support après les tests électriques.
 
-Composants à Surveiller
-^^^^^^^^^^^^^^^^^^^^^^^
+Les autres composants traversants de la carte-mère (quartz, connecteurs, fusibles, transformateurs :term:`ZMPT101K`) ne sont pas polarisés ou ont un détrompeur mécanique.
 
-**1. Diodes** — Repérer la bande
-
-   La bande sur la diode DOIT correspondre à la bande sur le :term:`PCB`.
-
-   Les diodes ne laissent passer le courant que dans un sens. Si inversées, elles empêchent le circuit de fonctionner.
-
-**2. Condensateurs électrolytiques** — Repérer la bande blanche (-)
-
-   La bande blanche (parfois avec des signes -) indique le côté négatif.
-
-   Ces condensateurs peuvent exploser s’ils sont soudés à l’envers !
-
-**3. Circuits intégrés (IC)** — Repérer l’encoche ou le point
-
-   L’encoche (ou le point marquant la broche 1) doit correspondre au dessin sur le :term:`PCB`.
-
-   Les IC mal orientés ne fonctionneront pas et peuvent être endommagés.
-
-**4. Régulateurs de tension** — Forme du boîtier
-
-   Le régulateur a une forme particulière qui doit correspondre au dessin sur le :term:`PCB`.
-
-💡 **Règle d’or :** VÉRIFIER 3 FOIS AVANT DE SOUDER !
-
-Les composants non polarisés (résistances, condensateurs céramiques) peuvent être soudés dans n’importe quel sens.
-
-Les composants varient également en taille, allant de quelques millimètres à plusieurs centimètres (dans le cas des transformateurs).
-
-Pour des raisons pratiques, il est recommandé de procéder à la soudure en suivant un ordre précis basé sur la taille des composants.
-
-Ainsi, l’ordre de soudure recommandé est le suivant :
-
-#. Résistances et diodes, et éventuellement les ponts
-#. Supports IC1 et IC2 (et éventuellement IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports à ce stade)
-#. Condensateurs non polarisés « orange », oscillateur
-#. Pont·s de diodes
-#. Les fusibles
-#. Tous les connecteurs SIL noirs et le connecteur d’affichage, le cas échéant
-#. Condensateurs polarisés (noirs ou bleus)
-#. Le socle pour l’antenne, le cas échéant
-#. Le gros connecteur « haute tension »
-#. Le·s régulateur·s de tension
-#. Enfin, le·s transformateur·s
-
-Suivre cette séquence précise permet d’éviter de tordre les pattes des composants ou d’avoir à utiliser de l’adhésif, entre autres.
+Sur les **cartes de sortie** (étages triac), l':term:`optocoupleur` (MOC3043) et son support :term:`DIL` sont également orientés. Alignez le repère du composant avec le cercle sur le :term:`PCB`, et l'encoche du support avec le repère sérigraphié. Les résistances, connecteurs et le :term:`triac` ne sont pas polarisés.
 
 Matériels nécessaires
 ---------------------

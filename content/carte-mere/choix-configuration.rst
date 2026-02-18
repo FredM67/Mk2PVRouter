@@ -38,27 +38,44 @@ Guide de décision
    * - **Monophasé**
      - 1 phase + neutre
      - Oui
-     - Habitation standard en France (230 V)
+     - Majorité des foyers en France et en Europe (230 V)
    * - **Triphasé avec neutre**
      - 3 phases + neutre
      - Oui
-     - Grande habitation, atelier, bâtiment professionnel en France (400 V / 230 V)
+     - Foyers avec abonnement triphasé, typiquement > 12 kVA (400 V / 230 V)
    * - **Triphasé sans neutre**
      - 3 phases (triangle)
      - Non
-     - Installations industrielles, certains réseaux ruraux
+     - Certains foyers en Belgique et anciennes installations rurales
    * - **Split-phase**
      - 2 phases à 180°
      - Oui
-     - Réseau nord-américain (120 V / 240 V)
+     - Foyers en Amérique du Nord (120 V / 240 V)
 
 Comment identifier votre raccordement ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Vérifiez votre compteur électrique :**
+**Vérifiez la plaque signalétique de votre compteur électrique.** Un pictogramme de câblage indique le nombre de conducteurs traversant le compteur :
 
-- **Compteur monophasé** : 2 fils principaux (phase + neutre) + terre
-- **Compteur triphasé** : 4 fils principaux (3 phases + neutre) + terre, ou 3 fils (3 phases sans neutre) + terre
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 60
+
+   * - Symbole
+     - Type
+     - Ce que montre le pictogramme
+   * - ``1~`` ou ``1P+N``
+     - Monophasé
+     - **2 fils** passant dans le compteur (phase + neutre)
+   * - ``3~+N`` ou ``3P+N``
+     - Triphasé avec neutre
+     - **4 fils** passant dans le compteur (3 phases + neutre)
+   * - ``3~`` ou ``3P``
+     - Triphasé sans neutre
+     - **3 fils** passant dans le compteur (3 phases, pas de neutre)
+
+.. tip::
+   Sur un compteur Linky, le type de raccordement est aussi affiché sur l'écran (« MONO » ou « TRI »).
 
 **En cas de doute**, consultez votre contrat d'électricité ou contactez votre fournisseur d'énergie.
 
@@ -84,7 +101,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - ✔
      - ✔
      - ✔
-   * - Quartz X1 + condensateurs C7, C8
+   * - Quartz X1
      - ✔
      - ✔
      - ✔
@@ -99,17 +116,17 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - ✔
      - ✔
      - ✔
-   * - Cavalier fil GND_LINK
-     - ✔
-     - ✔
-     - ✔
-     - ✔
+   * - Cavalier fil GND_LINK (voir :ref:`cavaliers`)
+     - Voir note
+     - Voir note
+     - Voir note
+     - Voir note
    * - Connecteurs signaux (FTDI, OLED, TRIG_EXT, UART_EXT)
      - ✔
      - ✔
      - ✔
      - ✔
-   * - Cavaliers JP0–JP4 (configuration)
+   * - Cavaliers V sel., JP1–JP3 et TEMP (configuration)
      - ✔
      - ✔
      - ✔
@@ -139,11 +156,16 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - ✔
      - ✔
      - ✔
-   * - Transformateurs :term:`ZMPT101K` TR2, TR3
+   * - Transformateur :term:`ZMPT101K` TR2
      -
      - ✔
      - ✔
      - ✔
+   * - Transformateur :term:`ZMPT101K` TR3
+     -
+     - ✔
+     -
+     -
    * - Connecteur :term:`CT` CT1
      - ✔
      - ✔
@@ -157,7 +179,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
    * - Connecteur :term:`CT` CT3
      -
      - ✔
-     - ✔
+     -
      -
    * - Varistances RV0, RV1 (protection optionnelle)
      - (opt.)
@@ -188,7 +210,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
 Configuration des cavaliers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les cavaliers de soudure JP0–JP4 et GND_LINK doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
+Les cavaliers de soudure doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
 
 Résumé rapide :
 
@@ -201,31 +223,31 @@ Résumé rapide :
      - Tri+N
      - Tri-N
      - Split
-   * - JP0
-     - 3,3 V
-     - 3,3 V
-     - 3,3 V
-     - 3,3 V
+   * - V sel.
+     - 3–centre (3,3 V)
+     - 3–centre (3,3 V)
+     - 3–centre (3,3 V)
+     - 3–centre (3,3 V)
    * - JP1
-     - I2C SDA
-     - A4' (tension L3)
-     - A4' (tension L3)
-     - I2C SDA
+     - 3–centre (I2C SDA)
+     - 1–centre (tension L3)
+     - 1–centre (tension L3)
+     - 3–centre (I2C SDA)
    * - JP2
-     - I2C SCL
-     - A5' (courant L3)
-     - A5' (courant L3)
-     - I2C SCL
-   * - JP4
-     - Au choix
-     - Au choix
-     - Au choix
-     - Au choix
+     - 3–centre (I2C SCL)
+     - 1–centre (courant L3)
+     - 1–centre (courant L3)
+     - 3–centre (I2C SCL)
+   * - TEMP
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
    * - GND_LINK
-     - Fermé
-     - Fermé
-     - Fermé
-     - Fermé
+     - Voir note
+     - Voir note
+     - Voir note
+     - Voir note
    * - OLED disponible
      - Oui
      - Non

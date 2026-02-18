@@ -15,9 +15,18 @@ Installation du module mk2Wifi
    | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Chapitre :ref:`presentation-mk2wifi` lu
    | ☐ Carte principale assemblée et testée
-   | ☐ Cavalier JP4 configuré selon votre choix (voir :ref:`cavaliers`)
+   | ☐ Cavalier TEMP configuré selon votre choix (voir :ref:`cavaliers`)
    | ☐ Câble USB-C disponible
    | ☐ Ordinateur avec port USB
+
+Soudure des barrettes
+---------------------
+
+Le module mk2Wifi est livré entièrement assemblé (composants :term:`CMS`). Seules les deux **barrettes femelles** (TRIG_EXT et UART_EXT, 1×06, 2,54 mm) doivent être soudées par l'utilisateur.
+
+#. Positionnez chaque barrette dans son emplacement
+#. Soudez une broche, vérifiez que la barrette est perpendiculaire au :term:`PCB`
+#. Soudez les broches restantes
 
 Installation physique
 ---------------------
@@ -27,14 +36,17 @@ Installation physique
 
    Le routeur doit être **hors tension** pour brancher ou débrancher le module mk2Wifi.
 
-#. **Vérifiez l'orientation** : Les connecteurs TRIG_EXT et UART_EXT du module doivent s'aligner avec ceux de la carte principale
+.. danger::
+   Avant de brancher le module, vérifiez que le cavalier **V sel.** de la carte principale est en position **3–centre (3,3 V)**. Le module mk2Wifi fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement** (voir :ref:`cavaliers`).
+
+#. **Vérifiez l'orientation** : Les connecteurs TRIG_EXT et UART_EXT du module doivent s'aligner avec ceux de la carte principale. Le module ne doit pas être retourné.
 
 #. **Enfoncez le module** fermement mais sans forcer sur les deux connecteurs de la carte principale (TRIG_EXT et UART_EXT)
 
 #. **Vérifiez** que le module est bien en contact sur toute la longueur des deux connecteurs
 
 .. warning::
-   Un mauvais alignement des connecteurs peut endommager les broches. Vérifiez visuellement l'alignement avant d'enfoncer le module.
+   Le module peut être branché à l'envers — les connecteurs ne possèdent pas de détrompeur. Vérifiez visuellement l'orientation et l'alignement avant d'enfoncer le module. Un branchement inversé peut endommager le module et/ou la carte principale.
 
 Programmation initiale (USB-C)
 -------------------------------

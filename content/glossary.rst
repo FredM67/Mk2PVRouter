@@ -279,7 +279,7 @@ Termes Techniques Avancés
 
    Cavalier de soudure
      | Pont conducteur réalisé en soudant deux pastilles adjacentes sur le :term:`PCB`.
-     | Les cavaliers JP0–JP4 sur la carte universelle permettent de configurer le mode de fonctionnement (monophasé/triphasé, alimentation, capteur de température).
+     | Les cavaliers V sel., JP1–JP3 et TEMP sur la carte universelle permettent de configurer le mode de fonctionnement (monophasé/triphasé, alimentation, module RF, capteur de température).
 
    CT
      | *Current Transformer* ou dans notre cas **pince ampèremétrique**.

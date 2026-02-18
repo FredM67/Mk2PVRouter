@@ -31,9 +31,9 @@ Vue d'ensemble
    * - Cavalier
      - Pôles
      - Fonction
-   * - JP0
+   * - V sel.
      - 3
-     - Alimentation ATmega328P : 3,3 V (défaut) ou 5 V
+     - Alimentation ATmega328P : 3–centre = 3,3 V (défaut), 1–centre = 5 V
    * - JP1
      - 3
      - Broche A4 : mesure tension L3 (A4') ou I2C SDA
@@ -42,123 +42,90 @@ Vue d'ensemble
      - Broche A5 : mesure courant L3 (A5') ou I2C SCL
    * - JP3
      - 2
-     - Configuration de déclenchement
-   * - JP4
+     - Activation du module RF (RFM69) : relie l'IRQ du module à D2 de l'ATmega328P
+   * - TEMP
      - 3
-     - DS18B20 géré par le routeur (D3) ou par le module :term:`mk2Wifi` (« TEMP »)
+     - Capteur DS18B20 : non soudé (pas de capteur), 1–centre (routeur), 3–centre (mk2Wifi)
    * - GND_LINK
      - 2
-     - Pont entre GND et AGND (cavalier fil 0,75 mm²)
+     - Pont entre Earth (terre de protection) et GND (masse basse tension) — cavalier fil 0,75 mm²
 
 Description détaillée
 ---------------------
 
-JP0 — Alimentation ATmega328P
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+V sel. — Alimentation ATmega328P
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cavalier à 3 pôles qui sélectionne la tension d'alimentation du microcontrôleur.
+Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélectionne la tension d'alimentation du microcontrôleur.
 
-- **Position 3,3 V** (défaut) : L'ATmega328P est alimenté en 3,3 V via le régulateur :term:`LDO` AP2112K-3.3
-- **Position 5 V** : L'ATmega328P est alimenté directement en 5 V depuis le module RAC05E
+- **Position 3–centre** (défaut) : L'ATmega328P est alimenté en 3,3 V via le régulateur :term:`LDO` U1 (AP2112K-3.3)
+- **Position 1–centre** : L'ATmega328P est alimenté directement en 5 V depuis le module PS1 (RAC05E)
 
-.. important::
-   La position **3,3 V est recommandée** pour tous les cas d'utilisation normaux. La position 5 V n'est utile que dans des cas spécifiques (alimentation externe 5 V).
+.. danger::
+   Si le module RF (RFM69CW) et/ou la carte :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** être en position **3–centre (3,3 V)**. Ces modules fonctionnent en 3,3 V — une alimentation en 5 V les **détruirait immédiatement**.
 
 JP1 — Sélection broche A4
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cavalier à 3 pôles qui configure la broche analogique A4 de l'ATmega328P.
 
-- **Position I2C SDA** : La broche A4 est connectée au bus I2C (signal SDA). Permet l'utilisation de l'écran OLED.
-- **Position A4'** : La broche A4 est connectée au circuit de mesure de tension de la phase L3 (via le :term:`ZMPT101K` TR3).
-
-.. list-table::
-   :header-rows: 1
-   :widths: 30 35 35
-
-   * - Configuration
-     - Position JP1
-     - Raison
-   * - Monophasé
-     - I2C SDA
-     - Écran OLED disponible, pas de phase L3
-   * - Triphasé
-     - A4' (tension L3)
-     - Mesure tension L3 nécessaire
-   * - Split-phase
-     - I2C SDA
-     - Pas de phase L3
+- **Position 1–centre** : La broche A4 est connectée au circuit de mesure de tension de la phase L3 (via le :term:`ZMPT101K` TR3).
+- **Position 3–centre** : La broche A4 est connectée au bus I2C (signal SDA). Permet l'utilisation de l'écran OLED.
 
 JP2 — Sélection broche A5
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cavalier à 3 pôles qui configure la broche analogique A5 de l'ATmega328P.
 
-- **Position I2C SCL** : La broche A5 est connectée au bus I2C (signal SCL). Permet l'utilisation de l'écran OLED.
-- **Position A5'** : La broche A5 est connectée au circuit de mesure de courant de la phase L3 (via le connecteur CT3).
-
-.. list-table::
-   :header-rows: 1
-   :widths: 30 35 35
-
-   * - Configuration
-     - Position JP2
-     - Raison
-   * - Monophasé
-     - I2C SCL
-     - Écran OLED disponible, pas de CT3
-   * - Triphasé
-     - A5' (courant L3)
-     - Mesure courant L3 nécessaire
-   * - Split-phase
-     - I2C SCL
-     - Pas de CT3
+- **Position 1–centre** : La broche A5 est connectée au circuit de mesure de courant de la phase L3 (via le connecteur CT3).
+- **Position 3–centre** : La broche A5 est connectée au bus I2C (signal SCL). Permet l'utilisation de l'écran OLED.
 
 .. note::
-   JP1 et JP2 fonctionnent en paire. En mode triphasé, les deux doivent être en position mesure (A4'/A5'). En mode monophasé ou split-phase, les deux doivent être en position I2C (SDA/SCL).
+   JP1 et JP2 fonctionnent en paire :
 
-JP3 — Configuration de déclenchement
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **Triphasé** : les deux en position **1–centre** (mesure L3)
+   - **Monophasé ou split-phase** : les deux en position **3–centre** (I2C pour écran OLED)
 
-Cavalier à 2 pôles pour la configuration du mode de déclenchement des sorties.
+JP3 — Module RF (RFM69)
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-JP4 — Capteur de température DS18B20
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Cavalier à 2 pôles situé sur la **face arrière** du :term:`PCB`. Il relie la broche IRQ du module radio RFM69 à la broche D2 (INT0) de l'ATmega328P.
 
-Cavalier à 3 pôles qui sélectionne quel microcontrôleur gère le capteur de température 1-Wire DS18B20.
+- **Fermé** : Le module RF est activé — obligatoire si le module RFM69CW est présent sur la carte
+- **Ouvert** : Le module RF n'est pas utilisé
 
-- **Position routeur (D3)** : Le signal DS18B20 est acheminé vers la broche D3 de l'ATmega328P. Le firmware du routeur gère directement le capteur.
-- **Position mk2Wifi (TEMP)** : Le signal DS18B20 est acheminé vers le module d'extension :term:`mk2Wifi` via le connecteur UART_EXT (broche 2). L'ESP32-C3 gère le capteur.
+TEMP — Capteur de température DS18B20
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. tip::
-   Si vous n'utilisez pas le module mk2Wifi, laissez JP4 en position **routeur (D3)**.
-   Si vous utilisez le module mk2Wifi et souhaitez que celui-ci gère la température (pour transmission WiFi par exemple), placez JP4 en position **mk2Wifi (TEMP)**.
+Cavalier à 3 pôles sérigraphié **TEMP** sur le :term:`PCB`. Il configure l'acheminement du signal du capteur de température 1-Wire DS18B20.
+
+- **Non soudé** : Aucun capteur DS18B20 utilisé. La broche D3 de l'ATmega328P reste disponible comme entrée/sortie numérique standard.
+- **Position 1–centre** : Le capteur DS18B20 est géré par le **routeur** (ATmega328P, broche D3).
+- **Position 3–centre** : Le capteur DS18B20 est géré par le module **mk2Wifi** (ESP32-C3, via le connecteur UART_EXT).
 
 La résistance de pull-up nécessaire pour le bus 1-Wire est intégrée sur la carte (R6, 4,7 kΩ).
 
-GND_LINK — Pont GND–AGND
-~~~~~~~~~~~~~~~~~~~~~~~~~
+GND_LINK — Pont Earth–GND
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cavalier fil qui relie la masse numérique (GND) à la masse analogique (AGND).
+Cavalier fil qui relie la **terre de protection** (Earth, provenant du réseau électrique) à la **masse basse tension** (GND) du circuit. Il est réalisé avec un fil de 0,75 mm² soudé entre les deux pastilles.
 
-.. important::
-   Ce cavalier **doit toujours être fermé** en fonctionnement normal. Il est réalisé avec un fil de 0,75 mm² soudé entre les deux pastilles.
+Lorsque GND_LINK est **ouvert**, le circuit basse tension est entièrement isolé de la terre grâce à l'isolation galvanique du module d'alimentation RAC05E. Lorsqu'il est **fermé**, la masse basse tension est référencée à la terre de protection.
 
-   Sans ce pont, les circuits analogiques (mesure de tension et de courant) n'ont pas de référence de masse et ne fonctionnent pas.
+.. note::
+   La configuration recommandée dépend de votre installation. En cas de doute, laissez le cavalier **ouvert** — il pourra toujours être soudé ultérieurement.
 
 Procédure de soudure des cavaliers
 ------------------------------------
 
 .. warning::
-   Travaillez **hors tension**. Les cavaliers sont configurés une seule fois et ne sont pas prévus pour être modifiés fréquemment.
+   Travaillez **hors tension**. L'opération est réversible (à l'aide d'une tresse à dessouder), mais des modifications répétées risquent d'altérer les pistes en cuivre.
 
-#. **Identifiez le cavalier** sur la carte à l'aide des repères sérigraphiés (JP0, JP1, JP2, JP3, JP4, GND_LINK)
+#. **Identifiez le cavalier** sur la carte à l'aide des repères sérigraphiés (V sel., JP1, JP2, JP3, TEMP)
 
-#. **Pour les cavaliers 3 pôles** (JP0, JP1, JP2, JP4) : Déposez une goutte de soudure entre la pastille centrale et la pastille correspondant à la position souhaitée
+#. **Pour les cavaliers 3 pôles** (V sel., JP1, JP2, TEMP) : Déposez une goutte de soudure entre la pastille centrale et la pastille correspondant à la position souhaitée
 
-#. **Pour les cavaliers 2 pôles** (JP3, GND_LINK) : Déposez une goutte de soudure entre les deux pastilles
-
-#. **Pour GND_LINK** : Soudez un fil de cuivre de 0,75 mm² entre les deux pastilles (la distance est trop grande pour un simple pont de soudure)
+#. **Pour les cavaliers 2 pôles** (JP3) : Déposez une goutte de soudure entre les deux pastilles
 
 #. **Vérifiez** au multimètre (mode continuité) que le cavalier est bien fermé entre les bonnes pastilles
 
@@ -166,11 +133,10 @@ Procédure de soudure des cavaliers
 
    Avant de continuer, vérifiez :
 
-   | ☐ JP0 configuré en position 3,3 V (sauf cas particulier)
+   | ☐ V sel. configuré en position 3,3 V (sauf cas particulier)
    | ☐ JP1 configuré selon votre configuration (I2C SDA ou A4')
    | ☐ JP2 configuré selon votre configuration (I2C SCL ou A5')
-   | ☐ JP4 configuré selon votre choix (routeur ou mk2Wifi)
-   | ☐ GND_LINK fermé (fil soudé)
+   | ☐ TEMP configuré selon votre choix (non soudé, routeur ou mk2Wifi)
    | ☐ Continuité vérifiée au multimètre pour chaque cavalier
 
 .. |br| raw:: html
