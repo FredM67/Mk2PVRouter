@@ -19,6 +19,23 @@ En configuration triphasée (avec ou sans neutre), soudez les composants suivant
 .. hint::
    Les composants sont listés du plus bas au plus haut dans chaque groupe. En soudant dans cet ordre, les composants déjà soudés ne gênent pas le retournement du :term:`PCB`.
 
+Composants basse tension
+--------------------------
+
+.. note::
+   Les connecteurs de sorties numériques (D2–D13) sont communs à toutes les configurations et déjà soudés à l'étape précédente (voir :ref:`assemblage-carte-mere`).
+
+Connecteurs CT1–CT3
+~~~~~~~~~~~~~~~~~~~~
+
+Les connecteurs Molex SL 1×02 pour les transformateurs de courant de chaque phase.
+
+#. Soudez **CT1** (L1), **CT2** (L2)
+#. Soudez **CT3** (L3) — **triphasé avec neutre uniquement**
+
+.. note::
+   En configuration **sans neutre**, le courant L3 est déduit des mesures de L1 et L2 (théorème de Blondel : N−1 capteurs suffisent pour N conducteurs).
+
 Composants haute tension
 --------------------------
 
@@ -98,23 +115,13 @@ La self de mode commun (Schaffner) filtre les perturbations électromagnétiques
 #. Positionnez **FL1** sur le :term:`PCB`
 #. Soudez les broches
 
-Composants basse tension
---------------------------
-
-Connecteurs CT1–CT3
-~~~~~~~~~~~~~~~~~~~~
-
-Les connecteurs Molex SL 1×02 pour les transformateurs de courant de chaque phase.
-
-#. Soudez **CT1** (L1), **CT2** (L2)
-#. Soudez **CT3** (L3) — **triphasé avec neutre uniquement**
-
-.. note::
-   En configuration **sans neutre**, le courant L3 est déduit des mesures de L1 et L2 (théorème de Blondel : N−1 capteurs suffisent pour N conducteurs).
-
 .. admonition:: ✅ Point de Contrôle — Composants Triphasé
 
    Avant de continuer, vérifiez :
+
+   **Basse tension :**
+
+   | ☐ Connecteurs CT1–CT2 soudés (+ CT3 si triphasé avec neutre)
 
    **Haute tension :**
 
@@ -128,9 +135,6 @@ Les connecteurs Molex SL 1×02 pour les transformateurs de courant de chaque pha
    | ☐ Module d'alimentation PS1 soudé et orienté correctement
    | ☐ Self de mode commun FL1 soudée
 
-   **Basse tension :**
-
-   | ☐ Connecteurs CT1–CT2 soudés (+ CT3 si triphasé avec neutre)
    | ☐ Toutes les soudures propres et brillantes
 
 Inspection finale

@@ -145,20 +145,116 @@ Les capteurs de courant (Current Transformers) se placent sur les câbles d’al
 Emplacement des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: Ajouter schéma d’installation des capteurs de courant (img/schema-installation-ct.png)
-
 **CT Grille — Mesure de la consommation/injection réseau**
 
-   :term:`CT`·s à clip installé·s sur le câble de **phase** principal arrivant du compteur Linky/Enedis
+Les :term:`CT` Grille sont des capteurs à clip installés sur les câbles de **phase** principaux, entre le compteur et le tableau électrique. Ils mesurent le bilan énergétique du foyer (consommation ou injection).
 
-   - **Monophasé** : 1 :term:`CT` à clip sur la phase unique (CT1)
-   - **Triphasé** : 3 :term:`CT` à clip sur les 3 phases (CT1, CT2, CT3)
+- **Monophasé** : 1 :term:`CT` à clip sur la phase unique (CT1)
+- **Triphasé** : 3 :term:`CT` à clip sur les 3 phases (CT1, CT2, CT3)
 
 **CT Diversion — Mesure de la puissance routée** (optionnel)
 
-   :term:`CT` **intégré dans le boîtier** du Mk2PVRouter, connecté sur le câble relié à la charge
+Le :term:`CT` Diversion est installé sur le câble reliant la sortie du routeur à la charge (chauffe-eau). Il permet de mesurer la puissance effectivement routée.
 
-   ⚠️ Ce :term:`CT` n’est **PAS** un :term:`CT` à clip externe comme les :term:`CT` Grille
+⚠️ Ce :term:`CT` n'est **PAS** un :term:`CT` à clip externe comme les :term:`CT` Grille — il est **intégré dans le boîtier** du Mk2PVRouter.
+
+Schéma d'installation — Monophasé
+""""""""""""""""""""""""""""""""""
+
+.. graphviz::
+   :caption: Emplacement des CT — Installation monophasée
+   :align: center
+   :alt: Schéma d'installation des capteurs de courant en monophasé
+
+   digraph ct_mono {
+       rankdir=LR;
+       node [shape=box, style="rounded,filled", fontname="Arial", fontsize=11];
+       edge [fontname="Arial", fontsize=10];
+       nodesep=0.6;
+       ranksep=0.9;
+       bgcolor=transparent;
+
+       compteur [label="Compteur\nLinky", fillcolor="#E3F2FD", color="#1976D2"];
+
+       ct1 [label="CT1\n(Grille)\n\u2192 vers maison", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
+
+       tableau [label="Tableau\n\u00e9lectrique", fillcolor="#E8EAF6", color="#3F51B5"];
+
+       disj [label="Disjoncteur\n2A / 6A\n(d\u00e9di\u00e9 routeur)", fillcolor="#F3E5F5", color="#7B1FA2"];
+
+       subgraph cluster_router {
+           label="Mk2PVRouter";
+           style="filled,rounded";
+           fillcolor="#E8F5E9";
+           color="#388E3C";
+           fontname="Arial";
+           fontsize=12;
+           labelloc="t";
+           margin=15;
+
+           routeur [label="Carte\nprincipale", fillcolor="#C8E6C9", color="#388E3C"];
+           sortie [label="\u00c9tage\nde sortie\n(triac)", fillcolor="#C8E6C9", color="#388E3C"];
+       }
+
+       ct2 [label="CT2\n(Diversion)\n\u2192 vers charge\n(optionnel)", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", style="filled,dashed", penwidth=2];
+
+       charge [label="Charge\n(chauffe-eau\n2-3 kW)", fillcolor="#FFCCBC", color="#D84315"];
+
+       compteur -> ct1 [label="Phase (L)", color="#E53935", fontcolor="#E53935", penwidth=2];
+       ct1 -> tableau [color="#E53935", penwidth=2];
+       tableau -> disj [label="L + N + PE"];
+       disj -> routeur [label="Alimentation"];
+       routeur -> sortie [style=dashed, color="#666666"];
+       sortie -> ct2 [label="Sortie triac", color="#E53935", penwidth=2];
+       ct2 -> charge [color="#E53935", penwidth=2];
+   }
+
+Schéma d'installation — Triphasé
+"""""""""""""""""""""""""""""""""
+
+.. graphviz::
+   :caption: Emplacement des CT — Installation triphasée
+   :align: center
+   :alt: Schéma d'installation des capteurs de courant en triphasé
+
+   digraph ct_tri {
+       rankdir=LR;
+       node [shape=box, style="rounded,filled", fontname="Arial", fontsize=11];
+       edge [fontname="Arial", fontsize=10];
+       nodesep=0.5;
+       ranksep=0.9;
+       bgcolor=transparent;
+
+       compteur [label="Compteur\n(triphas\u00e9)", fillcolor="#E3F2FD", color="#1976D2"];
+
+       ct1 [label="CT1\n(L1)\n\u2192", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
+       ct2 [label="CT2\n(L2)\n\u2192", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
+       ct3 [label="CT3\n(L3)\n\u2192", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
+
+       tableau [label="Tableau\n\u00e9lectrique", fillcolor="#E8EAF6", color="#3F51B5"];
+
+       disj [label="Disjoncteur\nt\u00e9trapolaire\n(d\u00e9di\u00e9 routeur)", fillcolor="#F3E5F5", color="#7B1FA2"];
+
+       routeur [label="Mk2PVRouter\n(carte principale)", fillcolor="#C8E6C9", color="#388E3C"];
+
+       charges [label="Charges\n(chauffe-eau,\nradiateurs)", fillcolor="#FFCCBC", color="#D84315"];
+
+       compteur -> ct1 [label="L1", color="#E53935", fontcolor="#E53935", penwidth=2];
+       ct1 -> tableau [color="#E53935", penwidth=2];
+
+       compteur -> ct2 [label="L2", color="#FB8C00", fontcolor="#FB8C00", penwidth=2];
+       ct2 -> tableau [color="#FB8C00", penwidth=2];
+
+       compteur -> ct3 [label="L3", color="#1E88E5", fontcolor="#1E88E5", penwidth=2];
+       ct3 -> tableau [color="#1E88E5", penwidth=2];
+
+       tableau -> disj [label="L1+L2+L3\n+N+PE"];
+       disj -> routeur [label="Alimentation"];
+       routeur -> charges [label="Sorties triac", style=dashed];
+   }
+
+.. note::
+   Les flèches (→) sur les :term:`CT` indiquent le sens d'installation : **vers la maison** (depuis le compteur). En triphasé sans neutre, CT3 n'est pas nécessaire (théorème de Blondel).
 
 Sens d’Installation des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

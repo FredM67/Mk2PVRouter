@@ -19,6 +19,21 @@ En configuration monophasée ou split-phase, soudez les composants suivants en p
 .. hint::
    Les composants sont listés du plus bas au plus haut dans chaque groupe. En soudant dans cet ordre, les composants déjà soudés ne gênent pas le retournement du :term:`PCB`.
 
+Composants basse tension
+--------------------------
+
+.. note::
+   Les connecteurs de sorties numériques (D2–D13) sont communs à toutes les configurations et déjà soudés à l'étape précédente (voir :ref:`assemblage-carte-mere`).
+
+Connecteurs CT1 (et CT2 optionnel)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Les connecteurs Molex SL 1×02 pour les transformateurs de courant.
+
+#. Soudez le connecteur **CT1** (phase L1)
+
+Si vous souhaitez mesurer la puissance de diversion (puissance routée vers la charge), soudez également le connecteur **CT2**.
+
 Composants haute tension
 --------------------------
 
@@ -96,21 +111,13 @@ La self de mode commun (Schaffner) filtre les perturbations électromagnétiques
 #. Positionnez **FL1** sur le :term:`PCB`
 #. Soudez les broches
 
-Composants basse tension
---------------------------
-
-Connecteurs CT1 (et CT2 optionnel)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Les connecteurs Molex SL 1×02 pour les transformateurs de courant.
-
-#. Soudez le connecteur **CT1** (phase L1)
-
-Si vous souhaitez mesurer la puissance de diversion (puissance routée vers la charge), soudez également le connecteur **CT2**.
-
 .. admonition:: ✅ Point de Contrôle — Composants Monophasé
 
    Avant de continuer, vérifiez :
+
+   **Basse tension :**
+
+   | ☐ Connecteur CT1 soudé (+ CT2 si option diversion)
 
    **Haute tension :**
 
@@ -124,9 +131,6 @@ Si vous souhaitez mesurer la puissance de diversion (puissance routée vers la c
    | ☐ Module d'alimentation PS1 soudé et orienté correctement
    | ☐ Self de mode commun FL1 soudée
 
-   **Basse tension :**
-
-   | ☐ Connecteur CT1 soudé (+ CT2 si option diversion)
    | ☐ Toutes les soudures propres et brillantes
 
 Inspection finale
