@@ -52,7 +52,7 @@ Premier test sous tension
 .. warning::
    Le support IC1 doit être **VIDE** (pas d'ATmega328P) pendant ce test. L'insertion du microcontrôleur se fait après validation de l'alimentation.
 
-#. **Connectez le câble secteur** au connecteur PWR1 (selon votre configuration)
+#. **Connectez le câble secteur** au connecteur secteur (selon votre configuration)
 #. **Mettez sous tension** via le disjoncteur
 
 Test du rail +5 V

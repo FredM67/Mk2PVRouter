@@ -50,9 +50,11 @@ Images de la carte
      - Face arrière
    * - .. figure:: ../img/mainboard-front.png
           :alt: Carte universelle — face avant assemblée
+          :target: ../_images/mainboard-front.png
 
      - .. figure:: ../img/mainboard-back.png
           :alt: Carte universelle — face arrière
+          :target: ../_images/mainboard-back.png
 
 .. list-table::
    :widths: 50 50
@@ -62,8 +64,10 @@ Images de la carte
      - Circuit imprimé nu
    * - .. figure:: ../img/mainboard-smd.png
           :alt: Carte universelle — composants CMS
+          :target: ../_images/mainboard-smd.png
 
      - .. figure:: ../img/mainboard-bare.png
+          :target: ../_images/mainboard-bare.png
           :alt: Carte universelle — PCB nu
 
 Connecteurs
@@ -71,73 +75,63 @@ Connecteurs
 
 .. list-table::
    :header-rows: 1
-   :widths: 15 25 20 40
+   :widths: 20 30 50
 
-   * - Réf
-     - Valeur
-     - Boîtier
+   * - Sérigraphie
+     - Type
      - Description
-   * - PWR1
-     - Conn_01x05_PWR
-     - Phoenix Contact MSTBV 2,5
-     - Entrée secteur (1×5, pas 5,08 mm). En monophasé, un connecteur 3 voies est fourni.
+   * - PE / N / L1 / L2 / L3
+     - Phoenix Contact MSTBV 2,5 (pas 5,08 mm)
+     - Entrée secteur. En monophasé, un connecteur 3 voies est fourni (PE, N, L1).
    * - TRIG_EXT
-     - Conn_01x06
-     - Barrette mâle 1×06 2,54 mm
-     - Connecteur déclenchement/GPIO
+     - Barrette mâle 1×06 (pas 2,54 mm)
+     - Déclenchement / GPIO
    * - UART_EXT
-     - Conn_01x06
-     - Barrette mâle 1×06 2,54 mm
-     - Connecteur UART + DS18B20
+     - Barrette mâle 1×06 (pas 2,54 mm)
+     - UART + capteur DS18B20
    * - FTDI
-     - Conn_01x06
-     - Molex SL 1×06 2,54 mm
-     - Connecteur programmation/débogage
+     - Molex SL 1×06 (pas 2,54 mm)
+     - Programmation / débogage
    * - OLED
-     - Conn_01x04
-     - Molex SL 1×04 2,54 mm
-     - Connecteur écran I2C (monophasé uniquement)
+     - Molex SL 1×04 (pas 2,54 mm)
+     - Écran I2C (monophasé uniquement)
    * - CN1
-     - BU-SMA-V
-     - :term:`SMA` vertical
-     - Connecteur antenne :term:`RF` 50 Ω
+     - :term:`SMA` vertical (50 Ω)
+     - Antenne module :term:`RF`
    * - CT1
-     - Conn_01x02
-     - Molex SL 1×02 2,54 mm
+     - Molex SL 1×02 (pas 2,54 mm)
      - Entrée :term:`CT` L1
    * - CT2
-     - Conn_01x02
-     - Molex SL 1×02 2,54 mm
+     - Molex SL 1×02 (pas 2,54 mm)
      - Entrée :term:`CT` L2 (triphasé uniquement)
    * - CT3
-     - Conn_01x02
-     - Molex SL 1×02 2,54 mm
+     - Molex SL 1×02 (pas 2,54 mm)
      - Entrée :term:`CT` L3 (triphasé uniquement)
 
 Brochage des connecteurs
 -------------------------
 
-PWR1 — Entrée secteur (1×5 Phoenix Contact)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PE / N / L1 / L2 / L3 — Entrée secteur (1×5 Phoenix Contact)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
    :widths: 15 85
 
-   * - Broche
+   * - Sérigraphie
      - Signal
-   * - 1
-     - Terre
-   * - 2
+   * - PE
+     - Terre (conducteur de protection)
+   * - N
      - Neutre
-   * - 3
-     - L1
-   * - 4
-     - L2
-   * - 5
-     - L3
+   * - L1
+     - Phase 1
+   * - L2
+     - Phase 2
+   * - L3
+     - Phase 3
 
-En monophasé, un connecteur 3 voies est fourni (Terre, Neutre, L1).
+En monophasé, un connecteur 3 voies est fourni (PE, N, L1).
 
 TRIG_EXT — Déclenchement/GPIO (1×6 barrette mâle)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -347,7 +341,7 @@ Alimentation
 Chaîne d'alimentation
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Le secteur entre par le connecteur **PWR1** et traverse une chaîne de protection avant d'atteindre le module d'alimentation :
+Le secteur entre par le connecteur d'entrée secteur (**PE / N / L1 / L2 / L3**) et traverse une chaîne de protection avant d'atteindre le module d'alimentation :
 
 .. code-block:: text
 

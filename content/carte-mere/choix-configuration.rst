@@ -201,7 +201,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - (opt.)
      - (opt.)
      - (opt.)
-   * - Connecteur PWR1
+   * - Connecteur secteur
      - 3 voies
      - 5 voies
      - 5 voies

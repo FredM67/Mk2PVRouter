@@ -52,12 +52,12 @@ Les connecteurs Molex SL 1×02 pour les transformateurs de courant de chaque pha
 .. note::
    En configuration **sans neutre**, le courant L3 est déduit des mesures de L1 et L2 (théorème de Blondel : N−1 capteurs suffisent pour N conducteurs).
 
-Connecteur PWR1 (5 voies)
----------------------------
+Connecteur secteur (5 voies)
+-----------------------------
 
-Le connecteur Phoenix Contact 5 voies (Terre, Neutre, L1, L2, L3) pour l'entrée secteur.
+Le connecteur Phoenix Contact 5 voies (PE, N, L1, L2, L3) pour l'entrée secteur.
 
-#. Soudez le connecteur **PWR1** (5 voies)
+#. Soudez le connecteur secteur (5 voies)
 
 Protection optionnelle (RV0–RV3, GDT0–GDT3)
 ---------------------------------------------
@@ -75,7 +75,7 @@ Si fournis dans votre kit, soudez les composants de protection supplémentaires 
    | ☐ Modules GM1–GM3 soudés
    | ☐ Transformateurs TR1–TR2 soudés (+ TR3 si triphasé avec neutre)
    | ☐ Connecteurs CT1–CT2 soudés (+ CT3 si triphasé avec neutre)
-   | ☐ Connecteur PWR1 (5 voies) soudé
+   | ☐ Connecteur secteur (5 voies) soudé
    | ☐ Protections optionnelles soudées (si fournies)
    | ☐ Toutes les soudures propres et brillantes
 

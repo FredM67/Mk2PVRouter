@@ -35,9 +35,11 @@ Images de la carte
      - Face arrière
    * - .. figure:: ../img/mk2wifi-front.png
           :alt: Module mk2Wifi — face avant assemblée
+          :target: ../_images/mk2wifi-front.png
 
      - .. figure:: ../img/mk2wifi-back.png
           :alt: Module mk2Wifi — face arrière
+          :target: ../_images/mk2wifi-back.png
 
 .. list-table::
    :widths: 50 50
@@ -47,8 +49,10 @@ Images de la carte
      - Circuit imprimé nu
    * - .. figure:: ../img/mk2wifi-smd.png
           :alt: Module mk2Wifi — composants CMS
+          :target: ../_images/mk2wifi-smd.png
 
      - .. figure:: ../img/mk2wifi-bare.png
+          :target: ../_images/mk2wifi-bare.png
           :alt: Module mk2Wifi — PCB nu
 
 Connecteurs

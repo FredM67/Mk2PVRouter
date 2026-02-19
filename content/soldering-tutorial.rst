@@ -320,7 +320,7 @@ Les 5 Étapes d’une Bonne Soudure
 - Plier les pattes si nécessaire (angle 90°)
 - Insérer dans les trous du :term:`PCB`
 - Composant bien plaqué contre le PCB (pas d’espace)
-- Retourner le PCB (soudure côté pistes)
+- Retourner le PCB (soudure côté opposé aux composants)
 
 **Étape 2 : Maintenir le composant** (optionnel)
 

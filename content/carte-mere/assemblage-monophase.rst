@@ -51,12 +51,12 @@ Connecteur CT2 (optionnel)
 
 Si vous souhaitez mesurer la puissance de diversion (puissance routée vers la charge), soudez le connecteur **CT2**.
 
-Connecteur PWR1 (3 voies)
----------------------------
+Connecteur secteur (3 voies)
+-----------------------------
 
-Le connecteur Phoenix Contact 3 voies (Terre, Neutre, L1) pour l'entrée secteur.
+Le connecteur Phoenix Contact 3 voies (PE, N, L1) pour l'entrée secteur.
 
-#. Soudez le connecteur **PWR1** (3 voies)
+#. Soudez le connecteur secteur (3 voies)
 
 Protection optionnelle (RV0, RV1, GDT0, GDT1)
 ------------------------------------------------
@@ -74,7 +74,7 @@ Si fournis dans votre kit, soudez les composants de protection supplémentaires 
    | ☐ Module GM1 soudé
    | ☐ Transformateur TR1 soudé
    | ☐ Connecteur CT1 soudé (+ CT2 si option diversion)
-   | ☐ Connecteur PWR1 (3 voies) soudé
+   | ☐ Connecteur secteur (3 voies) soudé
    | ☐ Protections optionnelles soudées (si fournies)
    | ☐ Toutes les soudures propres et brillantes
 
