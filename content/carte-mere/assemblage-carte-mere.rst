@@ -93,12 +93,22 @@ Module RF (RFM69CW) — optionnel
 
 Le module radio RFM69CW permet la communication sans fil (bande ISM 433/868 MHz).
 
-.. danger::
-   Avant d'insérer le module, vérifiez que le cavalier **V sel.** est en position **3–centre (3,3 V)**. Le module RFM69CW fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement**.
+.. warning::
+   Le module RFM69CW est **très sensible aux décharges électrostatiques** (ESD). Avant de le manipuler :
 
-#. Insérez le module RFM69CW dans son emplacement
-#. Vérifiez l'orientation (le module ne doit pas dépasser du :term:`PCB`)
-#. Soudez toutes les broches
+   - Touchez une surface métallique reliée à la terre pour vous décharger
+   - Évitez de toucher les composants ou les broches du module
+   - Travaillez de préférence sur un tapis antistatique
+
+.. danger::
+   Avant de souder le module, vérifiez que le cavalier **V sel.** est en position **3–centre (3,3 V)**. Le module RFM69CW fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement**.
+
+#. Positionnez le module RFM69CW sur son emplacement
+#. **Vérifiez l'alignement** : chaque broche du module doit correspondre exactement à sa pastille sur le :term:`PCB`. Reportez-vous à la sérigraphie pour l'orientation correcte.
+#. Soudez une broche d'angle, vérifiez l'alignement, puis soudez les broches restantes
+
+.. tip::
+   Un petit morceau de ruban adhésif double face entre le module et le PCB permet de le maintenir en place pendant la soudure.
 
 .. note::
    N'oubliez pas de fermer le cavalier **JP3** (face arrière) pour activer le module RF (voir :ref:`cavaliers`).
