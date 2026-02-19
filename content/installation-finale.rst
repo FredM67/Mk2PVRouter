@@ -448,7 +448,7 @@ Connexions entre le tableau électrique et le MK2PVRouter :
 - **N (Neutre)** : du disjoncteur → entrée N du routeur
 - **⏚ (Terre)** : du disjoncteur → entrée PE du routeur
 
-Les charges (chauffe-eau, radiateur…) sont raccordées aux sorties de l’étage de sortie (carte triac ou relais), pas au connecteur d’alimentation de la carte-mère.
+Le raccordement des charges aux étages de sortie est détaillé dans la section suivante.
 
 **Triphasé (3 × 230 V = 400 V) :**
 
@@ -460,7 +460,9 @@ Connexions entre le tableau électrique et le MK2PVRouter :
 - **N (Neutre)** : du disjoncteur → entrée N du routeur
 - **⏚ (Terre)** : du disjoncteur → entrée PE du routeur
 
-Les charges sont raccordées aux sorties des étages de sortie (une carte triac ou relais par phase).
+Le raccordement des charges aux étages de sortie est détaillé dans la section suivante.
+
+.. _raccordement-etages-sortie:
 
 Raccordement des étages de sortie
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -507,7 +509,7 @@ Procédure de Connexion (Électricien Qualifié)
 
 #. **Porter les EPI** (gants isolants, chaussures de sécurité)
 
-#. **Installer le disjoncteur dédié** 16 A dans le tableau
+#. **Installer le disjoncteur dédié** dans le tableau (2 A ou 6 A pour le routeur, voir ci-dessus)
 
 #. **Connecter les câbles d’alimentation** au disjoncteur :
 
@@ -521,7 +523,7 @@ Procédure de Connexion (Électricien Qualifié)
    - Serrer les connexions au couple recommandé (tournevis dynamométrique)
    - Vérifier qu’aucun brin de cuivre ne dépasse du bornier
 
-#. **Connecter les câbles vers la charge** (chauffe-eau, radiateur)
+#. **Connecter les étages de sortie** aux charges via leurs connecteurs de puissance (voir :ref:`raccordement-etages-sortie`)
 
 #. **Vérifier toutes les connexions** (tirer légèrement sur chaque câble)
 
@@ -693,7 +695,7 @@ Le routeur fonctionne à l’envers
 **Solution :**
 
 #. Couper le disjoncteur général
-#. Retourner le :term:`CT` (inverser le sens de la flèche)
+#. Retourner le :term:`CT` (inverser le sens de la flèche), ou inverser les fils K ↔ L sur le connecteur jack
 #. Remettre sous tension et retester
 
 La charge ne s’active jamais
@@ -771,7 +773,7 @@ Vérifications Périodiques
 
 ☐ Vérifier l’étalonnage du routeur
 
-☐ Contrôler l’usure des contacts du :term:`triac`
+☐ Vérifier l’état du :term:`triac` et de son dissipateur (traces de surchauffe, décoloration)
 
 ☐ Vérifier les :term:`CT` (clip de fermeture pas cassé)
 
@@ -844,8 +846,8 @@ Ressources Complémentaires
 
 .. admonition:: 🔧 Forum et Support
 
-   - **Forum Mk2PVRouter** : [Lien vers forum si existe]
-   - **Support technique** : [Email/Contact support]
+   - **GitHub Issues** : https://github.com/FredM67/Mk2PVRouter/issues
+   - **GitHub Discussions** : https://github.com/FredM67/PVRouter-3-phase/discussions
 
 Avertissement Final
 -------------------
