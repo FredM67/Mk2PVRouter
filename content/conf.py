@@ -140,12 +140,16 @@ html_context = {
     ],
 }
 
+html_js_files = [
+    'clickable-graphviz.js',
+    'clickable-images.js',
+]
+
 import os
 if os.environ.get('GITHUB_REF', '') == 'refs/heads/'+github_version:
-    html_js_files = [
-        'clickable-graphviz.js',
+    html_js_files.append(
         ('https://plausible.cs.aalto.fi/js/script.js', {"data-domain": "fredm67.github.io", "defer": "defer"}),
-    ]
+    )
 
 # -- Options for simplepdf output -------------------------------------------------
 simplepdf_vars = {

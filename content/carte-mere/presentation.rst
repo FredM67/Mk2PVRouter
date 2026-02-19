@@ -50,11 +50,11 @@ Images de la carte
      - Face arrière
    * - .. figure:: ../img/mainboard-front.png
           :alt: Carte universelle — face avant assemblée
-          :target: ../_images/mainboard-front.png
+          :class: clickable-img
 
      - .. figure:: ../img/mainboard-back.png
           :alt: Carte universelle — face arrière
-          :target: ../_images/mainboard-back.png
+          :class: clickable-img
 
 .. list-table::
    :widths: 50 50
@@ -64,10 +64,10 @@ Images de la carte
      - Circuit imprimé nu
    * - .. figure:: ../img/mainboard-smd.png
           :alt: Carte universelle — composants CMS
-          :target: ../_images/mainboard-smd.png
+          :class: clickable-img
 
      - .. figure:: ../img/mainboard-bare.png
-          :target: ../_images/mainboard-bare.png
+          :class: clickable-img
           :alt: Carte universelle — PCB nu
 
 Connecteurs
