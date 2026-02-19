@@ -47,6 +47,62 @@ Elles seront fixées à l'aide de 4 vis **M3**, généralement au fond du boîti
 Test
 ----
 
-.. |br| raw:: html
+Bien que la carte-relais soit fournie assemblée, il est recommandé de la tester avant de l’intégrer dans le boîtier.
 
-  <br/>
+Matériel nécessaire
+~~~~~~~~~~~~~~~~~~~~
+
+☐ Carte-relais à tester
+
+☐ Carte-mère assemblée et fonctionnelle (ou Arduino avec alimentation 5 V)
+
+☐ Câble Molex 2 fils (signal)
+
+☐ Multimètre (fonction continuité / résistance)
+
+Procédure de test
+~~~~~~~~~~~~~~~~~
+
+**Étape 1 : Inspection visuelle (hors tension)**
+
+#. Vérifier que le relais est correctement soudé sur la carte
+#. Vérifier l’état des connecteurs Molex (signal et puissance)
+#. Vérifier l’absence de défaut visible (piste coupée, soudure froide)
+
+**Étape 2 : Test de continuité (hors tension)**
+
+#. Mesurer la résistance entre les bornes du connecteur de puissance : **circuit ouvert** (∞ Ω) attendu
+#. Mesurer la résistance de la bobine du relais (entre les broches de commande) : **quelques centaines d’ohms** attendus
+
+**Étape 3 : Test fonctionnel (basse tension uniquement)**
+
+#. Connecter le câble Molex de signal entre la carte-relais et une sortie numérique de la carte-mère (D2–D13)
+#. Alimenter la carte-mère (ou l’Arduino) en 5 V via le connecteur :term:`FTDI` ou USB
+#. Activer la sortie numérique correspondante (HIGH) :
+
+   - Un **clic audible** du relais doit se produire
+   - La LED de la carte-relais doit s’allumer (si présente)
+   - Mesurer la continuité entre les bornes de puissance : **court-circuit** (0 Ω) attendu
+
+#. Désactiver la sortie (LOW) :
+
+   - Un second **clic** doit se produire (relâchement)
+   - La LED doit s’éteindre
+   - Mesurer la continuité entre les bornes de puissance : **circuit ouvert** (∞ Ω) attendu
+
+#. Répéter 2–3 fois pour confirmer un fonctionnement fiable
+
+.. warning::
+   Ne **jamais** raccorder la tension secteur (230 V) directement sur les contacts du relais pour ce test. Le test fonctionnel se fait entièrement en **basse tension**.
+
+.. admonition:: ✅ Point de Contrôle — Carte-Relais
+
+   Avant d’intégrer la carte-relais dans le boîtier :
+
+   | ☐ Inspection visuelle : aucun défaut apparent
+   | ☐ Bobine : résistance mesurée cohérente (quelques centaines d’Ω)
+   | ☐ Activation : clic audible, contacts fermés (0 Ω)
+   | ☐ Désactivation : clic audible, contacts ouverts (∞ Ω)
+
+.. important::
+   **Rappel :** cette carte-relais est conçue pour commander un **contacteur de puissance** (type HC/HP), pas pour alimenter directement une charge. Le contacteur, installé dans le tableau électrique, se charge de commuter la charge de puissance en toute sécurité.
