@@ -147,4 +147,4 @@ Bienvenue dans la documentation du Mk2PVRouter !
 .. toctree::
    :caption: 📚 Glossaire
 
-   glossary.rst
+   glossary

@@ -734,7 +734,7 @@ LED Clignote Bizarrement
    - Normal début/fin journée
  * - Clignotement erratique
    - Mesures instables
-   - Vérifier le CT et $1’$2talonnage
+   - Vérifier le CT et l’étalonnage
 
 ===============================================
 🔥 Problèmes de Routage — Charge ne Chauffe Pas

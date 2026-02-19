@@ -36,10 +36,10 @@ Vue d'ensemble
      - Alimentation ATmega328P : 3–centre = 3,3 V (défaut), 1–centre = 5 V
    * - JP1
      - 3
-     - Broche A4 : mesure tension L3 (A4') ou I2C SDA
+     - Mesure tension L3 / I2C : 1–centre = tension L3, 3–centre = I2C SDA (OLED)
    * - JP2
      - 3
-     - Broche A5 : mesure courant L3 (A5') ou I2C SCL
+     - Mesure courant L3 / I2C : 1–centre = courant L3, 3–centre = I2C SCL (OLED)
    * - JP3
      - 2
      - Activation du module RF (RFM69) : relie l'IRQ du module à D2 de l'ATmega328P
@@ -64,21 +64,21 @@ Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélectionn
 .. danger::
    Si le module RF (RFM69CW) et/ou la carte :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** être en position **3–centre (3,3 V)**. Ces modules fonctionnent en 3,3 V — une alimentation en 5 V les **détruirait immédiatement**.
 
-JP1 — Sélection broche A4
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+JP1 — Mesure tension L3 / I2C SDA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cavalier à 3 pôles qui configure la broche analogique A4 de l'ATmega328P.
+Cavalier à 3 pôles qui sélectionne entre la mesure de tension de la phase L3 et le bus I2C.
 
-- **Position 1–centre** : La broche A4 est connectée au circuit de mesure de tension de la phase L3 (via le :term:`ZMPT101K` TR3).
-- **Position 3–centre** : La broche A4 est connectée au bus I2C (signal SDA). Permet l'utilisation de l'écran OLED.
+- **Position 1–centre** : Mesure de tension de la phase L3 (via le :term:`ZMPT101K` TR3).
+- **Position 3–centre** : Bus I2C (signal SDA). Permet l’utilisation de l’écran OLED.
 
-JP2 — Sélection broche A5
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+JP2 — Mesure courant L3 / I2C SCL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cavalier à 3 pôles qui configure la broche analogique A5 de l'ATmega328P.
+Cavalier à 3 pôles qui sélectionne entre la mesure de courant de la phase L3 et le bus I2C.
 
-- **Position 1–centre** : La broche A5 est connectée au circuit de mesure de courant de la phase L3 (via le connecteur CT3).
-- **Position 3–centre** : La broche A5 est connectée au bus I2C (signal SCL). Permet l'utilisation de l'écran OLED.
+- **Position 1–centre** : Mesure de courant de la phase L3 (via le connecteur CT3).
+- **Position 3–centre** : Bus I2C (signal SCL). Permet l’utilisation de l’écran OLED.
 
 .. note::
    JP1 et JP2 fonctionnent en paire :
@@ -134,8 +134,8 @@ Procédure de soudure des cavaliers
    Avant de continuer, vérifiez :
 
    | ☐ V sel. configuré en position 3,3 V (sauf cas particulier)
-   | ☐ JP1 configuré selon votre configuration (I2C SDA ou A4')
-   | ☐ JP2 configuré selon votre configuration (I2C SCL ou A5')
+   | ☐ JP1 configuré selon votre configuration (tension L3 ou I2C SDA)
+   | ☐ JP2 configuré selon votre configuration (courant L3 ou I2C SCL)
    | ☐ TEMP configuré selon votre choix (non soudé, routeur ou mk2Wifi)
    | ☐ Continuité vérifiée au multimètre pour chaque cavalier
 

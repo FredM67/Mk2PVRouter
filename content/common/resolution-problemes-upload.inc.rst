@@ -25,7 +25,3 @@ Port COM n’apparaît pas
 #. Débrancher/rebrancher l’adaptateur FTDI
 #. Redémarrer l’ordinateur
 
-
-Étape 4 : Vérification du Fonctionnement
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-

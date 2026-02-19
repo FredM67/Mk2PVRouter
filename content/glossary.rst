@@ -398,4 +398,4 @@ Termes Techniques Avancés
 
    Baud rate
       | Vitesse de communication série, mesurée en bits par seconde.
-      | Le Mk2PVRouter utilise généralement 9 600 ou 1 15200 bauds pour la communication avec l’ordinateur.
+      | Le Mk2PVRouter utilise généralement 9 600 ou 115 200 bauds pour la communication avec l’ordinateur.

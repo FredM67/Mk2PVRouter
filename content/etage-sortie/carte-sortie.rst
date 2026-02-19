@@ -53,16 +53,6 @@ Contrôle de la Puissance
 | Le principal inconvénient de cette méthode est que la gradation est moins précise, mais l’expérience a montré que cela ne pose pas de problème avec les compteurs électriques en France, quel que soit le modèle.
 | Le principal **avantage** de cette méthode est qu’elle ne génère aucune harmonique dans le réseau électrique.
 
-| Pour ajuster la puissance délivrée à un dispositif résistif, on emploie couramment une méthode nommée modulation de phase ou gradation.
-| Cette technique consiste à retarder l’activation du triac à un moment précis de chaque demi-cycle du courant alternatif.
-| En activant le triac seulement durant une partie du demi-cycle, on diminue l’énergie transmise à l’appareil.
-| Ainsi, plus le déclenchement du triac est retardé, moins la puissance fournie est élevée, et vice-versa.
-| Toutefois, cette méthode a pour inconvénient de produire des harmoniques sur le réseau électrique.
-
-| Une alternative est de permettre uniquement le passage de cycles complets de sinusoïdes, une technique appelée modulation par trains d’ondes ou *burst fire control*.
-| Bien que cette méthode offre une gradation moins fine, les tests montrent qu’elle ne présente pas de problème avec les compteurs électriques en France, indépendamment du modèle utilisé.
-| Son **avantage principal** réside dans le fait qu’elle n’introduit pas d’harmoniques sur le réseau électrique.
-
 Applications typiques
 ---------------------
 
