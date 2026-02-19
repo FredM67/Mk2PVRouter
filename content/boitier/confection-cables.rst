@@ -14,7 +14,7 @@ Voici la liste des câbles dont nous aurons besoin :
 * fil de mise à la terre (un par dissipateur)
 
 .. note::
-   Toutes les longueurs préconisées sont basées sur les implantations de la carte-mère décrites :ref:`ici<percage-carte-mere>`.
+   Toutes les longueurs préconisées sont basées sur les implantations de la carte-mère décrites :ref:`ici <percage-carte-mere>`.
 
 .. admonition:: Conseil
 
