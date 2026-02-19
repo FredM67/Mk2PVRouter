@@ -10,7 +10,7 @@ Cette section décrit la connexion du Mk2PVRouter au réseau électrique de votr
 **Cette opération présente des RISQUES MORTELS par électrocution.**
 
 .. danger::
-   ⚡ **TENSION MORTELLE 230 V AC, 380 V AC en triphasé** ⚡
+   ⚡ **TENSION MORTELLE 230 V AC, 400 V AC en triphasé** ⚡
 
    Le contact avec des conducteurs sous tension peut provoquer :
 
@@ -150,13 +150,14 @@ Emplacement des :term:`CT`
 Les :term:`CT` Grille sont des capteurs à clip installés sur les câbles de **phase** principaux, entre le compteur et le tableau électrique. Ils mesurent le bilan énergétique du foyer (consommation ou injection).
 
 - **Monophasé** : 1 :term:`CT` à clip sur la phase unique (CT1)
-- **Triphasé** : 3 :term:`CT` à clip sur les 3 phases (CT1, CT2, CT3)
+- **Triphasé avec neutre** : 3 :term:`CT` à clip sur les 3 phases (CT1, CT2, CT3)
+- **Triphasé sans neutre** : 2 :term:`CT` suffisent (CT1, CT2) — :term:`théorème de Blondel`
 
 **CT Diversion — Mesure de la puissance routée** (optionnel)
 
-Le :term:`CT` Diversion est installé sur le câble reliant la sortie du routeur à la charge (chauffe-eau). Il permet de mesurer la puissance effectivement routée.
+Le :term:`CT` Diversion est installé sur le câble de phase reliant l’étage de sortie à la charge (chauffe-eau). Il mesure la puissance effectivement routée vers la charge.
 
-⚠️ Ce :term:`CT` n'est **PAS** un :term:`CT` à clip externe comme les :term:`CT` Grille — il est **intégré dans le boîtier** du Mk2PVRouter.
+⚠️ Ce :term:`CT` est un **tore** (anneau fermé) à travers lequel passe le câble de phase — contrairement aux :term:`CT` Grille qui sont des capteurs à clip ouvrant. Il est monté **à l’intérieur du boîtier** du Mk2PVRouter.
 
 Schéma d'installation — Monophasé
 """"""""""""""""""""""""""""""""""
@@ -205,7 +206,7 @@ Schéma d'installation — Monophasé
        tableau -> disj [label="L + N + PE"];
        disj -> routeur [label="Alimentation"];
        routeur -> sortie [style=dashed, color="#666666"];
-       sortie -> ct2 [label="Sortie triac", color="#E53935", penwidth=2];
+       sortie -> ct2 [label="Phase vers charge", color="#E53935", penwidth=2];
        ct2 -> charge [color="#E53935", penwidth=2];
    }
 
@@ -263,7 +264,10 @@ Schéma d'installation — Triphasé
        tableau -> disj [label="L1+L2+L3\n+N+PE"];
        disj -> conn;
        conn -> routeur [style=invis];
-       routeur -> charges [label="Sorties triac", style=dashed];
+
+       etages [label="Étages de sortie\n(triac / relais)", fillcolor="#C8E6C9", color="#388E3C"];
+       routeur -> etages [label="Signal\n(Molex)", style=dashed, color="#666666"];
+       etages -> charges [label="Phase(s)\nvers charges", color="#E53935", penwidth=2];
    }
 
 .. warning::
@@ -378,7 +382,7 @@ Protection Électrique du Système
 
 Le Mk2PVRouter **électronique** nécessite un disjoncteur dédié pour son alimentation :
 
-- **Type** : Disjoncteur divisionnaire bipolaire (Phase + Neutre)
+- **Type** : Disjoncteur divisionnaire bipolaire en monophasé (Phase + Neutre), tétrapolaire en triphasé (3 Phases + Neutre)
 - **Calibre** : 2 A ou 6 A (suffisant pour l’électronique < 5 W)
 - **Courbe** : Type C (protection usage courant)
 - **Pouvoir de coupure** : Minimum 4,5 kA (6 kA ou 10 kA recommandé)
