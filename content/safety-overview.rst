@@ -142,7 +142,7 @@ Avant de Commencer
 Pendant la Soudure
 ------------------
 
-**À FAIRE:**
+**À FAIRE :**
 
 - ✅ Toujours reposer le fer sur son support
 - ✅ Souder dans un endroit bien ventilé
@@ -150,7 +150,7 @@ Pendant la Soudure
 - ✅ Garder une éponge humide pour nettoyer la panne
 - ✅ Tenir le fer par la poignée isolée uniquement
 
-**À NE JAMAIS FAIRE:**
+**À NE JAMAIS FAIRE :**
 
 - ❌ Toucher la panne ou le fil chauffant (200-450 °C !)
 - ❌ Laisser le fer allumé sans surveillance
@@ -179,7 +179,7 @@ Les fumées de soudure contiennent :
 - Colophane (flux) : irritant respiratoire
 - Gaz toxiques
 
-**Protection:**
+**Protection :**
 
 - Travailler dans endroit ventilé
 - Utiliser extracteur de fumées si disponible
@@ -195,7 +195,7 @@ Règles d’Or (230 V AC)
 .. danger::
    **LES 5 RÈGLES d’OR DE LA SÉCURITÉ ÉLECTRIQUE**
 
-   Ces règles DOIVENT être respectées pour toute intervention sur installation électrique:
+   Ces règles DOIVENT être respectées pour toute intervention sur installation électrique :
 
    1. **CONSIGNER** : Couper l’alimentation au disjoncteur
    2. **CONDAMNER** : Verrouiller le disjoncteur (cadenas si possible)
@@ -206,7 +206,7 @@ Règles d’Or (230 V AC)
 Vérification Absence de Tension
 -------------------------------
 
-**TOUJOURS** vérifier l’absence de tension avant de toucher des conducteurs:
+**TOUJOURS** vérifier l’absence de tension avant de toucher des conducteurs :
 
 1. Utiliser un testeur de tension **adapté** (VAT)
 2. **Tester le testeur** sur une prise sous tension connue AVANT (vérifier qu’il fonctionne)
@@ -225,7 +225,7 @@ Avant toute intervention sur câblage domestique :
 
 1. **Identifier le disjoncteur** concerné au tableau
 2. **Couper le disjoncteur** (position « Off » ou « 0 »)
-3. **Si possible:** Poser un cadenas ou signalisation « NE PAS RALLUMER — Travaux en cours »
+3. **Si possible :** Poser un cadenas ou signalisation « NE PAS RALLUMER — Travaux en cours »
 4. **Tester l’absence de tension** avec VAT (voir procédure ci-dessus)
 5. **SEULEMENT ENSUITE** : Manipuler les conducteurs
 
@@ -317,7 +317,7 @@ Sécurité Incendie
 Prévention
 ----------
 
-**Pendant la Soudure:**
+**Pendant la Soudure :**
 
 - Extincteur ABC à portée de main (< 3 mètres)
 - Surface de travail ininflammable
@@ -325,7 +325,7 @@ Prévention
 - Détecteur de fumée fonctionnel
 - Ne jamais laisser fer allumé sans surveillance
 
-**Pendant les Tests Électriques:**
+**Pendant les Tests Électriques :**
 
 - Surveillez les 5 premières minutes de fonctionnement
 - Guettez odeurs anormales (plastique brûlé)
@@ -367,12 +367,10 @@ Intervention Incendie
 Utilisation Extincteur
 ----------------------
 
-Technique **PLMV** :
-
-- **P** : Pointer la lance vers la base des flammes
-- **L** : Lâcher la gâchette/percuter la cartouche
-- **M** : Mettre en action (presser la gâchette)
-- **V** : Viser la base, balayer latéralement
+#. **Retirer la goupille** de sécurité
+#. **Viser la base** des flammes avec la lance
+#. **Presser la poignée** pour libérer l’agent extincteur
+#. **Balayer latéralement** en maintenant le jet sur la base du feu
 
 .. note::
    Familiarisez-vous avec votre extincteur AVANT l’urgence !
@@ -382,7 +380,7 @@ Technique **PLMV** :
 Compétences Requises par Étape
 ==============================
 
-Le tableau suivant indique le niveau de compétence requis et les risques associés à chaque étape:
+Le tableau suivant indique le niveau de compétence requis et les risques associés à chaque étape :
 
 .. list-table:: Évaluation des Risques par Chapitre
    :header-rows: 1
@@ -457,7 +455,7 @@ Signes d’Électrisation
 - Confusion, désorientation
 
 .. warning::
-   **Même après électrisation « mineure »:**
+   **Même après électrisation « mineure » :**
 
    Consultez un médecin ! Des lésions cardiaques peuvent apparaître plusieurs heures après.
    Le courant électrique peut provoquer des troubles du rythme cardiaque différés.
@@ -497,7 +495,7 @@ Numéros d’Urgence (France)
 - **Urgences européennes** : 112
 - **Centre anti-poison** : Consulter liste par région
 
-**Informations à fournir aux secours:**
+**Informations à fournir aux secours :**
 
 - Votre adresse exacte
 - Nombre de victimes
@@ -514,7 +512,7 @@ Numéros d’Urgence (France)
 
 .. admonition:: Auto-Évaluation des Compétences
 
-   **Avant d’acheter le kit, évaluez honnêtement vos compétences:**
+   **Avant d’acheter le kit, évaluez honnêtement vos compétences :**
 
    Soudure :
    
@@ -546,20 +544,20 @@ Ressources de Formation
 
 Si vous manquez de compétences, formez-vous d’abord :
 
-**Soudure:**
+**Soudure :**
 
 - Achetez un kit d’entraînement (~10-15 €)
 - Regardez tutoriels YouTube « apprendre à souder »
 - Pratiquez sur composants jetables
 - Faites vérifier vos soudures par quelqu’un d’expérimenté
 
-**Électricité:**
+**Électricité :**
 
 - Suivez formation électricité domestique (Fab Lab, associations)
 - Lisez guides sécurité électrique
 - **NE PAS apprendre sur ce projet** (trop dangereux)
 
-**Outils:**
+**Outils :**
 
 - Fab Labs, hackerspaces offrent accès outils et formation
 - Cours bricolage magasins bricolage (Leroy Merlin, Castorama)
@@ -574,7 +572,7 @@ Checklist Avant Assemblage
    Lecture :
    
    - [ ] J’ai lu et compris ce chapitre sécurité ENTIÈREMENT
-   - [ ] J’ai lu la documentation technique pertinente (mono ou tri)
+   - [ ] J’ai lu la documentation technique pertinente
    - [ ] Je comprends les étapes du projet
 
    Équipement de sécurité :
