@@ -227,34 +227,50 @@ Schéma d'installation — Triphasé
 
        compteur [label="Compteur\n(triphasé)", fillcolor="#E3F2FD", color="#1976D2"];
 
-       ct1 [label="CT1\n(L1)\n→", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
-       ct2 [label="CT2\n(L2)\n→", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
-       ct3 [label="CT3\n(L3)\n→", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
+       ct1 [label="CT1\n(L1)\n→", shape=ellipse, fillcolor="#FFCDD2", color="#E53935", fontcolor="#B71C1C", penwidth=2];
+       ct2 [label="CT2\n(L2)\n→", shape=ellipse, fillcolor="#FFE0B2", color="#FB8C00", fontcolor="#E65100", penwidth=2];
+       ct3 [label="CT3\n(L3)\n→", shape=ellipse, fillcolor="#BBDEFB", color="#1E88E5", fontcolor="#0D47A1", penwidth=2];
 
        tableau [label="Tableau\nélectrique", fillcolor="#E8EAF6", color="#3F51B5"];
 
        disj [label="Disjoncteur\ntétrapolaire\n(dédié routeur)", fillcolor="#F3E5F5", color="#7B1FA2"];
 
-       routeur [label="Mk2PVRouter\n(carte principale)", fillcolor="#C8E6C9", color="#388E3C"];
+       subgraph cluster_router {
+           label="Mk2PVRouter";
+           style="filled,rounded";
+           fillcolor="#E8F5E9";
+           color="#388E3C";
+           fontname="Arial";
+           fontsize=12;
+           labelloc="t";
+           margin=15;
+
+           conn [label="Connecteur secteur\nPE | N | L1 | L2 | L3", fillcolor="#C8E6C9", color="#388E3C", shape=record];
+           routeur [label="Carte principale\nCT1→L1 | CT2→L2 | CT3→L3", fillcolor="#C8E6C9", color="#388E3C"];
+       }
 
        charges [label="Charges\n(chauffe-eau,\nradiateurs)", fillcolor="#FFCCBC", color="#D84315"];
 
        compteur -> ct1 [label="L1", color="#E53935", fontcolor="#E53935", penwidth=2];
-       ct1 -> tableau [color="#E53935", penwidth=2];
+       ct1 -> tableau [label="L1", color="#E53935", fontcolor="#E53935", penwidth=2];
 
        compteur -> ct2 [label="L2", color="#FB8C00", fontcolor="#FB8C00", penwidth=2];
-       ct2 -> tableau [color="#FB8C00", penwidth=2];
+       ct2 -> tableau [label="L2", color="#FB8C00", fontcolor="#FB8C00", penwidth=2];
 
        compteur -> ct3 [label="L3", color="#1E88E5", fontcolor="#1E88E5", penwidth=2];
-       ct3 -> tableau [color="#1E88E5", penwidth=2];
+       ct3 -> tableau [label="L3", color="#1E88E5", fontcolor="#1E88E5", penwidth=2];
 
        tableau -> disj [label="L1+L2+L3\n+N+PE"];
-       disj -> routeur [label="Alimentation"];
+       disj -> conn;
+       conn -> routeur [style=invis];
        routeur -> charges [label="Sorties triac", style=dashed];
    }
 
+.. warning::
+   **Chaque CT doit correspondre à la phase connectée sur le connecteur secteur du routeur.** La phase qui passe dans CT1 doit être raccordée sur **L1**, celle qui passe dans CT2 sur **L2**, et celle qui passe dans CT3 sur **L3**. Un décalage entre les CT et les phases provoquera des mesures de puissance incorrectes.
+
 .. note::
-   Les flèches (→) sur les :term:`CT` indiquent le sens d'installation : **vers la maison** (depuis le compteur). En triphasé sans neutre, CT3 n'est pas nécessaire (théorème de Blondel).
+   Les flèches (→) sur les :term:`CT` indiquent le sens d'installation : **vers la maison** (depuis le compteur). En triphasé sans neutre, CT3 n'est pas nécessaire (:term:`théorème de Blondel`).
 
 Sens d’Installation des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
