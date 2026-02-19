@@ -154,8 +154,8 @@ L’affichage dans le Moniteur Série se présente comme ceci : ::
     1780.56, P:-18, P1:374, P2:-116, P3:-276, V1:233.09, V2:233.53, V3:233.67, (minSampleSets/MC 32, #ofSampleSets 8014)
     1804.21, P:-24, P1:371, P2:-118, P3:-277, V1:233.04, V2:233.48, V3:233.55, (minSampleSets/MC 32, #ofSampleSets 8015)
 
-``P1``, ``P2``, ``P3`` représentent les puissances moyennées sur 5 secondes sur chaque phase. ``P`` est la puissance totale moyenne totale sur 5 secondes.
-Si j’étalonne la phase **L1**, alors **P1** devra afficher la même valeur que celle affichée par le compteur pour cette même phase.
+``P1``, ``P2``, ``P3`` représentent les puissances moyennées sur 5 secondes sur chaque phase. ``P`` est la puissance totale moyennée sur 5 secondes.
+Si vous étalonnez la phase **L1**, alors **P1** devra afficher la même valeur que celle affichée par le compteur pour cette même phase.
 
 .. hint::
    Les numéros de phase sont purement arbitraires, la phase **L1** du routeur correspondant à la phase branchée sur le connecteur **L1**, mais ce n’est pas forcément la phase branchée sur le bornier **L1** du compteur.
@@ -163,7 +163,7 @@ Si j’étalonne la phase **L1**, alors **P1** devra afficher la même valeur qu
 Comment trouver le bon ``f_powerCal`` du premier coup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Avant de télécharger le sketch d’étalonnage, je veille à définir les valeurs comme ceci :
+Avant de télécharger le sketch d’étalonnage, veillez à définir les valeurs comme ceci :
 
 .. code-block:: cpp
 
@@ -181,7 +181,7 @@ Avant de télécharger le sketch d’étalonnage, je veille à définir les vale
    Si le sketch contient une autre valeur, il conviendra alors d’adapter la formule en conséquence.
 
 .. hint::
-   Après avoir calculé le ``f_powerCal`` de la phase en cours d’étalonnage et saisi sa valeur dans le sketch, il peut être judicieux de téléverser à nouveau sur le routeur et de s’assurer maintenant, la valeur affichée dans le log correspond à celle du compteur.
+   Après avoir calculé le ``f_powerCal`` de la phase en cours d’étalonnage et saisi sa valeur dans le sketch, il peut être judicieux de téléverser à nouveau sur le routeur et de s’assurer que la valeur affichée dans le log correspond bien à celle du compteur.
 
 En triphasé, il faudra répéter l’opération sur chacune des phases.
 Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu’au convertisseur analogique du microcontrôleur.
@@ -266,7 +266,7 @@ Appareils de mesure possibles
    - Répétez l’opération pour chaque phase (**L1**, **L2**, **L3**).
 
 .. attention::
-   La phase doit correspondre. Si vous étalonnez la phase **L1**, le chauffe-eau DOIT être branché sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**
+   La phase doit correspondre. Si vous étalonnez la phase **L1**, le chauffe-eau DOIT être branché sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**.
 
 Chauffe-eau triphasé
 ^^^^^^^^^^^^^^^^^^^^^

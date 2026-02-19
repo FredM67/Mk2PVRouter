@@ -448,7 +448,7 @@ Schéma de Raccordement
 
 Connexions entre le tableau électrique et le MK2PVRouter :
 
-- **L (Phase)** : du disjoncteur 16 A bipolaire → entrée L du routeur
+- **L (Phase)** : du disjoncteur dédié bipolaire (2 A ou 6 A) → entrée L du routeur
 - **N (Neutre)** : du disjoncteur → entrée N du routeur
 - **⏚ (Terre)** : du disjoncteur → entrée PE du routeur
 
@@ -458,7 +458,7 @@ Le raccordement des charges aux étages de sortie est détaillé dans la section
 
 Connexions entre le tableau électrique et le MK2PVRouter :
 
-- **L1 (Phase 1)** : du disjoncteur tétrapolaire 16 A → entrée L1 du routeur
+- **L1 (Phase 1)** : du disjoncteur dédié tétrapolaire (2 A ou 6 A) → entrée L1 du routeur
 - **L2 (Phase 2)** : du disjoncteur → entrée L2 du routeur
 - **L3 (Phase 3)** : du disjoncteur → entrée L3 du routeur
 - **N (Neutre)** : du disjoncteur → entrée N du routeur

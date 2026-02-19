@@ -100,22 +100,16 @@ Vérifier les composants d’alimentation :
 
 .. admonition:: Composants à vérifier
 
- #. ☐ **Pont·s redresseur·s dans le bon sens ?**
-
-    - Mono : (pas de pont redresseur sur la carte universelle)
-    - Tri : (pas de pont redresseur sur la carte universelle)
-    - Repérer la bande ou marquage sur la diode
-
  #. ☐ **Module PS1 (RAC05E)** dans le bon sens ?
 
     - Vérifier l’orientation selon le schéma
-    - Les 3 pattes doivent correspondre (E-C-B ou G-S-D)
+    - Vérifier que le point ou l’encoche du module correspond au repère sur le PCB
 
- #. ☐ **Condensateurs C1/C2** polarité correcte ?
+ #. ☐ **Condensateur C3** polarité correcte ?
 
     - Bande blanche = côté négatif (-)
     - Vérifier marquage sur PCB
-    - ⚠️ Si inversés : risque d’explosion à la mise sous tension !
+    - ⚠️ Si inversé : risque d’explosion à la mise sous tension !
 
  #. ☐ **Transformateur·s bien soudé·s ?**
 
@@ -334,7 +328,7 @@ Vérification via Moniteur Série
     - Composant à 2 pattes près de l’ATmega328
     - Soudures correctes ?
 
- #. ☐ **Condensateurs C6/C7 présents ?** (si quartz externe)
+ #. ☐ **Condensateurs C7/C8 présents ?** (si quartz externe)
 
     - Condensateurs 22 pF de chaque côté du quartz
     - Valeur correcte ?

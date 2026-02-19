@@ -89,7 +89,7 @@ L’assemblage complet va nécessiter plusieurs étapes :
 Recommandations pour les étapes de soudure
 ------------------------------------------
 
-La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Vous n’avez qu'à souder les composants **traversants** (through-hole). Ces composants sont généralement sensibles à l’électricité statique — manipulez-les avec soin et, si possible, mettez-vous à la terre pour éviter toute décharge électrostatique.
+La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Vous n’avez qu'à souder les composants **traversants** (through-hole). Certains composants (microcontrôleur, optocoupleur) sont sensibles à l’électricité statique — manipulez-les avec soin et, si possible, mettez-vous à la terre pour éviter toute décharge électrostatique.
 
 Composants polarisés
 ~~~~~~~~~~~~~~~~~~~~

@@ -57,7 +57,7 @@ Installation du Firmware — Triphasé
 Test de la partie *mesures* — Monophasé
 -----------------------------------------
 
-| Le transformateur a deux sorties : l’une pour l’alimentation CC, l’autre pour le capteur de tension CA qui devrait déjà fonctionner.
+| Le transformateur ZMPT101K (TR1) fournit le signal de mesure de tension CA.
 | Cela peut être vérifié en exécutant un programme (croquis) qui affiche les mesures analogiques prises par le processeur Atmel (**IC1**).
 
 Le programme, qui se trouve également sur la page Téléchargements, est : *RawSamplesTool_2chan.ino*
@@ -71,7 +71,7 @@ Le programme, qui se trouve également sur la page Téléchargements, est : *Ra
 | Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le :term:`CT` branché sur **CT2**.
 | Lorsque le :term:`CT` a été déplacé vers le port :term:`CT`\1, la sortie résultante semblait presque identique, mais avec les caractères "**1**" et "**2**" inversés.
 
-RSResults_V_and_I2.txt
+``RSResults_V_and_I2.txt``
 
 | Si aucun signal n’est disponible sur les ports **CT1** et **CT2**, les formes d’onde de ces canaux seront toutes deux des lignes droites.
 | Seul le signal de tension affichera un aspect sinusoïdal.
@@ -83,7 +83,7 @@ Test de la partie *mesures* — Triphasé
 .. note::
    À partir de maintenant, une alimentation triphasée devra être fournie à la carte-mère.
 
-Chaque transformateur a deux sorties : l’une pour l’alimentation CC, l’autre pour le capteur de tension CA qui devrait déjà fonctionner.
+Les transformateurs ZMPT101K (TR1, TR2, TR3) fournissent les signaux de mesure de tension CA sur chaque phase.
 Cela peut être vérifié en exécutant un programme (croquis) qui affiche les mesures analogiques prises par le processeur Atmel (**IC1**).
 
 Le programme, qui se trouve également sur la page Téléchargements, est : *RawSamplesTool_6chan.ino*
@@ -97,7 +97,7 @@ Si un courant important est mesuré ainsi que la tension, les résultats affich�
 Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le :term:`CT` branché sur **CT2**.
 Lorsque le :term:`CT` a été déplacé vers le port **CT1**, la sortie résultante semblait presque identique, mais avec les caractères "**1**" et "**2**" inversés.
 
-RSResults_V_and_I2.txt
+``RSResults_V_and_I2.txt``
 
 Si aucun signal n’est disponible sur les ports **CT1-CT3**, les formes d’onde de ces canaux seront toutes deux des lignes droites.
 Seuls les signaux de tension afficheront un aspect sinusoïdal.

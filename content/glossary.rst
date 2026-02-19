@@ -96,7 +96,7 @@ Termes de Base pour Débutants
 
    Transformateur
      | Composant qui **convertit** une tension alternative en une autre tension alternative.
-     | Dans le Mk2PVRouter : Transforme 230 V AC en basse tension pour alimenter les circuits électroniques.
+     | Dans le Mk2PVRouter : Les transformateurs ZMPT101K mesurent la tension secteur de façon isolée (230 V → signal basse tension).
 
    Circuit intégré (IC)
      | Une « puce » électronique contenant de nombreux composants miniaturisés.

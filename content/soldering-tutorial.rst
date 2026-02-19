@@ -72,7 +72,7 @@ Sécurité — Points Essentiels
 
 ☐ **Ventilation** ou extracteur de fumées (obligatoire — fumées toxiques)
 
-☐ **Surface de travail ininflammable** (tapis silicone, planche bois)
+☐ **Surface de travail ininflammable** (tapis silicone, carrelage, plaque métal)
 
 ☐ **Vêtements longs** (manches longues, pas de synthétique)
 
