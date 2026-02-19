@@ -225,7 +225,7 @@ Termes Techniques Avancés
      | Théorème fondamental de la mesure de puissance en régime polyphasé, énoncé par André Blondel en 1893.
      | Il stipule que pour mesurer la puissance totale d'un système à **N conducteurs**, il suffit de **N−1 wattmètres** (ou capteurs de courant).
      | Application au Mk2PVRouter : en triphasé sans neutre (3 fils), 2 CT suffisent (CT1 et CT2) — la puissance sur L3 est déduite mathématiquement.
-     | Voir `l'article Wikipédia <https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Blondel>`__.
+     | Voir `l'article Wikipédia (en anglais) <https://en.wikipedia.org/wiki/Blondel%27s_theorem>`__.
 
    CMS
      | *Composant Monté en Surface* (ou SMD en anglais : *Surface-Mount Device*).
