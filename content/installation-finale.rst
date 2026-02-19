@@ -400,17 +400,20 @@ Le Mk2PVRouter **électronique** nécessite un disjoncteur dédié pour son alim
    - Radiateur : Conserve son disjoncteur adapté à sa puissance
    - Le routeur **pilote** les triacs, mais ne **protège pas** les charges
 
-Câblage du Mk2PVRouter
-^^^^^^^^^^^^^^^^^^^^^^^
+Câblage d’alimentation du Mk2PVRouter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Pour l’alimentation du Mk2PVRouter électronique (< 5 W) :**
+Le routeur lui-même consomme moins de 5 W (alimentation électronique uniquement). Son câble d’alimentation relie le disjoncteur dédié (voir ci-dessus) au connecteur secteur de la carte-mère (PE, N, L1 et éventuellement L2, L3) :
 
 - **Section** : 0,75 mm² ou 1,5 mm² (largement suffisant)
-- **Protection** : Disjoncteur 2 A ou 6 A
+- **Nombre de conducteurs** : 3 fils en monophasé (PE + N + L), 5 fils en triphasé (PE + N + L1 + L2 + L3)
 
-**Pour les charges pilotées (les câbles existants sont conservés) :**
+Sections de câbles des charges
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-La section des câbles des charges dépend de leur puissance (ces câbles sont normalement **déjà installés**) :
+Les charges (chauffe-eau, radiateur…) sont raccordées aux étages de sortie, **pas à la carte-mère**. L’étage de sortie (:term:`triac` ou relais) s’insère dans le circuit de phase existant de la charge. En général, les câbles entre le disjoncteur de la charge et la charge elle-même sont **déjà en place** et n’ont pas besoin d’être remplacés.
+
+À titre indicatif, voici les sections minimales selon la norme NF C 15-100 :
 
 .. list-table::
    :header-rows: 1
@@ -420,7 +423,7 @@ La section des câbles des charges dépend de leur puissance (ces câbles sont n
      - Section câble minimum
      - Disjoncteur max
    * - Jusqu’à 2 300 W
-     - 1,5  mm²
+     - 1,5 mm²
      - 10 A
    * - 2 300 W - 3 680 W
      - 2,5 mm²
@@ -432,12 +435,7 @@ La section des câbles des charges dépend de leur puissance (ces câbles sont n
      - 6 mm²
      - 32 A
 
-.. note::
-   **Ces sections concernent les charges uniquement, PAS le Mk2PVRouter.**
-
-   Pour un **chauffe-eau classique 2 000-3 000 W**, les câbles existants sont normalement en **2,5 mm²** avec disjoncteur **16 A** ou **20 A**.
-
-   Le Mk2PVRouter se branche **en parallèle** pour piloter la charge, il ne remplace pas ces câbles.
+Pour un **chauffe-eau classique 2 000-3 000 W**, les câbles existants sont normalement en **2,5 mm²** avec disjoncteur **16 A** ou **20 A**.
 
 Schéma de Raccordement
 ^^^^^^^^^^^^^^^^^^^^^^
