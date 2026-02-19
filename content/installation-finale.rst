@@ -513,7 +513,9 @@ Procédure de Connexion (Électricien Qualifié)
 
 #. **Porter les EPI** (gants isolants, chaussures de sécurité)
 
-#. **Installer le disjoncteur dédié** dans le tableau (2 A ou 6 A pour le routeur, voir ci-dessus)
+#. **Installer le disjoncteur dédié du routeur** dans le tableau (2 A ou 6 A, voir ci-dessus)
+
+#. **Vérifier les disjoncteurs des charges** pilotées (un disjoncteur par charge monophasée, un disjoncteur multipolaire par charge triphasée)
 
 #. **Connecter les câbles d’alimentation** au disjoncteur :
 
@@ -566,7 +568,7 @@ Liste de Vérification Finale
 Procédure de Mise Sous Tension
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. **Laisser le disjoncteur du Mk2PVRouter en position OFF**
+#. **Laisser les disjoncteurs du routeur ET des charges en position OFF**
 
 #. **Réenclencher le disjoncteur général** du tableau
 
@@ -589,6 +591,8 @@ Procédure de Mise Sous Tension
    - Écran affiche des données (si présent)
    - Pas de bruit anormal
 
+#. **Enclencher les disjoncteurs des charges** un par un, en vérifiant après chaque enclenchement l'absence d'anomalie (odeur, grésillement, disjoncteur qui saute)
+
 Surveillance Post-Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -598,7 +602,7 @@ Pendant les **premières 24 heures** :
 
 - ⚠️ **Vérifier régulièrement** (toutes les 30 minutes au début) :
 
-  - Pas d’échauffement anormal des connexions (toucher avec dos de la main)
+  - Pas d’échauffement anormal des connexions et du dissipateur du :term:`triac` (toucher avec dos de la main — le dissipateur peut être tiède, mais pas brûlant)
   - Pas d’odeur de brûlé
   - Pas de fumée
   - Fonctionnement correct du routeur
@@ -634,22 +638,19 @@ Test de Détection de Production
 Test de Sécurité :term:`triac`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Si le routeur utilise un :term:`triac` pour moduler la puissance :
+#. **Vérifier que la charge ne s’active PAS** en l’absence de production solaire
 
-#. **Vérifier que la charge ne s’active PAS** en l’absence de production
+#. **Attendre une période de production solaire** (journée ensoleillée)
 
-#. **Simuler une petite production** (< 500 W)
+   - Quand la production dépasse la consommation du foyer, le routeur doit activer la charge
+   - Plus l’excédent est important, plus la puissance routée augmente
+   - Observer la montée progressive de la puissance routée sur l’écran ou les logs série
 
-   - Charge doit s’activer partiellement (modulation)
+#. **Quand la production diminue** (passage nuageux, fin de journée)
 
-#. **Simuler forte production** (> puissance de la charge)
-
-   - Charge doit s’activer à 100 %
-
-#. **Couper la production simulée brutalement**
-
-   - Charge doit se désactiver immédiatement
-   - Pas d’injection réseau parasite
+   - La puissance routée doit diminuer en proportion
+   - Dès que la consommation dépasse la production, la charge doit se désactiver complètement
+   - Aucune injection réseau ne doit subsister
 
 Test de Coupure d’Urgence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -674,7 +675,7 @@ Le routeur ne s’allume pas
 
 ☐ Disjoncteur pas enclenché ou défectueux
 
-☐ Fusible grillé sur le routeur
+☐ Fusible grillé sur la carte-mère (un fusible par conducteur actif : 2 en monophasé N+L, 4 en triphasé N+L1+L2+L3)
 
 ☐ Connexion d’alimentation desserrée
 
@@ -685,7 +686,7 @@ Le routeur ne s’allume pas
 **Actions :**
 
 #. Vérifier que le disjoncteur est bien enclenché
-#. Mesurer la tension aux bornes d’alimentation du routeur (230 V attendu)
+#. Mesurer la tension en sortie du disjoncteur dédié (230 V attendu entre phase et neutre)
 #. Vérifier les fusibles sur le routeur
 #. Inspecter visuellement toutes les soudures
 
@@ -809,11 +810,11 @@ Si vous devez déposer le routeur :
 
 #. **Vérifier l’absence de tension**
 
-#. **Débrancher les CT** en premier
+#. **Débrancher les charges** des étages de sortie
 
-#. **Débrancher l’alimentation** du routeur
+#. **Débrancher l’alimentation** du routeur (câble secteur)
 
-#. **Débrancher la charge**
+#. **Ouvrir les CT** (déclipser) puis débrancher les jacks
 
 #. **Retirer le routeur**
 

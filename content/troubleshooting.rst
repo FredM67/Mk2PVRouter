@@ -1,8 +1,8 @@
 .. _troubleshooting:
 
-*********************
-🔧 Guide de Dépannage
-*********************
+*******************
+Guide de Dépannage
+*******************
 
 Ce chapitre vous aide à diagnostiquer et résoudre les problèmes courants rencontrés lors de l’assemblage et de l’utilisation du Mk2PVRouter.
 

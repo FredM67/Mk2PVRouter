@@ -22,7 +22,7 @@ La carte :term:`mk2Wifi` est un module d'extension qui ajoute une connectivité 
 Le module se branche directement sur la carte principale via les connecteurs **TRIG_EXT** et **UART_EXT**, et est alimenté en +5 V par celle-ci.
 
 .. note::
-   Le module mk2Wifi est **entièrement assemblé en usine** (composants :term:`CMS`). Aucune soudure n'est nécessaire.
+   Les composants :term:`CMS` du module mk2Wifi sont **assemblés en usine**. Seuls les **deux connecteurs à broches** (pin headers) doivent être soudés par l’utilisateur pour relier le module à la carte-mère.
 
 Images de la carte
 ------------------
