@@ -446,19 +446,57 @@ Schéma de Raccordement
 
 Connexions entre le tableau électrique et le MK2PVRouter :
 
-- **L (Phase)** : du disjoncteur 16 A bipolaire → entrée L du routeur → vers charge (chauffe-eau)
-- **N (Neutre)** : du disjoncteur → entrée N du routeur
-- **⏚ (Terre)** : du disjoncteur → entrée terre du routeur
+- **L (Phase)** : du disjoncteur 16 A bipolaire → entrée L du routeur
+- **N (Neutre)** : du disjoncteur → entrée N du routeur
+- **⏚ (Terre)** : du disjoncteur → entrée PE du routeur
+
+Les charges (chauffe-eau, radiateur…) sont raccordées aux sorties de l’étage de sortie (carte triac ou relais), pas au connecteur d’alimentation de la carte-mère.
 
 **Triphasé (3 × 230 V = 400 V) :**
 
 Connexions entre le tableau électrique et le MK2PVRouter :
 
-- **L1 (Phase 1)** : du disjoncteur tétrapolaire 16 A → entrée L1 du routeur → charge phase 1
-- **L2 (Phase 2)** : du disjoncteur → entrée L2 du routeur
-- **L3 (Phase 3)** : du disjoncteur → entrée L3 du routeur
-- **N (Neutre)** : du disjoncteur → entrée N du routeur
-- **⏚ (Terre)** : du disjoncteur → entrée terre du routeur
+- **L1 (Phase 1)** : du disjoncteur tétrapolaire 16 A → entrée L1 du routeur
+- **L2 (Phase 2)** : du disjoncteur → entrée L2 du routeur
+- **L3 (Phase 3)** : du disjoncteur → entrée L3 du routeur
+- **N (Neutre)** : du disjoncteur → entrée N du routeur
+- **⏚ (Terre)** : du disjoncteur → entrée PE du routeur
+
+Les charges sont raccordées aux sorties des étages de sortie (une carte triac ou relais par phase).
+
+Raccordement des étages de sortie
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Chaque étage de sortie (carte :term:`triac` ou relais) se raccorde à la fois à la carte-mère (signal de commande) et au circuit de puissance de la charge.
+
+**Côté basse tension (signal) :**
+
+- Reliez le connecteur Molex de l’étage de sortie à la sortie numérique correspondante de la carte-mère (D2–D13) à l’aide d’un câble Molex 2 fils.
+- Chaque étage de sortie est piloté par **une seule** sortie numérique.
+
+**Côté haute tension (puissance) :**
+
+Le connecteur de puissance de l’étage de sortie a 3 broches : la broche centrale est inutilisée, les deux broches extérieures raccordent la **phase** en série avec la charge à travers le :term:`triac`.
+
+- **Entrée phase** : depuis le disjoncteur dédié à la charge → broche du connecteur de puissance
+- **Sortie phase** : autre broche du connecteur de puissance → charge (chauffe-eau, radiateur…)
+- **Neutre** : du disjoncteur → directement à la charge (ne passe **pas** par l’étage de sortie)
+- **Terre** : du disjoncteur → directement à la charge et au dissipateur du triac
+
+.. warning::
+   Le :term:`triac` ne coupe que la **phase**. Le neutre reste connecté en permanence à la charge. Pour intervenir sur la charge, il faut couper son disjoncteur dédié.
+
+.. important::
+   Chaque charge pilotée doit être protégée par son **propre disjoncteur**, distinct du disjoncteur d’alimentation du routeur.
+
+Chaque étage de sortie constitue un **circuit de puissance indépendant**. Le nombre d’étages de sortie dépend du nombre de charges à piloter, pas de la configuration du routeur :
+
+- **Charge monophasée** (chauffe-eau classique, radiateur) : **1 étage de sortie** par charge, protégé par un disjoncteur bipolaire (16 A ou 20 A selon la puissance).
+- **Charge triphasée sans neutre** (chauffe-eau triphasé en triangle) : **2 étages de sortie** pour la même charge, protégés par un **unique disjoncteur tétrapolaire**.
+- **Charge triphasée avec neutre** (chauffe-eau triphasé en étoile) : **3 étages de sortie** pour la même charge, protégés par un **unique disjoncteur tétrapolaire**.
+
+.. warning::
+   Pour une charge triphasée, tous les étages de sortie associés doivent être protégés par un **seul disjoncteur multipolaire**. L’utilisation de disjoncteurs unipolaires séparés est dangereuse : en cas de coupure d’une seule phase, la charge triphasée peut être endommagée ou provoquer un déséquilibre.
 
 Procédure de Connexion (Électricien Qualifié)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
