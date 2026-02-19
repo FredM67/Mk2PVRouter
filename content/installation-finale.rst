@@ -176,11 +176,11 @@ Schéma d'installation — Monophasé
 
        compteur [label="Compteur\nLinky", fillcolor="#E3F2FD", color="#1976D2"];
 
-       ct1 [label="CT1\n(Grille)\n\u2192 vers maison", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
+       ct1 [label="CT1\n(Grille)\n→ vers maison", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
 
-       tableau [label="Tableau\n\u00e9lectrique", fillcolor="#E8EAF6", color="#3F51B5"];
+       tableau [label="Tableau\nélectrique", fillcolor="#E8EAF6", color="#3F51B5"];
 
-       disj [label="Disjoncteur\n2A / 6A\n(d\u00e9di\u00e9 routeur)", fillcolor="#F3E5F5", color="#7B1FA2"];
+       disj [label="Disjoncteur\n2A / 6A\n(dédié routeur)", fillcolor="#F3E5F5", color="#7B1FA2"];
 
        subgraph cluster_router {
            label="Mk2PVRouter";
@@ -193,10 +193,10 @@ Schéma d'installation — Monophasé
            margin=15;
 
            routeur [label="Carte\nprincipale", fillcolor="#C8E6C9", color="#388E3C"];
-           sortie [label="\u00c9tage\nde sortie\n(triac)", fillcolor="#C8E6C9", color="#388E3C"];
+           sortie [label="Étage\nde sortie\n(triac)", fillcolor="#C8E6C9", color="#388E3C"];
        }
 
-       ct2 [label="CT2\n(Diversion)\n\u2192 vers charge\n(optionnel)", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", style="filled,dashed", penwidth=2];
+       ct2 [label="CT2\n(Diversion)\n→ vers charge\n(optionnel)", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", style="filled,dashed", penwidth=2];
 
        charge [label="Charge\n(chauffe-eau\n2-3 kW)", fillcolor="#FFCCBC", color="#D84315"];
 
@@ -225,15 +225,15 @@ Schéma d'installation — Triphasé
        ranksep=0.9;
        bgcolor=transparent;
 
-       compteur [label="Compteur\n(triphas\u00e9)", fillcolor="#E3F2FD", color="#1976D2"];
+       compteur [label="Compteur\n(triphasé)", fillcolor="#E3F2FD", color="#1976D2"];
 
-       ct1 [label="CT1\n(L1)\n\u2192", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
-       ct2 [label="CT2\n(L2)\n\u2192", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
-       ct3 [label="CT3\n(L3)\n\u2192", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
+       ct1 [label="CT1\n(L1)\n→", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
+       ct2 [label="CT2\n(L2)\n→", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
+       ct3 [label="CT3\n(L3)\n→", shape=ellipse, fillcolor="#FFF9C4", color="#F9A825", fontcolor="#E65100", penwidth=2];
 
-       tableau [label="Tableau\n\u00e9lectrique", fillcolor="#E8EAF6", color="#3F51B5"];
+       tableau [label="Tableau\nélectrique", fillcolor="#E8EAF6", color="#3F51B5"];
 
-       disj [label="Disjoncteur\nt\u00e9trapolaire\n(d\u00e9di\u00e9 routeur)", fillcolor="#F3E5F5", color="#7B1FA2"];
+       disj [label="Disjoncteur\ntétrapolaire\n(dédié routeur)", fillcolor="#F3E5F5", color="#7B1FA2"];
 
        routeur [label="Mk2PVRouter\n(carte principale)", fillcolor="#C8E6C9", color="#388E3C"];
 
