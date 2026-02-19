@@ -102,7 +102,7 @@ Intégration avec la carte principale
 
 La mk2Wifi se branche sur les connecteurs **TRIG_EXT** et **UART_EXT** de la carte principale :
 
-- La mk2Wifi utilise des **barrettes femelles** ; la carte principale utilise des **barrettes mâles**
+- L'une des deux cartes utilise des **barrettes mâles**, l'autre des **barrettes femelles** (au choix de l'utilisateur)
 - L'alimentation +5 V est fournie par la carte principale via UART_EXT broche 3
 - L'UART (TX/RX) assure la communication série avec l'ATmega328P
 - Le signal DS18B20 est acheminé pour la mesure de température 1-Wire

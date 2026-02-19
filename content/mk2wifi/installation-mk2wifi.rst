@@ -22,7 +22,7 @@ Installation du module mk2Wifi
 Soudure des barrettes
 ---------------------
 
-Le module mk2Wifi est livré entièrement assemblé (composants :term:`CMS`). Seules les deux **barrettes femelles** (TRIG_EXT et UART_EXT, 1×06, 2,54 mm) doivent être soudées par l'utilisateur.
+Le module mk2Wifi est livré entièrement assemblé (composants :term:`CMS`). Seules les deux **barrettes** (TRIG_EXT et UART_EXT, 1×06, 2,54 mm) doivent être soudées par l'utilisateur — mâles ou femelles, selon le choix fait sur la carte principale.
 
 #. Positionnez chaque barrette dans son emplacement
 #. Soudez une broche, vérifiez que la barrette est perpendiculaire au :term:`PCB`

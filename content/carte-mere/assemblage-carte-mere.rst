@@ -79,14 +79,29 @@ Le condensateur de filtrage 120 µF.
 #. Insérez le condensateur en respectant la polarité
 #. Soudez les deux pattes
 
-Connecteur SMA CN1 (antenne RF)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connecteur SMA (antenne RF) — optionnel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le connecteur :term:`SMA` femelle vertical pour l'antenne du module RFM69CW.
+Le connecteur :term:`SMA` femelle vertical pour l'antenne du module RFM69CW. Ce connecteur n'est nécessaire que si le module :term:`RF` est utilisé.
 
-#. Positionnez le connecteur CN1 sur le :term:`PCB`
+#. Positionnez le connecteur SMA sur le :term:`PCB`
 #. Soudez les pattes de fixation mécanique (masse) en premier
 #. Soudez la broche signal centrale
+
+Module RF (RFM69CW) — optionnel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Le module radio RFM69CW permet la communication sans fil (bande ISM 433/868 MHz).
+
+.. danger::
+   Avant d'insérer le module, vérifiez que le cavalier **V sel.** est en position **3–centre (3,3 V)**. Le module RFM69CW fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement**.
+
+#. Insérez le module RFM69CW dans son emplacement
+#. Vérifiez l'orientation (le module ne doit pas dépasser du :term:`PCB`)
+#. Soudez toutes les broches
+
+.. note::
+   N'oubliez pas de fermer le cavalier **JP3** (face arrière) pour activer le module RF (voir :ref:`cavaliers`).
 
 Cavalier fil GND_LINK
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -120,6 +135,18 @@ Soudez les connecteurs suivants :
    - Corrigez si nécessaire en chauffant la soudure
    - Soudez les broches restantes
 
+Connecteurs sorties numériques (D2–D13)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Chaque sortie numérique dispose de deux emplacements Molex SL : un 2 broches (GND, I/O) et un 3 broches (GND, I/O, VCC). Soudez uniquement les connecteurs correspondant aux sorties utilisées dans votre configuration.
+
+.. note::
+   Les connecteurs fournis dépendent de la configuration commandée. Inutile de souder des connecteurs sur des sorties non utilisées.
+
+   - **D2\*, D10\*–D13\*** : réservées au module RF (si soudé)
+   - **D5–D9** : réservées au module :term:`mk2Wifi` (si présent)
+   - Les sorties non réservées sont librement utilisables
+
 Cavaliers de soudure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -132,7 +159,8 @@ Configurez les cavaliers selon votre configuration. Consultez le chapitre :ref:`
    | ☐ Support IC1 correctement orienté (encoche alignée)
    | ☐ Quartz X1 soudé
    | ☐ Condensateur C3 soudé avec la **bonne polarité**
-   | ☐ Connecteur SMA CN1 soudé solidement
+   | ☐ Connecteur SMA soudé solidement (si module RF utilisé)
+   | ☐ Module RFM69CW soudé et V sel. en 3,3 V (si module RF utilisé)
    | ☐ GND_LINK configuré (ouvert ou fermé selon votre installation)
    | ☐ Tous les connecteurs signaux soudés et perpendiculaires
    | ☐ Cavaliers configurés selon votre configuration (voir :ref:`cavaliers`)

@@ -95,7 +95,7 @@ Connecteurs
    * - OLED
      - Molex SL 1×04 (pas 2,54 mm)
      - Écran I2C (monophasé uniquement)
-   * - CN1
+   * - SMA
      - :term:`SMA` vertical (50 Ω)
      - Antenne module :term:`RF`
    * - CT1
@@ -107,6 +107,9 @@ Connecteurs
    * - CT3
      - Molex SL 1×02 (pas 2,54 mm)
      - Entrée :term:`CT` L3 (triphasé uniquement)
+   * - D2 à D13
+     - Molex SL 1×02 (GND, I/O) + Molex SL 1×03 (GND, I/O, VCC) par sortie
+     - Sorties numériques — voir :ref:`sorties-numeriques`
 
 Brochage des connecteurs
 -------------------------
@@ -240,18 +243,57 @@ CT1 / CT2 / CT3 — Transformateurs de courant (1×2 Molex SL)
 
 CT1 est utilisé en monophasé et en triphasé. CT2 et CT3 sont utilisés uniquement en triphasé.
 
+.. _sorties-numeriques:
+
+Sorties numériques D2–D13
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Chaque sortie numérique (D2 à D13) dispose de **deux connecteurs Molex SL** sur la carte :
+
+- **1×02** (2 broches) : GND, I/O
+- **1×03** (3 broches) : GND, I/O, VCC
+
+L'utilisateur choisit le connecteur adapté selon le besoin de la carte de sortie (alimentation ou non). Les connecteurs fournis dépendent de la configuration commandée.
+
+.. list-table:: Disponibilité des sorties numériques
+   :header-rows: 1
+   :widths: 15 85
+
+   * - Sortie
+     - Remarques
+   * - D2\*
+     - Réservée au module :term:`RF` (IRQ). Libre si le module RF n'est pas soudé.
+   * - D3
+     - Capteur DS18B20 (si cavalier TEMP en position routeur). Libre si TEMP en position mk2Wifi.
+   * - D4
+     - Libre
+   * - D5–D9
+     - Sorties de déclenchement (TRIG_EXT). Réservées au module :term:`mk2Wifi` si celui-ci est présent. Libres sinon.
+   * - D10\*
+     - SPI SS — réservée au module :term:`RF`. Libre si le module RF n'est pas soudé.
+   * - D11\*
+     - SPI MOSI — réservée au module :term:`RF`. Libre si le module RF n'est pas soudé.
+   * - D12\*
+     - SPI MISO — réservée au module :term:`RF`. Libre si le module RF n'est pas soudé.
+   * - D13\*
+     - SPI SCK — réservée au module :term:`RF`. Libre si le module RF n'est pas soudé.
+
+Les sorties marquées d'un **astérisque (\*)** sur la sérigraphie de la carte sont réservées au module RF (RFM69CW) lorsqu'il est soudé. Si le module RF n'est pas présent, ces sorties sont librement utilisables.
+
 Types de capteurs de courant supportés
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 La carte universelle est conçue pour fonctionner avec deux types de capteurs de courant :
 
 **CT à sortie tension (333 mV)** — recommandé
-   Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de :term:`burden`. Le signal de tension est directement compatible avec l'entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n'est nécessaire** sur la carte — les emplacements R18 / R28 / R38 restent vides.
+   Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de :term:`burden`. Le signal de tension est directement compatible avec l'entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n'est nécessaire** sur la carte.
 
    C'est le type de CT recommandé pour la carte universelle.
 
 **CT à sortie courant** — avec burden THT
    Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden` soudée sur la carte (emplacements **R18** / **R28** / **R38**).
+
+   Les emplacements R18 / R28 / R38 sont des **empreintes doubles** : une diode :term:`TVS` de protection est déjà soudée en usine (côté :term:`CMS`). Elle protège l'entrée de l':term:`ADC` dans le cas où un CT à sortie courant serait branché sans burden. La résistance de burden THT se soude **par-dessus** la TVS, sur les mêmes pastilles.
 
    La valeur du burden doit être calculée pour que la tension crête ne dépasse pas **0,55 V** (soit la moitié de la plage :term:`ADC` avec VREF = 1,1 V) :
 
@@ -270,7 +312,7 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
    On choisira la valeur standard la plus proche **inférieure** (15 Ω) pour garder une marge de sécurité.
 
    .. warning::
-      Si le courant mesuré dépasse la valeur prévue, la tension aux bornes du burden dépassera la plage de l'ADC. Les diodes TVS (DF2B7AE) protègent l'entrée du microcontrôleur, mais ne limitent pas le courant dans le burden — la résistance peut surchauffer.
+      Si le courant mesuré dépasse la valeur prévue, la tension aux bornes du burden dépassera la plage de l'ADC. Les diodes TVS protègent l'entrée du microcontrôleur, mais ne limitent pas le courant dans le burden — la résistance peut surchauffer.
 
 .. raw:: html
 
@@ -402,7 +444,7 @@ Intégration du module mk2Wifi
 
 La carte principale est conçue pour accueillir le module d'extension :term:`mk2Wifi` via les connecteurs TRIG_EXT et UART_EXT :
 
-- La carte principale utilise des **barrettes mâles** ; la mk2Wifi utilise des **barrettes femelles**
+- L'une des deux cartes utilise des **barrettes mâles**, l'autre des **barrettes femelles** (au choix de l'utilisateur)
 - L'alimentation +5 V est fournie par la carte principale via UART_EXT broche 3
 - L'UART (TX/RX) assure la communication série avec le module d'extension
 - Le signal DS18B20 est acheminé via UART_EXT broche 2 pour la mesure de température 1-Wire

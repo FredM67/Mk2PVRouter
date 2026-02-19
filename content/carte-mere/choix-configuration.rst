@@ -111,22 +111,17 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - ✔
      - ✔
      - ✔
-   * - Connecteur :term:`SMA` CN1 (antenne RF)
-     - ✔
-     - ✔
-     - ✔
-     - ✔
-   * - Cavalier fil GND_LINK (voir :ref:`cavaliers`)
-     - Voir note
-     - Voir note
-     - Voir note
-     - Voir note
+   * - Connecteur :term:`SMA` (antenne RF, optionnel)
+     - (opt.)
+     - (opt.)
+     - (opt.)
+     - (opt.)
+   * - Module RF (RFM69CW, optionnel)
+     - (opt.)
+     - (opt.)
+     - (opt.)
+     - (opt.)
    * - Connecteurs signaux (FTDI, OLED, TRIG_EXT, UART_EXT)
-     - ✔
-     - ✔
-     - ✔
-     - ✔
-   * - Cavaliers V sel., JP1–JP3 et TEMP (configuration)
      - ✔
      - ✔
      - ✔
@@ -210,7 +205,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
 Configuration des cavaliers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les cavaliers de soudure doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
+Les cavaliers de soudure (V sel., JP1–JP3, TEMP) et le cavalier fil GND_LINK doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
 
 Résumé rapide :
 

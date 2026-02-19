@@ -249,7 +249,7 @@ Termes Techniques Avancés
    SMA
      | *SubMiniature version A*.
      | Type de connecteur coaxial utilisé pour les connexions radiofréquences (:term:`RF`).
-     | Le connecteur CN1 (SMA) de la carte universelle reçoit l'antenne du module RFM69CW.
+     | Le connecteur SMA de la carte universelle reçoit l'antenne du module RFM69CW.
 
    OTA
      | *Over-The-Air* ou mise à jour sans fil.
