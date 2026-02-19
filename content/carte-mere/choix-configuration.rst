@@ -111,6 +111,21 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - ✔
      - ✔
      - ✔
+   * - Condensateur film C1 (1 µF 310 VAC)
+     - ✔
+     - ✔
+     - ✔
+     - ✔
+   * - Self de mode commun FL1
+     - ✔
+     - ✔
+     - ✔
+     - ✔
+   * - Module d'alimentation PS1 (RAC05E)
+     - ✔
+     - ✔
+     - ✔
+     - ✔
    * - Connecteur :term:`SMA` (antenne RF, optionnel)
      - (opt.)
      - (opt.)
