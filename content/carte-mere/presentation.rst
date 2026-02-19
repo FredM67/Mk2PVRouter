@@ -283,7 +283,15 @@ Les sorties marquées d'un **astérisque (\*)** sur la sérigraphie de la carte 
 Types de capteurs de courant supportés
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-La carte universelle est conçue pour fonctionner avec deux types de capteurs de courant :
+La carte universelle est conçue pour fonctionner avec deux types de capteurs de courant :
+
+.. note::
+   Quel que soit le type de CT, le boîtier porte généralement une **flèche** indiquant le sens du courant primaire, ainsi que des repères **K** et **L** sur les bornes ou fils du secondaire :
+
+   - **K** (ou P1 / S1) : borne positive quand le courant primaire circule dans le sens de la flèche
+   - **L** (ou P2 / S2) : borne complémentaire
+
+   Ces marquages sont importants lors du raccordement aux connecteurs CT de la carte (voir :ref:`installation-finale`).
 
 **CT à sortie tension (333 mV)** — recommandé
    Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de :term:`burden`. Le signal de tension est directement compatible avec l'entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n'est nécessaire** sur la carte.

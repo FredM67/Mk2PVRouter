@@ -291,6 +291,18 @@ La **flèche** gravée sur le :term:`CT` doit pointer dans le **sens du flux d�
 - **CT Grille** : Flèche pointant **VERS la maison** (depuis le compteur)
 - **CT Diversion** : Flèche pointant **VERS la charge** (chauffe-eau)
 
+**Marquages K et L :**
+
+La plupart des :term:`CT` portent des repères **K** et **L** sur le boîtier ou sur les fils du secondaire, en plus de la flèche :
+
+- **K** (parfois noté **K**, **P1** ou **S1**) : borne qui devient **positive** quand le courant circule dans le sens de la flèche
+- **L** (parfois noté **L**, **P2** ou **S2**) : borne complémentaire
+
+Ces marquages permettent de vérifier le raccordement au connecteur de la carte :
+
+- Si le sens du :term:`CT` est correct (flèche vers la maison) mais que la puissance affichée est **négative**, il suffit d’ **inverser les deux fils** (K ↔ L) sur le connecteur Molex au lieu de retourner physiquement le CT.
+- Inversement, inverser K et L revient au même que retourner le CT de 180°.
+
 Procédure d’Installation des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -299,11 +311,19 @@ Procédure d’Installation des :term:`CT`
 
    Ne JAMAIS installer les :term:`CT` sous tension !
 
+   Un :term:`CT` à sortie courant dont le secondaire est **ouvert** (non branché) se comporte comme un transformateur à vide : il peut développer une **tension de plusieurs centaines de volts** aux bornes de ses fils, suffisante pour provoquer un arc électrique, endommager le CT ou le circuit d’entrée de la carte.
+
+   Même avec un CT à sortie tension (burden intégré), manipuler un CT autour d’un conducteur sous tension présente un risque d’électrocution.
+
 #. **Couper le disjoncteur général** et vérifier absence de tension
 
 #. **Identifier le câble de phase** principal (généralement rouge, marron ou noir)
 
    ⚠️ Ne PAS placer le :term:`CT` sur le neutre (bleu) ou la terre (vert/jaune)
+
+#. **Brancher la fiche jack 3,5 mm du CT** dans la prise jack du câble adaptateur (relié au connecteur Molex de la carte) **avant** de clipser le CT sur le câble
+
+   Le secondaire du CT doit toujours être **fermé sur sa charge** (le circuit de la carte) avant d’être traversé par un courant primaire. Clipser un CT à sortie courant sur un conducteur actif alors que son jack n’est pas branché risque de générer une surtension destructrice.
 
 #. **Ouvrir le CT** en appuyant sur le clip de fermeture
 
