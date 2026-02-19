@@ -159,13 +159,13 @@ Le :term:`CT` Diversion est installé sur le câble de phase reliant l’étage 
 
 ⚠️ Ce :term:`CT` est un **tore** (anneau fermé) à travers lequel passe le câble de phase — contrairement aux :term:`CT` Grille qui sont des capteurs à clip ouvrant. Il est monté **à l’intérieur du boîtier** du Mk2PVRouter.
 
-Schéma d'installation — Monophasé
+Schéma d’installation — Monophasé
 """"""""""""""""""""""""""""""""""
 
 .. graphviz::
    :caption: Emplacement des CT — Installation monophasée
    :align: center
-   :alt: Schéma d'installation des capteurs de courant en monophasé
+   :alt: Schéma d’installation des capteurs de courant en monophasé
 
    digraph ct_mono {
        rankdir=LR;
@@ -210,13 +210,13 @@ Schéma d'installation — Monophasé
        ct2 -> charge [color="#E53935", penwidth=2];
    }
 
-Schéma d'installation — Triphasé
+Schéma d’installation — Triphasé
 """""""""""""""""""""""""""""""""
 
 .. graphviz::
    :caption: Emplacement des CT — Installation triphasée
    :align: center
-   :alt: Schéma d'installation des capteurs de courant en triphasé
+   :alt: Schéma d’installation des capteurs de courant en triphasé
 
    digraph ct_tri {
        rankdir=LR;
@@ -274,7 +274,7 @@ Schéma d'installation — Triphasé
    **Chaque CT doit correspondre à la phase connectée sur le connecteur secteur du routeur.** La phase qui passe dans CT1 doit être raccordée sur **L1**, celle qui passe dans CT2 sur **L2**, et celle qui passe dans CT3 sur **L3**. Un décalage entre les CT et les phases provoquera des mesures de puissance incorrectes.
 
 .. note::
-   Les flèches (→) sur les :term:`CT` indiquent le sens d'installation : **vers la maison** (depuis le compteur). En triphasé sans neutre, CT3 n'est pas nécessaire (:term:`théorème de Blondel`).
+   Les flèches (→) sur les :term:`CT` indiquent le sens d’installation : **vers la maison** (depuis le compteur). En triphasé sans neutre, CT3 n’est pas nécessaire (:term:`théorème de Blondel`).
 
 Sens d’Installation des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -591,7 +591,7 @@ Procédure de Mise Sous Tension
    - Écran affiche des données (si présent)
    - Pas de bruit anormal
 
-#. **Enclencher les disjoncteurs des charges** un par un, en vérifiant après chaque enclenchement l'absence d'anomalie (odeur, grésillement, disjoncteur qui saute)
+#. **Enclencher les disjoncteurs des charges** un par un, en vérifiant après chaque enclenchement l’absence d’anomalie (odeur, grésillement, disjoncteur qui saute)
 
 Surveillance Post-Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

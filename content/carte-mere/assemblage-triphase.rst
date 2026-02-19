@@ -23,7 +23,7 @@ Composants basse tension
 --------------------------
 
 .. note::
-   Les connecteurs de sorties numériques (D2–D13) sont communs à toutes les configurations et déjà soudés à l'étape précédente (voir :ref:`assemblage-carte-mere`).
+   Les connecteurs de sorties numériques (D2–D13) sont communs à toutes les configurations et déjà soudés à l’étape précédente (voir :ref:`assemblage-carte-mere`).
 
 Connecteurs CT1–CT3
 ~~~~~~~~~~~~~~~~~~~~
@@ -57,12 +57,12 @@ Les porte-fusibles pour la protection de toutes les phases et du neutre (1 A × 
 #. Soudez les porte-fusibles **FS0** (neutre), **FS1** (L1), **FS2** (L2), **FS3** (L3)
 
 .. warning::
-   Les fusibles réagissent à la chaleur — c'est leur principe de fonctionnement. Ne chauffez pas les broches plus de **2–3 secondes** par point de soudure pour éviter de les endommager.
+   Les fusibles réagissent à la chaleur — c’est leur principe de fonctionnement. Ne chauffez pas les broches plus de **2–3 secondes** par point de soudure pour éviter de les endommager.
 
 Connecteur secteur (5 voies)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le connecteur Phoenix Contact 5 voies (PE, N, L1, L2, L3) pour l'entrée secteur.
+Le connecteur Phoenix Contact 5 voies (PE, N, L1, L2, L3) pour l’entrée secteur.
 
 #. Soudez le connecteur secteur (5 voies)
 
@@ -70,7 +70,7 @@ Protection GM1–GM3 et varistances RV0–RV3 (optionnelles)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
-   Les composants GM et RV ont un aspect et un pas de broches très similaires. **Vérifiez la sérigraphie** sur le :term:`PCB` avant de souder chaque composant pour ne pas les intervertir. Si vous n'avez que les GM (sans RV), assurez-vous de les placer sur les emplacements **GM** et non sur les emplacements RV.
+   Les composants GM et RV ont un aspect et un pas de broches très similaires. **Vérifiez la sérigraphie** sur le :term:`PCB` avant de souder chaque composant pour ne pas les intervertir. Si vous n’avez que les GM (sans RV), assurez-vous de les placer sur les emplacements **GM** et non sur les emplacements RV.
 
 Les varistances combinées :term:`GDT`\+\ :term:`MOV` pour la protection de chaque phase.
 
@@ -98,13 +98,13 @@ Le condensateur de filtrage secteur 1 µF / 310 VAC (classe X2).
 
 #. Soudez le condensateur **C1** — composant non polarisé
 
-Module d'alimentation PS1 (RAC05E)
+Module d’alimentation PS1 (RAC05E)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le module d'alimentation AC-DC convertit le 230 VAC en 5 VDC (3 W).
+Le module d’alimentation AC-DC convertit le 230 VAC en 5 VDC (3 W).
 
 #. Positionnez le module **PS1** sur le :term:`PCB`
-#. Vérifiez l'orientation selon la sérigraphie
+#. Vérifiez l’orientation selon la sérigraphie
 #. Soudez toutes les broches
 
 Self de mode commun FL1
@@ -132,7 +132,7 @@ La self de mode commun (Schaffner) filtre les perturbations électromagnétiques
    | ☐ Varistances RV0–RV3 soudées (si fournies)
    | ☐ Transformateurs TR1–TR2 soudés (+ TR3 si triphasé avec neutre)
    | ☐ Condensateur film C1 soudé
-   | ☐ Module d'alimentation PS1 soudé et orienté correctement
+   | ☐ Module d’alimentation PS1 soudé et orienté correctement
    | ☐ Self de mode commun FL1 soudée
 
    | ☐ Toutes les soudures propres et brillantes

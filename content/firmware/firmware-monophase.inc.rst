@@ -32,7 +32,7 @@ Après extraction, vous devriez avoir :
    Mk2_fasterControl_Full/
    ├── Mk2_fasterControl_Full.ino  (fichier principal)
    ├── config.h                     (configuration utilisateur)
-   ├── calibration.h                (paramètres d’étalonnage)
+   ├── calibration.h                (paramètres d'étalonnage)
    ├── dualtarif.h
    ├── processing.cpp
    ├── temperature.cpp

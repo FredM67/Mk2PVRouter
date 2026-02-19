@@ -223,7 +223,7 @@ Termes Techniques Avancés
 
    Théorème de Blondel
      | Théorème fondamental de la mesure de puissance en régime polyphasé, énoncé par André Blondel en 1893.
-     | Il stipule que pour mesurer la puissance totale d'un système à **N conducteurs**, il suffit de **N−1 wattmètres** (ou capteurs de courant).
+     | Il stipule que pour mesurer la puissance totale d’un système à **N conducteurs**, il suffit de **N−1 wattmètres** (ou capteurs de courant).
      | Application au Mk2PVRouter : en triphasé sans neutre (3 fils), 2 CT suffisent (CT1 et CT2) — la puissance sur L3 est déduite mathématiquement.
      | Voir `l'article Wikipédia (en anglais) <https://en.wikipedia.org/wiki/Blondel%27s_theorem>`__.
 
@@ -239,27 +239,27 @@ Termes Techniques Avancés
 
    GDT
      | *Gas Discharge Tube* ou éclateur à gaz.
-     | Composant de protection contre les surtensions qui s'amorce lorsqu'une tension transitoire dépasse son seuil.
+     | Composant de protection contre les surtensions qui s’amorce lorsqu’une tension transitoire dépasse son seuil.
      | Les GDT0–GDT3 sur la carte universelle forment la première ligne de défense parafoudre.
 
    MOV
      | *Metal Oxide Varistor* ou varistance à oxyde métallique.
-     | Composant de protection qui écrête les surtensions en absorbant l'énergie excédentaire.
+     | Composant de protection qui écrête les surtensions en absorbant l’énergie excédentaire.
      | Les varistances RV0–RV3 et les modules GM1–GM3 protègent les circuits de mesure du Mk2PVRouter.
 
    TVS
      | *Transient Voltage Suppressor* ou suppresseur de surtension transitoire.
      | Diode spécialisée qui protège les circuits sensibles contre les surtensions rapides.
-     | La carte universelle utilise des diodes TVS (DF2B7AE, CDSOD323-T03C) pour protéger les entrées :term:`ADC` de l'ATmega328P.
+     | La carte universelle utilise des diodes TVS (DF2B7AE, CDSOD323-T03C) pour protéger les entrées :term:`ADC` de l’ATmega328P.
 
    SMA
      | *SubMiniature version A*.
      | Type de connecteur coaxial utilisé pour les connexions radiofréquences (:term:`RF`).
-     | Le connecteur SMA de la carte universelle reçoit l'antenne du module RFM69CW.
+     | Le connecteur SMA de la carte universelle reçoit l’antenne du module RFM69CW.
 
    OTA
      | *Over-The-Air* ou mise à jour sans fil.
-     | Technique permettant de mettre à jour le firmware d'un appareil via WiFi, sans connexion physique.
+     | Technique permettant de mettre à jour le firmware d’un appareil via WiFi, sans connexion physique.
      | Le module mk2Wifi supporte les mises à jour OTA après le premier chargement par USB-C.
 
    ESP32-C3
@@ -271,7 +271,7 @@ Termes Techniques Avancés
      | La carte universelle 3phaseDiverter supporte cette configuration.
 
    mk2Wifi
-     | Module d'extension WiFi/BLE pour le Mk2PVRouter, basé sur un :term:`ESP32-C3`.
+     | Module d’extension WiFi/BLE pour le Mk2PVRouter, basé sur un :term:`ESP32-C3`.
      | Se branche sur les connecteurs TRIG_EXT et UART_EXT de la carte principale.
      | Ajoute la connectivité sans fil, un écran OLED optionnel et la gestion du capteur de température DS18B20.
 

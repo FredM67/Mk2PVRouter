@@ -11,7 +11,7 @@ Erreur : `avrdude: stk500_recv(): programmer is not responding`
 #. Câblage FTDI incorrect → Vérifier TX ↔ RX inversés
 #. ATmega328 mal inséré → Vérifier l’orientation et l’insertion complète
 
-Erreur : `error: ’constexpr’ does not name a type`
+Erreur : `error: 'constexpr' does not name a type`
 ##################################################
 
 Le fichier `platform.txt` n’a pas été modifié correctement.

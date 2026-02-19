@@ -4,7 +4,7 @@
 Installation des Logiciels
 ==========================
 
-Ce chapitre détaille l'installation de l'environnement de développement nécessaire pour programmer le Mk2PVRouter. Pour le téléchargement et la configuration du firmware, voir :ref:`test-logiciel`.
+Ce chapitre détaille l’installation de l’environnement de développement nécessaire pour programmer le Mk2PVRouter. Pour le téléchargement et la configuration du firmware, voir :ref:`test-logiciel`.
 
 ⏱️ **Temps estimé :**
 

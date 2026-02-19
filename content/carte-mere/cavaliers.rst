@@ -21,7 +21,7 @@ Les :term:`cavaliers de soudure <Cavalier de soudure>` permettent de configurer 
 .. warning::
    La configuration des cavaliers doit être effectuée **avant** le premier test électrique. Une mauvaise configuration peut entraîner des mesures erronées ou un dysfonctionnement.
 
-Vue d'ensemble
+Vue d’ensemble
 --------------
 
 .. list-table::
@@ -42,7 +42,7 @@ Vue d'ensemble
      - Mesure courant L3 / I2C : 1–centre = courant L3, 3–centre = I2C SCL (OLED)
    * - JP3
      - 2
-     - Activation du module RF (RFM69) : relie l'IRQ du module à D2 de l'ATmega328P
+     - Activation du module RF (RFM69) : relie l’IRQ du module à D2 de l’ATmega328P
    * - TEMP
      - 3
      - Capteur DS18B20 : non soudé (pas de capteur), 1–centre (routeur), 3–centre (mk2Wifi)
@@ -56,10 +56,10 @@ Description détaillée
 V sel. — Alimentation ATmega328P
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélectionne la tension d'alimentation du microcontrôleur.
+Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélectionne la tension d’alimentation du microcontrôleur.
 
-- **Position 3–centre** (défaut) : L'ATmega328P est alimenté en 3,3 V via le régulateur :term:`LDO` U1 (AP2112K-3.3)
-- **Position 1–centre** : L'ATmega328P est alimenté directement en 5 V depuis le module PS1 (RAC05E)
+- **Position 3–centre** (défaut) : L’ATmega328P est alimenté en 3,3 V via le régulateur :term:`LDO` U1 (AP2112K-3.3)
+- **Position 1–centre** : L’ATmega328P est alimenté directement en 5 V depuis le module PS1 (RAC05E)
 
 .. danger::
    Si le module RF (RFM69CW) et/ou la carte :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** être en position **3–centre (3,3 V)**. Ces modules fonctionnent en 3,3 V — une alimentation en 5 V les **détruirait immédiatement**.
@@ -89,17 +89,17 @@ Cavalier à 3 pôles qui sélectionne entre la mesure de courant de la phase L3 
 JP3 — Module RF (RFM69)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cavalier à 2 pôles situé sur la **face arrière** du :term:`PCB`. Il relie la broche IRQ du module radio RFM69 à la broche D2 (INT0) de l'ATmega328P.
+Cavalier à 2 pôles situé sur la **face arrière** du :term:`PCB`. Il relie la broche IRQ du module radio RFM69 à la broche D2 (INT0) de l’ATmega328P.
 
 - **Fermé** : Le module RF est activé — obligatoire si le module RFM69CW est présent sur la carte
-- **Ouvert** : Le module RF n'est pas utilisé
+- **Ouvert** : Le module RF n’est pas utilisé
 
 TEMP — Capteur de température DS18B20
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cavalier à 3 pôles sérigraphié **TEMP** sur le :term:`PCB`. Il configure l'acheminement du signal du capteur de température 1-Wire DS18B20.
+Cavalier à 3 pôles sérigraphié **TEMP** sur le :term:`PCB`. Il configure l’acheminement du signal du capteur de température 1-Wire DS18B20.
 
-- **Non soudé** : Aucun capteur DS18B20 utilisé. La broche D3 de l'ATmega328P reste disponible comme entrée/sortie numérique standard.
+- **Non soudé** : Aucun capteur DS18B20 utilisé. La broche D3 de l’ATmega328P reste disponible comme entrée/sortie numérique standard.
 - **Position 1–centre** : Le capteur DS18B20 est géré par le **routeur** (ATmega328P, broche D3).
 - **Position 3–centre** : Le capteur DS18B20 est géré par le module **mk2Wifi** (ESP32-C3, via le connecteur UART_EXT).
 
@@ -110,7 +110,7 @@ GND_LINK — Pont Earth–GND
 
 Cavalier fil qui relie la **terre de protection** (Earth, provenant du réseau électrique) à la **masse basse tension** (GND) du circuit. Il est réalisé avec un fil de 0,75 mm² soudé entre les deux pastilles.
 
-Lorsque GND_LINK est **ouvert**, le circuit basse tension est entièrement isolé de la terre grâce à l'isolation galvanique du module d'alimentation RAC05E. Lorsqu'il est **fermé**, la masse basse tension est référencée à la terre de protection.
+Lorsque GND_LINK est **ouvert**, le circuit basse tension est entièrement isolé de la terre grâce à l’isolation galvanique du module d’alimentation RAC05E. Lorsqu’il est **fermé**, la masse basse tension est référencée à la terre de protection.
 
 .. note::
    La configuration recommandée dépend de votre installation. En cas de doute, laissez le cavalier **ouvert** — il pourra toujours être soudé ultérieurement.
@@ -119,9 +119,9 @@ Procédure de soudure des cavaliers
 ------------------------------------
 
 .. warning::
-   Travaillez **hors tension**. L'opération est réversible (à l'aide d'une tresse à dessouder), mais des modifications répétées risquent d'altérer les pistes en cuivre.
+   Travaillez **hors tension**. L’opération est réversible (à l’aide d’une tresse à dessouder), mais des modifications répétées risquent d’altérer les pistes en cuivre.
 
-#. **Identifiez le cavalier** sur la carte à l'aide des repères sérigraphiés (V sel., JP1, JP2, JP3, TEMP)
+#. **Identifiez le cavalier** sur la carte à l’aide des repères sérigraphiés (V sel., JP1, JP2, JP3, TEMP)
 
 #. **Pour les cavaliers 3 pôles** (V sel., JP1, JP2, TEMP) : Déposez une goutte de soudure entre la pastille centrale et la pastille correspondant à la position souhaitée
 

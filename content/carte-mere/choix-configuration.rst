@@ -20,7 +20,7 @@ Quel est votre type de raccordement ?
 
 .. admonition:: À retenir
 
-   Peu importe l'installation de production d'électricité (monophasée, biphasée, triphasée), le routeur **DOIT** correspondre au type de raccordement au réseau électrique (Enedis ou régie locale).
+   Peu importe l’installation de production d’électricité (monophasée, biphasée, triphasée), le routeur **DOIT** correspondre au type de raccordement au réseau électrique (Enedis ou régie locale).
 
    **Exemple** : Si votre raccordement au réseau est triphasé, vous devez utiliser un routeur triphasé, même si votre production est monophasée.
 
@@ -34,7 +34,7 @@ Guide de décision
    * - Configuration
      - Raccordement réseau
      - Neutre disponible ?
-     - Cas d'usage typique
+     - Cas d’usage typique
    * - **Monophasé**
      - 1 phase + neutre
      - Oui
@@ -75,9 +75,9 @@ Comment identifier votre raccordement ?
      - **3 fils** passant dans le compteur (3 phases, pas de neutre)
 
 .. tip::
-   Sur un compteur Linky, le type de raccordement est aussi affiché sur l'écran (« MONO » ou « TRI »).
+   Sur un compteur Linky, le type de raccordement est aussi affiché sur l’écran (« MONO » ou « TRI »).
 
-**En cas de doute**, consultez votre contrat d'électricité ou contactez votre fournisseur d'énergie.
+**En cas de doute**, consultez votre contrat d’électricité ou contactez votre fournisseur d’énergie.
 
 Différences par configuration
 ------------------------------
@@ -85,7 +85,7 @@ Différences par configuration
 Composants traversants à souder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Seuls les composants traversants (through-hole) doivent être soudés par l'utilisateur. Les composants à souder varient selon la configuration choisie :
+La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Seuls les composants traversants (through-hole) doivent être soudés par l’utilisateur. Les composants à souder varient selon la configuration choisie :
 
 .. list-table::
    :header-rows: 1
@@ -121,7 +121,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - ✔
      - ✔
      - ✔
-   * - Module d'alimentation PS1 (RAC05E)
+   * - Module d’alimentation PS1 (RAC05E)
      - ✔
      - ✔
      - ✔

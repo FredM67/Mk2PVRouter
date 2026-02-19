@@ -22,7 +22,7 @@ Installation du module mk2Wifi
 Soudure des barrettes
 ---------------------
 
-Le module mk2Wifi est livré entièrement assemblé (composants :term:`CMS`). Seules les deux **barrettes** (TRIG_EXT et UART_EXT, 1×06, 2,54 mm) doivent être soudées par l'utilisateur — mâles ou femelles, selon le choix fait sur la carte principale.
+Le module mk2Wifi est livré entièrement assemblé (composants :term:`CMS`). Seules les deux **barrettes** (TRIG_EXT et UART_EXT, 1×06, 2,54 mm) doivent être soudées par l’utilisateur — mâles ou femelles, selon le choix fait sur la carte principale.
 
 #. Positionnez chaque barrette dans son emplacement
 #. Soudez une broche, vérifiez que la barrette est perpendiculaire au :term:`PCB`
@@ -32,21 +32,21 @@ Installation physique
 ---------------------
 
 .. danger::
-   **COUPER L'ALIMENTATION SECTEUR** avant toute manipulation.
+   **COUPER L’ALIMENTATION SECTEUR** avant toute manipulation.
 
    Le routeur doit être **hors tension** pour brancher ou débrancher le module mk2Wifi.
 
 .. danger::
    Avant de brancher le module, vérifiez que le cavalier **V sel.** de la carte principale est en position **3–centre (3,3 V)**. Le module mk2Wifi fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement** (voir :ref:`cavaliers`).
 
-#. **Vérifiez l'orientation** : Les connecteurs TRIG_EXT et UART_EXT du module doivent s'aligner avec ceux de la carte principale. Le module ne doit pas être retourné.
+#. **Vérifiez l’orientation** : Les connecteurs TRIG_EXT et UART_EXT du module doivent s’aligner avec ceux de la carte principale. Le module ne doit pas être retourné.
 
 #. **Enfoncez le module** fermement mais sans forcer sur les deux connecteurs de la carte principale (TRIG_EXT et UART_EXT)
 
 #. **Vérifiez** que le module est bien en contact sur toute la longueur des deux connecteurs
 
 .. warning::
-   Le module peut être branché à l'envers — les connecteurs ne possèdent pas de détrompeur. Vérifiez visuellement l'orientation et l'alignement avant d'enfoncer le module. Un branchement inversé peut endommager le module et/ou la carte principale.
+   Le module peut être branché à l’envers — les connecteurs ne possèdent pas de détrompeur. Vérifiez visuellement l’orientation et l’alignement avant d’enfoncer le module. Un branchement inversé peut endommager le module et/ou la carte principale.
 
 Programmation initiale (USB-C)
 -------------------------------
@@ -54,7 +54,7 @@ Programmation initiale (USB-C)
 Le premier chargement du firmware se fait obligatoirement via le connecteur USB-C. Les mises à jour suivantes pourront se faire via :term:`OTA` (WiFi).
 
 .. danger::
-   **Ne pas connecter l'USB-C lorsque la carte mk2Wifi est branchée sur la carte principale.**
+   **Ne pas connecter l’USB-C lorsque la carte mk2Wifi est branchée sur la carte principale.**
 
    Débranchez le module de la carte principale avant de connecter le câble USB-C.
 
@@ -65,14 +65,14 @@ Procédure
 
 #. **Connectez le câble USB-C** entre le module et votre ordinateur
 
-#. **Passez en mode téléchargement** : Maintenez le bouton **SW1** enfoncé (GPIO9 à l'état bas) pendant la mise sous tension, puis relâchez
+#. **Passez en mode téléchargement** : Maintenez le bouton **SW1** enfoncé (GPIO9 à l’état bas) pendant la mise sous tension, puis relâchez
 
    .. tip::
       Le bouton SW1 est le petit bouton-poussoir sur la carte. Si le module est déjà alimenté par USB, débranchez et rebranchez le câble USB-C tout en maintenant SW1 enfoncé.
 
-#. **L'ESP32-C3** dispose d'un contrôleur USB-série/JTAG intégré — aucun programmateur externe n'est nécessaire
+#. **L’ESP32-C3** dispose d’un contrôleur USB-série/JTAG intégré — aucun programmateur externe n’est nécessaire
 
-#. **Chargez le firmware** à l'aide de votre outil de développement préféré (Arduino IDE, PlatformIO, esptool, etc.)
+#. **Chargez le firmware** à l’aide de votre outil de développement préféré (Arduino IDE, PlatformIO, esptool, etc.)
 
 #. **Après le chargement**, débranchez le câble USB-C
 
@@ -90,24 +90,24 @@ Après le premier chargement par USB-C, les mises à jour du firmware peuvent se
 #. Le module redémarre automatiquement après la mise à jour
 
 .. note::
-   La connexion USB-C n'est nécessaire que pour le **premier chargement** du firmware. Toutes les mises à jour suivantes se font via OTA.
+   La connexion USB-C n’est nécessaire que pour le **premier chargement** du firmware. Toutes les mises à jour suivantes se font via OTA.
 
 Écran OLED (optionnel)
 -----------------------
 
-Le module mk2Wifi dispose d'un connecteur **OLED** (Molex SL 1×4) pour un écran I2C.
+Le module mk2Wifi dispose d’un connecteur **OLED** (Molex SL 1×4) pour un écran I2C.
 
 .. note::
-   Le bus I2C de l'écran OLED est **local au module mk2Wifi**. Il n'est pas partagé avec la carte principale. Cela signifie que l'écran OLED de la mk2Wifi est **indépendant** du connecteur OLED de la carte principale.
+   Le bus I2C de l’écran OLED est **local au module mk2Wifi**. Il n’est pas partagé avec la carte principale. Cela signifie que l’écran OLED de la mk2Wifi est **indépendant** du connecteur OLED de la carte principale.
 
-   En mode triphasé, l'écran OLED de la carte principale n'est pas disponible (broches A4/A5 utilisées pour la mesure). L'écran OLED via la mk2Wifi est alors la seule option d'affichage.
+   En mode triphasé, l’écran OLED de la carte principale n’est pas disponible (broches A4/A5 utilisées pour la mesure). L’écran OLED via la mk2Wifi est alors la seule option d’affichage.
 
 Vérification
 ------------
 
 .. admonition:: ✅ Point de Contrôle — Module mk2Wifi
 
-   Après l'installation, vérifiez :
+   Après l’installation, vérifiez :
 
    | ☐ Module correctement enfoncé sur les deux connecteurs (TRIG_EXT et UART_EXT)
    | ☐ LED témoin D1 allumée lorsque la carte principale est sous tension

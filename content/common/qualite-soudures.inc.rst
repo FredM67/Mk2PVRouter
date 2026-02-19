@@ -7,7 +7,7 @@ Qualité des Soudures
 
    Exemples de bonnes et mauvaises soudures
 
-**Caractéristiques d'une bonne soudure :**
+**Caractéristiques d’une bonne soudure :**
 
 - ✅ Aspect brillant et lisse
 - ✅ Forme de volcan (concave)

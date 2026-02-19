@@ -4,7 +4,7 @@
 Assemblage
 ==========
 
-Après avoir effectué toutes les étapes précédentes (soudure de la carte-mère, préparation du boîtier, perçage du dissipateur, étage·s de sortie et confection des câbles), il est temps d'assembler le tout.
+Après avoir effectué toutes les étapes précédentes (soudure de la carte-mère, préparation du boîtier, perçage du dissipateur, étage·s de sortie et confection des câbles), il est temps d’assembler le tout.
 
 .. tip::
    **Durée estimée** : 30 à 45 minutes
@@ -16,10 +16,10 @@ Après avoir effectué toutes les étapes précédentes (soudure de la carte-mè
    - Pâte thermique (pour le triac) (option)
    - Clé à douille ou pince (pour écrous M3 et M4)
 
-Ordre d'Assemblage
+Ordre d’Assemblage
 ------------------
 
-Il est possible de réaliser l'assemblage dans n'importe quel ordre, cependant, il sera plus pratique de le réaliser comme ceci :
+Il est possible de réaliser l’assemblage dans n’importe quel ordre, cependant, il sera plus pratique de le réaliser comme ceci :
 
 #. **Mise en place des presse-étoupe** — Visser sans serrer complètement (ajustement final après passage des câbles)
 

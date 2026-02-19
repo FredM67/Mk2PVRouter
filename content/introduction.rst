@@ -89,7 +89,7 @@ L’assemblage complet va nécessiter plusieurs étapes :
 Recommandations pour les étapes de soudure
 ------------------------------------------
 
-La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Vous n'avez qu'à souder les composants **traversants** (through-hole). Ces composants sont généralement sensibles à l'électricité statique — manipulez-les avec soin et, si possible, mettez-vous à la terre pour éviter toute décharge électrostatique.
+La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Vous n’avez qu'à souder les composants **traversants** (through-hole). Ces composants sont généralement sensibles à l’électricité statique — manipulez-les avec soin et, si possible, mettez-vous à la terre pour éviter toute décharge électrostatique.
 
 Composants polarisés
 ~~~~~~~~~~~~~~~~~~~~
@@ -97,13 +97,13 @@ Composants polarisés
 Sur la carte-mère, un seul composant traversant est polarisé : le **condensateur électrolytique C3**.
 
 .. warning::
-   La bande blanche (signes −) sur le condensateur indique le côté **négatif**. Respectez la polarité indiquée sur le :term:`PCB`. Un condensateur électrolytique monté à l'envers peut chauffer, gonfler et éclater.
+   La bande blanche (signes −) sur le condensateur indique le côté **négatif**. Respectez la polarité indiquée sur le :term:`PCB`. Un condensateur électrolytique monté à l’envers peut chauffer, gonfler et éclater.
 
-Le **support IC1** (ATmega328P) possède une encoche d'orientation qui doit correspondre au repère sur le :term:`PCB`. Le microcontrôleur sera inséré dans le support après les tests électriques.
+Le **support IC1** (ATmega328P) possède une encoche d’orientation qui doit correspondre au repère sur le :term:`PCB`. Le microcontrôleur sera inséré dans le support après les tests électriques.
 
 Les autres composants traversants de la carte-mère (quartz, connecteurs, fusibles, transformateurs :term:`ZMPT101K`) ne sont pas polarisés ou ont un détrompeur mécanique.
 
-Sur les **cartes de sortie** (étages triac), l':term:`optocoupleur` (MOC3043) et son support :term:`DIL` sont également orientés. Alignez le repère du composant avec le cercle sur le :term:`PCB`, et l'encoche du support avec le repère sérigraphié. Les résistances, connecteurs et le :term:`triac` ne sont pas polarisés.
+Sur les **cartes de sortie** (étages triac), l':term:`optocoupleur` (MOC3043) et son support :term:`DIL` sont également orientés. Alignez le repère du composant avec le cercle sur le :term:`PCB`, et l’encoche du support avec le repère sérigraphié. Les résistances, connecteurs et le :term:`triac` ne sont pas polarisés.
 
 Matériels nécessaires
 ---------------------

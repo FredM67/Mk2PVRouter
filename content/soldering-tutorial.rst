@@ -96,7 +96,7 @@ Matériel Nécessaire
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. danger::
-   ⚠️ **N’ACHETEZ PAS D'ÉQUIPEMENT PREMIER PRIX !**
+   ⚠️ **N’ACHETEZ PAS D’ÉQUIPEMENT PREMIER PRIX !**
 
    **Les fers à souder bas de gamme (< 20 €) et la soudure de mauvaise qualité rendront l’apprentissage BEAUCOUP PLUS DIFFICILE.**
 
@@ -534,7 +534,7 @@ Dessoudage — Corriger ses Erreurs
 
    1. Chauffer le joint à dessouder (2-3 secondes)
    2. Armer la pompe (pousser le piston)
-   3. Positionner l’embout de la pompe sur le joint
+   3. Positionner l'embout de la pompe sur le joint
    4. Appuyer sur le bouton : CLAC ! (aspiration)
    5. Vérifier que la soudure est retirée
    6. Répéter si nécessaire

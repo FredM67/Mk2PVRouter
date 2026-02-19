@@ -24,12 +24,12 @@ Assemblage de la carte-mère universelle
 Introduction
 ------------
 
-La carte universelle 3phaseDiverter est livrée avec tous les composants :term:`CMS` (montés en surface) déjà soudés en usine. Vous n'avez qu'à souder les composants **traversants** (through-hole).
+La carte universelle 3phaseDiverter est livrée avec tous les composants :term:`CMS` (montés en surface) déjà soudés en usine. Vous n’avez qu'à souder les composants **traversants** (through-hole).
 
 Le nombre de composants à souder dépend de votre configuration (monophasé, triphasé, etc.). Consultez le tableau dans le chapitre :ref:`choix-configuration` pour la liste complète.
 
 .. tip::
-   Avant de commencer, lisez la section :ref:`introduction` pour les recommandations générales de soudure et l'identification des composants polarisés.
+   Avant de commencer, lisez la section :ref:`introduction` pour les recommandations générales de soudure et l’identification des composants polarisés.
 
 .. include:: ../common/qualite-soudures.inc.rst
 
@@ -44,18 +44,18 @@ Support IC1 (ATmega328P)
 Le support :term:`DIL` 28 broches pour le microcontrôleur ATmega328P.
 
 .. danger::
-   **NE PAS insérer l'ATmega328P dans le support à ce stade !**
+   **NE PAS insérer l’ATmega328P dans le support à ce stade !**
 
    Le microcontrôleur sera inséré après les tests électriques.
 
 #. Repérez l'**encoche** sur le support et alignez-la avec le repère sur le :term:`PCB`
 #. Positionnez le support et maintenez-le avec du ruban adhésif
-#. Soudez une broche en diagonale, vérifiez l'alignement
+#. Soudez une broche en diagonale, vérifiez l’alignement
 #. Soudez la broche opposée en diagonale
 #. Soudez toutes les broches restantes
 
 .. hint::
-   Pour s'assurer que le support :term:`DIL` est bien plaqué contre le :term:`PCB`, commencez par souder une seule broche, puis vérifiez l'alignement avant de poursuivre.
+   Pour s’assurer que le support :term:`DIL` est bien plaqué contre le :term:`PCB`, commencez par souder une seule broche, puis vérifiez l’alignement avant de poursuivre.
 
 Quartz X1
 ~~~~~~~~~
@@ -82,7 +82,7 @@ Le condensateur de filtrage 120 µF.
 Connecteur SMA (antenne RF) — optionnel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le connecteur :term:`SMA` femelle vertical pour l'antenne du module RFM69CW. Ce connecteur n'est nécessaire que si le module :term:`RF` est utilisé.
+Le connecteur :term:`SMA` femelle vertical pour l’antenne du module RFM69CW. Ce connecteur n’est nécessaire que si le module :term:`RF` est utilisé.
 
 #. Positionnez le connecteur SMA sur le :term:`PCB`
 #. Soudez les pattes de fixation mécanique (masse) en premier
@@ -104,14 +104,14 @@ Le module radio RFM69CW permet la communication sans fil (bande ISM 433/868 MHz)
    Avant de souder le module, vérifiez que le cavalier **V sel.** est en position **3–centre (3,3 V)**. Le module RFM69CW fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement**.
 
 #. Positionnez le module RFM69CW sur son emplacement
-#. **Vérifiez l'alignement** : chaque broche du module doit correspondre exactement à sa pastille sur le :term:`PCB`. Reportez-vous à la sérigraphie pour l'orientation correcte.
-#. Soudez une broche d'angle, vérifiez l'alignement, puis soudez les broches restantes
+#. **Vérifiez l’alignement** : chaque broche du module doit correspondre exactement à sa pastille sur le :term:`PCB`. Reportez-vous à la sérigraphie pour l’orientation correcte.
+#. Soudez une broche d’angle, vérifiez l’alignement, puis soudez les broches restantes
 
 .. tip::
    Un petit morceau de ruban adhésif double face entre le module et le PCB permet de le maintenir en place pendant la soudure.
 
 .. note::
-   N'oubliez pas de fermer le cavalier **JP3** (face arrière) pour activer le module RF (voir :ref:`cavaliers`).
+   N’oubliez pas de fermer le cavalier **JP3** (face arrière) pour activer le module RF (voir :ref:`cavaliers`).
 
 Cavalier fil GND_LINK
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -123,7 +123,7 @@ Ce cavalier relie la **terre de protection** (Earth, provenant du réseau élect
 #. Soudez les deux extrémités
 
 .. note::
-   Lorsque GND_LINK est **ouvert**, le circuit basse tension est entièrement isolé de la terre grâce à l'isolation galvanique du module d'alimentation RAC05E. Lorsqu'il est **fermé**, la masse basse tension est référencée à la terre de protection.
+   Lorsque GND_LINK est **ouvert**, le circuit basse tension est entièrement isolé de la terre grâce à l’isolation galvanique du module d’alimentation RAC05E. Lorsqu’il est **fermé**, la masse basse tension est référencée à la terre de protection.
 
    La configuration recommandée dépend de votre installation. En cas de doute, laissez le cavalier **ouvert** — il pourra toujours être soudé ultérieurement.
 

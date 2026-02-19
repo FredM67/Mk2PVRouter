@@ -5,26 +5,26 @@
 
    Dans ces formules :
 
-   - :math:`V_{REF}` = tension de référence interne de l'ATmega328P = **1,1 V**
+   - :math:`V_{REF}` = tension de référence interne de l’ATmega328P = **1,1 V**
    - :math:`N` = rapport de transformation du :term:`CT` (nombre de tours)
    - :math:`I_{RMS}` = intensité efficace maximale côté **primaire** (le courant mesuré)
    - :math:`R_{burden}` = résistance de charge en ohms
 
-   Calcul de la résistance de :term:`burden` en fonction de l'intensité efficace maximale :
+   Calcul de la résistance de :term:`burden` en fonction de l’intensité efficace maximale :
 
    .. math::
 
       R_{burden} = \frac{V_{REF} \times N}{2 \times \sqrt{2} \times I_{RMS}}
 
    |
-   | Calcul de l'intensité efficace maximale en fonction de la résistance de :term:`burden` :
+   | Calcul de l’intensité efficace maximale en fonction de la résistance de :term:`burden` :
 
    .. math::
 
       I_{RMS} = \frac{V_{REF} \times N}{2 \times \sqrt{2} \times R_{burden}}
 
    |
-   | Calcul du nombre de tours de capteur en fonction de la résistance de :term:`burden` et de l'intensité efficace maximale :
+   | Calcul du nombre de tours de capteur en fonction de la résistance de :term:`burden` et de l’intensité efficace maximale :
 
    .. math::
 

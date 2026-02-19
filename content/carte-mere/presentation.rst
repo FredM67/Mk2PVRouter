@@ -13,7 +13,7 @@ Présentation de la carte universelle
    | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Choix de la configuration effectué (voir :ref:`choix-configuration`)
 
-Vue d'ensemble
+Vue d’ensemble
 --------------
 
 La carte **3phaseDiverter** (rév. 6.0) est la carte principale universelle du Mk2 PV Router. Elle remplace les anciennes cartes monophasée et triphasée séparées par une carte unique capable de gérer les quatre configurations supportées :
@@ -36,8 +36,8 @@ Caractéristiques principales
 - Régulateur :term:`LDO` **AP2112K-3.3** (5 V → 3,3 V, 600 mA)
 - Protection parafoudre multiniveau (:term:`GDT`, fusibles, :term:`MOV`, self de mode commun)
 - Buffer de la référence interne 1,1 V (AREF) par amplificateur opérationnel **LMV321A**
-- Connecteurs d'extension : **TRIG_EXT**, **UART_EXT**, **FTDI**, **OLED**
-- Compatible avec le module d'extension :term:`mk2Wifi`
+- Connecteurs d’extension : **TRIG_EXT**, **UART_EXT**, **FTDI**, **OLED**
+- Compatible avec le module d’extension :term:`mk2Wifi`
 
 Images de la carte
 ------------------
@@ -180,7 +180,7 @@ UART_EXT — UART + DS18B20 (1×6 barrette mâle)
    * - 6
      - DTR
 
-Les noms des signaux (TX, RX) sont du point de vue de la **carte principale** : TX transporte les données émises par l'ATmega328P, RX les données reçues.
+Les noms des signaux (TX, RX) sont du point de vue de la **carte principale** : TX transporte les données émises par l’ATmega328P, RX les données reçues.
 
 FTDI — Programmation/débogage (1×6 Molex SL)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -204,7 +204,7 @@ FTDI — Programmation/débogage (1×6 Molex SL)
    * - 6
      - DTR
 
-Brochage compatible avec les adaptateurs FTDI standard. Le signal DTR permet l'auto-reset pour le téléversement via le bootloader Arduino.
+Brochage compatible avec les adaptateurs FTDI standard. Le signal DTR permet l’auto-reset pour le téléversement via le bootloader Arduino.
 
 OLED — Écran I2C (1×4 Molex SL)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -225,7 +225,7 @@ OLED — Écran I2C (1×4 Molex SL)
      - SDA
 
 .. important::
-   Le bus I2C est partagé sur les broches A4 (SDA) et A5 (SCL) de l'ATmega328P. En mode triphasé, ces broches sont affectées à la mesure de tension/courant L3 — l'écran OLED n'est alors **pas disponible**. Le choix est effectué par les cavaliers **JP1** et **JP2** (voir :ref:`cavaliers`).
+   Le bus I2C est partagé sur les broches A4 (SDA) et A5 (SCL) de l’ATmega328P. En mode triphasé, ces broches sont affectées à la mesure de tension/courant L3 — l’écran OLED n’est alors **pas disponible**. Le choix est effectué par les cavaliers **JP1** et **JP2** (voir :ref:`cavaliers`).
 
 CT1 / CT2 / CT3 — Transformateurs de courant (1×2 Molex SL)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -253,7 +253,7 @@ Chaque sortie numérique (D2 à D13) dispose de **deux connecteurs Molex SL** su
 - **1×02** (2 broches) : GND, I/O
 - **1×03** (3 broches) : GND, I/O, VCC
 
-L'utilisateur choisit le connecteur adapté selon le besoin de la carte de sortie (alimentation ou non). Les connecteurs fournis dépendent de la configuration commandée.
+L’utilisateur choisit le connecteur adapté selon le besoin de la carte de sortie (alimentation ou non). Les connecteurs fournis dépendent de la configuration commandée.
 
 .. list-table:: Disponibilité des sorties numériques
    :header-rows: 1
@@ -262,7 +262,7 @@ L'utilisateur choisit le connecteur adapté selon le besoin de la carte de sorti
    * - Sortie
      - Remarques
    * - D2\*
-     - Réservée au module :term:`RF` (IRQ). Libre si le module RF n'est pas soudé.
+     - Réservée au module :term:`RF` (IRQ). Libre si le module RF n’est pas soudé.
    * - D3
      - Capteur DS18B20 (si cavalier TEMP en position routeur). Libre si TEMP en position mk2Wifi.
    * - D4
@@ -270,15 +270,15 @@ L'utilisateur choisit le connecteur adapté selon le besoin de la carte de sorti
    * - D5–D9
      - Sorties de déclenchement (TRIG_EXT). Réservées au module :term:`mk2Wifi` si celui-ci est présent. Libres sinon.
    * - D10\*
-     - SPI SS — réservée au module :term:`RF`. Libre si le module RF n'est pas soudé.
+     - SPI SS — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
    * - D11\*
-     - SPI MOSI — réservée au module :term:`RF`. Libre si le module RF n'est pas soudé.
+     - SPI MOSI — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
    * - D12\*
-     - SPI MISO — réservée au module :term:`RF`. Libre si le module RF n'est pas soudé.
+     - SPI MISO — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
    * - D13\*
-     - SPI SCK — réservée au module :term:`RF`. Libre si le module RF n'est pas soudé.
+     - SPI SCK — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
 
-Les sorties marquées d'un **astérisque (\*)** sur la sérigraphie de la carte sont réservées au module RF (RFM69CW) lorsqu'il est soudé. Si le module RF n'est pas présent, ces sorties sont librement utilisables.
+Les sorties marquées d’un **astérisque (\*)** sur la sérigraphie de la carte sont réservées au module RF (RFM69CW) lorsqu’il est soudé. Si le module RF n’est pas présent, ces sorties sont librement utilisables.
 
 Types de capteurs de courant supportés
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -294,14 +294,14 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
    Ces marquages sont importants lors du raccordement aux connecteurs CT de la carte (voir :ref:`installation-finale`).
 
 **CT à sortie tension (333 mV)** — recommandé
-   Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de :term:`burden`. Le signal de tension est directement compatible avec l'entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n'est nécessaire** sur la carte.
+   Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de :term:`burden`. Le signal de tension est directement compatible avec l’entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n’est nécessaire** sur la carte.
 
-   C'est le type de CT recommandé pour la carte universelle.
+   C’est le type de CT recommandé pour la carte universelle.
 
 **CT à sortie courant** — avec burden THT
    Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden` soudée sur la carte (emplacements **R18** / **R28** / **R38**).
 
-   Les emplacements R18 / R28 / R38 sont des **empreintes doubles** : une diode :term:`TVS` de protection est déjà soudée en usine (côté :term:`CMS`). Elle protège l'entrée de l':term:`ADC` dans le cas où un CT à sortie courant serait branché sans burden. La résistance de burden THT se soude **par-dessus** la TVS, sur les mêmes pastilles.
+   Les emplacements R18 / R28 / R38 sont des **empreintes doubles** : une diode :term:`TVS` de protection est déjà soudée en usine (côté :term:`CMS`). Elle protège l’entrée de l':term:`ADC` dans le cas où un CT à sortie courant serait branché sans burden. La résistance de burden THT se soude **par-dessus** la TVS, sur les mêmes pastilles.
 
    La valeur du burden doit être calculée pour que la tension crête ne dépasse pas **0,55 V** (soit la moitié de la plage :term:`ADC` avec VREF = 1,1 V) :
 
@@ -320,7 +320,7 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
    On choisira la valeur standard la plus proche **inférieure** (15 Ω) pour garder une marge de sécurité.
 
    .. warning::
-      Si le courant mesuré dépasse la valeur prévue, la tension aux bornes du burden dépassera la plage de l'ADC. Les diodes TVS protègent l'entrée du microcontrôleur, mais ne limitent pas le courant dans le burden — la résistance peut surchauffer.
+      Si le courant mesuré dépasse la valeur prévue, la tension aux bornes du burden dépassera la plage de l’ADC. Les diodes TVS protègent l’entrée du microcontrôleur, mais ne limitent pas le courant dans le burden — la résistance peut surchauffer.
 
 .. raw:: html
 
@@ -388,10 +388,10 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
 Alimentation
 ------------
 
-Chaîne d'alimentation
+Chaîne d’alimentation
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Le secteur entre par le connecteur d'entrée secteur (**PE / N / L1 / L2 / L3**) et traverse une chaîne de protection avant d'atteindre le module d'alimentation :
+Le secteur entre par le connecteur d’entrée secteur (**PE / N / L1 / L2 / L3**) et traverse une chaîne de protection avant d’atteindre le module d’alimentation :
 
 .. code-block:: text
 
@@ -421,7 +421,7 @@ Ce niveau de protection supplémentaire est recommandé pour les installations e
 .. note::
    Les composants optionnels (RV0–RV3, GDT0–GDT3) ne sont pas fournis dans le kit de base. Ils peuvent être ajoutés ultérieurement sans modifier le reste du circuit.
 
-Rails d'alimentation
+Rails d’alimentation
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
@@ -450,14 +450,14 @@ Rails d'alimentation
 Intégration du module mk2Wifi
 ------------------------------
 
-La carte principale est conçue pour accueillir le module d'extension :term:`mk2Wifi` via les connecteurs TRIG_EXT et UART_EXT :
+La carte principale est conçue pour accueillir le module d’extension :term:`mk2Wifi` via les connecteurs TRIG_EXT et UART_EXT :
 
-- L'une des deux cartes utilise des **barrettes mâles**, l'autre des **barrettes femelles** (au choix de l'utilisateur)
-- L'alimentation +5 V est fournie par la carte principale via UART_EXT broche 3
-- L'UART (TX/RX) assure la communication série avec le module d'extension
+- L’une des deux cartes utilise des **barrettes mâles**, l’autre des **barrettes femelles** (au choix de l’utilisateur)
+- L’alimentation +5 V est fournie par la carte principale via UART_EXT broche 3
+- L’UART (TX/RX) assure la communication série avec le module d’extension
 - Le signal DS18B20 est acheminé via UART_EXT broche 2 pour la mesure de température 1-Wire
 - Les signaux GPIO D5–D9 fournissent les sorties de déclenchement/commande via TRIG_EXT
-- Le bus I2C (SCL/SDA) est **local au module mk2Wifi uniquement** — il n'est pas routé vers la carte principale
+- Le bus I2C (SCL/SDA) est **local au module mk2Wifi uniquement** — il n’est pas routé vers la carte principale
 
 .. |br| raw:: html
 
