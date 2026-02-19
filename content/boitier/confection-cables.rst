@@ -6,7 +6,7 @@ Confection des câbles
 
 Il convient d'apporter un soin tout particulier pour la confection des multiples câbles nécessaires.
 
-Voici la liste des câbles dont nous aurons besoin :
+Voici la liste des câbles dont nous aurons besoin :
 
 * câble relié à la prise jack (1 pour monophasé, 3 pour triphasé)
 * câble de contrôle (un par étage de sortie)
@@ -21,7 +21,7 @@ Voici la liste des câbles dont nous aurons besoin :
    Les câbles très basse tension sont composés de 2 fils tressés.
    Il est **fortement** recommandé de se fixer une convention de couleur, selon le contenu du kit et/ou les câbles que l'on utilisera de son propre stock.
 
-   Par exemple :
+   Par exemple :
 
    * **rouge** pour le **+**, **bleu** pour la *masse*
    * ou si on prend du câble réseau, *couleur* pour le **+**, *couleur/blanc* pour la **masse**.
@@ -46,12 +46,12 @@ Il conviendra donc d'y apporter le plus grand soin, afin de minimiser l'appariti
 
 .. admonition:: Longueurs conseillées
 
-   **Monophasé** : 1 câble jack pour CT1
+   **Monophasé** : 1 câble jack pour CT1
 
-   **Triphasé** :
+   **Triphasé** :
 
-   * Boîtier **1** ou **2** sorties : **255 mm** (CT1), **300 mm** (CT2), **345 mm** (CT3)
-   * Boîtier **3** ou **4** sorties : **315 mm** (CT1), **360 mm** (CT2), **405 mm** (CT3)
+   * Boîtier **1** ou **2** sorties : **255 mm** (CT1), **300 mm** (CT2), **345 mm** (CT3)
+   * Boîtier **3** ou **4** sorties : **315 mm** (CT1), **360 mm** (CT2), **405 mm** (CT3)
 
 Câble·s de contrôle
 -------------------
@@ -60,12 +60,12 @@ Ce sont des fils *actifs* qui permettront d'envoyer les commandes d'ouverture et
 
 .. admonition:: Longueurs conseillées
 
-   * Boîtier **1** ou **2** sorties :
+   * Boîtier **1** ou **2** sorties :
 
      * étage de sortie **gauche** => **140 mm**
      * étage de sortie **droit** => **340 mm**
 
-   * Boîtier **3** ou **4** sorties :
+   * Boîtier **3** ou **4** sorties :
 
      * étage de sortie **haut gauche** => **200 mm**
      * étage de sortie **haut droit** => **250 mm**
@@ -75,21 +75,21 @@ Ce sont des fils *actifs* qui permettront d'envoyer les commandes d'ouverture et
 Câble·s de témoin·s LED
 -----------------------
 
-Ce sont des fils *actifs* qui sont repiqués sur la commande de l'étage de sortie et permettent de visualiser l'état de chaque sortie :
+Ce sont des fils *actifs* qui sont repiqués sur la commande de l'étage de sortie et permettent de visualiser l'état de chaque sortie :
 
 * **allumé** => le courant passe (triac **fermé**)
 * **éteint** => le courant ne passe pas (triac **ouvert**).
 
 Les longueurs indiquées permettent d'ouvrir le couvercle et de le déposer sur le dessus du boîtier sans qu'aucun fil ne soit tendu.
-Bien sûr, il est possible de faire des câbles plus courts, ou plus longs !
+Bien sûr, il est possible de faire des câbles plus courts, ou plus longs !
 
 .. admonition:: Longueurs conseillées
 
-   * Boîtier **1** ou **2** sorties :
+   * Boîtier **1** ou **2** sorties :
 
      * étage de sortie **gauche** => **400 mm**
      * étage de sortie **droit** => **470 mm**
-   * Boîtier **3** ou **4** sorties :
+   * Boîtier **3** ou **4** sorties :
 
      * étage de sortie **haut gauche** => **440 mm**
      * étage de sortie **haut droit** => **510 mm**

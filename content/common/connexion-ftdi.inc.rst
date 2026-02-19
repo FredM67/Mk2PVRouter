@@ -21,7 +21,7 @@ Si vous utilisez des fils individuels, suivez les instructions ci-dessous.
    +----------------+---------------------+------------------------+
 
 .. danger::
-   ⚠️ **Câblage manuel uniquement** : NE PAS connecter le fil VCC (rouge) de l’adaptateur FTDI au routeur !
+   ⚠️ **Câblage manuel uniquement** : NE PAS connecter le fil VCC (rouge) de l’adaptateur FTDI au routeur !
 
    Cela peut endommager l’adaptateur FTDI ou le routeur.
 

@@ -1,12 +1,12 @@
 .. _mk2pvrouter:
 
 ************************************************
-Bienvenue dans la documentation du Mk2PVRouter !
+Bienvenue dans la documentation du Mk2PVRouter !
 ************************************************
 
 | Le MK2 PV Router est l'accessoire indispensable lorsque l'on souhaite optimiser son autoconsommation.
 |
-| Particulièrement adapté à :
+| Particulièrement adapté à :
 
 - L'alimentation de résistances (chauffe-eau, radiateur, sol chauffant).
 - La gestion des surplus d'énergie vers les équipements raccordés.
@@ -14,14 +14,14 @@ Bienvenue dans la documentation du Mk2PVRouter !
 | Le routeur surveille en permanence la production d'énergie de votre système en autoconsommation et redirige tout excédent d'électricité vers les charges branchées.
 | Grâce aux modules sortie-relais, il peut aussi gérer des installations de chauffage ou toutes sortes d'appareils avec ses fonctions de programmateurs horaire, temporisations, thermostats, préparation ECS, chauffage… toutes configurables librement.
 |
-| Le routeur est basé sur la carte universelle **3phaseDiverter** qui supporte 4 configurations : monophasé, triphasé avec neutre, triphasé sans neutre et split-phase.
+| Le routeur est basé sur la carte universelle **3phaseDiverter** qui supporte 4 configurations : monophasé, triphasé avec neutre, triphasé sans neutre et split-phase.
 | Seul le type de raccordement au réseau électrique (Enedis ou régie locale) est important, peu importe que la production d'électricité soit en monophasé ou que l'on n'utilise que des appareils monophasés.
 
 .. admonition:: À retenir
 
    Peu importe l'installation de production d'électricité (monophasée, biphasée, triphasée), le routeur **DOIT** correspondre au type de raccordement au réseau électrique.
 
-   **Exemple** :
+   **Exemple** :
 
    - Si votre raccordement au réseau est triphasé, vous devez utiliser un routeur triphasé, même si votre production est monophasée.
 
@@ -50,7 +50,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. admonition:: Démarrage rapide
 
-   Pour commencer avec le Mk2PVRouter, suivez ces étapes :
+   Pour commencer avec le Mk2PVRouter, suivez ces étapes :
 
    #. Choisissez votre configuration (voir :ref:`choix-configuration`).
    #. Assemblez le routeur en suivant les instructions de montage du kit.
@@ -58,7 +58,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    #. Configurez les paramètres de votre routeur et téléchargez le firmware.
    #. Connectez le routeur à votre réseau électrique.
    #. Vérifiez le bon fonctionnement du routeur.
-   #. Profitez de votre autoconsommation optimisée !
+   #. Profitez de votre autoconsommation optimisée !
 
 | Vous trouverez dans cette documentation toutes les informations nécessaires pour assembler, configurer et utiliser le Mk2PVRouter.
 | Si vous avez des questions ou des suggestions, n'hésitez pas à nous contacter.
@@ -88,7 +88,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 3
-   :caption: 🔧 Carte-mère universelle
+   :caption: 📋 Carte-mère universelle
    :hidden:
 
    carte-mere/presentation
@@ -133,7 +133,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    etalonnage
 
 .. toctree::
-   :caption: ⚡ Installation Finale
+   :caption: 🏠 Installation Finale
    :hidden:
 
    installation-finale

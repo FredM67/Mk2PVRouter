@@ -4,15 +4,15 @@
 Perçages
 ========
 
-⏱️ **Temps estimé** : 1,5-2 heures (débutant), 45 min-1 heure (expérimenté)
+⏱️ **Temps estimé** : 1,5-2 heures (débutant), 45 min-1 heure (expérimenté)
 
-🔧 **Niveau de difficulté** : Intermédiaire
+🔧 **Niveau de difficulté** : Intermédiaire
 
-⚠️ **Niveau de risque** : Moyen (perceuse, copeaux, bruit)
+⚠️ **Niveau de risque** : Moyen (perceuse, copeaux, bruit)
 
 .. admonition:: 📋 Prérequis
 
-   Avant de commencer ce chapitre :
+   Avant de commencer ce chapitre :
 
    ☐ Chapitre :ref:`safety-overview` lu et compris (section perçage)
 
@@ -32,17 +32,17 @@ Préparation du boîtier
 Les boîtiers utilisés pour ce routeur sont de type industriel, fabriqués en ABS avec un retardateur de flamme.
 Ils sont conformes aux normes de sécurité industrielles.
 
-En fonction du nombre de sorties à contrôler, deux références peuvent être fournies :
+En fonction du nombre de sorties à contrôler, deux références peuvent être fournies :
 
-* Thalassa **NSYTBS24198** : ce boîtier convient pour les configurations à **1** ou **2** sorties, pouvant être installées en mode portrait ou paysage.
-* Thalassa **NSYTBS29248** : ce boîtier convient pour les configurations à **3** ou **4** sorties, à installer **uniquement en mode portrait**.
+* Thalassa **NSYTBS24198** : ce boîtier convient pour les configurations à **1** ou **2** sorties, pouvant être installées en mode portrait ou paysage.
+* Thalassa **NSYTBS29248** : ce boîtier convient pour les configurations à **3** ou **4** sorties, à installer **uniquement en mode portrait**.
 
-Il y a peu de contraintes à respecter, voici la liste :
+Il y a peu de contraintes à respecter, voici la liste :
 
 * Le **presse-étoupe** doit être installé sur le **côté inférieur** pour protéger contre la poussière et les éventuels ruissellements.
 * Les **dissipateurs** doivent être installés sur les côtés **verticaux**. C'est **impératif** pour assurer un bon refroidissement.
 
-Pour le reste — témoins LED, etc. — ils peuvent être montés n'importe où, selon vos préférences !
+Pour le reste — témoins LED, etc. — ils peuvent être montés n'importe où, selon vos préférences !
 
 Cependant, ce guide décrira l'implantation la plus classique.
 
@@ -98,7 +98,7 @@ Il s'agit d'une pièce en aluminium dotée d'ailettes, ce qui augmente la surfac
 Perçage du dissipateur
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Chaque dissipateur doit être percé de trois trous : deux pour la fixation sur le boîtier et un au milieu pour le triac.
+Chaque dissipateur doit être percé de trois trous : deux pour la fixation sur le boîtier et un au milieu pour le triac.
 
 .. drawio-figure:: ../drawio/dissipateur.drawio
    :alt: Gabarit de perçage
@@ -141,7 +141,7 @@ Chaque dissipateur sera monté sur les côtés **verticaux** du boîtier. Selon 
 
 Selon le cas, il sera possible d'installer le boîtier en mode paysage ou en mode portrait. Chacun fait en fonction des contraintes, en veillant à toujours faire en sorte que les dissipateurs soient dans le sens **vertical**.
 
-Le boîtier doit être percé de trois trous : deux pour la fixation du dissipateur sur le boîtier et un au milieu pour laisser de la place au triac.
+Le boîtier doit être percé de trois trous : deux pour la fixation du dissipateur sur le boîtier et un au milieu pour laisser de la place au triac.
 
 .. drawio-figure:: ../drawio/dissipateur.drawio
    :alt: Gabarit de perçage du boîtier
@@ -199,7 +199,7 @@ Perçage pour chaque étage de sortie :term:`triac`
 Le :term:`triac` de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boîtier.
 L'étage de sortie doit aussi être fixé au fond du boîtier à la bonne hauteur pour être en accord avec le point de fixation du triac.
 
-Pour ce faire :
+Pour ce faire :
 
 1. Fixer le dissipateur sur le boîtier préalablement préparé
 2. Fixer l'étage de sortie sur le dissipateur par l'intermédiaire du triac
@@ -234,7 +234,7 @@ Pour ajuster la hauteur de la carte de sortie, un plot en plastique de **10 mm**
 
 .. admonition:: ✅ Point de Contrôle — Perçage Étages de Sortie
 
-   Avant de continuer, vérifiez :
+   Avant de continuer, vérifiez :
 
    | ☐ **Dissipateurs fixés solidement** sur les côtés verticaux du boîtier
    | ☐ **Triacs montés** sur les dissipateurs avec pâte thermique
@@ -263,7 +263,7 @@ Pour éviter qu'elle ne repose sur les points de fixation au fond du boîtier, u
 
 .. admonition:: ✅ Point de Contrôle — Perçage Carte-Mère
 
-   Avant de passer au câblage, vérifiez :
+   Avant de passer au câblage, vérifiez :
 
    | ☐ **Tous les trous percés** aux dimensions appropriées
    | ☐ **Plots 10 mm installés** avec vis M3 plastique

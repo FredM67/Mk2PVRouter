@@ -224,11 +224,11 @@ Termes Techniques Avancés
    Théorème de Blondel
      | Théorème fondamental de la mesure de puissance en régime polyphasé, énoncé par André Blondel en 1893.
      | Il stipule que pour mesurer la puissance totale d'un système à **N conducteurs**, il suffit de **N−1 wattmètres** (ou capteurs de courant).
-     | Application au Mk2PVRouter : en triphasé sans neutre (3 fils), 2 CT suffisent (CT1 et CT2) — la puissance sur L3 est déduite mathématiquement.
+     | Application au Mk2PVRouter : en triphasé sans neutre (3 fils), 2 CT suffisent (CT1 et CT2) — la puissance sur L3 est déduite mathématiquement.
      | Voir `l'article Wikipédia (en anglais) <https://en.wikipedia.org/wiki/Blondel%27s_theorem>`__.
 
    CMS
-     | *Composant Monté en Surface* (ou SMD en anglais : *Surface-Mount Device*).
+     | *Composant Monté en Surface* (ou SMD en anglais : *Surface-Mount Device*).
      | Composant électronique miniaturisé soudé directement sur la surface du circuit imprimé, sans traverser la carte.
      | Sur la carte universelle 3phaseDiverter, les composants CMS sont assemblés en usine.
 
@@ -277,7 +277,7 @@ Termes Techniques Avancés
 
    Carte universelle
      | Carte principale **3phaseDiverter** (rév. 6.0) qui remplace les anciennes cartes monophasée et triphasée séparées.
-     | Supporte 4 configurations : monophasé, triphasé avec neutre, triphasé sans neutre et split-phase.
+     | Supporte 4 configurations : monophasé, triphasé avec neutre, triphasé sans neutre et split-phase.
 
    ZMPT101K
      | Transformateur de tension miniature (rapport 1000:1000) utilisé pour mesurer la tension secteur.

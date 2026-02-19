@@ -681,7 +681,7 @@ et que vous vous sentez capable de procéder en toute sécurité, vous pouvez pa
    Si vous identifiez un risque qui n’est pas mentionné ou insuffisamment couvert,
    merci de le signaler pour que la documentation puisse être améliorée.
 
-   Contact : [Email ou lien forum]
+   Contact : https://github.com/FredM67/Mk2PVRouter/issues
 
 ----
 

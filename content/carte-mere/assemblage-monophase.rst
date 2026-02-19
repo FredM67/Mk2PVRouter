@@ -4,13 +4,13 @@
 Assemblage — Composants monophasé
 =========================================
 
-⏱️ **Temps estimé** : 30-45 minutes
+⏱️ **Temps estimé** : 30-45 minutes
 
-🔧 **Niveau de difficulté** : Intermédiaire
+🔧 **Niveau de difficulté** : Intermédiaire
 
 .. admonition:: 📋 Prérequis
 
-   Avant de commencer ce chapitre :
+   Avant de commencer ce chapitre :
 
    | ☐ Composants communs soudés et vérifiés (voir :ref:`assemblage-carte-mere`)
 
@@ -75,7 +75,7 @@ La varistance combinée :term:`GDT`\+\ :term:`MOV` pour la protection de la phas
 
 #. Soudez le composant **GM1** sur son emplacement (vérifiez la sérigraphie)
 
-Si fournies dans votre kit, soudez les varistances optionnelles :
+Si fournies dans votre kit, soudez les varistances optionnelles :
 
 #. Soudez les varistances **RV0** et **RV1** (radial, 300 V) sur leurs emplacements respectifs
 
@@ -113,13 +113,13 @@ La self de mode commun (Schaffner) filtre les perturbations électromagnétiques
 
 .. admonition:: ✅ Point de Contrôle — Composants Monophasé
 
-   Avant de continuer, vérifiez :
+   Avant de continuer, vérifiez :
 
-   **Basse tension :**
+   **Basse tension :**
 
    | ☐ Connecteur CT1 soudé (+ CT2 si option diversion)
 
-   **Haute tension :**
+   **Haute tension :**
 
    | ☐ GDT0, GDT1 soudés (si fournis)
    | ☐ Fusibles FS0, FS1 soudés
@@ -140,7 +140,7 @@ Avant de passer aux tests électriques, effectuez une inspection minutieuse de t
 
 .. admonition:: ✅ Point de Contrôle Final — Assemblage Carte-Mère
 
-   | ☐ **Toutes les soudures vérifiées** : brillantes, sans pont, sans soudure froide
+   | ☐ **Toutes les soudures vérifiées** : brillantes, sans pont, sans soudure froide
    | ☐ **Pas de morceaux de pattes** coupées sur la carte
    | ☐ **Pas de flux de soudure** résiduel entre les pistes
    | ☐ **Support IC1 vide** (ATmega328P PAS encore inséré)

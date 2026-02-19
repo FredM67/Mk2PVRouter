@@ -4,12 +4,12 @@
 Module mk2Wifi
 =======================
 
-⏱️ **Temps de lecture** : 5-10 minutes
+⏱️ **Temps de lecture** : 5-10 minutes
 
 Vue d'ensemble
 --------------
 
-La carte :term:`mk2Wifi` est un module d'extension qui ajoute une connectivité sans fil au Mk2 PV Router. Elle est basée sur un module **ESP32-C3-MINI-1** (:term:`ESP32-C3`, RISC-V simple cœur) et offre :
+La carte :term:`mk2Wifi` est un module d'extension qui ajoute une connectivité sans fil au Mk2 PV Router. Elle est basée sur un module **ESP32-C3-MINI-1** (:term:`ESP32-C3`, RISC-V simple cœur) et offre :
 
 - **WiFi** 802.11 b/g/n (2,4 GHz)
 - **Bluetooth LE 5**
@@ -100,7 +100,7 @@ D1 est une LED témoin d'alimentation, allumée en permanence lorsque le +3,3 V 
 Intégration avec la carte principale
 --------------------------------------
 
-La mk2Wifi se branche sur les connecteurs **TRIG_EXT** et **UART_EXT** de la carte principale :
+La mk2Wifi se branche sur les connecteurs **TRIG_EXT** et **UART_EXT** de la carte principale :
 
 - L'une des deux cartes utilise des **barrettes mâles**, l'autre des **barrettes femelles** (au choix de l'utilisateur)
 - L'alimentation +5 V est fournie par la carte principale via UART_EXT broche 3

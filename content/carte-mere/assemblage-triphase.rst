@@ -4,13 +4,13 @@
 Assemblage — Composants triphasé
 =========================================
 
-⏱️ **Temps estimé** : 45 min-1 heure
+⏱️ **Temps estimé** : 45 min-1 heure
 
-🔧 **Niveau de difficulté** : Intermédiaire
+🔧 **Niveau de difficulté** : Intermédiaire
 
 .. admonition:: 📋 Prérequis
 
-   Avant de commencer ce chapitre :
+   Avant de commencer ce chapitre :
 
    | ☐ Composants communs soudés et vérifiés (voir :ref:`assemblage-carte-mere`)
 
@@ -34,7 +34,7 @@ Les connecteurs Molex SL 1×02 pour les transformateurs de courant de chaque pha
 #. Soudez **CT3** (L3) — **triphasé avec neutre uniquement**
 
 .. note::
-   En configuration **sans neutre**, le courant L3 est déduit des mesures de L1 et L2 (:term:`théorème de Blondel` : N−1 capteurs suffisent pour N conducteurs).
+   En configuration **sans neutre**, le courant L3 est déduit des mesures de L1 et L2 (:term:`théorème de Blondel` : N−1 capteurs suffisent pour N conducteurs).
 
 Composants haute tension
 --------------------------
@@ -76,7 +76,7 @@ Les varistances combinées :term:`GDT`\+\ :term:`MOV` pour la protection de chaq
 
 #. Soudez les composants **GM1**, **GM2**, **GM3** sur leurs emplacements respectifs (vérifiez la sérigraphie)
 
-Si fournies dans votre kit, soudez les varistances optionnelles :
+Si fournies dans votre kit, soudez les varistances optionnelles :
 
 #. Soudez les varistances **RV0**, **RV1**, **RV2**, **RV3** (radial, 300 V) sur leurs emplacements respectifs
 
@@ -117,13 +117,13 @@ La self de mode commun (Schaffner) filtre les perturbations électromagnétiques
 
 .. admonition:: ✅ Point de Contrôle — Composants Triphasé
 
-   Avant de continuer, vérifiez :
+   Avant de continuer, vérifiez :
 
-   **Basse tension :**
+   **Basse tension :**
 
    | ☐ Connecteurs CT1–CT2 soudés (+ CT3 si triphasé avec neutre)
 
-   **Haute tension :**
+   **Haute tension :**
 
    | ☐ GDT0–GDT3 soudés (si fournis)
    | ☐ Fusibles FS0–FS3 soudés
@@ -144,7 +144,7 @@ Avant de passer aux tests électriques, effectuez une inspection minutieuse de t
 
 .. admonition:: ✅ Point de Contrôle Final — Assemblage Carte-Mère
 
-   | ☐ **Toutes les soudures vérifiées** : brillantes, sans pont, sans soudure froide
+   | ☐ **Toutes les soudures vérifiées** : brillantes, sans pont, sans soudure froide
    | ☐ **Pas de morceaux de pattes** coupées sur la carte
    | ☐ **Pas de flux de soudure** résiduel entre les pistes
    | ☐ **Support IC1 vide** (ATmega328P PAS encore inséré)

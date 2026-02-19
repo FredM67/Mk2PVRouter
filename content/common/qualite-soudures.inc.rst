@@ -14,14 +14,14 @@ Qualité des Soudures
 - ✅ Mouille à la fois la patte et la pastille
 - ✅ Pas de boule séparée
 
-**Soudure froide (défectueuse) :**
+**Soudure froide (défectueuse) :**
 
 - ❌ Aspect terne, granuleux
 - ❌ Soudure en boule qui ne mouille pas
 - ❌ Fissures visibles
 - ❌ Contact électrique mauvais ou inexistant
 
-**Solution :** Refaire les soudures suspectes :
+**Solution :** Refaire les soudures suspectes :
 
 #. Chauffer à nouveau avec fer à souder (350 °C)
 #. Ajouter un peu de flux si disponible

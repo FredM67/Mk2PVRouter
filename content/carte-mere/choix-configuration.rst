@@ -4,25 +4,25 @@
 Choix de la configuration
 =========================
 
-⏱️ **Temps de lecture** : 5-10 minutes
+⏱️ **Temps de lecture** : 5-10 minutes
 
 .. admonition:: 📋 Prérequis
 
-   Avant de commencer ce chapitre :
+   Avant de commencer ce chapitre :
 
    | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Connaissance de votre type de raccordement électrique (monophasé ou triphasé)
 
 La carte universelle 3phaseDiverter supporte quatre configurations. Cette page vous aide à déterminer celle qui correspond à votre installation.
 
-Quel est votre type de raccordement ?
+Quel est votre type de raccordement ?
 --------------------------------------
 
 .. admonition:: À retenir
 
    Peu importe l'installation de production d'électricité (monophasée, biphasée, triphasée), le routeur **DOIT** correspondre au type de raccordement au réseau électrique (Enedis ou régie locale).
 
-   **Exemple** : Si votre raccordement au réseau est triphasé, vous devez utiliser un routeur triphasé, même si votre production est monophasée.
+   **Exemple** : Si votre raccordement au réseau est triphasé, vous devez utiliser un routeur triphasé, même si votre production est monophasée.
 
 Guide de décision
 -----------------
@@ -33,7 +33,7 @@ Guide de décision
 
    * - Configuration
      - Raccordement réseau
-     - Neutre disponible ?
+     - Neutre disponible ?
      - Cas d'usage typique
    * - **Monophasé**
      - 1 phase + neutre
@@ -52,10 +52,10 @@ Guide de décision
      - Oui
      - Foyers en Amérique du Nord (120 V / 240 V)
 
-Comment identifier votre raccordement ?
+Comment identifier votre raccordement ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Vérifiez la plaque signalétique de votre compteur électrique.** Un pictogramme de câblage indique le nombre de conducteurs traversant le compteur :
+**Vérifiez la plaque signalétique de votre compteur électrique.** Un pictogramme de câblage indique le nombre de conducteurs traversant le compteur :
 
 .. list-table::
    :header-rows: 1
@@ -85,7 +85,7 @@ Différences par configuration
 Composants traversants à souder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Seuls les composants traversants (through-hole) doivent être soudés par l'utilisateur. Les composants à souder varient selon la configuration choisie :
+La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Seuls les composants traversants (through-hole) doivent être soudés par l'utilisateur. Les composants à souder varient selon la configuration choisie :
 
 .. list-table::
    :header-rows: 1
@@ -222,7 +222,7 @@ Configuration des cavaliers
 
 Les cavaliers de soudure (V sel., JP1–JP3, TEMP) et le cavalier fil GND_LINK doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
 
-Résumé rapide :
+Résumé rapide :
 
 .. list-table::
    :header-rows: 1
@@ -267,7 +267,7 @@ Résumé rapide :
 Firmware
 ~~~~~~~~
 
-Le firmware à utiliser dépend de la configuration :
+Le firmware à utiliser dépend de la configuration :
 
 .. list-table::
    :header-rows: 1

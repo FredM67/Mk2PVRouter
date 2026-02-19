@@ -149,9 +149,9 @@ Emplacement des :term:`CT`
 
 Les :term:`CT` Grille sont des capteurs à clip installés sur les câbles de **phase** principaux, entre le compteur et le tableau électrique. Ils mesurent le bilan énergétique du foyer (consommation ou injection).
 
-- **Monophasé** : 1 :term:`CT` à clip sur la phase unique (CT1)
-- **Triphasé avec neutre** : 3 :term:`CT` à clip sur les 3 phases (CT1, CT2, CT3)
-- **Triphasé sans neutre** : 2 :term:`CT` suffisent (CT1, CT2) — :term:`théorème de Blondel`
+- **Monophasé** : 1 :term:`CT` à clip sur la phase unique (CT1)
+- **Triphasé avec neutre** : 3 :term:`CT` à clip sur les 3 phases (CT1, CT2, CT3)
+- **Triphasé sans neutre** : 2 :term:`CT` suffisent (CT1, CT2) — :term:`théorème de Blondel`
 
 **CT Diversion — Mesure de la puissance routée** (optionnel)
 
@@ -274,7 +274,7 @@ Schéma d'installation — Triphasé
    **Chaque CT doit correspondre à la phase connectée sur le connecteur secteur du routeur.** La phase qui passe dans CT1 doit être raccordée sur **L1**, celle qui passe dans CT2 sur **L2**, et celle qui passe dans CT3 sur **L3**. Un décalage entre les CT et les phases provoquera des mesures de puissance incorrectes.
 
 .. note::
-   Les flèches (→) sur les :term:`CT` indiquent le sens d'installation : **vers la maison** (depuis le compteur). En triphasé sans neutre, CT3 n'est pas nécessaire (:term:`théorème de Blondel`).
+   Les flèches (→) sur les :term:`CT` indiquent le sens d'installation : **vers la maison** (depuis le compteur). En triphasé sans neutre, CT3 n'est pas nécessaire (:term:`théorème de Blondel`).
 
 Sens d’Installation des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

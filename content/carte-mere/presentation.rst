@@ -4,11 +4,11 @@
 Présentation de la carte universelle
 ======================================
 
-⏱️ **Temps de lecture** : 10-15 minutes
+⏱️ **Temps de lecture** : 10-15 minutes
 
 .. admonition:: 📋 Prérequis
 
-   Avant de commencer ce chapitre :
+   Avant de commencer ce chapitre :
 
    | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Choix de la configuration effectué (voir :ref:`choix-configuration`)
@@ -16,12 +16,12 @@ Présentation de la carte universelle
 Vue d'ensemble
 --------------
 
-La carte **3phaseDiverter** (rév. 6.0) est la carte principale universelle du Mk2 PV Router. Elle remplace les anciennes cartes monophasée et triphasée séparées par une carte unique capable de gérer les quatre configurations supportées :
+La carte **3phaseDiverter** (rév. 6.0) est la carte principale universelle du Mk2 PV Router. Elle remplace les anciennes cartes monophasée et triphasée séparées par une carte unique capable de gérer les quatre configurations supportées :
 
-- **Monophasé** : une phase, un neutre (230 V)
-- **Triphasé avec neutre** : trois phases + neutre (400 V / 230 V)
-- **Triphasé sans neutre** : trois phases sans neutre (400 V)
-- **Split-phase** : deux phases à 180° (120 V / 240 V, réseau nord-américain)
+- **Monophasé** : une phase, un neutre (230 V)
+- **Triphasé avec neutre** : trois phases + neutre (400 V / 230 V)
+- **Triphasé sans neutre** : trois phases sans neutre (400 V)
+- **Split-phase** : deux phases à 180° (120 V / 240 V, réseau nord-américain)
 
 La sélection de la configuration se fait uniquement par les :term:`cavaliers de soudure <Cavalier de soudure>` et le choix des connecteurs — tous les composants CMS sont identiques quelle que soit la configuration.
 
@@ -36,7 +36,7 @@ Caractéristiques principales
 - Régulateur :term:`LDO` **AP2112K-3.3** (5 V → 3,3 V, 600 mA)
 - Protection parafoudre multiniveau (:term:`GDT`, fusibles, :term:`MOV`, self de mode commun)
 - Buffer de la référence interne 1,1 V (AREF) par amplificateur opérationnel **LMV321A**
-- Connecteurs d'extension : **TRIG_EXT**, **UART_EXT**, **FTDI**, **OLED**
+- Connecteurs d'extension : **TRIG_EXT**, **UART_EXT**, **FTDI**, **OLED**
 - Compatible avec le module d'extension :term:`mk2Wifi`
 
 Images de la carte
@@ -180,7 +180,7 @@ UART_EXT — UART + DS18B20 (1×6 barrette mâle)
    * - 6
      - DTR
 
-Les noms des signaux (TX, RX) sont du point de vue de la **carte principale** : TX transporte les données émises par l'ATmega328P, RX les données reçues.
+Les noms des signaux (TX, RX) sont du point de vue de la **carte principale** : TX transporte les données émises par l'ATmega328P, RX les données reçues.
 
 FTDI — Programmation/débogage (1×6 Molex SL)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -248,10 +248,10 @@ CT1 est utilisé en monophasé et en triphasé. CT2 et CT3 sont utilisés unique
 Sorties numériques D2–D13
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Chaque sortie numérique (D2 à D13) dispose de **deux connecteurs Molex SL** sur la carte :
+Chaque sortie numérique (D2 à D13) dispose de **deux connecteurs Molex SL** sur la carte :
 
-- **1×02** (2 broches) : GND, I/O
-- **1×03** (3 broches) : GND, I/O, VCC
+- **1×02** (2 broches) : GND, I/O
+- **1×03** (3 broches) : GND, I/O, VCC
 
 L'utilisateur choisit le connecteur adapté selon le besoin de la carte de sortie (alimentation ou non). Les connecteurs fournis dépendent de la configuration commandée.
 
@@ -301,9 +301,9 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
 **CT à sortie courant** — avec burden THT
    Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden` soudée sur la carte (emplacements **R18** / **R28** / **R38**).
 
-   Les emplacements R18 / R28 / R38 sont des **empreintes doubles** : une diode :term:`TVS` de protection est déjà soudée en usine (côté :term:`CMS`). Elle protège l'entrée de l':term:`ADC` dans le cas où un CT à sortie courant serait branché sans burden. La résistance de burden THT se soude **par-dessus** la TVS, sur les mêmes pastilles.
+   Les emplacements R18 / R28 / R38 sont des **empreintes doubles** : une diode :term:`TVS` de protection est déjà soudée en usine (côté :term:`CMS`). Elle protège l'entrée de l':term:`ADC` dans le cas où un CT à sortie courant serait branché sans burden. La résistance de burden THT se soude **par-dessus** la TVS, sur les mêmes pastilles.
 
-   La valeur du burden doit être calculée pour que la tension crête ne dépasse pas **0,55 V** (soit la moitié de la plage :term:`ADC` avec VREF = 1,1 V) :
+   La valeur du burden doit être calculée pour que la tension crête ne dépasse pas **0,55 V** (soit la moitié de la plage :term:`ADC` avec VREF = 1,1 V) :
 
    .. math::
 
@@ -311,7 +311,7 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
 
    Où :math:`I_{secondaire\_RMS} = I_{primaire\_RMS} / N` (N = rapport de transformation du CT).
 
-   **Exemple** : CT de 100 A / 50 mA (N = 2000), courant max souhaité = 50 A :
+   **Exemple** : CT de 100 A / 50 mA (N = 2000), courant max souhaité = 50 A :
 
    .. math::
 
@@ -391,15 +391,15 @@ Alimentation
 Chaîne d'alimentation
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Le secteur entre par le connecteur d'entrée secteur (**PE / N / L1 / L2 / L3**) et traverse une chaîne de protection avant d'atteindre le module d'alimentation :
+Le secteur entre par le connecteur d'entrée secteur (**PE / N / L1 / L2 / L3**) et traverse une chaîne de protection avant d'atteindre le module d'alimentation :
 
 .. code-block:: text
 
    Secteur → GDT (éclateurs) → Fusibles (FS0–FS3) → Varistances (RV0–RV3, GM1–GM3)
           → Self de mode commun (FL1) → Condensateur film (C1)
-          → PS1 (RAC05E-05SKT) : 230 VAC → 5 VDC, 3 W
-          → D1 (SMBJ7.0A) : protection TVS côté 5 V
-          → U1 (AP2112K-3.3) : 5 V → 3,3 V, 600 mA
+          → PS1 (RAC05E-05SKT) : 230 VAC → 5 VDC, 3 W
+          → D1 (SMBJ7.0A) : protection TVS côté 5 V
+          → U1 (AP2112K-3.3) : 5 V → 3,3 V, 600 mA
 
 Protection contre les surtensions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -450,7 +450,7 @@ Rails d'alimentation
 Intégration du module mk2Wifi
 ------------------------------
 
-La carte principale est conçue pour accueillir le module d'extension :term:`mk2Wifi` via les connecteurs TRIG_EXT et UART_EXT :
+La carte principale est conçue pour accueillir le module d'extension :term:`mk2Wifi` via les connecteurs TRIG_EXT et UART_EXT :
 
 - L'une des deux cartes utilise des **barrettes mâles**, l'autre des **barrettes femelles** (au choix de l'utilisateur)
 - L'alimentation +5 V est fournie par la carte principale via UART_EXT broche 3

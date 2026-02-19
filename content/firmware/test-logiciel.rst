@@ -21,7 +21,7 @@ Tests logiciels
 Choix du firmware
 -----------------
 
-Le firmware dépend de votre configuration :
+Le firmware dépend de votre configuration :
 
 .. list-table:: Firmware selon la configuration
    :header-rows: 1
@@ -43,24 +43,24 @@ Le firmware dépend de votre configuration :
 Installation du Firmware — Monophasé
 -------------------------------------
 
-**Étapes communes à toutes les versions** : :ref:`installation-logiciel`
+**Étapes communes à toutes les versions** : :ref:`installation-logiciel`
 
 .. include:: firmware-monophase.inc.rst
 
 Installation du Firmware — Triphasé
 ------------------------------------
 
-**Étapes communes à toutes les versions** : :ref:`installation-logiciel`
+**Étapes communes à toutes les versions** : :ref:`installation-logiciel`
 
 .. include:: firmware-triphase.inc.rst
 
 Test de la partie *mesures* — Monophasé
 -----------------------------------------
 
-| Le transformateur a deux sorties : l'une pour l'alimentation CC, l'autre pour le capteur de tension CA qui devrait déjà fonctionner.
+| Le transformateur a deux sorties : l'une pour l'alimentation CC, l'autre pour le capteur de tension CA qui devrait déjà fonctionner.
 | Cela peut être vérifié en exécutant un programme (croquis) qui affiche les mesures analogiques prises par le processeur Atmel (**IC1**).
 
-Le programme, qui se trouve également sur la page Téléchargements, est : *RawSamplesTool_2chan.ino*
+Le programme, qui se trouve également sur la page Téléchargements, est : *RawSamplesTool_2chan.ino*
 
 | Après avoir téléchargé ce croquis sur le processeur via l'Arduino IDE, la fenêtre série (icône en forme de loupe) doit être ouverte.
 | Après avoir terminé chaque exécution, le programme peut être redémarré à partir du clavier en saisissant le caractère "**g**", suivi de *Entrée*.
@@ -83,10 +83,10 @@ Test de la partie *mesures* — Triphasé
 .. note::
    À partir de maintenant, une alimentation triphasée devra être fournie à la carte-mère.
 
-Chaque transformateur a deux sorties : l'une pour l'alimentation CC, l'autre pour le capteur de tension CA qui devrait déjà fonctionner.
+Chaque transformateur a deux sorties : l'une pour l'alimentation CC, l'autre pour le capteur de tension CA qui devrait déjà fonctionner.
 Cela peut être vérifié en exécutant un programme (croquis) qui affiche les mesures analogiques prises par le processeur Atmel (**IC1**).
 
-Le programme, qui se trouve également sur la page Téléchargements, est : *RawSamplesTool_6chan.ino*
+Le programme, qui se trouve également sur la page Téléchargements, est : *RawSamplesTool_6chan.ino*
 
 Après avoir téléchargé ce croquis sur le processeur via l'Arduino IDE, la fenêtre série (icône en forme de loupe) doit être ouverte.
 Après avoir terminé chaque exécution, le programme peut être redémarré à partir du clavier en saisissant le caractère "**g**", suivi de *Entrée*.

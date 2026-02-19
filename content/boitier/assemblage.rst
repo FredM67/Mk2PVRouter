@@ -7,9 +7,9 @@ Assemblage
 Après avoir effectué toutes les étapes précédentes (soudure de la carte-mère, préparation du boîtier, perçage du dissipateur, étage·s de sortie et confection des câbles), il est temps d'assembler le tout.
 
 .. tip::
-   **Durée estimée** : 30 à 45 minutes
+   **Durée estimée** : 30 à 45 minutes
 
-   **Outils nécessaires** :
+   **Outils nécessaires** :
 
    - clés six pans
    - clés plates
@@ -19,7 +19,7 @@ Après avoir effectué toutes les étapes précédentes (soudure de la carte-mè
 Ordre d'Assemblage
 ------------------
 
-Il est possible de réaliser l'assemblage dans n'importe quel ordre, cependant, il sera plus pratique de le réaliser comme ceci :
+Il est possible de réaliser l'assemblage dans n'importe quel ordre, cependant, il sera plus pratique de le réaliser comme ceci :
 
 #. **Mise en place des presse-étoupe** — Visser sans serrer complètement (ajustement final après passage des câbles)
 
@@ -44,7 +44,7 @@ Il est possible de réaliser l'assemblage dans n'importe quel ordre, cependant, 
 
 #. **Mise en place des prises jack** (CT) et des éventuels boutons/témoins
 
-   - Prises jack : pour les :term:`CT` de mesure du réseau électrique
+   - Prises jack : pour les :term:`CT` de mesure du réseau électrique
    - Bouton ON-OFF ou reset selon la configuration
 
 #. **Mise en place des câbles**

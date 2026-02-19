@@ -784,7 +784,7 @@ Problème 4 : Carte Chauffe Excessivement
 
 ☐ Charge trop importante pour le dissipateur (> 3 000 W ~ 13 A)
 
-   **Action** : Vérifier puissance charge (doit être ≤ 3 000 W), utiliser dissipateur plus grand si besoin
+   **Action** : Vérifier puissance charge (doit être ≤ 3 000 W), utiliser dissipateur plus grand si besoin
 
 Validation Finale de la Carte
 ------------------------------

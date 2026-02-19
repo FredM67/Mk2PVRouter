@@ -4,15 +4,15 @@
 Étalonnage
 ==========
 
-⏱️ **Temps estimé** : 45 min-2 heures selon la configuration
+⏱️ **Temps estimé** : 45 min-2 heures selon la configuration
 
-🔧 **Niveau de difficulté** : Intermédiaire (mono) / Avancé (tri)
+🔧 **Niveau de difficulté** : Intermédiaire (mono) / Avancé (tri)
 
-⚠️ **Niveau de risque** : Élevé (manipulation 230 V sous tension)
+⚠️ **Niveau de risque** : Élevé (manipulation 230 V sous tension)
 
 .. admonition:: 📋 Prérequis
 
-   Avant de commencer ce chapitre :
+   Avant de commencer ce chapitre :
 
    | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Tests électriques effectués (voir :ref:`tests-electriques`)
@@ -35,7 +35,7 @@ Pour un étalonnage précis, une certaine forme de référence standard est néc
 La plupart des compteurs d'électricité génèrent un flux d'impulsions optiques pour indiquer le taux de consommation d'énergie. En plaçant un transformateur de courant :term:`CT` autour de l'un des câbles d'alimentation entrants, et en exécutant le logiciel approprié sur le matériel en cours de test, un flux d'impulsions optiques similaire peut être généré.
 
 .. important::
-   **Configuration triphasée** : Contrairement à la version monophasée, le modèle triphasé ne peut pas dévier de manière fiable l'énergie excédentaire sans un étalonnage aussi précis que possible. En effet, étant donné qu'en triphasé, le routeur calcule la somme algébrique des puissances instantanées sur chaque phase, il faut que les mesures soient aussi précises que possible.
+   **Configuration triphasée** : Contrairement à la version monophasée, le modèle triphasé ne peut pas dévier de manière fiable l'énergie excédentaire sans un étalonnage aussi précis que possible. En effet, étant donné qu'en triphasé, le routeur calcule la somme algébrique des puissances instantanées sur chaque phase, il faut que les mesures soient aussi précises que possible.
 
    Les composants électroniques ne sont jamais parfaits. Ils ont chacun des caractéristiques données accompagnées d'une tolérance. Les tolérances classiques sont de 5 ou 10 %. Il convient donc d'étalonner chaque ligne de mesure afin que la somme finale soit la plus juste possible.
 
@@ -89,7 +89,7 @@ Lorsque la valeur correcte a été trouvée pour ``powerCal_grid``, cette même 
 
 .. admonition:: ✅ Point de Contrôle — Étalonnage CT Grille
 
-   Avant de passer à l'étalonnage du :term:`CT` diversion, vérifiez :
+   Avant de passer à l'étalonnage du :term:`CT` diversion, vérifiez :
 
    | ☐ **Programme cal_CT1_v_meter.ino** téléversé et fonctionnel
    | ☐ **Valeur powerCal_grid trouvée** et notée (à conserver précieusement)
@@ -112,12 +112,12 @@ Lorsque la valeur correcte a été trouvée pour ``powerCal_diverted``, cette m�
 
 .. admonition:: ✅ Point de Contrôle — Étalonnage Monophasé Complet
 
-   Avant de passer à l'installation finale, vérifiez :
+   Avant de passer à l'installation finale, vérifiez :
 
    | ☐ **Programme cal_CT2_v_CT1.ino** téléversé avec powerCal_grid correct
    | ☐ **Valeur powerCal_diverted trouvée** et notée
    | ☐ Deux :term:`CT`\s montés autour du même fil donnent mesures identiques
-   | ☐ Documentation des valeurs : powerCal_grid et powerCal_diverted conservées
+   | ☐ Documentation des valeurs : powerCal_grid et powerCal_diverted conservées
    | ☐ **:term:`CT`\s marqués** (CT1 = grille, CT2 = diversion)
 
 
@@ -147,7 +147,7 @@ Il est possible également de relever la consommation affichée par le compteur 
 Il faudra alors faire correspondre la puissance affichée par le routeur dans le Moniteur Série de l'Arduino IDE avec celle affichée par le compteur.
 D'où l'intérêt de ne pas avoir d'appareils qui vont se mettre en route sporadiquement (réfrigérateur…).
 
-L'affichage dans le Moniteur Série se présente comme ceci : ::
+L'affichage dans le Moniteur Série se présente comme ceci : ::
 
     1797.67, P:-21, P1:368, P2:-113, P3:-276, V1:233.24, V2:233.82, V3:233.84, (minSampleSets/MC 32, #ofSampleSets 8014)
     1793.61, P:-18, P1:367, P2:-110, P3:-275, V1:233.46, V2:233.93, V3:233.99, (minSampleSets/MC 32, #ofSampleSets 8013)
@@ -163,14 +163,14 @@ Si j'étalonne la phase **L1**, alors **P1** devra afficher la même valeur que 
 Comment trouver le bon ``f_powerCal`` du premier coup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Avant de télécharger le sketch d'étalonnage, je veille à définir les valeurs comme ceci :
+Avant de télécharger le sketch d'étalonnage, je veille à définir les valeurs comme ceci :
 
 .. code-block:: cpp
 
    constexpr float f_powerCal[NO_OF_PHASES]{0.05000f, 0.05000f, 0.05000f};
 
 | Supposons que le compteur affiche **2250**, et que le log du routeur affiche **2000**.
-| On aura alors :
+| On aura alors :
 
 .. math::
 
@@ -192,12 +192,12 @@ Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu'au
 
 .. admonition:: ✅ Point de Contrôle — Étalonnage Méthode Compteur
 
-   Après avoir étalonné les 3 phases avec le compteur, vérifiez :
+   Après avoir étalonné les 3 phases avec le compteur, vérifiez :
 
    | ☐ **f_powerCal trouvé pour CHAQUE phase** (L1, L2, L3)
    | ☐ Valeur de chaque phase synchronisée avec compteur
    | ☐ **Chaque CT marqué** avec son numéro de phase correspondant
-   | ☐ Documentation complète : f_powerCal[0], f_powerCal[1], f_powerCal[2]
+   | ☐ Documentation complète : f_powerCal[0], f_powerCal[1], f_powerCal[2]
    | ☐ Test de vérification sur les 3 phases (somme = puissance totale compteur)
 
 
@@ -209,22 +209,22 @@ Cette méthode nécessite un appareil de mesure, tel qu'un wattmètre, un compte
 Appareils de mesure possibles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* **Wattmètre portable** :
+* **Wattmètre portable** :
 
   - Affiche directement la puissance consommée en watts.
   - Idéal pour des mesures instantanées.
 
-* **Compteur d'énergie portable** :
+* **Compteur d'énergie portable** :
 
   - Permet de mesurer la consommation d'énergie sur une période donnée (kWh).
   - Utile pour des mesures prolongées.
 
-* **Multimètre avec fonction wattmètre** :
+* **Multimètre avec fonction wattmètre** :
 
   - Polyvalent, peut également mesurer la tension et le courant.
   - Peut nécessiter des calculs manuels pour obtenir la puissance (P = U × I).
 
-* **Compteur d'énergie triphasé** :
+* **Compteur d'énergie triphasé** :
 
   - Permet de mesurer directement les trois phases sans déplacer l'appareil.
   - Idéal pour des installations triphasées complexes.
@@ -232,34 +232,34 @@ Appareils de mesure possibles
 Étapes pour l'étalonnage
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. **Préparation** :
+#. **Préparation** :
 
    - Coupez l'alimentation électrique au tableau pour garantir la sécurité.
    - Installez l'appareil de mesure sur la phase correspondante (par exemple, **L1**).
    - Connectez la pince ampèremétrique du routeur à la même phase.
 
-#. **Mesure de la puissance** :
+#. **Mesure de la puissance** :
 
    - Rétablissez l'alimentation électrique.
    - Allumez un appareil purement résistif (par exemple, un radiateur ou une bouilloire).
    - Relevez la puissance affichée par l'appareil de mesure.
 
-#. **Ajustement de ``f_powerCal``** :
+#. **Ajustement de ``f_powerCal``** :
 
    - Comparez la puissance mesurée par l'appareil avec celle affichée dans le Moniteur Série de l'Arduino IDE.
-   - Utilisez la formule suivante pour ajuster la valeur de ``f_powerCal`` :
+   - Utilisez la formule suivante pour ajuster la valeur de ``f_powerCal`` :
 
      .. math::
 
         f_{powerCal} = f_{powerCal_{initial}} * \frac{P_{\text{mesuré}}}{P_{routeur}}
 
-     Où :
+     Où :
 
      - :math:`f_{powerCal_{initial}}` est la valeur initiale définie dans le sketch Arduino.
      - :math:`P_{\text{mesuré}}` est la puissance mesurée par l'appareil.
      - :math:`P_{routeur}` est la puissance affichée par le routeur.
 
-#. **Validation** :
+#. **Validation** :
 
    - Téléversez le sketch mis à jour sur le routeur.
    - Vérifiez que la puissance affichée par le routeur correspond à celle mesurée par l'appareil.
@@ -271,14 +271,14 @@ Appareils de mesure possibles
 Chauffe-eau triphasé
 ^^^^^^^^^^^^^^^^^^^^^
 
-Si vous utilisez un chauffe-eau triphasé comme appareil d'étalonnage, suivez ces étapes spécifiques :
+Si vous utilisez un chauffe-eau triphasé comme appareil d'étalonnage, suivez ces étapes spécifiques :
 
 * Branchez l'appareil de mesure sur une phase du chauffe-eau ainsi que la pince du routeur correspondante.
 * Si l'appareil de mesure est triphasé, il n'est pas nécessaire de le déplacer de phase en phase. Sinon, déplacez-le sur chaque phase pour effectuer les mesures.
 * Relevez les valeurs de puissance pour chaque phase et ajustez ``f_powerCal`` en conséquence.
 
-| Exemple : supposons que le compteur/wattmètre affiche **2250**, et que le log du routeur affiche **2000**.
-| On aura alors :
+| Exemple : supposons que le compteur/wattmètre affiche **2250**, et que le log du routeur affiche **2000**.
+| On aura alors :
 
 .. math::
 
@@ -291,25 +291,25 @@ Si vous utilisez un chauffe-eau triphasé comme appareil d'étalonnage, suivez c
 
 .. admonition:: ✅ Point de Contrôle Final — Étalonnage Complet
 
-   Avant de passer à l'installation finale, vérifiez :
+   Avant de passer à l'installation finale, vérifiez :
 
-   **Monophasé :**
+   **Monophasé :**
 
    | ☐ **powerCal_grid** et **powerCal_diverted** trouvés et notés
    | ☐ :term:`CT`\s marqués (CT1 = grille, CT2 = diversion)
 
-   **Triphasé :**
+   **Triphasé :**
 
    | ☐ **f_powerCal validé pour L1, L2, L3** avec appareil de mesure
    | ☐ Chaque phase mesure correctement (écart < 2 %)
    | ☐ **CTs marqués de manière PERMANENTE** (L1, L2, L3)
-   | ☐ Test avec charge équilibrée : somme des phases = mesure compteur
+   | ☐ Test avec charge équilibrée : somme des phases = mesure compteur
 
-   **Commun :**
+   **Commun :**
 
    ☐ Documentation finale complète et conservée en lieu sûr
 
-   ⚠️ **CRITIQUE : Ne JAMAIS intervertir les CTs après étalonnage** ⚠️
+   ⚠️ **CRITIQUE : Ne JAMAIS intervertir les CTs après étalonnage** ⚠️
 
 .. |br| raw:: html
 

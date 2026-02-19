@@ -4,13 +4,13 @@
 Installation du module mk2Wifi
 ================================
 
-⏱️ **Temps estimé** : 30-45 minutes
+⏱️ **Temps estimé** : 30-45 minutes
 
-🔧 **Niveau de difficulté** : Débutant
+🔧 **Niveau de difficulté** : Débutant
 
 .. admonition:: 📋 Prérequis
 
-   Avant de commencer ce chapitre :
+   Avant de commencer ce chapitre :
 
    | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Chapitre :ref:`presentation-mk2wifi` lu
@@ -39,7 +39,7 @@ Installation physique
 .. danger::
    Avant de brancher le module, vérifiez que le cavalier **V sel.** de la carte principale est en position **3–centre (3,3 V)**. Le module mk2Wifi fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement** (voir :ref:`cavaliers`).
 
-#. **Vérifiez l'orientation** : Les connecteurs TRIG_EXT et UART_EXT du module doivent s'aligner avec ceux de la carte principale. Le module ne doit pas être retourné.
+#. **Vérifiez l'orientation** : Les connecteurs TRIG_EXT et UART_EXT du module doivent s'aligner avec ceux de la carte principale. Le module ne doit pas être retourné.
 
 #. **Enfoncez le module** fermement mais sans forcer sur les deux connecteurs de la carte principale (TRIG_EXT et UART_EXT)
 
@@ -65,7 +65,7 @@ Procédure
 
 #. **Connectez le câble USB-C** entre le module et votre ordinateur
 
-#. **Passez en mode téléchargement** : Maintenez le bouton **SW1** enfoncé (GPIO9 à l'état bas) pendant la mise sous tension, puis relâchez
+#. **Passez en mode téléchargement** : Maintenez le bouton **SW1** enfoncé (GPIO9 à l'état bas) pendant la mise sous tension, puis relâchez
 
    .. tip::
       Le bouton SW1 est le petit bouton-poussoir sur la carte. Si le module est déjà alimenté par USB, débranchez et rebranchez le câble USB-C tout en maintenant SW1 enfoncé.
@@ -107,7 +107,7 @@ Vérification
 
 .. admonition:: ✅ Point de Contrôle — Module mk2Wifi
 
-   Après l'installation, vérifiez :
+   Après l'installation, vérifiez :
 
    | ☐ Module correctement enfoncé sur les deux connecteurs (TRIG_EXT et UART_EXT)
    | ☐ LED témoin D1 allumée lorsque la carte principale est sous tension

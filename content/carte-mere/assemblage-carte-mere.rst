@@ -4,15 +4,15 @@
 Assemblage de la carte-mère universelle
 ==========================================
 
-⏱️ **Temps estimé** : 45 min-1 heure (débutant), 20-30 minutes (expérimenté)
+⏱️ **Temps estimé** : 45 min-1 heure (débutant), 20-30 minutes (expérimenté)
 
-🔧 **Niveau de difficulté** : Intermédiaire
+🔧 **Niveau de difficulté** : Intermédiaire
 
-⚠️ **Niveau de risque** : Faible (composants basse tension uniquement)
+⚠️ **Niveau de risque** : Faible (composants basse tension uniquement)
 
 .. admonition:: 📋 Prérequis
 
-   Avant de commencer ce chapitre :
+   Avant de commencer ce chapitre :
 
    | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Configuration choisie (voir :ref:`choix-configuration`)
@@ -44,7 +44,7 @@ Support IC1 (ATmega328P)
 Le support :term:`DIL` 28 broches pour le microcontrôleur ATmega328P.
 
 .. danger::
-   **NE PAS insérer l'ATmega328P dans le support à ce stade !**
+   **NE PAS insérer l'ATmega328P dans le support à ce stade !**
 
    Le microcontrôleur sera inséré après les tests électriques.
 
@@ -75,7 +75,7 @@ Le condensateur de filtrage 120 µF.
 .. warning::
    Ce composant est **polarisé**. La bande blanche (signes −) indique le côté négatif. Respectez impérativement la polarité indiquée sur le :term:`PCB`.
 
-#. Identifiez la polarité : la **bande blanche** sur le condensateur correspond au côté **négatif** (−)
+#. Identifiez la polarité : la **bande blanche** sur le condensateur correspond au côté **négatif** (−)
 #. Insérez le condensateur en respectant la polarité
 #. Soudez les deux pattes
 
@@ -94,7 +94,7 @@ Module RF (RFM69CW) — optionnel
 Le module radio RFM69CW permet la communication sans fil (bande ISM 433/868 MHz).
 
 .. warning::
-   Le module RFM69CW est **très sensible aux décharges électrostatiques** (ESD). Avant de le manipuler :
+   Le module RFM69CW est **très sensible aux décharges électrostatiques** (ESD). Avant de le manipuler :
 
    - Touchez une surface métallique reliée à la terre pour vous décharger
    - Évitez de toucher les composants ou les broches du module
@@ -104,7 +104,7 @@ Le module radio RFM69CW permet la communication sans fil (bande ISM 433/868 MHz)
    Avant de souder le module, vérifiez que le cavalier **V sel.** est en position **3–centre (3,3 V)**. Le module RFM69CW fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement**.
 
 #. Positionnez le module RFM69CW sur son emplacement
-#. **Vérifiez l'alignement** : chaque broche du module doit correspondre exactement à sa pastille sur le :term:`PCB`. Reportez-vous à la sérigraphie pour l'orientation correcte.
+#. **Vérifiez l'alignement** : chaque broche du module doit correspondre exactement à sa pastille sur le :term:`PCB`. Reportez-vous à la sérigraphie pour l'orientation correcte.
 #. Soudez une broche d'angle, vérifiez l'alignement, puis soudez les broches restantes
 
 .. tip::
@@ -130,7 +130,7 @@ Ce cavalier relie la **terre de protection** (Earth, provenant du réseau élect
 Connecteurs signaux
 ~~~~~~~~~~~~~~~~~~~~
 
-Soudez les connecteurs suivants :
+Soudez les connecteurs suivants :
 
 #. **FTDI** (Molex SL 1×06) — Connecteur programmation/débogage
 #. **OLED** (Molex SL 1×04) — Connecteur écran I2C
@@ -138,7 +138,7 @@ Soudez les connecteurs suivants :
 #. **UART_EXT** (barrette mâle 1×06) — Connecteur UART + DS18B20
 
 .. hint::
-   Pour aligner correctement les connecteurs :
+   Pour aligner correctement les connecteurs :
 
    - Soudez une seule broche
    - Vérifiez que le connecteur est perpendiculaire au :term:`PCB`
@@ -148,13 +148,13 @@ Soudez les connecteurs suivants :
 Connecteurs sorties numériques (D2–D13)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Chaque sortie numérique dispose de deux emplacements Molex SL : un 2 broches (GND, I/O) et un 3 broches (GND, I/O, VCC). Soudez uniquement les connecteurs correspondant aux sorties utilisées dans votre configuration.
+Chaque sortie numérique dispose de deux emplacements Molex SL : un 2 broches (GND, I/O) et un 3 broches (GND, I/O, VCC). Soudez uniquement les connecteurs correspondant aux sorties utilisées dans votre configuration.
 
 .. note::
    Les connecteurs fournis dépendent de la configuration commandée. Inutile de souder des connecteurs sur des sorties non utilisées.
 
-   - **D2\*, D10\*–D13\*** : réservées au module RF (si soudé)
-   - **D5–D9** : réservées au module :term:`mk2Wifi` (si présent)
+   - **D2\*, D10\*–D13\*** : réservées au module RF (si soudé)
+   - **D5–D9** : réservées au module :term:`mk2Wifi` (si présent)
    - Les sorties non réservées sont librement utilisables
 
 Cavaliers de soudure
@@ -164,7 +164,7 @@ Configurez les cavaliers selon votre configuration. Consultez le chapitre :ref:`
 
 .. admonition:: ✅ Point de Contrôle — Composants Communs
 
-   Avant de continuer, vérifiez :
+   Avant de continuer, vérifiez :
 
    | ☐ Support IC1 correctement orienté (encoche alignée)
    | ☐ Quartz X1 soudé
@@ -180,7 +180,7 @@ Configurez les cavaliers selon votre configuration. Consultez le chapitre :ref:`
 Étape suivante
 --------------
 
-Poursuivez avec les composants spécifiques à votre configuration :
+Poursuivez avec les composants spécifiques à votre configuration :
 
 - **Monophasé ou split-phase** → :ref:`assemblage-monophase`
 - **Triphasé** (avec ou sans neutre) → :ref:`assemblage-triphase`
