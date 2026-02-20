@@ -43,7 +43,7 @@ Support IC1 (ATmega328P)
 
 Le support :term:`DIL` 28 broches pour le microcontrôleur ATmega328P.
 
-.. danger::
+.. warning::
    **NE PAS insérer l’ATmega328P dans le support à ce stade !**
 
    Le microcontrôleur sera inséré après les tests électriques.
@@ -100,7 +100,7 @@ Le module radio RFM69CW permet la communication sans fil (bande ISM 433/868 MHz)
    - Évitez de toucher les composants ou les broches du module
    - Travaillez de préférence sur un tapis antistatique
 
-.. danger::
+.. warning::
    Avant de souder le module, vérifiez que le cavalier **V sel.** est en position **3–centre (3,3 V)**. Le module RFM69CW fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement**.
 
 #. Positionnez le module RFM69CW sur son emplacement

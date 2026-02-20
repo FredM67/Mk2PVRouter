@@ -90,7 +90,7 @@ En fonctionnement normal, le **+5 V** est fourni par la carte principale via le 
 
 Le connecteur USB-C peut également fournir du +5 V lors de la programmation initiale, lorsque la carte n’est pas connectée à la carte principale.
 
-.. danger::
+.. warning::
    **Ne pas connecter l’USB-C lorsque la carte mk2Wifi est branchée sur la carte principale.**
 
    Les deux alimentations +5 V (USB et carte principale) ne sont pas isolées et les connecter simultanément peut endommager la carte ou l’hôte USB.

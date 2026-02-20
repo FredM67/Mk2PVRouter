@@ -61,7 +61,7 @@ Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélectionn
 - **Position 3–centre** (défaut) : L’ATmega328P est alimenté en 3,3 V via le régulateur :term:`LDO` U1 (AP2112K-3.3)
 - **Position 1–centre** : L’ATmega328P est alimenté directement en 5 V depuis le module PS1 (RAC05E)
 
-.. danger::
+.. warning::
    Si le module RF (RFM69CW) et/ou la carte :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** être en position **3–centre (3,3 V)**. Ces modules fonctionnent en 3,3 V — une alimentation en 5 V les **détruirait immédiatement**.
 
 JP1 — Mesure tension L3 / I2C SDA

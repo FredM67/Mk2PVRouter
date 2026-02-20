@@ -36,7 +36,7 @@ Installation physique
 
    Le routeur doit être **hors tension** pour brancher ou débrancher le module mk2Wifi.
 
-.. danger::
+.. warning::
    Avant de brancher le module, vérifiez que le cavalier **V sel.** de la carte principale est en position **3–centre (3,3 V)**. Le module mk2Wifi fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement** (voir :ref:`cavaliers`).
 
 #. **Vérifiez l’orientation** : Les connecteurs TRIG_EXT et UART_EXT du module doivent s’aligner avec ceux de la carte principale. Le module ne doit pas être retourné.
@@ -53,7 +53,7 @@ Programmation initiale (USB-C)
 
 Le premier chargement du firmware se fait obligatoirement via le connecteur USB-C. Les mises à jour suivantes pourront se faire via :term:`OTA` (WiFi).
 
-.. danger::
+.. warning::
    **Ne pas connecter l’USB-C lorsque la carte mk2Wifi est branchée sur la carte principale.**
 
    Débranchez le module de la carte principale avant de connecter le câble USB-C.
