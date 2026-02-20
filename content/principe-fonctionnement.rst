@@ -51,7 +51,7 @@ Exemple d’utilisation
 Fonctionnement des LED
 ----------------------
 
-Le Mk2PVRouter est équipé de LED pour indiquer l’état des sorties triac. Ces LED fournissent des informations visuelles sur la quantité d’énergie routée :
+Le Mk2PVRouter est équipé de LED pour indiquer l’état des sorties triac. Chaque LED est montée sur une petite carte dédiée, la **carte indicateur** (voir :ref:`carte-indicateur`), raccordée au signal de commande de l’étage de sortie. Ces LED fournissent des informations visuelles sur la quantité d’énergie routée :
 
 - **Allumage de la LED** :
   

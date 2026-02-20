@@ -113,27 +113,11 @@ jobs:
         run: |
           make dirhtml
 
-      # - name: Generate PDF 1
-      #   run: |
-      #     pip install https://github.com/rkdarst/sphinx_pyppeteer_builder/archive/refs/heads/main.zip
-      #     make pyppeteer
-      #     mv _build/pyppeteer/*.pdf _build/dirhtml/_static/Manuel_1.pdf
-
-      # - name: Generate PDF 1
-      #   run: |
-      #     pip install sphinx_pyppeteer_builder
-      #     make pyppeteer
-      #     mv _build/pyppeteer/*.pdf _build/dirhtml/_static/Manuel_1.pdf
-
-      # - name: Generate PDF 2
-      #   run: |
-      #     make simplepdf
-      #     mv _build/simplepdf/*.pdf _build/dirhtml/_static/Manuel_2.pdf
-
-      # - name: Generate PDF 3
-      #   run: |
-      #     make latexpdf
-      #     mv _build/latex/*.pdf _build/dirhtml/_static/Manuel_3.pdf
+      - name: Generate PDF
+        run: |
+          make simplepdf
+          mkdir -p _build/dirhtml/_static
+          cp "_build/simplepdf/Documentation du Mk2PVRouter.pdf" _build/dirhtml/_static/Mk2PVRouter.pdf
 
       - uses: actions/upload-artifact@v4
         with:

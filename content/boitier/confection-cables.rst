@@ -75,7 +75,7 @@ Ce sont des fils *actifs* qui permettront d’envoyer les commandes d’ouvertur
 Câble·s de témoin·s LED
 -----------------------
 
-Ce sont des fils *actifs* qui sont repiqués sur la commande de l’étage de sortie et permettent de visualiser l’état de chaque sortie :
+Ces câbles relient la carte indicateur LED (voir :ref:`carte-indicateur`) à l’étage de sortie correspondant. Ce sont des fils *actifs* qui sont repiqués sur la commande de l’étage de sortie et permettent de visualiser l’état de chaque sortie :
 
 * **allumé** => le courant passe (triac **fermé**)
 * **éteint** => le courant ne passe pas (triac **ouvert**).

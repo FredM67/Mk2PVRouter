@@ -10,8 +10,9 @@ BUILDDIR      = _build
 
 # Hardware submodule asset directories
 MAINBOARD_ASSETS = hardware/mainboard/assets
-MK2WIFI_ASSETS   = hardware/expansion_boards/mk2Wifi/assets
-IMG_DIR          = $(SOURCEDIR)/img
+MK2WIFI_ASSETS     = hardware/expansion_boards/mk2Wifi/assets
+INDICATOR_ASSETS   = hardware/Indicator/assets
+IMG_DIR            = $(SOURCEDIR)/img
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -32,6 +33,12 @@ copy-assets:
 		cp $(MK2WIFI_ASSETS)/mk2Wifi-back.png  $(IMG_DIR)/mk2wifi-back.png; \
 		cp $(MK2WIFI_ASSETS)/mk2Wifi-smd.png   $(IMG_DIR)/mk2wifi-smd.png; \
 		cp $(MK2WIFI_ASSETS)/mk2Wifi-bare.png  $(IMG_DIR)/mk2wifi-bare.png; \
+	fi
+	@if [ -d "$(INDICATOR_ASSETS)" ]; then \
+		cp $(INDICATOR_ASSETS)/Indicator-front.png      $(IMG_DIR)/indicator-front.png; \
+		cp $(INDICATOR_ASSETS)/Indicator-back.png       $(IMG_DIR)/indicator-back.png; \
+		cp $(INDICATOR_ASSETS)/Indicator-bare-front.png $(IMG_DIR)/indicator-bare-front.png; \
+		cp $(INDICATOR_ASSETS)/Indicator-bare-back.png  $(IMG_DIR)/indicator-bare-back.png; \
 	fi
 
 # Catch-all target: route all unknown targets to Sphinx using the new

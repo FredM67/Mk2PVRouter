@@ -106,6 +106,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    etage-sortie/carte-sortie
    etage-sortie/carte-sortie-relais
+   etage-sortie/carte-indicateur
 
 .. toctree::
    :maxdepth: 3

@@ -56,7 +56,7 @@ Matériel nécessaire
 
 ☐ Carte-mère assemblée et fonctionnelle (ou Arduino avec alimentation 5 V)
 
-☐ Câble Molex 2 fils (signal)
+☐ Câble Molex 3 fils (GND, I/O, VCC) — le relais a besoin de l'alimentation VCC
 
 ☐ Multimètre (fonction continuité / résistance)
 
@@ -76,7 +76,10 @@ Procédure de test
 
 **Étape 3 : Test fonctionnel (basse tension uniquement)**
 
-#. Connecter le câble Molex de signal entre la carte-relais et une sortie numérique de la carte-mère (D2–D13)
+.. warning::
+   Le câblage du connecteur Molex 3 broches doit correspondre entre la carte-relais et la carte-mère : **GND↔GND**, **I/O↔I/O**, **VCC↔VCC**. Un câblage inversé peut endommager la carte-relais ou la carte-mère.
+
+#. Connecter le câble Molex 3 fils entre la carte-relais et une sortie numérique de la carte-mère (D2–D13, connecteur 1×03)
 #. Alimenter la carte-mère (ou l’Arduino) en 5 V via le connecteur :term:`FTDI` ou USB
 #. Activer la sortie numérique correspondante (HIGH) :
 

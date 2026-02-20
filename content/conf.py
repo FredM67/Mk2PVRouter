@@ -135,8 +135,7 @@ html_context = {
         ("legacy (mono/tri)", "/Mk2PVRouter/branch/legacy/"),
     ],
     "downloads": [
-        ("PDF1", "../_static/Manuel_1.pdf"),
-        ("PDF2", "../_static/Manuel_2.pdf"),
+        ("PDF", "/Mk2PVRouter/_static/Mk2PVRouter.pdf"),
     ],
 }
 
@@ -164,25 +163,15 @@ simplepdf_vars = {
 }
 simplepdf_debug = True
 
-pyppeteer_pdf_options = {
-    'printBackground': True,
-    'format': 'A4',
-    'margin': {
-        'top': '20mm',
-        'bottom': '20mm',
-        'left': '10mm',
-        'right': '10mm'
-    }
-}
+# Pass custom page-margin stylesheet to WeasyPrint
+simplepdf_weasyprint_flags = ['-s', os.path.join(os.path.dirname(__file__), '_static', 'pdf-page.css')]
 
-# latex_engine = "xelatex"
+# -- Options for LaTeX/PDF output (disabled — TeX Live too old for LuaLaTeX) -----
+# latex_engine = 'lualatex'
 # latex_elements = {
 #     'papersize': 'a4paper',
-#     'fontpkg': r'''
-# \setmainfont{DejaVu Serif}
-# \setsansfont{DejaVu Sans}
-# \setmonofont{DejaVu Sans Mono}
-# ''',
+#     'pointsize': '11pt',
+#     'geometry': r'\usepackage[top=15mm,bottom=15mm,left=10mm,right=10mm]{geometry}',
 #     'preamble': r'''
 # \usepackage[titles]{tocloft}
 # \cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}

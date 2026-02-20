@@ -39,6 +39,7 @@ Dans le kit, vous trouverez :
 * le circuit imprimé (:term:`PCB`) de la carte-mère universelle (composants :term:`CMS` déjà soudés en usine)
 * les composants traversants à souder (le nombre dépend de votre configuration, voir :ref:`choix-configuration`)
 * un ou plusieurs circuits imprimés pour chaque sortie :term:`triac`
+* une carte indicateur LED par étage de sortie (voir :ref:`carte-indicateur`)
 * des composants électroniques (résistances, condensateurs…). |br|
   Attention, certains sont sensibles à l’électricité statique, il faut donc les manipuler avec soin.
 * un boîtier

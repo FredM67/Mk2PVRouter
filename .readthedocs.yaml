@@ -18,10 +18,11 @@ build:
 sphinx:
   configuration: content/conf.py
 
-# Optionally build your docs in additional formats such as PDF and ePub
-formats:
-  - pdf
-#    - epub
+# PDF generation disabled — requires LuaLaTeX for Unicode emoji support,
+# which is not available on ReadTheDocs. PDF is built via simplepdf in CI.
+# formats:
+#   - pdf
+#   - epub
 
 # Optional but recommended, declare the Python requirements required
 # to build your documentation
