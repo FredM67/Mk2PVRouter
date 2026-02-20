@@ -32,7 +32,7 @@ Si Aucun Message n’Apparaît
 #. Vérifier que le bon baud rate est sélectionné (9600 bauds)
 #. Vérifier le câblage FTDI (TX ↔ RX)
 #. Vérifier que le routeur est alimenté
-#. Vérifier l’oscillateur 16 MHz et les condensateurs C6/C7
+#. Vérifier l’oscillateur 16 MHz et les condensateurs C7/C8
 
 Adresses des Sondes de Température
 """""""""""""""""""""""""""""""""""

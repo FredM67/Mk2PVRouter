@@ -625,7 +625,7 @@ Procédure de Test Complète
 
 Si le test précédent a réussi, vous pouvez tester avec une charge plus importante.
 
-#. **Remplacer lampe 60 W par lampe 100 W** (ou radiateur 500-1 000 W)
+#. **Remplacer la lampe par une charge plus importante** (100 W ou radiateur 500–1 000 W)
 
 #. **Répéter test pendant 5 minutes**
 
