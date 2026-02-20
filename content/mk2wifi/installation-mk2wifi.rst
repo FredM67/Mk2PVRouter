@@ -28,6 +28,8 @@ Le module mk2Wifi est livré entièrement assemblé (composants :term:`CMS`). Se
 #. Soudez une broche, vérifiez que la barrette est perpendiculaire au :term:`PCB`
 #. Soudez les broches restantes
 
+.. todo:: Photo à fournir — barrettes TRIG_EXT et UART_EXT soudées et perpendiculaires au PCB.
+
 Installation physique
 ---------------------
 

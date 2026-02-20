@@ -48,6 +48,8 @@ autosectionlabel_prefix_document = True
 # Limit autosectionlabel to top-level sections (avoid duplicates in subsections)
 autosectionlabel_maxdepth = 2
 
+todo_include_todos = True
+
 togglebutton_hint = ""
 togglebutton_hint_hide = ""
 

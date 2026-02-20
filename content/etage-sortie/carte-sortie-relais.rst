@@ -69,6 +69,8 @@ Procédure de test
 #. Vérifier l’état des connecteurs Molex (signal et puissance)
 #. Vérifier l’absence de défaut visible (piste coupée, soudure froide)
 
+.. todo:: Photo à fournir — carte-relais assemblée montrant le relais, les connecteurs Molex et les soudures.
+
 **Étape 2 : Test de continuité (hors tension)**
 
 #. Mesurer la résistance entre les bornes du connecteur de puissance : **circuit ouvert** (∞ Ω) attendu
