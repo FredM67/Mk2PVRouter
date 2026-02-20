@@ -79,8 +79,8 @@ Effectuez ces vérifications dans l’ordre :
  #. ☐ Le disjoncteur est-il enclenché ?
  #. ☐ **Fusibles intacts ?**
 
-    - Mono : FS1
-    - Tri : FS1, FS2, FS3
+    - Mono : FS0, FS1
+    - Tri : FS0, FS1, FS2, FS3
     - Vérifier avec multimètre en mode continuité
     - Un fusible grillé indique un court-circuit
 
@@ -400,7 +400,7 @@ Causes Possibles
 
  #. ☐ **Condensateur en court-circuit**
 
- - C1 ou C2 défectueux
+ - C3 défectueux
  - Rare mais possible
 
  #. ☐ **Module PS1 (RAC05E) défectueux**
@@ -483,7 +483,7 @@ Diagnostic par Tension
 
 - Module PS1 (RAC05E) défectueux ou mal orienté
 - Court-circuit partiel consommant trop de courant
-- Transformateur sous-dimensionné (mauvaise référence)
+- Module PS1 (RAC05E) défectueux ou mal soudé
 
 **VCC trop élevée (>5.5 V) :**
 
@@ -493,8 +493,8 @@ Diagnostic par Tension
 
 **Tension ADC incorrecte (pas à VCC/2) :**
 
-- Résistances R8/R9 (burden résistors) mauvaise valeur
-- Condensateurs C11/C12/C13 défectueux
+- Résistances de burden R18/R28/R38 mauvaise valeur ou absentes (uniquement si CT à sortie courant)
+- Condensateurs de filtrage défectueux (CMS, soudés en usine)
 - Pont de soudure dans zone analogique
 
 =================================
@@ -545,14 +545,15 @@ Vérifications Électroniques
 
  #. ☐ **Burden résistances correctes ?**
 
-    - R8/R9 : Typiquement 120 Ω pour système 3.3 V
-    - Vérifier la valeur avec un multimètre
-    - Code couleur : Marron-Rouge-Marron-Or = 120 Ω
+    - Emplacements R18 / R28 / R38 (THT, un par CT)
+    - Uniquement nécessaires avec des CT à sortie courant (ex. : SCT-013-000)
+    - Pas nécessaires avec des CT à sortie tension (burden intégré)
+    - Valeur calculée selon le CT — voir :ref:`carte-mere-presentation`
 
- #. ☐ **Condensateurs C11/C12/C13 bien soudés ?**
+ #. ☐ **Diodes TVS de protection présentes ?**
 
-    - Forment filtre passe-bas anti-repliement
-    - Valeurs typiques : 10 nF ou 100 nF
+    - Composants CMS soudés en usine sur les mêmes pastilles que les burden
+    - Vérifier visuellement qu’aucune n’est manquante ou décollée
 
  #. ☐ **Pas de pont de soudure autour ADC ?**
 
