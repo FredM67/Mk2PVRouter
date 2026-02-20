@@ -40,7 +40,7 @@ Ce guide couvre la carte universelle **3phaseDiverter** du Mk2PVRouter.
  * - Modules de protection
    - GM1
    - GM1, GM2, GM3
- * - Régulateur 3.3 V/5 V
+ * - Régulateur 3,3 V/5 V
    - PS1 (RAC05E)
    - PS1 (RAC05E, commun)
  * - Capteurs de courant (CT)
@@ -84,7 +84,7 @@ Effectuez ces vérifications dans l’ordre :
     - Vérifier avec multimètre en mode continuité
     - Un fusible grillé indique un court-circuit
 
- #. ☐ Tension au point Test VCC = 3.3 V ou 5 V ?
+ #. ☐ Tension au point Test VCC = 3,3 V ou 5 V ?
 
     - Multimètre en mode tension continue (DC)
     - Mesurer entre VCC et GND
@@ -463,15 +463,15 @@ Valeurs de Référence
  * - Point de Test
    - Valeur Attendue
    - Tolérance
- * - VCC (3.3 V)
-   - 3.3 V
-   - ±0.2 V (3.1-3.5 V)
+ * - VCC (3,3 V)
+   - 3,3 V
+   - ±0,2 V (3,1-3,5 V)
  * - VCC (5 V)
-   - 5.0 V
-   - ±0.3 V (4.7-5.3 V)
+   - 5,0 V
+   - ±0,3 V (4,7-5,3 V)
  * - Sortie ADC (repos)
    - VCC/2
-   - ±0.5 V
+   - ±0,5 V
  * - Gate triac (actif)
    - ~2-5 V (pulsé)
    - Variable
@@ -479,12 +479,12 @@ Valeurs de Référence
 Diagnostic par Tension
 ----------------------
 
-**VCC trop faible (<3 V pour système 3.3 V) :**
+**VCC trop faible (<3 V pour système 3,3 V) :**
 
 - Module PS1 (RAC05E) défectueux, mal orienté ou mal soudé
 - Court-circuit partiel consommant trop de courant
 
-**VCC trop élevée (>5.5 V) :**
+**VCC trop élevée (>5,5 V) :**
 
 - ⚠️ **DANGER** pour ATmega328P (max absolu = 6 V)
 - Régulateur absent ou court-circuité
@@ -926,7 +926,7 @@ Dépannage Communication
 **Problèmes fréquents :**
 
 - Mauvaise broche SPI (vérifier schéma)
-- Module 3.3 V alimenté en 5 V (destruction possible)
+- Module 3,3 V alimenté en 5 V (destruction possible)
 - Interférences (éloigner de charges puissance)
 
 ======================================
@@ -1180,7 +1180,7 @@ Informations à Fournir
 
  - Version firmware (voir Moniteur Série au démarrage)
  - Configuration (mono/tri, nombre sorties)
- - Système 3.3 V ou 5 V ?
+ - Système 3,3 V ou 5 V ?
 
 📸 Photos Utiles — Exemples
 ---------------------------
@@ -1229,7 +1229,7 @@ Multimètre — Utilisation de Base
 
 - Mesurer VCC et les tensions d’alimentation
 - Sonde noire sur GND, rouge sur point à mesurer
-- Calibres : 20 V pour 3.3 V/5 V, 200 V pour >12 V
+- Calibres : 20 V pour 3,3 V/5 V, 200 V pour >12 V
 
 **Mode Tension Alternative (V~ ou VAC) :**
 
