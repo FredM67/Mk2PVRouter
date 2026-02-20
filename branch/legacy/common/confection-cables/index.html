@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2025-11-29T00:46:52+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confection des câbles &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">1~ Kit monophasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mono/soudures-mono/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mono/percages-mono/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mono/carte-sortie-relais-mono/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mono/confection-cables-mono/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mono/assemblage-mono/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mono/test-logiciel-mono/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mono/etalonnage-mono/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">3~ Kit triphasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/soudures-tri/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/percages-tri/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/carte-sortie-relais-tri/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/confection-cables-tri/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/assemblage-tri/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/test-logiciel-tri/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/etalonnage-tri/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">🔧 Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Confection des câbles</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/common/confection-cables.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="confection-des-cables">
+<span id="confection-cables"></span><h1>Confection des câbles<a class="headerlink" href="#confection-des-cables" title="Lien vers cette rubrique"></a></h1>
+<p>Il convient d’apporter un soin tout particulier pour la confection des multiples câbles nécessaires.</p>
+<p>Voici la liste des câbles dont nous aurons besoin :</p>
+<ul class="simple">
+<li><p>câble relié à la prise jack (3 pour la version triphasée)</p></li>
+<li><p>câble relié au bouton <em>reset</em> (uniquement triphasé)</p></li>
+<li><p>câble de contrôle (un par étage de sortie)</p></li>
+<li><p>câble de témoin LED (un par étage de sortie et/ou sortie relais).</p></li>
+<li><p>câbles d’alimentation (uniquement pour la version monophasée)</p></li>
+<li><p>fil de mise à la terre (un par dissipateur)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Toutes les longueurs préconisées sont basées sur les implantations de la carte-mère décrites <a class="reference internal" href="../../mono/percages-mono/#percage-carte-mere"><span class="std std-ref">ici</span></a>.</p>
+</div>
+<div class="admonition-conseil admonition">
+<p class="admonition-title">Conseil</p>
+<p>Les câbles très basse tension sont composés de 2 fils tressés.
+Il est <strong>fortement</strong> recommandé de se fixer une convention de couleur, selon le contenu du kit et/ou les câbles que l’on utilisera de son propre stock.</p>
+<p>Par exemple :</p>
+<ul class="simple">
+<li><p><strong>rouge</strong> pour le <strong>+</strong>, <strong>bleu</strong> pour la <em>masse</em></p></li>
+<li><p>ou si on prend du câble réseau, <em>couleur</em> pour le <strong>+</strong>, <em>couleur/blanc</em> pour la <strong>masse</strong>.</p></li>
+</ul>
+</div>
+<section id="fil-de-mise-a-la-terre">
+<h2>Fil de mise à la terre<a class="headerlink" href="#fil-de-mise-a-la-terre" title="Lien vers cette rubrique"></a></h2>
+<p>Ce sont des fils passifs qui permettront d’assurer la sécurité des personnes en cas de défaut d’isolation d’un ou plusieurs triacs.</p>
+<div class="admonition-longueurs-conseillees admonition">
+<p class="admonition-title">Longueurs conseillées</p>
+<ul class="simple">
+<li><p>boîtier <strong>1</strong> ou <strong>2</strong> sorties =&gt; 2 fils de chacun xx mm de long</p></li>
+<li><p>boîtier <strong>3</strong> ou <strong>4</strong> sorties =&gt; 4 fils</p>
+<ul>
+<li><p>dissipateur haut gauche =&gt; xx mm</p></li>
+<li><p>dissipateur haut droit =&gt; xx mm</p></li>
+<li><p>dissipateur bas gauche =&gt; 245 mm</p></li>
+<li><p>dissipateur haut droit =&gt; xx mm</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Les fils devront être dénudés sur environ 5 mm et être sertis directement dans les cosses <strong>sans</strong> soudure.</p>
+</section>
+<section id="cables-prises-jack">
+<h2>Câbles prise·s jack<a class="headerlink" href="#cables-prises-jack" title="Lien vers cette rubrique"></a></h2>
+<p>Ces câbles serviront à transmettre les mesures prises par la ou les pinces ampèremétriques (ou capteur de courant).
+Il conviendra donc d’y apporter le plus grand soin, afin de minimiser l’apparition de parasites.</p>
+<div class="admonition-longueurs-conseillees admonition">
+<p class="admonition-title">Longueurs conseillées</p>
+<div class="admonition-version-monophasee exercise important admonition" id="exercise-0">
+<p class="admonition-title">Version monophasée</p>
+<ul class="simple">
+<li><p>Boîtier <strong>1</strong> ou <strong>2</strong> sorties
+xx mm de long</p></li>
+<li><p>Boîtier <strong>3</strong> ou <strong>4</strong> sorties
+xx mm de long</p></li>
+</ul>
+</div>
+<div class="admonition-version-triphasee exercise important admonition" id="exercise-1">
+<p class="admonition-title">Version triphasée</p>
+<ul class="simple">
+<li><p>Boîtier <strong>1</strong> ou <strong>2</strong> sorties</p>
+<ul>
+<li><p><strong>255 mm</strong> pour <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a>1,</p></li>
+<li><p><strong>300 mm</strong> pour <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a>2 et</p></li>
+<li><p><strong>345 mm</strong> pour <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a>3.</p></li>
+</ul>
+</li>
+<li><p>Boîtier <strong>3</strong> ou <strong>4</strong> sorties</p>
+<ul>
+<li><p><strong>315 mm</strong> pour <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a>1,</p></li>
+<li><p><strong>360 mm</strong> pour <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a>2 et</p></li>
+<li><p><strong>405 mm</strong> pour <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a>3.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="cables-de-controle">
+<h2>Câble·s de contrôle<a class="headerlink" href="#cables-de-controle" title="Lien vers cette rubrique"></a></h2>
+<p>Ce sont des fils <em>actifs</em> qui permettront d’envoyer les commandes d’ouverture et fermeture aux triacs.</p>
+<div class="admonition-longueurs-conseillees admonition">
+<p class="admonition-title">Longueurs conseillées</p>
+<div class="admonition-version-monophasee exercise important admonition" id="exercise-2">
+<p class="admonition-title">Version monophasée</p>
+<ul class="simple">
+<li><p>Boîtier <strong>1</strong> ou <strong>2</strong> sorties</p>
+<ul>
+<li><p>étage de sortie <strong>gauche</strong> =&gt; xx mm</p></li>
+<li><p>étage de sortie <strong>droit</strong> =&gt; xx mm</p></li>
+</ul>
+</li>
+<li><p>Boîtier <strong>3</strong> ou <strong>4</strong> sorties</p>
+<ul>
+<li><p>étage de sortie <strong>haut gauche</strong> =&gt; xx mm</p></li>
+<li><p>étage de sortie <strong>haut droit</strong> =&gt; xx mm</p></li>
+<li><p>étage de sortie <strong>bas gauche</strong> =&gt; xx mm</p></li>
+<li><p>étage de sortie <strong>bas droit</strong> =&gt; xx mm</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition-version-triphasee exercise important admonition" id="exercise-3">
+<p class="admonition-title">Version triphasée</p>
+<ul class="simple">
+<li><p>Boîtier <strong>1</strong> ou <strong>2</strong> sorties</p>
+<ul>
+<li><p>étage de sortie <strong>gauche</strong> =&gt; <strong>140 mm</strong></p></li>
+<li><p>étage de sortie <strong>droit</strong> =&gt; <strong>340 mm</strong></p></li>
+</ul>
+</li>
+<li><p>Boîtier <strong>3</strong> ou <strong>4</strong> sorties</p>
+<ul>
+<li><p>étage de sortie <strong>haut gauche</strong> =&gt; <strong>200 mm</strong></p></li>
+<li><p>étage de sortie <strong>haut droit</strong> =&gt; <strong>250 mm</strong></p></li>
+<li><p>étage de sortie <strong>bas gauche</strong> =&gt; <strong>200 mm</strong></p></li>
+<li><p>étage de sortie <strong>bas droit</strong> =&gt; <strong>360 mm</strong></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="cables-de-temoins-led">
+<h2>Câble·s de témoin·s LED<a class="headerlink" href="#cables-de-temoins-led" title="Lien vers cette rubrique"></a></h2>
+<p>Ce sont des fils <em>actifs</em> qui sont repiqués sur la commande de l’étage de sortie et permettent de visualiser l’état de chaque sortie :
+* <strong>allumé</strong> =&gt; le courant passe (triac <strong>fermé</strong>)
+* <strong>éteint</strong> =&gt; le courant ne passe pas (triac <strong>ouvert</strong>).</p>
+<p>Les longueurs indiquées permettent d’ouvrir le couvercle et de le déposer sur le dessus du boîtier sans qu’aucun fil ne soit tendu.
+Bien sûr, il est possible de faire des câbles plus courts, ou plus longs !</p>
+<div class="admonition-longueurs-conseillees admonition">
+<p class="admonition-title">Longueurs conseillées</p>
+<ul class="simple">
+<li><p>Boîtier <strong>1</strong> ou <strong>2</strong> sorties</p>
+<ul>
+<li><p>étage de sortie <strong>gauche</strong> =&gt; <strong>400 mm</strong></p></li>
+<li><p>étage de sortie <strong>droit</strong> =&gt; <strong>470 mm</strong></p></li>
+</ul>
+</li>
+<li><p>Boîtier <strong>3</strong> ou <strong>4</strong> sorties</p>
+<ul>
+<li><p>étage de sortie <strong>haut gauche</strong> =&gt; <strong>440 mm</strong></p></li>
+<li><p>étage de sortie <strong>haut droit</strong> =&gt; <strong>510 mm</strong></p></li>
+<li><p>étage de sortie <strong>bas gauche</strong> =&gt; <strong>580 mm</strong></p></li>
+<li><p>étage de sortie <strong>bas droit</strong> =&gt; <strong>650 mm</strong></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 29 novembre 2025.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="../_static/Manuel_1.pdf">PDF1</a></dd>
+        
+          <dd><a href="../_static/Manuel_2.pdf">PDF2</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/common/confection-cables.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/common/confection-cables.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

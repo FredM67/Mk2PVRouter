@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-02-20T10:23:03+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carte indicateur LED &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Module mk2Wifi" href="../../mk2wifi/presentation-mk2wifi/" />
+    <link rel="prev" title="Sortie relais tout-ou-rien" href="../carte-sortie-relais/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📋 Carte-mère universelle</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/tests-electriques/">Tests électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Carte indicateur LED</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vue-d-ensemble">Vue d’ensemble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#images-de-la-carte">Images de la carte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#liste-des-composants">Liste des composants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assemblage">Assemblage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ordre-de-soudure">Ordre de soudure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#montage-dans-le-boitier">Montage dans le boîtier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connexion">Connexion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Câblage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Carte indicateur LED</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/etage-sortie/carte-indicateur.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="carte-indicateur-led">
+<span id="carte-indicateur"></span><h1>Carte indicateur LED<a class="headerlink" href="#carte-indicateur-led" title="Lien vers cette rubrique"></a></h1>
+<p>⏱️ <strong>Temps estimé</strong> : 15–30 min par carte (débutant), 10–15 min (expérimenté)</p>
+<p>🔧 <strong>Niveau de difficulté</strong> : Débutant</p>
+<p>⚠️ <strong>Niveau de risque</strong> : Faible</p>
+<div class="admonition-prerequis admonition">
+<p class="admonition-title">📋 Prérequis</p>
+<p>Avant de commencer ce chapitre :</p>
+<div class="line-block">
+<div class="line">☐ Chapitre <a class="reference internal" href="../../safety-overview/#safety-overview"><span class="std std-ref">⚠️ Sécurité — À Lire Absolument Avant de Commencer</span></a> lu et compris</div>
+<div class="line">☐ Fer à souder et fil de soudure à disposition</div>
+<div class="line">☐ Carte de sortie correspondante assemblée — triac (voir <a class="reference internal" href="../carte-sortie/#carte-sortie"><span class="std std-ref">Étage de sortie</span></a>) ou relais (voir <a class="reference internal" href="../carte-sortie-relais/#carte-sortie-relais"><span class="std std-ref">Sortie relais tout-ou-rien</span></a>)</div>
+</div>
+</div>
+<section id="vue-d-ensemble">
+<h2>Vue d’ensemble<a class="headerlink" href="#vue-d-ensemble" title="Lien vers cette rubrique"></a></h2>
+<p>La carte indicateur est un petit <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a> dédié qui porte une LED témoin. Elle permet de visualiser l’état de chaque sortie, qu’il s’agisse d’une sortie <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> (voir <a class="reference internal" href="../carte-sortie/#carte-sortie"><span class="std std-ref">Étage de sortie</span></a>) ou d’une sortie relais (voir <a class="reference internal" href="../carte-sortie-relais/#carte-sortie-relais"><span class="std std-ref">Sortie relais tout-ou-rien</span></a>) :</p>
+<ul class="simple">
+<li><p><strong>LED allumée</strong> : la sortie est active (courant passe)</p></li>
+<li><p><strong>LED éteinte</strong> : la sortie est inactive (courant coupé)</p></li>
+<li><p><strong>LED clignotante</strong> : régulation en cours (voir <a class="reference internal" href="../../principe-fonctionnement/#fonctionnement-des-led"><span class="std std-ref">Fonctionnement des LED</span></a>)</p></li>
+</ul>
+<p>Il faut <strong>une carte indicateur par étage de sortie</strong> (triac ou relais). Chaque carte se connecte au signal de commande de l’étage de sortie correspondant via un câble Molex 2 broches.</p>
+</section>
+<section id="images-de-la-carte">
+<h2>Images de la carte<a class="headerlink" href="#images-de-la-carte" title="Lien vers cette rubrique"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Face avant (assemblée)</p></th>
+<th class="head"><p>Face arrière (assemblée)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><figure class="align-default">
+<img alt="Carte indicateur — face avant assemblée" class="clickable-img" src="../../_images/indicator-front.png" />
+</figure>
+</td>
+<td><figure class="align-default">
+<img alt="Carte indicateur — face arrière assemblée" class="clickable-img" src="../../_images/indicator-back.png" />
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Circuit imprimé nu — face avant</p></th>
+<th class="head"><p>Circuit imprimé nu — face arrière</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><figure class="align-default">
+<img alt="Carte indicateur — PCB nu face avant" class="clickable-img" src="../../_images/indicator-bare-front.png" />
+</figure>
+</td>
+<td><figure class="align-default">
+<img alt="Carte indicateur — PCB nu face arrière" class="clickable-img" src="../../_images/indicator-bare-back.png" />
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="liste-des-composants">
+<h2>Liste des composants<a class="headerlink" href="#liste-des-composants" title="Lien vers cette rubrique"></a></h2>
+<p>La carte ne comporte que 3 composants :</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Composant</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Résistance 1 kΩ</p></td>
+<td><p>Limitation du courant dans la LED (marquée <strong>R1</strong> sur la sérigraphie avant)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Connecteur Molex 2 broches</p></td>
+<td><p>Signal de commande depuis l’étage de sortie ou la seconde rangée de connecteurs Molex de la carte-mère</p></td>
+</tr>
+<tr class="row-even"><td><p>LED</p></td>
+<td><p>Témoin visuel (couleur au choix)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="assemblage">
+<h2>Assemblage<a class="headerlink" href="#assemblage" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Cette carte est à <strong>double face</strong> : la résistance et le connecteur se soudent sur la face <strong>avant</strong>, tandis que la LED se soude sur la face <strong>arrière</strong>. Consultez les images du <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a> nu ci-dessus pour repérer les emplacements.</p>
+</div>
+<p>La sérigraphie de la face avant montre l’empreinte de la LED avec des <strong>points</strong> : il s’agit d’un simple rappel visuel. Les pastilles réelles de la LED, avec les marquages <code class="docutils literal notranslate"><span class="pre">+</span></code> et <code class="docutils literal notranslate"><span class="pre">-</span></code>, se trouvent sur la sérigraphie de la face <strong>arrière</strong>.</p>
+<section id="ordre-de-soudure">
+<h3>Ordre de soudure<a class="headerlink" href="#ordre-de-soudure" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Étape 1 : Face avant — Résistance</strong></p>
+<ol class="arabic simple">
+<li><p>Placer la carte face avant vers le haut</p></li>
+<li><p>Insérer la résistance (1 kΩ) dans l’emplacement marqué <strong>R1</strong></p></li>
+<li><p>Souder et couper les pattes excédentaires</p></li>
+</ol>
+<p><strong>Étape 2 : Face avant — Connecteur</strong></p>
+<ol class="arabic simple">
+<li><p>Insérer le connecteur Molex 2 broches dans son emplacement (à côté de la résistance)</p></li>
+<li><p>Souder les 2 broches</p></li>
+</ol>
+<p><strong>Étape 3 : Face arrière — LED</strong></p>
+<ol class="arabic simple">
+<li><p>Retourner la carte (face arrière vers le haut)</p></li>
+<li><p>Insérer la LED en <strong>respectant la polarité</strong> : la patte longue (anode, <code class="docutils literal notranslate"><span class="pre">+</span></code>) correspond au marquage <code class="docutils literal notranslate"><span class="pre">+</span></code> sur la sérigraphie</p></li>
+<li><p>Souder et couper les pattes excédentaires</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Respectez la polarité de la LED. Si elle est montée à l’envers, elle ne s’allumera pas. En cas de doute, la patte la plus <strong>longue</strong> est l’anode (<code class="docutils literal notranslate"><span class="pre">+</span></code>).</p>
+</div>
+</section>
+<section id="montage-dans-le-boitier">
+<h3>Montage dans le boîtier<a class="headerlink" href="#montage-dans-le-boitier" title="Lien vers cette rubrique"></a></h3>
+<p>La LED dépasse à travers un trou dans le couvercle du boîtier (perçage de 3 mm, voir <a class="reference internal" href="../../boitier/percages/#percages"><span class="std std-ref">Perçages</span></a>). La carte est fixée sur la face intérieure du couvercle.</p>
+</section>
+<section id="connexion">
+<h3>Connexion<a class="headerlink" href="#connexion" title="Lien vers cette rubrique"></a></h3>
+<p>Le connecteur Molex se raccorde au signal de commande, via un câble Molex 2 fils. Le signal peut provenir soit de l’étage de sortie, soit de la seconde rangée de connecteurs Molex sur la carte-mère. Consultez <a class="reference internal" href="../../boitier/confection-cables/#confection-cables"><span class="std std-ref">Confection des câbles</span></a> pour les longueurs recommandées.</p>
+<div class="admonition-point-de-controle-carte-indicateur admonition">
+<p class="admonition-title">✅ Point de Contrôle — Carte Indicateur</p>
+<p>Avant de continuer, vérifiez pour chaque carte indicateur :</p>
+<div class="line-block">
+<div class="line">☐ Résistance et connecteur soudés sur la face <strong>avant</strong></div>
+<div class="line">☐ LED soudée sur la face <strong>arrière</strong>, polarité respectée</div>
+<div class="line">☐ Aucun pont de soudure entre les pastilles</div>
+<div class="line">☐ La LED s’allume lorsque le signal de commande est actif (test optionnel avec la carte-mère)</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../carte-sortie-relais/" class="btn btn-neutral float-left" title="Sortie relais tout-ou-rien" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../../mk2wifi/presentation-mk2wifi/" class="btn btn-neutral float-right" title="Module mk2Wifi" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 20 février 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/etage-sortie/carte-indicateur.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/etage-sortie/carte-indicateur.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

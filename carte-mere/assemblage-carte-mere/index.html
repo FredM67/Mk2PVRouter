@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-02-20T11:05:06+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assemblage de la carte-mère universelle &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Assemblage — Composants monophasé" href="../assemblage-monophase/" />
+    <link rel="prev" title="Choix de la configuration" href="../choix-configuration/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📋 Carte-mère universelle</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Assemblage de la carte-mère universelle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qualite-des-soudures">Qualité des Soudures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#composants-communs-toutes-configurations">Composants communs (toutes configurations)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#support-ic1-atmega328p">Support IC1 (ATmega328P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quartz-x1">Quartz X1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#condensateur-electrolytique-c3">Condensateur électrolytique C3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connecteur-sma-antenne-rf-optionnel">Connecteur SMA (antenne RF) — optionnel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-rf-rfm69cw-optionnel">Module RF (RFM69CW) — optionnel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cavalier-fil-gnd-link">Cavalier fil GND_LINK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connecteurs-signaux">Connecteurs signaux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connecteurs-sorties-numeriques-d2d13">Connecteurs sorties numériques (D2–D13)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cavaliers-de-soudure">Cavaliers de soudure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#etape-suivante">Étape suivante</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tests-electriques/">Tests électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cavaliers/">Configuration des cavaliers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Câblage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Assemblage de la carte-mère universelle</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere/assemblage-carte-mere.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="assemblage-de-la-carte-mere-universelle">
+<span id="assemblage-carte-mere"></span><h1>Assemblage de la carte-mère universelle<a class="headerlink" href="#assemblage-de-la-carte-mere-universelle" title="Lien vers cette rubrique"></a></h1>
+<p>⏱️ <strong>Temps estimé</strong> : 45 min–1 heure (débutant), 20–30 minutes (expérimenté)</p>
+<p>🔧 <strong>Niveau de difficulté</strong> : Intermédiaire</p>
+<p>⚠️ <strong>Niveau de risque</strong> : Faible (composants basse tension uniquement)</p>
+<div class="admonition-prerequis admonition">
+<p class="admonition-title">📋 Prérequis</p>
+<p>Avant de commencer ce chapitre :</p>
+<div class="line-block">
+<div class="line">☐ Chapitre <a class="reference internal" href="../../safety-overview/#safety-overview"><span class="std std-ref">⚠️ Sécurité — À Lire Absolument Avant de Commencer</span></a> lu et compris</div>
+<div class="line">☐ Configuration choisie (voir <a class="reference internal" href="../choix-configuration/#choix-configuration"><span class="std std-ref">Choix de la configuration</span></a>)</div>
+<div class="line">☐ Chapitre <a class="reference internal" href="../presentation/#carte-mere-presentation"><span class="std std-ref">Présentation de la carte universelle</span></a> lu</div>
+<div class="line">☐ Fer à souder et consommables prêts</div>
+<div class="line">☐ Temps disponible (1,5–2 heures pour débutant)</div>
+<div class="line">☐ Espace de travail propre et organisé</div>
+</div>
+</div>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Lien vers cette rubrique"></a></h2>
+<p>La carte universelle 3phaseDiverter est livrée avec tous les composants <a class="reference internal" href="../../glossary/#term-CMS"><span class="xref std std-term">CMS</span></a> (montés en surface) déjà soudés en usine. Vous n’avez qu’à souder les composants <strong>traversants</strong> (through-hole).</p>
+<p>Le nombre de composants à souder dépend de votre configuration (monophasé, triphasé, etc.). Consultez le tableau dans le chapitre <a class="reference internal" href="../choix-configuration/#choix-configuration"><span class="std std-ref">Choix de la configuration</span></a> pour la liste complète.</p>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Avant de commencer, lisez la section <a class="reference internal" href="../../introduction/#introduction"><span class="std std-ref">Introduction</span></a> pour les recommandations générales de soudure et l’identification des composants polarisés.</p>
+</div>
+</section>
+<section id="qualite-des-soudures">
+<h2>Qualité des Soudures<a class="headerlink" href="#qualite-des-soudures" title="Lien vers cette rubrique"></a></h2>
+<figure class="align-center" id="id9">
+<img alt="Comparaison soudure bonne vs mauvaise" src="../../_images/soudure-bonne-vs-mauvaise.png" />
+<figcaption>
+<p><span class="caption-text">Exemples de bonnes et mauvaises soudures</span><a class="headerlink" href="#id9" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Caractéristiques d’une bonne soudure :</strong></p>
+<ul class="simple">
+<li><p>✅ Aspect brillant et lisse</p></li>
+<li><p>✅ Forme de volcan (concave)</p></li>
+<li><p>✅ Mouille à la fois la patte et la pastille</p></li>
+<li><p>✅ Pas de boule séparée</p></li>
+</ul>
+<p><strong>Soudure froide (défectueuse) :</strong></p>
+<ul class="simple">
+<li><p>❌ Aspect terne, granuleux</p></li>
+<li><p>❌ Soudure en boule qui ne mouille pas</p></li>
+<li><p>❌ Fissures visibles</p></li>
+<li><p>❌ Contact électrique mauvais ou inexistant</p></li>
+</ul>
+<p><strong>Solution :</strong> Refaire les soudures suspectes :</p>
+<ol class="arabic simple">
+<li><p>Chauffer à nouveau avec fer à souder (350 °C)</p></li>
+<li><p>Ajouter un peu de flux si disponible</p></li>
+<li><p>Ajouter un peu de soudure fraîche</p></li>
+<li><p>Laisser refroidir sans bouger</p></li>
+</ol>
+</section>
+<section id="composants-communs-toutes-configurations">
+<h2>Composants communs (toutes configurations)<a class="headerlink" href="#composants-communs-toutes-configurations" title="Lien vers cette rubrique"></a></h2>
+<p>Ces composants doivent être soudés quelle que soit la configuration choisie.</p>
+<section id="support-ic1-atmega328p">
+<h3>Support IC1 (ATmega328P)<a class="headerlink" href="#support-ic1-atmega328p" title="Lien vers cette rubrique"></a></h3>
+<p>Le support <a class="reference internal" href="../../glossary/#term-DIL"><span class="xref std std-term">DIL</span></a> 28 broches pour le microcontrôleur ATmega328P.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>NE PAS insérer l’ATmega328P dans le support à ce stade !</strong></p>
+<p>Le microcontrôleur sera inséré après les tests électriques.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Repérez l”<strong>encoche</strong> sur le support et alignez-la avec le repère sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p></li>
+<li><p>Positionnez le support et maintenez-le avec du ruban adhésif</p></li>
+<li><p>Soudez une broche en diagonale, vérifiez l’alignement</p></li>
+<li><p>Soudez la broche opposée en diagonale</p></li>
+<li><p>Soudez toutes les broches restantes</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — support IC1 soudé, encoche alignée avec le repère PCB.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Indication</p>
+<p>Pour s’assurer que le support <a class="reference internal" href="../../glossary/#term-DIL"><span class="xref std std-term">DIL</span></a> est bien plaqué contre le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>, commencez par souder une seule broche, puis vérifiez l’alignement avant de poursuivre.</p>
+</div>
+</section>
+<section id="quartz-x1">
+<h3>Quartz X1<a class="headerlink" href="#quartz-x1" title="Lien vers cette rubrique"></a></h3>
+<p>Le quartz 16 MHz (boîtier HC-49).</p>
+<ol class="arabic simple">
+<li><p>Soudez le quartz <strong>X1</strong> — composant non polarisé, les deux sens sont possibles</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — quartz X1 soudé.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les condensateurs de charge C7 et C8 sont des composants <a class="reference internal" href="../../glossary/#term-CMS"><span class="xref std std-term">CMS</span></a> déjà soudés en usine.</p>
+</div>
+</section>
+<section id="condensateur-electrolytique-c3">
+<h3>Condensateur électrolytique C3<a class="headerlink" href="#condensateur-electrolytique-c3" title="Lien vers cette rubrique"></a></h3>
+<p>Le condensateur de filtrage 120 µF.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Ce composant est <strong>polarisé</strong>. La bande blanche (signes −) indique le côté négatif. Respectez impérativement la polarité indiquée sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Identifiez la polarité : la <strong>bande blanche</strong> sur le condensateur correspond au côté <strong>négatif</strong> (−)</p></li>
+<li><p>Insérez le condensateur en respectant la polarité</p></li>
+<li><p>Soudez les deux pattes</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — condensateur C3 soudé, bande blanche (−) visible et alignée avec le repère PCB.</p>
+</div>
+</section>
+<section id="connecteur-sma-antenne-rf-optionnel">
+<h3>Connecteur SMA (antenne RF) — optionnel<a class="headerlink" href="#connecteur-sma-antenne-rf-optionnel" title="Lien vers cette rubrique"></a></h3>
+<p>Le connecteur <a class="reference internal" href="../../glossary/#term-SMA"><span class="xref std std-term">SMA</span></a> femelle vertical pour l’antenne du module RFM69CW. Ce connecteur n’est nécessaire que si le module <a class="reference internal" href="../../glossary/#term-RF"><span class="xref std std-term">RF</span></a> est utilisé.</p>
+<ol class="arabic simple">
+<li><p>Positionnez le connecteur SMA sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p></li>
+<li><p>Soudez les pattes de fixation mécanique (masse) en premier</p></li>
+<li><p>Soudez la broche signal centrale</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — connecteur SMA soudé (pattes de masse + broche signal).</p>
+</div>
+</section>
+<section id="module-rf-rfm69cw-optionnel">
+<h3>Module RF (RFM69CW) — optionnel<a class="headerlink" href="#module-rf-rfm69cw-optionnel" title="Lien vers cette rubrique"></a></h3>
+<p>Le module radio RFM69CW permet la communication sans fil (bande ISM 433/868 MHz).</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Le module RFM69CW est <strong>très sensible aux décharges électrostatiques</strong> (ESD). Avant de le manipuler :</p>
+<ul class="simple">
+<li><p>Touchez une surface métallique reliée à la terre pour vous décharger</p></li>
+<li><p>Évitez de toucher les composants ou les broches du module</p></li>
+<li><p>Travaillez de préférence sur un tapis antistatique</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Avant de souder le module, vérifiez que le cavalier <strong>V sel.</strong> est en position <strong>3–centre (3,3 V)</strong>. Le module RFM69CW fonctionne en 3,3 V — une alimentation en 5 V le <strong>détruirait immédiatement</strong>.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Positionnez le module RFM69CW sur son emplacement</p></li>
+<li><p><strong>Vérifiez l’alignement</strong> : chaque broche du module doit correspondre exactement à sa pastille sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>. Reportez-vous à la sérigraphie pour l’orientation correcte.</p></li>
+<li><p>Soudez une broche d’angle, vérifiez l’alignement, puis soudez les broches restantes</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — module RFM69CW soudé et aligné sur son emplacement.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Un petit morceau de ruban adhésif double face entre le module et le PCB permet de le maintenir en place pendant la soudure.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>N’oubliez pas de fermer le cavalier <strong>JP3</strong> (face arrière) pour activer le module RF (voir <a class="reference internal" href="../cavaliers/#cavaliers"><span class="std std-ref">Configuration des cavaliers</span></a>).</p>
+</div>
+</section>
+<section id="cavalier-fil-gnd-link">
+<h3>Cavalier fil GND_LINK<a class="headerlink" href="#cavalier-fil-gnd-link" title="Lien vers cette rubrique"></a></h3>
+<p>Ce cavalier relie la <strong>terre de protection</strong> (Earth, provenant du réseau électrique) à la <strong>masse basse tension</strong> (GND) du circuit.</p>
+<ol class="arabic simple">
+<li><p>Coupez un morceau de fil de cuivre de <strong>0,75 mm²</strong> à la longueur nécessaire</p></li>
+<li><p>Insérez le fil entre les deux pastilles GND_LINK</p></li>
+<li><p>Soudez les deux extrémités</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id6">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — cavalier fil GND_LINK soudé entre les deux pastilles.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lorsque GND_LINK est <strong>ouvert</strong>, le circuit basse tension est entièrement isolé de la terre grâce à l’isolation galvanique du module d’alimentation RAC05E. Lorsqu’il est <strong>fermé</strong>, la masse basse tension est référencée à la terre de protection.</p>
+<p>La configuration recommandée dépend de votre installation. En cas de doute, laissez le cavalier <strong>ouvert</strong> — il pourra toujours être soudé ultérieurement.</p>
+</div>
+</section>
+<section id="connecteurs-signaux">
+<h3>Connecteurs signaux<a class="headerlink" href="#connecteurs-signaux" title="Lien vers cette rubrique"></a></h3>
+<p>Soudez les connecteurs suivants :</p>
+<ol class="arabic simple">
+<li><p><strong>FTDI</strong> (Molex SL 1×06) — Connecteur programmation/débogage</p></li>
+<li><p><strong>OLED</strong> (Molex SL 1×04) — Connecteur écran I2C</p></li>
+<li><p><strong>TRIG_EXT</strong> (barrette mâle 1×06) — Connecteur déclenchement/GPIO</p></li>
+<li><p><strong>UART_EXT</strong> (barrette mâle 1×06) — Connecteur UART + DS18B20</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id7">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — connecteurs signaux soudés et perpendiculaires au PCB.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Indication</p>
+<p>Pour aligner correctement les connecteurs :</p>
+<ul class="simple">
+<li><p>Soudez une seule broche</p></li>
+<li><p>Vérifiez que le connecteur est perpendiculaire au <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p></li>
+<li><p>Corrigez si nécessaire en chauffant la soudure</p></li>
+<li><p>Soudez les broches restantes</p></li>
+</ul>
+</div>
+</section>
+<section id="connecteurs-sorties-numeriques-d2d13">
+<h3>Connecteurs sorties numériques (D2–D13)<a class="headerlink" href="#connecteurs-sorties-numeriques-d2d13" title="Lien vers cette rubrique"></a></h3>
+<p>Chaque sortie numérique dispose de deux emplacements Molex SL : un 2 broches (GND, I/O) et un 3 broches (GND, I/O, VCC). Soudez uniquement les connecteurs correspondant aux sorties utilisées dans votre configuration.</p>
+<div class="admonition-todo admonition" id="id8">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — connecteurs Molex 1×02 et 1×03 soudés sur les sorties numériques.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les connecteurs fournis dépendent de la configuration commandée. Inutile de souder des connecteurs sur des sorties non utilisées.</p>
+<ul class="simple">
+<li><p><strong>D2*, D10*–D13*</strong> : réservées au module RF (si soudé)</p></li>
+<li><p><strong>D5–D9</strong> : réservées au module <a class="reference internal" href="../../glossary/#term-mk2Wifi"><span class="xref std std-term">mk2Wifi</span></a> (si présent)</p></li>
+<li><p>Les sorties non réservées sont librement utilisables</p></li>
+</ul>
+</div>
+</section>
+<section id="cavaliers-de-soudure">
+<h3>Cavaliers de soudure<a class="headerlink" href="#cavaliers-de-soudure" title="Lien vers cette rubrique"></a></h3>
+<p>Configurez les cavaliers selon votre configuration. Consultez le chapitre <a class="reference internal" href="../cavaliers/#cavaliers"><span class="std std-ref">Configuration des cavaliers</span></a> pour les détails.</p>
+<div class="admonition-point-de-controle-composants-communs admonition">
+<p class="admonition-title">✅ Point de Contrôle — Composants Communs</p>
+<p>Avant de continuer, vérifiez :</p>
+<div class="line-block">
+<div class="line">☐ Support IC1 correctement orienté (encoche alignée)</div>
+<div class="line">☐ Quartz X1 soudé</div>
+<div class="line">☐ Condensateur C3 soudé avec la <strong>bonne polarité</strong></div>
+<div class="line">☐ Connecteur SMA soudé solidement (si module RF utilisé)</div>
+<div class="line">☐ Module RFM69CW soudé et V sel. en 3,3 V (si module RF utilisé)</div>
+<div class="line">☐ GND_LINK configuré (ouvert ou fermé selon votre installation)</div>
+<div class="line">☐ Tous les connecteurs signaux soudés et perpendiculaires</div>
+<div class="line">☐ Cavaliers configurés selon votre configuration (voir <a class="reference internal" href="../cavaliers/#cavaliers"><span class="std std-ref">Configuration des cavaliers</span></a>)</div>
+<div class="line">☐ Toutes les soudures propres et brillantes</div>
+<div class="line">☐ Pas de pont de soudure</div>
+</div>
+</div>
+</section>
+</section>
+<section id="etape-suivante">
+<h2>Étape suivante<a class="headerlink" href="#etape-suivante" title="Lien vers cette rubrique"></a></h2>
+<p>Poursuivez avec les composants spécifiques à votre configuration :</p>
+<ul class="simple">
+<li><p><strong>Monophasé ou split-phase</strong> → <a class="reference internal" href="../assemblage-monophase/#assemblage-monophase"><span class="std std-ref">Assemblage — Composants monophasé</span></a></p></li>
+<li><p><strong>Triphasé</strong> (avec ou sans neutre) → <a class="reference internal" href="../assemblage-triphase/#assemblage-triphase"><span class="std std-ref">Assemblage — Composants triphasé</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../choix-configuration/" class="btn btn-neutral float-left" title="Choix de la configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../assemblage-monophase/" class="btn btn-neutral float-right" title="Assemblage — Composants monophasé" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 20 février 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere/assemblage-carte-mere.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/carte-mere/assemblage-carte-mere.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

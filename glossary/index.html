@@ -1,0 +1,703 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-02-20T08:27:09+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glossaire &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="prev" title="Guide de Dépannage" href="../troubleshooting/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📋 Carte-mère universelle</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/tests-electriques/">Tests électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Câblage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Glossaire</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/glossary.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="glossaire">
+<span id="glossary"></span><h1>Glossaire<a class="headerlink" href="#glossaire" title="Lien vers cette rubrique"></a></h1>
+<p>Ce glossaire est divisé en deux sections :</p>
+<ol class="arabic simple">
+<li><p><strong>Termes de Base</strong> : Pour les débutants, explications simples des concepts électriques et électroniques fondamentaux</p></li>
+<li><p><strong>Termes Techniques</strong> : Définitions spécialisées pour le Mk2PVRouter et l’électronique avancée</p></li>
+</ol>
+</section>
+<section id="termes-de-base-pour-debutants">
+<h1>Termes de Base pour Débutants<a class="headerlink" href="#termes-de-base-pour-debutants" title="Lien vers cette rubrique"></a></h1>
+<dl class="glossary">
+<dt id="term-Arduino">Arduino<a class="headerlink" href="#term-Arduino" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><strong>Plateforme de développement</strong> open-source pour programmer des microcontrôleurs facilement.</div>
+<div class="line">Le Mk2PVRouter utilise le <strong>langage Arduino</strong> (basé sur C++) et l’<strong>Arduino IDE</strong> pour la programmation.</div>
+</div>
+</dd>
+<dt id="term-Autoconsommation">Autoconsommation<a class="headerlink" href="#term-Autoconsommation" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Principe qui consiste à <strong>consommer sa propre production</strong> d’électricité au lieu de la revendre ou de la perdre.</div>
+<div class="line">Objectif : Maximiser l’utilisation de l’énergie gratuite produite par les panneaux solaires.</div>
+</div>
+</dd>
+<dt id="term-Burst-fire">Burst-fire<a class="headerlink" href="#term-Burst-fire" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><strong>Mode de contrôle</strong> de puissance par cycles complets de la sinusoïde 50 Hz.</div>
+<div class="line">Le triac s’allume pour un certain nombre de cycles puis s’éteint.</div>
+<div class="line">Avantage : Réduit les perturbations électromagnétiques par rapport au contrôle par angle de phase.</div>
+</div>
+</dd>
+<dt id="term-Charge">Charge<a class="headerlink" href="#term-Charge" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Appareil électrique qui <strong>consomme de l’énergie</strong>.</div>
+<div class="line">Dans le contexte du Mk2PVRouter : Chauffe-eau, radiateur électrique, plancher chauffant, etc.</div>
+</div>
+</dd>
+<dt id="term-Circuit-integre-IC">Circuit intégré (IC)<a class="headerlink" href="#term-Circuit-integre-IC" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Une « puce » électronique contenant de nombreux composants miniaturisés.</div>
+<div class="line">Le <strong>microcontrôleur ATmega328P</strong> du Mk2PVRouter est un circuit intégré.</div>
+<div class="line">⚠️ <strong>Important</strong> : Fragile, sensible à l’électricité statique et à la chaleur.</div>
+</div>
+</dd>
+<dt id="term-Condensateur">Condensateur<a class="headerlink" href="#term-Condensateur" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Composant qui <strong>stocke temporairement</strong> de l’énergie électrique.</div>
+<div class="line">Deux types :</div>
+<div class="line">- <strong>Polarisés</strong> (électrolytiques) : Ont un + et un -, à respecter impérativement</div>
+<div class="line">- <strong>Non polarisés</strong> (céramiques) : Peuvent être montés dans les deux sens</div>
+</div>
+</dd>
+<dt id="term-Consuel">Consuel<a class="headerlink" href="#term-Consuel" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Organisme français de <strong>contrôle des installations</strong> électriques.</div>
+<div class="line">Délivre une attestation de conformité obligatoire pour toute nouvelle installation ou modification importante.</div>
+</div>
+</dd>
+<dt id="term-Courant-A">Courant (A)<a class="headerlink" href="#term-Courant-A" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Le <strong>courant électrique</strong>, mesuré en <strong>ampères (A)</strong>, représente la quantité d’électrons qui circulent dans un conducteur.</div>
+<div class="line">Un appareil de 2 000 W sous 230 V consomme environ 8,7 A.</div>
+</div>
+<p>💡 <strong>Analogie</strong> : Comme le débit d’eau dans un tuyau. Plus le débit est élevé, plus il y a d’eau qui passe.</p>
+</dd>
+<dt id="term-Court-circuit">Court-circuit<a class="headerlink" href="#term-Court-circuit" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Contact direct entre la <strong>phase</strong> et le <strong>neutre</strong> (ou la terre) sans résistance intermédiaire.</div>
+<div class="line">Provoque un courant très élevé qui fait disjoncter le disjoncteur.</div>
+<div class="line">Peut causer un incendie si non protégé.</div>
+</div>
+</dd>
+<dt id="term-Delestage-Diversion">Délestage / Diversion<a class="headerlink" href="#term-Delestage-Diversion" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Action de <strong>rediriger</strong> l’excédent de production vers une charge au lieu de l’injecter sur le réseau.</div>
+<div class="line">Le Mk2PVRouter fait du délestage intelligent en temps réel.</div>
+</div>
+</dd>
+<dt id="term-Diode">Diode<a class="headerlink" href="#term-Diode" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Composant électronique <strong>polarisé</strong> (a un sens) qui laisse passer le courant dans <strong>un seul sens</strong>.</div>
+<div class="line">Repérage : Une <strong>bande</strong> indique la cathode (côté -).</div>
+<div class="line">⚠️ <strong>Important</strong> : À installer dans le bon sens, sinon ne fonctionne pas.</div>
+</div>
+</dd>
+<dt id="term-Disjoncteur">Disjoncteur<a class="headerlink" href="#term-Disjoncteur" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Dispositif de <strong>sécurité</strong> qui coupe automatiquement le courant en cas de :</div>
+<div class="line">- <strong>Surcharge</strong> (trop d’appareils branchés)</div>
+<div class="line">- <strong>Court-circuit</strong> (contact direct entre phase et neutre)</div>
+<div class="line">Il se trouve dans le <strong>tableau électrique</strong> de l’habitation.</div>
+</div>
+</dd>
+<dt id="term-Dissipateur-thermique">Dissipateur thermique<a class="headerlink" href="#term-Dissipateur-thermique" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Pièce métallique (généralement en aluminium) qui <strong>évacue la chaleur</strong> des composants électroniques.</div>
+<div class="line">Fonctionne par <strong>convection naturelle</strong> (l’air chaud monte) ou forcée (ventilateur).</div>
+<div class="line">Le Mk2PVRouter utilise des dissipateurs pour les triacs (3 kW max par dissipateur).</div>
+</div>
+</dd>
+<dt id="term-Excedent">Excédent<a class="headerlink" href="#term-Excedent" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><strong>Surplus de production</strong> d’électricité photovoltaïque non consommé instantanément par les appareils de la maison.</div>
+<div class="line">Sans routeur : Cet excédent est injecté sur le réseau (souvent non rémunéré).</div>
+<div class="line">Avec routeur : Cet excédent est utilisé pour chauffer l’eau ou autre charge.</div>
+</div>
+</dd>
+<dt id="term-Electrisation">Électrisation<a class="headerlink" href="#term-Electrisation" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><strong>Choc électrique</strong> subi par une personne exposée à une tension électrique.</div>
+<div class="line">La personne <strong>survit</strong> mais peut avoir des séquelles (brûlures, troubles cardiaques).</div>
+<div class="line">Différent de l’électrocution (qui est mortel).</div>
+</div>
+</dd>
+<dt id="term-Electrocution">Électrocution<a class="headerlink" href="#term-Electrocution" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><strong>Décès causé</strong> par un choc électrique.</div>
+<div class="line">Peut survenir à partir de 50 V AC en milieu humide, 120 V AC en milieu sec.</div>
+<div class="line">⚠️ <strong>DANGER DE MORT</strong> : Le 230 V domestique peut tuer instantanément.</div>
+</div>
+</dd>
+<dt id="term-Etalonnage-Calibration">Étalonnage / Calibration<a class="headerlink" href="#term-Etalonnage-Calibration" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Procédure d’<strong>ajustement précis</strong> du routeur pour qu’il mesure correctement :</div>
+<div class="line">- La tension du réseau électrique (230 V)</div>
+<div class="line">- Le courant consommé/produit (A)</div>
+<div class="line">- La puissance (W)</div>
+<div class="line">Sans étalonnage, les mesures sont fausses et le routeur ne fonctionne pas correctement.</div>
+</div>
+</dd>
+<dt id="term-Firmware">Firmware<a class="headerlink" href="#term-Firmware" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><strong>Programme informatique</strong> stocké dans la mémoire du microcontrôleur.</div>
+<div class="line">C’est le « cerveau » du Mk2PVRouter qui gère les mesures et le contrôle des charges.</div>
+<div class="line">Se télécharge via l’Arduino IDE avec un câble USB-série (FTDI).</div>
+</div>
+</dd>
+<dt id="term-Fusible">Fusible<a class="headerlink" href="#term-Fusible" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Dispositif de <strong>protection</strong> qui fond (se coupe) en cas de surintensité.</div>
+<div class="line">Une fois fondu, il doit être <strong>remplacé</strong> (contrairement au disjoncteur qui se réarme).</div>
+<div class="line">Dans le Mk2PVRouter : Protège contre les courts-circuits et les surcharges.</div>
+</div>
+</dd>
+<dt id="term-Isolant-electrique">Isolant électrique<a class="headerlink" href="#term-Isolant-electrique" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Matériau qui <strong>ne conduit pas</strong> l’électricité (plastique, céramique, mica, silicone).</div>
+<div class="line">Utilisé pour <strong>séparer électriquement</strong> deux éléments conducteurs tout en permettant le contact thermique.</div>
+<div class="line">Exemple : Feuille de mica entre le triac et le dissipateur.</div>
+</div>
+</dd>
+<dt id="term-LED-Diode-electroluminescente">LED (Diode électroluminescente)<a class="headerlink" href="#term-LED-Diode-electroluminescente" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Composant <strong>polarisé</strong> qui émet de la lumière quand le courant passe.</div>
+<div class="line">Repérage : La <strong>patte longue</strong> est le + (anode), la <strong>patte courte</strong> est le - (cathode).</div>
+<div class="line">⚠️ <strong>Important</strong> : À installer dans le bon sens, sinon ne s’allume pas (et peut être endommagée).</div>
+</div>
+</dd>
+<dt id="term-Microcontroleur">Microcontrôleur<a class="headerlink" href="#term-Microcontroleur" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><strong>Mini-ordinateur</strong> sur une seule puce électronique.</div>
+<div class="line">Le Mk2PVRouter utilise un <strong>ATmega328P</strong> (le même que l’Arduino Uno).</div>
+<div class="line">Contient : Processeur, mémoire, entrées/sorties, convertisseurs analogique-numérique.</div>
+</div>
+</dd>
+<dt id="term-Monophase">Monophasé<a class="headerlink" href="#term-Monophase" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Système électrique avec <strong>une seule phase</strong> (230 V entre phase et neutre).</div>
+<div class="line">C’est le système standard pour la plupart des habitations françaises.</div>
+<div class="line">Compteur électrique monophasé : 2 fils (phase + neutre + terre).</div>
+</div>
+</dd>
+<dt id="term-Multimetre">Multimètre<a class="headerlink" href="#term-Multimetre" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Appareil de <strong>mesure</strong> électrique permettant de mesurer :</div>
+<div class="line">- <strong>Tension</strong> (V) en mode voltmètre</div>
+<div class="line">- <strong>Courant</strong> (A) en mode ampèremètre</div>
+<div class="line">- <strong>Résistance</strong> (Ω) en mode ohmmètre</div>
+<div class="line">- <strong>Continuité</strong> (pour vérifier les connexions)</div>
+</div>
+</dd>
+<dt id="term-Neutre">Neutre<a class="headerlink" href="#term-Neutre" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Le fil <strong>neutre</strong> (généralement bleu) permet le retour du courant vers le réseau électrique.</div>
+<div class="line">Il est normalement proche de 0 V, mais peut devenir dangereux en cas de défaut.</div>
+</div>
+</dd>
+<dt id="term-NF-C-15-100">NF C 15-100<a class="headerlink" href="#term-NF-C-15-100" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><strong>Norme électrique française</strong> qui définit les règles d’installation des circuits électriques domestiques.</div>
+<div class="line">Obligatoire pour toute installation électrique en France.</div>
+<div class="line">Le Mk2PVRouter doit être installé conformément à cette norme.</div>
+</div>
+</dd>
+<dt id="term-Phase">Phase<a class="headerlink" href="#term-Phase" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Le fil <strong>phase</strong> (généralement rouge, noir ou marron) apporte le courant électrique depuis le réseau.</div>
+<div class="line">⚠️ <strong>DANGER</strong> : Ce fil est sous tension de <strong>230 V</strong> et peut être <strong>MORTEL</strong> au contact.</div>
+</div>
+</dd>
+<dt id="term-Piste">Piste<a class="headerlink" href="#term-Piste" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Chemin conducteur en cuivre sur un circuit imprimé (<a class="reference internal" href="#term-PCB"><span class="xref std std-term">PCB</span></a>) qui relie les composants entre eux.</div>
+<div class="line">Équivalent des fils électriques, mais imprimés sur la carte.</div>
+</div>
+</dd>
+<dt id="term-Polarite">Polarité<a class="headerlink" href="#term-Polarite" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Le <strong>sens</strong> d’un composant électronique (+ et -).</div>
+<div class="line">Certains composants (diodes, LED, condensateurs électrolytiques) <strong>doivent</strong> être montés dans le bon sens.</div>
+<div class="line">⚠️ <strong>Danger</strong> : Un composant polarisé monté à l’envers peut exploser ou ne pas fonctionner.</div>
+</div>
+</dd>
+<dt id="term-Pont-de-soudure">Pont de soudure<a class="headerlink" href="#term-Pont-de-soudure" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><strong>Erreur de soudure</strong> : De l’étain relie accidentellement deux pistes ou broches qui ne doivent pas être connectées.</div>
+<div class="line">Provoque un <strong>court-circuit</strong>.</div>
+<div class="line">Se corrige en retirant l’excédent d’étain avec une tresse à dessouder.</div>
+</div>
+</dd>
+<dt id="term-Puissance-W">Puissance (W)<a class="headerlink" href="#term-Puissance-W" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">La <strong>puissance électrique</strong>, mesurée en <strong>watts (W)</strong>, représente l’énergie consommée ou produite par un appareil.</div>
+<div class="line"><strong>Formule</strong> : Puissance (W) = Tension (V) × Courant (A)</div>
+<div class="line">Exemple : Un chauffe-eau de 2 000 W sous 230 V consomme environ 8,7 A.</div>
+</div>
+</dd>
+<dt id="term-Resistance">Résistance (Ω)<a class="headerlink" href="#term-Resistance" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Une <strong>résistance</strong>, mesurée en <strong>ohms (Ω)</strong>, est un composant qui limite le passage du courant électrique.</div>
+<div class="line">Plus la résistance est élevée, moins le courant passe.</div>
+</div>
+<p>💡 <strong>Analogie</strong> : Comme un rétrécissement dans un tuyau qui limite le débit d’eau.</p>
+</dd>
+<dt id="term-Routeur-solaire">Routeur solaire<a class="headerlink" href="#term-Routeur-solaire" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Appareil qui <strong>redirige automatiquement</strong> l’excédent de production photovoltaïque vers des charges (chauffe-eau, radiateur) au lieu de l’injecter sur le réseau.</div>
+<div class="line">Le <strong>Mk2PVRouter</strong> est un routeur solaire.</div>
+</div>
+</dd>
+<dt id="term-Soudure">Soudure<a class="headerlink" href="#term-Soudure" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Technique pour <strong>fixer et relier électriquement</strong> des composants sur un circuit imprimé.</div>
+<div class="line">Utilise un <strong>fer à souder</strong> (300–350 °C) et de l’<strong>étain</strong> (alliage qui fond à ~200 °C).</div>
+<div class="line">Une bonne soudure est brillante et forme un cône régulier.</div>
+</div>
+</dd>
+<dt id="term-Tableau-electrique">Tableau électrique<a class="headerlink" href="#term-Tableau-electrique" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><strong>Coffret</strong> contenant les disjoncteurs et dispositifs de protection de l’installation électrique.</div>
+<div class="line">C’est là que se trouve le <strong>disjoncteur général</strong> permettant de couper toute l’installation.</div>
+</div>
+</dd>
+<dt id="term-Tension-V">Tension (V)<a class="headerlink" href="#term-Tension-V" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">La <strong>tension électrique</strong>, mesurée en <strong>volts (V)</strong>, représente la « pression » qui pousse les électrons à circuler dans un circuit.</div>
+<div class="line">En France, la tension domestique standard est de <strong>230 V AC</strong>.</div>
+</div>
+<p>💡 <strong>Analogie</strong> : Comme la pression de l’eau dans un tuyau. Plus la pression est élevée, plus l’eau circule fort.</p>
+</dd>
+<dt id="term-Terre">Terre<a class="headerlink" href="#term-Terre" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Le fil de <strong>terre</strong> (vert/jaune) est une protection de sécurité.</div>
+<div class="line">Il évacue les courants de fuite et protège contre l’électrocution en cas de défaut d’isolement.</div>
+</div>
+</dd>
+<dt id="term-Transformateur">Transformateur<a class="headerlink" href="#term-Transformateur" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Composant qui <strong>convertit</strong> une tension alternative en une autre tension alternative.</div>
+<div class="line">Dans le Mk2PVRouter : Les transformateurs ZMPT101K mesurent la tension secteur de façon isolée (230 V → signal basse tension).</div>
+</div>
+</dd>
+<dt id="term-Triac">Triac<a class="headerlink" href="#term-Triac" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Composant électronique qui agit comme un <strong>interrupteur rapide</strong> pour contrôler la puissance envoyée à une charge.</div>
+<div class="line">Utilisé dans le Mk2PVRouter pour réguler la puissance envoyée au chauffe-eau.</div>
+<div class="line">Génère de la chaleur, d’où la nécessité d’un dissipateur thermique.</div>
+</div>
+</dd>
+<dt id="term-Triphase">Triphasé<a class="headerlink" href="#term-Triphase" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Système électrique avec <strong>trois phases</strong> (400 V entre phases, 230 V entre chaque phase et le neutre).</div>
+<div class="line">Utilisé pour les installations nécessitant beaucoup de puissance (grandes maisons, bâtiments professionnels).</div>
+<div class="line">Compteur électrique triphasé : 4 fils (3 phases + neutre + terre).</div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="termes-techniques-avances">
+<h1>Termes Techniques Avancés<a class="headerlink" href="#termes-techniques-avances" title="Lien vers cette rubrique"></a></h1>
+<dl class="glossary">
+<dt id="term-AC">AC<a class="headerlink" href="#term-AC" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Alternating Current</em> ou courant alternatif.</div>
+<div class="line">Courant électrique dont l’intensité et la direction varient périodiquement (50 Hz en France).</div>
+</div>
+</dd>
+<dt id="term-ADC">ADC<a class="headerlink" href="#term-ADC" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Analog Digital Converter</em> ou convertisseur analogique/numérique.</div>
+<div class="line">Il permet de convertir un signal analogique, par exemple une tension, en un signal numérique, par exemple une valeur entre 0 et 1 023.</div>
+<div class="line">Supposons que la plage de mesure aille de 0 à 5 V, alors, une tension d’entrée de 2,5 V correspondra à la valeur 511. Une tension de 5 V correspondra à une valeur de 1 023.</div>
+</div>
+</dd>
+<dt id="term-ATmega328P">ATmega328P<a class="headerlink" href="#term-ATmega328P" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Microcontrôleur 8 bits de la famille AVR d’Atmel (maintenant Microchip).</div>
+<div class="line">C’est le « cerveau » du Mk2PVRouter et de l’Arduino Uno.</div>
+<div class="line">Caractéristiques : 32 Ko de mémoire Flash, 2 Ko de RAM, 1 Ko d’EEPROM, 6 entrées analogiques, fonctionne à 16 MHz.</div>
+</div>
+</dd>
+<dt id="term-Baud-rate">Baud rate<a class="headerlink" href="#term-Baud-rate" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Vitesse de communication série, mesurée en bits par seconde.</div>
+<div class="line">Le Mk2PVRouter utilise généralement 9 600 ou 115 200 bauds pour la communication avec l’ordinateur.</div>
+</div>
+</dd>
+<dt id="term-Burden">Burden<a class="headerlink" href="#term-Burden" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Résistance de charge.</div>
+<div class="line">Si le capteur <a class="reference internal" href="#term-CT"><span class="xref std std-term">CT</span></a> est du type « sortie courant » tel que le YHDC SCT-013-000, le signal de courant doit être converti en signal de tension avec une résistance de charge.</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://docs.openenergymonitor.org/electricity-monitoring/ct-sensors/interface-with-arduino.html" rel="noreferrer" target="_blank">CT Sensors - Interfacing with an Arduino</a></p>
+</div>
+</dd>
+<dt id="term-Carte-universelle">Carte universelle<a class="headerlink" href="#term-Carte-universelle" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Carte principale <strong>3phaseDiverter</strong> (rév. 6.0) qui remplace les anciennes cartes monophasée et triphasée séparées.</div>
+<div class="line">Supporte 4 configurations : monophasé, triphasé avec neutre, triphasé sans neutre et split-phase.</div>
+</div>
+</dd>
+<dt id="term-Cavalier-de-soudure">Cavalier de soudure<a class="headerlink" href="#term-Cavalier-de-soudure" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Pont conducteur réalisé en soudant deux pastilles adjacentes sur le <a class="reference internal" href="#term-PCB"><span class="xref std std-term">PCB</span></a>.</div>
+<div class="line">Les cavaliers V sel., JP1–JP3 et TEMP sur la carte universelle permettent de configurer le mode de fonctionnement (monophasé/triphasé, alimentation, module RF, capteur de température).</div>
+</div>
+</dd>
+<dt id="term-CMS">CMS<a class="headerlink" href="#term-CMS" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Composant Monté en Surface</em> (ou SMD en anglais : <em>Surface-Mount Device</em>).</div>
+<div class="line">Composant électronique miniaturisé soudé directement sur la surface du circuit imprimé, sans traverser la carte.</div>
+<div class="line">Sur la carte universelle 3phaseDiverter, les composants CMS sont assemblés en usine.</div>
+</div>
+</dd>
+<dt id="term-CT">CT<a class="headerlink" href="#term-CT" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Current Transformer</em> ou dans notre cas <strong>pince ampèremétrique</strong>.</div>
+<div class="line">La pince ampèremétrique, aussi appelée capteur de courant sans contact, est un type d’ampèremètre permettant de mesurer l’intensité du courant électrique circulant dans un fil conducteur sans avoir à ouvrir le circuit pour y placer un ampèremètre classique.</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://fr.wikipedia.org/wiki/Pince_amp%C3%A8rem%C3%A9trique" rel="noreferrer" target="_blank">Wikipédia, Pince ampèremétrique</a></div>
+<div class="line"><a class="reference external" href="https://docs.openenergymonitor.org/electricity-monitoring/ct-sensors/introduction.html" rel="noreferrer" target="_blank">CT sensors - An Introduction</a></div>
+</div>
+</div>
+</dd>
+<dt id="term-DC">DC<a class="headerlink" href="#term-DC" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Direct Current</em> ou courant continu.</div>
+<div class="line">Courant électrique dont l’intensité et la direction sont constantes dans le temps.</div>
+</div>
+</dd>
+<dt id="term-DIL">DIL<a class="headerlink" href="#term-DIL" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Dual In-line Package</em> ou boîtier double en ligne.</div>
+<div class="line">Un support DIL pour circuit intégré sert à plusieurs fins :</div>
+<div class="line"><br /></div>
+<div class="line">1. <strong>Facilité de Remplacement</strong> : Il permet de remplacer facilement un circuit intégré sans avoir à dessouder et ressouder le composant, ce qui est particulièrement utile en cas de défaillance ou de mise à jour.</div>
+<div class="line">2. <strong>Protection Contre la Chaleur</strong> : Lors de la soudure, il protège le circuit intégré de la chaleur excessive qui pourrait l’endommager.</div>
+<div class="line">3. <strong>Réutilisabilité</strong> : Il permet de réutiliser les circuits intégrés en les insérant et les retirant facilement du support.</div>
+<div class="line">4. <strong>Alignement Précis</strong> : Il assure un alignement précis des broches du circuit intégré avec les pistes du circuit imprimé.</div>
+<div class="line"><br /></div>
+<div class="line">En résumé, un support DIL facilite l’installation, le remplacement et la protection des circuits intégrés dans un montage électronique.</div>
+</div>
+</dd>
+<dt id="term-EEPROM">EEPROM<a class="headerlink" href="#term-EEPROM" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Electrically Erasable Programmable Read-Only Memory</em>.</div>
+<div class="line">Mémoire non volatile qui conserve les données même sans alimentation.</div>
+<div class="line">Le Mk2PVRouter y stocke les paramètres d’étalonnage.</div>
+</div>
+</dd>
+<dt id="term-ESP32-C3">ESP32-C3<a class="headerlink" href="#term-ESP32-C3" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Microcontrôleur RISC-V simple cœur de la société Espressif, intégrant WiFi 4 et Bluetooth LE 5.</div>
+<div class="line">Le module <strong>mk2Wifi</strong> utilise un ESP32-C3-MINI-1 pour ajouter la connectivité sans fil au Mk2PVRouter.</div>
+</div>
+</dd>
+<dt id="term-FTDI">FTDI<a class="headerlink" href="#term-FTDI" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Future Technology Devices International</em>.</div>
+<div class="line">FTDI est une société spécialisée dans la conception de circuits intégrés et de modules de communication USB. Les modules FTDI sont largement utilisés pour la programmation et la communication avec des microcontrôleurs et des circuits intégrés via une interface USB.</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://www.ftdichip.com/" rel="noreferrer" target="_blank">FTDI</a></p>
+</div>
+</dd>
+<dt id="term-GDT">GDT<a class="headerlink" href="#term-GDT" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Gas Discharge Tube</em> ou éclateur à gaz.</div>
+<div class="line">Composant de protection contre les surtensions qui s’amorce lorsqu’une tension transitoire dépasse son seuil.</div>
+<div class="line">Les GDT0–GDT3 sur la carte universelle forment la première ligne de défense parafoudre.</div>
+</div>
+</dd>
+<dt id="term-IoT">IoT<a class="headerlink" href="#term-IoT" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Internet of Things</em> ou Internet des Objets.</div>
+<div class="line">Connexion d’objets physiques à Internet pour collecter et échanger des données.</div>
+<div class="line">Le Mk2PVRouter peut être configuré pour envoyer des données au format IoT.</div>
+</div>
+</dd>
+<dt id="term-JSON">JSON<a class="headerlink" href="#term-JSON" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>JavaScript Object Notation</em>.</div>
+<div class="line">Format de données structuré, lisible par l’homme et facilement analysable par les machines.</div>
+<div class="line">Le Mk2PVRouter peut envoyer ses données au format JSON pour intégration domotique.</div>
+</div>
+</dd>
+<dt id="term-LDO">LDO<a class="headerlink" href="#term-LDO" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Low Drop-Out regulator</em> ou régulateur linéaire à faible chute de tension.</div>
+<div class="line">Composant qui convertit une tension continue en une tension plus basse avec un minimum de pertes.</div>
+<div class="line">Le Mk2PVRouter utilise un <strong>AP2112K-3.3</strong> pour convertir 5 V en 3,3 V.</div>
+</div>
+</dd>
+<dt id="term-mk2Wifi">mk2Wifi<a class="headerlink" href="#term-mk2Wifi" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Module d’extension WiFi/BLE pour le Mk2PVRouter, basé sur un <a class="reference internal" href="#term-ESP32-C3"><span class="xref std std-term">ESP32-C3</span></a>.</div>
+<div class="line">Se branche sur les connecteurs TRIG_EXT et UART_EXT de la carte principale.</div>
+<div class="line">Ajoute la connectivité sans fil, un écran OLED optionnel et la gestion du capteur de température DS18B20.</div>
+</div>
+</dd>
+<dt id="term-MOV">MOV<a class="headerlink" href="#term-MOV" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Metal Oxide Varistor</em> ou varistance à oxyde métallique.</div>
+<div class="line">Composant de protection qui écrête les surtensions en absorbant l’énergie excédentaire.</div>
+<div class="line">Les varistances RV0–RV3 et les modules GM1–GM3 protègent les circuits de mesure du Mk2PVRouter.</div>
+</div>
+</dd>
+<dt id="term-Optocoupleur">Optocoupleur<a class="headerlink" href="#term-Optocoupleur" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Ou photocoupleur.</div>
+<div class="line">Un optocoupleur est un composant électronique qui permet de transférer un signal électrique entre deux parties d’un circuit tout en les isolant électriquement l’une de l’autre. Il est souvent utilisé pour contrôler un circuit de haute tension à partir d’un signal de basse tension, en assurant une isolation galvanique entre les deux.</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Photocoupleur" rel="noreferrer" target="_blank">Wikipédia, Photocoupleur</a></p>
+</div>
+</dd>
+<dt id="term-OTA">OTA<a class="headerlink" href="#term-OTA" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Over-The-Air</em> ou mise à jour sans fil.</div>
+<div class="line">Technique permettant de mettre à jour le firmware d’un appareil via WiFi, sans connexion physique.</div>
+<div class="line">Le module mk2Wifi supporte les mises à jour OTA après le premier chargement par USB-C.</div>
+</div>
+</dd>
+<dt id="term-PCB">PCB<a class="headerlink" href="#term-PCB" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Printed Circuit Board</em> ou <strong>circuit imprimé</strong>.</div>
+<div class="line">Un circuit imprimé est un support, en général une plaque, permettant de maintenir et de relier électriquement un ensemble de composants électroniques entre eux, dans le but de réaliser un circuit électronique complexe. On le désigne aussi par le terme de carte électronique.</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Circuit_imprim%C3%A9" rel="noreferrer" target="_blank">Wikipédia, Circuit imprimé</a></p>
+</div>
+</dd>
+<dt id="term-Phase-angle-control">Phase-angle control<a class="headerlink" href="#term-Phase-angle-control" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Contrôle de puissance en déclenchant le triac à un angle variable de la sinusoïde.</div>
+<div class="line">Non utilisé dans le Mk2PVRouter car génère beaucoup de perturbations électromagnétiques.</div>
+</div>
+</dd>
+<dt id="term-Pull-up">Pull-up<a class="headerlink" href="#term-Pull-up" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Résistance de rappel.</div>
+<div class="line">Une résistance de rappel permet de fixer une entrée numérique à un état <em>HIGH</em> ou <em>LOW</em> stable.</div>
+<div class="line">Elle permet aussi de réduire le bruit, d’éliminer les broches flottantes et surtout, d’établir deux états électriques clairs et distincts.</div>
+</div>
+</dd>
+<dt id="term-PWM">PWM<a class="headerlink" href="#term-PWM" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Pulse Width Modulation</em> ou modulation de largeur d’impulsion.</div>
+<div class="line">Technique de contrôle de puissance en faisant varier le rapport cyclique d’un signal carré.</div>
+<div class="line">Le Mk2PVRouter n’utilise pas le PWM mais le burst-fire pour des raisons de compatibilité électromagnétique.</div>
+</div>
+</dd>
+<dt id="term-RF">RF<a class="headerlink" href="#term-RF" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Radio Frequency</em> ou radiofréquence.</div>
+<div class="line">Transmission de données sans fil par ondes radio.</div>
+<div class="line">Certaines versions du Mk2PVRouter supportent la transmission RF pour communiquer avec d’autres appareils.</div>
+</div>
+</dd>
+<dt id="term-RMS">RMS<a class="headerlink" href="#term-RMS" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Root Mean Square</em> ou valeur efficace.</div>
+<div class="line">Valeur d’une tension ou d’un courant alternatif équivalente à celle d’un courant continu qui produirait la même puissance.</div>
+<div class="line">Exemple : 230 V AC RMS = tension efficace du réseau français.</div>
+</div>
+</dd>
+<dt id="term-SIL">SIL<a class="headerlink" href="#term-SIL" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Single In-line Package</em> ou boîtier simple en ligne ou aussi <em>pin-header</em>.</div>
+<div class="line">Un support SIL pour circuit intégré est un support à une seule rangée de broches qui permet d’insérer et de retirer facilement un circuit intégré d’un circuit imprimé.</div>
+<div class="line">Il est utilisé pour les circuits intégrés ou modules à une seule rangée de broches.</div>
+</div>
+</dd>
+<dt id="term-SMA">SMA<a class="headerlink" href="#term-SMA" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>SubMiniature version A</em>.</div>
+<div class="line">Type de connecteur coaxial utilisé pour les connexions radiofréquences (<a class="reference internal" href="#term-RF"><span class="xref std std-term">RF</span></a>).</div>
+<div class="line">Le connecteur SMA de la carte universelle reçoit l’antenne du module RFM69CW.</div>
+</div>
+</dd>
+<dt id="term-Split-phase">Split-phase<a class="headerlink" href="#term-Split-phase" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Système électrique nord-américain composé de deux phases à 180° fournissant 120 V entre chaque phase et le neutre, et 240 V entre les deux phases.</div>
+<div class="line">La carte universelle 3phaseDiverter supporte cette configuration.</div>
+</div>
+</dd>
+<dt id="term-Theoreme-de-Blondel">Théorème de Blondel<a class="headerlink" href="#term-Theoreme-de-Blondel" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Théorème fondamental de la mesure de puissance en régime polyphasé, énoncé par André Blondel en 1893.</div>
+<div class="line">Il stipule que pour mesurer la puissance totale d’un système à <strong>N conducteurs</strong>, il suffit de <strong>N−1 wattmètres</strong> (ou capteurs de courant).</div>
+<div class="line">Application au Mk2PVRouter : en triphasé sans neutre (3 fils), 2 CT suffisent (CT1 et CT2) — la puissance sur L3 est déduite mathématiquement.</div>
+<div class="line">Voir <a class="reference external" href="https://en.wikipedia.org/wiki/Blondel%27s_theorem" rel="noreferrer" target="_blank">l’article Wikipédia (en anglais)</a>.</div>
+</div>
+</dd>
+<dt id="term-TVS">TVS<a class="headerlink" href="#term-TVS" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line"><em>Transient Voltage Suppressor</em> ou suppresseur de surtension transitoire.</div>
+<div class="line">Diode spécialisée qui protège les circuits sensibles contre les surtensions rapides.</div>
+<div class="line">La carte universelle utilise des diodes TVS (DF2B7AE, CDSOD323-T03C) pour protéger les entrées <a class="reference internal" href="#term-ADC"><span class="xref std std-term">ADC</span></a> de l’ATmega328P.</div>
+</div>
+</dd>
+<dt id="term-Zero-crossing">Zero-crossing<a class="headerlink" href="#term-Zero-crossing" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Détection du <strong>passage par zéro</strong> de la sinusoïde du réseau électrique.</div>
+<div class="line">Utilisé par le Mk2PVRouter pour synchroniser le contrôle des triacs et minimiser les perturbations.</div>
+</div>
+</dd>
+<dt id="term-ZMPT101K">ZMPT101K<a class="headerlink" href="#term-ZMPT101K" title="Lien vers ce terme"></a></dt><dd><div class="line-block">
+<div class="line">Transformateur de tension miniature (rapport 1000:1000) utilisé pour mesurer la tension secteur.</div>
+<div class="line">La carte universelle en utilise 1 (monophasé) à 3 (triphasé) pour la mesure de tension sur chaque phase.</div>
+</div>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../troubleshooting/" class="btn btn-neutral float-left" title="Guide de Dépannage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 20 février 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/glossary.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/glossary.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

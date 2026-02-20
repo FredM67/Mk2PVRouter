@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-02-20T11:05:06+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assemblage — Composants monophasé &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Assemblage — Composants triphasé" href="../assemblage-triphase/" />
+    <link rel="prev" title="Assemblage de la carte-mère universelle" href="../assemblage-carte-mere/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📋 Carte-mère universelle</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Assemblage — Composants monophasé</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#composants-basse-tension">Composants basse tension</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#connecteurs-ct1-et-ct2-optionnel">Connecteurs CT1 (et CT2 optionnel)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#composants-haute-tension">Composants haute tension</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eclateurs-a-gaz-gdt0-gdt1-optionnel-cms">Éclateurs à gaz GDT0, GDT1 (optionnel, CMS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fusibles-fs0-fs1">Fusibles FS0, FS1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connecteur-secteur-3-voies">Connecteur secteur (3 voies)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#protection-gm1-et-varistances-rv0-rv1-optionnelles">Protection GM1 et varistances RV0, RV1 (optionnelles)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transformateur-de-tension-tr1">Transformateur de tension TR1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#condensateur-film-c1">Condensateur film C1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-d-alimentation-ps1-rac05e">Module d’alimentation PS1 (RAC05E)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#self-de-mode-commun-fl1">Self de mode commun FL1</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#inspection-finale">Inspection finale</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tests-electriques/">Tests électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cavaliers/">Configuration des cavaliers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Câblage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Assemblage — Composants monophasé</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere/assemblage-monophase.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="assemblage-composants-monophase">
+<span id="assemblage-monophase"></span><h1>Assemblage — Composants monophasé<a class="headerlink" href="#assemblage-composants-monophase" title="Lien vers cette rubrique"></a></h1>
+<p>⏱️ <strong>Temps estimé</strong> : 30–45 minutes</p>
+<p>🔧 <strong>Niveau de difficulté</strong> : Intermédiaire</p>
+<div class="admonition-prerequis admonition">
+<p class="admonition-title">📋 Prérequis</p>
+<p>Avant de commencer ce chapitre :</p>
+<div class="line-block">
+<div class="line">☐ Composants communs soudés et vérifiés (voir <a class="reference internal" href="../assemblage-carte-mere/#assemblage-carte-mere"><span class="std std-ref">Assemblage de la carte-mère universelle</span></a>)</div>
+</div>
+</div>
+<p>En configuration monophasée ou split-phase, soudez les composants suivants en plus des composants communs.</p>
+<div class="admonition hint">
+<p class="admonition-title">Indication</p>
+<p>Les composants sont listés du plus bas au plus haut dans chaque groupe. En soudant dans cet ordre, les composants déjà soudés ne gênent pas le retournement du <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>.</p>
+</div>
+<section id="composants-basse-tension">
+<h2>Composants basse tension<a class="headerlink" href="#composants-basse-tension" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les connecteurs de sorties numériques (D2–D13) sont communs à toutes les configurations et déjà soudés à l’étape précédente (voir <a class="reference internal" href="../assemblage-carte-mere/#assemblage-carte-mere"><span class="std std-ref">Assemblage de la carte-mère universelle</span></a>).</p>
+</div>
+<section id="connecteurs-ct1-et-ct2-optionnel">
+<h3>Connecteurs CT1 (et CT2 optionnel)<a class="headerlink" href="#connecteurs-ct1-et-ct2-optionnel" title="Lien vers cette rubrique"></a></h3>
+<p>Les connecteurs Molex SL 1×02 pour les transformateurs de courant.</p>
+<ol class="arabic simple">
+<li><p>Soudez le connecteur <strong>CT1</strong> (phase L1)</p></li>
+</ol>
+<p>Si vous souhaitez mesurer la puissance de diversion (puissance routée vers la charge), soudez également le connecteur <strong>CT2</strong>.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — connecteur(s) CT soudé(s) en configuration monophasée.</p>
+</div>
+</section>
+</section>
+<section id="composants-haute-tension">
+<h2>Composants haute tension<a class="headerlink" href="#composants-haute-tension" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Les composants de cette section sont connectés au <strong>secteur 230 V</strong>. Vérifiez soigneusement chaque soudure.</p>
+</div>
+<section id="eclateurs-a-gaz-gdt0-gdt1-optionnel-cms">
+<h3>Éclateurs à gaz GDT0, GDT1 (optionnel, CMS)<a class="headerlink" href="#eclateurs-a-gaz-gdt0-gdt1-optionnel-cms" title="Lien vers cette rubrique"></a></h3>
+<p>Si fournis dans votre kit, soudez les éclateurs à gaz <strong>avant</strong> les autres composants haute tension — ce sont des composants <a class="reference internal" href="../../glossary/#term-CMS"><span class="xref std std-term">CMS</span></a>.</p>
+<ol class="arabic simple">
+<li><p>Soudez <strong>GDT0</strong> et <strong>GDT1</strong></p></li>
+</ol>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — GDT0 et GDT1 soudés (composants CMS).</p>
+</div>
+</section>
+<section id="fusibles-fs0-fs1">
+<h3>Fusibles FS0, FS1<a class="headerlink" href="#fusibles-fs0-fs1" title="Lien vers cette rubrique"></a></h3>
+<p>Les porte-fusibles pour la protection de la phase et du neutre (1 A × 250 V).</p>
+<ol class="arabic simple">
+<li><p>Soudez le porte-fusible <strong>FS0</strong> (neutre)</p></li>
+<li><p>Soudez le porte-fusible <strong>FS1</strong> (phase L1)</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — porte-fusibles FS0 et FS1 soudés.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Les fusibles réagissent à la chaleur — c’est leur principe de fonctionnement. Ne chauffez pas les broches plus de <strong>2–3 secondes</strong> par point de soudure pour éviter de les endommager.</p>
+</div>
+</section>
+<section id="connecteur-secteur-3-voies">
+<h3>Connecteur secteur (3 voies)<a class="headerlink" href="#connecteur-secteur-3-voies" title="Lien vers cette rubrique"></a></h3>
+<p>Le connecteur Phoenix Contact 3 voies (PE, N, L1) pour l’entrée secteur.</p>
+<ol class="arabic simple">
+<li><p>Soudez le connecteur secteur (3 voies)</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — connecteur Phoenix Contact 3 voies soudé.</p>
+</div>
+</section>
+<section id="protection-gm1-et-varistances-rv0-rv1-optionnelles">
+<h3>Protection GM1 et varistances RV0, RV1 (optionnelles)<a class="headerlink" href="#protection-gm1-et-varistances-rv0-rv1-optionnelles" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Les composants GM et RV ont un aspect et un pas de broches très similaires. <strong>Vérifiez la sérigraphie</strong> sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a> avant de souder chaque composant pour ne pas les intervertir. Si vous n’avez que les GM (sans RV), assurez-vous de les placer sur les emplacements <strong>GM</strong> et non sur les emplacements RV.</p>
+</div>
+<p>La varistance combinée <a class="reference internal" href="../../glossary/#term-GDT"><span class="xref std std-term">GDT</span></a>+<a class="reference internal" href="../../glossary/#term-MOV"><span class="xref std std-term">MOV</span></a> pour la protection de la phase L1.</p>
+<ol class="arabic simple">
+<li><p>Soudez le composant <strong>GM1</strong> sur son emplacement (vérifiez la sérigraphie)</p></li>
+</ol>
+<p>Si fournies dans votre kit, soudez les varistances optionnelles :</p>
+<ol class="arabic simple">
+<li><p>Soudez les varistances <strong>RV0</strong> et <strong>RV1</strong> (radial, 300 V) sur leurs emplacements respectifs</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — GM1 et varistances RV0/RV1 soudés (montrer la différence entre GM et RV).</p>
+</div>
+</section>
+<section id="transformateur-de-tension-tr1">
+<h3>Transformateur de tension TR1<a class="headerlink" href="#transformateur-de-tension-tr1" title="Lien vers cette rubrique"></a></h3>
+<p>Le transformateur <a class="reference internal" href="../../glossary/#term-ZMPT101K"><span class="xref std std-term">ZMPT101K</span></a> pour la mesure de tension de la phase L1.</p>
+<ol class="arabic simple">
+<li><p>Positionnez <strong>TR1</strong> sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p></li>
+<li><p>Soudez les broches</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id6">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — transformateur TR1 soudé.</p>
+</div>
+</section>
+<section id="condensateur-film-c1">
+<h3>Condensateur film C1<a class="headerlink" href="#condensateur-film-c1" title="Lien vers cette rubrique"></a></h3>
+<p>Le condensateur de filtrage secteur 1 µF / 310 VAC (classe X2).</p>
+<ol class="arabic simple">
+<li><p>Soudez le condensateur <strong>C1</strong> — composant non polarisé</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id7">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — condensateur film C1 soudé.</p>
+</div>
+</section>
+<section id="module-d-alimentation-ps1-rac05e">
+<h3>Module d’alimentation PS1 (RAC05E)<a class="headerlink" href="#module-d-alimentation-ps1-rac05e" title="Lien vers cette rubrique"></a></h3>
+<p>Le module d’alimentation AC-DC convertit le 230 VAC en 5 VDC (3 W).</p>
+<ol class="arabic simple">
+<li><p>Positionnez le module <strong>PS1</strong> sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p></li>
+<li><p>Vérifiez l’orientation selon la sérigraphie</p></li>
+<li><p>Soudez toutes les broches</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id8">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — module PS1 soudé, orientation correcte visible.</p>
+</div>
+</section>
+<section id="self-de-mode-commun-fl1">
+<h3>Self de mode commun FL1<a class="headerlink" href="#self-de-mode-commun-fl1" title="Lien vers cette rubrique"></a></h3>
+<p>La self de mode commun (Schaffner) filtre les perturbations électromagnétiques sur les lignes secteur.</p>
+<ol class="arabic simple">
+<li><p>Positionnez <strong>FL1</strong> sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p></li>
+<li><p>Soudez les broches</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id9">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — self de mode commun FL1 soudée.</p>
+</div>
+<div class="admonition-point-de-controle-composants-monophase admonition">
+<p class="admonition-title">✅ Point de Contrôle — Composants Monophasé</p>
+<p>Avant de continuer, vérifiez :</p>
+<p><strong>Basse tension :</strong></p>
+<div class="line-block">
+<div class="line">☐ Connecteur CT1 soudé (+ CT2 si option diversion)</div>
+</div>
+<p><strong>Haute tension :</strong></p>
+<div class="line-block">
+<div class="line">☐ GDT0, GDT1 soudés (si fournis)</div>
+<div class="line">☐ Fusibles FS0, FS1 soudés</div>
+<div class="line">☐ Connecteur secteur (3 voies) soudé</div>
+<div class="line">☐ GM1 soudé</div>
+<div class="line">☐ Varistances RV0, RV1 soudées (si fournies)</div>
+<div class="line">☐ Transformateur TR1 soudé</div>
+<div class="line">☐ Condensateur film C1 soudé</div>
+<div class="line">☐ Module d’alimentation PS1 soudé et orienté correctement</div>
+<div class="line">☐ Self de mode commun FL1 soudée</div>
+</div>
+<div class="line-block">
+<div class="line">☐ Toutes les soudures propres et brillantes</div>
+</div>
+</div>
+</section>
+</section>
+<section id="inspection-finale">
+<h2>Inspection finale<a class="headerlink" href="#inspection-finale" title="Lien vers cette rubrique"></a></h2>
+<p>Avant de passer aux tests électriques, effectuez une inspection minutieuse de toute la carte.</p>
+<div class="admonition-point-de-controle-final-assemblage-carte-mere admonition">
+<p class="admonition-title">✅ Point de Contrôle Final — Assemblage Carte-Mère</p>
+<div class="line-block">
+<div class="line">☐ <strong>Toutes les soudures vérifiées</strong> : brillantes, sans pont, sans soudure froide</div>
+<div class="line">☐ <strong>Pas de morceaux de pattes</strong> coupées sur la carte</div>
+<div class="line">☐ <strong>Pas de flux de soudure</strong> résiduel entre les pistes</div>
+<div class="line">☐ <strong>Support IC1 vide</strong> (ATmega328P PAS encore inséré)</div>
+<div class="line">☐ <strong>Cavaliers configurés</strong> selon votre configuration</div>
+<div class="line">☐ <strong>Composants polarisés</strong> vérifiés (C3)</div>
+<div class="line">☐ <strong>Carte propre</strong> et exempte de débris</div>
+</div>
+</div>
+<p>Passez ensuite au chapitre <a class="reference internal" href="../tests-electriques/#tests-electriques"><span class="std std-ref">Tests électriques</span></a> pour vérifier le bon fonctionnement de la carte.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../assemblage-carte-mere/" class="btn btn-neutral float-left" title="Assemblage de la carte-mère universelle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../assemblage-triphase/" class="btn btn-neutral float-right" title="Assemblage — Composants triphasé" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 20 février 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere/assemblage-monophase.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/carte-mere/assemblage-monophase.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

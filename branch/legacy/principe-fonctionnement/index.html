@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2025-12-02T11:02:27+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Principe de fonctionnement &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/clickable-graphviz.js?v=b703d362"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="Burst Fire Control" href="../burst-fire-control/" />
+    <link rel="prev" title="Introduction" href="../introduction/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Principe de fonctionnement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exemple-dutilisation">Exemple d’utilisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fonctionnement-des-led">Fonctionnement des LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mode-de-regulation-des-triacs">Mode de régulation des triacs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#avantages-du-burst-fire-control">Avantages du <em>burst fire control</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fonctionnalites-avancees">Fonctionnalités avancées</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">1~ Kit monophasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mono/soudures-mono/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/percages-mono/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/carte-sortie-relais-mono/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/confection-cables-mono/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/assemblage-mono/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/test-logiciel-mono/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/etalonnage-mono/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">3~ Kit triphasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tri/soudures-tri/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/percages-tri/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/carte-sortie-relais-tri/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/confection-cables-tri/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/assemblage-tri/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/test-logiciel-tri/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/etalonnage-tri/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">🔧 Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Principe de fonctionnement</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/principe-fonctionnement.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="principe-de-fonctionnement">
+<span id="principe-fonctionnement"></span><h1>Principe de fonctionnement<a class="headerlink" href="#principe-de-fonctionnement" title="Lien vers cette rubrique"></a></h1>
+<p>Le Mk2PVRouter est conçu pour optimiser l’autoconsommation d’énergie produite par un système photovoltaïque. Son fonctionnement repose sur la surveillance en temps réel du <strong>bilan énergétique au point de raccordement</strong> et sur la gestion intelligente des surplus d’énergie.</p>
+<p>Voici les étapes principales du fonctionnement du Mk2PVRouter :</p>
+<ol class="arabic simple">
+<li><p><strong>Surveillance du bilan énergétique</strong> :</p>
+<ul class="simple">
+<li><p>Le routeur mesure en permanence le courant et la tension au point de raccordement au réseau électrique.</p></li>
+<li><p>Il calcule le <strong>bilan énergétique</strong> en temps réel, c’est-à-dire la différence entre la puissance injectée dans le réseau et la puissance prélevée.</p></li>
+<li><p>Si le bilan est positif (excédent d’énergie), cela signifie que la production dépasse la consommation.</p></li>
+</ul>
+</li>
+<li><p><strong>Détection des surplus d’énergie</strong> :</p>
+<ul class="simple">
+<li><p>Lorsque le bilan énergétique est positif, le Mk2PVRouter détecte un surplus d’énergie.</p></li>
+<li><p>Ce surplus, qui serait normalement réinjecté dans le réseau, est redirigé vers des charges spécifiques.</p></li>
+</ul>
+</li>
+<li><p><strong>Gestion des charges</strong> :</p>
+<ul class="simple">
+<li><p>Le Mk2PVRouter redirige l’énergie excédentaire vers des appareils résistifs tels que des chauffe-eaux, radiateurs ou planchers chauffants.</p></li>
+<li><p>Grâce à ses modules de sortie-relais, il peut également activer ou désactiver des appareils en fonction de plages horaires, de températures ou d’autres paramètres configurables.</p></li>
+</ul>
+</li>
+<li><p><strong>Étalonnage et précision</strong> :</p>
+<ul class="simple">
+<li><p>Pour garantir une gestion optimale, le routeur doit être étalonné en fonction des caractéristiques spécifiques de l’installation électrique (voir <a class="reference internal" href="../mono/etalonnage-mono/#etalonnage-mono"><span class="std std-ref">Étalonnage</span></a> ou <a class="reference internal" href="../tri/etalonnage-tri/#etalonnage-tri"><span class="std std-ref">Étalonnage</span></a>).</p></li>
+</ul>
+</li>
+<li><p><strong>Avantages</strong> :</p>
+<ul class="simple">
+<li><p>Réduction des pertes d’énergie en maximisant l’autoconsommation.</p></li>
+<li><p>Diminution de la dépendance au réseau électrique.</p></li>
+<li><p>Optimisation des coûts énergétiques.</p></li>
+</ul>
+</li>
+</ol>
+<figure class="align-center" id="id1">
+<div class="graphviz"><object data="../_images/graphviz-22d851778a40162c62ed8c8ce43aeb25cdbc85b8.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">Schéma de fonctionnement du Mk2PVRouter</p></object></div>
+<figcaption>
+<p><span class="caption-text">Schéma illustrant le fonctionnement du Mk2PVRouter.</span><a class="headerlink" href="#id1" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<section id="exemple-dutilisation">
+<h2>Exemple d’utilisation<a class="headerlink" href="#exemple-dutilisation" title="Lien vers cette rubrique"></a></h2>
+<div class="line-block">
+<div class="line">Prenons l’exemple d’un foyer équipé d’un système photovoltaïque et d’un chauffe-eau électrique :</div>
+</div>
+<ul class="simple">
+<li><p>Pendant la journée, le système photovoltaïque produit de l’électricité.</p></li>
+<li><p>Si la production dépasse la consommation du foyer (par exemple, lorsque les occupants sont absents), le Mk2PVRouter détecte ce surplus via le bilan énergétique.</p></li>
+<li><p>Le surplus est redirigé vers le chauffe-eau, permettant de chauffer l’eau sans consommer d’électricité du réseau.</p></li>
+<li><p>Lorsque le chauffe-eau atteint la température souhaitée, le routeur peut rediriger l’énergie vers d’autres charges ou arrêter la redirection.</p></li>
+</ul>
+</section>
+<section id="fonctionnement-des-led">
+<h2>Fonctionnement des LED<a class="headerlink" href="#fonctionnement-des-led" title="Lien vers cette rubrique"></a></h2>
+<p>Le Mk2PVRouter est équipé de LED pour indiquer l’état des sorties triac. Ces LED fournissent des informations visuelles sur la quantité d’énergie routée :</p>
+<ul class="simple">
+<li><p><strong>Allumage de la LED</strong> :</p>
+<ul>
+<li><p>Lorsque la LED associée à une sortie triac est allumée, cela signifie que le courant passe à travers cette sortie.</p></li>
+</ul>
+</li>
+<li><p><strong>Clignotement de la LED</strong> :</p>
+<ul>
+<li><p>Plus la LED clignote rapidement, plus la quantité d’énergie routée est importante.</p></li>
+<li><p>Un clignotement lent indique une faible quantité d’énergie routée, tandis qu’un clignotement rapide indique une forte quantité d’énergie.</p></li>
+</ul>
+</li>
+<li><p><strong>LED fixe</strong> :</p>
+<ul>
+<li><p>Une LED allumée de manière fixe peut indiquer deux situations :</p>
+<ol class="arabic simple">
+<li><p>La charge connectée consomme 100 % de l’énergie routée.</p></li>
+<li><p>La charge connectée ne consomme plus d’énergie, par exemple lorsque la température souhaitée est atteinte (dans le cas d’un chauffe-eau ou d’un radiateur).</p></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Une LED fixe ne signifie pas nécessairement que l’énergie est toujours consommée. Cela peut également indiquer que la charge a atteint son seuil de fonctionnement (par exemple, un chauffe-eau ayant atteint sa température maximale).</p>
+</div>
+<p>Ces indications permettent de vérifier visuellement le fonctionnement du routeur et de s’assurer que l’énergie excédentaire est correctement redirigée vers les charges.</p>
+</section>
+<section id="mode-de-regulation-des-triacs">
+<h2>Mode de régulation des triacs<a class="headerlink" href="#mode-de-regulation-des-triacs" title="Lien vers cette rubrique"></a></h2>
+<p>Le Mk2PVRouter utilise un mode de régulation appelé <strong>burst fire control</strong> pour piloter les triacs. Ce mode consiste à envoyer des trains complets d’ondes sinusoïdales au lieu de découper chaque cycle. En d’autres termes, le triac est activé ou désactivé pour des périodes complètes de la fréquence du réseau (par exemple, 50 Hz en Europe).</p>
+<section id="avantages-du-burst-fire-control">
+<h3>Avantages du <em>burst fire control</em><a class="headerlink" href="#avantages-du-burst-fire-control" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p><strong>Réduction des harmoniques</strong> :</p>
+<ul>
+<li><p>Contrairement à d’autres modes de régulation (comme le contrôle en phase), le burst fire control ne génère pas d’harmoniques dans le réseau électrique. Cela permet de préserver la qualité du signal électrique et d’éviter les perturbations pour les autres appareils connectés.</p></li>
+</ul>
+</li>
+<li><p><strong>Efficacité énergétique</strong> :</p>
+<ul>
+<li><p>En minimisant les pertes liées à la commutation, ce mode de régulation améliore l’efficacité globale du système.</p></li>
+</ul>
+</li>
+<li><p><strong>Compatibilité avec les charges résistives</strong> :</p>
+<ul>
+<li><p>Ce mode est particulièrement adapté aux charges purement résistives, comme les chauffe-eaux ou les radiateurs, qui n’ont pas besoin d’une régulation fine de la puissance.</p></li>
+</ul>
+</li>
+</ul>
+<p>Ce mode de régulation garantit un fonctionnement stable et respectueux des normes électriques tout en optimisant l’utilisation de l’énergie excédentaire.</p>
+<p>Pour plus d’informations sur le <em>burst fire control</em>, consultez la section <a class="reference internal" href="../burst-fire-control/#burst-fire-control"><span class="std std-ref">Burst Fire Control</span></a>.</p>
+</section>
+</section>
+<section id="fonctionnalites-avancees">
+<h2>Fonctionnalités avancées<a class="headerlink" href="#fonctionnalites-avancees" title="Lien vers cette rubrique"></a></h2>
+<p>Le Mk2PVRouter offre également des fonctionnalités avancées :</p>
+<ul>
+<li><p><strong>Programmation horaire</strong> :</p>
+<ul class="simple">
+<li><p>Permet de définir des plages horaires pour activer ou désactiver certaines charges.</p></li>
+</ul>
+</li>
+<li><p><strong>Gestion multi-phases</strong> :</p>
+<ul class="simple">
+<li><p>La version triphasée peut gérer les surplus sur plusieurs phases indépendamment.</p></li>
+</ul>
+</li>
+<li><p><strong>Surveillance et journalisation</strong> :</p>
+<ul class="simple">
+<li><p>Les données de bilan énergétique peuvent être enregistrées pour analyse.</p></li>
+</ul>
+</li>
+<li><p><strong>Interfaçage avec Home Assistant</strong> :</p>
+<ul class="simple">
+<li><p>En ajoutant un module ESP32, le Mk2PVRouter peut être intégré à Home Assistant pour une gestion centralisée et une visualisation des données en temps réel.</p></li>
+<li><p>Il est également possible de piloter certaines fonctions du routeur via Home Assistant, comme la <strong>marche forcée</strong>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pour plus de détails sur l’intégration avec Home Assistant et pour accéder à un fichier YAML prêt à l’emploi pour ESPHome, consultez ce <a class="reference external" href="https://gist.github.com/FredM67/986e1cb0fc020fa6324ccc151006af99" rel="noreferrer" target="_blank">Gist</a>.</p>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../introduction/" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../burst-fire-control/" class="btn btn-neutral float-right" title="Burst Fire Control" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 02 décembre 2025.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="../_static/Manuel_1.pdf">PDF1</a></dd>
+        
+          <dd><a href="../_static/Manuel_2.pdf">PDF2</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/principe-fonctionnement.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/principe-fonctionnement.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

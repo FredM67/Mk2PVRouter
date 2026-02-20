@@ -1,0 +1,794 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-02-20T08:27:09+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation des Logiciels &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="Présentation de la carte universelle" href="../carte-mere/presentation/" />
+    <link rel="prev" title="Guide de Soudure pour Débutants" href="../soldering-tutorial/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#installation-pilotes-ftdi">Installation Pilotes FTDI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#windows">🪟 Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#verification">Vérification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#macos">🍎 macOS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ftdi-macos-verif">Vérification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#si-aucun-peripherique-napparait">Si aucun périphérique n’apparaît</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#linux">🐧 Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ftdi-linux-verif">Vérification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#si-le-pilote-nest-pas-charge">Si le pilote n’est pas chargé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ajouter-lutilisateur-au-groupe-dialout">Ajouter l’utilisateur au groupe dialout</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#option-a-installation-avec-arduino-ide">Option A : Installation avec Arduino IDE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation-arduino-ide">Installation Arduino IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arduino-ide-windows">🪟 Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#telechargement">Téléchargement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#arduino-ide-macos">🍎 macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#arduino-ide-macos-telechargement">Téléchargement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arduino-ide-macos-installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#linux-ubuntu-debian">Linux (Ubuntu/Debian)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methode-recommandee-appimage">Méthode recommandée : AppImage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alternative-installation-via-le-gestionnaire-de-paquets">Alternative : Installation via le gestionnaire de paquets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-arduino-ide-pour-c-17">Configuration Arduino IDE pour C++17</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#localisation-du-fichier-platform-txt">Localisation du fichier <cite>platform.txt</cite></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">macOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cpp17-linux">Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#modification-du-fichier">Modification du fichier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-des-bibliotheques">Installation des Bibliothèques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ouvrir-le-gestionnaire-de-bibliotheques">Ouvrir le Gestionnaire de bibliothèques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-de-arduinojson">Installation de ArduinoJson</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-de-onewire">Installation de OneWire</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Vérification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#option-b-installation-avec-platformio">Option B : Installation avec PlatformIO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pour-les-utilisateurs-avances">Pour les Utilisateurs Avancés</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#avantages">Avantages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-visual-studio-code">Installation Visual Studio Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#platformio-vscode-linux">Linux (Ubuntu/Debian)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methode-1-installation-via-le-site-officiel-recommande">Méthode 1 : Installation via le site officiel (recommandé)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methode-2-installation-via-le-gestionnaire-de-paquets">Méthode 2 : Installation via le gestionnaire de paquets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-platformio-ide">Installation PlatformIO IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-de-lextension">Installation de l’Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verification-de-linstallation">Vérification de l’Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ouverture-du-projet">Ouverture du Projet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-du-projet">Configuration du Projet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compilation-et-televersement">Compilation et Téléversement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selection-de-la-configuration">Sélection de la Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📋 Carte-mère universelle</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/tests-electriques/">Tests électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Câblage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation des Logiciels</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/installation-logiciel.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-des-logiciels">
+<span id="installation-logiciel"></span><h1>Installation des Logiciels<a class="headerlink" href="#installation-des-logiciels" title="Lien vers cette rubrique"></a></h1>
+<p>Ce chapitre détaille l’installation de l’environnement de développement nécessaire pour programmer le Mk2PVRouter. Pour le téléchargement et la configuration du firmware, voir <a class="reference internal" href="../firmware/test-logiciel/#test-logiciel"><span class="std std-ref">Tests logiciels</span></a>.</p>
+<p>⏱️ <strong>Temps estimé :</strong></p>
+<ul class="simple">
+<li><p>Débutant : 2–3 heures</p></li>
+<li><p>Expérimenté : 1–2 heures</p></li>
+</ul>
+</section>
+<section id="installation-pilotes-ftdi">
+<span id="install-etape1-ftdi"></span><h1>Installation Pilotes FTDI<a class="headerlink" href="#installation-pilotes-ftdi" title="Lien vers cette rubrique"></a></h1>
+<p>Les pilotes FTDI sont <strong>OBLIGATOIRES</strong> pour communiquer avec le routeur via le programmateur USB.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Sans ces pilotes, l’ordinateur ne détectera pas le routeur !</p>
+</div>
+<section id="windows">
+<span id="ftdi-windows"></span><h2>🪟 Windows<a class="headerlink" href="#windows" title="Lien vers cette rubrique"></a></h2>
+<ol class="arabic simple">
+<li><p>Ouvrir le navigateur : <a class="reference external" href="https://ftdichip.com/drivers/vcp-drivers/" rel="noreferrer" target="_blank">https://ftdichip.com/drivers/vcp-drivers/</a></p></li>
+<li><p>Cliquer sur <strong>« Windows »</strong> dans la colonne <strong>« Available Drivers »</strong></p></li>
+<li><p>Télécharger la dernière version (fichier <cite>.exe</cite>)</p></li>
+<li><p>Exécuter le fichier téléchargé en tant qu’administrateur (clic droit → <strong>« Exécuter en tant qu’administrateur »</strong>)</p></li>
+<li><p>Suivre l’assistant d’installation</p></li>
+<li><p><strong>Redémarrer l’ordinateur</strong> après l’installation</p></li>
+</ol>
+<section id="verification">
+<span id="ftdi-windows-verif"></span><h3>Vérification<a class="headerlink" href="#verification" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Connecter l’adaptateur FTDI à un port USB</p></li>
+<li><p>Ouvrir le <strong>Gestionnaire de périphériques</strong> (Win + X → Gestionnaire de périphériques)</p></li>
+<li><p>Développer <strong>« Ports (COM et LPT) »</strong></p></li>
+<li><p>Vérifier la présence de <strong>« USB Serial Port (COMx) »</strong> où x est un numéro</p></li>
+<li><p><strong>Noter le numéro COMx</strong> (exemple : COM3, COM4)</p></li>
+</ol>
+</section>
+</section>
+<section id="macos">
+<span id="ftdi-macos"></span><h2>🍎 macOS<a class="headerlink" href="#macos" title="Lien vers cette rubrique"></a></h2>
+<p>Les pilotes FTDI sont généralement inclus dans macOS moderne.</p>
+<section id="ftdi-macos-verif">
+<span id="id1"></span><h3>Vérification<a class="headerlink" href="#ftdi-macos-verif" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic">
+<li><p>Connecter l’adaptateur FTDI à un port USB</p></li>
+<li><p>Ouvrir un terminal</p></li>
+<li><p>Taper la commande :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>/dev/tty.*
+</pre></div>
+</div>
+</li>
+<li><p>Rechercher une ligne contenant <cite>tty.usbserial</cite> (exemple : <cite>/dev/tty.usbserial-A50285BI</cite>)</p></li>
+</ol>
+</section>
+<section id="si-aucun-peripherique-napparait">
+<h3>Si aucun périphérique n’apparaît<a class="headerlink" href="#si-aucun-peripherique-napparait" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Télécharger les pilotes sur <a class="reference external" href="https://ftdichip.com/drivers/vcp-drivers/" rel="noreferrer" target="_blank">https://ftdichip.com/drivers/vcp-drivers/</a></p></li>
+<li><p>Choisir la version macOS</p></li>
+<li><p>Installer le fichier <cite>.dmg</cite></p></li>
+<li><p>Redémarrer le Mac</p></li>
+</ol>
+</section>
+</section>
+<section id="linux">
+<span id="ftdi-linux"></span><h2>🐧 Linux<a class="headerlink" href="#linux" title="Lien vers cette rubrique"></a></h2>
+<p>Les pilotes FTDI sont généralement inclus dans le noyau Linux.</p>
+<section id="ftdi-linux-verif">
+<span id="id2"></span><h3>Vérification<a class="headerlink" href="#ftdi-linux-verif" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>lsusb
+</pre></div>
+</div>
+<p>Rechercher une ligne contenant « FTDI » ou « Future Technology Devices ».</p>
+</section>
+<section id="si-le-pilote-nest-pas-charge">
+<h3>Si le pilote n’est pas chargé<a class="headerlink" href="#si-le-pilote-nest-pas-charge" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>modprobe<span class="w"> </span>ftdi_sio
+</pre></div>
+</div>
+</section>
+<section id="ajouter-lutilisateur-au-groupe-dialout">
+<h3>Ajouter l’utilisateur au groupe dialout<a class="headerlink" href="#ajouter-lutilisateur-au-groupe-dialout" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>usermod<span class="w"> </span>-a<span class="w"> </span>-G<span class="w"> </span>dialout<span class="w"> </span><span class="nv">$USER</span>
+sudo<span class="w"> </span>reboot
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le redémarrage est nécessaire pour que les changements prennent effet.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="choix-de-lenvironnement-de-developpement">
+<h1>Choix de l’Environnement de Développement<a class="headerlink" href="#choix-de-lenvironnement-de-developpement" title="Lien vers cette rubrique"></a></h1>
+<p>Vous avez deux options pour programmer le Mk2PVRouter :</p>
+<p><strong>Option A : Arduino IDE</strong> (recommandé pour les débutants)</p>
+<ul class="simple">
+<li><p>Configuration manuelle nécessaire (C++17, bibliothèques)</p></li>
+<li><p>Suivre les sous-sections de l”<strong>Option A</strong> ci-dessous</p></li>
+</ul>
+<p><strong>Option B : PlatformIO</strong> (recommandé pour les utilisateurs avancés)</p>
+<ul class="simple">
+<li><p>Support C++17 natif (pas de configuration manuelle)</p></li>
+<li><p>Suivre les sous-sections de l”<strong>Option B</strong> ci-dessous</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Vous pouvez choisir l’une ou l’autre option, ou même installer les deux environnements si vous le souhaitez.</p>
+</div>
+<section id="option-a-installation-avec-arduino-ide">
+<span id="install-arduino"></span><h2>Option A : Installation avec Arduino IDE<a class="headerlink" href="#option-a-installation-avec-arduino-ide" title="Lien vers cette rubrique"></a></h2>
+<section id="installation-arduino-ide">
+<h3>Installation Arduino IDE<a class="headerlink" href="#installation-arduino-ide" title="Lien vers cette rubrique"></a></h3>
+<p>L’Arduino IDE est le logiciel qui permet de programmer le routeur.</p>
+</section>
+<section id="arduino-ide-windows">
+<span id="id3"></span><h3>🪟 Windows<a class="headerlink" href="#arduino-ide-windows" title="Lien vers cette rubrique"></a></h3>
+<section id="telechargement">
+<span id="arduino-ide-windows-telechargement"></span><h4>Téléchargement<a class="headerlink" href="#telechargement" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p>Ouvrir le navigateur web : <a class="reference external" href="https://www.arduino.cc/en/software" rel="noreferrer" target="_blank">https://www.arduino.cc/en/software</a></p></li>
+<li><p>Cliquer sur <strong>« Windows Win 10 and newer »</strong> (fichier <cite>.exe</cite> ou <cite>.zip</cite>)</p></li>
+<li><p>⚠️ <strong>NE PAS</strong> télécharger la version <strong>« Windows app »</strong> (incompatibilités connues)</p></li>
+<li><p>Attendre la fin du téléchargement (~200 MB)</p></li>
+</ol>
+</section>
+<section id="installation">
+<span id="arduino-ide-windows-installation"></span><h4>Installation<a class="headerlink" href="#installation" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p>Double-cliquer sur le fichier téléchargé (<cite>arduino-ide-xxxx.exe</cite>)</p></li>
+<li><p>Accepter la licence</p></li>
+<li><p><strong>IMPORTANT :</strong> Cocher <strong>« Install USB drivers »</strong> et tous les composants</p></li>
+<li><p>Choisir le répertoire d’installation (laisser par défaut : <cite>C:\Program Files\Arduino</cite>)</p></li>
+<li><p>Cliquer sur <strong>« Install »</strong></p></li>
+<li><p>Attendre la fin de l’installation (5–10 minutes)</p></li>
+<li><p>Laisser l’installateur créer les raccourcis sur le bureau</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si Windows affiche un avertissement de sécurité, cliquer sur <strong>« Exécuter quand même »</strong>.
+Le logiciel Arduino est sûr et largement utilisé.</p>
+</div>
+</section>
+</section>
+<section id="arduino-ide-macos">
+<span id="id4"></span><h3>🍎 macOS<a class="headerlink" href="#arduino-ide-macos" title="Lien vers cette rubrique"></a></h3>
+<section id="arduino-ide-macos-telechargement">
+<span id="id5"></span><h4>Téléchargement<a class="headerlink" href="#arduino-ide-macos-telechargement" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p>Ouvrir le navigateur web : <a class="reference external" href="https://www.arduino.cc/en/software" rel="noreferrer" target="_blank">https://www.arduino.cc/en/software</a></p></li>
+<li><p>Cliquer sur <strong>« macOS »</strong> (fichier <cite>.dmg</cite>)</p></li>
+<li><p>Attendre la fin du téléchargement</p></li>
+</ol>
+</section>
+<section id="arduino-ide-macos-installation">
+<span id="id6"></span><h4>Installation<a class="headerlink" href="#arduino-ide-macos-installation" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p>Ouvrir le fichier <cite>.dmg</cite> téléchargé</p></li>
+<li><p>Glisser l’icône Arduino dans le dossier <strong>Applications</strong></p></li>
+<li><p>Attendre la copie des fichiers</p></li>
+<li><p>Éjecter l’image disque</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Au premier lancement, macOS peut demander l’autorisation d’ouvrir l’application.
+Cliquer sur <strong>« Ouvrir »</strong> dans la fenêtre de sécurité.</p>
+</div>
+</section>
+</section>
+<section id="linux-ubuntu-debian">
+<span id="arduino-ide-linux"></span><h3>Linux (Ubuntu/Debian)<a class="headerlink" href="#linux-ubuntu-debian" title="Lien vers cette rubrique"></a></h3>
+<section id="methode-recommandee-appimage">
+<h4>Méthode recommandée : AppImage<a class="headerlink" href="#methode-recommandee-appimage" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic">
+<li><p>Ouvrir le navigateur web : <a class="reference external" href="https://www.arduino.cc/en/software" rel="noreferrer" target="_blank">https://www.arduino.cc/en/software</a></p></li>
+<li><p>Télécharger la version <strong>« Linux AppImage »</strong></p></li>
+<li><p>Ouvrir un terminal</p></li>
+<li><p>Rendre le fichier exécutable :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Téléchargements
+chmod<span class="w"> </span>+x<span class="w"> </span>arduino-ide-*-linux-x64.AppImage
+./arduino-ide-*-linux-x64.AppImage
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="alternative-installation-via-le-gestionnaire-de-paquets">
+<h4>Alternative : Installation via le gestionnaire de paquets<a class="headerlink" href="#alternative-installation-via-le-gestionnaire-de-paquets" title="Lien vers cette rubrique"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>arduino
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>La version des dépôts peut être ancienne. Privilégier l’AppImage pour avoir la dernière version.</p>
+</div>
+</section>
+</section>
+<section id="configuration-arduino-ide-pour-c-17">
+<span id="arduino-cpp17-config"></span><h3>Configuration Arduino IDE pour C++17<a class="headerlink" href="#configuration-arduino-ide-pour-c-17" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>ÉTAPE OBLIGATOIRE</strong> — Le firmware nécessite le support C++17.</p>
+<p>Sans cette modification, la compilation échouera avec des erreurs incompréhensibles !</p>
+</div>
+<p>Le firmware du Mk2PVRouter utilise des fonctionnalités modernes du C++ (C++17) qui ne sont pas activées par défaut dans Arduino IDE.</p>
+</section>
+<section id="localisation-du-fichier-platform-txt">
+<h3>Localisation du fichier <cite>platform.txt</cite><a class="headerlink" href="#localisation-du-fichier-platform-txt" title="Lien vers cette rubrique"></a></h3>
+<p>Le fichier à modifier se trouve à différents emplacements selon le système d’exploitation :</p>
+<section id="id7">
+<h4>Windows<a class="headerlink" href="#id7" title="Lien vers cette rubrique"></a></h4>
+<p>Deux emplacements possibles :</p>
+<ol class="arabic">
+<li><p><cite>C:\Program Files (x86)\Arduino\hardware\arduino\avr\platform.txt</cite></p></li>
+<li><p><cite>%LOCALAPPDATA%\Arduino15\packages\arduino\hardware\avr\x.y.z\platform.txt</cite></p>
+<p>(remplacer <cite>x.y.z</cite> par la version installée, exemple : <cite>1.8.6</cite>)</p>
+</li>
+</ol>
+</section>
+<section id="id8">
+<h4>macOS<a class="headerlink" href="#id8" title="Lien vers cette rubrique"></a></h4>
+<p><cite>/Users/[nom_utilisateur]/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/platform.txt</cite></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le dossier <cite>Library</cite> peut être caché. Pour y accéder :</p>
+<ol class="arabic simple">
+<li><p>Dans le Finder, menu <strong>« Aller »</strong> → maintenir <strong>Option</strong> → cliquer sur <strong>« Bibliothèque »</strong></p></li>
+</ol>
+<p>Ou taper dans le terminal :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open<span class="w"> </span>~/Library/Arduino15/packages/arduino/hardware/avr/
+</pre></div>
+</div>
+</div>
+</section>
+<section id="cpp17-linux">
+<span id="id9"></span><h4>Linux<a class="headerlink" href="#cpp17-linux" title="Lien vers cette rubrique"></a></h4>
+<p><cite>~/.arduino15/packages/arduino/hardware/avr/1.8.6/platform.txt</cite></p>
+</section>
+</section>
+<section id="modification-du-fichier">
+<h3>Modification du fichier<a class="headerlink" href="#modification-du-fichier" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic">
+<li><p>Faire une <strong>copie de sauvegarde</strong> du fichier <cite>platform.txt</cite> (exemple : <cite>platform.txt.bak</cite>)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Linux/macOS</span>
+cp<span class="w"> </span>platform.txt<span class="w"> </span>platform.txt.bak
+</pre></div>
+</div>
+</li>
+<li><p>Ouvrir le fichier <cite>platform.txt</cite> avec un éditeur de texte (Notepad++, nano, gedit, etc.)</p></li>
+<li><p>Rechercher la ligne contenant :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&quot;-std=gnu++11&quot;
+</pre></div>
+</div>
+</li>
+<li><p>Remplacer par :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&quot;-std=gnu++17&quot;
+</pre></div>
+</div>
+</li>
+<li><p><strong>Sauvegarder</strong> le fichier</p></li>
+<li><p><strong>Redémarrer Arduino IDE</strong> pour que le changement soit pris en compte</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Si vous ne trouvez pas le fichier, ouvrez Arduino IDE, allez dans <strong>Fichier → Préférences</strong>,
+et regardez l’emplacement du <strong>« Dossier de Sketchbook »</strong>. Le fichier <cite>platform.txt</cite> est
+généralement dans un sous-dossier relatif à cet emplacement.</p>
+</div>
+</section>
+<section id="installation-des-bibliotheques">
+<h3>Installation des Bibliothèques<a class="headerlink" href="#installation-des-bibliotheques" title="Lien vers cette rubrique"></a></h3>
+<p>Le firmware nécessite plusieurs bibliothèques externes.</p>
+</section>
+<section id="ouvrir-le-gestionnaire-de-bibliotheques">
+<h3>Ouvrir le Gestionnaire de bibliothèques<a class="headerlink" href="#ouvrir-le-gestionnaire-de-bibliotheques" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Lancer Arduino IDE</p></li>
+<li><p>Menu : <strong>Outils → Gérer les bibliothèques…</strong></p></li>
+<li><p>Une fenêtre « Gestionnaire de bibliothèques » s’ouvre</p></li>
+</ol>
+</section>
+<section id="installation-de-arduinojson">
+<h3>Installation de ArduinoJson<a class="headerlink" href="#installation-de-arduinojson" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Dans le champ de recherche, taper : <cite>ArduinoJson</cite></p></li>
+<li><p>Trouver la bibliothèque <strong>« ArduinoJson »</strong> par Benoit Blanchon</p></li>
+<li><p>⚠️ <strong>IMPORTANT</strong> : Installer la version <strong>6.x</strong> (PAS la version 7 !)</p>
+<ul class="simple">
+<li><p>Version 6.21.5 recommandée</p></li>
+<li><p>La version 7 est <strong>incompatible</strong> avec l’ATmega328P</p></li>
+</ul>
+</li>
+<li><p>Cliquer sur <strong>« Installer »</strong></p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Ne pas installer ArduinoJson version 7.x — elle ne fonctionnera pas sur l’ATmega328P !</p>
+</div>
+</section>
+<section id="installation-de-onewire">
+<h3>Installation de OneWire<a class="headerlink" href="#installation-de-onewire" title="Lien vers cette rubrique"></a></h3>
+<p>Cette bibliothèque gère les sondes de température (optionnelles).</p>
+<ol class="arabic simple">
+<li><p>Dans le champ de recherche, taper : <cite>OneWire</cite></p></li>
+<li><p>Trouver <strong>« OneWire »</strong> par Paul Stoffregen</p></li>
+<li><p>⚠️ Installer la version <strong>2.3.7 ou supérieure</strong></p></li>
+<li><p>Cliquer sur <strong>« Installer »</strong></p></li>
+</ol>
+</section>
+<section id="id10">
+<h3>Vérification<a class="headerlink" href="#id10" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Menu : <strong>Croquis → Inclure une bibliothèque</strong></p></li>
+<li><p>Vérifier la présence de : <strong>ArduinoJson</strong>, <strong>OneWire</strong></p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Si les bibliothèques n’apparaissent pas, redémarrer Arduino IDE.</p>
+</div>
+<p>✅ <strong>Configuration Arduino IDE terminée !</strong> Passez maintenant aux étapes spécifiques à votre configuration (<a class="reference internal" href="../glossary/#term-Monophase"><span class="xref std std-term">monophasé</span></a> ou <a class="reference internal" href="../glossary/#term-Triphase"><span class="xref std std-term">triphasé</span></a>).</p>
+</section>
+</section>
+<section id="option-b-installation-avec-platformio">
+<span id="install-platformio"></span><h2>Option B : Installation avec PlatformIO<a class="headerlink" href="#option-b-installation-avec-platformio" title="Lien vers cette rubrique"></a></h2>
+<section id="pour-les-utilisateurs-avances">
+<h3>Pour les Utilisateurs Avancés<a class="headerlink" href="#pour-les-utilisateurs-avances" title="Lien vers cette rubrique"></a></h3>
+<p><strong>PlatformIO</strong> est un environnement de développement plus complet que l’Arduino IDE.</p>
+</section>
+<section id="avantages">
+<h3>Avantages<a class="headerlink" href="#avantages" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p>Gestion automatique des bibliothèques (ArduinoJson, OneWire, U8g2…)</p></li>
+<li><p>Support C++17 natif (pas besoin de modifier <cite>platform.txt</cite>)</p></li>
+<li><p>Compilations plus rapides</p></li>
+<li><p>Meilleure intégration avec Git</p></li>
+<li><p>Débogage avancé</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Avec PlatformIO, <strong>aucune configuration manuelle n’est nécessaire</strong>.</p>
+<p>Vous n’avez <strong>PAS</strong> besoin de :</p>
+<ul class="simple">
+<li><p>Configurer C++17 manuellement (voir ci-dessus)</p></li>
+<li><p>Installer les bibliothèques manuellement (voir ci-dessus)</p></li>
+</ul>
+<p>Tout est géré automatiquement par PlatformIO !</p>
+</div>
+</section>
+<section id="installation-visual-studio-code">
+<h3>Installation Visual Studio Code<a class="headerlink" href="#installation-visual-studio-code" title="Lien vers cette rubrique"></a></h3>
+<p>Visual Studio Code est l’éditeur de code qui hébergera PlatformIO.</p>
+</section>
+<section id="id11">
+<h3>Windows<a class="headerlink" href="#id11" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Ouvrir le navigateur web : <a class="reference external" href="https://code.visualstudio.com/" rel="noreferrer" target="_blank">https://code.visualstudio.com/</a></p></li>
+<li><p>Cliquer sur <strong>« Download for Windows »</strong></p></li>
+<li><p>Double-cliquer sur le fichier téléchargé (<cite>VSCodeSetup-xxx.exe</cite>)</p></li>
+<li><p>Accepter la licence</p></li>
+<li><p><strong>Recommandé :</strong> Cocher toutes les options additionnelles :</p>
+<ul class="simple">
+<li><p>Ajouter à PATH</p></li>
+<li><p>Créer une icône sur le bureau</p></li>
+<li><p>Ajouter l’action « Ouvrir avec Code » au menu contextuel</p></li>
+</ul>
+</li>
+<li><p>Cliquer sur <strong>« Installer »</strong></p></li>
+<li><p>Attendre la fin de l’installation</p></li>
+<li><p>Lancer VS Code</p></li>
+</ol>
+</section>
+<section id="id12">
+<h3>macOS<a class="headerlink" href="#id12" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Ouvrir le navigateur web : <a class="reference external" href="https://code.visualstudio.com/" rel="noreferrer" target="_blank">https://code.visualstudio.com/</a></p></li>
+<li><p>Cliquer sur <strong>« Download for Mac »</strong></p></li>
+<li><p>Ouvrir le fichier <cite>.zip</cite> téléchargé</p></li>
+<li><p>Glisser <strong>Visual Studio Code.app</strong> dans le dossier <strong>Applications</strong></p></li>
+<li><p>Lancer VS Code depuis le dossier Applications</p></li>
+</ol>
+</section>
+<section id="platformio-vscode-linux">
+<span id="id13"></span><h3>Linux (Ubuntu/Debian)<a class="headerlink" href="#platformio-vscode-linux" title="Lien vers cette rubrique"></a></h3>
+<section id="methode-1-installation-via-le-site-officiel-recommande">
+<h4>Méthode 1 : Installation via le site officiel (recommandé)<a class="headerlink" href="#methode-1-installation-via-le-site-officiel-recommande" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic">
+<li><p>Ouvrir le navigateur web : <a class="reference external" href="https://code.visualstudio.com/" rel="noreferrer" target="_blank">https://code.visualstudio.com/</a></p></li>
+<li><p>Cliquer sur <strong>« .deb »</strong> (pour Ubuntu/Debian)</p></li>
+<li><p>Installer le paquet téléchargé :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>code_*.deb
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-f
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="methode-2-installation-via-le-gestionnaire-de-paquets">
+<h4>Méthode 2 : Installation via le gestionnaire de paquets<a class="headerlink" href="#methode-2-installation-via-le-gestionnaire-de-paquets" title="Lien vers cette rubrique"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>code
+</pre></div>
+</div>
+</section>
+</section>
+<section id="installation-platformio-ide">
+<h3>Installation PlatformIO IDE<a class="headerlink" href="#installation-platformio-ide" title="Lien vers cette rubrique"></a></h3>
+<p>PlatformIO s’installe comme une extension dans Visual Studio Code.</p>
+</section>
+<section id="installation-de-lextension">
+<h3>Installation de l’Extension<a class="headerlink" href="#installation-de-lextension" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Ouvrir <strong>Visual Studio Code</strong></p></li>
+<li><p>Cliquer sur l’icône <strong>Extensions</strong> dans la barre latérale gauche (ou Ctrl+Shift+X / Cmd+Shift+X)</p></li>
+<li><p>Dans le champ de recherche, taper : <cite>PlatformIO IDE</cite></p></li>
+<li><p>Trouver l’extension <strong>« PlatformIO IDE »</strong> par PlatformIO</p></li>
+<li><p>Cliquer sur <strong>« Install »</strong></p></li>
+<li><p>Attendre la fin de l’installation (peut prendre 2–5 minutes)</p></li>
+<li><p>Une fois terminé, cliquer sur <strong>« Reload »</strong> pour redémarrer VS Code</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Au premier lancement après installation, PlatformIO téléchargera des outils supplémentaires.
+Cela peut prendre quelques minutes. Soyez patient !</p>
+</div>
+</section>
+<section id="verification-de-linstallation">
+<h3>Vérification de l’Installation<a class="headerlink" href="#verification-de-linstallation" title="Lien vers cette rubrique"></a></h3>
+<p>Après le redémarrage de VS Code :</p>
+<ol class="arabic simple">
+<li><p>Une icône PlatformIO (alien/extraterrestre) devrait apparaître dans la barre latérale gauche</p></li>
+<li><p>Cliquer sur cette icône ouvre le <strong>PIO Home</strong></p></li>
+<li><p>Si vous voyez le <strong>PIO Home</strong>, l’installation est réussie !</p></li>
+</ol>
+</section>
+<section id="ouverture-du-projet">
+<h3>Ouverture du Projet<a class="headerlink" href="#ouverture-du-projet" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Dans <strong>PIO Home</strong>, cliquer sur <strong>« Open Project »</strong></p></li>
+<li><p>Naviguer vers le dossier du firmware :</p>
+<ul class="simple">
+<li><p>Mono : <cite>PVRouter-1-phase-main/Mk2_fasterControl_Full/</cite></p></li>
+<li><p>Tri : <cite>PVRouter-3-phase-main/Mk2_3phase_RFdatalog_temp/</cite></p></li>
+</ul>
+</li>
+<li><p>PlatformIO détecte automatiquement le fichier <cite>platformio.ini</cite></p></li>
+<li><p>Le projet s’ouvre avec tous les fichiers visibles dans l’explorateur</p></li>
+</ol>
+</section>
+<section id="configuration-du-projet">
+<h3>Configuration du Projet<a class="headerlink" href="#configuration-du-projet" title="Lien vers cette rubrique"></a></h3>
+<p>PlatformIO télécharge <strong>automatiquement</strong> :</p>
+<ul class="simple">
+<li><p>Le compilateur AVR-GCC avec support C++17</p></li>
+<li><p>Les bibliothèques nécessaires (ArduinoJson 6.x, OneWire, U8g2…)</p></li>
+<li><p>Les outils de programmation</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le premier téléchargement des dépendances peut prendre 5–10 minutes selon votre connexion Internet.
+PlatformIO affiche la progression dans le terminal intégré.</p>
+</div>
+</section>
+<section id="compilation-et-televersement">
+<h3>Compilation et Téléversement<a class="headerlink" href="#compilation-et-televersement" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Connecter le routeur via l’adaptateur FTDI (voir étapes communes dans la version-specific include)</p></li>
+<li><p>Dans la barre inférieure de VS Code, cliquer sur l’icône <strong>« Upload »</strong> (→)</p></li>
+<li><p>PlatformIO compile automatiquement et téléverse le firmware</p></li>
+<li><p>Surveiller le terminal pour les messages de progression</p></li>
+</ol>
+</section>
+<section id="selection-de-la-configuration">
+<h3>Sélection de la Configuration<a class="headerlink" href="#selection-de-la-configuration" title="Lien vers cette rubrique"></a></h3>
+<p>Le firmware contient plusieurs environnements préconfigurés :</p>
+<ul class="simple">
+<li><p><cite>env:release</cite> : Version normale</p></li>
+<li><p><cite>env:temperature</cite> : Version avec support sondes de température</p></li>
+<li><p><cite>env:debug</cite> : Version avec messages de débogage supplémentaires</p></li>
+</ul>
+<p>Pour changer d’environnement :</p>
+<ol class="arabic simple">
+<li><p>Cliquer sur le sélecteur d’environnement dans la barre inférieure</p></li>
+<li><p>Choisir la configuration désirée</p></li>
+<li><p>Recompiler le projet</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>PlatformIO est recommandé pour les utilisateurs avancés qui développent ou modifient le firmware.
+Pour un usage standard, Arduino IDE suffit amplement.</p>
+</div>
+<p id="platformio-termine">✅ <strong>Configuration PlatformIO terminée !</strong> Passez maintenant aux étapes spécifiques à votre version (<a class="reference internal" href="../glossary/#term-Monophase"><span class="xref std std-term">monophasé</span></a> ou <a class="reference internal" href="../glossary/#term-Triphase"><span class="xref std std-term">triphasé</span></a>).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../soldering-tutorial/" class="btn btn-neutral float-left" title="Guide de Soudure pour Débutants" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../carte-mere/presentation/" class="btn btn-neutral float-right" title="Présentation de la carte universelle" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 20 février 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/installation-logiciel.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/installation-logiciel.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1052 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-02-20T08:27:09+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚠️ Sécurité — À Lire Absolument Avant de Commencer &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="Introduction" href="../introduction/" />
+    <link rel="prev" title="Bienvenue dans la documentation du Mk2PVRouter !" href="../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vue-densemble">Vue d’Ensemble</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dangers-principaux">Dangers Principaux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#electrisation-230-v-ac-peut-etre-mortelle">1. <strong>Électrisation (230 V AC)</strong> — PEUT ÊTRE MORTELLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#brulures-fer-a-souder-200450-c">2. <strong>Brûlures (Fer à Souder 200–450 °C)</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#incendie">3. 🔥 <strong>Incendie</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blessures-mecaniques">4. 🔧 <strong>Blessures Mécaniques</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#equipement-de-protection-obligatoire">🛡️ Équipement de Protection Obligatoire</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#equipement-de-base-toutes-etapes">Équipement de Base (Toutes Étapes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#equipement-pour-soudure">Équipement pour Soudure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#equipement-pour-manipulation-230-v">Équipement pour Manipulation 230 V</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#equipement-de-securite-general">Équipement de Sécurité Général</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#regles-de-securite-par-type-doperation">Règles de Sécurité par Type d’Opération</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#securite-soudure">Sécurité Soudure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#avant-de-commencer">Avant de Commencer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pendant-la-soudure">Pendant la Soudure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#en-cas-de-brulure-au-fer-a-souder">En Cas de Brûlure au Fer à Souder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fumees-de-soudure">Fumées de Soudure</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#securite-electrique">Sécurité Électrique</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#regles-dor-230-v-ac">Règles d’Or (230 V AC)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#verification-absence-de-tension">Vérification Absence de Tension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#procedure-de-consignation">Procédure de Consignation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#protection-differentielle">Protection Différentielle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#distance-de-securite">Distance de Sécurité</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#securite-percage-usinage">Sécurité Perçage/Usinage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#perceuse-a-colonne-perceuse-manuelle">Perceuse à Colonne / Perceuse Manuelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regles-obligatoires">Règles Obligatoires</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#technique-sure">Technique Sûre</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#materiaux-specifiques">Matériaux Spécifiques</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#securite-incendie">Sécurité Incendie</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#prevention">Prévention</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#signes-avant-coureurs">Signes Avant-Coureurs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intervention-incendie">Intervention Incendie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utilisation-extincteur">Utilisation Extincteur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#competences-requises-par-etape">Compétences Requises par Étape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedures-durgence">Procédures d’Urgence</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#en-cas-delectrisation">En Cas d’Électrisation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#signes-delectrisation">Signes d’Électrisation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#en-cas-de-brulure">En Cas de Brûlure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#brulures-mineures-5-cm-superficielles">Brûlures Mineures (&lt; 5 cm, superficielles)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#brulures-graves-5-cm-profondes-electriques">Brûlures Graves (&gt; 5 cm, profondes, électriques)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#numeros-durgence-france">Numéros d’Urgence (France)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#liste-de-controle-avant-de-commencer">✅ Liste de Contrôle Avant de Commencer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation-personnelle">Évaluation Personnelle</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ressources-de-formation">Ressources de Formation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#checklist-avant-assemblage">Checklist Avant Assemblage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reconnaissance-de-risques">Reconnaissance de Risques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cas-dexclusion">Cas d’Exclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#en-conclusion">En Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pret-a-continuer">Prêt à Continuer ?</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📋 Carte-mère universelle</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/tests-electriques/">Tests électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Câblage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">⚠️ Sécurité — À Lire Absolument Avant de Commencer</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/safety-overview.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="securite-a-lire-absolument-avant-de-commencer">
+<span id="safety-overview"></span><h1>⚠️ Sécurité — À Lire Absolument Avant de Commencer<a class="headerlink" href="#securite-a-lire-absolument-avant-de-commencer" title="Lien vers cette rubrique"></a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>⚡ <strong>AVERTISSEMENT IMPORTANT</strong></p>
+<p>Ce projet implique la manipulation de tensions MORTELLES (230 V AC) et l’utilisation d’outils potentiellement dangereux. Des blessures graves, voire mortelles, peuvent survenir en cas de non-respect des consignes de sécurité.</p>
+<p><strong>Ce projet n’est PAS adapté aux enfants.</strong></p>
+<p>En poursuivant ce projet, vous reconnaissez les risques et assumez l’entière responsabilité de votre sécurité et de celle de votre entourage.</p>
+</div>
+<nav class="contents local" id="sommaire-de-securite">
+<p class="topic-title">Sommaire de Sécurité</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#vue-densemble" id="id2">Vue d’Ensemble</a></p>
+<ul>
+<li><p><a class="reference internal" href="#dangers-principaux" id="id3">Dangers Principaux</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#equipement-de-protection-obligatoire" id="id4">🛡️ Équipement de Protection Obligatoire</a></p>
+<ul>
+<li><p><a class="reference internal" href="#equipement-de-base-toutes-etapes" id="id5">Équipement de Base (Toutes Étapes)</a></p></li>
+<li><p><a class="reference internal" href="#equipement-pour-soudure" id="id6">Équipement pour Soudure</a></p></li>
+<li><p><a class="reference internal" href="#equipement-pour-manipulation-230-v" id="id7">Équipement pour Manipulation 230 V</a></p></li>
+<li><p><a class="reference internal" href="#equipement-de-securite-general" id="id8">Équipement de Sécurité Général</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#regles-de-securite-par-type-doperation" id="id9">Règles de Sécurité par Type d’Opération</a></p>
+<ul>
+<li><p><a class="reference internal" href="#securite-soudure" id="id10">Sécurité Soudure</a></p></li>
+<li><p><a class="reference internal" href="#securite-electrique" id="id11">Sécurité Électrique</a></p></li>
+<li><p><a class="reference internal" href="#securite-percage-usinage" id="id12">Sécurité Perçage/Usinage</a></p></li>
+<li><p><a class="reference internal" href="#securite-incendie" id="id13">Sécurité Incendie</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#competences-requises-par-etape" id="id14">Compétences Requises par Étape</a></p></li>
+<li><p><a class="reference internal" href="#procedures-durgence" id="id15">Procédures d’Urgence</a></p>
+<ul>
+<li><p><a class="reference internal" href="#en-cas-delectrisation" id="id16">En Cas d’Électrisation</a></p></li>
+<li><p><a class="reference internal" href="#en-cas-de-brulure" id="id17">En Cas de Brûlure</a></p></li>
+<li><p><a class="reference internal" href="#numeros-durgence-france" id="id18">Numéros d’Urgence (France)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#liste-de-controle-avant-de-commencer" id="id19">✅ Liste de Contrôle Avant de Commencer</a></p>
+<ul>
+<li><p><a class="reference internal" href="#evaluation-personnelle" id="id20">Évaluation Personnelle</a></p></li>
+<li><p><a class="reference internal" href="#checklist-avant-assemblage" id="id21">Checklist Avant Assemblage</a></p></li>
+<li><p><a class="reference internal" href="#reconnaissance-de-risques" id="id22">Reconnaissance de Risques</a></p></li>
+<li><p><a class="reference internal" href="#cas-dexclusion" id="id23">Cas d’Exclusion</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#en-conclusion" id="id24">En Conclusion</a></p></li>
+<li><p><a class="reference internal" href="#pret-a-continuer" id="id25">Prêt à Continuer ?</a></p></li>
+</ul>
+</nav>
+<section id="vue-densemble">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Vue d’Ensemble</a><a class="headerlink" href="#vue-densemble" title="Lien vers cette rubrique"></a></h2>
+<p>Ce chapitre couvre tous les aspects de sécurité liés à l’assemblage, aux tests et à l’installation du Mk2PVRouter. Il est <strong>OBLIGATOIRE</strong> de lire et comprendre ce chapitre avant de commencer.</p>
+<section id="dangers-principaux">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Dangers Principaux</a><a class="headerlink" href="#dangers-principaux" title="Lien vers cette rubrique"></a></h3>
+<section id="electrisation-230-v-ac-peut-etre-mortelle">
+<h4>1. <strong>Électrisation (230 V AC)</strong> — PEUT ÊTRE MORTELLE<a class="headerlink" href="#electrisation-230-v-ac-peut-etre-mortelle" title="Lien vers cette rubrique"></a></h4>
+<p>Le courant alternatif 230 V présent dans les installations domestiques peut provoquer :</p>
+<ul class="simple">
+<li><p><strong>Arrêt cardiaque</strong> (fibrillation ventriculaire)</p></li>
+<li><p><strong>Brûlures graves</strong> internes et externes</p></li>
+<li><p><strong>Contractions musculaires</strong> empêchant de lâcher la source</p></li>
+<li><p><strong>MORT</strong> en quelques secondes</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>Un courant de seulement 30 mA peut être mortel !</strong></p>
+<p>Le 230 V domestique peut fournir plusieurs ampères — largement suffisant pour tuer.</p>
+</div>
+<section id="situations-a-risque-electrique-dans-ce-projet">
+<h5>Situations à Risque Électrique dans ce Projet<a class="headerlink" href="#situations-a-risque-electrique-dans-ce-projet" title="Lien vers cette rubrique"></a></h5>
+<ul class="simple">
+<li><p>Tests de la carte-mère avec alimentation secteur</p></li>
+<li><p>Soudure des connecteurs haute tension</p></li>
+<li><p>Tests des cartes de sortie sous tension</p></li>
+<li><p>Étalonnage du routeur (manipulation du câblage domestique)</p></li>
+<li><p>Installation finale dans le tableau électrique</p></li>
+</ul>
+</section>
+</section>
+<section id="brulures-fer-a-souder-200450-c">
+<h4>2. <strong>Brûlures (Fer à Souder 200–450 °C)</strong><a class="headerlink" href="#brulures-fer-a-souder-200450-c" title="Lien vers cette rubrique"></a></h4>
+<p>Un fer à souder peut causer :</p>
+<ul class="simple">
+<li><p>Brûlures au 2ᵉ ou 3ᵉ degré instantanées</p></li>
+<li><p>Incendie si laissé sans surveillance</p></li>
+<li><p>Inhalation de fumées toxiques (flux de soudure)</p></li>
+</ul>
+</section>
+<section id="incendie">
+<h4>3. 🔥 <strong>Incendie</strong><a class="headerlink" href="#incendie" title="Lien vers cette rubrique"></a></h4>
+<p>Plusieurs sources de risque d’incendie :</p>
+<ul class="simple">
+<li><p><strong>Soudures défectueuses</strong> sur circuits haute puissance → Surchauffe → Incendie</p></li>
+<li><p><strong>Court-circuits</strong> dans le routeur → Arcs électriques → Incendie</p></li>
+<li><p><strong>Fer à souder</strong> laissé sans surveillance → Ignition matériaux</p></li>
+<li><p><strong>Surcharge électrique</strong> lors des tests → Composants en feu</p></li>
+</ul>
+</section>
+<section id="blessures-mecaniques">
+<h4>4. 🔧 <strong>Blessures Mécaniques</strong><a class="headerlink" href="#blessures-mecaniques" title="Lien vers cette rubrique"></a></h4>
+<ul class="simple">
+<li><p><strong>Perceuse/à colonne</strong> : Entraînement de pièces, projections</p></li>
+<li><p><strong>Outils coupants</strong> : Coupures, entailles</p></li>
+<li><p><strong>Projections métalliques</strong> : Blessures aux yeux</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="equipement-de-protection-obligatoire">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">🛡️ Équipement de Protection Obligatoire</a><a class="headerlink" href="#equipement-de-protection-obligatoire" title="Lien vers cette rubrique"></a></h2>
+<section id="equipement-de-base-toutes-etapes">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Équipement de Base (Toutes Étapes)</a><a class="headerlink" href="#equipement-de-base-toutes-etapes" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition-equipement-minimum-requis admonition">
+<p class="admonition-title">Équipement Minimum Requis</p>
+<ul class="simple">
+<li><p><strong>Lunettes de protection</strong> : Protection contre projections (soudure, perçage)</p></li>
+<li><p><strong>Vêtements adaptés</strong> : Manches longues, pas de vêtements synthétiques (fondent facilement)</p></li>
+<li><p><strong>Chaussures fermées</strong> : Protection contre chutes d’objets, outils électriques</p></li>
+<li><p><strong>Cheveux attachés</strong> : Si cheveux longs (risque entraînement outils rotatifs)</p></li>
+</ul>
+</div>
+</section>
+<section id="equipement-pour-soudure">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Équipement pour Soudure</a><a class="headerlink" href="#equipement-pour-soudure" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p><strong>Lunettes de protection</strong> (obligatoire)</p></li>
+<li><p><strong>Support fer à souder</strong> incombustible</p></li>
+<li><p><strong>Ventilation adéquate</strong> ou extracteur de fumées</p></li>
+<li><p><strong>Surface de travail ininflammable</strong> (métal, céramique, pas bois/plastique)</p></li>
+<li><p><strong>Éponge ou laine de laiton</strong> pour nettoyer panne</p></li>
+</ul>
+</section>
+<section id="equipement-pour-manipulation-230-v">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Équipement pour Manipulation 230 V</a><a class="headerlink" href="#equipement-pour-manipulation-230-v" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Équipement OBLIGATOIRE pour toute manipulation haute tension</strong></p>
+</div>
+<ul class="simple">
+<li><p><strong>Testeur de tension</strong> sans contact (détecteur VAT)</p></li>
+<li><p><strong>Multimètre</strong> avec protection CAT II 300 V minimum</p></li>
+<li><p><strong>Gants isolants</strong> (classe 0 minimum, 1 000 V)</p></li>
+<li><p><strong>Tapis isolant</strong> ou chaussures isolantes</p></li>
+<li><p><strong>Outils isolés</strong> (tournevis, pinces avec poignées isolées)</p></li>
+</ul>
+</section>
+<section id="equipement-de-securite-general">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Équipement de Sécurité Général</a><a class="headerlink" href="#equipement-de-securite-general" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p><strong>Extincteur</strong> : Type ABC, 2 kg minimum, vérifié annuellement</p></li>
+<li><p><strong>Détecteur de fumée</strong> : Fonctionnel et testé</p></li>
+<li><p><strong>Téléphone</strong> : À portée pour appel urgence</p></li>
+<li><p><strong>Trousse premiers secours</strong> : Compresses stériles, pansements brûlures</p></li>
+</ul>
+</section>
+</section>
+<section id="regles-de-securite-par-type-doperation">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Règles de Sécurité par Type d’Opération</a><a class="headerlink" href="#regles-de-securite-par-type-doperation" title="Lien vers cette rubrique"></a></h2>
+<section id="securite-soudure">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Sécurité Soudure</a><a class="headerlink" href="#securite-soudure" title="Lien vers cette rubrique"></a></h3>
+<section id="avant-de-commencer">
+<h4>Avant de Commencer<a class="headerlink" href="#avant-de-commencer" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-checklist-pre-soudure admonition">
+<p class="admonition-title">Checklist Pré-Soudure</p>
+<ul class="simple">
+<li><p>[ ] Espace de travail dégagé (pas de papiers, tissus, produits inflammables)</p></li>
+<li><p>[ ] Surface de travail ininflammable</p></li>
+<li><p>[ ] Ventilation suffisante (fenêtre ouverte ou extracteur)</p></li>
+<li><p>[ ] Lunettes de protection portées</p></li>
+<li><p>[ ] Support fer à souder à portée de main</p></li>
+<li><p>[ ] Extincteur accessible (&lt; 3 mètres)</p></li>
+<li><p>[ ] Quelqu’un informé que vous soudez (en cas d’urgence)</p></li>
+</ul>
+</div>
+</section>
+<section id="pendant-la-soudure">
+<h4>Pendant la Soudure<a class="headerlink" href="#pendant-la-soudure" title="Lien vers cette rubrique"></a></h4>
+<p><strong>À FAIRE :</strong></p>
+<ul class="simple">
+<li><p>✅ Toujours reposer le fer sur son support</p></li>
+<li><p>✅ Souder dans un endroit bien ventilé</p></li>
+<li><p>✅ Prendre des pauses toutes les 30–45 minutes</p></li>
+<li><p>✅ Garder une éponge humide pour nettoyer la panne</p></li>
+<li><p>✅ Tenir le fer par la poignée isolée uniquement</p></li>
+</ul>
+<p><strong>À NE JAMAIS FAIRE :</strong></p>
+<ul class="simple">
+<li><p>❌ Toucher la panne ou le fil chauffant (200–450 °C !)</p></li>
+<li><p>❌ Laisser le fer allumé sans surveillance</p></li>
+<li><p>❌ Souder près de matériaux inflammables</p></li>
+<li><p>❌ Respirer directement les fumées de soudure</p></li>
+<li><p>❌ Poser le fer sur des surfaces combustibles</p></li>
+</ul>
+</section>
+<section id="en-cas-de-brulure-au-fer-a-souder">
+<h4>En Cas de Brûlure au Fer à Souder<a class="headerlink" href="#en-cas-de-brulure-au-fer-a-souder" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p><strong>Refroidir immédiatement</strong> : Eau froide courante 10–15 minutes</p></li>
+<li><p><strong>Ne pas percer les cloques</strong></p></li>
+<li><p><strong>Couvrir avec compresse stérile</strong></p></li>
+<li><p><strong>Si brûlure &gt;5 cm ou profonde</strong> : Consulter médecin/urgences</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Les brûlures de fer à souder sont souvent plus graves qu’elles ne paraissent !
+Le métal chaud pénètre profondément dans les tissus.</p>
+</div>
+</section>
+<section id="fumees-de-soudure">
+<h4>Fumées de Soudure<a class="headerlink" href="#fumees-de-soudure" title="Lien vers cette rubrique"></a></h4>
+<p>Les fumées de soudure contiennent :</p>
+<ul class="simple">
+<li><p>Particules métalliques (plomb si soudure plombée)</p></li>
+<li><p>Colophane (flux) : irritant respiratoire</p></li>
+<li><p>Gaz toxiques</p></li>
+</ul>
+<p><strong>Protection :</strong></p>
+<ul class="simple">
+<li><p>Travailler dans endroit ventilé</p></li>
+<li><p>Utiliser extracteur de fumées si disponible</p></li>
+<li><p>Ne pas respirer directement les fumées</p></li>
+<li><p>Faire des pauses à l’air frais</p></li>
+</ul>
+</section>
+</section>
+<section id="securite-electrique">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Sécurité Électrique</a><a class="headerlink" href="#securite-electrique" title="Lien vers cette rubrique"></a></h3>
+<section id="regles-dor-230-v-ac">
+<h4>Règles d’Or (230 V AC)<a class="headerlink" href="#regles-dor-230-v-ac" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>LES 5 RÈGLES d’OR DE LA SÉCURITÉ ÉLECTRIQUE</strong></p>
+<p>Ces règles DOIVENT être respectées pour toute intervention sur installation électrique :</p>
+<ol class="arabic simple">
+<li><p><strong>CONSIGNER</strong> : Couper l’alimentation au disjoncteur</p></li>
+<li><p><strong>CONDAMNER</strong> : Verrouiller le disjoncteur (cadenas si possible)</p></li>
+<li><p><strong>IDENTIFIER</strong> : Vérifier que c’est bien le bon circuit</p></li>
+<li><p><strong>VÉRIFIER l’ABSENCE DE TENSION</strong> : Avec testeur adapté</p></li>
+<li><p><strong>METTRE À LA TERRE</strong> : Connecter la terre avant toute manipulation</p></li>
+</ol>
+</div>
+</section>
+<section id="verification-absence-de-tension">
+<h4>Vérification Absence de Tension<a class="headerlink" href="#verification-absence-de-tension" title="Lien vers cette rubrique"></a></h4>
+<p><strong>TOUJOURS</strong> vérifier l’absence de tension avant de toucher des conducteurs :</p>
+<ol class="arabic simple">
+<li><p>Utiliser un testeur de tension <strong>adapté</strong> (VAT)</p></li>
+<li><p><strong>Tester le testeur</strong> sur une prise sous tension connue AVANT (vérifier qu’il fonctionne)</p></li>
+<li><p>Tester sur les conducteurs à manipuler</p></li>
+<li><p>Si le testeur indique présence tension → <strong>NE PAS TOUCHER</strong></p></li>
+<li><p><strong>Tester le testeur</strong> APRÈS pour s’assurer qu’il fonctionne toujours</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Un testeur défectueux peut indiquer « pas de tension » alors que le circuit est sous tension !
+C’est pourquoi il faut le tester avant ET après.</p>
+</div>
+</section>
+<section id="procedure-de-consignation">
+<h4>Procédure de Consignation<a class="headerlink" href="#procedure-de-consignation" title="Lien vers cette rubrique"></a></h4>
+<p>Avant toute intervention sur câblage domestique :</p>
+<ol class="arabic simple">
+<li><p><strong>Identifier le disjoncteur</strong> concerné au tableau</p></li>
+<li><p><strong>Couper le disjoncteur</strong> (position « Off » ou « 0 »)</p></li>
+<li><p><strong>Si possible :</strong> Poser un cadenas ou signalisation « NE PAS RALLUMER — Travaux en cours »</p></li>
+<li><p><strong>Tester l’absence de tension</strong> avec VAT (voir procédure ci-dessus)</p></li>
+<li><p><strong>SEULEMENT ENSUITE</strong> : Manipuler les conducteurs</p></li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>JAMAIS DE TRAVAUX SOUS TENSION pour ce projet !</strong></p>
+<p>Ce projet ne nécessite AUCUNE intervention sous tension. Si vous pensez devoir
+travailler sous tension, vous faites quelque chose de travers. STOP et demandez conseil.</p>
+</div>
+</section>
+<section id="protection-differentielle">
+<h4>Protection Différentielle<a class="headerlink" href="#protection-differentielle" title="Lien vers cette rubrique"></a></h4>
+<p>Votre installation DOIT être protégée par :</p>
+<ul class="simple">
+<li><p><strong>Disjoncteur différentiel 30mA</strong> (obligatoire en France)</p></li>
+<li><p><strong>Disjoncteur magnéto-thermique</strong> adapté au circuit (généralement 16A pour prises)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le différentiel 30mA détecte les fuites de courant et coupe l’alimentation
+en quelques millisecondes. Il peut vous sauver la vie !</p>
+<p>Testez votre différentiel mensuellement (bouton « Test »).</p>
+</div>
+</section>
+<section id="distance-de-securite">
+<h4>Distance de Sécurité<a class="headerlink" href="#distance-de-securite" title="Lien vers cette rubrique"></a></h4>
+<p>Lors de tests sous tension :</p>
+<ul class="simple">
+<li><p><strong>Garder une main dans le dos</strong> (évite le courant traversant le cœur)</p></li>
+<li><p><strong>Ne jamais toucher deux points</strong> du circuit simultanément</p></li>
+<li><p><strong>Rester à distance</strong> : Utiliser sondes de test, pas les doigts</p></li>
+<li><p><strong>Porter chaussures isolantes</strong> ou être sur tapis isolant</p></li>
+<li><p><strong>Travailler à sec</strong> : Mains sèches, pas de flaques d’eau</p></li>
+</ul>
+</section>
+</section>
+<section id="securite-percage-usinage">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Sécurité Perçage/Usinage</a><a class="headerlink" href="#securite-percage-usinage" title="Lien vers cette rubrique"></a></h3>
+<section id="perceuse-a-colonne-perceuse-manuelle">
+<h4>Perceuse à Colonne / Perceuse Manuelle<a class="headerlink" href="#perceuse-a-colonne-perceuse-manuelle" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>RISQUES MAJEURS</strong></p>
+<ul class="simple">
+<li><p><strong>Entraînement</strong> de la pièce (rotation violente si perceuse attrape)</p></li>
+<li><p><strong>Projection</strong> de copeaux métalliques (risque yeux)</p></li>
+<li><p><strong>Entraînement</strong> de cheveux, vêtements, gants</p></li>
+<li><p><strong>Électrocution</strong> si câblage défectueux</p></li>
+</ul>
+</div>
+</section>
+<section id="regles-obligatoires">
+<h4>Règles Obligatoires<a class="headerlink" href="#regles-obligatoires" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-checklist-percage admonition">
+<p class="admonition-title">Checklist Perçage</p>
+<ul class="simple">
+<li><p>[ ] <strong>Lunettes de protection</strong> portées (OBLIGATOIRE !)</p></li>
+<li><p>[ ] <strong>Cheveux attachés</strong> si longs</p></li>
+<li><p>[ ] <strong>PAS de gants</strong> (risque entraînement)</p></li>
+<li><p>[ ] <strong>Vêtements près du corps</strong> (pas de manches larges)</p></li>
+<li><p>[ ] <strong>Pièce FIXÉE</strong> (étau, serre-joints) — JAMAIS tenue à la main</p></li>
+<li><p>[ ] <strong>Vitesse adaptée</strong> au matériau (aluminium : lent, plastique : moyen)</p></li>
+<li><p>[ ] <strong>Zone dégagée</strong> autour de la perceuse</p></li>
+</ul>
+</div>
+</section>
+<section id="technique-sure">
+<h4>Technique Sûre<a class="headerlink" href="#technique-sure" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic">
+<li><p><strong>Fixer la pièce fermement</strong> : Utiliser étau ou serre-joints</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>JAMAIS tenir une pièce à la main pendant le perçage !
+Si le foret accroche, la pièce peut tourner violemment et vous blesser.</p>
+</div>
+</li>
+<li><p><strong>Commencer avec foret pilote</strong> : Percer petit (2–3mm) puis agrandir</p></li>
+<li><p><strong>Avancer progressivement</strong> : Ne pas forcer, laisser l’outil travailler</p></li>
+<li><p><strong>Retirer le foret régulièrement</strong> : Évacuer les copeaux</p></li>
+<li><p><strong>Arrêter complètement</strong> avant de retirer la pièce</p></li>
+</ol>
+</section>
+<section id="materiaux-specifiques">
+<h4>Matériaux Spécifiques<a class="headerlink" href="#materiaux-specifiques" title="Lien vers cette rubrique"></a></h4>
+<ul class="simple">
+<li><p><strong>Aluminium (dissipateur)</strong> : Vitesse lente, huile de coupe, forets HSS</p></li>
+<li><p><strong>Plastique ABS (boîtier)</strong> : Vitesse moyenne, PAS d’huile, forets bois/métal</p></li>
+<li><p><strong>Attention</strong> : Plastique peut fondre si vitesse trop élevée</p></li>
+</ul>
+</section>
+</section>
+<section id="securite-incendie">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Sécurité Incendie</a><a class="headerlink" href="#securite-incendie" title="Lien vers cette rubrique"></a></h3>
+<section id="prevention">
+<h4>Prévention<a class="headerlink" href="#prevention" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Pendant la Soudure :</strong></p>
+<ul class="simple">
+<li><p>Extincteur ABC à portée de main (&lt; 3 mètres)</p></li>
+<li><p>Surface de travail ininflammable</p></li>
+<li><p>Pas de matériaux combustibles à proximité (&lt;50cm)</p></li>
+<li><p>Détecteur de fumée fonctionnel</p></li>
+<li><p>Ne jamais laisser fer allumé sans surveillance</p></li>
+</ul>
+<p><strong>Pendant les Tests Électriques :</strong></p>
+<ul class="simple">
+<li><p>Surveillez les 5 premières minutes de fonctionnement</p></li>
+<li><p>Guettez odeurs anormales (plastique brûlé)</p></li>
+<li><p>Guettez fumées</p></li>
+<li><p>Écoutez grésillements/crépitements anormaux</p></li>
+</ul>
+</section>
+<section id="signes-avant-coureurs">
+<h4>Signes Avant-Coureurs<a class="headerlink" href="#signes-avant-coureurs" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Arrêter IMMÉDIATEMENT si :</strong></p>
+<ul class="simple">
+<li><p>Odeur de brûlé/plastique fondu</p></li>
+<li><p>Fumée visible</p></li>
+<li><p>Chaleur excessive au toucher</p></li>
+<li><p>Grésillements/crépitements</p></li>
+<li><p>Étincelles visibles</p></li>
+</ul>
+</section>
+<section id="intervention-incendie">
+<h4>Intervention Incendie<a class="headerlink" href="#intervention-incendie" title="Lien vers cette rubrique"></a></h4>
+<p><strong>En cas de fumée ou flammes :</strong></p>
+<ol class="arabic simple">
+<li><p><strong>COUPER l’ALIMENTATION</strong> immédiatement (disjoncteur)</p></li>
+<li><p><strong>Si feu de soudure</strong> : Étouffer avec chiffon humide ou extincteur</p></li>
+<li><p><strong>Si feu électrique</strong> : Extincteur CO₂ ou poudre (PAS d’EAU !)</p></li>
+<li><p><strong>Si feu non maîtrisé</strong> : Évacuer et appeler pompiers (18)</p></li>
+<li><p><strong>NE JAMAIS utiliser d’eau</strong> sur feu électrique (risque électrocution)</p></li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Ne tentez d’éteindre un feu QUE si :</strong></p>
+<ul class="simple">
+<li><p>Il est de petite taille (&lt; 1 m²)</p></li>
+<li><p>Vous avez un extincteur adapté</p></li>
+<li><p>Vous savez l’utiliser</p></li>
+<li><p>Une issue de secours est accessible</p></li>
+</ul>
+<p><strong>Sinon : ÉVACUEZ et appelez les pompiers (18)</strong></p>
+</div>
+</section>
+<section id="utilisation-extincteur">
+<h4>Utilisation Extincteur<a class="headerlink" href="#utilisation-extincteur" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p><strong>Retirer la goupille</strong> de sécurité</p></li>
+<li><p><strong>Viser la base</strong> des flammes avec la lance</p></li>
+<li><p><strong>Presser la poignée</strong> pour libérer l’agent extincteur</p></li>
+<li><p><strong>Balayer latéralement</strong> en maintenant le jet sur la base du feu</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Familiarisez-vous avec votre extincteur AVANT l’urgence !
+Lisez le mode d’emploi, localisez la gâchette/percuteur.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="competences-requises-par-etape">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Compétences Requises par Étape</a><a class="headerlink" href="#competences-requises-par-etape" title="Lien vers cette rubrique"></a></h2>
+<p>Le tableau suivant indique le niveau de compétence requis et les risques associés à chaque étape :</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Évaluation des Risques par Chapitre</span><a class="headerlink" href="#id1" title="Lien vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Chapitre</p></th>
+<th class="head"><p>Compétence Requise</p></th>
+<th class="head"><p>Risques</p></th>
+<th class="head"><p>Supervision Recommandée</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Soudure carte-mère</p></td>
+<td><p>Débutant+ (avec pratique)</p></td>
+<td><p>Brûlures (moyen)</p></td>
+<td><p>Oui (1ʳᵉ fois)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Soudure carte-sortie</p></td>
+<td><p>Intermédiaire</p></td>
+<td><p>Brûlures, incendie (élevé)</p></td>
+<td><p>Oui</p></td>
+</tr>
+<tr class="row-even"><td><p>Perçage boîtier</p></td>
+<td><p>Débutant</p></td>
+<td><p>Projections (faible)</p></td>
+<td><p>Optionnel</p></td>
+</tr>
+<tr class="row-odd"><td><p>Assemblage</p></td>
+<td><p>Débutant</p></td>
+<td><p>Minimal</p></td>
+<td><p>Non</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Tests électriques (230 V)</strong></p></td>
+<td><p><strong>Intermédiaire+</strong></p></td>
+<td><p><strong>MORTEL</strong></p></td>
+<td><p><strong>OUI — Électricien</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Étalonnage</strong></p></td>
+<td><p><strong>Avancé</strong></p></td>
+<td><p><strong>MORTEL</strong></p></td>
+<td><p><strong>OUI — Électricien</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Installation finale</strong></p></td>
+<td><p><strong>Expert</strong></p></td>
+<td><p><strong>MORTEL</strong></p></td>
+<td><p><strong>ÉLECTRICIEN CERTIFIÉ</strong></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Les étapes marquées « MORTEL » nécessitent une <strong>formation en électricité</strong> ou
+la <strong>supervision d’un électricien qualifié</strong>.</p>
+<p><strong>En France, l’installation finale DOIT être réalisée par un électricien certifié</strong>
+pour la conformité NF C 15-100 et la couverture d’assurance.</p>
+</div>
+</section>
+<section id="procedures-durgence">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Procédures d’Urgence</a><a class="headerlink" href="#procedures-durgence" title="Lien vers cette rubrique"></a></h2>
+<section id="en-cas-delectrisation">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">En Cas d’Électrisation</a><a class="headerlink" href="#en-cas-delectrisation" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>VITALE : Chaque seconde compte !</strong></p>
+</div>
+<p>Si quelqu’un est électrocuté :</p>
+<ol class="arabic simple">
+<li><p><strong>NE PAS TOUCHER LA VICTIME</strong> si encore en contact avec source électrique</p></li>
+<li><p><strong>COUPER l’ALIMENTATION</strong> au disjoncteur (si accessible sans danger)</p></li>
+<li><p><strong>Appeler les secours</strong> : SAMU (15) ou Pompiers (18) ou Urgences (112)</p></li>
+<li><p><strong>Si la victime ne respire pas</strong> : Réanimation cardio-pulmonaire (si formation)</p></li>
+<li><p><strong>Position latérale de sécurité</strong> si inconscient mais respire</p></li>
+</ol>
+<section id="signes-delectrisation">
+<h4>Signes d’Électrisation<a class="headerlink" href="#signes-delectrisation" title="Lien vers cette rubrique"></a></h4>
+<ul class="simple">
+<li><p>Perte de conscience</p></li>
+<li><p>Arrêt respiratoire</p></li>
+<li><p>Absence de pouls</p></li>
+<li><p>Brûlures (entrée et sortie du courant)</p></li>
+<li><p>Contractions musculaires</p></li>
+<li><p>Confusion, désorientation</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>Même après électrisation « mineure » :</strong></p>
+<p>Consultez un médecin ! Des lésions cardiaques peuvent apparaître plusieurs heures après.
+Le courant électrique peut provoquer des troubles du rythme cardiaque différés.</p>
+</div>
+</section>
+</section>
+<section id="en-cas-de-brulure">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">En Cas de Brûlure</a><a class="headerlink" href="#en-cas-de-brulure" title="Lien vers cette rubrique"></a></h3>
+<section id="brulures-mineures-5-cm-superficielles">
+<h4>Brûlures Mineures (&lt; 5 cm, superficielles)<a class="headerlink" href="#brulures-mineures-5-cm-superficielles" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p>Refroidir immédiatement à l’eau froide courante (15–20 minutes)</p></li>
+<li><p>Retirer bijoux/vêtements avant gonflement</p></li>
+<li><p>Ne pas percer les cloques</p></li>
+<li><p>Couvrir avec compresse stérile non adhérente</p></li>
+<li><p>Surveiller infection (rougeur croissante, pus)</p></li>
+</ol>
+</section>
+<section id="brulures-graves-5-cm-profondes-electriques">
+<h4>Brûlures Graves (&gt; 5 cm, profondes, électriques)<a class="headerlink" href="#brulures-graves-5-cm-profondes-electriques" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p>Appeler SAMU (15) immédiatement</p></li>
+<li><p>Refroidir à l’eau froide</p></li>
+<li><p>Couvrir avec linge propre (pas de coton)</p></li>
+<li><p><strong>Ne pas appliquer</strong> : Glace, beurre, dentifrice (mythes !)</p></li>
+<li><p>Surveiller état général (choc, pâleur)</p></li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Brûlures électriques : TOUJOURS consulter un médecin !</strong></p>
+<p>Les brûlures électriques sont souvent plus graves qu’elles ne paraissent.
+Le courant provoque des dégâts internes invisibles (muscles, nerfs, vaisseaux).</p>
+</div>
+</section>
+</section>
+<section id="numeros-durgence-france">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Numéros d’Urgence (France)</a><a class="headerlink" href="#numeros-durgence-france" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p><strong>SAMU</strong> : 15</p></li>
+<li><p><strong>Pompiers</strong> : 18</p></li>
+<li><p><strong>Urgences européennes</strong> : 112</p></li>
+<li><p><strong>Centre anti-poison</strong> : Consulter liste par région</p></li>
+</ul>
+<p><strong>Informations à fournir aux secours :</strong></p>
+<ul class="simple">
+<li><p>Votre adresse exacte</p></li>
+<li><p>Nombre de victimes</p></li>
+<li><p>Nature de l’accident (électrisation, brûlure, etc.)</p></li>
+<li><p>État de la victime (conscient ? respire ?)</p></li>
+<li><p>Votre numéro de téléphone</p></li>
+</ul>
+</section>
+</section>
+<section id="liste-de-controle-avant-de-commencer">
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">✅ Liste de Contrôle Avant de Commencer</a><a class="headerlink" href="#liste-de-controle-avant-de-commencer" title="Lien vers cette rubrique"></a></h2>
+<section id="evaluation-personnelle">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">Évaluation Personnelle</a><a class="headerlink" href="#evaluation-personnelle" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition-auto-evaluation-des-competences admonition">
+<p class="admonition-title">Auto-Évaluation des Compétences</p>
+<p><strong>Avant d’acheter le kit, évaluez honnêtement vos compétences :</strong></p>
+<p>Soudure :</p>
+<ul class="simple">
+<li><p>[ ] J’ai déjà soudé des composants électroniques (au moins 10 fois)</p></li>
+<li><p>[ ] Je sais reconnaître une bonne soudure d’une mauvaise</p></li>
+<li><p>[ ] Je sais comment dessouder un composant</p></li>
+</ul>
+<p>Électricité :</p>
+<ul class="simple">
+<li><p>[ ] Je comprends la différence entre AC et DC</p></li>
+<li><p>[ ] Je sais utiliser un multimètre (mesurer tension, continuité)</p></li>
+<li><p>[ ] Je connais les dangers du 230 V AC</p></li>
+<li><p>[ ] Je sais comment couper l’alimentation au tableau électrique</p></li>
+<li><p>[ ] J’ai déjà câblé un circuit domestique OU je serai supervisé par un électricien</p></li>
+</ul>
+<p>Mécanique :</p>
+<ul class="simple">
+<li><p>[ ] J’ai déjà utilisé une perceuse</p></li>
+<li><p>[ ] Je sais comment sécuriser une pièce pour perçage</p></li>
+<li><p>[ ] Je possède ou ai accès aux outils nécessaires</p></li>
+</ul>
+<p><strong>Si vous avez coché NON à plus de 2 questions :</strong></p>
+<ul class="simple">
+<li><p>→ Formez-vous AVANT de commencer ce projet</p></li>
+<li><p>→ Ou faites-vous aider par quelqu’un d’expérimenté</p></li>
+</ul>
+</div>
+<section id="ressources-de-formation">
+<h4>Ressources de Formation<a class="headerlink" href="#ressources-de-formation" title="Lien vers cette rubrique"></a></h4>
+<p>Si vous manquez de compétences, formez-vous d’abord :</p>
+<p><strong>Soudure :</strong></p>
+<ul class="simple">
+<li><p>Achetez un kit d’entraînement (~10–15 €)</p></li>
+<li><p>Regardez tutoriels YouTube « apprendre à souder »</p></li>
+<li><p>Pratiquez sur composants jetables</p></li>
+<li><p>Faites vérifier vos soudures par quelqu’un d’expérimenté</p></li>
+</ul>
+<p><strong>Électricité :</strong></p>
+<ul class="simple">
+<li><p>Suivez formation électricité domestique (Fab Lab, associations)</p></li>
+<li><p>Lisez guides sécurité électrique</p></li>
+<li><p><strong>NE PAS apprendre sur ce projet</strong> (trop dangereux)</p></li>
+</ul>
+<p><strong>Outils :</strong></p>
+<ul class="simple">
+<li><p>Fab Labs, hackerspaces offrent accès outils et formation</p></li>
+<li><p>Cours bricolage magasins bricolage (Leroy Merlin, Castorama)</p></li>
+</ul>
+</section>
+</section>
+<section id="checklist-avant-assemblage">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Checklist Avant Assemblage</a><a class="headerlink" href="#checklist-avant-assemblage" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition-verifications-obligatoires admonition">
+<p class="admonition-title">Vérifications Obligatoires</p>
+<p><strong>Avant de commencer l’assemblage du Mk2PVRouter :</strong></p>
+<p>Lecture :</p>
+<ul class="simple">
+<li><p>[ ] J’ai lu et compris ce chapitre sécurité ENTIÈREMENT</p></li>
+<li><p>[ ] J’ai lu la documentation technique pertinente</p></li>
+<li><p>[ ] Je comprends les étapes du projet</p></li>
+</ul>
+<p>Équipement de sécurité :</p>
+<ul class="simple">
+<li><p>[ ] Lunettes de protection</p></li>
+<li><p>[ ] Extincteur ABC (2 kg min, vérifié)</p></li>
+<li><p>[ ] Détecteur de fumée fonctionnel</p></li>
+<li><p>[ ] Trousse premiers secours</p></li>
+<li><p>[ ] Testeur de tension (pour étapes 230 V)</p></li>
+<li><p>[ ] Gants isolants (pour étapes 230 V)</p></li>
+</ul>
+<p>Environnement :</p>
+<ul class="simple">
+<li><p>[ ] Espace de travail dégagé et bien éclairé</p></li>
+<li><p>[ ] Surface de travail ininflammable</p></li>
+<li><p>[ ] Ventilation suffisante</p></li>
+<li><p>[ ] Quelqu’un informé de mon activité (en cas d’urgence)</p></li>
+<li><p>[ ] Téléphone à portée pour appel secours</p></li>
+</ul>
+<p>Compétences :</p>
+<ul class="simple">
+<li><p>[ ] Je possède les compétences requises OU j’ai supervision adaptée</p></li>
+<li><p>[ ] J’ai pratiqué la soudure sur kit d’entraînement</p></li>
+<li><p>[ ] Je connais l’emplacement du disjoncteur principal</p></li>
+<li><p>[ ] Je connais les gestes premiers secours de base</p></li>
+</ul>
+</div>
+</section>
+<section id="reconnaissance-de-risques">
+<h3><a class="toc-backref" href="#id22" role="doc-backlink">Reconnaissance de Risques</a><a class="headerlink" href="#reconnaissance-de-risques" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition-declaration-de-comprehension-des-risques admonition">
+<p class="admonition-title">Déclaration de Compréhension des Risques</p>
+<p><strong>En poursuivant ce projet, je reconnais avoir compris que :</strong></p>
+<ul class="simple">
+<li><p>Ce projet implique des <strong>tensions MORTELLES</strong> (230 V AC)</p></li>
+<li><p>Des <strong>brûlures graves</strong> peuvent survenir (fer à souder, composants chauds)</p></li>
+<li><p>Un <strong>risque d’incendie</strong> existe à plusieurs étapes</p></li>
+<li><p>Des <strong>blessures mécaniques</strong> peuvent se produire (outils)</p></li>
+<li><p>Je dois <strong>respecter scrupuleusement</strong> toutes les consignes de sécurité</p></li>
+<li><p>En cas de doute, je dois <strong>ARRÊTER</strong> et demander conseil</p></li>
+<li><p>J’assume l’<strong>entière responsabilité</strong> de ma sécurité</p></li>
+<li><p>Je ne tiendrai pas les auteurs de la documentation responsables en cas d’accident</p></li>
+</ul>
+<p><strong>Si vous n’êtes pas d’accord avec ces points, NE POURSUIVEZ PAS ce projet.</strong></p>
+</div>
+</section>
+<section id="cas-dexclusion">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">Cas d’Exclusion</a><a class="headerlink" href="#cas-dexclusion" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Vous NE DEVEZ PAS poursuivre ce projet si :</strong></p>
+<ul class="simple">
+<li><p>Vous êtes mineur (&lt; 18 ans) sans supervision adulte compétente</p></li>
+<li><p>Vous n’avez jamais soudé et refusez de vous entraîner d’abord</p></li>
+<li><p>Vous n’avez aucune connaissance en électricité et ne voulez pas être supervisé</p></li>
+<li><p>Vous n’avez pas accès à l’équipement de sécurité minimum</p></li>
+<li><p>Vous avez peur de l’électricité (sentiment légitime = prudence !)</p></li>
+<li><p>Vous voulez « aller vite » et sauter les étapes de vérification</p></li>
+<li><p>Vous pensez « ça n’arrive qu’aux autres »</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>La prudence n’est PAS de la lâcheté!</strong></p>
+<p>Reconnaître ses limites et demander de l’aide est une FORCE.
+Il vaut mieux abandonner le projet que de se retrouver à l’hôpital… ou pire.</p>
+</div>
+</section>
+</section>
+<section id="en-conclusion">
+<h2><a class="toc-backref" href="#id24" role="doc-backlink">En Conclusion</a><a class="headerlink" href="#en-conclusion" title="Lien vers cette rubrique"></a></h2>
+<p>Ce projet est <strong>techniquement accessible</strong> à un amateur motivé et prudent.</p>
+<p>Cependant, il comporte des <strong>risques réels et sérieux</strong> qui ne doivent pas être sous-estimés.</p>
+<p><strong>La clé du succès :</strong></p>
+<ul class="simple">
+<li><p>📚 <strong>Information</strong> : Lisez toute la documentation avant de commencer</p></li>
+<li><p>🎓 <strong>Formation</strong> : Acquérez les compétences manquantes</p></li>
+<li><p>🛡️ <strong>Protection</strong> : Équipez-vous correctement</p></li>
+<li><p>🤝 <strong>Prudence</strong> : n’hésitez pas à demander de l’aide</p></li>
+<li><p>⏱️ <strong>Patience</strong> : Ne vous précipitez jamais</p></li>
+</ul>
+<div class="admonition-conseil-final admonition">
+<p class="admonition-title">Conseil Final</p>
+<p><strong>Si vous avez le moindre doute sur votre capacité à réaliser ce projet en sécurité :</strong></p>
+<ul class="simple">
+<li><p>Faites-vous aider par quelqu’un d’expérimenté</p></li>
+<li><p>Suivez des formations (Fab Labs, associations)</p></li>
+<li><p>Pour les parties 230 V : Faites appel à un électricien</p></li>
+</ul>
+<p><strong>Votre vie et celle de votre famille valent infiniment plus que le coût d’un professionnel.</strong></p>
+</div>
+</section>
+<section id="pret-a-continuer">
+<h2><a class="toc-backref" href="#id25" role="doc-backlink">Prêt à Continuer ?</a><a class="headerlink" href="#pret-a-continuer" title="Lien vers cette rubrique"></a></h2>
+<p>Si vous avez lu et compris ce chapitre, que vous possédez l’équipement de sécurité requis,
+et que vous vous sentez capable de procéder en toute sécurité, vous pouvez passer au chapitre suivant :</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../introduction/#introduction"><span class="std std-ref">Introduction</span></a> : Vue d’ensemble du projet et liste du matériel</p></li>
+</ul>
+<p><strong>En cas de doute, relisez ce chapitre ou demandez conseil avant de poursuivre.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Signaler un problème de sécurité dans cette documentation :</strong></p>
+<p>Si vous identifiez un risque qui n’est pas mentionné ou insuffisamment couvert,
+merci de le signaler pour que la documentation puisse être améliorée.</p>
+<p>Contact : <a class="reference external" href="https://github.com/FredM67/Mk2PVRouter/issues" rel="noreferrer" target="_blank">https://github.com/FredM67/Mk2PVRouter/issues</a></p>
+</div>
+<hr class="docutils" />
+<p><strong>Restez en sécurité. Bon courage pour votre projet ! 💪</strong></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../" class="btn btn-neutral float-left" title="Bienvenue dans la documentation du Mk2PVRouter !" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../introduction/" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 20 février 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/safety-overview.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/safety-overview.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
