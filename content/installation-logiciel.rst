@@ -8,8 +8,8 @@ Ce chapitre détaille l’installation de l’environnement de développement n�
 
 ⏱️ **Temps estimé :**
 
-- Débutant : 2-3 heures
-- Expérimenté : 1-2 heures
+- Débutant : 2–3 heures
+- Expérimenté : 1–2 heures
 
 .. contents:: Sommaire de l’installation
    :local:

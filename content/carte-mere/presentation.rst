@@ -4,7 +4,7 @@
 Présentation de la carte universelle
 ======================================
 
-⏱️ **Temps de lecture** : 10-15 minutes
+⏱️ **Temps de lecture** : 10–15 minutes
 
 .. admonition:: 📋 Prérequis
 

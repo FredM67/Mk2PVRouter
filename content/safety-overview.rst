@@ -50,7 +50,7 @@ Situations à Risque Électrique dans ce Projet
 - Étalonnage du routeur (manipulation du câblage domestique)
 - Installation finale dans le tableau électrique
 
-2. **Brûlures (Fer à Souder 200-450 °C)**
+2. **Brûlures (Fer à Souder 200–450 °C)**
 -----------------------------------------
 
 Un fer à souder peut causer :
@@ -146,13 +146,13 @@ Pendant la Soudure
 
 - ✅ Toujours reposer le fer sur son support
 - ✅ Souder dans un endroit bien ventilé
-- ✅ Prendre des pauses toutes les 30-45 minutes
+- ✅ Prendre des pauses toutes les 30–45 minutes
 - ✅ Garder une éponge humide pour nettoyer la panne
 - ✅ Tenir le fer par la poignée isolée uniquement
 
 **À NE JAMAIS FAIRE :**
 
-- ❌ Toucher la panne ou le fil chauffant (200-450 °C !)
+- ❌ Toucher la panne ou le fil chauffant (200–450 °C !)
 - ❌ Laisser le fer allumé sans surveillance
 - ❌ Souder près de matériaux inflammables
 - ❌ Respirer directement les fumées de soudure
@@ -161,7 +161,7 @@ Pendant la Soudure
 En Cas de Brûlure au Fer à Souder
 ---------------------------------
 
-1. **Refroidir immédiatement** : Eau froide courante 10-15 minutes
+1. **Refroidir immédiatement** : Eau froide courante 10–15 minutes
 2. **Ne pas percer les cloques**
 3. **Couvrir avec compresse stérile**
 4. **Si brûlure >5 cm ou profonde** : Consulter médecin/urgences
@@ -296,7 +296,7 @@ Technique Sûre
       JAMAIS tenir une pièce à la main pendant le perçage !
       Si le foret accroche, la pièce peut tourner violemment et vous blesser.
 
-2. **Commencer avec foret pilote** : Percer petit (2-3mm) puis agrandir
+2. **Commencer avec foret pilote** : Percer petit (2–3mm) puis agrandir
 
 3. **Avancer progressivement** : Ne pas forcer, laisser l’outil travailler
 
@@ -466,7 +466,7 @@ En Cas de Brûlure
 Brûlures Mineures (< 5 cm, superficielles)
 ------------------------------------------
 
-1. Refroidir immédiatement à l’eau froide courante (15-20 minutes)
+1. Refroidir immédiatement à l’eau froide courante (15–20 minutes)
 2. Retirer bijoux/vêtements avant gonflement
 3. Ne pas percer les cloques
 4. Couvrir avec compresse stérile non adhérente
@@ -546,7 +546,7 @@ Si vous manquez de compétences, formez-vous d’abord :
 
 **Soudure :**
 
-- Achetez un kit d’entraînement (~10-15 €)
+- Achetez un kit d’entraînement (~10–15 €)
 - Regardez tutoriels YouTube « apprendre à souder »
 - Pratiquez sur composants jetables
 - Faites vérifier vos soudures par quelqu’un d’expérimenté

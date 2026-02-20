@@ -4,7 +4,7 @@
 Choix de la configuration
 =========================
 
-⏱️ **Temps de lecture** : 5-10 minutes
+⏱️ **Temps de lecture** : 5–10 minutes
 
 .. admonition:: 📋 Prérequis
 

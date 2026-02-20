@@ -11,7 +11,7 @@ Compilation et Téléversement
 
 #. Cliquer sur le bouton **« Vérifier »** (✓) pour compiler
 
-   - Attendre la compilation (1-2 minutes la première fois)
+   - Attendre la compilation (1–2 minutes la première fois)
    - Vérifier qu’il n’y a **aucune erreur**
 
 #. Si la compilation réussit, cliquer sur **« Téléverser »** (→)

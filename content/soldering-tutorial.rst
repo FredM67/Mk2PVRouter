@@ -3,7 +3,7 @@
 Guide de Soudure pour Débutants
 ================================
 
-⏱️ **Temps de lecture** : 30-45 minutes
+⏱️ **Temps de lecture** : 30–45 minutes
 
 🔧 **Niveau de difficulté** : Débutant (guide pratique)
 
@@ -47,9 +47,9 @@ Avant de Commencer — Pratique Recommandée
 
    Avant de souder votre Mk2PVRouter (composants coûteux), achetez un **kit de pratique soudure** :
 
-   - **Coût** : 5-15 € sur AliExpress, Amazon, eBay
+   - **Coût** : 5–15 € sur AliExpress, Amazon, eBay
    - **Type** : Kit « LED clignotante », « sirène électronique », ou plaque d’entraînement
-   - **Durée** : 2-3 heures de pratique suffisent
+   - **Durée** : 2–3 heures de pratique suffisent
    - **Bénéfice** : Apprendre sur des composants à 5 € plutôt qu’à 50 €
 
    **Recherchez** : « soldering practice kit », « soudure kit débutant », « DIY soldering »
@@ -60,7 +60,7 @@ Sécurité — Points Essentiels
 .. danger::
    ⚠️ **DANGERS DE LA SOUDURE**
 
-   - **Brûlures** : Le fer à souder atteint **350-450 °C** (température capable de brûler instantanément la peau)
+   - **Brûlures** : Le fer à souder atteint **350–450 °C** (température capable de brûler instantanément la peau)
    - **Fumées toxiques** : Les vapeurs de flux contiennent des produits chimiques irritants
    - **Projections** : Gouttes de soudure fondue peuvent jaillir
    - **Électricité** : Fer branché sur secteur 230 V
@@ -110,20 +110,20 @@ Matériel Nécessaire
 
    **Résultat** : Vous penserez que c’est de votre faute, alors que c’est le matériel !
 
-   **Investissez dans du matériel correct (40-80 €)** — c’est la différence entre réussir et abandonner par frustration.
+   **Investissez dans du matériel correct (40–80 €)** — c’est la différence entre réussir et abandonner par frustration.
 
 
-**1. Station de soudure** (40-80 €)
+**1. Station de soudure** (40–80 €)
 
-   - **Température réglable** : 300-450 °C
-   - **Panne fine** : 1-2 mm de diamètre (type « biseauté » ou « conique »)
+   - **Température réglable** : 300–450 °C
+   - **Panne fine** : 1–2 mm de diamètre (type « biseauté » ou « conique »)
    - **Support avec éponge** : Pour nettoyer la panne
    - **Marques recommandées** : Weller, Hakko, JBC (pro), ou entrée de gamme : Yihua, Aoyue
 
    .. note::
       Évitez les fers « premier prix » sans réglage de température (< 20 €). Ils surchauffent et détruisent les composants.
 
-**2. Fil de soudure** (5-10 €)
+**2. Fil de soudure** (5–10 €)
 
    - **Type** : Étain avec flux intégré (*rosin core*)
    - **Alliage** :
@@ -131,8 +131,8 @@ Matériel Nécessaire
      - **Sn60/Pb40** (60 % étain, 40 % plomb) : Plus facile pour débuter, **température 190 °C**
      - **Sn99/Cu1** (sans plomb) : Écologique, **température 220 °C**, un peu plus difficile
 
-   - **Diamètre** : **0,7-1,0 mm** (idéal pour électronique)
-   - **Flux** : Intégré (2-3 % minimum)
+   - **Diamètre** : **0,7–1,0 mm** (idéal pour électronique)
+   - **Flux** : Intégré (2–3 % minimum)
 
    .. warning::
       ⚠️ **Soudure au plomb**
@@ -143,7 +143,7 @@ Matériel Nécessaire
       - Ne pas manger/boire pendant la soudure
       - Bonne ventilation indispensable
 
-**3. Support de fer** (inclus avec station, ou 5-10 € séparé)
+**3. Support de fer** (inclus avec station, ou 5–10 € séparé)
 
    - **Base lourde** : Stable, ne bascule pas
    - **Éponge humide** : Pour nettoyer la panne
@@ -152,21 +152,21 @@ Matériel Nécessaire
 Équipement Complémentaire (Recommandé)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-☐ **Pince brucelles** (ESD safe) : Maintenir les composants (5-10 €)
+☐ **Pince brucelles** (ESD safe) : Maintenir les composants (5–10 €)
 
-☐ **Troisième main** : Support avec pinces crocodiles (10-15 €)
+☐ **Troisième main** : Support avec pinces crocodiles (10–15 €)
 
-☐ **Pompe à dessouder** : Pour retirer la soudure (erreurs) (5-10 €)
+☐ **Pompe à dessouder** : Pour retirer la soudure (erreurs) (5–10 €)
 
-☐ **Tresse à dessouder** : Alternative à la pompe (3-5 €)
+☐ **Tresse à dessouder** : Alternative à la pompe (3–5 €)
 
-☐ **Flux liquide/pâte** : Facilite l’étalement de la soudure (5-10 €)
+☐ **Flux liquide/pâte** : Facilite l’étalement de la soudure (5–10 €)
 
-☐ **Loupe sur pied** : Grossissement 2-5× avec lumière LED (15-30 €)
+☐ **Loupe sur pied** : Grossissement 2–5× avec lumière LED (15–30 €)
 
-☐ **Multimètre** : Pour vérifier continuité des soudures (15-30 €)
+☐ **Multimètre** : Pour vérifier continuité des soudures (15–30 €)
 
-☐ **Pince coupante** : Pour couper les pattes de composants (5-10 €)
+☐ **Pince coupante** : Pour couper les pattes de composants (5–10 €)
 
 Préparation du Poste de Travail
 --------------------------------
@@ -276,9 +276,9 @@ Préparation du Fer
 
 **1. Allumer le fer et régler la température**
 
-   - **Soudure plombée (Sn60/Pb40)** : Régler à **320-350 °C**
-   - **Sans plomb (Sn99)** : Régler à **350-380 °C**
-   - **Attendre 2-3 minutes** pour que le fer atteigne la température
+   - **Soudure plombée (Sn60/Pb40)** : Régler à **320–350 °C**
+   - **Sans plomb (Sn99)** : Régler à **350–380 °C**
+   - **Attendre 2–3 minutes** pour que le fer atteigne la température
 
 **2. Étamer la panne** (première utilisation ou panne oxydée)
 
@@ -296,7 +296,7 @@ Comment Tenir le Fer
 **✅ Prise correcte** (« prise stylo »)
 
 - Main dominante (droite si droitier)
-- Tenir comme un **stylo**, mais **5-8 cm en arrière de la panne**
+- Tenir comme un **stylo**, mais **5–8 cm en arrière de la panne**
 - **Ne pas serrer** : Prise détendue
 - Reposer le poignet sur la table (stabilité)
 
@@ -327,16 +327,16 @@ Les 5 Étapes d’une Bonne Soudure
 - Écarter légèrement les pattes (évite que le composant tombe)
 - Ou utiliser du ruban adhésif de masquage
 
-**Étape 3 : Positionner le fer** (1-2 secondes)
+**Étape 3 : Positionner le fer** (1–2 secondes)
 
 - Placer la panne du fer **à 45°** touchant **à la fois** :
 
   - La **patte du composant**
   - La **piste cuivre** du PCB
 
-- **Attendre 1-2 secondes** : Laisser chauffer patte + piste
+- **Attendre 1–2 secondes** : Laisser chauffer patte + piste
 
-**Étape 4 : Appliquer la soudure** (1-2 secondes)
+**Étape 4 : Appliquer la soudure** (1–2 secondes)
 
 - Approcher le fil de soudure à l’**opposé du fer**
 - Toucher **la jonction patte-piste** (pas directement le fer !)
@@ -347,12 +347,12 @@ Les 5 Étapes d’une Bonne Soudure
 
 - Retirer d’abord le **fil de soudure**
 - Puis immédiatement le **fer** (moins d’1 seconde après)
-- **Ne pas bouger le PCB pendant 2-3 secondes** (solidification)
+- **Ne pas bouger le PCB pendant 2–3 secondes** (solidification)
 
 .. warning::
    ⏱️ **TIMING CRITIQUE**
 
-   **Durée totale fer sur joint : 2-4 secondes maximum**
+   **Durée totale fer sur joint : 2–4 secondes maximum**
 
    - Trop court (< 1 s) : Soudure froide (mauvais contact)
    - Trop long (> 5 s) : Surchauffe composant (destruction), piste décolle
@@ -371,7 +371,7 @@ Caractéristiques d’une Soudure Parfaite
 
 **✅ BONNE SOUDURE** :
 
-- **Forme** : Cône ou volcan avec pente douce (~30-45°)
+- **Forme** : Cône ou volcan avec pente douce (~30–45°)
 - **Surface** : **Brillante** et lisse (aspect argenté)
 - **Contact** : Soudure **mouille** la patte ET la piste (étalement visible)
 - **Quantité** : Suffisante (recouvre joint), mais pas excessive (pas de boule)
@@ -402,7 +402,7 @@ Soudures Défectueuses — Comment les Reconnaître
 
 **Solution** :
 
-- Réchauffer avec fer (2-3 secondes)
+- Réchauffer avec fer (2–3 secondes)
 - Ajouter un peu de flux si nécessaire
 
 2. Pont de Soudure (*Solder Bridge*)
@@ -510,7 +510,7 @@ Soudures Défectueuses — Comment les Reconnaître
 **Cause** :
 
 - Fer **trop chaud** (> 400 °C pour plombé)
-- Fer laissé **trop longtemps** (> 5-8 secondes)
+- Fer laissé **trop longtemps** (> 5–8 secondes)
 
 **Conséquence** :
 
@@ -576,7 +576,7 @@ Soudure de Composants Sensibles
 **Triacs et transistors de puissance**
 
 - ⚠️ Surchauffe détruit le composant
-- ✅ Souder **rapidement** (2-3 secondes max)
+- ✅ Souder **rapidement** (2–3 secondes max)
 - ✅ Utiliser pâte thermique si montage sur dissipateur
 
 Flux — Quand et Comment l’Utiliser
@@ -612,7 +612,7 @@ Entretien du Fer à Souder
 Nettoyage de la Panne
 ^^^^^^^^^^^^^^^^^^^^^
 
-**Pendant la soudure** (toutes les 5-10 soudures) :
+**Pendant la soudure** (toutes les 5–10 soudures) :
 
 #. Essuyer la panne sur l’éponge humide (ou laine de cuivre)
 #. La panne doit redevenir **brillante**
@@ -623,7 +623,7 @@ Nettoyage de la Panne
 #. Nettoyer la panne sur l’éponge
 #. **Étamer la panne** (laisser couche de soudure pour protéger)
 #. Éteindre le fer
-#. Laisser refroidir 10-15 minutes avant de ranger
+#. Laisser refroidir 10–15 minutes avant de ranger
 
 Remplacement de la Panne
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -634,9 +634,9 @@ Remplacement de la Panne
 - Cratères ou trous dans la panne
 - Soudure ne « colle » plus à la panne
 
-**Fréquence** : Une panne bien entretenue dure 6-12 mois (usage amateur)
+**Fréquence** : Une panne bien entretenue dure 6–12 mois (usage amateur)
 
-**Prix** : 5-15 € la panne de remplacement
+**Prix** : 5–15 € la panne de remplacement
 
 Erreurs Courantes de Débutants
 -------------------------------
@@ -704,11 +704,11 @@ Où Trouver des Kits de Pratique ?
 **En Ligne** :
 
 - **Amazon France** : Rechercher « kit soudure débutant »
-- **AliExpress** : « soldering practice kit » (livraison 2-4 semaines)
+- **AliExpress** : « soldering practice kit » (livraison 2–4 semaines)
 - **eBay** : Kits d’occasion
 - **Gotronic, Conrad, RS Components** : Kits pédagogiques
 
-**Kits Recommandés** (5-15 €) :
+**Kits Recommandés** (5–15 €) :
 
 - Kit LED clignotante
 - Kit sirène ou alarme
@@ -745,7 +745,7 @@ Problème : Composants Tombent Quand Je Retourne le :term:`PCB`
 
 **Solutions** :
 
-✅ Écarter légèrement les pattes des composants (angle 10-15°)
+✅ Écarter légèrement les pattes des composants (angle 10–15°)
 
 ✅ Utiliser ruban adhésif de masquage pour maintenir
 
@@ -758,7 +758,7 @@ Problème : Je Fais Trop de Ponts de Soudure
 
 **Solutions** :
 
-✅ Utiliser **moins de soudure** (2-3 cm de fil suffit par joint)
+✅ Utiliser **moins de soudure** (2–3 cm de fil suffit par joint)
 
 ✅ Baisser température fer (moins liquide)
 
@@ -802,7 +802,7 @@ Checklist Finale — Prêt à Souder Votre Mk2PVRouter ?
 
    Avant de commencer l’assemblage de votre Mk2PVRouter, vérifiez :
 
-   ☐ J’ai pratiqué sur un kit d’entraînement (2-3 heures minimum)
+   ☐ J’ai pratiqué sur un kit d’entraînement (2–3 heures minimum)
 
    ☐ Je reconnais une bonne soudure d’une mauvaise
 

@@ -4,7 +4,7 @@
 Étage de sortie
 ================
 
-⏱️ **Temps estimé** : 2-3 heures (débutant), 1-1,5 heures (expérimenté)
+⏱️ **Temps estimé** : 2–3 heures (débutant), 1–1,5 heures (expérimenté)
 
 🔧 **Niveau de difficulté** : Avancé
 
@@ -27,7 +27,7 @@
 
    ☐ Outils nécessaires à disposition (fer à souder haute puissance, pince coupante, tournevis)
 
-   ☐ Temps disponible (2-3 heures pour débutant)
+   ☐ Temps disponible (2–3 heures pour débutant)
 
    ☐ Extincteur à proximité (soudure haute puissance)
 
@@ -390,7 +390,7 @@ Configuration du Banc de Test
 
 **Matériel nécessaire pour le test :**
 
-☐ **Lampe à incandescence** 40-100 W (ou résistance chauffante équivalente)
+☐ **Lampe à incandescence** 40–100 W (ou résistance chauffante équivalente)
 
 ☐ **Douille E27** avec câble secteur
 

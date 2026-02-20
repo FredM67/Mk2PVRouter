@@ -4,7 +4,7 @@
 Configuration des cavaliers
 =================================
 
-⏱️ **Temps estimé** : 15-20 minutes
+⏱️ **Temps estimé** : 15–20 minutes
 
 🔧 **Niveau de difficulté** : Débutant
 

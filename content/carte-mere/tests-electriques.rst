@@ -4,7 +4,7 @@
 Tests électriques
 ==================
 
-⏱️ **Temps estimé** : 30-45 minutes
+⏱️ **Temps estimé** : 30–45 minutes
 
 🔧 **Niveau de difficulté** : Intermédiaire
 

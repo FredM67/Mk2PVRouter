@@ -4,7 +4,7 @@
 Étalonnage
 ==========
 
-⏱️ **Temps estimé** : 45 min-2 heures selon la configuration
+⏱️ **Temps estimé** : 45 min–2 heures selon la configuration
 
 🔧 **Niveau de difficulté** : Intermédiaire (mono) / Avancé (tri)
 

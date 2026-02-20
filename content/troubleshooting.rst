@@ -390,7 +390,7 @@ Causes Possibles
     - Mono : TR1
     - Tri : TR1, TR2, TR3
 
- - Mesurer la résistance des enroulements (doit être ~1-10 kΩ)
+ - Mesurer la résistance des enroulements (doit être ~1–10 kΩ)
  - Si <10 Ω → Transformateur défectueux
 
  #. ☐ **Pont de soudure sur pistes haute tension**
@@ -465,15 +465,15 @@ Valeurs de Référence
    - Tolérance
  * - VCC (3,3 V)
    - 3,3 V
-   - ±0,2 V (3,1-3,5 V)
+   - ±0,2 V (3,1–3,5 V)
  * - VCC (5 V)
    - 5,0 V
-   - ±0,3 V (4,7-5,3 V)
+   - ±0,3 V (4,7–5,3 V)
  * - Sortie ADC (repos)
    - VCC/2
    - ±0,5 V
  * - Gate triac (actif)
-   - ~2-5 V (pulsé)
+   - ~2–5 V (pulsé)
    - Variable
 
 Diagnostic par Tension
@@ -575,10 +575,10 @@ Valeurs de Référence
    - 0 W ±10 W
    - Normal
  * - Avec charge 2 000 W
-   - 1 900-2100 W
+   - 1 900–2100 W
    - ±5% après étalonnage
  * - Production 3 000 W
-   - 2 850-3150 W
+   - 2 850–3150 W
    - ±5%
  * - Écart >20%
    - Problème matériel
@@ -619,7 +619,7 @@ Valeurs de Référence
 **Procédure recommandée :**
 
 #. Couper TOUS les autres appareils
-#. Utiliser une charge purement résistive 1 500-2000 W
+#. Utiliser une charge purement résistive 1 500–2000 W
 #. Laisser stabiliser 5 minutes
 #. Mesurer avec un instrument calibré
 #. Ajuster calibration
@@ -721,10 +721,10 @@ LED Clignote Bizarrement
    - Excédent max OU charge saturée
    - Normal si chauffe-eau à température
  * - Clignotement très rapide (<0.5s)
-   - Beaucoup d’excédent (80-100%)
+   - Beaucoup d’excédent (80–100%)
    - Normal en pleine production
  * - Clignotement lent (>2s)
-   - Peu d’excédent (10-30%)
+   - Peu d’excédent (10–30%)
    - Normal début/fin journée
  * - Clignotement erratique
    - Mesures instables
@@ -804,7 +804,7 @@ Test du Triac
 #. Oscilloscope ou multimètre AC sur gate triac
 #. En fonctionnement :
 
-   - Doit montrer impulsions 2-5 V
+   - Doit montrer impulsions 2–5 V
    - Fréquence 50/100 Hz (burst fire)
    - Si pas d’impulsions → Problème opto-coupleur ou routage signal
 
@@ -817,7 +817,7 @@ Vérifications Charge
 - ☐ Thermostat pas coupé manuellement ?
 - ☐ Résistance chauffe-eau fonctionnelle ?
 
- - Tester résistance : doit être ~25-30 Ω pour 2 000 W
+ - Tester résistance : doit être ~25–30 Ω pour 2 000 W
  - Si infinie → Résistance coupée/brûlée
 
 **Radiateur électrique :**
@@ -848,7 +848,7 @@ Triac Surchauffe
    - Vérifier que la charge connectée ne dépasse pas cette limite
    - Exemples :
 
-     - ✅ Chauffe-eau 2 000-3000 W : OK
+     - ✅ Chauffe-eau 2 000–3000 W : OK
      - ✅ Radiateur électrique 2 000 W : OK
      - ❌ Charge >3 kW : Dépasse les spécifications !
 
@@ -1141,7 +1141,7 @@ Ressources Communautaires
 
 #. **Email support :** support@mk2pvrouter.fr
 
-   - Temps réponse : 2-5 jours ouvrés
+   - Temps réponse : 2–5 jours ouvrés
 
 #. **GitHub Issues :** https://github.com/FredM67/Mk2PVRouter/issues
 
@@ -1275,7 +1275,7 @@ Oscilloscope (Optionnel)
 
 **Alternative économique :**
 
-- Oscilloscope USB 20 MHz (50-100€)
+- Oscilloscope USB 20 MHz (50–100€)
 - Suffisant pour diagnostics DIY
 
 Pince Ampèremétrique
@@ -1289,7 +1289,7 @@ Pince Ampèremétrique
 
 **Spécifications minimum :**
 
-- Plage : 0-20 A AC
+- Plage : 0–20 A AC
 - Précision : ±3%
 - Lecture True RMS recommandée
 

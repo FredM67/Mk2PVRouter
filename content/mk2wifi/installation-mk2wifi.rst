@@ -4,7 +4,7 @@
 Installation du module mk2Wifi
 ================================
 
-⏱️ **Temps estimé** : 30-45 minutes
+⏱️ **Temps estimé** : 30–45 minutes
 
 🔧 **Niveau de difficulté** : Débutant
 

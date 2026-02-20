@@ -4,7 +4,7 @@
 Perçages
 ========
 
-⏱️ **Temps estimé** : 1,5-2 heures (débutant), 45 min-1 heure (expérimenté)
+⏱️ **Temps estimé** : 1,5–2 heures (débutant), 45 min–1 heure (expérimenté)
 
 🔧 **Niveau de difficulté** : Intermédiaire
 
@@ -20,7 +20,7 @@ Perçages
 
    ☐ Outils de perçage à disposition (perceuse, mèches, gabarits)
 
-   ☐ Temps disponible (1,5-2 heures pour débutant)
+   ☐ Temps disponible (1,5–2 heures pour débutant)
 
    ☐ Équipement de protection (lunettes, gants)
 

@@ -115,7 +115,7 @@ Termes de Base pour Débutants
 
    Soudure
      | Technique pour **fixer et relier électriquement** des composants sur un circuit imprimé.
-     | Utilise un **fer à souder** (300-350 °C) et de l’**étain** (alliage qui fond à ~200 °C).
+     | Utilise un **fer à souder** (300–350 °C) et de l’**étain** (alliage qui fond à ~200 °C).
      | Une bonne soudure est brillante et forme un cône régulier.
 
    Pont de soudure

@@ -73,7 +73,7 @@ Recommandation Forte
    - Assurance responsabilité civile professionnelle
    - Attestation de conformité pour votre assurance
 
-   **Coût estimé :** 200-500 € pour l’installation complète
+   **Coût estimé :** 200–500 € pour l’installation complète
 
    **Ce coût est DÉRISOIRE comparé aux risques encourus.**
 
@@ -439,7 +439,7 @@ Les charges (chauffe-eau, radiateur…) sont raccordées aux étages de sortie, 
      - 6 mm²
      - 32 A
 
-Pour un **chauffe-eau classique 2 000-3 000 W**, les câbles existants sont normalement en **2,5 mm²** avec disjoncteur **16 A** ou **20 A**.
+Pour un **chauffe-eau classique 2 000–3 000 W**, les câbles existants sont normalement en **2,5 mm²** avec disjoncteur **16 A** ou **20 A**.
 
 Schéma de Raccordement
 ^^^^^^^^^^^^^^^^^^^^^^

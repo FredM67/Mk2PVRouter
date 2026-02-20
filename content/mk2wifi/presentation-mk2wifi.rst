@@ -4,7 +4,7 @@
 Module mk2Wifi
 =======================
 
-⏱️ **Temps de lecture** : 5-10 minutes
+⏱️ **Temps de lecture** : 5–10 minutes
 
 Vue d’ensemble
 --------------

@@ -22,12 +22,12 @@ Introduction
 
 ⏱️ **Temps d’assemblage complet :**
 
-- Débutant en soudure : 7-9 heures (réparties sur plusieurs sessions)
-- Expérience intermédiaire : 5-6 heures
-- Expérimenté : 3-4 heures
+- Débutant en soudure : 7–9 heures (réparties sur plusieurs sessions)
+- Expérience intermédiaire : 5–6 heures
+- Expérimenté : 3–4 heures
 
 .. tip::
-   Il est recommandé de travailler par sessions de 2-3 heures maximum pour maintenir concentration et précision.
+   Il est recommandé de travailler par sessions de 2–3 heures maximum pour maintenir concentration et précision.
 
 -------------
 
@@ -68,23 +68,23 @@ L’assemblage complet va nécessiter plusieurs étapes :
      - Débutant
      - Expérimenté
    * - Soudure carte-mère + tests
-     - 3-4 h
-     - 1,5-2 h
+     - 3–4 h
+     - 1,5–2 h
    * - Soudure cartes sortie + tests
-     - 1,5-2 h
-     - 45 min-1 h
+     - 1,5–2 h
+     - 45 min–1 h
    * - Perçages
-     - 2-3 h
-     - 1-1,5 h
+     - 2–3 h
+     - 1–1,5 h
    * - Montage dans boîtier
-     - 1-2 h
-     - 30 min-1 h
+     - 1–2 h
+     - 30 min–1 h
    * - Câblage
-     - 2-3 h
-     - 1-1,5 h
+     - 2–3 h
+     - 1–1,5 h
    * - Logiciel + étalonnage
-     - 3-4 h
-     - 2-3 h
+     - 3–4 h
+     - 2–3 h
 
 Recommandations pour les étapes de soudure
 ------------------------------------------

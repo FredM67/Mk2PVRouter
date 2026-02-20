@@ -4,7 +4,7 @@
 Assemblage — Composants triphasé
 =========================================
 
-⏱️ **Temps estimé** : 45 min-1 heure
+⏱️ **Temps estimé** : 45 min–1 heure
 
 🔧 **Niveau de difficulté** : Intermédiaire
 

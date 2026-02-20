@@ -94,7 +94,7 @@ Installation de l’Extension
 #. Dans le champ de recherche, taper : `PlatformIO IDE`
 #. Trouver l’extension **« PlatformIO IDE »** par PlatformIO
 #. Cliquer sur **« Install »**
-#. Attendre la fin de l’installation (peut prendre 2-5 minutes)
+#. Attendre la fin de l’installation (peut prendre 2–5 minutes)
 #. Une fois terminé, cliquer sur **« Reload »** pour redémarrer VS Code
 
 .. note::
@@ -132,7 +132,7 @@ PlatformIO télécharge **automatiquement** :
 - Les outils de programmation
 
 .. note::
-   Le premier téléchargement des dépendances peut prendre 5-10 minutes selon votre connexion Internet.
+   Le premier téléchargement des dépendances peut prendre 5–10 minutes selon votre connexion Internet.
    PlatformIO affiche la progression dans le terminal intégré.
 
 Compilation et Téléversement

@@ -4,7 +4,7 @@
 Assemblage de la carte-mère universelle
 ==========================================
 
-⏱️ **Temps estimé** : 45 min-1 heure (débutant), 20-30 minutes (expérimenté)
+⏱️ **Temps estimé** : 45 min–1 heure (débutant), 20–30 minutes (expérimenté)
 
 🔧 **Niveau de difficulté** : Intermédiaire
 
@@ -18,7 +18,7 @@ Assemblage de la carte-mère universelle
    | ☐ Configuration choisie (voir :ref:`choix-configuration`)
    | ☐ Chapitre :ref:`carte-mere-presentation` lu
    | ☐ Fer à souder et consommables prêts
-   | ☐ Temps disponible (1,5-2 heures pour débutant)
+   | ☐ Temps disponible (1,5–2 heures pour débutant)
    | ☐ Espace de travail propre et organisé
 
 Introduction

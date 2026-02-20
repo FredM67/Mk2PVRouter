@@ -31,7 +31,7 @@ Installation
 #. **IMPORTANT :** Cocher **« Install USB drivers »** et tous les composants
 #. Choisir le répertoire d’installation (laisser par défaut : `C:\\Program Files\\Arduino`)
 #. Cliquer sur **« Install »**
-#. Attendre la fin de l’installation (5-10 minutes)
+#. Attendre la fin de l’installation (5–10 minutes)
 #. Laisser l’installateur créer les raccourcis sur le bureau
 
 .. note::
