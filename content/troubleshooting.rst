@@ -150,12 +150,12 @@ Si Tension Correcte mais Pas de Fonctionnement
 
 .. admonition:: Vérifications microcontrôleur
 
- #. ☐ **ATmega328** bien inséré dans le support ?
+ #. ☐ **ATmega328P** bien inséré dans le support ?
 
     - Toutes les pattes dans les trous ?
     - Pas de patte pliée sous le boîtier ?
 
- #. ☐ **ATmega328** dans le bon sens ?
+ #. ☐ **ATmega328P** dans le bon sens ?
 
     - ⚠️ **CRITIQUE** : Encoche alignée avec marquage PCB ?
     - Si inversé → **Puce détruite à la mise sous tension !**
@@ -164,7 +164,7 @@ Si Tension Correcte mais Pas de Fonctionnement
  #. ☐ **Firmware programmé ?**
 
     - Voir la section :ref:`test-logiciel`
-    - ATmega328 vierge ne fait rien
+    - ATmega328P vierge ne fait rien
 
 Causes Fréquentes — Résumé
 --------------------------
@@ -183,7 +183,7 @@ Causes Fréquentes — Résumé
    - Régulateur défectueux
    - Vérifier l’orientation, remplacer
  * - Tension OK, rien ne fonctionne
-   - ATmega328 mal inséré/inversé
+   - ATmega328P mal inséré/inversé
    - Vérifier l’orientation, réinsérer
  * - Soudures ternes
    - Soudure froide
@@ -215,7 +215,7 @@ Vérifications de la Connexion FTDI
     - **RX (blanc)** → **TX** sur PCB
     - ⚠️ **NE PAS** connecter VCC si routeur alimenté !
 
- #. ☐ **ATmega328 bien inséré ?**
+ #. ☐ **ATmega328P bien inséré ?**
 
     - Toutes les pattes dans le support ?
     - Orientation correcte (encoche) ?
@@ -325,7 +325,7 @@ Vérification via Moniteur Série
 
  #. ☐ **Quartz/résonateur bien soudé ?**
 
-    - Composant à 2 pattes près de l’ATmega328
+    - Composant à 2 pattes près de l’ATmega328P
     - Soudures correctes ?
 
  #. ☐ **Condensateurs C7/C8 présents ?** (si quartz externe)
@@ -486,7 +486,7 @@ Diagnostic par Tension
 
 **VCC trop élevée (>5.5 V) :**
 
-- ⚠️ **DANGER** pour ATmega328 (max absolu = 6 V)
+- ⚠️ **DANGER** pour ATmega328P (max absolu = 6 V)
 - Régulateur absent ou court-circuité
 - **COUPER L’ALIMENTATION IMMÉDIATEMENT**
 
@@ -1270,7 +1270,7 @@ Oscilloscope (Optionnel)
 **Pour diagnostics avancés :**
 
 - Visualiser signal gate triac
-- Vérifier oscillateur ATmega328
+- Vérifier oscillateur ATmega328P
 - Analyser formes d’ondes ADC
 
 **Alternative économique :**

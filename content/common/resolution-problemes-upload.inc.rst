@@ -9,7 +9,7 @@ Erreur : `avrdude: stk500_recv(): programmer is not responding`
 #. Mauvais port COM sélectionné → Essayer un autre port
 #. Routeur non alimenté → Vérifier l’alimentation 230 V
 #. Câblage FTDI incorrect → Vérifier TX ↔ RX inversés
-#. ATmega328 mal inséré → Vérifier l’orientation et l’insertion complète
+#. ATmega328P mal inséré → Vérifier l’orientation et l’insertion complète
 
 Erreur : `error: 'constexpr' does not name a type`
 ##################################################
