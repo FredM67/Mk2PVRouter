@@ -400,7 +400,7 @@ Causes Possibles
 
  #. ☐ **Condensateur en court-circuit**
 
- - C3 défectueux
+ - C1 (condensateur film secteur) ou C3 (électrolytique) défectueux
  - Rare mais possible
 
  #. ☐ **Module PS1 (RAC05E) défectueux**
@@ -481,9 +481,8 @@ Diagnostic par Tension
 
 **VCC trop faible (<3 V pour système 3.3 V) :**
 
-- Module PS1 (RAC05E) défectueux ou mal orienté
+- Module PS1 (RAC05E) défectueux, mal orienté ou mal soudé
 - Court-circuit partiel consommant trop de courant
-- Module PS1 (RAC05E) défectueux ou mal soudé
 
 **VCC trop élevée (>5.5 V) :**
 
