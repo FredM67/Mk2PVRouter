@@ -485,7 +485,7 @@ La zone hachurée sur la sérigraphie indique les connecteurs de sortie (D5–D9
 .. warning::
    Si vous utilisez une sortie D5–D9 pour un étage de sortie alors que le module mk2Wifi est branché :
 
-   - N’activez sur la mk2Wifi **que les cavaliers** (D5–D9) correspondant aux sorties réellement gérées par l’ESP32 (voir :ref:`presentation-mk2wifi`)
+   - N’activez sur le mk2Wifi **que les cavaliers** (D5–D9) correspondant aux sorties réellement gérées par l’ESP32 (voir :ref:`presentation-mk2wifi`)
    - **Ne jamais utiliser une même broche** à la fois par le mk2Wifi et par un autre périphérique — cela créerait un conflit de bus pouvant endommager les composants
 
 .. |br| raw:: html

@@ -122,7 +122,7 @@ Le connecteur USB-C peut également fournir du +5 V lors de la programmation in
 
    Les deux alimentations +5 V (USB et carte principale) ne sont pas isolées et les connecter simultanément peut endommager la carte ou l’hôte USB.
 
-D1 est une LED témoin d’alimentation, allumée en permanence lorsque le +3,3 V est présent.
+La LED témoin **D1** est allumée en permanence lorsque le +3,3 V est présent.
 
 Intégration avec la carte principale
 --------------------------------------
@@ -134,10 +134,10 @@ La mk2Wifi se branche sur les connecteurs **TRIG_EXT** et **UART_EXT** de la car
 - L’UART (TX/RX) assure la communication série avec l’ATmega328P
 - Le signal DS18B20 est acheminé pour la mesure de température 1-Wire
 - Les signaux GPIO D5–D9 fournissent les sorties de déclenchement/commande
-- Le bus I2C (SCL/SDA) est **local à la mk2Wifi uniquement** — il relie l’ESP32-C3 à l’écran OLED et n’est pas routé vers la carte principale
+- Le bus I2C (SCL/SDA) est **local au mk2Wifi uniquement** — il relie l’ESP32-C3 à l’écran OLED et n’est pas routé vers la carte principale
 
 .. note::
-   La gestion du capteur DS18B20 est sélectionnée par le cavalier **TEMP** sur la carte principale (voir :ref:`cavaliers`). En position 3–centre, c’est l’ESP32-C3 de la mk2Wifi qui gère le capteur.
+   La gestion du capteur DS18B20 est sélectionnée par le cavalier **TEMP** sur la carte principale (voir :ref:`cavaliers`). En position 3–centre, c’est l’ESP32-C3 du mk2Wifi qui gère le capteur.
 
 .. |br| raw:: html
 

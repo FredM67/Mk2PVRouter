@@ -39,7 +39,7 @@ Installation physique
    Le routeur doit être **hors tension** pour brancher ou débrancher le module mk2Wifi.
 
 .. warning::
-   Avant de brancher le module, vérifiez que le cavalier **V sel.** de la carte principale est en position **3–centre (3,3 V)**. Le module mk2Wifi fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement** (voir :ref:`cavaliers`).
+   Avant de brancher le module, vérifiez que le cavalier **V sel.** de la carte principale est en position **3–centre (3,3 V)**. Les broches GPIO de l’ESP32-C3 ne tolèrent que 3,3 V — une tension de 5 V sur ces lignes **endommagerait le module** (voir :ref:`cavaliers`).
 
 #. **Vérifiez l’orientation** : Les connecteurs TRIG_EXT et UART_EXT du module doivent s’aligner avec ceux de la carte principale. Le module ne doit pas être retourné.
 
@@ -100,9 +100,9 @@ Après le premier chargement par USB-C, les mises à jour du firmware peuvent se
 Le module mk2Wifi dispose d’un connecteur **OLED** (Molex SL 1×4) pour un écran I2C.
 
 .. note::
-   Le bus I2C de l’écran OLED est **local au module mk2Wifi**. Il n’est pas partagé avec la carte principale. Cela signifie que l’écran OLED de la mk2Wifi est **indépendant** du connecteur OLED de la carte principale.
+   Le bus I2C de l’écran OLED est **local au module mk2Wifi**. Il n’est pas partagé avec la carte principale. Cela signifie que l’écran OLED du mk2Wifi est **indépendant** du connecteur OLED de la carte principale.
 
-   En mode triphasé, l’écran OLED de la carte principale n’est pas disponible (broches A4/A5 utilisées pour la mesure). L’écran OLED via la mk2Wifi est alors la seule option d’affichage.
+   En mode triphasé, l’écran OLED de la carte principale n’est pas disponible (broches A4/A5 utilisées pour la mesure). L’écran OLED via le mk2Wifi est alors la seule option d’affichage.
 
 Vérification
 ------------
@@ -112,7 +112,7 @@ Vérification
    Après l’installation, vérifiez :
 
    | ☐ Module correctement enfoncé sur les deux connecteurs (TRIG_EXT et UART_EXT)
-   | ☐ LED témoin D1 allumée lorsque la carte principale est sous tension
+   | ☐ LED témoin **D1** allumée lorsque la carte principale est sous tension
    | ☐ Firmware chargé avec succès (premier chargement via USB-C)
    | ☐ Communication série fonctionnelle (données visibles sur le moniteur série)
    | ☐ Connexion WiFi établie (si le firmware WiFi est configuré)

@@ -68,10 +68,10 @@ Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélection
 - **Position 1–centre** : L’ATmega328P est alimenté directement en 5 V depuis le module PS1 (MPC10-5)
 
 .. warning::
-   Si le module RF (RFM69CW) et/ou la carte :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** être en position **3–centre (3,3 V)**. Ces modules fonctionnent en 3,3 V — une alimentation en 5 V les **détruirait immédiatement**.
+   Si le module RF (RFM69CW) et/ou le module :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** être en position **3–centre (3,3 V)**. Le module RF fonctionne en 3,3 V et les broches GPIO de l’ESP32-C3 (mk2Wifi) ne tolèrent que 3,3 V — une tension de 5 V sur ces lignes les **endommagerait irrémédiablement**.
 
 .. important::
-   Après avoir soudé le cavalier en position **3–centre (3,3 V)**, vérifiez au multimètre (mode continuité) qu’il n’y a **pas de court-circuit** entre la pastille centrale et la pastille **1 (5 V)**. Un pont de soudure accidentel entre les deux côtés relierait le 5 V directement au 3,3 V, ce qui **détruirait le régulateur LDO, le module RF et/ou la carte mk2Wifi**.
+   Après avoir soudé le cavalier en position **3–centre (3,3 V)**, vérifiez au multimètre (mode continuité) qu’il n’y a **pas de court-circuit** entre la pastille centrale et la pastille **1 (5 V)**. Un pont de soudure accidentel entre les deux côtés relierait le 5 V directement au 3,3 V, ce qui **détruirait le régulateur LDO, le module RF et/ou le module mk2Wifi**.
 
 SDA — Mesure tension L3 / I2C SDA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

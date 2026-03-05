@@ -1087,8 +1087,8 @@ Mise à Jour OTA Échoue
 
    #. ☐ **Écran branché sur le bon connecteur ?**
 
-      - L’écran doit être branché sur le connecteur **OLED de la mk2Wifi**, pas sur celui de la carte principale
-      - Le bus I2C de la mk2Wifi est **indépendant** de celui de la carte principale
+      - L’écran doit être branché sur le connecteur **OLED du mk2Wifi**, pas sur celui de la carte principale
+      - Le bus I2C du mk2Wifi est **indépendant** de celui de la carte principale
 
    #. ☐ **Type d’écran compatible ?**
 
@@ -1110,7 +1110,7 @@ Capteur DS18B20 — Pas de Température
 
    #. ☐ **Cavalier TEMP en bonne position ?**
 
-      - En position **3–centre** : le DS18B20 est géré par la mk2Wifi (ESP32-C3)
+      - En position **3–centre** : le DS18B20 est géré par le mk2Wifi (ESP32-C3)
       - En position **1–centre** : le DS18B20 est géré par la carte principale (ATmega328P, broche D3)
       - Voir :ref:`cavaliers`
 
