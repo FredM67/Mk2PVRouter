@@ -220,7 +220,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
 Configuration des cavaliers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les cavaliers de soudure (V sel., JP1–JP3, TEMP) et le cavalier fil GND_LINK doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
+Les cavaliers de soudure (V sel., JP1, JP2, IRQ, NSS, TEMP) et le cavalier fil GND_LINK doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
 
 Résumé rapide :
 

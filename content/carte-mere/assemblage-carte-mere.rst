@@ -121,7 +121,7 @@ Le module radio RFM69CW permet la communication sans fil (bande ISM 433/868 MHz)
    Un petit morceau de ruban adhésif double face entre le module et le PCB permet de le maintenir en place pendant la soudure.
 
 .. note::
-   N'oubliez pas de fermer le cavalier **JP3** (face arrière) pour activer le module RF (voir :ref:`cavaliers`).
+   N'oubliez pas de fermer les cavaliers **IRQ** (face arrière) et **NSS** (face avant, près du module RF) pour activer le module RF (voir :ref:`cavaliers`).
 
 Cavalier fil GND_LINK
 ~~~~~~~~~~~~~~~~~~~~~~

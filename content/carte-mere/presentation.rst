@@ -253,7 +253,7 @@ Chaque sortie numérique (D2 à D13) dispose de **deux connecteurs Molex SL** su
 - **1×02** (2 broches) : GND, I/O
 - **1×03** (3 broches) : GND, I/O, VCC
 
-Le connecteur **1×03** (GND, I/O, VCC) sert à raccorder l’étage de sortie (:term:`triac` ou relais), qui a besoin de l’alimentation. Le connecteur **1×02** (GND, I/O) sert à raccorder la carte indicateur LED (voir :ref:`carte-indicateur`), qui n’a besoin que du signal de commande.
+Le connecteur **1×03** (GND, I/O, VCC) sert à raccorder l’étage de sortie (:term:`triac` ou relais), qui a besoin de l’alimentation. La broche VCC de ces connecteurs est reliée au **rail +5 V**, activé par le cavalier **+5V Rail** (voir ci-dessous). Le connecteur **1×02** (GND, I/O) sert à raccorder la carte indicateur LED (voir :ref:`carte-indicateur`), qui n’a besoin que du signal de commande.
 
 .. list-table:: Disponibilité des sorties numériques
    :header-rows: 1
@@ -433,7 +433,7 @@ Rails d’alimentation
      - Usage
    * - +5 V
      - 5 V
-     - Connecteurs UART_EXT et FTDI
+     - Connecteurs UART_EXT, FTDI et broche VCC des sorties numériques (via JP40)
    * - +3,3 V
      - 3,3 V
      - ATmega328P, module RFM69CW
@@ -446,6 +446,25 @@ Rails d’alimentation
    * - AGND
      - 0 V
      - Masse analogique
+
+Cavalier « +5V Rail »
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Le cavalier de soudure **JP40** (situé en haut à droite de la carte) permet d’activer le **rail +5 V** qui alimente la broche VCC des connecteurs 1×03 des sorties numériques. Ce rail est principalement destiné aux **cartes de sortie relais**, qui nécessitent du +5 V pour alimenter la bobine du relais.
+
+- **Fermé** : le rail +5 V est actif sur les connecteurs 1×03 — obligatoire si des relais sont utilisés
+- **Ouvert** (défaut) : le rail +5 V est déconnecté des connecteurs de sortie
+
+.. warning::
+   Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie :term:`triac` n’ont pas besoin de cette alimentation.
+
+LED témoins
+~~~~~~~~~~~~~~
+
+Deux LED témoins :term:`CMS` sont situées en haut à gauche de la carte :
+
+- **LED40** (marquée « ON ») : allumée lorsque la carte est sous tension (rail +3,3 V actif)
+- **LED41** (marquée « +5V ») : allumée lorsque le rail +5 V des sorties est actif (cavalier « +5V Rail » fermé)
 
 Intégration du module mk2Wifi
 ------------------------------
