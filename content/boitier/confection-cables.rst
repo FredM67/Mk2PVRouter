@@ -14,7 +14,7 @@ Voici la liste des câbles dont nous aurons besoin :
 * fil de mise à la terre (un par dissipateur)
 
 .. note::
-   Toutes les longueurs préconisées sont basées sur les implantations de la carte-mère décrites :ref:`ici <percage-carte-mere>`.
+   Toutes les longueurs préconisées sont basées sur les implantations de la carte-mère décrites :ref:`ici <percage-carte-mere>`.
 
 .. admonition:: Conseil
 
@@ -36,7 +36,7 @@ Ce sont des fils passifs qui permettront d’assurer la sécurité des personnes
    * boîtier **1** ou **2** sorties => 2 fils
    * boîtier **3** ou **4** sorties => 4 fils (longueurs variables selon la position de chaque dissipateur)
 
-Les fils devront être dénudés sur environ 5 mm et être sertis directement dans les cosses **sans** soudure.
+Les fils devront être dénudés sur environ 5 mm et être sertis directement dans les cosses **sans** soudure.
 
 Câbles prise·s jack
 -------------------
@@ -50,8 +50,8 @@ Il conviendra donc d’y apporter le plus grand soin, afin de minimiser l’appa
 
    **Triphasé** :
 
-   * Boîtier **1** ou **2** sorties : **255 mm** (CT1), **300 mm** (CT2), **345 mm** (CT3)
-   * Boîtier **3** ou **4** sorties : **315 mm** (CT1), **360 mm** (CT2), **405 mm** (CT3)
+   * Boîtier **1** ou **2** sorties : **255 mm** (CT1), **300 mm** (CT2), **345 mm** (CT3)
+   * Boîtier **3** ou **4** sorties : **315 mm** (CT1), **360 mm** (CT2), **405 mm** (CT3)
 
 Câble·s de contrôle
 -------------------
@@ -62,20 +62,20 @@ Ce sont des fils *actifs* qui permettront d’envoyer les commandes d’ouvertur
 
    * Boîtier **1** ou **2** sorties :
 
-     * étage de sortie **gauche** => **140 mm**
-     * étage de sortie **droit** => **340 mm**
+     * étage de sortie **gauche** => **140 mm**
+     * étage de sortie **droit** => **340 mm**
 
    * Boîtier **3** ou **4** sorties :
 
-     * étage de sortie **haut gauche** => **200 mm**
-     * étage de sortie **haut droit** => **250 mm**
-     * étage de sortie **bas gauche** => **200 mm**
-     * étage de sortie **bas droit** => **360 mm**
+     * étage de sortie **haut gauche** => **200 mm**
+     * étage de sortie **haut droit** => **250 mm**
+     * étage de sortie **bas gauche** => **200 mm**
+     * étage de sortie **bas droit** => **360 mm**
 
 Câble·s de témoin·s LED
 -----------------------
 
-Ces câbles relient la carte indicateur LED (voir :ref:`carte-indicateur`) à l’étage de sortie correspondant. Ce sont des fils *actifs* qui sont repiqués sur la commande de l’étage de sortie et permettent de visualiser l’état de chaque sortie :
+Ces câbles relient la carte indicateur LED (voir :ref:`carte-indicateur`) à l’étage de sortie correspondant. Ce sont des fils *actifs* qui sont repiqués sur la commande de l’étage de sortie et permettent de visualiser l’état de chaque sortie :
 
 * **allumé** => le courant passe (triac **fermé**)
 * **éteint** => le courant ne passe pas (triac **ouvert**).
@@ -87,14 +87,14 @@ Bien sûr, il est possible de faire des câbles plus courts, ou plus longs !
 
    * Boîtier **1** ou **2** sorties :
 
-     * étage de sortie **gauche** => **400 mm**
-     * étage de sortie **droit** => **470 mm**
+     * étage de sortie **gauche** => **400 mm**
+     * étage de sortie **droit** => **470 mm**
    * Boîtier **3** ou **4** sorties :
 
-     * étage de sortie **haut gauche** => **440 mm**
-     * étage de sortie **haut droit** => **510 mm**
-     * étage de sortie **bas gauche** => **580 mm**
-     * étage de sortie **bas droit** => **650 mm**
+     * étage de sortie **haut gauche** => **440 mm**
+     * étage de sortie **haut droit** => **510 mm**
+     * étage de sortie **bas gauche** => **580 mm**
+     * étage de sortie **bas droit** => **650 mm**
 
 .. |br| raw:: html
 

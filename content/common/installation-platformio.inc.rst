@@ -164,4 +164,4 @@ Pour changer d’environnement :
 
 .. _platformio-termine:
 
-✅ **Configuration PlatformIO terminée !** Passez maintenant aux étapes spécifiques à votre version (:term:`monophasé` ou :term:`triphasé`).
+✅ **Configuration PlatformIO terminée !** Passez maintenant aux étapes spécifiques à votre version (:term:`monophasé` ou :term:`triphasé`).

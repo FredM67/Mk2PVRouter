@@ -52,9 +52,9 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    Pour commencer avec le Mk2PVRouter, suivez ces étapes :
 
-   #. Choisissez votre configuration (voir :ref:`choix-configuration`).
+   #. Choisissez votre configuration (voir :ref:`choix-configuration`).
    #. Assemblez le routeur en suivant les instructions de montage du kit.
-   #. Effectuez l’étalonnage (voir :ref:`etalonnage`).
+   #. Effectuez l’étalonnage (voir :ref:`etalonnage`).
    #. Configurez les paramètres de votre routeur et téléchargez le firmware.
    #. Connectez le routeur à votre réseau électrique.
    #. Vérifiez le bon fonctionnement du routeur.
@@ -96,8 +96,8 @@ Bienvenue dans la documentation du Mk2PVRouter !
    carte-mere/assemblage-carte-mere
    carte-mere/assemblage-monophase
    carte-mere/assemblage-triphase
-   carte-mere/tests-electriques
    carte-mere/cavaliers
+   carte-mere/tests-electriques
 
 .. toctree::
    :maxdepth: 3

@@ -4,7 +4,7 @@
 Installation des Logiciels
 ==========================
 
-Ce chapitre détaille l’installation de l’environnement de développement nécessaire pour programmer le Mk2PVRouter. Pour le téléchargement et la configuration du firmware, voir :ref:`test-logiciel`.
+Ce chapitre détaille l’installation de l’environnement de développement nécessaire pour programmer le Mk2PVRouter. Pour le téléchargement et la configuration du firmware, voir :ref:`test-logiciel`.
 
 ⏱️ **Temps estimé :**
 
@@ -124,12 +124,12 @@ Vous avez deux options pour programmer le Mk2PVRouter :
 **Option A : Arduino IDE** (recommandé pour les débutants)
 
 - Configuration manuelle nécessaire (C++17, bibliothèques)
-- Suivre les sous-sections de l'**Option A** ci-dessous
+- Suivre les sous-sections de l’**Option A** ci-dessous
 
 **Option B : PlatformIO** (recommandé pour les utilisateurs avancés)
 
 - Support C++17 natif (pas de configuration manuelle)
-- Suivre les sous-sections de l'**Option B** ci-dessous
+- Suivre les sous-sections de l’**Option B** ci-dessous
 
 .. note::
    Vous pouvez choisir l’une ou l’autre option, ou même installer les deux environnements si vous le souhaitez.

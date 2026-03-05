@@ -12,20 +12,20 @@ Installation du module mk2Wifi
 
    Avant de commencer ce chapitre :
 
-   | ☐ Chapitre :ref:`safety-overview` lu et compris
-   | ☐ Chapitre :ref:`presentation-mk2wifi` lu
+   | ☐ Chapitre :ref:`safety-overview` lu et compris
+   | ☐ Chapitre :ref:`presentation-mk2wifi` lu
    | ☐ Carte principale assemblée et testée
-   | ☐ Cavalier TEMP configuré selon votre choix (voir :ref:`cavaliers`)
+   | ☐ Cavalier TEMP configuré selon votre choix (voir :ref:`cavaliers`)
    | ☐ Câble USB-C disponible
    | ☐ Ordinateur avec port USB
 
 Soudure des barrettes
 ---------------------
 
-Le module mk2Wifi est livré entièrement assemblé (composants :term:`CMS`). Seules les deux **barrettes** (TRIG_EXT et UART_EXT, 1×06, 2,54 mm) doivent être soudées par l’utilisateur — mâles ou femelles, selon le choix fait sur la carte principale.
+Le module mk2Wifi est livré entièrement assemblé (composants :term:`CMS`). Seules les deux **barrettes** (TRIG_EXT et UART_EXT, 1×06, 2,54 mm) doivent être soudées par l’utilisateur — mâles ou femelles, selon le choix fait sur la carte principale.
 
 #. Positionnez chaque barrette dans son emplacement
-#. Soudez une broche, vérifiez que la barrette est perpendiculaire au :term:`PCB`
+#. Soudez une broche, vérifiez que la barrette est perpendiculaire au :term:`PCB`
 #. Soudez les broches restantes
 
 .. todo:: Photo à fournir — barrettes TRIG_EXT et UART_EXT soudées et perpendiculaires au PCB.
@@ -39,7 +39,7 @@ Installation physique
    Le routeur doit être **hors tension** pour brancher ou débrancher le module mk2Wifi.
 
 .. warning::
-   Avant de brancher le module, vérifiez que le cavalier **V sel.** de la carte principale est en position **3–centre (3,3 V)**. Le module mk2Wifi fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement** (voir :ref:`cavaliers`).
+   Avant de brancher le module, vérifiez que le cavalier **V sel.** de la carte principale est en position **3–centre (3,3 V)**. Le module mk2Wifi fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement** (voir :ref:`cavaliers`).
 
 #. **Vérifiez l’orientation** : Les connecteurs TRIG_EXT et UART_EXT du module doivent s’aligner avec ceux de la carte principale. Le module ne doit pas être retourné.
 
@@ -53,7 +53,7 @@ Installation physique
 Programmation initiale (USB-C)
 -------------------------------
 
-Le premier chargement du firmware se fait obligatoirement via le connecteur USB-C. Les mises à jour suivantes pourront se faire via :term:`OTA` (WiFi).
+Le premier chargement du firmware se fait obligatoirement via le connecteur USB-C. Les mises à jour suivantes pourront se faire via :term:`OTA` (WiFi).
 
 .. warning::
    **Ne pas connecter l’USB-C lorsque la carte mk2Wifi est branchée sur la carte principale.**

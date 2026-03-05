@@ -10,7 +10,7 @@ Choix de la configuration
 
    Avant de commencer ce chapitre :
 
-   | ☐ Chapitre :ref:`safety-overview` lu et compris
+   | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Connaissance de votre type de raccordement électrique (monophasé ou triphasé)
 
 La carte universelle 3phaseDiverter supporte quatre configurations. Cette page vous aide à déterminer celle qui correspond à votre installation.
@@ -38,11 +38,11 @@ Guide de décision
    * - **Monophasé**
      - 1 phase + neutre
      - Oui
-     - Majorité des foyers en France et en Europe (230 V)
+     - Majorité des foyers en France et en Europe (230 V)
    * - **Triphasé avec neutre**
      - 3 phases + neutre
      - Oui
-     - Foyers avec abonnement triphasé, typiquement > 12 kVA (400 V / 230 V)
+     - Foyers avec abonnement triphasé, typiquement > 12 kVA (400 V / 230 V)
    * - **Triphasé sans neutre**
      - 3 phases (triangle)
      - Non
@@ -50,7 +50,7 @@ Guide de décision
    * - **Split-phase**
      - 2 phases à 180°
      - Oui
-     - Foyers en Amérique du Nord (120 V / 240 V)
+     - Foyers en Amérique du Nord (120 V / 240 V)
 
 Comment identifier votre raccordement ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -85,7 +85,7 @@ Différences par configuration
 Composants traversants à souder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Seuls les composants traversants (through-hole) doivent être soudés par l’utilisateur. Les composants à souder varient selon la configuration choisie :
+La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Seuls les composants traversants (through-hole) doivent être soudés par l’utilisateur. Les composants à souder varient selon la configuration choisie :
 
 .. list-table::
    :header-rows: 1
@@ -111,7 +111,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - ✔
      - ✔
      - ✔
-   * - Condensateur film C1 (1 µF 310 VAC)
+   * - Condensateur film C1 (1 µF 310 VAC)
      - ✔
      - ✔
      - ✔
@@ -126,7 +126,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - ✔
      - ✔
      - ✔
-   * - Connecteur :term:`SMA` (antenne RF, optionnel)
+   * - Connecteur :term:`SMA` (antenne RF, optionnel)
      - (opt.)
      - (opt.)
      - (opt.)
@@ -161,32 +161,32 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - ✔
      - ✔
      - ✔
-   * - Transformateur :term:`ZMPT101K` TR1
+   * - Transformateur :term:`ZMPT101K` TR1
      - ✔
      - ✔
      - ✔
      - ✔
-   * - Transformateur :term:`ZMPT101K` TR2
+   * - Transformateur :term:`ZMPT101K` TR2
      -
      - ✔
      - ✔
      - ✔
-   * - Transformateur :term:`ZMPT101K` TR3
+   * - Transformateur :term:`ZMPT101K` TR3
      -
      - ✔
      -
      -
-   * - Connecteur :term:`CT` CT1
+   * - Connecteur :term:`CT` CT1
      - ✔
      - ✔
      - ✔
      - ✔
-   * - Connecteur :term:`CT` CT2 (optionnel en mono pour mesure diversion)
+   * - Connecteur :term:`CT` CT2 (optionnel en mono pour mesure diversion)
      - (opt.)
      - ✔
      - ✔
      - ✔
-   * - Connecteur :term:`CT` CT3
+   * - Connecteur :term:`CT` CT3
      -
      - ✔
      -
@@ -220,7 +220,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
 Configuration des cavaliers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les cavaliers de soudure (V sel., SDA, SCL, IRQ, NSS, TEMP) et le cavalier fil GND_LINK doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
+Les cavaliers de soudure (V sel., SDA, SCL, IRQ, NSS, TEMP) et le cavalier fil GND_LINK doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
 
 Résumé rapide :
 
@@ -234,10 +234,10 @@ Résumé rapide :
      - Tri-N
      - Split
    * - V sel.
-     - 3–centre (3,3 V)
-     - 3–centre (3,3 V)
-     - 3–centre (3,3 V)
-     - 3–centre (3,3 V)
+     - 3–centre (3,3 V)
+     - 3–centre (3,3 V)
+     - 3–centre (3,3 V)
+     - 3–centre (3,3 V)
    * - SDA
      - 3–centre (I2C SDA)
      - 1–centre (tension L3)
@@ -249,10 +249,10 @@ Résumé rapide :
      - 1–centre (courant L3)
      - 3–centre (I2C SCL)
    * - TEMP
-     - Voir :ref:`cavaliers`
-     - Voir :ref:`cavaliers`
-     - Voir :ref:`cavaliers`
-     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
    * - GND_LINK
      - Voir note
      - Voir note

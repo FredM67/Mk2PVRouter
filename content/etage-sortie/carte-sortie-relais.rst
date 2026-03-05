@@ -28,7 +28,7 @@ Considérations Techniques
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Les cartes-relais que nous utilisons ne sont pas conçues pour commuter des charges de grande puissance.
-En effet, chaque action de commutation (passage de **fermé** à **ouvert**, ou d'**ouvert** à **fermé**) peut potentiellement créer un arc électrique entre les contacts du relais.
+En effet, chaque action de commutation (passage de **fermé** à **ouvert**, ou d’**ouvert** à **fermé**) peut potentiellement créer un arc électrique entre les contacts du relais.
 Cet arc peut, à terme, user les contacts. Il se peut qu’un jour, ces contacts restent collés (l’arc aurait en quelque sorte soudé les contacts ensemble) ou soient carbonisés, auquel cas ils ne pourraient plus conduire l’électricité.
 
 C’est pourquoi ces cartes-relais doivent être utilisées **uniquement** pour commander un relais de puissance réel, similaire aux contacteurs Heures Creuses/Heures Pleines que l’on trouve dans un tableau électrique.
@@ -56,7 +56,7 @@ Matériel nécessaire
 
 ☐ Carte-mère assemblée et fonctionnelle (ou Arduino avec alimentation 5 V)
 
-☐ Câble Molex 3 fils (GND, I/O, VCC) — le relais a besoin de l'alimentation VCC
+☐ Câble Molex 3 fils (GND, I/O, VCC) — le relais a besoin de l’alimentation VCC
 
 ☐ Multimètre (fonction continuité / résistance)
 
@@ -82,7 +82,7 @@ Procédure de test
    Le câblage du connecteur Molex 3 broches doit correspondre entre la carte-relais et la carte-mère : **GND↔GND**, **I/O↔I/O**, **VCC↔VCC**. Un câblage inversé peut endommager la carte-relais ou la carte-mère.
 
 #. Connecter le câble Molex 3 fils entre la carte-relais et une sortie numérique de la carte-mère (D2–D13, connecteur 1×03)
-#. Alimenter la carte-mère (ou l’Arduino) en 5 V via le connecteur :term:`FTDI` ou USB
+#. Alimenter la carte-mère (ou l’Arduino) en 5 V via le connecteur :term:`FTDI` ou USB
 #. Activer la sortie numérique correspondante (HIGH) :
 
    - Un **clic audible** du relais doit se produire

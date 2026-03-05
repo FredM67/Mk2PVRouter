@@ -32,7 +32,7 @@ Après extraction, vous devriez avoir :
    Mk2_fasterControl_Full/
    ├── Mk2_fasterControl_Full.ino  (fichier principal)
    ├── config.h                     (configuration utilisateur)
-   ├── calibration.h                (paramètres d'étalonnage)
+   ├── calibration.h                (paramètres d’étalonnage)
    ├── dualtarif.h
    ├── processing.cpp
    ├── temperature.cpp
@@ -168,7 +168,7 @@ Ce fichier contient les paramètres d’étalonnage.
 
 .. warning::
    Ne modifiez **PAS** ce fichier maintenant — les valeurs seront déterminées lors de l’étalonnage
-   (voir chapitre :ref:`etalonnage`).
+   (voir chapitre :ref:`etalonnage`).
 
 Les paramètres par défaut permettent de tester le routeur.
 
@@ -203,7 +203,7 @@ Prochaines Étapes
 
 **Prochaines étapes :**
 
-#. **Étalonnage** : Voir chapitre :ref:`etalonnage`
+#. **Étalonnage** : Voir chapitre :ref:`etalonnage`
 
    L’étalonnage est **OBLIGATOIRE** pour que le routeur fonctionne correctement.
 

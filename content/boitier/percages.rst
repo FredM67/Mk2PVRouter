@@ -14,7 +14,7 @@ Perçages
 
    Avant de commencer ce chapitre :
 
-   ☐ Chapitre :ref:`safety-overview` lu et compris (section perçage)
+   ☐ Chapitre :ref:`safety-overview` lu et compris (section perçage)
 
    ☐ Cartes assemblées et testées
 
@@ -50,30 +50,30 @@ Cependant, ce guide décrira l’implantation la plus classique.
 ~~~~~~~~~~~~~~~~~~
 
 **Dissipateurs**
-   - 2 trous de **3 mm** + 1 trou de **35 mm** par dissipateur
+   - 2 trous de **3 mm** + 1 trou de **35 mm** par dissipateur
    - Voir `Perçage du boîtier`_ ci-dessous
 
 **Étages de sortie triac**
-   - 1 trou de **3 mm** par étage de sortie
+   - 1 trou de **3 mm** par étage de sortie
 
 **Carte-mère**
-   - 4 trous de **3 mm**
+   - 4 trous de **3 mm**
 
 **Presse-étoupe**
-   - Trous de **20 mm** (quantité selon câblage)
+   - Trous de **20 mm** (quantité selon câblage)
 
 **Prises jack** (CT de mesure)
-   - Trous de **8 mm**
+   - Trous de **8 mm**
    - 1 prise pour monophasé, 3 prises pour triphasé
 
 **Témoins LED et afficheur 4 Digits** (*Monophasé uniquement*)
-   - Trous de **8 mm**
+   - Trous de **8 mm**
 
 **Bouton marche/arrêt** (*Monophasé uniquement*)
-   - 1 trou de **20 mm**
+   - 1 trou de **20 mm**
 
 **Bouton reset** (*Triphasé uniquement*)
-   - 1 trou de **13 mm**
+   - 1 trou de **13 mm**
 
 Outils nécessaires
 ~~~~~~~~~~~~~~~~~~~
@@ -91,7 +91,7 @@ Il s’agit d’une pièce en aluminium dotée d’ailettes, ce qui augmente la 
    **À retenir**
    Lors de l’installation finale du boîtier, il est **impératif** de positionner les ailettes en vertical. En effet, l’air chaud étant plus léger que l’air froid, un flux d’air ascendant se crée naturellement, l’air frais étant *aspiré* en bas et l’air chaud expulsé en haut.
 
-Étant donné la taille du dissipateur, il est recommandé de ne pas connecter plus de 3 kW à chaque sortie.
+Étant donné la taille du dissipateur, il est recommandé de ne pas connecter plus de 3 kW à chaque sortie.
 
 .. _percage-du-dissipateur:
 
@@ -109,7 +109,7 @@ Chaque dissipateur doit être percé de trois trous : deux pour la fixation sur
 
 :download:`Gabarit de perçage <../pdf/dissipateur.pdf>`
 
-Comme indiqué, le perçage sera en 3 mm de diamètre. Pour le trou du milieu, percez d’abord entièrement en 3 mm, puis en 4 mm sur une profondeur de 2 mm.
+Comme indiqué, le perçage sera en 3 mm de diamètre. Pour le trou du milieu, percez d’abord entièrement en 3 mm, puis en 4 mm sur une profondeur de 2 mm.
 
 Ce gabarit devra être imprimé en taille réelle.
 Assurez-vous que les dimensions sont correctes une fois imprimées.
@@ -152,7 +152,7 @@ Le boîtier doit être percé de trois trous : deux pour la fixation du dissipa
 
 :download:`Gabarit de perçage <../pdf/dissipateur.pdf>`
 
-Comme indiqué, le perçage sera en 3 mm de diamètre. Il est possible de percer en 3,5 mm pour avoir une petite marge en cas d’imprécision du perçage.
+Comme indiqué, le perçage sera en 3 mm de diamètre. Il est possible de percer en 3,5 mm pour avoir une petite marge en cas d’imprécision du perçage.
 
 Pour le trou du milieu, l’idéal est d’utiliser une fraise ou un foret à étage.
 
@@ -193,10 +193,10 @@ L’utilisation d’une perceuse à colonne est recommandée.
 
    Boîtier percé
 
-Perçage pour chaque étage de sortie :term:`triac`
+Perçage pour chaque étage de sortie :term:`triac`
 ---------------------------------------------------
 
-Le :term:`triac` de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boîtier.
+Le :term:`triac` de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boîtier.
 L’étage de sortie doit aussi être fixé au fond du boîtier à la bonne hauteur pour être en accord avec le point de fixation du triac.
 
 Pour ce faire :
@@ -221,9 +221,9 @@ Vu du dessus, il est possible de pointer le futur perçage à l’endroit le plu
    Pointage
 
 Pour percer, l’étage de sortie doit être retiré.
-Le perçage doit être effectué avec un foret de **3 mm** de diamètre.
+Le perçage doit être effectué avec un foret de **3 mm** de diamètre.
 
-Pour ajuster la hauteur de la carte de sortie, un plot en plastique de **10 mm** de haut est installé à l’aide d’une vis **M3** en plastique.
+Pour ajuster la hauteur de la carte de sortie, un plot en plastique de **10 mm** de haut est installé à l’aide d’une vis **M3** en plastique.
 
 .. figure:: ../img/Entretoise-sortie.png
    :alt: Plot
@@ -238,8 +238,8 @@ Pour ajuster la hauteur de la carte de sortie, un plot en plastique de **10 mm**
 
    | ☐ **Dissipateurs fixés solidement** sur les côtés verticaux du boîtier
    | ☐ **Triacs montés** sur les dissipateurs avec pâte thermique
-   | ☐ **Tous les trous de montage percés à 3 mm** de diamètre
-   | ☐ **Plots 10 mm installés** avec vis M3 plastique
+   | ☐ **Tous les trous de montage percés à 3 mm** de diamètre
+   | ☐ **Plots 10 mm installés** avec vis M3 plastique
    | ☐ **Hauteur des cartes de sortie correcte** (alignement avec dissipateur)
    | ☐ **Cartes de sortie se fixent solidement** sans forcer
    | ☐ **Pas d’interférence** avec les dissipateurs ou autres composants
@@ -259,14 +259,14 @@ En utilisant la même méthode, vous pouvez marquer et percer le boîtier aux di
 
    Pointage carte mère
 
-Pour éviter qu’elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de **10 mm** de hauteur est installé à l’aide d’une vis **M3** sur tous les trous de montage percés, de la même manière que pour l’étage de sortie.
+Pour éviter qu’elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de **10 mm** de hauteur est installé à l’aide d’une vis **M3** sur tous les trous de montage percés, de la même manière que pour l’étage de sortie.
 
 .. admonition:: ✅ Point de Contrôle — Perçage Carte-Mère
 
    Avant de passer au câblage, vérifiez :
 
    | ☐ **Tous les trous percés** aux dimensions appropriées
-   | ☐ **Plots 10 mm installés** avec vis M3 plastique
+   | ☐ **Plots 10 mm installés** avec vis M3 plastique
    | ☐ Carte-mère positionnée sans entraver les branchements
    | ☐ Carte-mère ne touche pas les points de fixation du boîtier
    | ☐ Espace suffisant pour le câblage autour de la carte-mère

@@ -25,7 +25,7 @@ Voici les étapes principales du fonctionnement du Mk2PVRouter :
 
 #. **Étalonnage et précision** :
 
-   - Pour garantir une gestion optimale, le routeur doit être étalonné en fonction des caractéristiques spécifiques de l’installation électrique (voir :ref:`etalonnage`).
+   - Pour garantir une gestion optimale, le routeur doit être étalonné en fonction des caractéristiques spécifiques de l’installation électrique (voir :ref:`etalonnage`).
 
 #. **Avantages** :
 
@@ -51,7 +51,7 @@ Exemple d’utilisation
 Fonctionnement des LED
 ----------------------
 
-Le Mk2PVRouter est équipé de LED pour indiquer l’état des sorties triac. Chaque LED est montée sur une petite carte dédiée, la **carte indicateur** (voir :ref:`carte-indicateur`), raccordée au signal de commande de l’étage de sortie. Ces LED fournissent des informations visuelles sur la quantité d’énergie routée :
+Le Mk2PVRouter est équipé de LED pour indiquer l’état des sorties triac. Chaque LED est montée sur une petite carte dédiée, la **carte indicateur** (voir :ref:`carte-indicateur`), raccordée au signal de commande de l’étage de sortie. Ces LED fournissent des informations visuelles sur la quantité d’énergie routée :
 
 - **Allumage de la LED** :
   
@@ -96,7 +96,7 @@ Avantages du *burst fire control*
 
 Ce mode de régulation garantit un fonctionnement stable et respectueux des normes électriques tout en optimisant l’utilisation de l’énergie excédentaire.
 
-Pour plus d’informations sur le *burst fire control*, consultez la section :ref:`burst-fire-control`.
+Pour plus d’informations sur le *burst fire control*, consultez la section :ref:`burst-fire-control`.
 
 Fonctionnalités avancées
 ------------------------

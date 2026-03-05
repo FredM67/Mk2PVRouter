@@ -33,7 +33,7 @@ Il est possible de réaliser l’assemblage dans n’importe quel ordre, cependa
    - Appliquer une fine couche de pâte thermique sur la patte métallique du triac
    - Visser fermement pour assurer un bon contact thermique, sans serrer excessivement
 
-#. **Fixation du ou des étages de sortie dans le boîtier** (visser le :term:`PCB`)
+#. **Fixation du ou des étages de sortie dans le boîtier** (visser le :term:`PCB`)
 
    - Utiliser les entretoises pour maintenir le PCB à distance du boîtier
 
@@ -44,7 +44,7 @@ Il est possible de réaliser l’assemblage dans n’importe quel ordre, cependa
 
 #. **Mise en place des prises jack** (CT) et des éventuels boutons/témoins
 
-   - Prises jack : pour les :term:`CT` de mesure du réseau électrique
+   - Prises jack : pour les :term:`CT` de mesure du réseau électrique
    - Bouton ON-OFF ou reset selon la configuration
 
 #. **Mise en place des câbles**

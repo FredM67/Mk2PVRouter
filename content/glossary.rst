@@ -53,11 +53,13 @@ Termes de Base pour Débutants
      | Il évacue les courants de fuite et protège contre l’électrocution en cas de défaut d’isolement.
 
    Monophasé
+   monophasé
      | Système électrique avec **une seule phase** (230 V entre phase et neutre).
      | C’est le système standard pour la plupart des habitations françaises.
      | Compteur électrique monophasé : 2 fils (phase + neutre + terre).
 
    Triphasé
+   triphasé
      | Système électrique avec **trois phases** (400 V entre phases, 230 V entre chaque phase et le neutre).
      | Utilisé pour les installations nécessitant beaucoup de puissance (grandes maisons, bâtiments professionnels).
      | Compteur électrique triphasé : 4 fils (3 phases + neutre + terre).
@@ -90,6 +92,7 @@ Termes de Base pour Débutants
      | ⚠️ **Important** : À installer dans le bon sens, sinon ne s’allume pas (et peut être endommagée).
 
    Triac
+   triac
      | Composant électronique qui agit comme un **interrupteur rapide** pour contrôler la puissance envoyée à une charge.
      | Utilisé dans le Mk2PVRouter pour réguler la puissance envoyée au chauffe-eau.
      | Génère de la chaleur, d’où la nécessité d’un dissipateur thermique.
@@ -222,10 +225,11 @@ Termes Techniques Avancés
    :sorted:
 
    Théorème de Blondel
+   théorème de Blondel
      | Théorème fondamental de la mesure de puissance en régime polyphasé, énoncé par André Blondel en 1893.
      | Il stipule que pour mesurer la puissance totale d’un système à **N conducteurs**, il suffit de **N−1 wattmètres** (ou capteurs de courant).
      | Application au Mk2PVRouter : en triphasé sans neutre (3 fils), 2 CT suffisent (CT1 et CT2) — la puissance sur L3 est déduite mathématiquement.
-     | Voir `l'article Wikipédia (en anglais) <https://en.wikipedia.org/wiki/Blondel%27s_theorem>`__.
+     | Voir `l’article Wikipédia (en anglais) <https://en.wikipedia.org/wiki/Blondel%27s_theorem>`__.
 
    CMS
      | *Composant Monté en Surface* (ou SMD en anglais : *Surface-Mount Device*).
@@ -235,7 +239,7 @@ Termes Techniques Avancés
    LDO
      | *Low Drop-Out regulator* ou régulateur linéaire à faible chute de tension.
      | Composant qui convertit une tension continue en une tension plus basse avec un minimum de pertes.
-     | Le Mk2PVRouter utilise un **AP7361C-33E** pour convertir 5 V en 3,3 V.
+     | La carte principale utilise un **AP7361C-33E** (1 A) pour convertir 5 V en 3,3 V. Le module mk2Wifi utilise un **AP2112K-3.3** (600 mA).
 
    GDT
      | *Gas Discharge Tube* ou éclateur à gaz.
@@ -250,7 +254,7 @@ Termes Techniques Avancés
    TVS
      | *Transient Voltage Suppressor* ou suppresseur de surtension transitoire.
      | Diode spécialisée qui protège les circuits sensibles contre les surtensions rapides.
-     | La carte universelle utilise des diodes TVS (DF2B7AE, CDSOD323-T03C) pour protéger les entrées :term:`ADC` de l’ATmega328P.
+     | La carte universelle utilise des diodes TVS (DF2B7AE, CDSOD323-T03C) pour protéger les entrées :term:`ADC` de l’ATmega328P.
 
    SMA
      | *SubMiniature version A*.
@@ -263,15 +267,15 @@ Termes Techniques Avancés
      | Le module mk2Wifi supporte les mises à jour OTA après le premier chargement par USB-C.
 
    ESP32-C3
-     | Microcontrôleur RISC-V simple cœur de la société Espressif, intégrant WiFi 4 et Bluetooth LE 5.
+     | Microcontrôleur RISC-V simple cœur de la société Espressif, intégrant WiFi 802.11 b/g/n et Bluetooth LE 5.
      | Le module **mk2Wifi** utilise un ESP32-C3-MINI-1 pour ajouter la connectivité sans fil au Mk2PVRouter.
 
    Split-phase
-     | Système électrique nord-américain composé de deux phases à 180° fournissant 120 V entre chaque phase et le neutre, et 240 V entre les deux phases.
+     | Système électrique nord-américain composé de deux phases à 180° fournissant 120 V entre chaque phase et le neutre, et 240 V entre les deux phases.
      | La carte universelle 3phaseDiverter supporte cette configuration.
 
    mk2Wifi
-     | Module d’extension WiFi/BLE pour le Mk2PVRouter, basé sur un :term:`ESP32-C3`.
+     | Module d’extension WiFi/BLE pour le Mk2PVRouter, basé sur un :term:`ESP32-C3`.
      | Se branche sur les connecteurs TRIG_EXT et UART_EXT de la carte principale.
      | Ajoute la connectivité sans fil, un écran OLED optionnel et la gestion du capteur de température DS18B20.
 
@@ -284,7 +288,7 @@ Termes Techniques Avancés
      | La carte universelle en utilise 1 (monophasé) à 3 (triphasé) pour la mesure de tension sur chaque phase.
 
    Cavalier de soudure
-     | Pont conducteur réalisé en soudant deux pastilles adjacentes sur le :term:`PCB`.
+     | Pont conducteur réalisé en soudant deux pastilles adjacentes sur le :term:`PCB`.
      | Les cavaliers V sel., SDA, SCL, IRQ, NSS et TEMP sur la carte universelle permettent de configurer le mode de fonctionnement (monophasé/triphasé, alimentation, module RF, capteur de température).
 
    CT
@@ -302,8 +306,9 @@ Termes Techniques Avancés
      .. seealso:: `Wikipédia, Circuit imprimé <https://fr.wikipedia.org/wiki/Circuit_imprim%C3%A9>`_
 
    Burden
+   burden
      | Résistance de charge.
-     | Si le capteur :term:`CT` est du type « sortie courant » tel que le YHDC SCT-013-000, le signal de courant doit être converti en signal de tension avec une résistance de charge.
+     | Si le capteur :term:`CT` est du type « sortie courant » tel que le YHDC SCT-013-000, le signal de courant doit être converti en signal de tension avec une résistance de charge.
 
      .. seealso:: `CT Sensors - Interfacing with an Arduino <https://docs.openenergymonitor.org/electricity-monitoring/ct-sensors/interface-with-arduino.html>`_
 
@@ -321,6 +326,7 @@ Termes Techniques Avancés
      | Courant électrique dont l’intensité et la direction sont constantes dans le temps.
 
    Optocoupleur
+   optocoupleur
      | Ou photocoupleur.
      | Un optocoupleur est un composant électronique qui permet de transférer un signal électrique entre deux parties d’un circuit tout en les isolant électriquement l’une de l’autre. Il est souvent utilisé pour contrôler un circuit de haute tension à partir d’un signal de basse tension, en assurant une isolation galvanique entre les deux.
 

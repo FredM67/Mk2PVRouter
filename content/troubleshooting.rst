@@ -163,7 +163,7 @@ Si Tension Correcte mais Pas de Fonctionnement
 
  #. ☐ **Firmware programmé ?**
 
-    - Voir la section :ref:`test-logiciel`
+    - Voir la section :ref:`test-logiciel`
     - ATmega328P vierge ne fait rien
 
 Causes Fréquentes — Résumé
@@ -547,7 +547,7 @@ Vérifications Électroniques
     - Emplacements R18 / R28 / R38 (THT, un par CT)
     - Uniquement nécessaires avec des CT à sortie courant (ex. : SCT-013-000)
     - Pas nécessaires avec des CT à sortie tension (burden intégré)
-    - Valeur calculée selon le CT — voir :ref:`carte-mere-presentation`
+    - Valeur calculée selon le CT — voir :ref:`carte-mere-presentation`
 
  #. ☐ **Diodes TVS de protection présentes ?**
 
@@ -934,7 +934,7 @@ Dépannage Communication
 ======================================
 
 .. note::
-   Cette section concerne uniquement les kits équipés du module d’extension :term:`mk2Wifi` (ESP32-C3).
+   Cette section concerne uniquement les kits équipés du module d’extension :term:`mk2Wifi` (ESP32-C3).
 
 Le Module ne s’Allume Pas
 =========================
@@ -945,7 +945,7 @@ Le Module ne s’Allume Pas
 
    #. ☐ **Carte principale sous tension ?**
 
-      - La mk2Wifi est alimentée en +5 V par la carte principale via UART_EXT broche 3
+      - La mk2Wifi est alimentée en +5 V par la carte principale via UART_EXT broche 3
       - Vérifier que la carte principale fonctionne normalement
 
    #. ☐ **Module dans le bon sens ?**
@@ -962,10 +962,10 @@ Le Module ne s’Allume Pas
       - Le module doit être fermement en contact sur les **deux** connecteurs (TRIG_EXT et UART_EXT)
       - Pas de broche tordue ou décalée
 
-   #. ☐ **Cavalier V sel. en position 3,3 V ?**
+   #. ☐ **Cavalier V sel. en position 3,3 V ?**
 
-      - Si le cavalier V sel. a été basculé en 5 V, le module est **détruit**
-      - Voir :ref:`cavaliers`
+      - Si le cavalier V sel. a été basculé en 5 V, le module est **détruit**
+      - Voir :ref:`cavaliers`
 
 Programmation USB-C Impossible
 ==============================
@@ -977,7 +977,7 @@ Programmation USB-C Impossible
    #. ☐ **Module débranché de la carte principale ?**
 
       - Le module **doit** être déconnecté de la carte principale pendant la programmation USB-C
-      - Les deux alimentations +5 V (USB et carte principale) ne sont pas isolées
+      - Les deux alimentations +5 V (USB et carte principale) ne sont pas isolées
 
    #. ☐ **Mode téléchargement activé ?**
 
@@ -1075,7 +1075,7 @@ Mise à Jour OTA Échoue
 
 **Si le module ne répond plus après un OTA raté :**
 
-- Revenir à la programmation par **USB-C** (voir procédure initiale dans :ref:`installation-mk2wifi`)
+- Revenir à la programmation par **USB-C** (voir procédure initiale dans :ref:`installation-mk2wifi`)
 - Maintenir SW1 enfoncé pour entrer en mode téléchargement
 
 Écran OLED Vide ou Incorrect
@@ -1112,7 +1112,7 @@ Capteur DS18B20 — Pas de Température
 
       - En position **3–centre** : le DS18B20 est géré par la mk2Wifi (ESP32-C3)
       - En position **1–centre** : le DS18B20 est géré par la carte principale (ATmega328P, broche D3)
-      - Voir :ref:`cavaliers`
+      - Voir :ref:`cavaliers`
 
    #. ☐ **Capteur correctement branché ?**
 
@@ -1121,7 +1121,7 @@ Capteur DS18B20 — Pas de Température
 
    #. ☐ **Résistance de pull-up présente ?**
 
-      - Le bus 1-Wire nécessite une résistance de pull-up de 4,7 kΩ
+      - Le bus 1-Wire nécessite une résistance de pull-up de 4,7 kΩ
       - Vérifier si elle est déjà présente sur la carte ou sur le câble du capteur
 
 =================

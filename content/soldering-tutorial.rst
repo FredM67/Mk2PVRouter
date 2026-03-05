@@ -313,12 +313,12 @@ Les 5 Étapes d’une Bonne Soudure
 
    **La soudure coule vers la chaleur**
 
-   Il faut chauffer **à la fois** la piste :term:`PCB` **et** la patte du composant. Si un seul élément est chaud, la soudure ne s’étalera pas correctement.
+   Il faut chauffer **à la fois** la piste :term:`PCB` **et** la patte du composant. Si un seul élément est chaud, la soudure ne s’étalera pas correctement.
 
 **Étape 1 : Insérer le composant**
 
 - Plier les pattes si nécessaire (angle 90°)
-- Insérer dans les trous du :term:`PCB`
+- Insérer dans les trous du :term:`PCB`
 - Composant bien plaqué contre le PCB (pas d’espace)
 - Retourner le PCB (soudure côté opposé aux composants)
 
@@ -503,7 +503,7 @@ Soudures Défectueuses — Comment les Reconnaître
 
 **Apparence** :
 
-- Piste :term:`PCB` **décolle** ou se soulève
+- Piste :term:`PCB` **décolle** ou se soulève
 - Couleur brunie autour du joint
 - Composant fondu/déformé
 
@@ -534,7 +534,7 @@ Dessoudage — Corriger ses Erreurs
 
    1. Chauffer le joint à dessouder (2-3 secondes)
    2. Armer la pompe (pousser le piston)
-   3. Positionner l'embout de la pompe sur le joint
+   3. Positionner l’embout de la pompe sur le joint
    4. Appuyer sur le bouton : CLAC ! (aspiration)
    5. Vérifier que la soudure est retirée
    6. Répéter si nécessaire
@@ -594,7 +594,7 @@ Le flux est un produit chimique qui :
 
 **Quand ajouter du flux ?**
 
-- Piste :term:`PCB` oxydée (terne, pas brillante)
+- Piste :term:`PCB` oxydée (terne, pas brillante)
 - Soudure qui ne « mouille » pas correctement
 - Composant ancien (pattes oxydées)
 - Dessoudage difficile
@@ -672,12 +672,12 @@ Exercice 1 : Souder 10 Résistances
 - Observer la qualité de chaque soudure
 - **Critère de réussite** : 8/10 soudures brillantes et lisses
 
-Exercice 2 : Souder des Composants :term:`DIL`
+Exercice 2 : Souder des Composants :term:`DIL`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Objectif** : Souder plusieurs broches proches sans faire de ponts
 
-**Matériel** : Support :term:`DIL` 8 ou 16 broches
+**Matériel** : Support :term:`DIL` 8 ou 16 broches
 
 **Consigne** :
 
@@ -695,7 +695,7 @@ Exercice 3 : Dessouder et Ressouder
 **Consigne** :
 
 - Dessouder un composant (pompe ou tresse)
-- Nettoyer les trous du :term:`PCB`
+- Nettoyer les trous du :term:`PCB`
 - Resouder le composant proprement
 
 Où Trouver des Kits de Pratique ?
@@ -740,7 +740,7 @@ Problème : La Soudure Ne Coule Pas
 
 ☐ Mauvais fil de soudure (vérifier flux intégré)
 
-Problème : Composants Tombent Quand Je Retourne le :term:`PCB`
+Problème : Composants Tombent Quand Je Retourne le :term:`PCB`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Solutions** :
@@ -814,7 +814,7 @@ Checklist Finale — Prêt à Souder Votre Mk2PVRouter ?
 
    ☐ Je connais les règles de sécurité (ne pas toucher panne, ventiler)
 
-   ☐ J’ai lu le chapitre :ref:`safety-overview` (sécurité générale)
+   ☐ J’ai lu le chapitre :ref:`safety-overview` (sécurité générale)
 
    ☐ Je suis prêt à prendre mon temps (pas de précipitation)
 
@@ -825,7 +825,7 @@ Prochaines Étapes
 
 Maintenant que vous maîtrisez les bases de la soudure, passez aux chapitres d’assemblage :
 
-- :ref:`assemblage-carte-mere` puis :ref:`carte-sortie`
+- :ref:`assemblage-carte-mere` puis :ref:`carte-sortie`
 
 .. tip::
    💡 **Conseil Final**
