@@ -268,7 +268,7 @@ Le connecteur **1×03** (GND, I/O, VCC) sert à raccorder l’étage de sortie (
    * - D4
      - Libre
    * - D5–D9
-     - Sorties de déclenchement (TRIG_EXT). Réservées au module :term:`mk2Wifi` si celui-ci est présent. Libres sinon.
+     - Sorties de déclenchement (TRIG_EXT). Utilisées par le module :term:`mk2Wifi` si celui-ci est présent (voir ci-dessous). Libres sinon.
    * - D10\*
      - SPI SS — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
    * - D11\*
@@ -479,6 +479,14 @@ Signaux échangés :
 - Le signal DS18B20 est acheminé via UART_EXT broche 2 pour la mesure de température 1-Wire
 - Les signaux GPIO D5–D9 fournissent les sorties de déclenchement/commande via TRIG_EXT
 - Le bus I2C (SCL/SDA) est **local au module mk2Wifi uniquement** — il n’est pas routé vers la carte principale
+
+La zone hachurée sur la sérigraphie indique les connecteurs de sortie (D5–D9) potentiellement utilisés par le module mk2Wifi. Ces sorties restent cependant **utilisables pour d’autres usages**, même lorsque le module mk2Wifi est présent. Dans ce cas :
+
+.. warning::
+   Si vous utilisez une sortie D5–D9 pour un étage de sortie alors que le module mk2Wifi est branché :
+
+   - N’activez sur la mk2Wifi **que les cavaliers** (JP1–JP5) correspondant aux sorties réellement gérées par l’ESP32 (voir :ref:`presentation-mk2wifi`)
+   - **Ne jamais utiliser une même broche** à la fois par le mk2Wifi et par un autre périphérique — cela créerait un conflit de bus pouvant endommager les composants
 
 .. |br| raw:: html
 

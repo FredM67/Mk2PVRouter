@@ -91,6 +91,8 @@ Test du rail +3,3 V
 
    ❌ Si la tension est absente, vérifiez le rail +5 V d’abord
 
+#. **Vérifiez la LED « ON »** (en haut à gauche de la carte) : elle doit être allumée, confirmant que le rail +3,3 V est actif
+
 #. **Coupez l’alimentation secteur** et attendez 1 minute avant toute manipulation
 
 .. note::

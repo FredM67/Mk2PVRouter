@@ -145,7 +145,7 @@ Cavalier à 2 pôles situé en **haut à droite** de la carte. Il active le **ra
 .. warning::
    Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie :term:`triac` n’ont pas besoin de cette alimentation.
 
-La LED témoin **LED41** (en haut à gauche de la carte) s’allume lorsque ce rail est actif.
+La LED témoin **+5V** (en haut à gauche de la carte) s’allume lorsque ce rail est actif.
 
 Procédure de soudure des cavaliers
 ------------------------------------
