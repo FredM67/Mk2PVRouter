@@ -433,7 +433,7 @@ Rails d’alimentation
      - Usage
    * - +5 V
      - 5 V
-     - Connecteurs UART_EXT, FTDI et broche VCC des sorties numériques (via JP40)
+     - Connecteurs UART_EXT, FTDI et broche VCC des sorties numériques (via cavalier « +5V Rail »)
    * - +3,3 V
      - 3,3 V
      - ATmega328P, module RFM69CW
@@ -450,7 +450,7 @@ Rails d’alimentation
 Cavalier « +5V Rail »
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le cavalier de soudure **JP40** (situé en haut à droite de la carte) permet d’activer le **rail +5 V** qui alimente la broche VCC des connecteurs 1×03 des sorties numériques. Ce rail est principalement destiné aux **cartes de sortie relais**, qui nécessitent du +5 V pour alimenter la bobine du relais.
+Le cavalier de soudure **« +5V Rail »** (situé en haut à droite de la carte) permet d’activer le **rail +5 V** qui alimente la broche VCC des connecteurs 1×03 des sorties numériques. Ce rail est principalement destiné aux **cartes de sortie relais**, qui nécessitent du +5 V pour alimenter la bobine du relais.
 
 - **Fermé** : le rail +5 V est actif sur les connecteurs 1×03 — obligatoire si des relais sont utilisés
 - **Ouvert** (défaut) : le rail +5 V est déconnecté des connecteurs de sortie
@@ -463,8 +463,8 @@ LED témoins
 
 Deux LED témoins :term:`CMS` sont situées en haut à gauche de la carte :
 
-- **LED40** (marquée « ON ») : allumée lorsque la carte est sous tension (rail +3,3 V actif)
-- **LED41** (marquée « +5V ») : allumée lorsque le rail +5 V des sorties est actif (cavalier « +5V Rail » fermé)
+- **ON** : allumée lorsque la carte est sous tension (rail +3,3 V actif)
+- **+5V** : allumée lorsque le rail +5 V des sorties est actif (cavalier « +5V Rail » fermé)
 
 Intégration du module mk2Wifi
 ------------------------------
