@@ -1,9 +1,12 @@
 [submodule "1-phase"]
 	path = 1-phase
 	url = https://github.com/FredM67/PVRouter-1-phase
+	branch = main
 [submodule "3-phase"]
 	path = 3-phase
 	url = https://github.com/FredM67/PVRouter-3-phase
+	branch = main
 [submodule "hardware"]
 	path = hardware
 	url = https://github.com/FredM67/PVRouter-KiCad.git
+	branch = main
