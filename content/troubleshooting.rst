@@ -981,8 +981,8 @@ Programmation USB-C Impossible
 
    #. ☐ **Mode téléchargement activé ?**
 
-      - Maintenir le bouton **SW1** enfoncé pendant la mise sous tension (branchement du câble USB-C)
-      - Relâcher SW1 après la connexion
+      - Maintenir le **bouton-poussoir** enfoncé pendant la mise sous tension (branchement du câble USB-C)
+      - Relâcher le bouton après la connexion
       - Sans cette manipulation, le module démarre en mode normal (pas en mode programmation)
 
    #. ☐ **Câble USB-C avec données ?**
@@ -1076,7 +1076,7 @@ Mise à Jour OTA Échoue
 **Si le module ne répond plus après un OTA raté :**
 
 - Revenir à la programmation par **USB-C** (voir procédure initiale dans :ref:`installation-mk2wifi`)
-- Maintenir SW1 enfoncé pour entrer en mode téléchargement
+- Maintenir le **bouton-poussoir** enfoncé pour entrer en mode téléchargement
 
 Écran OLED Vide ou Incorrect
 =============================

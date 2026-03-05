@@ -67,10 +67,10 @@ Procédure
 
 #. **Connectez le câble USB-C** entre le module et votre ordinateur
 
-#. **Passez en mode téléchargement** : Maintenez le bouton **SW1** enfoncé (GPIO9 à l’état bas) pendant la mise sous tension, puis relâchez
+#. **Passez en mode téléchargement** : Maintenez le **bouton-poussoir** enfoncé (GPIO9 à l’état bas) pendant la mise sous tension, puis relâchez
 
    .. tip::
-      Le bouton SW1 est le petit bouton-poussoir sur la carte. Si le module est déjà alimenté par USB, débranchez et rebranchez le câble USB-C tout en maintenant SW1 enfoncé.
+      Il s’agit du petit bouton-poussoir situé sur la carte. Si le module est déjà alimenté par USB, débranchez et rebranchez le câble USB-C tout en maintenant le bouton enfoncé.
 
 #. **L’ESP32-C3** dispose d’un contrôleur USB-série/JTAG intégré — aucun programmateur externe n’est nécessaire
 
