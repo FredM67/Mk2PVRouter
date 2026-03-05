@@ -14,5 +14,6 @@ updates:
     allow: 
       - dependency-name: "1-phase"
       - dependency-name: "3-phase"
+      - dependency-name: "hardware"
     schedule:
       interval: "daily"
