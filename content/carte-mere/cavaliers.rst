@@ -70,6 +70,9 @@ Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélectionn
 .. warning::
    Si le module RF (RFM69CW) et/ou la carte :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** être en position **3–centre (3,3 V)**. Ces modules fonctionnent en 3,3 V — une alimentation en 5 V les **détruirait immédiatement**.
 
+.. important::
+   Après avoir soudé le cavalier en position **3–centre (3,3 V)**, vérifiez au multimètre (mode continuité) qu’il n’y a **pas de court-circuit** entre la pastille centrale et la pastille **1 (5 V)**. Un pont de soudure accidentel entre les deux côtés relierait le 5 V directement au 3,3 V, ce qui **détruirait le régulateur LDO, le module RF et/ou la carte mk2Wifi**.
+
 JP1 — Mesure tension L3 / I2C SDA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
