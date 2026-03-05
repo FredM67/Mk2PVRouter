@@ -34,10 +34,10 @@ Vue d’ensemble
    * - V sel.
      - 3
      - Alimentation ATmega328P : 3–centre = 3,3 V (défaut), 1–centre = 5 V
-   * - JP1
+   * - SDA
      - 3
      - Mesure tension L3 / I2C : 1–centre = tension L3, 3–centre = I2C SDA (OLED)
-   * - JP2
+   * - SCL
      - 3
      - Mesure courant L3 / I2C : 1–centre = courant L3, 3–centre = I2C SCL (OLED)
    * - IRQ
@@ -73,16 +73,16 @@ Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélectionn
 .. important::
    Après avoir soudé le cavalier en position **3–centre (3,3 V)**, vérifiez au multimètre (mode continuité) qu’il n’y a **pas de court-circuit** entre la pastille centrale et la pastille **1 (5 V)**. Un pont de soudure accidentel entre les deux côtés relierait le 5 V directement au 3,3 V, ce qui **détruirait le régulateur LDO, le module RF et/ou la carte mk2Wifi**.
 
-JP1 — Mesure tension L3 / I2C SDA
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SDA — Mesure tension L3 / I2C SDA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cavalier à 3 pôles qui sélectionne entre la mesure de tension de la phase L3 et le bus I2C.
 
 - **Position 1–centre** : Mesure de tension de la phase L3 (via le :term:`ZMPT101K` TR3).
 - **Position 3–centre** : Bus I2C (signal SDA). Permet l’utilisation de l’écran OLED.
 
-JP2 — Mesure courant L3 / I2C SCL
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SCL — Mesure courant L3 / I2C SCL
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cavalier à 3 pôles qui sélectionne entre la mesure de courant de la phase L3 et le bus I2C.
 
@@ -90,7 +90,7 @@ Cavalier à 3 pôles qui sélectionne entre la mesure de courant de la phase L3 
 - **Position 3–centre** : Bus I2C (signal SCL). Permet l’utilisation de l’écran OLED.
 
 .. note::
-   JP1 et JP2 fonctionnent en paire :
+   SDA et SCL fonctionnent en paire :
 
    - **Triphasé** : les deux en position **1–centre** (mesure L3)
    - **Monophasé ou split-phase** : les deux en position **3–centre** (I2C pour écran OLED)
@@ -153,9 +153,9 @@ Procédure de soudure des cavaliers
 .. warning::
    Travaillez **hors tension**. L’opération est réversible (à l’aide d’une tresse à dessouder), mais des modifications répétées risquent d’altérer les pistes en cuivre.
 
-#. **Identifiez le cavalier** sur la carte à l’aide des repères sérigraphiés (V sel., JP1, JP2, IRQ, NSS, TEMP)
+#. **Identifiez le cavalier** sur la carte à l’aide des repères sérigraphiés (V sel., SDA, SCL, IRQ, NSS, TEMP)
 
-#. **Pour les cavaliers 3 pôles** (V sel., JP1, JP2, TEMP) : Déposez une goutte de soudure entre la pastille centrale et la pastille correspondant à la position souhaitée
+#. **Pour les cavaliers 3 pôles** (V sel., SDA, SCL, TEMP) : Déposez une goutte de soudure entre la pastille centrale et la pastille correspondant à la position souhaitée
 
 #. **Pour les cavaliers 2 pôles** (IRQ, NSS, +5V Rail) : Déposez une goutte de soudure entre les deux pastilles
 
@@ -166,8 +166,8 @@ Procédure de soudure des cavaliers
    Avant de continuer, vérifiez :
 
    | ☐ V sel. configuré en position 3,3 V (sauf cas particulier)
-   | ☐ JP1 configuré selon votre configuration (tension L3 ou I2C SDA)
-   | ☐ JP2 configuré selon votre configuration (courant L3 ou I2C SCL)
+   | ☐ SDA configuré selon votre configuration (tension L3 ou I2C SDA)
+   | ☐ SCL configuré selon votre configuration (courant L3 ou I2C SCL)
    | ☐ TEMP configuré selon votre choix (non soudé, routeur ou mk2Wifi)
    | ☐ « +5V Rail » fermé si des cartes de sortie relais sont utilisées
    | ☐ Continuité vérifiée au multimètre pour chaque cavalier

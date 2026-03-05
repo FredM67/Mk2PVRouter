@@ -285,7 +285,7 @@ Termes Techniques Avancés
 
    Cavalier de soudure
      | Pont conducteur réalisé en soudant deux pastilles adjacentes sur le :term:`PCB`.
-     | Les cavaliers V sel., JP1, JP2, IRQ, NSS et TEMP sur la carte universelle permettent de configurer le mode de fonctionnement (monophasé/triphasé, alimentation, module RF, capteur de température).
+     | Les cavaliers V sel., SDA, SCL, IRQ, NSS et TEMP sur la carte universelle permettent de configurer le mode de fonctionnement (monophasé/triphasé, alimentation, module RF, capteur de température).
 
    CT
      | *Current Transformer* ou dans notre cas **pince ampèremétrique**.

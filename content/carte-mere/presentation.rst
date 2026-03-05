@@ -225,7 +225,7 @@ OLED — Écran I2C (1×4 Molex SL)
      - SDA
 
 .. important::
-   Le bus I2C est partagé sur les broches A4 (SDA) et A5 (SCL) de l’ATmega328P. En mode triphasé, ces broches sont affectées à la mesure de tension/courant L3 — l’écran OLED n’est alors **pas disponible**. Le choix est effectué par les cavaliers **JP1** et **JP2** (voir :ref:`cavaliers`).
+   Le bus I2C est partagé sur les broches A4 (SDA) et A5 (SCL) de l’ATmega328P. En mode triphasé, ces broches sont affectées à la mesure de tension/courant L3 — l’écran OLED n’est alors **pas disponible**. Le choix est effectué par les cavaliers **SDA** et **SCL** (voir :ref:`cavaliers`).
 
 CT1 / CT2 / CT3 — Transformateurs de courant (1×2 Molex SL)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
