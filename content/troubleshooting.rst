@@ -41,8 +41,8 @@ Ce guide couvre la carte universelle **3phaseDiverter** du Mk2PVRouter.
    - GM1
    - GM1, GM2, GM3
  * - Régulateur 3,3 V/5 V
-   - PS1 (RAC05E)
-   - PS1 (RAC05E, commun)
+   - PS1 (MPC10-5)
+   - PS1 (MPC10-5, commun)
  * - Capteurs de courant (CT)
    - 1 CT (phase principale)
    - 3 CT (un par phase)
@@ -100,7 +100,7 @@ Vérifier les composants d’alimentation :
 
 .. admonition:: Composants à vérifier
 
- #. ☐ **Module PS1 (RAC05E)** dans le bon sens ?
+ #. ☐ **Module PS1 (MPC10-5)** dans le bon sens ?
 
     - Vérifier l’orientation selon le schéma
     - Vérifier que le point ou l’encoche du module correspond au repère sur le PCB
@@ -403,7 +403,7 @@ Causes Possibles
  - C1 (condensateur film secteur) ou C3 (électrolytique) défectueux
  - Rare mais possible
 
- #. ☐ **Module PS1 (RAC05E) défectueux**
+ #. ☐ **Module PS1 (MPC10-5) défectueux**
 
  - Peut être en court-circuit si défaut fabrication
  - Ou endommagé par soudure trop chaude
@@ -481,7 +481,7 @@ Diagnostic par Tension
 
 **VCC trop faible (<3 V pour système 3,3 V) :**
 
-- Module PS1 (RAC05E) défectueux, mal orienté ou mal soudé
+- Module PS1 (MPC10-5) défectueux, mal orienté ou mal soudé
 - Court-circuit partiel consommant trop de courant
 
 **VCC trop élevée (>5,5 V) :**

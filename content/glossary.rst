@@ -235,7 +235,7 @@ Termes Techniques Avancés
    LDO
      | *Low Drop-Out regulator* ou régulateur linéaire à faible chute de tension.
      | Composant qui convertit une tension continue en une tension plus basse avec un minimum de pertes.
-     | Le Mk2PVRouter utilise un **AP2112K-3.3** pour convertir 5 V en 3,3 V.
+     | Le Mk2PVRouter utilise un **AP7361C-33E** pour convertir 5 V en 3,3 V.
 
    GDT
      | *Gas Discharge Tube* ou éclateur à gaz.

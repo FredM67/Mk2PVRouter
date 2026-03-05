@@ -121,7 +121,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - ✔
      - ✔
      - ✔
-   * - Module d’alimentation PS1 (RAC05E)
+   * - Module d’alimentation PS1 (MPC10-5)
      - ✔
      - ✔
      - ✔

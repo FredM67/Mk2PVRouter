@@ -108,7 +108,7 @@ Le condensateur de filtrage secteur 1 µF / 310 VAC (classe X2).
 
 .. todo:: Photo à fournir — condensateur film C1 soudé.
 
-Module d'alimentation PS1 (RAC05E)
+Module d'alimentation PS1 (MPC10-5)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le module d'alimentation AC-DC convertit le 230 VAC en 5 VDC (3 W).

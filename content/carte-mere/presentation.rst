@@ -32,8 +32,8 @@ Caractéristiques principales
 - Jusqu'à 3 capteurs de tension (:term:`ZMPT101K`, rapport 1000:1000)
 - Jusqu'à 3 connecteurs de transformateur de courant (:term:`CT` 1–CT3)
 - Module radio **RFM69CW** (bande ISM 433/868 MHz) avec connecteur :term:`SMA`
-- Alimentation AC-DC intégrée (**RAC05E-05SKT**, 5 V / 3 W)
-- Régulateur :term:`LDO` **AP2112K-3.3** (5 V → 3,3 V, 600 mA)
+- Alimentation AC-DC intégrée (**MPC10-5**, 5 V / 5 W)
+- Régulateur :term:`LDO` **AP7361C-33E** (5 V → 3,3 V, 1 A)
 - Protection parafoudre multiniveau (:term:`GDT`, fusibles, :term:`MOV`, self de mode commun)
 - Buffer de la référence interne 1,1 V (AREF) par amplificateur opérationnel **LMV321A**
 - Connecteurs d’extension : **TRIG_EXT**, **UART_EXT**, **FTDI**, **OLED**
@@ -397,9 +397,9 @@ Le secteur entre par le connecteur d’entrée secteur (**PE / N / L1 / L2 / L3*
 
    Secteur → GDT (éclateurs) → Fusibles (FS0–FS3) → Varistances (RV0–RV3, GM1–GM3)
           → Self de mode commun (FL1) → Condensateur film (C1)
-          → PS1 (RAC05E-05SKT) : 230 VAC → 5 VDC, 3 W
+          → PS1 (MPC10-5) : 230 VAC → 5 VDC, 5 W
           → D1 (SMBJ7.0A) : protection TVS côté 5 V
-          → U1 (AP2112K-3.3) : 5 V → 3,3 V, 600 mA
+          → U1 (AP7361C-33E) : 5 V → 3,3 V, 1 A
 
 Protection contre les surtensions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

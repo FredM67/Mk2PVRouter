@@ -64,8 +64,8 @@ V sel. — Alimentation ATmega328P
 
 Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélectionne la tension d’alimentation du microcontrôleur.
 
-- **Position 3–centre** (défaut) : L’ATmega328P est alimenté en 3,3 V via le régulateur :term:`LDO` U1 (AP2112K-3.3)
-- **Position 1–centre** : L’ATmega328P est alimenté directement en 5 V depuis le module PS1 (RAC05E)
+- **Position 3–centre** (défaut) : L’ATmega328P est alimenté en 3,3 V via le régulateur :term:`LDO` U1 (AP7361C-33E)
+- **Position 1–centre** : L’ATmega328P est alimenté directement en 5 V depuis le module PS1 (MPC10-5)
 
 .. warning::
    Si le module RF (RFM69CW) et/ou la carte :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** être en position **3–centre (3,3 V)**. Ces modules fonctionnent en 3,3 V — une alimentation en 5 V les **détruirait immédiatement**.
@@ -129,7 +129,7 @@ GND_LINK — Pont Earth–GND
 
 Cavalier fil qui relie la **terre de protection** (Earth, provenant du réseau électrique) à la **masse basse tension** (GND) du circuit. Il est réalisé avec un fil de 0,75 mm² soudé entre les deux pastilles.
 
-Lorsque GND_LINK est **ouvert**, le circuit basse tension est entièrement isolé de la terre grâce à l’isolation galvanique du module d’alimentation RAC05E. Lorsqu’il est **fermé**, la masse basse tension est référencée à la terre de protection.
+Lorsque GND_LINK est **ouvert**, le circuit basse tension est entièrement isolé de la terre grâce à l’isolation galvanique du module d’alimentation MPC10-5. Lorsqu’il est **fermé**, la masse basse tension est référencée à la terre de protection.
 
 .. note::
    La configuration recommandée dépend de votre installation. En cas de doute, laissez le cavalier **ouvert** — il pourra toujours être soudé ultérieurement.

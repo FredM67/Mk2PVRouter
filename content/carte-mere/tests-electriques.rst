@@ -68,7 +68,7 @@ Test du rail +5 V
 #. Mesurez la tension entre les points de test marqués **+5V** et **GND** sur le :term:`PCB`
 #. **Valeur attendue** : **5,0 V ± 0,2 V**
 
-   ✅ Si la tension est correcte, le module d’alimentation PS1 (RAC05E) fonctionne
+   ✅ Si la tension est correcte, le module d’alimentation PS1 (MPC10-5) fonctionne
 
    ❌ Si la tension est absente ou très différente :
 
@@ -87,7 +87,7 @@ Test du rail +3,3 V
 #. Mesurez la tension entre les points de test marqués **+3.3V** et **GND** sur le :term:`PCB`
 #. **Valeur attendue** : **3,3 V ± 0,1 V**
 
-   ✅ Si la tension est correcte, le régulateur :term:`LDO` U1 (AP2112K) fonctionne
+   ✅ Si la tension est correcte, le régulateur :term:`LDO` U1 (AP7361C-33E) fonctionne
 
    ❌ Si la tension est absente, vérifiez le rail +5 V d’abord
 
