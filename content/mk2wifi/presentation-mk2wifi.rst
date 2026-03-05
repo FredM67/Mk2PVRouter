@@ -83,6 +83,39 @@ Connecteurs
      - CSP-USC16-TR
      - Connecteur USB Type-C (programmation initiale)
 
+Cavaliers de soudure (JP1–JP5)
+-------------------------------
+
+La carte mk2Wifi dispose de **5 cavaliers de soudure** qui permettent de déconnecter individuellement chaque signal GPIO entre le module et la carte principale. Par défaut, les cavaliers sont **ouverts** (signaux déconnectés).
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 15 70
+
+   * - Cavalier
+     - Signal
+     - Fonction
+   * - JP1
+     - D8
+     - GPIO 8 (TRIG_EXT broche 2)
+   * - JP2
+     - D7
+     - GPIO 7 (TRIG_EXT broche 3)
+   * - JP3
+     - D6
+     - GPIO 6 (TRIG_EXT broche 4)
+   * - JP4
+     - D5
+     - GPIO 5 (TRIG_EXT broche 5)
+   * - JP5
+     - D9
+     - GPIO 9 (TRIG_EXT broche 6)
+
+Pour utiliser une sortie de déclenchement, le cavalier correspondant doit être **fermé** (goutte de soudure entre les deux pastilles). Cela permet de n'activer que les sorties réellement utilisées et de libérer les autres broches pour d'autres usages sur la carte principale.
+
+.. tip::
+   Si vous utilisez toutes les sorties D5–D9, fermez les 5 cavaliers. Si vous n'utilisez que certaines sorties, ne fermez que les cavaliers correspondants.
+
 Alimentation
 ------------
 

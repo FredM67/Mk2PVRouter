@@ -450,7 +450,9 @@ Rails d’alimentation
 Intégration du module mk2Wifi
 ------------------------------
 
-La carte principale est conçue pour accueillir le module d’extension :term:`mk2Wifi` via les connecteurs TRIG_EXT et UART_EXT :
+La carte principale est conçue pour accueillir le module d’extension :term:`mk2Wifi` via les connecteurs TRIG_EXT et UART_EXT. La zone réservée au module est repérée par un **rectangle hachuré** sur la sérigraphie de la face avant, autour des connecteurs concernés.
+
+Signaux échangés :
 
 - L’une des deux cartes utilise des **barrettes mâles**, l’autre des **barrettes femelles** (au choix de l’utilisateur)
 - L’alimentation +5 V est fournie par la carte principale via UART_EXT broche 3
