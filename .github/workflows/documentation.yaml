@@ -119,7 +119,7 @@ jobs:
           mkdir -p _build/dirhtml/_static
           cp "_build/simplepdf/Documentation du Mk2PVRouter.pdf" _build/dirhtml/_static/Mk2PVRouter.pdf
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: my-artifact
           path: _build
@@ -190,7 +190,7 @@ jobs:
               fi
           done
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: gh-pages-artifact
           path: _gh-pages
