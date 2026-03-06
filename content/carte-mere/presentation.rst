@@ -253,7 +253,7 @@ Chaque sortie numérique (D2 à D13) dispose de **deux connecteurs Molex SL** su
 - **1×02** (2 broches) : GND, I/O
 - **1×03** (3 broches) : GND, I/O, VCC
 
-Le connecteur **1×03** (GND, I/O, VCC) sert à raccorder l’étage de sortie (:term:`triac` ou relais), qui a besoin de l’alimentation. La broche VCC de ces connecteurs est reliée au **rail +5 V**, activé par le cavalier **+5V Rail** (voir ci-dessous). Le connecteur **1×02** (GND, I/O) sert à raccorder la carte indicateur LED (voir :ref:`carte-indicateur`), qui n’a besoin que du signal de commande.
+Le connecteur **1×03** (GND, I/O, VCC) sert à raccorder l’étage de sortie (:term:`triac <Triac>` ou relais), qui a besoin de l’alimentation. La broche VCC de ces connecteurs est reliée au **rail +5 V**, activé par le cavalier **+5V Rail** (voir ci-dessous). Le connecteur **1×02** (GND, I/O) sert à raccorder la carte indicateur LED (voir :ref:`carte-indicateur`), qui n’a besoin que du signal de commande.
 
 .. list-table:: Disponibilité des sorties numériques
    :header-rows: 1
@@ -294,12 +294,12 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
    Ces marquages sont importants lors du raccordement aux connecteurs CT de la carte (voir :ref:`installation-finale`).
 
 **CT à sortie tension (333 mV)** — recommandé
-   Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de :term:`burden`. Le signal de tension est directement compatible avec l’entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n’est nécessaire** sur la carte.
+   Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de :term:`burden <Burden>`. Le signal de tension est directement compatible avec l’entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n’est nécessaire** sur la carte.
 
    C’est le type de CT recommandé pour la carte universelle.
 
 **CT à sortie courant** — avec burden THT
-   Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden` soudée sur la carte (emplacements **R18** / **R28** / **R38**).
+   Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden <Burden>` soudée sur la carte (emplacements **R18** / **R28** / **R38**).
 
    Les emplacements R18 / R28 / R38 sont des **empreintes doubles** : une diode :term:`TVS` de protection est déjà soudée en usine (côté :term:`CMS`). Elle protège l’entrée de l’:term:`ADC` dans le cas où un CT à sortie courant serait branché sans burden. La résistance de burden THT se soude **par-dessus** la TVS, sur les mêmes pastilles.
 
@@ -456,7 +456,7 @@ Le cavalier de soudure **« +5V Rail »** (situé en haut à droite de la cart
 - **Ouvert** (défaut) : le rail +5 V est déconnecté des connecteurs de sortie
 
 .. warning::
-   Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie :term:`triac` n’ont pas besoin de cette alimentation.
+   Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie :term:`triac <Triac>` n’ont pas besoin de cette alimentation.
 
 LED témoins
 ~~~~~~~~~~~~~~

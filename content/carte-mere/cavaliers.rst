@@ -143,7 +143,7 @@ Cavalier à 2 pôles situé en **haut à droite** de la carte. Il active le **ra
 - **Ouvert** (défaut) : le rail +5 V est déconnecté des connecteurs de sortie
 
 .. warning::
-   Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie :term:`triac` n’ont pas besoin de cette alimentation.
+   Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie :term:`triac <Triac>` n’ont pas besoin de cette alimentation.
 
 La LED témoin **+5V** (en haut à gauche de la carte) s’allume lorsque ce rail est actif.
 

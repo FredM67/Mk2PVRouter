@@ -10,7 +10,7 @@
 
 ⚠️ **Niveau de risque** : Élevé (haute puissance, risque d’incendie)
 
-| Le :term:`triac`, également connu sous le nom de triode pour courant alternatif, appartient à la catégorie des thyristors et sert d’interrupteur semi-conducteur. Il a la capacité unique de gérer le courant dans les deux directions, ce qui le rend idéal pour les applications utilisant du courant alternatif (AC).
+| Le :term:`triac <Triac>`, également connu sous le nom de triode pour courant alternatif, appartient à la catégorie des thyristors et sert d’interrupteur semi-conducteur. Il a la capacité unique de gérer le courant dans les deux directions, ce qui le rend idéal pour les applications utilisant du courant alternatif (AC).
 | Utilisé pour ajuster la puissance fournie à des dispositifs purement résistifs comme des radiateurs, des chauffe-eau ou des lampes à incandescence, le triac permet de moduler avec précision l’énergie distribuée. Cela offre un contrôle fin sur le niveau de chaleur ou d’éclairage produit.
 
 .. contents:: Sommaire
@@ -36,7 +36,7 @@
 Principe de Fonctionnement d’une Sortie Triac
 ---------------------------------------------
 
-| Un :term:`triac` est activé par un signal de déclenchement envoyé à sa broche de commande, également connue sous le nom de gâchette ou *gate*.
+| Un :term:`triac <Triac>` est activé par un signal de déclenchement envoyé à sa broche de commande, également connue sous le nom de gâchette ou *gate*.
 | Lorsque ce signal dépasse un seuil spécifique, le triac s’active et commence à conduire le courant, permettant ainsi son passage.
 | Une fois activé, le triac continue de conduire le courant jusqu’à ce que celui-ci descende en dessous d’un certain niveau, souvent proche de zéro.
 | Ce phénomène se produit automatiquement à la fin de chaque demi-cycle du courant alternatif, entraînant l’arrêt du passage du courant.
@@ -45,7 +45,7 @@ Contrôle de la Puissance
 ------------------------
 
 | Pour contrôler la puissance fournie à un appareil résistif, on utilise souvent une technique appelée variation de phase ou gradation.
-| Elle consiste à retarder l’amorçage du :term:`triac` dans chaque demi-cycle de la tension alternative. En ne déclenchant le triac que pendant une portion de chaque demi-cycle, on réduit la quantité d’énergie fournie à la charge.
+| Elle consiste à retarder l’amorçage du :term:`triac <Triac>` dans chaque demi-cycle de la tension alternative. En ne déclenchant le triac que pendant une portion de chaque demi-cycle, on réduit la quantité d’énergie fournie à la charge.
 | Plus le retard est important, plus la puissance transmise est faible, et inversement.
 | Le principal inconvénient de cette méthode est qu’elle génère des harmoniques dans le réseau électrique.
 
@@ -56,13 +56,13 @@ Contrôle de la Puissance
 Applications typiques
 ---------------------
 
-* **Éclairage** : Les *dimmers*, ou variateurs de lumière, exploitent les triacs pour moduler l’intensité lumineuse. En ajustant le moment d’activation du :term:`triac`, il est possible de faire varier la luminosité des lampes.
+* **Éclairage** : Les *dimmers*, ou variateurs de lumière, exploitent les triacs pour moduler l’intensité lumineuse. En ajustant le moment d’activation du :term:`triac <Triac>`, il est possible de faire varier la luminosité des lampes.
 * **Chauffage** : Dans le cas des chauffages électriques, les triacs servent à contrôler la température. En changeant la durée pendant laquelle le courant est conduit, on peut régler la quantité de chaleur émise par l’appareil de chauffage.
 
 Avantages comparés à un relais
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Contrôle Fin** : Le :term:`triac` offre une gestion très précise de la puissance, ce qui est parfait pour les applications nécessitant un ajustement délicat.
+* **Contrôle Fin** : Le :term:`triac <Triac>` offre une gestion très précise de la puissance, ce qui est parfait pour les applications nécessitant un ajustement délicat.
 * **Commutation Sans Bruit** : À l’inverse des relais mécaniques, les triacs fonctionnent sans produire de bruit de clic caractéristique lors de la commutation.
 * **Absence de Composants Mobiles** : Le fait qu’il n’y ait pas de composants mobiles diminue l’usure due au mouvement, ce qui rend le système de commutation plus fiable et prolonge sa durée de vie.
 
@@ -70,7 +70,7 @@ Considérations Techniques
 -------------------------
 
 * **Dissipation Thermique** : L’utilisation des triacs entraîne une production de chaleur pendant leur fonctionnement. Il est crucial d’assurer une bonne évacuation de cette chaleur, généralement à l’aide de dispositifs tels que des radiateurs ou des dissipateurs thermiques.
-* **Compatibilité de Charge** : Du fait que le :term:`triac` interrompt le courant de manière périodique, seuls les équipements résistifs (comme les chauffages ou les lampes) sont adaptés pour être contrôlés par un triac.
+* **Compatibilité de Charge** : Du fait que le :term:`triac <Triac>` interrompt le courant de manière périodique, seuls les équipements résistifs (comme les chauffages ou les lampes) sont adaptés pour être contrôlés par un triac.
 
 Composition d’un kit pour étage de sortie triac
 -----------------------------------------------
@@ -78,7 +78,7 @@ Composition d’un kit pour étage de sortie triac
 Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 
 * Un **circuit imprimé** qui distingue clairement les zones de basse et de haute tension de chaque côté.
-* Une **résistance R1**, dont la valeur est choisie en fonction de la tension nominale du système et du modèle d’:term:`optocoupleur` utilisé.
+* Une **résistance R1**, dont la valeur est choisie en fonction de la tension nominale du système et du modèle d’:term:`optocoupleur <Optocoupleur>` utilisé.
 * Une **résistance R2**, sélectionnée selon le modèle d’optocoupleur.
 * Une **résistance R3**.
 * Un **support** :term:`DIL` pour l’optocoupleur, comportant deux rangées de trois broches.
@@ -101,10 +101,10 @@ Assemblage d’une carte de sortie
 Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet ordre :
 
 #. résistances
-#. support :term:`optocoupleur`
+#. support :term:`optocoupleur <Optocoupleur>`
 #. connecteur·s Molex
 #. connecteur de puissance
-#. :term:`triac`
+#. :term:`triac <Triac>`
 
 .. danger::
    ⚠️⚠️⚠️ **DANGER — RISQUE D’INCENDIE** ⚠️⚠️⚠️
@@ -181,7 +181,7 @@ Installation des *agrafes* en cuivre massif
 
 La première étape du montage consiste à installer des *agrafes* en cuivre pur pour augmenter la capacité de la carte à supporter des courants forts.
 
-Il est recommandé d’utiliser du cuivre d’une section transversale de 1,5 mm², compte tenu de la courte distance entre le :term:`triac` et le connecteur de puissance.
+Il est recommandé d’utiliser du cuivre d’une section transversale de 1,5 mm², compte tenu de la courte distance entre le :term:`triac <Triac>` et le connecteur de puissance.
 
 Les emplacements pour ces agrafes sont marqués sur le circuit imprimé par des lignes épaisses sur la couche de sérigraphie, avec un espacement d’environ 5 mm entre les trous.
 
@@ -221,7 +221,7 @@ Selon le plan du circuit :
 * La résistance **R3** doit être de **360 Ω**.
 
 .. note::
-   Pour des besoins spécifiques, un autre type d’:term:`optocoupleur` pourrait être nécessaire.
+   Pour des besoins spécifiques, un autre type d’:term:`optocoupleur <Optocoupleur>` pourrait être nécessaire.
    Dans ce cas, les valeurs des résistances peuvent varier.
 
 .. hint::
@@ -295,7 +295,7 @@ Ce composant peut être maintenu provisoirement en place en pliant légèrement 
 
 Ensuite, avec un fer à souder bien chaud (réglez la température à 450 °C si possible), appliquez généreusement de la soudure.
 
-:term:`triac`
+:term:`triac <Triac>`
 ^^^^^^^^^^^^^
 
 De la même manière, ce composant peut être maintenu provisoirement en place en pliant légèrement les agrafes en cuivre pour qu’elles pincent les broches saillantes.
@@ -338,13 +338,13 @@ Pour les soudures au niveau de chacune des agrafes, un bon fer chaud et beaucoup
    🔥 Une soudure défectueuse = RISQUE D’INCENDIE 🔥
 
 
-Installation de l’:term:`optocoupleur`
+Installation de l’:term:`optocoupleur <Optocoupleur>`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| L’:term:`optocoupleur`, un composant essentiel doté de 6 broches, sert de liaison entre les sections du circuit fonctionnant à basse et à haute tension.
+| L’:term:`optocoupleur <Optocoupleur>`, un composant essentiel doté de 6 broches, sert de liaison entre les sections du circuit fonctionnant à basse et à haute tension.
 | Pour l’installer correctement, alignez le repère présent sur le composant (indiqué en rouge) avec le cercle sur le circuit imprimé (:term:`PCB`).
 
-| Une installation inversée de l’:term:`optocoupleur` ne permettra pas au circuit de fonctionner correctement.
+| Une installation inversée de l’:term:`optocoupleur <Optocoupleur>` ne permettra pas au circuit de fonctionner correctement.
 | Toutefois, la conception des broches de l’optocoupleur est telle qu’il ne devrait pas être endommagé en cas d’erreur de montage.
 
 .. figure:: ../img/Carte-assemblée.jpg
@@ -359,7 +359,7 @@ Installation de l’:term:`optocoupleur`
    Avant le test sous tension, vérifiez :
 
    | ☐ **Optocoupleur correctement orienté** (repère rouge aligné avec cercle :term:`PCB`)
-   | ☐ Toutes les soudures haute puissance re-vérifiées (connecteur, :term:`triac`, agrafes)
+   | ☐ Toutes les soudures haute puissance re-vérifiées (connecteur, :term:`triac <Triac>`, agrafes)
    | ☐ Pas de court-circuit visible (inspection visuelle complète)
    | ☐ Pas de flux de soudure résiduel conducteur
    | ☐ **Extincteur à portée de main pour le premier test**
@@ -375,13 +375,13 @@ Les conseils suivants sont destinés aux situations où un étage de sortie doit
 .. danger::
    **Avertissement de Sécurité**
 
-   Pour vérifier le bon fonctionnement du déclencheur et du :term:`triac`, un accès à la tension du réseau électrique **230 V** CA est nécessaire.
+   Pour vérifier le bon fonctionnement du déclencheur et du :term:`triac <Triac>`, un accès à la tension du réseau électrique **230 V** CA est nécessaire.
 
    Faites preuve de la plus grande prudence et n’entamez cette étape que si vous avez les compétences nécessaires pour le faire en toute sécurité.
 
-Voici une plate-forme construite qui permet de tester les cartes de sortie avec ou sans le :term:`triac` soudé en place.
+Voici une plate-forme construite qui permet de tester les cartes de sortie avec ou sans le :term:`triac <Triac>` soudé en place.
 
-Lors du test d’une carte de sortie, il est important que le :term:`triac` fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit :term:`optocoupleur` et un ou plusieurs composants seront alors détruits immédiatement.
+Lors du test d’une carte de sortie, il est important que le :term:`triac <Triac>` fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit :term:`optocoupleur <Optocoupleur>` et un ou plusieurs composants seront alors détruits immédiatement.
 
 En tenant dûment compte de l’avertissement de sécurité ci-dessus, l’approche simple illustrée ci-dessous devrait convenir pour tester des cartes individuelles.
 
@@ -530,7 +530,7 @@ Procédure de Test Complète
 
    ☐ Mesurer résistance entre bornes connecteur puissance : **doit être ∞ Ω** (circuit ouvert)
 
-   ☐ Mesurer résistance :term:`optocoupleur` côté commande : **quelques kΩ** (LED interne)
+   ☐ Mesurer résistance :term:`optocoupleur <Optocoupleur>` côté commande : **quelques kΩ** (LED interne)
 
    ☐ Vérifier absence de court-circuit entre pistes basse/haute tension
 
@@ -562,12 +562,12 @@ Procédure de Test Complète
 
 #. **Alimenter Arduino uniquement (PAS de secteur 230 V)**
 
-#. **Mesurer tension aux bornes du :term:`triac`** avec multimètre
+#. **Mesurer tension aux bornes du :term:`triac <Triac>`** avec multimètre
 
-   - **Signal HIGH** : Devrait y avoir quelques volts (LED :term:`optocoupleur` allumée)
+   - **Signal HIGH** : Devrait y avoir quelques volts (LED :term:`optocoupleur <Optocoupleur>` allumée)
    - **Signal LOW** : 0 V (LED optocoupleur éteinte)
 
-   ✅ Si OK : L’:term:`optocoupleur` fonctionne correctement
+   ✅ Si OK : L’:term:`optocoupleur <Optocoupleur>` fonctionne correctement
 
    ❌ Si pas de variation : Vérifier soudures, orientation optocoupleur, résistances R1-R3
 
@@ -629,7 +629,7 @@ Si le test précédent a réussi, vous pouvez tester avec une charge plus import
 
 #. **Répéter test pendant 5 minutes**
 
-   - Surveiller température :term:`triac` (devrait rester < 60 °C au toucher)
+   - Surveiller température :term:`triac <Triac>` (devrait rester < 60 °C au toucher)
    - Vérifier commutation toujours fonctionnelle
 
 
@@ -667,7 +667,7 @@ Carte Défectueuse
 
 ☒ Lampe ne s’allume jamais
 
-   **Diagnostic** : Circuit :term:`optocoupleur` défectueux ou :term:`triac` ouvert
+   **Diagnostic** : Circuit :term:`optocoupleur <Optocoupleur>` défectueux ou :term:`triac <Triac>` ouvert
 
    **Action** : Vérifier optocoupleur (sens, soudures), vérifier résistances R1-R3
 
@@ -713,7 +713,7 @@ Problème 1 : Lampe Ne S’Allume Jamais
 
    **Test** : Mesurer résistance bornes triac (devrait être quelques Ω dans un sens)
 
-☐ Soudure froide sur patte :term:`triac`
+☐ Soudure froide sur patte :term:`triac <Triac>`
 
    **Action** : Refaire soudures triac avec fer très chaud (450 °C)
 
@@ -728,7 +728,7 @@ Problème 2 : Lampe Reste Allumée en Permanence
 
    **Action** : Remplacer triac (attention ESD lors manipulation)
 
-☐ Pont de soudure entre bornes :term:`triac`
+☐ Pont de soudure entre bornes :term:`triac <Triac>`
 
    **Test** : Inspection visuelle loupe, vérifier continuité
 
@@ -749,7 +749,7 @@ Problème 3 : Grésillement ou Arc Électrique
 
    **Action** : **ARRÊTER IMMÉDIATEMENT**, refaire soudures avec beaucoup de soudure
 
-☐ Écart entre :term:`triac` et :term:`PCB` (mauvais contact)
+☐ Écart entre :term:`triac <Triac>` et :term:`PCB` (mauvais contact)
 
    **Action** : Dessouder triac, aplatir pattes, ressouder avec triac bien plaqué
 
@@ -790,7 +790,7 @@ Checklist Avant Installation
 
    ☐ **Test charge 100 W réussi** : 5 minutes sans problème
 
-   ☐ **Température acceptable** : Carte et :term:`triac` < 60 °C
+   ☐ **Température acceptable** : Carte et :term:`triac <Triac>` < 60 °C
 
    ☐ **Aucune odeur ou fumée** durant tous les tests
 
@@ -814,7 +814,7 @@ Il est recommandé de noter sur un papier (à conserver avec la carte) :
 - **Valeur R1** : _____ Ω (120 Ω pour 3,3 V, 180 Ω pour 5 V)
 - **Valeur R2** : _____ Ω (330 Ω)
 - **Valeur R3** : _____ Ω (360 Ω)
-- **Référence :term:`triac`** : __________ (ex :  BTA41-600B)
+- **Référence :term:`triac <Triac>`** : __________ (ex :  BTA41-600B)
 - **Charge testée** : _____ W (ex : 100 W)
 - **Durée test** : _____ minutes
 - **Résultat** : ☐ ✅ Validée  ☐ ❌ Défectueuse
@@ -868,15 +868,15 @@ Ressources Complémentaires
 Documentation Technique
 -----------------------
 
-- **Datasheet** :term:`triac` BTA41 : Caractéristiques électriques, courbes thermiques
-- **Datasheet** :term:`optocoupleur` MOC3043 : Schéma interne, caractéristiques LED
+- **Datasheet** :term:`triac <Triac>` BTA41 : Caractéristiques électriques, courbes thermiques
+- **Datasheet** :term:`optocoupleur <Optocoupleur>` MOC3043 : Schéma interne, caractéristiques LED
 - **Guide soudure haute puissance** : :ref:`soldering-tutorial`
 
 .. admonition:: 🎯 Récapitulatif Final
 
    **Vous avez maintenant assemblé une carte de sortie triac fonctionnelle !**
 
-   Cette carte utilise un :term:`triac` BTA41 (40 A nominaux) mais, en raison de la taille du dissipateur, la charge est limitée à **3 000 W** (~13 A à 230 V) pour un fonctionnement sûr et fiable.
+   Cette carte utilise un :term:`triac <Triac>` BTA41 (40 A nominaux) mais, en raison de la taille du dissipateur, la charge est limitée à **3 000 W** (~13 A à 230 V) pour un fonctionnement sûr et fiable.
 
    **Points clés à retenir :**
 

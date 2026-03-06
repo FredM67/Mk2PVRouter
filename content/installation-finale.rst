@@ -151,7 +151,7 @@ Les :term:`CT` Grille sont des capteurs à clip installés sur les câbles de *
 
 - **Monophasé** : 1 :term:`CT` à clip sur la phase unique (CT1)
 - **Triphasé avec neutre** : 3 :term:`CT` à clip sur les 3 phases (CT1, CT2, CT3)
-- **Triphasé sans neutre** : 2 :term:`CT` suffisent (CT1, CT2) — :term:`théorème de Blondel`
+- **Triphasé sans neutre** : 2 :term:`CT` suffisent (CT1, CT2) — :term:`théorème de Blondel <Théorème de Blondel>`
 
 **CT Diversion — Mesure de la puissance routée** (optionnel)
 
@@ -274,7 +274,7 @@ Schéma d’installation — Triphasé
    **Chaque CT doit correspondre à la phase connectée sur le connecteur secteur du routeur.** La phase qui passe dans CT1 doit être raccordée sur **L1**, celle qui passe dans CT2 sur **L2**, et celle qui passe dans CT3 sur **L3**. Un décalage entre les CT et les phases provoquera des mesures de puissance incorrectes.
 
 .. note::
-   Les flèches (→) sur les :term:`CT` indiquent le sens d’installation : **vers la maison** (depuis le compteur). En triphasé sans neutre, CT3 n’est pas nécessaire (:term:`théorème de Blondel`).
+   Les flèches (→) sur les :term:`CT` indiquent le sens d’installation : **vers la maison** (depuis le compteur). En triphasé sans neutre, CT3 n’est pas nécessaire (:term:`théorème de Blondel <Théorème de Blondel>`).
 
 Sens d’Installation des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -415,7 +415,7 @@ Le routeur lui-même consomme moins de 5 W (alimentation électronique uniqueme
 Sections de câbles des charges
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Les charges (chauffe-eau, radiateur…) sont raccordées aux étages de sortie, **pas à la carte-mère**. L’étage de sortie (:term:`triac` ou relais) s’insère dans le circuit de phase existant de la charge. En général, les câbles entre le disjoncteur de la charge et la charge elle-même sont **déjà en place** et n’ont pas besoin d’être remplacés.
+Les charges (chauffe-eau, radiateur…) sont raccordées aux étages de sortie, **pas à la carte-mère**. L’étage de sortie (:term:`triac <Triac>` ou relais) s’insère dans le circuit de phase existant de la charge. En général, les câbles entre le disjoncteur de la charge et la charge elle-même sont **déjà en place** et n’ont pas besoin d’être remplacés.
 
 À titre indicatif, voici les sections minimales selon la norme NF C 15-100 :
 
@@ -471,7 +471,7 @@ Le raccordement des charges aux étages de sortie est détaillé dans la section
 Raccordement des étages de sortie
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Chaque étage de sortie (carte :term:`triac` ou relais) se raccorde à la fois à la carte-mère (signal de commande) et au circuit de puissance de la charge.
+Chaque étage de sortie (carte :term:`triac <Triac>` ou relais) se raccorde à la fois à la carte-mère (signal de commande) et au circuit de puissance de la charge.
 
 **Côté basse tension (signal) :**
 
@@ -480,7 +480,7 @@ Chaque étage de sortie (carte :term:`triac` ou relais) se raccorde à la fois 
 
 **Côté haute tension (puissance) :**
 
-Le connecteur de puissance de l’étage de sortie a 3 broches : la broche centrale est inutilisée, les deux broches extérieures raccordent la **phase** en série avec la charge à travers le :term:`triac`.
+Le connecteur de puissance de l’étage de sortie a 3 broches : la broche centrale est inutilisée, les deux broches extérieures raccordent la **phase** en série avec la charge à travers le :term:`triac <Triac>`.
 
 - **Entrée phase** : depuis le disjoncteur dédié à la charge → broche du connecteur de puissance
 - **Sortie phase** : autre broche du connecteur de puissance → charge (chauffe-eau, radiateur…)
@@ -488,7 +488,7 @@ Le connecteur de puissance de l’étage de sortie a 3 broches : la broche cent
 - **Terre** : du disjoncteur → directement à la charge et au dissipateur du triac
 
 .. warning::
-   Le :term:`triac` ne coupe que la **phase**. Le neutre reste connecté en permanence à la charge. Pour intervenir sur la charge, il faut couper son disjoncteur dédié.
+   Le :term:`triac <Triac>` ne coupe que la **phase**. Le neutre reste connecté en permanence à la charge. Pour intervenir sur la charge, il faut couper son disjoncteur dédié.
 
 .. important::
    Chaque charge pilotée doit être protégée par son **propre disjoncteur**, distinct du disjoncteur d’alimentation du routeur.
@@ -602,7 +602,7 @@ Pendant les **premières 24 heures** :
 
 - ⚠️ **Vérifier régulièrement** (toutes les 30 minutes au début) :
 
-  - Pas d’échauffement anormal des connexions et du dissipateur du :term:`triac` (toucher avec dos de la main — le dissipateur peut être tiède, mais pas brûlant)
+  - Pas d’échauffement anormal des connexions et du dissipateur du :term:`triac <Triac>` (toucher avec dos de la main — le dissipateur peut être tiède, mais pas brûlant)
   - Pas d’odeur de brûlé
   - Pas de fumée
   - Fonctionnement correct du routeur
@@ -635,7 +635,7 @@ Test de Détection de Production
    - Si injection réseau détectée → Le routeur doit activer la charge
    - Puissance doit être affichée en négatif (injection)
 
-Test de Sécurité :term:`triac`
+Test de Sécurité :term:`triac <Triac>`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. **Vérifier que la charge ne s’active PAS** en l’absence de production solaire
@@ -708,7 +708,7 @@ La charge ne s’active jamais
 
 **Causes possibles :**
 
-☐ :term:`triac` défectueux (court-circuit ou ouvert)
+☐ :term:`triac <Triac>` défectueux (court-circuit ou ouvert)
 
 ☐ Connexion charge desserrée
 
@@ -778,7 +778,7 @@ Vérifications Périodiques
 
 ☐ Vérifier l’étalonnage du routeur
 
-☐ Vérifier l’état du :term:`triac` et de son dissipateur (traces de surchauffe, décoloration)
+☐ Vérifier l’état du :term:`triac <Triac>` et de son dissipateur (traces de surchauffe, décoloration)
 
 ☐ Vérifier les :term:`CT` (clip de fermeture pas cassé)
 

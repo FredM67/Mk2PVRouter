@@ -21,7 +21,7 @@ Carte indicateur LED
 Vue d’ensemble
 --------------
 
-La carte indicateur est un petit :term:`PCB` dédié qui porte une LED témoin. Elle permet de visualiser l’état de chaque sortie, qu’il s’agisse d’une sortie :term:`triac` (voir :ref:`carte-sortie`) ou d’une sortie relais (voir :ref:`carte-sortie-relais`) :
+La carte indicateur est un petit :term:`PCB` dédié qui porte une LED témoin. Elle permet de visualiser l’état de chaque sortie, qu’il s’agisse d’une sortie :term:`triac <Triac>` (voir :ref:`carte-sortie`) ou d’une sortie relais (voir :ref:`carte-sortie-relais`) :
 
 - **LED allumée** : la sortie est active (courant passe)
 - **LED éteinte** : la sortie est inactive (courant coupé)

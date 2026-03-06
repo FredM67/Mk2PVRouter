@@ -36,7 +36,7 @@ Les connecteurs Molex SL 1×02 pour les transformateurs de courant de chaque pha
 .. todo:: Photo à fournir — connecteurs CT1–CT3 soudés en configuration triphasée.
 
 .. note::
-   En configuration **sans neutre**, le courant L3 est déduit des mesures de L1 et L2 (:term:`théorème de Blondel` : N−1 capteurs suffisent pour N conducteurs).
+   En configuration **sans neutre**, le courant L3 est déduit des mesures de L1 et L2 (:term:`théorème de Blondel <Théorème de Blondel>` : N−1 capteurs suffisent pour N conducteurs).
 
 Composants haute tension
 --------------------------
@@ -101,7 +101,7 @@ Les transformateurs :term:`ZMPT101K` pour la mesure de tension de chaque phase.
 .. todo:: Photo à fournir — transformateurs TR1–TR3 soudés.
 
 .. note::
-   En configuration **sans neutre** (3 fils), le :term:`théorème de Blondel` permet de déduire la tension L3 à partir de L1 et L2. Seuls TR1 et TR2 sont donc nécessaires.
+   En configuration **sans neutre** (3 fils), le :term:`théorème de Blondel <Théorème de Blondel>` permet de déduire la tension L3 à partir de L1 et L2. Seuls TR1 et TR2 sont donc nécessaires.
 
 Condensateur film C1
 ~~~~~~~~~~~~~~~~~~~~~

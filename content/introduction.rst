@@ -38,7 +38,7 @@ Dans le kit, vous trouverez :
 
 * le circuit imprimé (:term:`PCB`) de la carte-mère universelle (composants :term:`CMS` déjà soudés en usine)
 * les composants traversants à souder (le nombre dépend de votre configuration, voir :ref:`choix-configuration`)
-* un ou plusieurs circuits imprimés pour chaque sortie :term:`triac`
+* un ou plusieurs circuits imprimés pour chaque sortie :term:`triac <Triac>`
 * une carte indicateur LED par étage de sortie (voir :ref:`carte-indicateur`)
 * des composants électroniques (résistances, condensateurs…). |br|
   Attention, certains sont sensibles à l’électricité statique, il faut donc les manipuler avec soin.
@@ -104,7 +104,7 @@ Le **support IC1** (ATmega328P) possède une encoche d’orientation qui doit co
 
 Les autres composants traversants de la carte-mère (quartz, connecteurs, fusibles, transformateurs :term:`ZMPT101K`) ne sont pas polarisés ou ont un détrompeur mécanique.
 
-Sur les **cartes de sortie** (étages triac), l’:term:`optocoupleur` (MOC3043) et son support :term:`DIL` sont également orientés. Alignez le repère du composant avec le cercle sur le :term:`PCB`, et l’encoche du support avec le repère sérigraphié. Les résistances, connecteurs et le :term:`triac` ne sont pas polarisés.
+Sur les **cartes de sortie** (étages triac), l’:term:`optocoupleur <Optocoupleur>` (MOC3043) et son support :term:`DIL` sont également orientés. Alignez le repère du composant avec le cercle sur le :term:`PCB`, et l’encoche du support avec le repère sérigraphié. Les résistances, connecteurs et le :term:`triac <Triac>` ne sont pas polarisés.
 
 Matériels nécessaires
 ---------------------
