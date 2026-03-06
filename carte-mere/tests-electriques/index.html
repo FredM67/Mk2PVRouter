@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-03-05T23:51:23+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tests électriques &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Étage de sortie" href="../../etage-sortie/carte-sortie/" />
+    <link rel="prev" title="Configuration des cavaliers" href="../cavaliers/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📋 Carte-mère universelle</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tests électriques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#test-de-continuite-hors-tension">Test de continuité (hors tension)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#premier-test-sous-tension">Premier test sous tension</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test-du-rail-5-v">Test du rail +5 V</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-du-rail-3-3-v">Test du rail +3,3 V</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#insertion-de-latmega328p">Insertion de l’ATmega328P</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Câblage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tests électriques</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere/tests-electriques.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tests-electriques">
+<span id="id1"></span><h1>Tests électriques<a class="headerlink" href="#tests-electriques" title="Lien vers cette rubrique"></a></h1>
+<p>⏱️ <strong>Temps estimé</strong> : 30–45 minutes</p>
+<p>🔧 <strong>Niveau de difficulté</strong> : Intermédiaire</p>
+<div class="admonition-prerequis admonition">
+<p class="admonition-title">📋 Prérequis</p>
+<p>Avant de commencer ce chapitre :</p>
+<div class="line-block">
+<div class="line">☐ Chapitre <a class="reference internal" href="../../safety-overview/#safety-overview"><span class="std std-ref">⚠️ Sécurité — À Lire Absolument Avant de Commencer</span></a> lu et compris</div>
+<div class="line">☐ Assemblage de la carte terminé (voir <a class="reference internal" href="../assemblage-carte-mere/#assemblage-carte-mere"><span class="std std-ref">Assemblage de la carte-mère universelle</span></a>)</div>
+<div class="line">☐ Support IC1 <strong>vide</strong> (ATmega328P PAS encore inséré)</div>
+<div class="line">☐ Multimètre disponible (voltmètre et ohmmètre)</div>
+<div class="line">☐ Câble secteur de test disponible</div>
+</div>
+</div>
+<p>À ce stade, tous les composants traversants ont été soudés sur la carte-mère.</p>
+<div class="line-block">
+<div class="line">Avant de passer aux tests, il est crucial d’effectuer une dernière vérification de chaque point de soudure.</div>
+<div class="line">Assurez-vous que toutes les soudures sont propres, sans court-circuit, et que tous les composants sont correctement positionnés, qu’il ne reste pas de morceaux de pattes coupées.</div>
+</div>
+<section id="test-de-continuite-hors-tension">
+<h2>Test de continuité (hors tension)<a class="headerlink" href="#test-de-continuite-hors-tension" title="Lien vers cette rubrique"></a></h2>
+<p>Avant toute mise sous tension, effectuez les vérifications suivantes au multimètre en mode <strong>ohmmètre/continuité</strong> :</p>
+<ol class="arabic">
+<li><p><strong>Vérifiez l’absence de court-circuit</strong> entre les rails d’alimentation :</p>
+<p>☐ +5 V ↔ GND : doit être <strong>circuit ouvert</strong> (pas de continuité)</p>
+<p>☐ +3,3 V ↔ GND : doit être <strong>circuit ouvert</strong> (pas de continuité)</p>
+</li>
+<li><p><strong>Vérifiez le cavalier V sel.</strong> (si soudé en position 3,3 V) :</p>
+<p>☐ Continuité entre la pastille <strong>centre</strong> et la pastille <strong>3 (3,3 V)</strong></p>
+<p>☐ <strong>Pas de continuité</strong> entre la pastille <strong>centre</strong> et la pastille <strong>1 (5 V)</strong> — un court-circuit ici détruirait le régulateur LDO, le module RF et/ou le module mk2Wifi</p>
+</li>
+<li><p><strong>Vérifiez les fusibles</strong> (si soudés) :</p>
+<p>☐ Continuité à travers chaque porte-fusible (FS0, FS1, et FS2, FS3 en triphasé)</p>
+</li>
+</ol>
+</section>
+<section id="premier-test-sous-tension">
+<h2>Premier test sous tension<a class="headerlink" href="#premier-test-sous-tension" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>TENSION SECTEUR 230 V — DANGER DE MORT</strong></p>
+<p>Ce test nécessite la connexion au secteur. Prenez toutes les précautions nécessaires :</p>
+<ul class="simple">
+<li><p>Disjoncteur facilement accessible</p></li>
+<li><p>Aucun contact avec la carte sous tension</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Le support IC1 doit être <strong>VIDE</strong> (pas d’ATmega328P) pendant ce test. L’insertion du microcontrôleur se fait après validation de l’alimentation.</p>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Connectez le câble secteur</strong> au connecteur secteur (selon votre configuration)</p></li>
+<li><p><strong>Mettez sous tension</strong> via le disjoncteur</p></li>
+</ol>
+<section id="test-du-rail-5-v">
+<h3>Test du rail +5 V<a class="headerlink" href="#test-du-rail-5-v" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic">
+<li><p>Réglez le multimètre en mode <strong>voltmètre DC</strong> (tension continue)</p></li>
+<li><p>Mesurez la tension entre les points de test marqués <strong>+5V</strong> et <strong>GND</strong> sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p></li>
+<li><p><strong>Valeur attendue</strong> : <strong>5,0 V ± 0,2 V</strong></p>
+<p>✅ Si la tension est correcte, le module d’alimentation PS1 (MPC10-5) fonctionne</p>
+<p>❌ Si la tension est absente ou très différente :</p>
+<ul class="simple">
+<li><p>Vérifiez les fusibles (FS0, FS1)</p></li>
+<li><p>Vérifiez les soudures du module PS1</p></li>
+<li><p>Vérifiez la diode TVS D1</p></li>
+</ul>
+</li>
+<li><p><strong>Vérifiez le condensateur C3</strong> (polarisé) : après quelques secondes sous tension, vérifiez que C3 ne chauffe pas au toucher</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Un condensateur électrolytique monté <strong>à l’envers</strong> peut chauffer, gonfler et éclater. Si C3 est chaud ou gonflé, <strong>coupez immédiatement l’alimentation</strong> et corrigez la polarité.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="test-du-rail-3-3-v">
+<h3>Test du rail +3,3 V<a class="headerlink" href="#test-du-rail-3-3-v" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic">
+<li><p>Mesurez la tension entre les points de test marqués <strong>+3.3V</strong> et <strong>GND</strong> sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p></li>
+<li><p><strong>Valeur attendue</strong> : <strong>3,3 V ± 0,1 V</strong></p>
+<p>✅ Si la tension est correcte, le régulateur <a class="reference internal" href="../../glossary/#term-LDO"><span class="xref std std-term">LDO</span></a> U1 (AP7361C-33E) fonctionne</p>
+<p>❌ Si la tension est absente, vérifiez le rail +5 V d’abord</p>
+</li>
+<li><p><strong>Vérifiez la LED « ON »</strong> (en haut à gauche de la carte) : elle doit être allumée, confirmant que le rail +3,3 V est actif</p></li>
+<li><p><strong>Coupez l’alimentation secteur</strong> et attendez 1 minute avant toute manipulation</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La tension de référence VREF (1,1 V, bufferisée par l’amplificateur opérationnel LMV321A) ne peut être vérifiée qu’après insertion de l’ATmega328P <strong>et</strong> exécution du firmware. C’est le firmware qui active la référence interne 1,1 V du microcontrôleur. Ce test sera effectué lors de la phase <a class="reference internal" href="../../firmware/test-logiciel/#test-logiciel"><span class="std std-ref">Tests logiciels</span></a>.</p>
+</div>
+</section>
+</section>
+<section id="insertion-de-latmega328p">
+<h2>Insertion de l’ATmega328P<a class="headerlink" href="#insertion-de-latmega328p" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>COUPEZ L’ALIMENTATION SECTEUR</strong> avant d’insérer le microcontrôleur.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>⚠️ <strong>ATTENTION</strong> : Si l’ATmega328P est inséré à l’envers et la carte mise sous tension, le microcontrôleur sera <strong>irrémédiablement détruit</strong>.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Repérez l’<strong>encoche</strong> (ou le point) sur l’ATmega328P qui indique la broche 1</p></li>
+<li><p>Alignez cette encoche avec celle du support IC1 et le repère sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p></li>
+<li><p>Les broches peuvent nécessiter un léger pliage vers l’intérieur pour entrer dans le support. Utilisez une surface plane et anti-statique pour les ajuster délicatement.</p></li>
+<li><p>Insérez le microcontrôleur dans le support en vérifiant qu’aucune broche ne se plie sous le composant</p></li>
+</ol>
+<div class="admonition-point-de-controle-tests-electriques admonition">
+<p class="admonition-title">✅ Point de Contrôle — Tests Électriques</p>
+<p>Avant de passer au firmware, vérifiez :</p>
+<div class="line-block">
+<div class="line">☐ <strong>Rail +5 V</strong> : 5,0 V ± 0,2 V ✅</div>
+<div class="line">☐ <strong>Rail +3,3 V</strong> : 3,3 V ± 0,1 V ✅</div>
+<div class="line">☐ <strong>Pas de composant chaud</strong> après 1 minute de fonctionnement</div>
+<div class="line">☐ <strong>ATmega328P inséré</strong> correctement (encoche alignée)</div>
+<div class="line">☐ <strong>Aucune broche pliée</strong> sous le microcontrôleur</div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../cavaliers/" class="btn btn-neutral float-left" title="Configuration des cavaliers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../../etage-sortie/carte-sortie/" class="btn btn-neutral float-right" title="Étage de sortie" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 05 mars 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere/tests-electriques.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/carte-mere/tests-electriques.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
