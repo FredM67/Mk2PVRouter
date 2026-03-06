@@ -93,7 +93,7 @@ Effectuez ces vérifications dans l’ordre :
 Si Pas de Tension au Test VCC
 -----------------------------
 
-.. danger::
+.. warning::
  **COUPER L’ALIMENTATION** avant toute vérification de composants !
 
 Vérifier les composants d’alimentation :
@@ -411,7 +411,7 @@ Causes Possibles
 Procédure de Diagnostic
 -----------------------
 
-.. danger::
+.. warning::
  Débrancher l’alimentation et attendre 5 minutes avant ces tests !
 
  Les condensateurs peuvent rester chargés.

@@ -33,7 +33,7 @@ Le module mk2Wifi est livré entièrement assemblé (composants :term:`CMS`). S
 Installation physique
 ---------------------
 
-.. danger::
+.. warning::
    **COUPER L’ALIMENTATION SECTEUR** avant toute manipulation.
 
    Le routeur doit être **hors tension** pour brancher ou débrancher le module mk2Wifi.

@@ -95,7 +95,7 @@ Matériel Nécessaire
 Équipement de Base (Essentiel)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. danger::
+.. warning::
    ⚠️ **N’ACHETEZ PAS D’ÉQUIPEMENT PREMIER PRIX !**
 
    **Les fers à souder bas de gamme (< 20 €) et la soudure de mauvaise qualité rendront l’apprentissage BEAUCOUP PLUS DIFFICILE.**

@@ -211,7 +211,7 @@ Prochaines Étapes
 
 #. **Configuration avancée** : Relais, sondes de température, double tarif, etc.
 
-.. danger::
+.. warning::
    Ne pas connecter le routeur au réseau électrique domestique avant d’avoir :
 
    - [ ] Vérifié toutes les soudures (pas de pont, pas de soudure froide)
