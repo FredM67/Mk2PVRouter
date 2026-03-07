@@ -296,7 +296,7 @@ Ce composant peut être maintenu provisoirement en place en pliant légèrement 
 Ensuite, avec un fer à souder bien chaud (réglez la température à 450 °C si possible), appliquez généreusement de la soudure.
 
 :term:`triac <Triac>`
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 De la même manière, ce composant peut être maintenu provisoirement en place en pliant légèrement les agrafes en cuivre pour qu’elles pincent les broches saillantes.
 
@@ -339,7 +339,7 @@ Pour les soudures au niveau de chacune des agrafes, un bon fer chaud et beaucoup
 
 
 Installation de l’:term:`optocoupleur <Optocoupleur>`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | L’:term:`optocoupleur <Optocoupleur>`, un composant essentiel doté de 6 broches, sert de liaison entre les sections du circuit fonctionnant à basse et à haute tension.
 | Pour l’installer correctement, alignez le repère présent sur le composant (indiqué en rouge) avec le cercle sur le circuit imprimé (:term:`PCB`).

@@ -194,7 +194,7 @@ L’utilisation d’une perceuse à colonne est recommandée.
    Boîtier percé
 
 Perçage pour chaque étage de sortie :term:`triac <Triac>`
----------------------------------------------------
+------------------------------------------------------------
 
 Le :term:`triac <Triac>` de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boîtier.
 L’étage de sortie doit aussi être fixé au fond du boîtier à la bonne hauteur pour être en accord avec le point de fixation du triac.
