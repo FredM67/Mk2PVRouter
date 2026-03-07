@@ -105,6 +105,8 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :hidden:
 
    etage-sortie/carte-sortie
+   etage-sortie/carte-sortie-tests
+   etage-sortie/carte-sortie-validation
    etage-sortie/carte-sortie-relais
    etage-sortie/carte-indicateur
 
@@ -138,12 +140,16 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :hidden:
 
    installation-finale
+   installation-finale-connexions
+   installation-finale-mise-en-service
 
 .. toctree::
    :caption: 🔧 Dépannage
    :hidden:
 
    troubleshooting
+   troubleshooting-electrique
+   troubleshooting-mk2wifi
 
 .. toctree::
    :caption: 📚 Glossaire
