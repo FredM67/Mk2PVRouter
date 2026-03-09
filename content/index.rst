@@ -88,7 +88,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 3
-   :caption: 🔨 Carte-mère — Assemblage & Tests
+   :caption: 🔨 Carte-mère
    :hidden:
 
    carte-mere/presentation
@@ -101,7 +101,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 3
-   :caption: ⚡ Étages de sortie — Assemblage & Tests
+   :caption: ⚡ Étages de sortie
    :hidden:
 
    etage-sortie/carte-sortie
@@ -120,7 +120,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 3
-   :caption: 📦 Boîtier — Perçage, Câblage & Montage
+   :caption: 📦 Boîtier & Montage
    :hidden:
 
    boitier/percages
