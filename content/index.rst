@@ -71,7 +71,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 2
-   :caption: 📖 Introduction & Concepts
+   :caption: 📖 Théorie & Concepts
    :hidden:
 
    introduction
@@ -80,7 +80,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🚀 Démarrage
+   :caption: 🚀 Démarrage (soudure, logiciel)
    :hidden:
 
    soldering-tutorial
@@ -88,7 +88,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 3
-   :caption: 📋 Carte-mère universelle
+   :caption: 🔨 Carte-mère — Assemblage & Tests
    :hidden:
 
    carte-mere/presentation
@@ -101,7 +101,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 3
-   :caption: ⚡ Étages de sortie
+   :caption: ⚡ Étages de sortie — Assemblage & Tests
    :hidden:
 
    etage-sortie/carte-sortie
@@ -120,7 +120,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. toctree::
    :maxdepth: 3
-   :caption: 📦 Boîtier & Câblage
+   :caption: 📦 Boîtier — Perçage, Câblage & Montage
    :hidden:
 
    boitier/percages
