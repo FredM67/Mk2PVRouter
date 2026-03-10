@@ -267,8 +267,8 @@ Le connecteur **1×03** (GND, I/O, VCC) sert à raccorder l’étage de sortie (
      - Capteur DS18B20 (si cavalier TEMP en position routeur). Libre si TEMP en position mk2Wifi.
    * - D4
      - Libre
-   * - D5–D9
-     - Sorties de déclenchement (TRIG_EXT). Utilisées par le module :term:`mk2Wifi` si celui-ci est présent (voir ci-dessous). Libres sinon.
+   * - D5#–D9#
+     - Sorties de déclenchement (TRIG_EXT). Marquées d’un **dièse (#)** sur la sérigraphie pour indiquer qu’elles sont partagées avec le module :term:`mk2Wifi`. Utilisées par le mk2Wifi si celui-ci est présent et que le cavalier correspondant est fermé (voir ci-dessous). Libres sinon.
    * - D10\*
      - SPI SS — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
    * - D11\*
@@ -278,7 +278,7 @@ Le connecteur **1×03** (GND, I/O, VCC) sert à raccorder l’étage de sortie (
    * - D13\*
      - SPI SCK — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
 
-Les sorties marquées d’un **astérisque (\*)** sur la sérigraphie de la carte sont réservées au module RF (RFM69CW) lorsqu’il est soudé. Si le module RF n’est pas présent, ces sorties sont librement utilisables.
+Les sorties marquées d’un **astérisque (\*)** sur la sérigraphie sont réservées au module RF (RFM69CW) lorsqu’il est soudé. Les sorties marquées d’un **dièse (#)** sont partagées avec le module :term:`mk2Wifi` (voir ci-dessous). Si le module concerné n’est pas présent, ces sorties sont librement utilisables.
 
 Types de capteurs de courant supportés
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -480,7 +480,7 @@ Signaux échangés :
 - Les signaux GPIO D5–D9 fournissent les sorties de déclenchement/commande via TRIG_EXT
 - Le bus I2C (SCL/SDA) est **local au module mk2Wifi uniquement** — il n’est pas routé vers la carte principale
 
-La zone hachurée sur la sérigraphie indique les connecteurs de sortie (D5–D9) potentiellement utilisés par le module mk2Wifi. Ces sorties restent cependant **utilisables pour d’autres usages**, même lorsque le module mk2Wifi est présent. Dans ce cas :
+La zone hachurée sur la sérigraphie indique les connecteurs de sortie (D5#–D9#) potentiellement utilisés par le module mk2Wifi. Ces sorties restent cependant **utilisables pour d’autres usages**, même lorsque le module mk2Wifi est présent. Dans ce cas :
 
 .. warning::
    Si vous utilisez une sortie D5–D9 pour un étage de sortie alors que le module mk2Wifi est branché :

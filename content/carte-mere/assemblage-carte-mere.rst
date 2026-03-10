@@ -170,7 +170,7 @@ Chaque sortie numérique dispose de deux emplacements Molex SL : un 2 broches (
    Les connecteurs fournis dépendent de la configuration commandée. Inutile de souder des connecteurs sur des sorties non utilisées.
 
    - **D2\*, D10\*–D13\*** : réservées au module RF (si soudé)
-   - **D5–D9** : réservées au module :term:`mk2Wifi` (si présent)
+   - **D5#–D9#** : partagées avec le module :term:`mk2Wifi` (si présent)
    - Les sorties non réservées sont librement utilisables
 
 Cavaliers de soudure
