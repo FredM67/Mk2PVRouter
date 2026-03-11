@@ -17,6 +17,7 @@ Introduction
 - Nécessite des compétences de base en soudure
 - Une bonne dextérité manuelle
 - De la patience et de la minutie
+- Compétences avec l’outil informatique
 
 **Durée totale estimée :**
 
