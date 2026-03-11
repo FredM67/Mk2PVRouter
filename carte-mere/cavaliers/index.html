@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-03-06T12:10:36+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuration des cavaliers &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Tests électriques" href="../tests-electriques/" />
+    <link rel="prev" title="Assemblage — Composants triphasé" href="../assemblage-triphase/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration des cavaliers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vue-densemble">Vue d’ensemble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description-detaillee">Description détaillée</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#v-sel-alimentation-atmega328p">V sel. — Alimentation ATmega328P</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sda-mesure-tension-l3-i2c-sda">SDA — Mesure tension L3 / I2C SDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scl-mesure-courant-l3-i2c-scl">SCL — Mesure courant L3 / I2C SCL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cavaliers-module-rf-irq-et-nss">Cavaliers module RF — IRQ et NSS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temp-capteur-de-temperature-ds18b20">TEMP — Capteur de température DS18B20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gnd-link-pont-earthgnd">GND_LINK — Pont Earth–GND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#v-rail-rail-5-v-sorties">« +5V Rail » — Rail +5 V sorties</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#procedure-de-soudure-des-cavaliers">Procédure de soudure des cavaliers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-led-et-signalisation">Problèmes LED et Signalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-communication-rf">💻 Problèmes de Communication RF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#obtenir-de-laide">Obtenir de l’Aide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Configuration des cavaliers</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere/cavaliers.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuration-des-cavaliers">
+<span id="cavaliers"></span><h1>Configuration des cavaliers<a class="headerlink" href="#configuration-des-cavaliers" title="Lien vers cette rubrique"></a></h1>
+<p>⏱️ <strong>Temps estimé</strong> : 15–20 minutes</p>
+<p>🔧 <strong>Niveau de difficulté</strong> : Débutant</p>
+<div class="admonition-prerequis admonition">
+<p class="admonition-title">📋 Prérequis</p>
+<p>Avant de commencer ce chapitre :</p>
+<div class="line-block">
+<div class="line">☐ Chapitre <a class="reference internal" href="../../safety-overview/#safety-overview"><span class="std std-ref">⚠️ Sécurité — À Lire Absolument Avant de Commencer</span></a> lu et compris</div>
+<div class="line">☐ Configuration choisie (voir <a class="reference internal" href="../choix-configuration/#choix-configuration"><span class="std std-ref">Choix de la configuration</span></a>)</div>
+<div class="line">☐ Assemblage de la carte terminé (voir <a class="reference internal" href="../assemblage-carte-mere/#assemblage-carte-mere"><span class="std std-ref">Assemblage de la carte-mère universelle</span></a>)</div>
+</div>
+</div>
+<p>Les <a class="reference internal" href="../../glossary/#term-Cavalier-de-soudure"><span class="xref std std-term">cavaliers de soudure</span></a> permettent de configurer le comportement de la carte universelle. Ils sont configurés en déposant une goutte de soudure entre deux pastilles adjacentes.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>La configuration des cavaliers doit être effectuée <strong>avant</strong> le premier test électrique. Une mauvaise configuration peut entraîner des mesures erronées ou un dysfonctionnement.</p>
+</div>
+<section id="vue-densemble">
+<h2>Vue d’ensemble<a class="headerlink" href="#vue-densemble" title="Lien vers cette rubrique"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12.0%" />
+<col style="width: 12.0%" />
+<col style="width: 76.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Cavalier</p></th>
+<th class="head"><p>Pôles</p></th>
+<th class="head"><p>Fonction</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>V sel.</p></td>
+<td><p>3</p></td>
+<td><p>Alimentation ATmega328P : 3–centre = 3,3 V (défaut), 1–centre = 5 V</p></td>
+</tr>
+<tr class="row-odd"><td><p>SDA</p></td>
+<td><p>3</p></td>
+<td><p>Mesure tension L3 / I2C : 1–centre = tension L3, 3–centre = I2C SDA (OLED)</p></td>
+</tr>
+<tr class="row-even"><td><p>SCL</p></td>
+<td><p>3</p></td>
+<td><p>Mesure courant L3 / I2C : 1–centre = courant L3, 3–centre = I2C SCL (OLED)</p></td>
+</tr>
+<tr class="row-odd"><td><p>IRQ</p></td>
+<td><p>2</p></td>
+<td><p>Module RF : relie l’IRQ du RFM69 à D2 de l’ATmega328P (face arrière)</p></td>
+</tr>
+<tr class="row-even"><td><p>NSS</p></td>
+<td><p>2</p></td>
+<td><p>Module RF : relie le NSS (chip select) du RFM69 à D10 de l’ATmega328P (face avant)</p></td>
+</tr>
+<tr class="row-odd"><td><p>TEMP</p></td>
+<td><p>3</p></td>
+<td><p>Capteur DS18B20 : non soudé (pas de capteur), 1–centre (routeur), 3–centre (mk2Wifi)</p></td>
+</tr>
+<tr class="row-even"><td><p>GND_LINK</p></td>
+<td><p>2</p></td>
+<td><p>Pont entre Earth (terre de protection) et GND (masse basse tension) — cavalier fil 0,75 mm²</p></td>
+</tr>
+<tr class="row-odd"><td><p>+5V Rail</p></td>
+<td><p>2</p></td>
+<td><p>Rail +5 V sorties : fermé = +5 V actif sur les connecteurs 1×03 (pour relais), ouvert = déconnecté (défaut)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="description-detaillee">
+<h2>Description détaillée<a class="headerlink" href="#description-detaillee" title="Lien vers cette rubrique"></a></h2>
+<section id="v-sel-alimentation-atmega328p">
+<h3>V sel. — Alimentation ATmega328P<a class="headerlink" href="#v-sel-alimentation-atmega328p" title="Lien vers cette rubrique"></a></h3>
+<p>Cavalier à 3 pôles sérigraphié <strong>V sel.</strong> sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>. Il sélectionne la tension d’alimentation du microcontrôleur.</p>
+<ul class="simple">
+<li><p><strong>Position 3–centre</strong> (défaut) : L’ATmega328P est alimenté en 3,3 V via le régulateur <a class="reference internal" href="../../glossary/#term-LDO"><span class="xref std std-term">LDO</span></a> U1 (AP7361C-33E)</p></li>
+<li><p><strong>Position 1–centre</strong> : L’ATmega328P est alimenté directement en 5 V depuis le module PS1 (MPC10-5)</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Si le module RF (RFM69CW) et/ou le module <a class="reference internal" href="../../glossary/#term-mk2Wifi"><span class="xref std std-term">mk2Wifi</span></a> sont utilisés, ce cavalier <strong>doit impérativement</strong> être en position <strong>3–centre (3,3 V)</strong>. Le module RF fonctionne en 3,3 V et les broches GPIO de l’ESP32-C3 (mk2Wifi) ne tolèrent que 3,3 V — une tension de 5 V sur ces lignes les <strong>endommagerait irrémédiablement</strong>.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Après avoir soudé le cavalier en position <strong>3–centre (3,3 V)</strong>, vérifiez au multimètre (mode continuité) qu’il n’y a <strong>pas de court-circuit</strong> entre la pastille centrale et la pastille <strong>1 (5 V)</strong>. Un pont de soudure accidentel entre les deux côtés relierait le 5 V directement au 3,3 V, ce qui <strong>détruirait le régulateur LDO, le module RF et/ou le module mk2Wifi</strong>.</p>
+</div>
+</section>
+<section id="sda-mesure-tension-l3-i2c-sda">
+<h3>SDA — Mesure tension L3 / I2C SDA<a class="headerlink" href="#sda-mesure-tension-l3-i2c-sda" title="Lien vers cette rubrique"></a></h3>
+<p>Cavalier à 3 pôles qui sélectionne entre la mesure de tension de la phase L3 et le bus I2C.</p>
+<ul class="simple">
+<li><p><strong>Position 1–centre</strong> : Mesure de tension de la phase L3 (via le <a class="reference internal" href="../../glossary/#term-ZMPT101K"><span class="xref std std-term">ZMPT101K</span></a> TR3).</p></li>
+<li><p><strong>Position 3–centre</strong> : Bus I2C (signal SDA). Permet l’utilisation de l’écran OLED.</p></li>
+</ul>
+</section>
+<section id="scl-mesure-courant-l3-i2c-scl">
+<h3>SCL — Mesure courant L3 / I2C SCL<a class="headerlink" href="#scl-mesure-courant-l3-i2c-scl" title="Lien vers cette rubrique"></a></h3>
+<p>Cavalier à 3 pôles qui sélectionne entre la mesure de courant de la phase L3 et le bus I2C.</p>
+<ul class="simple">
+<li><p><strong>Position 1–centre</strong> : Mesure de courant de la phase L3 (via le connecteur CT3).</p></li>
+<li><p><strong>Position 3–centre</strong> : Bus I2C (signal SCL). Permet l’utilisation de l’écran OLED.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>SDA et SCL fonctionnent en paire :</p>
+<ul class="simple">
+<li><p><strong>Triphasé</strong> : les deux en position <strong>1–centre</strong> (mesure L3)</p></li>
+<li><p><strong>Monophasé ou split-phase</strong> : les deux en position <strong>3–centre</strong> (I2C pour écran OLED)</p></li>
+</ul>
+</div>
+</section>
+<section id="cavaliers-module-rf-irq-et-nss">
+<h3>Cavaliers module RF — IRQ et NSS<a class="headerlink" href="#cavaliers-module-rf-irq-et-nss" title="Lien vers cette rubrique"></a></h3>
+<p>Si le module radio RFM69CW est présent, <strong>deux cavaliers de soudure</strong> doivent être fermés :</p>
+<p><strong>IRQ</strong> (face arrière)</p>
+<p>Cavalier à 2 pôles sérigraphié <strong>IRQ</strong> sur la face arrière du <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>. Il relie la broche d’interruption (IRQ) du module RFM69 à la broche D2 (INT0) de l’ATmega328P.</p>
+<p><strong>NSS</strong> (face avant)</p>
+<p>Cavalier à 2 pôles sérigraphié <strong>NSS</strong>, situé près du coin inférieur droit du module RF. Il relie la broche de sélection (chip select, NSS) du module RFM69 à la broche D10 (SPI SS) de l’ATmega328P.</p>
+<p>Pour chaque cavalier :</p>
+<ul class="simple">
+<li><p><strong>Fermé</strong> : obligatoire si le module RFM69CW est présent sur la carte</p></li>
+<li><p><strong>Ouvert</strong> : le module RF n’est pas utilisé</p></li>
+</ul>
+</section>
+<section id="temp-capteur-de-temperature-ds18b20">
+<h3>TEMP — Capteur de température DS18B20<a class="headerlink" href="#temp-capteur-de-temperature-ds18b20" title="Lien vers cette rubrique"></a></h3>
+<p>Cavalier à 3 pôles sérigraphié <strong>TEMP</strong> sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>. Il configure l’acheminement du signal du capteur de température 1-Wire DS18B20.</p>
+<ul class="simple">
+<li><p><strong>Non soudé</strong> : Aucun capteur DS18B20 utilisé. La broche D3 de l’ATmega328P reste disponible comme entrée/sortie numérique standard.</p></li>
+<li><p><strong>Position 1–centre</strong> : Le capteur DS18B20 est géré par le <strong>routeur</strong> (ATmega328P, broche D3).</p></li>
+<li><p><strong>Position 3–centre</strong> : Le capteur DS18B20 est géré par le module <strong>mk2Wifi</strong> (ESP32-C3, via le connecteur UART_EXT).</p></li>
+</ul>
+<p>La résistance de pull-up nécessaire pour le bus 1-Wire est intégrée sur la carte (R6, 4,7 kΩ).</p>
+</section>
+<section id="gnd-link-pont-earthgnd">
+<h3>GND_LINK — Pont Earth–GND<a class="headerlink" href="#gnd-link-pont-earthgnd" title="Lien vers cette rubrique"></a></h3>
+<p>Cavalier fil qui relie la <strong>terre de protection</strong> (Earth, provenant du réseau électrique) à la <strong>masse basse tension</strong> (GND) du circuit. Il est réalisé avec un fil de 0,75 mm² soudé entre les deux pastilles.</p>
+<p>Lorsque GND_LINK est <strong>ouvert</strong>, le circuit basse tension est entièrement isolé de la terre grâce à l’isolation galvanique du module d’alimentation MPC10-5. Lorsqu’il est <strong>fermé</strong>, la masse basse tension est référencée à la terre de protection.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La configuration recommandée dépend de votre installation. En cas de doute, laissez le cavalier <strong>ouvert</strong> — il pourra toujours être soudé ultérieurement.</p>
+</div>
+</section>
+<section id="v-rail-rail-5-v-sorties">
+<h3>« +5V Rail » — Rail +5 V sorties<a class="headerlink" href="#v-rail-rail-5-v-sorties" title="Lien vers cette rubrique"></a></h3>
+<p>Cavalier à 2 pôles situé en <strong>haut à droite</strong> de la carte. Il active le <strong>rail +5 V</strong> qui alimente la broche VCC des connecteurs 1×03 des sorties numériques (D2–D13).</p>
+<ul class="simple">
+<li><p><strong>Fermé</strong> : le rail +5 V est actif — obligatoire si des <strong>cartes de sortie relais</strong> sont utilisées (le relais a besoin du +5 V pour sa bobine)</p></li>
+<li><p><strong>Ouvert</strong> (défaut) : le rail +5 V est déconnecté des connecteurs de sortie</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> n’ont pas besoin de cette alimentation.</p>
+</div>
+<p>La LED témoin <strong>+5V</strong> (en haut à gauche de la carte) s’allume lorsque ce rail est actif.</p>
+</section>
+</section>
+<section id="procedure-de-soudure-des-cavaliers">
+<h2>Procédure de soudure des cavaliers<a class="headerlink" href="#procedure-de-soudure-des-cavaliers" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Travaillez <strong>hors tension</strong>. L’opération est réversible (à l’aide d’une tresse à dessouder), mais des modifications répétées risquent d’altérer les pistes en cuivre.</p>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Identifiez le cavalier</strong> sur la carte à l’aide des repères sérigraphiés (V sel., SDA, SCL, IRQ, NSS, TEMP)</p></li>
+<li><p><strong>Pour les cavaliers 3 pôles</strong> (V sel., SDA, SCL, TEMP) : Déposez une goutte de soudure entre la pastille centrale et la pastille correspondant à la position souhaitée</p></li>
+<li><p><strong>Pour les cavaliers 2 pôles</strong> (IRQ, NSS, +5V Rail) : Déposez une goutte de soudure entre les deux pastilles</p></li>
+<li><p><strong>Vérifiez</strong> au multimètre (mode continuité) que le cavalier est bien fermé entre les bonnes pastilles</p></li>
+</ol>
+<div class="admonition-point-de-controle-cavaliers admonition">
+<p class="admonition-title">✅ Point de Contrôle — Cavaliers</p>
+<p>Avant de continuer, vérifiez :</p>
+<div class="line-block">
+<div class="line">☐ V sel. configuré en position 3,3 V (sauf cas particulier)</div>
+<div class="line">☐ SDA configuré selon votre configuration (tension L3 ou I2C SDA)</div>
+<div class="line">☐ SCL configuré selon votre configuration (courant L3 ou I2C SCL)</div>
+<div class="line">☐ TEMP configuré selon votre choix (non soudé, routeur ou mk2Wifi)</div>
+<div class="line">☐ « +5V Rail » fermé si des cartes de sortie relais sont utilisées</div>
+<div class="line">☐ Continuité vérifiée au multimètre pour chaque cavalier</div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../assemblage-triphase/" class="btn btn-neutral float-left" title="Assemblage — Composants triphasé" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../tests-electriques/" class="btn btn-neutral float-right" title="Tests électriques" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 06 mars 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere/cavaliers.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/carte-mere/cavaliers.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

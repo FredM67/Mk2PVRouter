@@ -1,0 +1,730 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-03-07T23:49:10+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide de Dépannage &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="⚡ Problèmes Électriques — Tests et Usage" href="../troubleshooting-electrique/" />
+    <link rel="prev" title="Mise en Service et Maintenance" href="../installation-finale-mise-en-service/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guide de Dépannage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#composants-selon-la-configuration">📋 Composants selon la configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#problemes-apres-soudure-de-la-carte">🔌 Problèmes Après Soudure de la Carte</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#la-carte-ne-sallume-pas">La Carte ne s’Allume Pas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#verifications-de-base">Vérifications de Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#si-pas-de-tension-au-test-vcc">Si Pas de Tension au Test VCC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qualite-des-soudures">Qualité des Soudures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pont-de-soudure-court-circuit">Pont de Soudure (Court-Circuit)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#si-tension-correcte-mais-pas-de-fonctionnement">Si Tension Correcte mais Pas de Fonctionnement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#causes-frequentes-resume">Causes Fréquentes — Résumé</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#problemes-de-programmation-du-firmware">Problèmes de Programmation du Firmware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#le-firmware-ne-se-televerse-pas">Le Firmware ne se Téléverse Pas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#verifications-de-la-connexion-ftdi">Vérifications de la Connexion FTDI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#problemes-port-usb-windows">Problèmes Port USB Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#problemes-arduino-ide">Problèmes Arduino IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#firmware-se-televerse-mais-rien-ne-fonctionne">Firmware se Téléverse mais Rien ne Fonctionne</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#verification-via-moniteur-serie">Vérification via Moniteur Série</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#erreur-out-of-memory-lors-de-la-compilation">Erreur « Out of Memory » lors de la Compilation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-led-et-signalisation">Problèmes LED et Signalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-de-communication-rf">💻 Problèmes de Communication RF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#obtenir-de-laide">Obtenir de l’Aide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Guide de Dépannage</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/troubleshooting.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="guide-de-depannage">
+<span id="troubleshooting"></span><h1>Guide de Dépannage<a class="headerlink" href="#guide-de-depannage" title="Lien vers cette rubrique"></a></h1>
+<p>Ce chapitre vous aide à diagnostiquer et résoudre les problèmes courants rencontrés lors de l’assemblage et de l’utilisation du Mk2PVRouter.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Avant de commencer le dépannage :</strong></p>
+<ul class="simple">
+<li><p>Toujours <strong>couper l’alimentation</strong> au disjoncteur avant toute intervention</p></li>
+<li><p>Vérifier l’absence de tension avec un testeur</p></li>
+<li><p>Prendre des photos avant de modifier quoi que ce soit</p></li>
+<li><p>Noter tous les symptômes observés</p></li>
+</ul>
+</div>
+<nav class="contents local" id="sections-du-guide-de-depannage">
+<p class="topic-title">Sections du guide de dépannage</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#composants-selon-la-configuration" id="id4">📋 Composants selon la configuration</a></p></li>
+<li><p><a class="reference internal" href="#problemes-apres-soudure-de-la-carte" id="id5">🔌 Problèmes Après Soudure de la Carte</a></p>
+<ul>
+<li><p><a class="reference internal" href="#la-carte-ne-sallume-pas" id="id6">La Carte ne s’Allume Pas</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#problemes-de-programmation-du-firmware" id="id7">Problèmes de Programmation du Firmware</a></p>
+<ul>
+<li><p><a class="reference internal" href="#le-firmware-ne-se-televerse-pas" id="id8">Le Firmware ne se Téléverse Pas</a></p></li>
+<li><p><a class="reference internal" href="#firmware-se-televerse-mais-rien-ne-fonctionne" id="id9">Firmware se Téléverse mais Rien ne Fonctionne</a></p></li>
+<li><p><a class="reference internal" href="#erreur-out-of-memory-lors-de-la-compilation" id="id10">Erreur « Out of Memory » lors de la Compilation</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="composants-selon-la-configuration">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">📋 Composants selon la configuration</a><a class="headerlink" href="#composants-selon-la-configuration" title="Lien vers cette rubrique"></a></h2>
+<p>Ce guide couvre la carte universelle <strong>3phaseDiverter</strong> du Mk2PVRouter.</p>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Composants selon la version</span><a class="headerlink" href="#id2" title="Lien vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Composant</p></th>
+<th class="head"><p>Monophasé</p></th>
+<th class="head"><p>Triphasé</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fusibles</p></td>
+<td><p>FS0, FS1</p></td>
+<td><p>FS0, FS1, FS2, FS3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Transformateurs</p></td>
+<td><p>TR1</p></td>
+<td><p>TR1, TR2, TR3</p></td>
+</tr>
+<tr class="row-even"><td><p>Modules de protection</p></td>
+<td><p>GM1</p></td>
+<td><p>GM1, GM2, GM3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Régulateur 3,3 V/5 V</p></td>
+<td><p>PS1 (MPC10-5)</p></td>
+<td><p>PS1 (MPC10-5, commun)</p></td>
+</tr>
+<tr class="row-even"><td><p>Capteurs de courant (CT)</p></td>
+<td><p>1 CT (phase principale)</p></td>
+<td><p>3 CT (un par phase)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sorties triac</p></td>
+<td><p>1 ou plusieurs (selon modèle)</p></td>
+<td><p>1 ou plusieurs (selon modèle)</p></td>
+</tr>
+<tr class="row-even"><td><p>Sorties relais</p></td>
+<td><p>0 ou plusieurs (selon modèle)</p></td>
+<td><p>0 ou plusieurs (selon modèle)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dans ce guide, les instructions utilisent la notation :</p>
+<ul class="simple">
+<li><p><strong>Mono :</strong> composants pour version monophasée</p></li>
+<li><p><strong>Tri :</strong> composants pour version triphasée</p></li>
+</ul>
+</div>
+</section>
+<section id="problemes-apres-soudure-de-la-carte">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">🔌 Problèmes Après Soudure de la Carte</a><a class="headerlink" href="#problemes-apres-soudure-de-la-carte" title="Lien vers cette rubrique"></a></h2>
+<section id="la-carte-ne-sallume-pas">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">La Carte ne s’Allume Pas</a><a class="headerlink" href="#la-carte-ne-sallume-pas" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Pas de tension aux points de test, aucun signe de vie</p>
+<section id="verifications-de-base">
+<h4>Vérifications de Base<a class="headerlink" href="#verifications-de-base" title="Lien vers cette rubrique"></a></h4>
+<p>Effectuez ces vérifications dans l’ordre :</p>
+<div class="admonition-liste-de-controle-alimentation admonition">
+<p class="admonition-title">Liste de contrôle — Alimentation</p>
+<ol class="arabic simple">
+<li><p>☐ L’alimentation secteur est-elle branchée ?</p></li>
+<li><p>☐ Le disjoncteur est-il enclenché ?</p></li>
+<li><p>☐ <strong>Fusibles intacts ?</strong></p>
+<ul class="simple">
+<li><p>Mono : FS0, FS1</p></li>
+<li><p>Tri : FS0, FS1, FS2, FS3</p></li>
+<li><p>Vérifier avec multimètre en mode continuité</p></li>
+<li><p>Un fusible grillé indique un court-circuit</p></li>
+</ul>
+</li>
+<li><p>☐ Tension au point Test VCC = 3,3 V ou 5 V ?</p>
+<ul class="simple">
+<li><p>Multimètre en mode tension continue (DC)</p></li>
+<li><p>Mesurer entre VCC et GND</p></li>
+<li><p>Si pas de tension → Problème alimentation</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="si-pas-de-tension-au-test-vcc">
+<h4>Si Pas de Tension au Test VCC<a class="headerlink" href="#si-pas-de-tension-au-test-vcc" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>COUPER L’ALIMENTATION</strong> avant toute vérification de composants !</p>
+</div>
+<p>Vérifier les composants d’alimentation :</p>
+<div class="admonition-composants-a-verifier admonition">
+<p class="admonition-title">Composants à vérifier</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Module PS1 (MPC10-5)</strong> dans le bon sens ?</p>
+<ul class="simple">
+<li><p>Vérifier l’orientation selon le schéma</p></li>
+<li><p>Vérifier que le point ou l’encoche du module correspond au repère sur le PCB</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Condensateur C3</strong> polarité correcte ?</p>
+<ul class="simple">
+<li><p>Bande blanche = côté négatif (-)</p></li>
+<li><p>Vérifier marquage sur PCB</p></li>
+<li><p>⚠️ Si inversé : risque d’explosion à la mise sous tension !</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Transformateur·s bien soudé·s ?</strong></p>
+<ul class="simple">
+<li><p>Mono : TR1</p></li>
+<li><p>Tri : TR1, TR2, TR3</p></li>
+<li><p>Soudures brillantes et lisses (pas ternes) ?</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="qualite-des-soudures">
+<h4>Qualité des Soudures<a class="headerlink" href="#qualite-des-soudures" title="Lien vers cette rubrique"></a></h4>
+<figure class="align-center" id="id3">
+<img alt="Comparaison soudure bonne vs mauvaise" src="../_images/soudure-bonne-vs-mauvaise.png" />
+<figcaption>
+<p><span class="caption-text">Exemples de bonnes et mauvaises soudures</span><a class="headerlink" href="#id3" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Caractéristiques d’une bonne soudure :</strong></p>
+<ul class="simple">
+<li><p>✅ Aspect brillant et lisse</p></li>
+<li><p>✅ Forme de volcan (concave)</p></li>
+<li><p>✅ Mouille à la fois la patte et la pastille</p></li>
+<li><p>✅ Pas de boule séparée</p></li>
+</ul>
+<p><strong>Soudure froide (défectueuse) :</strong></p>
+<ul class="simple">
+<li><p>❌ Aspect terne, granuleux</p></li>
+<li><p>❌ Soudure en boule qui ne mouille pas</p></li>
+<li><p>❌ Fissures visibles</p></li>
+<li><p>❌ Contact électrique mauvais ou inexistant</p></li>
+</ul>
+<p><strong>Solution :</strong> Refaire les soudures suspectes :</p>
+<ol class="arabic simple">
+<li><p>Chauffer à nouveau avec fer à souder (350 °C)</p></li>
+<li><p>Ajouter un peu de flux si disponible</p></li>
+<li><p>Ajouter un peu de soudure fraîche</p></li>
+<li><p>Laisser refroidir sans bouger</p></li>
+</ol>
+</section>
+<section id="pont-de-soudure-court-circuit">
+<h4>Pont de Soudure (Court-Circuit)<a class="headerlink" href="#pont-de-soudure-court-circuit" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Symptôme :</strong> Deux pistes ou broches reliées par erreur</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">À faire</p>
+<p>Ajouter photo de pont de soudure (img/pont-de-soudure.png)</p>
+</div>
+<p><strong>Détection :</strong></p>
+<ul class="simple">
+<li><p>Inspection visuelle avec une loupe</p></li>
+<li><p>Multimètre en mode continuité entre broches qui ne devraient pas être connectées</p></li>
+</ul>
+<p><strong>Solution — Retrait avec tresse à dessouder :</strong></p>
+<ol class="arabic simple">
+<li><p>Placer tresse à dessouder sur le pont</p></li>
+<li><p>Appliquer fer à souder sur la tresse</p></li>
+<li><p>La soudure est absorbée par capillarité</p></li>
+<li><p>Répéter si nécessaire avec section propre de tresse</p></li>
+</ol>
+<p><strong>Alternative — Retrait avec pompe à dessouder :</strong></p>
+<ol class="arabic simple">
+<li><p>Chauffer le pont avec fer à souder</p></li>
+<li><p>Approcher la pompe</p></li>
+<li><p>Activer la pompe (aspiration)</p></li>
+<li><p>Nettoyer et recommencer si nécessaire</p></li>
+</ol>
+</section>
+<section id="si-tension-correcte-mais-pas-de-fonctionnement">
+<h4>Si Tension Correcte mais Pas de Fonctionnement<a class="headerlink" href="#si-tension-correcte-mais-pas-de-fonctionnement" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-verifications-microcontroleur admonition">
+<p class="admonition-title">Vérifications microcontrôleur</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>ATmega328P</strong> bien inséré dans le support ?</p>
+<ul class="simple">
+<li><p>Toutes les pattes dans les trous ?</p></li>
+<li><p>Pas de patte pliée sous le boîtier ?</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>ATmega328P</strong> dans le bon sens ?</p>
+<ul class="simple">
+<li><p>⚠️ <strong>CRITIQUE</strong> : Encoche alignée avec marquage PCB ?</p></li>
+<li><p>Si inversé → <strong>Puce détruite à la mise sous tension !</strong></p></li>
+<li><p>Vérifier 3 fois avant d’alimenter</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Firmware programmé ?</strong></p>
+<ul class="simple">
+<li><p>Voir la section <a class="reference internal" href="../firmware/test-logiciel/#test-logiciel"><span class="std std-ref">Tests logiciels</span></a></p></li>
+<li><p>ATmega328P vierge ne fait rien</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="causes-frequentes-resume">
+<h4>Causes Fréquentes — Résumé<a class="headerlink" href="#causes-frequentes-resume" title="Lien vers cette rubrique"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Symptôme</p></th>
+<th class="head"><p>Cause Probable</p></th>
+<th class="head"><p>Solution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Aucune tension VCC</p></td>
+<td><p>Fusible grillé</p></td>
+<td><p>Trouver le court-circuit, remplacer le fusible</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tension VCC faible (&lt;3 V)</p></td>
+<td><p>Régulateur défectueux</p></td>
+<td><p>Vérifier l’orientation, remplacer</p></td>
+</tr>
+<tr class="row-even"><td><p>Tension OK, rien ne fonctionne</p></td>
+<td><p>ATmega328P mal inséré/inversé</p></td>
+<td><p>Vérifier l’orientation, réinsérer</p></td>
+</tr>
+<tr class="row-odd"><td><p>Soudures ternes</p></td>
+<td><p>Soudure froide</p></td>
+<td><p>Refaire les soudures avec plus de chaleur</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="problemes-de-programmation-du-firmware">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Problèmes de Programmation du Firmware</a><a class="headerlink" href="#problemes-de-programmation-du-firmware" title="Lien vers cette rubrique"></a></h2>
+<section id="le-firmware-ne-se-televerse-pas">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Le Firmware ne se Téléverse Pas</a><a class="headerlink" href="#le-firmware-ne-se-televerse-pas" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Erreur dans Arduino IDE lors du téléversement</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>avrdude: stk500_recv(): programmer is not responding
+avrdude: stk500_getsync() attempt 1 of 10: not in sync
+</pre></div>
+</div>
+<section id="verifications-de-la-connexion-ftdi">
+<h4>Vérifications de la Connexion FTDI<a class="headerlink" href="#verifications-de-la-connexion-ftdi" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-liste-de-controle-connexion-ftdi admonition">
+<p class="admonition-title">Liste de contrôle — Connexion FTDI</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Câblage FTDI correct ?</strong></p>
+<ul class="simple">
+<li><p><strong>GND (noir)</strong> → <strong>GND</strong> sur PCB</p></li>
+<li><p><strong>TX (vert)</strong> → <strong>RX</strong> sur PCB</p></li>
+<li><p><strong>RX (blanc)</strong> → <strong>TX</strong> sur PCB</p></li>
+<li><p>⚠️ <strong>NE PAS</strong> connecter VCC si routeur alimenté !</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>ATmega328P bien inséré ?</strong></p>
+<ul class="simple">
+<li><p>Toutes les pattes dans le support ?</p></li>
+<li><p>Orientation correcte (encoche) ?</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Routeur alimenté en 230 V ?</strong></p>
+<ul class="simple">
+<li><p>Le FTDI ne fournit <strong>PAS</strong> de courant</p></li>
+<li><p>Alimentation secteur obligatoire</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Bon port COM sélectionné dans Arduino IDE ?</strong></p>
+<ul class="simple">
+<li><p>Menu : Outils → Port → COMX</p></li>
+<li><p>Essayer chaque port disponible</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Pilotes FTDI installés ?</strong></p>
+<ul class="simple">
+<li><p>Télécharger les pilotes sur ftdichip.com</p></li>
+<li><p>Windows : Gestionnaire de périphériques doit montrer « USB Serial Port »</p></li>
+<li><p>Linux : <code class="docutils literal notranslate"><span class="pre">dmesg</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">tty</span></code> doit montrer nouveau périphérique</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="problemes-port-usb-windows">
+<h4>Problèmes Port USB Windows<a class="headerlink" href="#problemes-port-usb-windows" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Symptôme :</strong> Port COM n’apparaît pas dans Arduino IDE</p>
+<p><strong>Solutions :</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Vérifier Gestionnaire de périphériques</strong></p>
+<ul class="simple">
+<li><p>Ouvrir : Panneau de configuration → Gestionnaire de périphériques</p></li>
+<li><p>Chercher : « Ports (COM et LPT) »</p></li>
+<li><p>Doit afficher : « USB Serial Port (COMx) »</p></li>
+<li><p>Si point d’exclamation jaune → Pilote problématique</p></li>
+</ul>
+</li>
+<li><p><strong>Réinstaller pilotes FTDI</strong></p>
+<ul class="simple">
+<li><p>Désinstaller pilote actuel (clic droit → Désinstaller)</p></li>
+<li><p>Débrancher FTDI</p></li>
+<li><p>Redémarrer ordinateur</p></li>
+<li><p>Rebrancher FTDI</p></li>
+<li><p>Windows devrait installer automatiquement</p></li>
+</ul>
+</li>
+<li><p><strong>Essayer autre port USB</strong></p>
+<ul class="simple">
+<li><p>Certains ports USB peuvent avoir problèmes</p></li>
+<li><p>Préférer ports USB directs (pas hub)</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="problemes-arduino-ide">
+<h4>Problèmes Arduino IDE<a class="headerlink" href="#problemes-arduino-ide" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-configuration-arduino-ide admonition">
+<p class="admonition-title">Configuration Arduino IDE</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Type de carte correct ?</strong></p>
+<ul class="simple">
+<li><p>Menu : Outils → Type de carte → <strong>Arduino Uno</strong></p></li>
+<li><p>Pas Arduino Nano, pas Mega</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Processeur correct ?</strong> (si option disponible)</p>
+<ul class="simple">
+<li><p>ATmega328P</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Vitesse correcte ?</strong></p>
+<ul class="simple">
+<li><p>9 600 bauds pour Moniteur Série</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<p><strong>Solutions supplémentaires :</strong></p>
+<ul class="simple">
+<li><p>Fermer et rouvrir Arduino IDE</p></li>
+<li><p>Débrancher/rebrancher FTDI</p></li>
+<li><p>Essayer sur autre ordinateur (test matériel vs logiciel)</p></li>
+</ul>
+</section>
+</section>
+<section id="firmware-se-televerse-mais-rien-ne-fonctionne">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Firmware se Téléverse mais Rien ne Fonctionne</a><a class="headerlink" href="#firmware-se-televerse-mais-rien-ne-fonctionne" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Téléversement réussi mais routeur inactif</p>
+<section id="verification-via-moniteur-serie">
+<h4>Vérification via Moniteur Série<a class="headerlink" href="#verification-via-moniteur-serie" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic">
+<li><p><strong>Ouvrir Moniteur Série</strong></p>
+<ul class="simple">
+<li><p>Menu : Outils → Moniteur série</p></li>
+<li><p>Ou raccourci : Ctrl+Maj+M</p></li>
+</ul>
+</li>
+<li><p><strong>Régler paramètres en bas à droite :</strong></p>
+<ul class="simple">
+<li><p><strong>Baud rate :</strong> 9 600</p></li>
+<li><p><strong>Fin de ligne :</strong> « Les deux, CR+LF »</p></li>
+</ul>
+</li>
+<li><p><strong>Appuyer sur bouton Reset du routeur</strong></p></li>
+<li><p><strong>Vous devriez voir :</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Mk2PVRouter v3.1 — Mono
+Initialisation...
+CT1: 0 W
+CT2: 0 W
+Sortie 1: OFF
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>Si pas de messages :</strong></p>
+<div class="admonition-diagnostics-oscillateur admonition">
+<p class="admonition-title">Diagnostics oscillateur</p>
+<p>Le microcontrôleur nécessite un oscillateur pour fonctionner.</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Quartz/résonateur bien soudé ?</strong></p>
+<ul class="simple">
+<li><p>Composant à 2 pattes près de l’ATmega328P</p></li>
+<li><p>Soudures correctes ?</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Condensateurs C7/C8 présents ?</strong> (si quartz externe)</p>
+<ul class="simple">
+<li><p>Condensateurs 22 pF de chaque côté du quartz</p></li>
+<li><p>Valeur correcte ?</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<p><strong>Si messages bizarres/illisibles :</strong></p>
+<ul class="simple">
+<li><p>Vérifier que le baud rate = 9 600</p></li>
+<li><p>Si toujours illisible → Problème oscillateur (fréquence incorrecte)</p></li>
+</ul>
+</section>
+</section>
+<section id="erreur-out-of-memory-lors-de-la-compilation">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Erreur « Out of Memory » lors de la Compilation</a><a class="headerlink" href="#erreur-out-of-memory-lors-de-la-compilation" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Sketch too big; see https://support.arduino.cc/hc/en-us/articles/360013825179
+</pre></div>
+</div>
+<p><strong>Cause :</strong> Trop de fonctionnalités activées dans config.h</p>
+<p><strong>Solution :</strong></p>
+<ol class="arabic">
+<li><p>Ouvrir onglet <code class="docutils literal notranslate"><span class="pre">config.h</span></code> dans Arduino IDE</p></li>
+<li><p>Désactiver fonctionnalités non nécessaires :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Commenter les lignes avec //</span>
+<span class="c1">// #define ENABLE_DEBUG // Désactive messages debug</span>
+<span class="c1">// #define ENABLE_RF_MODULE // Désactive module RF</span>
+<span class="c1">// #define ENABLE_RELAY_OUTPUT // Si que sorties triac</span>
+</pre></div>
+</div>
+</li>
+<li><p>Recompiler et téléverser</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../installation-finale-mise-en-service/" class="btn btn-neutral float-left" title="Mise en Service et Maintenance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../troubleshooting-electrique/" class="btn btn-neutral float-right" title="⚡ Problèmes Électriques — Tests et Usage" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 07 mars 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/troubleshooting.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/troubleshooting.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

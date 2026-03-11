@@ -1,0 +1,892 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-03-10T09:47:22+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Présentation de la carte universelle &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Choix de la configuration" href="../choix-configuration/" />
+    <link rel="prev" title="Installation des Logiciels" href="../../installation-logiciel/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Présentation de la carte universelle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vue-densemble">Vue d’ensemble</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#caracteristiques-principales">Caractéristiques principales</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#images-de-la-carte">Images de la carte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecteurs">Connecteurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brochage-des-connecteurs">Brochage des connecteurs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pe-n-l1-l2-l3-entree-secteur-15-phoenix-contact">PE / N / L1 / L2 / L3 — Entrée secteur (1×5 Phoenix Contact)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trig-ext-declenchement-gpio-16-barrette-male">TRIG_EXT — Déclenchement/GPIO (1×6 barrette mâle)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uart-ext-uart-ds18b20-16-barrette-male">UART_EXT — UART + DS18B20 (1×6 barrette mâle)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ftdi-programmation-debogage-16-molex-sl">FTDI — Programmation/débogage (1×6 Molex SL)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oled-ecran-i2c-14-molex-sl">OLED — Écran I2C (1×4 Molex SL)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ct1-ct2-ct3-transformateurs-de-courant-12-molex-sl">CT1 / CT2 / CT3 — Transformateurs de courant (1×2 Molex SL)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sorties-numeriques-d2d13">Sorties numériques D2–D13</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#types-de-capteurs-de-courant-supportes">Types de capteurs de courant supportés</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#alimentation">Alimentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chaine-dalimentation">Chaîne d’alimentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#protection-contre-les-surtensions">Protection contre les surtensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rails-dalimentation">Rails d’alimentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cavalier-5v-rail">Cavalier « +5V Rail »</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#led-temoins">LED témoins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#integration-du-module-mk2wifi">Intégration du module mk2Wifi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-led-et-signalisation">Problèmes LED et Signalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-communication-rf">💻 Problèmes de Communication RF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#obtenir-de-laide">Obtenir de l’Aide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Présentation de la carte universelle</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere/presentation.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="presentation-de-la-carte-universelle">
+<span id="carte-mere-presentation"></span><h1>Présentation de la carte universelle<a class="headerlink" href="#presentation-de-la-carte-universelle" title="Lien vers cette rubrique"></a></h1>
+<p>⏱️ <strong>Temps de lecture</strong> : 10–15 minutes</p>
+<div class="admonition-prerequis admonition">
+<p class="admonition-title">📋 Prérequis</p>
+<p>Avant de commencer ce chapitre :</p>
+<div class="line-block">
+<div class="line">☐ Chapitre <a class="reference internal" href="../../safety-overview/#safety-overview"><span class="std std-ref">⚠️ Sécurité — À Lire Absolument Avant de Commencer</span></a> lu et compris</div>
+<div class="line">☐ Choix de la configuration effectué (voir <a class="reference internal" href="../choix-configuration/#choix-configuration"><span class="std std-ref">Choix de la configuration</span></a>)</div>
+</div>
+</div>
+<section id="vue-densemble">
+<h2>Vue d’ensemble<a class="headerlink" href="#vue-densemble" title="Lien vers cette rubrique"></a></h2>
+<p>La carte <strong>3phaseDiverter</strong> (rév. 6.0) est la carte principale universelle du Mk2 PV Router. Elle remplace les anciennes cartes monophasée et triphasée séparées par une carte unique capable de gérer les quatre configurations supportées :</p>
+<ul class="simple">
+<li><p><strong>Monophasé</strong> : une phase, un neutre (230 V)</p></li>
+<li><p><strong>Triphasé avec neutre</strong> : trois phases + neutre (400 V / 230 V)</p></li>
+<li><p><strong>Triphasé sans neutre</strong> : trois phases sans neutre (400 V)</p></li>
+<li><p><strong>Split-phase</strong> : deux phases à 180° (120 V / 240 V, réseau nord-américain)</p></li>
+</ul>
+<p>La sélection de la configuration se fait uniquement par les <a class="reference internal" href="../../glossary/#term-Cavalier-de-soudure"><span class="xref std std-term">cavaliers de soudure</span></a> et le choix des connecteurs — tous les composants CMS sont identiques quelle que soit la configuration.</p>
+<section id="caracteristiques-principales">
+<h3>Caractéristiques principales<a class="headerlink" href="#caracteristiques-principales" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p>Microcontrôleur <strong>ATmega328P</strong> (16 MHz, DIP-28)</p></li>
+<li><p>Jusqu’à 3 capteurs de tension (<a class="reference internal" href="../../glossary/#term-ZMPT101K"><span class="xref std std-term">ZMPT101K</span></a>, rapport 1000:1000)</p></li>
+<li><p>Jusqu’à 3 connecteurs de transformateur de courant (<a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a> 1–CT3)</p></li>
+<li><p>Module radio <strong>RFM69CW</strong> (bande ISM 433/868 MHz) avec connecteur <a class="reference internal" href="../../glossary/#term-SMA"><span class="xref std std-term">SMA</span></a></p></li>
+<li><p>Alimentation AC-DC intégrée (<strong>MPC10-5</strong>, 5 V / 10 W)</p></li>
+<li><p>Régulateur <a class="reference internal" href="../../glossary/#term-LDO"><span class="xref std std-term">LDO</span></a> <strong>AP7361C-33E</strong> (5 V → 3,3 V, 1 A)</p></li>
+<li><p>Protection parafoudre multiniveau (<a class="reference internal" href="../../glossary/#term-GDT"><span class="xref std std-term">GDT</span></a>, fusibles, <a class="reference internal" href="../../glossary/#term-MOV"><span class="xref std std-term">MOV</span></a>, self de mode commun)</p></li>
+<li><p>Buffer de la référence interne 1,1 V (AREF) par amplificateur opérationnel <strong>LMV321A</strong></p></li>
+<li><p>Connecteurs d’extension : <strong>TRIG_EXT</strong>, <strong>UART_EXT</strong>, <strong>FTDI</strong>, <strong>OLED</strong></p></li>
+<li><p>Compatible avec le module d’extension <a class="reference internal" href="../../glossary/#term-mk2Wifi"><span class="xref std std-term">mk2Wifi</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="images-de-la-carte">
+<h2>Images de la carte<a class="headerlink" href="#images-de-la-carte" title="Lien vers cette rubrique"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Face avant (assemblée)</p></th>
+<th class="head"><p>Face arrière</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><figure class="align-default">
+<img alt="Carte universelle — face avant assemblée" class="clickable-img" src="../../_images/mainboard-front.png" />
+</figure>
+</td>
+<td><figure class="align-default">
+<img alt="Carte universelle — face arrière" class="clickable-img" src="../../_images/mainboard-back.png" />
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Composants <a class="reference internal" href="../../glossary/#term-CMS"><span class="xref std std-term">CMS</span></a> uniquement</p></th>
+<th class="head"><p>Circuit imprimé nu</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><figure class="align-default">
+<img alt="Carte universelle — composants CMS" class="clickable-img" src="../../_images/mainboard-smd.png" />
+</figure>
+</td>
+<td><figure class="align-default">
+<img alt="Carte universelle — PCB nu" class="clickable-img" src="../../_images/mainboard-bare.png" />
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="connecteurs">
+<h2>Connecteurs<a class="headerlink" href="#connecteurs" title="Lien vers cette rubrique"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Sérigraphie</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PE / N / L1 / L2 / L3</p></td>
+<td><p>Phoenix Contact MSTBV 2,5 (pas 5,08 mm)</p></td>
+<td><p>Entrée secteur. En monophasé, un connecteur 3 voies est fourni (PE, N, L1).</p></td>
+</tr>
+<tr class="row-odd"><td><p>TRIG_EXT</p></td>
+<td><p>Barrette mâle 1×06 (pas 2,54 mm)</p></td>
+<td><p>Déclenchement / GPIO</p></td>
+</tr>
+<tr class="row-even"><td><p>UART_EXT</p></td>
+<td><p>Barrette mâle 1×06 (pas 2,54 mm)</p></td>
+<td><p>UART + capteur DS18B20</p></td>
+</tr>
+<tr class="row-odd"><td><p>FTDI</p></td>
+<td><p>Molex SL 1×06 (pas 2,54 mm)</p></td>
+<td><p>Programmation / débogage</p></td>
+</tr>
+<tr class="row-even"><td><p>OLED</p></td>
+<td><p>Molex SL 1×04 (pas 2,54 mm)</p></td>
+<td><p>Écran I2C (monophasé uniquement)</p></td>
+</tr>
+<tr class="row-odd"><td><p>SMA</p></td>
+<td><p><a class="reference internal" href="../../glossary/#term-SMA"><span class="xref std std-term">SMA</span></a> vertical (50 Ω)</p></td>
+<td><p>Antenne module <a class="reference internal" href="../../glossary/#term-RF"><span class="xref std std-term">RF</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>CT1</p></td>
+<td><p>Molex SL 1×02 (pas 2,54 mm)</p></td>
+<td><p>Entrée <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a> L1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CT2</p></td>
+<td><p>Molex SL 1×02 (pas 2,54 mm)</p></td>
+<td><p>Entrée <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a> L2 (triphasé uniquement)</p></td>
+</tr>
+<tr class="row-even"><td><p>CT3</p></td>
+<td><p>Molex SL 1×02 (pas 2,54 mm)</p></td>
+<td><p>Entrée <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a> L3 (triphasé uniquement)</p></td>
+</tr>
+<tr class="row-odd"><td><p>D2 à D13</p></td>
+<td><p>Molex SL 1×02 (GND, I/O) + Molex SL 1×03 (GND, I/O, VCC) par sortie</p></td>
+<td><p>Sorties numériques — voir <a class="reference internal" href="#sorties-numeriques"><span class="std std-ref">Sorties numériques D2–D13</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="brochage-des-connecteurs">
+<h2>Brochage des connecteurs<a class="headerlink" href="#brochage-des-connecteurs" title="Lien vers cette rubrique"></a></h2>
+<section id="pe-n-l1-l2-l3-entree-secteur-15-phoenix-contact">
+<h3>PE / N / L1 / L2 / L3 — Entrée secteur (1×5 Phoenix Contact)<a class="headerlink" href="#pe-n-l1-l2-l3-entree-secteur-15-phoenix-contact" title="Lien vers cette rubrique"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Sérigraphie</p></th>
+<th class="head"><p>Signal</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PE</p></td>
+<td><p>Terre (conducteur de protection)</p></td>
+</tr>
+<tr class="row-odd"><td><p>N</p></td>
+<td><p>Neutre</p></td>
+</tr>
+<tr class="row-even"><td><p>L1</p></td>
+<td><p>Phase 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>L2</p></td>
+<td><p>Phase 2</p></td>
+</tr>
+<tr class="row-even"><td><p>L3</p></td>
+<td><p>Phase 3</p></td>
+</tr>
+</tbody>
+</table>
+<p>En monophasé, un connecteur 3 voies est fourni (PE, N, L1).</p>
+</section>
+<section id="trig-ext-declenchement-gpio-16-barrette-male">
+<h3>TRIG_EXT — Déclenchement/GPIO (1×6 barrette mâle)<a class="headerlink" href="#trig-ext-declenchement-gpio-16-barrette-male" title="Lien vers cette rubrique"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Broche</p></th>
+<th class="head"><p>Signal</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>D8</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>D7</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>D6</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>D5</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>D9</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="uart-ext-uart-ds18b20-16-barrette-male">
+<h3>UART_EXT — UART + DS18B20 (1×6 barrette mâle)<a class="headerlink" href="#uart-ext-uart-ds18b20-16-barrette-male" title="Lien vers cette rubrique"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Broche</p></th>
+<th class="head"><p>Signal</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>DS18B20</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>+5 V</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>RX</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>TX</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>DTR</p></td>
+</tr>
+</tbody>
+</table>
+<p>Les noms des signaux (TX, RX) sont du point de vue de la <strong>carte principale</strong> : TX transporte les données émises par l’ATmega328P, RX les données reçues.</p>
+</section>
+<section id="ftdi-programmation-debogage-16-molex-sl">
+<h3>FTDI — Programmation/débogage (1×6 Molex SL)<a class="headerlink" href="#ftdi-programmation-debogage-16-molex-sl" title="Lien vers cette rubrique"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Broche</p></th>
+<th class="head"><p>Signal</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>CTS (NC)</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>VCC (NC)</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>TXO</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>RXI</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>DTR</p></td>
+</tr>
+</tbody>
+</table>
+<p>Brochage compatible avec les adaptateurs FTDI standard. Le signal DTR permet l’auto-reset pour le téléversement via le bootloader Arduino.</p>
+</section>
+<section id="oled-ecran-i2c-14-molex-sl">
+<h3>OLED — Écran I2C (1×4 Molex SL)<a class="headerlink" href="#oled-ecran-i2c-14-molex-sl" title="Lien vers cette rubrique"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Broche</p></th>
+<th class="head"><p>Signal</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>VCC</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>SCL</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>SDA</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Le bus I2C est partagé sur les broches A4 (SDA) et A5 (SCL) de l’ATmega328P. En mode triphasé, ces broches sont affectées à la mesure de tension/courant L3 — l’écran OLED n’est alors <strong>pas disponible</strong>. Le choix est effectué par les cavaliers <strong>SDA</strong> et <strong>SCL</strong> (voir <a class="reference internal" href="../cavaliers/#cavaliers"><span class="std std-ref">Configuration des cavaliers</span></a>).</p>
+</div>
+</section>
+<section id="ct1-ct2-ct3-transformateurs-de-courant-12-molex-sl">
+<h3>CT1 / CT2 / CT3 — Transformateurs de courant (1×2 Molex SL)<a class="headerlink" href="#ct1-ct2-ct3-transformateurs-de-courant-12-molex-sl" title="Lien vers cette rubrique"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Broche</p></th>
+<th class="head"><p>Signal</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Signal CT</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>AGND</p></td>
+</tr>
+</tbody>
+</table>
+<p>CT1 est utilisé en monophasé et en triphasé. CT2 et CT3 sont utilisés uniquement en triphasé.</p>
+</section>
+<section id="sorties-numeriques-d2d13">
+<span id="sorties-numeriques"></span><h3>Sorties numériques D2–D13<a class="headerlink" href="#sorties-numeriques-d2d13" title="Lien vers cette rubrique"></a></h3>
+<p>Chaque sortie numérique (D2 à D13) dispose de <strong>deux connecteurs Molex SL</strong> sur la carte :</p>
+<ul class="simple">
+<li><p><strong>1×02</strong> (2 broches) : GND, I/O</p></li>
+<li><p><strong>1×03</strong> (3 broches) : GND, I/O, VCC</p></li>
+</ul>
+<p>Le connecteur <strong>1×03</strong> (GND, I/O, VCC) sert à raccorder l’étage de sortie (<a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> ou relais), qui a besoin de l’alimentation. La broche VCC de ces connecteurs est reliée au <strong>rail +5 V</strong>, activé par le cavalier <strong>+5V Rail</strong> (voir ci-dessous). Le connecteur <strong>1×02</strong> (GND, I/O) sert à raccorder la carte indicateur LED (voir <a class="reference internal" href="../../etage-sortie/carte-indicateur/#carte-indicateur"><span class="std std-ref">Carte indicateur LED</span></a>), qui n’a besoin que du signal de commande.</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Disponibilité des sorties numériques</span><a class="headerlink" href="#id1" title="Lien vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Sortie</p></th>
+<th class="head"><p>Remarques</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>D2*</p></td>
+<td><p>Réservée au module <a class="reference internal" href="../../glossary/#term-RF"><span class="xref std std-term">RF</span></a> (IRQ). Libre si le module RF n’est pas soudé.</p></td>
+</tr>
+<tr class="row-odd"><td><p>D3</p></td>
+<td><p>Capteur DS18B20 (si cavalier TEMP en position routeur). Libre si TEMP en position mk2Wifi.</p></td>
+</tr>
+<tr class="row-even"><td><p>D4</p></td>
+<td><p>Libre</p></td>
+</tr>
+<tr class="row-odd"><td><p>D5#–D9#</p></td>
+<td><p>Sorties de déclenchement (TRIG_EXT). Marquées d’un <strong>dièse (#)</strong> sur la sérigraphie pour indiquer qu’elles sont partagées avec le module <a class="reference internal" href="../../glossary/#term-mk2Wifi"><span class="xref std std-term">mk2Wifi</span></a>. Utilisées par le mk2Wifi si celui-ci est présent et que le cavalier correspondant est fermé (voir ci-dessous). Libres sinon.</p></td>
+</tr>
+<tr class="row-even"><td><p>D10*</p></td>
+<td><p>SPI SS — réservée au module <a class="reference internal" href="../../glossary/#term-RF"><span class="xref std std-term">RF</span></a>. Libre si le module RF n’est pas soudé.</p></td>
+</tr>
+<tr class="row-odd"><td><p>D11*</p></td>
+<td><p>SPI MOSI — réservée au module <a class="reference internal" href="../../glossary/#term-RF"><span class="xref std std-term">RF</span></a>. Libre si le module RF n’est pas soudé.</p></td>
+</tr>
+<tr class="row-even"><td><p>D12*</p></td>
+<td><p>SPI MISO — réservée au module <a class="reference internal" href="../../glossary/#term-RF"><span class="xref std std-term">RF</span></a>. Libre si le module RF n’est pas soudé.</p></td>
+</tr>
+<tr class="row-odd"><td><p>D13*</p></td>
+<td><p>SPI SCK — réservée au module <a class="reference internal" href="../../glossary/#term-RF"><span class="xref std std-term">RF</span></a>. Libre si le module RF n’est pas soudé.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Les sorties marquées d’un <strong>astérisque (*)</strong> sur la sérigraphie sont réservées au module RF (RFM69CW) lorsqu’il est soudé. Les sorties marquées d’un <strong>dièse (#)</strong> sont partagées avec le module <a class="reference internal" href="../../glossary/#term-mk2Wifi"><span class="xref std std-term">mk2Wifi</span></a> (voir ci-dessous). Si le module concerné n’est pas présent, ces sorties sont librement utilisables.</p>
+<section id="types-de-capteurs-de-courant-supportes">
+<h4>Types de capteurs de courant supportés<a class="headerlink" href="#types-de-capteurs-de-courant-supportes" title="Lien vers cette rubrique"></a></h4>
+<p>La carte universelle est conçue pour fonctionner avec deux types de capteurs de courant :</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Quel que soit le type de CT, le boîtier porte généralement une <strong>flèche</strong> indiquant le sens du courant primaire, ainsi que des repères <strong>K</strong> et <strong>L</strong> sur les bornes ou fils du secondaire :</p>
+<ul class="simple">
+<li><p><strong>K</strong> (ou P1 / S1) : borne positive quand le courant primaire circule dans le sens de la flèche</p></li>
+<li><p><strong>L</strong> (ou P2 / S2) : borne complémentaire</p></li>
+</ul>
+<p>Ces marquages sont importants lors du raccordement aux connecteurs CT de la carte (voir <a class="reference internal" href="../../installation-finale/#installation-finale"><span class="std std-ref">Installation Finale dans le Système Électrique</span></a>).</p>
+</div>
+<dl>
+<dt><strong>CT à sortie tension (333 mV)</strong> — recommandé</dt><dd><p>Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de <a class="reference internal" href="../../glossary/#term-Burden"><span class="xref std std-term">burden</span></a>. Le signal de tension est directement compatible avec l’entrée <a class="reference internal" href="../../glossary/#term-ADC"><span class="xref std std-term">ADC</span></a> du microcontrôleur. <strong>Aucun composant supplémentaire n’est nécessaire</strong> sur la carte.</p>
+<p>C’est le type de CT recommandé pour la carte universelle.</p>
+</dd>
+<dt><strong>CT à sortie courant</strong> — avec burden THT</dt><dd><p>Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de <a class="reference internal" href="../../glossary/#term-Burden"><span class="xref std std-term">burden</span></a> soudée sur la carte (emplacements <strong>R18</strong> / <strong>R28</strong> / <strong>R38</strong>).</p>
+<p>Les emplacements R18 / R28 / R38 sont des <strong>empreintes doubles</strong> : une diode <a class="reference internal" href="../../glossary/#term-TVS"><span class="xref std std-term">TVS</span></a> de protection est déjà soudée en usine (côté <a class="reference internal" href="../../glossary/#term-CMS"><span class="xref std std-term">CMS</span></a>). Elle protège l’entrée de l’<a class="reference internal" href="../../glossary/#term-ADC"><span class="xref std std-term">ADC</span></a> dans le cas où un CT à sortie courant serait branché sans burden. La résistance de burden THT se soude <strong>par-dessus</strong> la TVS, sur les mêmes pastilles.</p>
+<p>La valeur du burden doit être calculée pour que la tension crête ne dépasse pas <strong>0,55 V</strong> (soit la moitié de la plage <a class="reference internal" href="../../glossary/#term-ADC"><span class="xref std std-term">ADC</span></a> avec VREF = 1,1 V) :</p>
+<div class="math notranslate nohighlight">
+\[R_{burden} = \frac{V_{REF}}{2 \times \sqrt{2} \times I_{secondaire\_RMS}} = \frac{0{,}55}{I_{secondaire\_crête}}\]</div>
+<p>Où <span class="math notranslate nohighlight">\(I_{secondaire\_RMS} = I_{primaire\_RMS} / N\)</span> (N = rapport de transformation du CT).</p>
+<p><strong>Exemple</strong> : CT de 100 A / 50 mA (N = 2000), courant max souhaité = 50 A :</p>
+<div class="math notranslate nohighlight">
+\[I_{sec} = \frac{50}{2000} = 25\,\text{mA RMS} \quad \Rightarrow \quad R_{burden} = \frac{1{,}1 \times 2000}{2 \times \sqrt{2} \times 50} \approx 15{,}6\,\Omega\]</div>
+<p>On choisira la valeur standard la plus proche <strong>inférieure</strong> (15 Ω) pour garder une marge de sécurité.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Si le courant mesuré dépasse la valeur prévue, la tension aux bornes du burden dépassera la plage de l’ADC. Les diodes TVS protègent l’entrée du microcontrôleur, mais ne limitent pas le courant dans le burden — la résistance peut surchauffer.</p>
+</div>
+</dd>
+</dl>
+<details style="margin: 1em 0; border: 1px solid #ccc; border-radius: 4px; padding: 0;">
+<summary style="cursor: pointer; padding: 0.75em 1em; background: #f8f8f8; font-weight: bold;">🧮 Calculateur de résistance de burden</summary>
+<div style="padding: 1em;">
+<p>Entrez les caractéristiques de votre CT pour calculer la résistance de burden adaptée.</p>
+<table style="border-collapse: collapse; width: 100%;">
+<tr>
+  <td style="padding: 6px 8px;"><label for="ct_ratio_primary">Courant primaire nominal du CT (A) :</label></td>
+  <td style="padding: 6px 8px;"><input type="number" id="ct_ratio_primary" value="100" min="1" step="1" style="width: 100px; padding: 4px;"></td>
+</tr>
+<tr>
+  <td style="padding: 6px 8px;"><label for="ct_ratio_secondary">Courant secondaire nominal (mA) :</label></td>
+  <td style="padding: 6px 8px;"><input type="number" id="ct_ratio_secondary" value="50" min="1" step="1" style="width: 100px; padding: 4px;"></td>
+</tr>
+<tr>
+  <td style="padding: 6px 8px;"><label for="i_max">Courant max souhaité côté primaire (A) :</label></td>
+  <td style="padding: 6px 8px;"><input type="number" id="i_max" value="50" min="1" step="1" style="width: 100px; padding: 4px;"></td>
+</tr>
+</table>
+<p style="margin-top: 0.75em;">
+  <button onclick="calcBurden()" style="padding: 6px 16px; cursor: pointer; background: #2980b9; color: white; border: none; border-radius: 3px;">Calculer</button>
+</p>
+<div id="burden_result" style="margin-top: 0.5em; padding: 0.75em; background: #eef; border-radius: 4px; display: none;"></div>
+<script>
+function calcBurden() {
+  var Ip = parseFloat(document.getElementById('ct_ratio_primary').value);
+  var Is_mA = parseFloat(document.getElementById('ct_ratio_secondary').value);
+  var Imax = parseFloat(document.getElementById('i_max').value);
+  var N = Ip / (Is_mA / 1000);
+  var Vref = 1.1;
+  var R = (Vref * N) / (2 * Math.sqrt(2) * Imax);
+  var Imax_sec_rms = Imax / N * 1000;
+  var Vpeak = Imax_sec_rms / 1000 * Math.sqrt(2) * R;
+
+  /* E24 standard resistor values */
+  var e24 = [1.0,1.1,1.2,1.3,1.5,1.6,1.8,2.0,2.2,2.4,2.7,3.0,3.3,3.6,3.9,4.3,4.7,5.1,5.6,6.2,6.8,7.5,8.2,9.1];
+  var std = [];
+  for (var dec = 0.1; dec <= 10000; dec *= 10) {
+    for (var j = 0; j < e24.length; j++) std.push(+(e24[j] * dec).toPrecision(2));
+  }
+  std.sort(function(a,b){return a-b;});
+  var Rstd = std[0];
+  for (var k = 0; k < std.length; k++) {
+    if (std[k] <= R) Rstd = std[k];
+    else break;
+  }
+  var Imax_with_std = (Vref * N) / (2 * Math.sqrt(2) * Rstd);
+
+  var res = document.getElementById('burden_result');
+  res.style.display = 'block';
+  res.innerHTML =
+    '<b>Rapport de transformation N</b> = ' + N.toFixed(0) + '<br>' +
+    '<b>R<sub>burden</sub> calculé</b> = ' + R.toFixed(1) + ' Ω<br>' +
+    '<b>Valeur standard E24 recommandée</b> = <b style="color: #c0392b;">' + Rstd + ' Ω</b> (valeur inférieure la plus proche)<br>' +
+    '<b>Courant max mesurable avec ' + Rstd + ' Ω</b> = ' + Imax_with_std.toFixed(1) + ' A RMS';
+}
+</script>
+</div>
+</details><div class="dropdown exercise important admonition" id="exercise-0">
+<p class="admonition-title">Un peu de mathématiques</p>
+<p>Voici les 3 formules qui vous permettront de calculer une inconnue à partir des 2 autres données connues.</p>
+<p>Dans ces formules :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V_{REF}\)</span> = tension de référence interne de l’ATmega328P = <strong>1,1 V</strong></p></li>
+<li><p><span class="math notranslate nohighlight">\(N\)</span> = rapport de transformation du <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a> (nombre de tours)</p></li>
+<li><p><span class="math notranslate nohighlight">\(I_{RMS}\)</span> = intensité efficace maximale côté <strong>primaire</strong> (le courant mesuré)</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{burden}\)</span> = résistance de charge en ohms</p></li>
+</ul>
+<p>Calcul de la résistance de <a class="reference internal" href="../../glossary/#term-Burden"><span class="xref std std-term">burden</span></a> en fonction de l’intensité efficace maximale :</p>
+<div class="math notranslate nohighlight">
+\[R_{burden} = \frac{V_{REF} \times N}{2 \times \sqrt{2} \times I_{RMS}}\]</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Calcul de l’intensité efficace maximale en fonction de la résistance de <a class="reference internal" href="../../glossary/#term-Burden"><span class="xref std std-term">burden</span></a> :</div>
+</div>
+<div class="math notranslate nohighlight">
+\[I_{RMS} = \frac{V_{REF} \times N}{2 \times \sqrt{2} \times R_{burden}}\]</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Calcul du nombre de tours de capteur en fonction de la résistance de <a class="reference internal" href="../../glossary/#term-Burden"><span class="xref std std-term">burden</span></a> et de l’intensité efficace maximale :</div>
+</div>
+<div class="math notranslate nohighlight">
+\[N = \frac{2 \times \sqrt{2} \times I_{RMS} \times R_{burden}}{V_{REF}}\]</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Exemple concret</strong> : CT de type SCT-013-000 (100 A / 50 mA, donc <span class="math notranslate nohighlight">\(N = 2000\)</span>) avec <span class="math notranslate nohighlight">\(R_{burden} = 22\,\Omega\)</span></div>
+</div>
+<div class="math notranslate nohighlight">
+\[I_{RMS\_max} = \frac{1{,}1 \times 2000}{2 \times \sqrt{2} \times 22} \approx 35{,}4\,\text{A}\]</div>
+<p>Pour un appareil purement résistif (chauffe-eau…), nous avons <span class="math notranslate nohighlight">\(P_{RMS} = V_{RMS} \times I_{RMS}\)</span>.</p>
+<p>Exemple pour un chauffe-eau de <strong>3000 W</strong> :</p>
+<div class="math notranslate nohighlight">
+\[I_{RMS} = \frac{P_{RMS}}{V_{RMS}} = \frac{3000}{230} \approx 13\,\text{A}\]</div>
+<p>Un burden de 22 Ω avec un CT de 2000 tours est donc largement suffisant pour cette application.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="alimentation">
+<h2>Alimentation<a class="headerlink" href="#alimentation" title="Lien vers cette rubrique"></a></h2>
+<section id="chaine-dalimentation">
+<h3>Chaîne d’alimentation<a class="headerlink" href="#chaine-dalimentation" title="Lien vers cette rubrique"></a></h3>
+<p>Le secteur entre par le connecteur d’entrée secteur (<strong>PE / N / L1 / L2 / L3</strong>) et traverse une chaîne de protection avant d’atteindre le module d’alimentation :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Secteur → GDT (éclateurs) → Fusibles (FS0–FS3) → Varistances (RV0–RV3, GM1–GM3)
+       → Self de mode commun (FL1) → Condensateur film (C1)
+       → PS1 (MPC10-5) : 230 VAC → 5 VDC, 10 W
+       → D1 (SMBJ7.0A) : protection TVS côté 5 V
+       → U1 (AP7361C-33E) : 5 V → 3,3 V, 1 A
+</pre></div>
+</div>
+</section>
+<section id="protection-contre-les-surtensions">
+<h3>Protection contre les surtensions<a class="headerlink" href="#protection-contre-les-surtensions" title="Lien vers cette rubrique"></a></h3>
+<p>La carte intègre plusieurs niveaux de protection contre les surtensions transitoires (foudre, commutations sur le réseau). Deux niveaux sont obligatoires, un troisième est optionnel.</p>
+<p><strong>Niveau 1 — Modules de protection GM1–GM3</strong> (obligatoire)</p>
+<p>Chaque phase est protégée par un module combiné <a class="reference internal" href="../../glossary/#term-GDT"><span class="xref std std-term">GDT</span></a>+<a class="reference internal" href="../../glossary/#term-MOV"><span class="xref std std-term">MOV</span></a>. Ces modules constituent la protection principale des circuits de mesure. GM1 protège la phase L1, GM2 la phase L2, GM3 la phase L3 (triphasé avec neutre uniquement).</p>
+<p><strong>Niveau 2 — Fusibles FS0–FS3</strong> (obligatoire)</p>
+<p>Les fusibles protègent les circuits de mesure contre les surintensités. Ils sont dimensionnés pour couper en cas de court-circuit ou de défaut sur un transformateur <a class="reference internal" href="../../glossary/#term-ZMPT101K"><span class="xref std std-term">ZMPT101K</span></a>.</p>
+<p><strong>Niveau 3 — Varistances RV0–RV3 et éclateurs GDT0–GDT3</strong> (optionnel)</p>
+<p>Ce niveau de protection supplémentaire est recommandé pour les installations exposées aux surtensions (zones rurales, lignes aériennes, régions à forte activité orageuse). Les éclateurs <a class="reference internal" href="../../glossary/#term-GDT"><span class="xref std std-term">GDT</span></a> constituent la première ligne de défense et dévient les surtensions les plus violentes. Les varistances <a class="reference internal" href="../../glossary/#term-MOV"><span class="xref std std-term">MOV</span></a> écrêtent les surtensions résiduelles.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les composants optionnels (RV0–RV3, GDT0–GDT3) ne sont pas fournis dans le kit de base. Ils peuvent être ajoutés ultérieurement sans modifier le reste du circuit.</p>
+</div>
+</section>
+<section id="rails-dalimentation">
+<h3>Rails d’alimentation<a class="headerlink" href="#rails-dalimentation" title="Lien vers cette rubrique"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 15.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Rail</p></th>
+<th class="head"><p>Tension</p></th>
+<th class="head"><p>Usage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+5 V</p></td>
+<td><p>5 V</p></td>
+<td><p>Connecteurs UART_EXT, FTDI et broche VCC des sorties numériques (via cavalier « +5V Rail »)</p></td>
+</tr>
+<tr class="row-odd"><td><p>+3,3 V</p></td>
+<td><p>3,3 V</p></td>
+<td><p>ATmega328P, module RFM69CW</p></td>
+</tr>
+<tr class="row-even"><td><p>AVCC</p></td>
+<td><p>3,3 V (filtré)</p></td>
+<td><p>Référence analogique ATmega328P, connecteur OLED</p></td>
+</tr>
+<tr class="row-odd"><td><p>GND</p></td>
+<td><p>0 V</p></td>
+<td><p>Masse numérique</p></td>
+</tr>
+<tr class="row-even"><td><p>AGND</p></td>
+<td><p>0 V</p></td>
+<td><p>Masse analogique</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="cavalier-5v-rail">
+<h3>Cavalier « +5V Rail »<a class="headerlink" href="#cavalier-5v-rail" title="Lien vers cette rubrique"></a></h3>
+<p>Le cavalier de soudure <strong>« +5V Rail »</strong> (situé en haut à droite de la carte) permet d’activer le <strong>rail +5 V</strong> qui alimente la broche VCC des connecteurs 1×03 des sorties numériques. Ce rail est principalement destiné aux <strong>cartes de sortie relais</strong>, qui nécessitent du +5 V pour alimenter la bobine du relais.</p>
+<ul class="simple">
+<li><p><strong>Fermé</strong> : le rail +5 V est actif sur les connecteurs 1×03 — obligatoire si des relais sont utilisés</p></li>
+<li><p><strong>Ouvert</strong> (défaut) : le rail +5 V est déconnecté des connecteurs de sortie</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> n’ont pas besoin de cette alimentation.</p>
+</div>
+</section>
+<section id="led-temoins">
+<h3>LED témoins<a class="headerlink" href="#led-temoins" title="Lien vers cette rubrique"></a></h3>
+<p>Deux LED témoins <a class="reference internal" href="../../glossary/#term-CMS"><span class="xref std std-term">CMS</span></a> sont situées en haut à gauche de la carte :</p>
+<ul class="simple">
+<li><p><strong>ON</strong> : allumée lorsque la carte est sous tension (rail +3,3 V actif)</p></li>
+<li><p><strong>+5V</strong> : allumée lorsque le rail +5 V des sorties est actif (cavalier « +5V Rail » fermé)</p></li>
+</ul>
+</section>
+</section>
+<section id="integration-du-module-mk2wifi">
+<h2>Intégration du module mk2Wifi<a class="headerlink" href="#integration-du-module-mk2wifi" title="Lien vers cette rubrique"></a></h2>
+<p>La carte principale est conçue pour accueillir le module d’extension <a class="reference internal" href="../../glossary/#term-mk2Wifi"><span class="xref std std-term">mk2Wifi</span></a> via les connecteurs TRIG_EXT et UART_EXT. La zone réservée au module est repérée par un <strong>rectangle hachuré</strong> sur la sérigraphie de la face avant, autour des connecteurs concernés.</p>
+<p>Signaux échangés :</p>
+<ul class="simple">
+<li><p>L’une des deux cartes utilise des <strong>barrettes mâles</strong>, l’autre des <strong>barrettes femelles</strong> (au choix de l’utilisateur)</p></li>
+<li><p>L’alimentation +5 V est fournie par la carte principale via UART_EXT broche 3</p></li>
+<li><p>L’UART (TX/RX) assure la communication série avec le module d’extension</p></li>
+<li><p>Le signal DS18B20 est acheminé via UART_EXT broche 2 pour la mesure de température 1-Wire</p></li>
+<li><p>Les signaux GPIO D5–D9 fournissent les sorties de déclenchement/commande via TRIG_EXT</p></li>
+<li><p>Le bus I2C (SCL/SDA) est <strong>local au module mk2Wifi uniquement</strong> — il n’est pas routé vers la carte principale</p></li>
+</ul>
+<p>La zone hachurée sur la sérigraphie indique les connecteurs de sortie (D5#–D9#) potentiellement utilisés par le module mk2Wifi. Ces sorties restent cependant <strong>utilisables pour d’autres usages</strong>, même lorsque le module mk2Wifi est présent. Dans ce cas :</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Si vous utilisez une sortie D5–D9 pour un étage de sortie alors que le module mk2Wifi est branché :</p>
+<ul class="simple">
+<li><p>N’activez sur le mk2Wifi <strong>que les cavaliers</strong> (D5–D9) correspondant aux sorties réellement gérées par l’ESP32 (voir <a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/#presentation-mk2wifi"><span class="std std-ref">Module mk2Wifi</span></a>)</p></li>
+<li><p><strong>Ne jamais utiliser une même broche</strong> à la fois par le mk2Wifi et par un autre périphérique — cela créerait un conflit de bus pouvant endommager les composants</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../../installation-logiciel/" class="btn btn-neutral float-left" title="Installation des Logiciels" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../choix-configuration/" class="btn btn-neutral float-right" title="Choix de la configuration" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 10 mars 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/carte-mere/presentation.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/carte-mere/presentation.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

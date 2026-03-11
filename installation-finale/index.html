@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-03-07T23:49:10+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation Finale dans le Système Électrique &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="Capteurs de Courant et Connexions Électriques" href="../installation-finale-connexions/" />
+    <link rel="prev" title="Étalonnage" href="../etalonnage/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation Finale dans le Système Électrique</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exigences-legales-en-france">Exigences Légales en France</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#conformite-reglementaire-obligatoire">Conformité Réglementaire Obligatoire</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recommandation-forte">Recommandation Forte</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#prerequis-avant-installation">Prérequis Avant Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#materiel-de-securite-requis">Matériel de Sécurité Requis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#equipement-de-protection-individuelle-epi">Équipement de Protection Individuelle (EPI)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#equipement-de-mesure-et-outils">Équipement de Mesure et Outils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-led-et-signalisation">Problèmes LED et Signalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-de-communication-rf">💻 Problèmes de Communication RF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#obtenir-de-laide">Obtenir de l’Aide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation Finale dans le Système Électrique</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/installation-finale.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-finale-dans-le-systeme-electrique">
+<span id="installation-finale"></span><h1>Installation Finale dans le Système Électrique<a class="headerlink" href="#installation-finale-dans-le-systeme-electrique" title="Lien vers cette rubrique"></a></h1>
+<p>⚠️⚠️⚠️ <strong>DANGER DE MORT — HAUTE TENSION 230 V AC</strong> ⚠️⚠️⚠️</p>
+<p>Cette section décrit la connexion du Mk2PVRouter au réseau électrique de votre habitation.</p>
+<p><strong>Cette opération présente des RISQUES MORTELS par électrocution.</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>⚡ <strong>TENSION MORTELLE 230 V AC, 400 V AC en triphasé</strong> ⚡</p>
+<p>Le contact avec des conducteurs sous tension peut provoquer :</p>
+<ul class="simple">
+<li><p><strong>Décès par électrocution</strong> (arrêt cardiaque, brûlures internes)</p></li>
+<li><p><strong>Brûlures graves</strong> (arc électrique jusqu’à 3 000 °C)</p></li>
+<li><p><strong>Incendie</strong> (court-circuit, mauvaise connexion)</p></li>
+<li><p><strong>Explosion</strong> (défaut d’isolation)</p></li>
+</ul>
+<p><strong>Un seul instant d’inattention peut être FATAL.</strong></p>
+</div>
+<section id="exigences-legales-en-france">
+<h2>Exigences Légales en France<a class="headerlink" href="#exigences-legales-en-france" title="Lien vers cette rubrique"></a></h2>
+<section id="conformite-reglementaire-obligatoire">
+<h3>Conformité Réglementaire Obligatoire<a class="headerlink" href="#conformite-reglementaire-obligatoire" title="Lien vers cette rubrique"></a></h3>
+<p>Selon la <strong>norme NF C 15-100</strong> (installations électriques basse tension en France) :</p>
+<p>☐ Installation par <strong>électricien qualifié OBLIGATOIRE</strong></p>
+<blockquote>
+<div><p>Seul un professionnel certifié peut légalement modifier une installation électrique</p>
+</div></blockquote>
+<p>☐ Conformité installation vérifiée par <strong>Consuel</strong></p>
+<blockquote>
+<div><p>Organisme de contrôle des installations électriques</p>
+</div></blockquote>
+<p>☐ Assurance habitation <strong>DOIT être informée</strong> de la modification</p>
+<blockquote>
+<div><p>Toute modification non déclarée peut entraîner refus d’indemnisation</p>
+</div></blockquote>
+<p>☐ Respect des normes électriques en vigueur</p>
+<blockquote>
+<div><p>NF C 15-100 + réglementations locales</p>
+</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>⚠️ <strong>CONSÉQUENCES LÉGALES</strong></p>
+<p>En cas de non-conformité :</p>
+<ul class="simple">
+<li><p><strong>Assurance habitation</strong> : Refus d’indemnisation en cas de sinistre (incendie, dégât des eaux causé par installation défectueuse)</p></li>
+<li><p><strong>Vente immobilière</strong> : Diagnostic électrique obligatoire, non-conformité bloque la vente</p></li>
+<li><p><strong>Responsabilité pénale</strong> : En cas d’accident causé par installation non conforme</p></li>
+<li><p><strong>Amendes</strong> : Jusqu’à 3 000 € pour installation non déclarée</p></li>
+</ul>
+</div>
+</section>
+<section id="recommandation-forte">
+<h3>Recommandation Forte<a class="headerlink" href="#recommandation-forte" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>🔴 <strong>NOUS RECOMMANDONS VIVEMENT de faire appel à un électricien certifié</strong></p>
+<p><strong>Pourquoi ?</strong></p>
+<ul class="simple">
+<li><p>Connaissance des normes en vigueur</p></li>
+<li><p>Expérience des installations haute puissance</p></li>
+<li><p>Équipement de sécurité approprié</p></li>
+<li><p>Assurance responsabilité civile professionnelle</p></li>
+<li><p>Attestation de conformité pour votre assurance</p></li>
+</ul>
+<p><strong>Coût estimé :</strong> 200–500 € pour l’installation complète</p>
+<p><strong>Ce coût est DÉRISOIRE comparé aux risques encourus.</strong></p>
+</div>
+</section>
+</section>
+<section id="prerequis-avant-installation">
+<h2>Prérequis Avant Installation<a class="headerlink" href="#prerequis-avant-installation" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition-verifications-obligatoires admonition">
+<p class="admonition-title">📋 Vérifications Obligatoires</p>
+<p>Avant TOUTE manipulation :</p>
+<p>☐ <strong>Mk2PVRouter complètement assemblé et testé</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Tous les tests logiciels effectués avec succès</p></li>
+<li><p>Étalonnage (calibration) terminé</p></li>
+<li><p>Aucun défaut détecté</p></li>
+</ul>
+</div></blockquote>
+<p>☐ <strong>Disjoncteur général coupé et verrouillé</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Placer un cadenas si possible</p></li>
+<li><p>Afficher panneau « TRAVAUX EN COURS - NE PAS RÉENCLENCHER »</p></li>
+</ul>
+</div></blockquote>
+<p>☐ <strong>Absence de tension vérifiée avec multimètre</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Mesurer entre phase et neutre : 0 V</p></li>
+<li><p>Mesurer entre phase et terre : 0 V</p></li>
+<li><p>Refaire la mesure 3 fois pour être certain</p></li>
+</ul>
+</div></blockquote>
+<p>☐ <strong>Personne qualifiée présente</strong> (si vous n’êtes pas électricien)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>En cas d’accident, quelqu’un doit pouvoir intervenir</p></li>
+<li><p>Connaissance des gestes de premiers secours recommandée</p></li>
+</ul>
+</div></blockquote>
+<p>☐ <strong>Téléphone à portée de main</strong> pour appeler les secours (15 ou 18)</p>
+</div>
+<section id="materiel-de-securite-requis">
+<h3>Matériel de Sécurité Requis<a class="headerlink" href="#materiel-de-securite-requis" title="Lien vers cette rubrique"></a></h3>
+<section id="equipement-de-protection-individuelle-epi">
+<h4>Équipement de Protection Individuelle (EPI)<a class="headerlink" href="#equipement-de-protection-individuelle-epi" title="Lien vers cette rubrique"></a></h4>
+<p>☐ <strong>Gants isolants classe 00</strong> (minimum 500 V <a class="reference internal" href="../glossary/#term-AC"><span class="xref std std-term">AC</span></a>)</p>
+<p>☐ <strong>Chaussures de sécurité isolantes</strong> (semelle isolée)</p>
+<p>☐ <strong>Tapis isolant</strong> pour se tenir debout</p>
+<p>☐ <strong>Lunettes de protection</strong> (protection contre arc électrique)</p>
+<p>☐ <strong>Vêtements en coton</strong> (PAS de synthétique qui fond)</p>
+</section>
+<section id="equipement-de-mesure-et-outils">
+<h4>Équipement de Mesure et Outils<a class="headerlink" href="#equipement-de-mesure-et-outils" title="Lien vers cette rubrique"></a></h4>
+<p>☐ <strong>Multimètre numérique</strong> CAT III ou CAT IV (600 V minimum)</p>
+<p>☐ <strong>Testeur de tension sans contact</strong> (VAT — Voltage Alert Tester)</p>
+<p>☐ <strong>Tournevis isolés</strong> 1 000 V</p>
+<p>☐ <strong>Pince à dénuder isolée</strong></p>
+<p>☐ <strong>Lampe de poche</strong> (en cas de coupure secteur)</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../etalonnage/" class="btn btn-neutral float-left" title="Étalonnage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../installation-finale-connexions/" class="btn btn-neutral float-right" title="Capteurs de Courant et Connexions Électriques" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 07 mars 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/installation-finale.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/installation-finale.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

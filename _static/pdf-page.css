@@ -1,0 +1,60 @@
+/* Page margin overrides for WeasyPrint PDF generation */
+@page {
+    margin: 15mm 10mm;
+}
+
+@page :first {
+    margin: 0;
+}
+
+@page chapter {
+    margin: 0;
+}
+
+@page back_cover {
+    margin: 0;
+}
+
+/* ---- Image sizing ---- */
+
+/* All images: never exceed the content area */
+img {
+    max-width: 100% !important;
+    max-height: 245mm !important;
+    height: auto !important;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Figures: constrain the wrapper too */
+figure {
+    max-width: 100% !important;
+    overflow: hidden;
+    page-break-inside: avoid;
+}
+
+/* Tables with images (list-table renders): force fixed layout */
+table.docutils {
+    table-layout: fixed !important;
+    width: 100% !important;
+}
+
+table.docutils td {
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/* Images inside table cells: fit within the cell */
+table.docutils td img,
+table.docutils td figure img {
+    max-width: 100% !important;
+    max-height: 120mm !important;
+    height: auto !important;
+    width: auto;
+    display: block;
+}
+
+table.docutils td figure {
+    margin: 0;
+    max-width: 100%;
+}

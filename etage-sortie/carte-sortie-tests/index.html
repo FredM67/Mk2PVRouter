@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-03-07T23:49:10+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tests de la Carte de Sortie &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Validation et Dépannage — Carte de Sortie" href="../carte-sortie-validation/" />
+    <link rel="prev" title="Étage de sortie" href="../carte-sortie/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tests de la Carte de Sortie</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-du-banc-de-test">Configuration du Banc de Test</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schema-de-montage-du-test">Schéma de Montage du Test</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#procedure-de-test-complete">Procédure de Test Complète</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#etape-1-verifications-prealables-hors-tension">Étape 1 : Vérifications Préalables (HORS TENSION)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etape-2-test-sans-tension-secteur">Étape 2 : Test Sans Tension Secteur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etape-3-premier-test-sous-tension-230-v">Étape 3 : Premier Test Sous Tension 230 V</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etape-4-test-de-charge-progressive">Étape 4 : Test de Charge Progressive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#resultats-attendus-du-test">Résultats Attendus du Test</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#carte-fonctionnelle">Carte Fonctionnelle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#carte-defectueuse">Carte Défectueuse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-led-et-signalisation">Problèmes LED et Signalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-communication-rf">💻 Problèmes de Communication RF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#obtenir-de-laide">Obtenir de l’Aide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tests de la Carte de Sortie</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/etage-sortie/carte-sortie-tests.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tests-de-la-carte-de-sortie">
+<span id="carte-sortie-tests"></span><h1>Tests de la Carte de Sortie<a class="headerlink" href="#tests-de-la-carte-de-sortie" title="Lien vers cette rubrique"></a></h1>
+<p>Lors de la construction d’un système complet, il peut être préférable de monter l’étage de sortie finalisé dans le boîtier avant de procéder à son test.</p>
+<p>Les conseils suivants sont destinés aux situations où un étage de sortie doit être testé de manière indépendante.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Avertissement de Sécurité</strong></p>
+<p>Pour vérifier le bon fonctionnement du déclencheur et du <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a>, un accès à la tension du réseau électrique <strong>230 V</strong> CA est nécessaire.</p>
+<p>Faites preuve de la plus grande prudence et n’entamez cette étape que si vous avez les compétences nécessaires pour le faire en toute sécurité.</p>
+</div>
+<p>Voici une plate-forme construite qui permet de tester les cartes de sortie avec ou sans le <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> soudé en place.</p>
+<p>Lors du test d’une carte de sortie, il est important que le <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit <a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a> et un ou plusieurs composants seront alors détruits immédiatement.</p>
+<p>En tenant dûment compte de l’avertissement de sécurité ci-dessus, l’approche simple illustrée ci-dessous devrait convenir pour tester des cartes individuelles.</p>
+<section id="configuration-du-banc-de-test">
+<h2>Configuration du Banc de Test<a class="headerlink" href="#configuration-du-banc-de-test" title="Lien vers cette rubrique"></a></h2>
+<p><strong>Matériel nécessaire pour le test :</strong></p>
+<p>☐ <strong>Lampe à incandescence</strong> 40–100 W (ou résistance chauffante équivalente)</p>
+<p>☐ <strong>Douille E27</strong> avec câble secteur</p>
+<p>☐ <strong>Arduino ou microcontrôleur</strong> (pour générer signal de commande)</p>
+<p>☐ <strong>Câbles de connexion</strong> dupont mâle-femelle</p>
+<p>☐ <strong>Multimètre</strong> (pour vérifier tensions)</p>
+<p>☐ <strong>Extincteur</strong> à portée de main</p>
+<p>☐ <strong>Surface isolante et ininflammable</strong> (céramique, bois sec — PAS métal)</p>
+<section id="schema-de-montage-du-test">
+<h3>Schéma de Montage du Test<a class="headerlink" href="#schema-de-montage-du-test" title="Lien vers cette rubrique"></a></h3>
+<figure class="align-center" id="id1">
+<div class="graphviz"><object data="../../_images/graphviz-46d93e35ff91656e4bd8446c564823762c92a3d7.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">Schéma de test complet pour carte de sortie triac</p></object></div>
+<figcaption>
+<p><span class="caption-text">Configuration du banc de test pour carte de sortie triac (cliquer pour agrandir)</span><a class="headerlink" href="#id1" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="procedure-de-test-complete">
+<h2>Procédure de Test Complète<a class="headerlink" href="#procedure-de-test-complete" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>⚠️ <strong>RAPPEL SÉCURITÉ — 230 V SECTEUR</strong></p>
+<ul class="simple">
+<li><p>Extincteur à portée de main</p></li>
+<li><p>Aucun contact avec les parties sous tension</p></li>
+<li><p>Disjoncteur facilement accessible</p></li>
+<li><p>Personne présente pour surveiller</p></li>
+<li><p>Premier test : durée maximale 2 minutes</p></li>
+</ul>
+</div>
+<section id="etape-1-verifications-prealables-hors-tension">
+<h3>Étape 1 : Vérifications Préalables (HORS TENSION)<a class="headerlink" href="#etape-1-verifications-prealables-hors-tension" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic">
+<li><p><strong>Inspection visuelle complète de la carte</strong></p>
+<p>☐ Toutes les soudures haute puissance re-vérifiées</p>
+<p>☐ Pas de court-circuit visible</p>
+<p>☐ Pas de composant mal orienté</p>
+<p>☐ <a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">Optocoupleur</span></a> correctement inséré (repère aligné)</p>
+</li>
+<li><p><strong>Test de continuité au multimètre</strong></p>
+<p>☐ Mesurer résistance entre bornes connecteur puissance : <strong>doit être ∞ Ω</strong> (circuit ouvert)</p>
+<p>☐ Mesurer résistance <a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a> côté commande : <strong>quelques kΩ</strong> (LED interne)</p>
+<p>☐ Vérifier absence de court-circuit entre pistes basse/haute tension</p>
+</li>
+<li><p><strong>Montage du banc de test</strong></p>
+<p>☐ Connecter lampe au connecteur de puissance de la carte</p>
+<p>☐ Connecter Arduino pin 9 → Molex IN (signal commande)</p>
+<p>☐ Connecter Arduino GND → Molex GND</p>
+</li>
+</ol>
+</section>
+<section id="etape-2-test-sans-tension-secteur">
+<h3>Étape 2 : Test Sans Tension Secteur<a class="headerlink" href="#etape-2-test-sans-tension-secteur" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic">
+<li><p><strong>Programmer Arduino avec signal test</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// Commande ON</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span><span class="w">            </span><span class="c1">// 2 secondes</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">   </span><span class="c1">// Commande OFF</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span><span class="w">            </span><span class="c1">// 2 secondes</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Alimenter Arduino uniquement (PAS de secteur 230 V)</strong></p></li>
+<li><p><strong>Mesurer tension aux bornes du :term:`triac &lt;Triac&gt;`</strong> avec multimètre</p>
+<ul class="simple">
+<li><p><strong>Signal HIGH</strong> : Devrait y avoir quelques volts (LED <a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a> allumée)</p></li>
+<li><p><strong>Signal LOW</strong> : 0 V (LED optocoupleur éteinte)</p></li>
+</ul>
+<p>✅ Si OK : L’<a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a> fonctionne correctement</p>
+<p>❌ Si pas de variation : Vérifier soudures, orientation optocoupleur, résistances R1-R3</p>
+</li>
+</ol>
+</section>
+<section id="etape-3-premier-test-sous-tension-230-v">
+<h3>Étape 3 : Premier Test Sous Tension 230 V<a class="headerlink" href="#etape-3-premier-test-sous-tension-230-v" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>⚠️⚠️⚠️ <strong>DANGER — TENSION MORTELLE 230 V</strong> ⚠️⚠️⚠️</p>
+<p>À partir de maintenant, <strong>AUCUN CONTACT</strong> avec la carte ou la lampe.</p>
+<p>Restez à <strong>50 cm minimum</strong> de la zone de test.</p>
+</div>
+<ol class="arabic">
+<li><p><strong>Vérifier une dernière fois :</strong></p>
+<p>☐ Lampe correctement connectée</p>
+<p>☐ Arduino alimenté et programme en cours</p>
+<p>☐ Extincteur à portée</p>
+<p>☐ Disjoncteur accessible</p>
+</li>
+<li><p><strong>Brancher la lampe sur secteur 230 V</strong></p></li>
+<li><p><strong>Observer pendant 30 secondes</strong></p>
+<p><strong>✅ Comportement NORMAL attendu :</strong></p>
+<ul class="simple">
+<li><p>Lampe s’allume et s’éteint toutes les 2 secondes (suivant programme Arduino)</p></li>
+<li><p>Pas d’odeur de brûlé</p></li>
+<li><p>Pas de fumée</p></li>
+<li><p>Pas de grésillement</p></li>
+<li><p>Commutation silencieuse (pas de clic)</p></li>
+</ul>
+<p><strong>❌ Comportement ANORMAL — COUPER IMMÉDIATEMENT :</strong></p>
+<ul class="simple">
+<li><p>Lampe reste allumée en permanence → <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">Triac</span></a> en court-circuit</p></li>
+<li><p>Lampe ne s’allume jamais → Triac ne conduit pas (défaut ou mal soudé)</p></li>
+<li><p>Fumée ou odeur → Composant en surchauffe</p></li>
+<li><p>Grésillement → Mauvais contact, arc électrique</p></li>
+</ul>
+</li>
+<li><p><strong>Si test réussi : Laisser fonctionner 2 minutes</strong></p>
+<ul class="simple">
+<li><p>Surveiller température carte (main au-dessus, sans toucher)</p></li>
+<li><p>Carte doit rester froide ou tiède (légèrement chaude acceptable)</p></li>
+<li><p><a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">Triac</span></a> peut être tiède après 2 minutes (normal)</p></li>
+</ul>
+</li>
+<li><p><strong>Couper alimentation secteur</strong></p></li>
+<li><p><strong>Attendre 1 minute</strong> (décharge condensateurs éventuels)</p></li>
+</ol>
+</section>
+<section id="etape-4-test-de-charge-progressive">
+<h3>Étape 4 : Test de Charge Progressive<a class="headerlink" href="#etape-4-test-de-charge-progressive" title="Lien vers cette rubrique"></a></h3>
+<p>Si le test précédent a réussi, vous pouvez tester avec une charge plus importante.</p>
+<ol class="arabic simple">
+<li><p><strong>Remplacer la lampe par une charge plus importante</strong> (100 W ou radiateur 500–1 000 W)</p></li>
+<li><p><strong>Répéter test pendant 5 minutes</strong></p>
+<ul class="simple">
+<li><p>Surveiller température <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> (devrait rester &lt; 60 °C au toucher)</p></li>
+<li><p>Vérifier commutation toujours fonctionnelle</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="resultats-attendus-du-test">
+<h2>Résultats Attendus du Test<a class="headerlink" href="#resultats-attendus-du-test" title="Lien vers cette rubrique"></a></h2>
+<section id="carte-fonctionnelle">
+<h3>Carte Fonctionnelle<a class="headerlink" href="#carte-fonctionnelle" title="Lien vers cette rubrique"></a></h3>
+<p><strong>✅ SUCCÈS — La carte fonctionne correctement si :</strong></p>
+<p>☑ Lampe s’allume/s’éteint selon signal Arduino</p>
+<p>☑ Commutation silencieuse (pas de clic mécanique comme relais)</p>
+<p>☑ Aucune odeur ou fumée pendant 5 minutes de fonctionnement</p>
+<p>☑ Température carte reste raisonnable (&lt; 60 °C)</p>
+<p>☑ Pas de grésillement ni arc électrique</p>
+<p><strong>➜ La carte est prête pour l’installation dans le boîtier</strong></p>
+</section>
+<section id="carte-defectueuse">
+<h3>Carte Défectueuse<a class="headerlink" href="#carte-defectueuse" title="Lien vers cette rubrique"></a></h3>
+<p><strong>❌ ÉCHEC — La carte a un problème si :</strong></p>
+<p>☒ Lampe reste allumée en permanence</p>
+<blockquote>
+<div><p><strong>Diagnostic</strong> : <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">Triac</span></a> en court-circuit (détruit ou mal soudé)</p>
+<p><strong>Action</strong> : Remplacer triac</p>
+</div></blockquote>
+<p>☒ Lampe ne s’allume jamais</p>
+<blockquote>
+<div><p><strong>Diagnostic</strong> : Circuit <a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a> défectueux ou <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> ouvert</p>
+<p><strong>Action</strong> : Vérifier optocoupleur (sens, soudures), vérifier résistances R1-R3</p>
+</div></blockquote>
+<p>☒ Lampe clignote aléatoirement</p>
+<blockquote>
+<div><p><strong>Diagnostic</strong> : Mauvais contact, soudure froide</p>
+<p><strong>Action</strong> : Re-vérifier toutes les soudures haute puissance</p>
+</div></blockquote>
+<p>☒ Fumée ou odeur de brûlé</p>
+<blockquote>
+<div><p><strong>Diagnostic</strong> : Surchauffe composant (soudure insuffisante, court-circuit)</p>
+<p><strong>Action</strong> : <strong>ARRÊTER IMMÉDIATEMENT</strong>, inspecter visuellement, refaire soudures</p>
+</div></blockquote>
+<p>☒ Carte chauffe excessivement (&gt; 80 °C)</p>
+<blockquote>
+<div><p><strong>Diagnostic</strong> : Résistance de contact trop élevée (agrafes mal soudées)</p>
+<p><strong>Action</strong> : Refaire soudures agrafes cuivre avec fer très chaud</p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../carte-sortie/" class="btn btn-neutral float-left" title="Étage de sortie" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../carte-sortie-validation/" class="btn btn-neutral float-right" title="Validation et Dépannage — Carte de Sortie" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 07 mars 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/etage-sortie/carte-sortie-tests.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/etage-sortie/carte-sortie-tests.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

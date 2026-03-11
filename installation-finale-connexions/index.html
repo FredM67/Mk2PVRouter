@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-03-07T23:49:10+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capteurs de Courant et Connexions Électriques &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="Mise en Service et Maintenance" href="../installation-finale-mise-en-service/" />
+    <link rel="prev" title="Installation Finale dans le Système Électrique" href="../installation-finale/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/test-logiciel/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Capteurs de Courant et Connexions Électriques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-des-capteurs-de-courant-ct">Installation des Capteurs de Courant (<span class="xref std std-term">CT</span>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#emplacement-des-ct">Emplacement des <span class="xref std std-term">CT</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#schema-d-installation-monophase">Schéma d’installation — Monophasé</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#schema-d-installation-triphase">Schéma d’installation — Triphasé</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sens-d-installation-des-ct">Sens d’Installation des <span class="xref std std-term">CT</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#procedure-d-installation-des-ct">Procédure d’Installation des <span class="xref std std-term">CT</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verification-du-sens-des-ct-apres-installation">Vérification du Sens des <span class="xref std std-term">CT</span> (Après Installation)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#connexions-electriques-au-tableau">Connexions Électriques au Tableau</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#protection-electrique-du-systeme">Protection Électrique du Système</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cablage-d-alimentation-du-mk2pvrouter">Câblage d’alimentation du Mk2PVRouter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sections-de-cables-des-charges">Sections de câbles des charges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schema-de-raccordement">Schéma de Raccordement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raccordement-des-etages-de-sortie">Raccordement des étages de sortie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#procedure-de-connexion-electricien-qualifie">Procédure de Connexion (Électricien Qualifié)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-led-et-signalisation">Problèmes LED et Signalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-de-communication-rf">💻 Problèmes de Communication RF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#obtenir-de-laide">Obtenir de l’Aide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Capteurs de Courant et Connexions Électriques</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/installation-finale-connexions.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="capteurs-de-courant-et-connexions-electriques">
+<span id="installation-finale-connexions"></span><h1>Capteurs de Courant et Connexions Électriques<a class="headerlink" href="#capteurs-de-courant-et-connexions-electriques" title="Lien vers cette rubrique"></a></h1>
+<section id="installation-des-capteurs-de-courant-ct">
+<h2>Installation des Capteurs de Courant (<a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a>)<a class="headerlink" href="#installation-des-capteurs-de-courant-ct" title="Lien vers cette rubrique"></a></h2>
+<p>Les capteurs de courant (Current Transformers) se placent sur les câbles d’alimentation principale.</p>
+<section id="emplacement-des-ct">
+<h3>Emplacement des <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a><a class="headerlink" href="#emplacement-des-ct" title="Lien vers cette rubrique"></a></h3>
+<p><strong>CT Grille — Mesure de la consommation/injection réseau</strong></p>
+<p>Les <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> Grille sont des capteurs à clip installés sur les câbles de <strong>phase</strong> principaux, entre le compteur et le tableau électrique. Ils mesurent le bilan énergétique du foyer (consommation ou injection).</p>
+<ul class="simple">
+<li><p><strong>Monophasé</strong> : 1 <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> à clip sur la phase unique (CT1)</p></li>
+<li><p><strong>Triphasé avec neutre</strong> : 3 <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> à clip sur les 3 phases (CT1, CT2, CT3)</p></li>
+<li><p><strong>Triphasé sans neutre</strong> : 2 <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> suffisent (CT1, CT2) — <a class="reference internal" href="../glossary/#term-Theoreme-de-Blondel"><span class="xref std std-term">théorème de Blondel</span></a></p></li>
+</ul>
+<p><strong>CT Diversion — Mesure de la puissance routée</strong> (optionnel)</p>
+<p>Le <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> Diversion est installé sur le câble de phase reliant l’étage de sortie à la charge (chauffe-eau). Il mesure la puissance effectivement routée vers la charge.</p>
+<p>⚠️ Ce <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> est un <strong>tore</strong> (anneau fermé) à travers lequel passe le câble de phase — contrairement aux <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> Grille qui sont des capteurs à clip ouvrant. Il est monté <strong>à l’intérieur du boîtier</strong> du Mk2PVRouter.</p>
+<section id="schema-d-installation-monophase">
+<h4>Schéma d’installation — Monophasé<a class="headerlink" href="#schema-d-installation-monophase" title="Lien vers cette rubrique"></a></h4>
+<figure class="align-center" id="id1">
+<div class="graphviz"><object data="../_images/graphviz-6997961e197cb4c03fecd9004b089a81104b77ad.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">Schéma d'installation des capteurs de courant en monophasé</p></object></div>
+<figcaption>
+<p><span class="caption-text">Emplacement des CT — Installation monophasée</span><a class="headerlink" href="#id1" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="schema-d-installation-triphase">
+<h4>Schéma d’installation — Triphasé<a class="headerlink" href="#schema-d-installation-triphase" title="Lien vers cette rubrique"></a></h4>
+<figure class="align-center" id="id2">
+<div class="graphviz"><object data="../_images/graphviz-44bd5a34a91acfc0996294899b553470157f6d40.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">Schéma d'installation des capteurs de courant en triphasé</p></object></div>
+<figcaption>
+<p><span class="caption-text">Emplacement des CT — Installation triphasée</span><a class="headerlink" href="#id2" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>Chaque CT doit correspondre à la phase connectée sur le connecteur secteur du routeur.</strong> La phase qui passe dans CT1 doit être raccordée sur <strong>L1</strong>, celle qui passe dans CT2 sur <strong>L2</strong>, et celle qui passe dans CT3 sur <strong>L3</strong>. Un décalage entre les CT et les phases provoquera des mesures de puissance incorrectes.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les flèches (→) sur les <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> indiquent le sens d’installation : <strong>vers la maison</strong> (depuis le compteur). En triphasé sans neutre, CT3 n’est pas nécessaire (<a class="reference internal" href="../glossary/#term-Theoreme-de-Blondel"><span class="xref std std-term">théorème de Blondel</span></a>).</p>
+</div>
+</section>
+</section>
+<section id="sens-d-installation-des-ct">
+<h3>Sens d’Installation des <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a><a class="headerlink" href="#sens-d-installation-des-ct" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>⚠️ <strong>LE SENS DES CT EST CRUCIAL</strong></p>
+<p>Un <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> installé à l’envers inversera le signe de la mesure :</p>
+<ul class="simple">
+<li><p>Le routeur verra une <strong>production</strong> alors qu’il y a <strong>consommation</strong></p></li>
+<li><p>Le routeur verra une <strong>consommation</strong> alors qu’il y a <strong>production</strong></p></li>
+<li><p><strong>Résultat</strong> : Le routeur fonctionnera à l’envers et <strong>augmentera votre facture</strong> au lieu de la réduire</p></li>
+</ul>
+</div>
+<p><strong>Règle de base :</strong></p>
+<p>La <strong>flèche</strong> gravée sur le <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> doit pointer dans le <strong>sens du flux d’énergie</strong> :</p>
+<ul class="simple">
+<li><p><strong>CT Grille</strong> : Flèche pointant <strong>VERS la maison</strong> (depuis le compteur)</p></li>
+<li><p><strong>CT Diversion</strong> : Flèche pointant <strong>VERS la charge</strong> (chauffe-eau)</p></li>
+</ul>
+<p><strong>Marquages K et L :</strong></p>
+<p>La plupart des <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> portent des repères <strong>K</strong> et <strong>L</strong> sur le boîtier ou sur les fils du secondaire, en plus de la flèche :</p>
+<ul class="simple">
+<li><p><strong>K</strong> (parfois noté <strong>K</strong>, <strong>P1</strong> ou <strong>S1</strong>) : borne qui devient <strong>positive</strong> quand le courant circule dans le sens de la flèche</p></li>
+<li><p><strong>L</strong> (parfois noté <strong>L</strong>, <strong>P2</strong> ou <strong>S2</strong>) : borne complémentaire</p></li>
+</ul>
+<p>Ces marquages permettent de vérifier le raccordement au connecteur de la carte :</p>
+<ul class="simple">
+<li><p>Si le sens du <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> est correct (flèche vers la maison) mais que la puissance affichée est <strong>négative</strong>, il suffit d” <strong>inverser les deux fils</strong> (K ↔ L) sur le connecteur Molex au lieu de retourner physiquement le CT.</p></li>
+<li><p>Inversement, inverser K et L revient au même que retourner le CT de 180°.</p></li>
+</ul>
+</section>
+<section id="procedure-d-installation-des-ct">
+<h3>Procédure d’Installation des <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a><a class="headerlink" href="#procedure-d-installation-des-ct" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>⚠️ <strong>DISJONCTEUR GÉNÉRAL COUPÉ OBLIGATOIRE</strong></p>
+<p>Ne JAMAIS installer les <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> sous tension !</p>
+<p>Un <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> à sortie courant dont le secondaire est <strong>ouvert</strong> (non branché) se comporte comme un transformateur à vide : il peut développer une <strong>tension de plusieurs centaines de volts</strong> aux bornes de ses fils, suffisante pour provoquer un arc électrique, endommager le CT ou le circuit d’entrée de la carte.</p>
+<p>Même avec un CT à sortie tension (burden intégré), manipuler un CT autour d’un conducteur sous tension présente un risque d’électrocution.</p>
+</div>
+<ol class="arabic">
+<li><p><strong>Couper le disjoncteur général</strong> et vérifier absence de tension</p></li>
+<li><p><strong>Identifier le câble de phase</strong> principal (généralement rouge, marron ou noir)</p>
+<p>⚠️ Ne PAS placer le <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> sur le neutre (bleu) ou la terre (vert/jaune)</p>
+</li>
+<li><p><strong>Brancher la fiche jack 3,5 mm du CT</strong> dans la prise jack du câble adaptateur (relié au connecteur Molex de la carte) <strong>avant</strong> de clipser le CT sur le câble</p>
+<p>Le secondaire du CT doit toujours être <strong>fermé sur sa charge</strong> (le circuit de la carte) avant d’être traversé par un courant primaire. Clipser un CT à sortie courant sur un conducteur actif alors que son jack n’est pas branché risque de générer une surtension destructrice.</p>
+</li>
+<li><p><strong>Ouvrir le CT</strong> en appuyant sur le clip de fermeture</p></li>
+<li><p><strong>Placer le CT autour du câble de phase UNIQUEMENT</strong></p>
+<ul class="simple">
+<li><p>Un seul conducteur doit passer dans le <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a></p></li>
+<li><p>Ne pas passer plusieurs câbles ensemble (sauf si intentionnel pour mesure différentielle)</p></li>
+</ul>
+</li>
+<li><p><strong>Vérifier le sens</strong> : Flèche vers la maison pour <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> Grille</p></li>
+<li><p><strong>Refermer fermement le CT</strong> jusqu’au clic de verrouillage</p></li>
+<li><p><strong>Vérifier que le CT est bien clipsé</strong> (tirer légèrement pour tester)</p></li>
+<li><p><strong>Fixer le câble du CT</strong> pour éviter qu’il se débranche par traction</p></li>
+</ol>
+</section>
+<section id="verification-du-sens-des-ct-apres-installation">
+<h3>Vérification du Sens des <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> (Après Installation)<a class="headerlink" href="#verification-du-sens-des-ct-apres-installation" title="Lien vers cette rubrique"></a></h3>
+<p>Une fois le routeur sous tension (après toutes les connexions) :</p>
+<ol class="arabic simple">
+<li><p><strong>Allumer un appareil de forte puissance</strong> (bouilloire 2 000 W, radiateur)</p></li>
+<li><p><strong>Observer l’affichage du routeur</strong> (si écran présent) ou les logs série</p></li>
+<li><p><strong>Vérifier que la puissance affichée est POSITIVE</strong> quand vous consommez</p>
+<ul class="simple">
+<li><p>Si la puissance est <strong>négative</strong> alors que vous consommez → <strong>CT à l’envers</strong></p></li>
+<li><p>Couper le disjoncteur, retourner le <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a>, retester</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="connexions-electriques-au-tableau">
+<h2>Connexions Électriques au Tableau<a class="headerlink" href="#connexions-electriques-au-tableau" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>⚠️⚠️⚠️ <strong>ZONE À HAUT RISQUE — TENSION MORTELLE</strong> ⚠️⚠️⚠️</p>
+<p>Les opérations suivantes présentent un risque <strong>MAXIMAL</strong> d’électrocution.</p>
+<p><strong>SI VOUS N’ÊTES PAS ÉLECTRICIEN QUALIFIÉ, ARRÊTEZ-VOUS ICI.</strong></p>
+<p>Faites appel à un professionnel certifié.</p>
+</div>
+<section id="protection-electrique-du-systeme">
+<h3>Protection Électrique du Système<a class="headerlink" href="#protection-electrique-du-systeme" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Architecture du système :</strong></p>
+<ul class="simple">
+<li><p>Le <strong>Mk2PVRouter lui-même</strong> consomme moins de <strong>5 W</strong> (alimentation électronique uniquement)</p></li>
+<li><p>Les <strong>circuits de puissance</strong> (triacs) sont <strong>indépendants</strong> et pilotent les charges</p></li>
+<li><p>Chaque <strong>charge</strong> (chauffe-eau, radiateur) conserve sa <strong>propre protection</strong> existante</p></li>
+</ul>
+</div>
+<p>Le Mk2PVRouter <strong>électronique</strong> nécessite un disjoncteur dédié pour son alimentation :</p>
+<ul class="simple">
+<li><p><strong>Type</strong> : Disjoncteur divisionnaire bipolaire en monophasé (Phase + Neutre), tétrapolaire en triphasé (3 Phases + Neutre)</p></li>
+<li><p><strong>Calibre</strong> : 2 A ou 6 A (suffisant pour l’électronique &lt; 5 W)</p></li>
+<li><p><strong>Courbe</strong> : Type C (protection usage courant)</p></li>
+<li><p><strong>Pouvoir de coupure</strong> : Minimum 4,5 kA (6 kA ou 10 kA recommandé)</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>⚠️ <strong>POURQUOI UN DISJONCTEUR DÉDIÉ ?</strong></p>
+<ul class="simple">
+<li><p><strong>Isolation</strong> : Permet de couper uniquement le routeur sans affecter les charges</p></li>
+<li><p><strong>Protection</strong> : Protège l’électronique du routeur uniquement</p></li>
+<li><p><strong>Maintenance</strong> : Facilite les interventions futures</p></li>
+<li><p><strong>Sécurité</strong> : En cas de défaut électronique, seul le routeur est déconnecté</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>Les charges restent protégées par leurs disjoncteurs d’origine</strong></p>
+<p>Le Mk2PVRouter ne remplace PAS la protection existante des charges :</p>
+<ul class="simple">
+<li><p>Chauffe-eau : Conserve son disjoncteur 16 A ou 20 A</p></li>
+<li><p>Radiateur : Conserve son disjoncteur adapté à sa puissance</p></li>
+<li><p>Le routeur <strong>pilote</strong> les triacs, mais ne <strong>protège pas</strong> les charges</p></li>
+</ul>
+</div>
+</section>
+<section id="cablage-d-alimentation-du-mk2pvrouter">
+<h3>Câblage d’alimentation du Mk2PVRouter<a class="headerlink" href="#cablage-d-alimentation-du-mk2pvrouter" title="Lien vers cette rubrique"></a></h3>
+<p>Le routeur lui-même consomme moins de 5 W (alimentation électronique uniquement). Son câble d’alimentation relie le disjoncteur dédié (voir ci-dessus) au connecteur secteur de la carte-mère (PE, N, L1 et éventuellement L2, L3) :</p>
+<ul class="simple">
+<li><p><strong>Section</strong> : 0,75 mm² ou 1,5 mm² (largement suffisant)</p></li>
+<li><p><strong>Nombre de conducteurs</strong> : 3 fils en monophasé (PE + N + L), 5 fils en triphasé (PE + N + L1 + L2 + L3)</p></li>
+</ul>
+</section>
+<section id="sections-de-cables-des-charges">
+<h3>Sections de câbles des charges<a class="headerlink" href="#sections-de-cables-des-charges" title="Lien vers cette rubrique"></a></h3>
+<p>Les charges (chauffe-eau, radiateur…) sont raccordées aux étages de sortie, <strong>pas à la carte-mère</strong>. L’étage de sortie (<a class="reference internal" href="../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> ou relais) s’insère dans le circuit de phase existant de la charge. En général, les câbles entre le disjoncteur de la charge et la charge elle-même sont <strong>déjà en place</strong> et n’ont pas besoin d’être remplacés.</p>
+<p>À titre indicatif, voici les sections minimales selon la norme NF C 15-100 :</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Puissance charge</p></th>
+<th class="head"><p>Section câble minimum</p></th>
+<th class="head"><p>Disjoncteur max</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Jusqu’à 2 300 W</p></td>
+<td><p>1,5 mm²</p></td>
+<td><p>10 A</p></td>
+</tr>
+<tr class="row-odd"><td><p>2 300 W - 3 680 W</p></td>
+<td><p>2,5 mm²</p></td>
+<td><p>16 A</p></td>
+</tr>
+<tr class="row-even"><td><p>3 680 W - 5 750 W</p></td>
+<td><p>4 mm²</p></td>
+<td><p>25 A</p></td>
+</tr>
+<tr class="row-odd"><td><p>5 750 W - 7 360 W</p></td>
+<td><p>6 mm²</p></td>
+<td><p>32 A</p></td>
+</tr>
+</tbody>
+</table>
+<p>Pour un <strong>chauffe-eau classique 2 000–3 000 W</strong>, les câbles existants sont normalement en <strong>2,5 mm²</strong> avec disjoncteur <strong>16 A</strong> ou <strong>20 A</strong>.</p>
+</section>
+<section id="schema-de-raccordement">
+<h3>Schéma de Raccordement<a class="headerlink" href="#schema-de-raccordement" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Monophasé (230 V) :</strong></p>
+<p>Connexions entre le tableau électrique et le MK2PVRouter :</p>
+<ul class="simple">
+<li><p><strong>L (Phase)</strong> : du disjoncteur dédié bipolaire (2 A ou 6 A) → entrée L du routeur</p></li>
+<li><p><strong>N (Neutre)</strong> : du disjoncteur → entrée N du routeur</p></li>
+<li><p><strong>⏚ (Terre)</strong> : du disjoncteur → entrée PE du routeur</p></li>
+</ul>
+<p>Le raccordement des charges aux étages de sortie est détaillé dans la section suivante.</p>
+<p><strong>Triphasé (3 × 230 V = 400 V) :</strong></p>
+<p>Connexions entre le tableau électrique et le MK2PVRouter :</p>
+<ul class="simple">
+<li><p><strong>L1 (Phase 1)</strong> : du disjoncteur dédié tétrapolaire (2 A ou 6 A) → entrée L1 du routeur</p></li>
+<li><p><strong>L2 (Phase 2)</strong> : du disjoncteur → entrée L2 du routeur</p></li>
+<li><p><strong>L3 (Phase 3)</strong> : du disjoncteur → entrée L3 du routeur</p></li>
+<li><p><strong>N (Neutre)</strong> : du disjoncteur → entrée N du routeur</p></li>
+<li><p><strong>⏚ (Terre)</strong> : du disjoncteur → entrée PE du routeur</p></li>
+</ul>
+<p>Le raccordement des charges aux étages de sortie est détaillé dans la section suivante.</p>
+</section>
+<section id="raccordement-des-etages-de-sortie">
+<span id="raccordement-etages-sortie"></span><h3>Raccordement des étages de sortie<a class="headerlink" href="#raccordement-des-etages-de-sortie" title="Lien vers cette rubrique"></a></h3>
+<p>Chaque étage de sortie (carte <a class="reference internal" href="../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> ou relais) se raccorde à la fois à la carte-mère (signal de commande) et au circuit de puissance de la charge.</p>
+<p><strong>Côté basse tension (signal) :</strong></p>
+<ul class="simple">
+<li><p>Reliez le connecteur Molex de l’étage de sortie à la sortie numérique correspondante de la carte-mère (D2–D13) à l’aide d’un câble Molex 2 fils.</p></li>
+<li><p>Chaque étage de sortie est piloté par <strong>une seule</strong> sortie numérique.</p></li>
+</ul>
+<p><strong>Côté haute tension (puissance) :</strong></p>
+<p>Le connecteur de puissance de l’étage de sortie a 3 broches : la broche centrale est inutilisée, les deux broches extérieures raccordent la <strong>phase</strong> en série avec la charge à travers le <a class="reference internal" href="../glossary/#term-Triac"><span class="xref std std-term">triac</span></a>.</p>
+<ul class="simple">
+<li><p><strong>Entrée phase</strong> : depuis le disjoncteur dédié à la charge → broche du connecteur de puissance</p></li>
+<li><p><strong>Sortie phase</strong> : autre broche du connecteur de puissance → charge (chauffe-eau, radiateur…)</p></li>
+<li><p><strong>Neutre</strong> : du disjoncteur → directement à la charge (ne passe <strong>pas</strong> par l’étage de sortie)</p></li>
+<li><p><strong>Terre</strong> : du disjoncteur → directement à la charge et au dissipateur du triac</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Le <a class="reference internal" href="../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> ne coupe que la <strong>phase</strong>. Le neutre reste connecté en permanence à la charge. Pour intervenir sur la charge, il faut couper son disjoncteur dédié.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Chaque charge pilotée doit être protégée par son <strong>propre disjoncteur</strong>, distinct du disjoncteur d’alimentation du routeur.</p>
+</div>
+<p>Chaque étage de sortie constitue un <strong>circuit de puissance indépendant</strong>. Le nombre d’étages de sortie dépend du nombre de charges à piloter, pas de la configuration du routeur :</p>
+<ul class="simple">
+<li><p><strong>Charge monophasée</strong> (chauffe-eau classique, radiateur) : <strong>1 étage de sortie</strong> par charge, protégé par un disjoncteur bipolaire (16 A ou 20 A selon la puissance).</p></li>
+<li><p><strong>Charge triphasée sans neutre</strong> (chauffe-eau triphasé en triangle) : <strong>2 étages de sortie</strong> pour la même charge, protégés par un <strong>unique disjoncteur tétrapolaire</strong>.</p></li>
+<li><p><strong>Charge triphasée avec neutre</strong> (chauffe-eau triphasé en étoile) : <strong>3 étages de sortie</strong> pour la même charge, protégés par un <strong>unique disjoncteur tétrapolaire</strong>.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Pour une charge triphasée, tous les étages de sortie associés doivent être protégés par un <strong>seul disjoncteur multipolaire</strong>. L’utilisation de disjoncteurs unipolaires séparés est dangereuse : en cas de coupure d’une seule phase, la charge triphasée peut être endommagée ou provoquer un déséquilibre.</p>
+</div>
+</section>
+<section id="procedure-de-connexion-electricien-qualifie">
+<h3>Procédure de Connexion (Électricien Qualifié)<a class="headerlink" href="#procedure-de-connexion-electricien-qualifie" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>COUPER le disjoncteur général</strong> du tableau</p></li>
+<li><p><strong>Vérifier l’absence de tension</strong> avec multimètre ET testeur sans contact</p></li>
+<li><p><strong>Attendre 5 minutes</strong> (décharge des condensateurs éventuels)</p></li>
+<li><p><strong>Porter les EPI</strong> (gants isolants, chaussures de sécurité)</p></li>
+<li><p><strong>Installer le disjoncteur dédié du routeur</strong> dans le tableau (2 A ou 6 A, voir ci-dessus)</p></li>
+<li><p><strong>Vérifier les disjoncteurs des charges</strong> pilotées (un disjoncteur par charge monophasée, un disjoncteur multipolaire par charge triphasée)</p></li>
+<li><p><strong>Connecter les câbles d’alimentation</strong> au disjoncteur :</p>
+<ul class="simple">
+<li><p>Phase (L) : Câble rouge/marron/noir</p></li>
+<li><p>Neutre (N) : Câble bleu</p></li>
+<li><p>Terre (⏚) : Câble vert/jaune</p></li>
+</ul>
+</li>
+<li><p><strong>Connecter les câbles vers le Mk2PVRouter</strong> :</p>
+<ul class="simple">
+<li><p>Respecter les couleurs (Phase, Neutre, Terre)</p></li>
+<li><p>Serrer les connexions au couple recommandé (tournevis dynamométrique)</p></li>
+<li><p>Vérifier qu’aucun brin de cuivre ne dépasse du bornier</p></li>
+</ul>
+</li>
+<li><p><strong>Connecter les étages de sortie</strong> aux charges via leurs connecteurs de puissance (voir <a class="reference internal" href="#raccordement-etages-sortie"><span class="std std-ref">Raccordement des étages de sortie</span></a>)</p></li>
+<li><p><strong>Vérifier toutes les connexions</strong> (tirer légèrement sur chaque câble)</p></li>
+<li><p><strong>Vérifier qu’aucun outil ne reste dans le tableau</strong></p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../installation-finale/" class="btn btn-neutral float-left" title="Installation Finale dans le Système Électrique" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../installation-finale-mise-en-service/" class="btn btn-neutral float-right" title="Mise en Service et Maintenance" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 07 mars 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/installation-finale-connexions.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/installation-finale-connexions.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
