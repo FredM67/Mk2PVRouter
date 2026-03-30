@@ -10,7 +10,7 @@ BUILDDIR      = _build
 
 # Hardware submodule asset directories
 MAINBOARD_ASSETS = hardware/mainboard/assets
-MK2WIFI_ASSETS     = hardware/expansion_boards/mk2Wifi/assets
+MK2WIFI_ASSETS     = hardware/expansion_boards/mk2Wifi-C6/assets
 INDICATOR_ASSETS   = hardware/Indicator/assets
 IMG_DIR            = $(SOURCEDIR)/img
 
@@ -29,10 +29,10 @@ copy-assets:
 		cp $(MAINBOARD_ASSETS)/3phaseDiverter-bare.png  $(IMG_DIR)/mainboard-bare.png; \
 	fi
 	@if [ -d "$(MK2WIFI_ASSETS)" ]; then \
-		cp $(MK2WIFI_ASSETS)/mk2Wifi-front.png $(IMG_DIR)/mk2wifi-front.png; \
-		cp $(MK2WIFI_ASSETS)/mk2Wifi-back.png  $(IMG_DIR)/mk2wifi-back.png; \
-		cp $(MK2WIFI_ASSETS)/mk2Wifi-smd.png   $(IMG_DIR)/mk2wifi-smd.png; \
-		cp $(MK2WIFI_ASSETS)/mk2Wifi-bare.png  $(IMG_DIR)/mk2wifi-bare.png; \
+		cp $(MK2WIFI_ASSETS)/mk2Wifi-C6-front.png $(IMG_DIR)/mk2wifi-front.png; \
+		cp $(MK2WIFI_ASSETS)/mk2Wifi-C6-back.png  $(IMG_DIR)/mk2wifi-back.png; \
+		cp $(MK2WIFI_ASSETS)/mk2Wifi-C6-smd.png   $(IMG_DIR)/mk2wifi-smd.png; \
+		cp $(MK2WIFI_ASSETS)/mk2Wifi-C6-bare.png  $(IMG_DIR)/mk2wifi-bare.png; \
 	fi
 	@if [ -d "$(INDICATOR_ASSETS)" ]; then \
 		cp $(INDICATOR_ASSETS)/Indicator-front.png      $(IMG_DIR)/indicator-front.png; \

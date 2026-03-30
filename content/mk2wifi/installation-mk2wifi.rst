@@ -39,7 +39,7 @@ Installation physique
    Le routeur doit être **hors tension** pour brancher ou débrancher le module mk2Wifi.
 
 .. warning::
-   Avant de brancher le module, vérifiez que le cavalier **V sel.** de la carte principale est en position **3–centre (3,3 V)**. Les broches GPIO de l’ESP32-C3 ne tolèrent que 3,3 V — une tension de 5 V sur ces lignes **endommagerait le module** (voir :ref:`cavaliers`).
+   Avant de brancher le module, vérifiez que le cavalier **V sel.** de la carte principale est en position **3–centre (3,3 V)**. Les broches GPIO de l’ESP32-C6 ne tolèrent que 3,3 V — une tension de 5 V sur ces lignes **endommagerait le module** (voir :ref:`cavaliers`).
 
 #. **Vérifiez l’orientation** : Les connecteurs TRIG_EXT et UART_EXT du module doivent s’aligner avec ceux de la carte principale. Le module ne doit pas être retourné.
 
@@ -72,7 +72,7 @@ Procédure
    .. tip::
       Il s’agit du petit bouton-poussoir situé sur la carte. Si le module est déjà alimenté par USB, débranchez et rebranchez le câble USB-C tout en maintenant le bouton enfoncé.
 
-#. **L’ESP32-C3** dispose d’un contrôleur USB-série/JTAG intégré — aucun programmateur externe n’est nécessaire
+#. **L’ESP32-C6** dispose d’un contrôleur USB-série/JTAG intégré — aucun programmateur externe n’est nécessaire
 
 #. **Chargez le firmware** à l’aide de votre outil de développement préféré (Arduino IDE, PlatformIO, esptool, etc.)
 

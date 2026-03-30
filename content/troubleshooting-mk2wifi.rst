@@ -5,7 +5,7 @@
 ======================================
 
 .. note::
-   Cette section concerne uniquement les kits équipés du module d’extension :term:`mk2Wifi` (ESP32-C3).
+   Cette section concerne uniquement les kits équipés du module d’extension :term:`mk2Wifi` (ESP32-C6).
 
 Le Module ne s’Allume Pas
 =========================
@@ -41,7 +41,7 @@ Le Module ne s’Allume Pas
 Programmation USB-C Impossible
 ==============================
 
-**Symptôme :** L’ESP32-C3 n’est pas détecté par l’ordinateur via USB-C
+**Symptôme :** L’ESP32-C6 n’est pas détecté par l’ordinateur via USB-C
 
 .. admonition:: Liste de contrôle — Connexion USB-C
 
@@ -67,7 +67,7 @@ Programmation USB-C Impossible
 
    #. ☐ **Pilotes USB-série ?**
 
-      - L’ESP32-C3 dispose d’un contrôleur **USB-série/JTAG intégré** — aucun pilote externe normalement nécessaire
+      - L’ESP32-C6 dispose d’un contrôleur **USB-série/JTAG intégré** — aucun pilote externe normalement nécessaire
       - Windows : vérifier dans le Gestionnaire de périphériques qu’un nouveau port COM apparaît
       - Linux : ``dmesg | grep tty`` doit montrer un nouveau périphérique
 
@@ -101,11 +101,11 @@ Connexion WiFi Impossible
 
 **Vérifications :**
 
-#. **Réseau en 2,4 GHz ?**
+#. **Réseau en 2,4 GHz ?**
 
-   - L’ESP32-C3 supporte **uniquement le 2,4 GHz** (802.11 b/g/n)
-   - Les réseaux 5 GHz ne sont **pas visibles** par le module
-   - Si votre box utilise un SSID unique pour 2,4 et 5 GHz, essayez de séparer les bandes
+   - L’ESP32-C6 supporte **uniquement le 2,4 GHz** (802.11 b/g/n/ax)
+   - Les réseaux 5 GHz ne sont **pas visibles** par le module
+   - Si votre box utilise un SSID unique pour 2,4 et 5 GHz, essayez de séparer les bandes
 
 #. **Identifiants corrects ?**
 
@@ -181,7 +181,7 @@ Capteur DS18B20 — Pas de Température
 
    #. ☐ **Cavalier TEMP en bonne position ?**
 
-      - En position **3–centre** : le DS18B20 est géré par le mk2Wifi (ESP32-C3)
+      - En position **3–centre** : le DS18B20 est géré par le mk2Wifi (ESP32-C6)
       - En position **1–centre** : le DS18B20 est géré par la carte principale (ATmega328P, broche D3)
       - Voir :ref:`cavaliers`
 

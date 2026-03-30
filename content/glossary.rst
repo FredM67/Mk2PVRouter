@@ -262,16 +262,16 @@ Termes Techniques Avancés
      | Technique permettant de mettre à jour le firmware d’un appareil via WiFi, sans connexion physique.
      | Le module mk2Wifi supporte les mises à jour OTA après le premier chargement par USB-C.
 
-   ESP32-C3
-     | Microcontrôleur RISC-V simple cœur de la société Espressif, intégrant WiFi 802.11 b/g/n et Bluetooth LE 5.
-     | Le module **mk2Wifi** utilise un ESP32-C3-MINI-1 pour ajouter la connectivité sans fil au Mk2PVRouter.
+   ESP32-C6
+     | Microcontrôleur RISC-V simple cœur de la société Espressif, intégrant WiFi 6 (802.11ax), Bluetooth LE 5, Zigbee et Thread (802.15.4).
+     | Le module **mk2Wifi** utilise un ESP32-C6-MINI-1 pour ajouter la connectivité sans fil au Mk2PVRouter.
 
    Split-phase
      | Système électrique nord-américain composé de deux phases à 180° fournissant 120 V entre chaque phase et le neutre, et 240 V entre les deux phases.
      | La carte universelle 3phaseDiverter supporte cette configuration.
 
    mk2Wifi
-     | Module d’extension WiFi/BLE pour le Mk2PVRouter, basé sur un :term:`ESP32-C3`.
+     | Module d’extension WiFi/BLE pour le Mk2PVRouter, basé sur un :term:`ESP32-C6`.
      | Se branche sur les connecteurs TRIG_EXT et UART_EXT de la carte principale.
      | Ajoute la connectivité sans fil, un écran OLED optionnel et la gestion du capteur de température DS18B20.
 

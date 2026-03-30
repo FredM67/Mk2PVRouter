@@ -117,7 +117,7 @@ Le Mk2PVRouter offre également des fonctionnalités avancées :
 
 - **Interfaçage avec Home Assistant** :
 
-  - En ajoutant le module **mk2Wifi** (ESP32-C3), le Mk2PVRouter peut être intégré à Home Assistant pour une gestion centralisée et une visualisation des données en temps réel.
+  - En ajoutant le module **mk2Wifi** (ESP32-C6), le Mk2PVRouter peut être intégré à Home Assistant pour une gestion centralisée et une visualisation des données en temps réel.
   - Il est également possible de piloter certaines fonctions du routeur via Home Assistant, comme la **marche forcée**.
 
   .. note::
