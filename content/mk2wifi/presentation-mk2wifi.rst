@@ -23,6 +23,8 @@ Le module :term:`mk2Wifi` est un module d’extension qui ajoute une connectivi
 
 Le module se branche directement sur la carte principale via les connecteurs **TRIG_EXT** et **UART_EXT**, et est alimenté en +5 V par celle-ci.
 
+Bien que le module puisse être programmé avec n’importe quel firmware compatible ESP32-C6 (Arduino, ESP-IDF…), il est principalement conçu pour fonctionner avec **ESPHome**, permettant une intégration directe avec **Home Assistant**.
+
 .. note::
    Les composants :term:`CMS` du module mk2Wifi sont **assemblés en usine**. Seuls les **deux connecteurs à broches** (pin headers) doivent être soudés par l’utilisateur pour relier le module à la carte-mère.
 

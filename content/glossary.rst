@@ -262,6 +262,10 @@ Termes Techniques Avancés
      | Technique permettant de mettre à jour le firmware d’un appareil via WiFi, sans connexion physique.
      | Le module mk2Wifi supporte les mises à jour OTA après le premier chargement par USB-C.
 
+   ESPHome
+     | Plateforme open-source de configuration et de gestion de microcontrôleurs ESP32/ESP8266 via des fichiers YAML.
+     | Permet une intégration native avec **Home Assistant**. Le module mk2Wifi est principalement conçu pour fonctionner avec ESPHome.
+
    ESP32-C6
      | Microcontrôleur RISC-V simple cœur de la société Espressif, intégrant WiFi 6 (802.11ax), Bluetooth LE 5, Zigbee et Thread (802.15.4).
      | Le module **mk2Wifi** utilise un ESP32-C6-MINI-1 pour ajouter la connectivité sans fil au Mk2PVRouter.
