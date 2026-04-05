@@ -210,7 +210,7 @@ Ressources Communautaires
    - Moteur de recherche (problème déjà résolu ?)
    - Poster nouveau sujet avec détails
 
-#. **Email support :** support@mk2pvrouter.fr
+#. **Email support :** mk2pvrouter.france@gmail.com
 
    - Temps réponse : 2–5 jours ouvrés
 
