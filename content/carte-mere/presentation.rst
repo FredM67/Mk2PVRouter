@@ -108,7 +108,7 @@ Connecteurs
      - Molex SL 1×02 (pas 2,54 mm)
      - Entrée :term:`CT` L3 (triphasé uniquement)
    * - D2 à D13
-     - Molex SL 1×02 (GND, I/O) + Molex SL 1×03 (GND, I/O, +5 V) par sortie
+     - Molex SL 1×02 (GND, I/O) + Molex SL 1×03 (GND, I/O, +5 V) par sortie
      - Sorties numériques — voir :ref:`sorties-numeriques`
 
 Brochage des connecteurs
