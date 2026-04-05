@@ -16,7 +16,7 @@
 
    | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Tests électriques effectués (voir :ref:`tests-electriques`)
-   | ☐ Firmware installé et fonctionnel (voir :ref:`test-logiciel`)
+   | ☐ Firmware installé et fonctionnel (voir :ref:`logiciel`)
    | ☐ Routeur alimenté par le secteur
    | ☐ Multimètre ou wattmètre disponible
    | ☐ Accès au compteur d’électricité

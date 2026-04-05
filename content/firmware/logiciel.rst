@@ -1,8 +1,8 @@
-.. _test-logiciel:
+.. _logiciel:
 
-===============
-Tests logiciels
-===============
+================================
+Installation et tests logiciels
+================================
 
 | Une fois le processeur installé, il serait judicieux de vérifier que l’alimentation électrique fonctionne toujours correctement.
 | Si c’est le cas, nous pouvons exécuter un croquis (programme) pour vérifier si le processeur fonctionne correctement.
@@ -47,13 +47,6 @@ Installation du Firmware — Monophasé
 
 .. include:: firmware-monophase.inc.rst
 
-Installation du Firmware — Triphasé
-------------------------------------
-
-**Étapes communes à toutes les versions** : :ref:`installation-logiciel`
-
-.. include:: firmware-triphase.inc.rst
-
 Test de la partie *mesures* — Monophasé
 -----------------------------------------
 
@@ -76,6 +69,13 @@ Le programme, qui se trouve également sur la page Téléchargements, est : *Ra
 | Si aucun signal n’est disponible sur les ports **CT1** et **CT2**, les formes d’onde de ces canaux seront toutes deux des lignes droites.
 | Seul le signal de tension affichera un aspect sinusoïdal.
 | Pour vérifier le fonctionnement des ports **CT1** et **CT2** pendant que le :term:`PCB` est testé sur le banc, un câblage adapté sera nécessaire.
+
+Installation du Firmware — Triphasé
+------------------------------------
+
+**Étapes communes à toutes les versions** : :ref:`installation-logiciel`
+
+.. include:: firmware-triphase.inc.rst
 
 Test de la partie *mesures* — Triphasé
 ----------------------------------------

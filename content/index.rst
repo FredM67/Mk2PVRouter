@@ -132,7 +132,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: 💻 Logiciel & Étalonnage
    :hidden:
 
-   firmware/test-logiciel
+   firmware/logiciel
    etalonnage
 
 .. toctree::

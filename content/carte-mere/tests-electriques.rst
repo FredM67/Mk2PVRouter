@@ -96,7 +96,7 @@ Test du rail +3,3 V
 #. **Coupez l’alimentation secteur** et attendez 1 minute avant toute manipulation
 
 .. note::
-   La tension de référence VREF (1,1 V, bufferisée par l’amplificateur opérationnel LMV321A) ne peut être vérifiée qu’après insertion de l’ATmega328P **et** exécution du firmware. C’est le firmware qui active la référence interne 1,1 V du microcontrôleur. Ce test sera effectué lors de la phase :ref:`test-logiciel`.
+   La tension de référence VREF (1,1 V, bufferisée par l’amplificateur opérationnel LMV321A) ne peut être vérifiée qu’après insertion de l’ATmega328P **et** exécution du firmware. C’est le firmware qui active la référence interne 1,1 V du microcontrôleur. Ce test sera effectué lors de la phase :ref:`logiciel`.
 
 Insertion de l’ATmega328P
 --------------------------
