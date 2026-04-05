@@ -143,7 +143,7 @@ Selon le cas, il sera possible d’installer le boîtier en mode paysage ou en m
 
 Le boîtier doit être percé de trois trous : deux pour la fixation du dissipateur sur le boîtier et un au milieu pour laisser de la place au triac.
 
-.. drawio-figure:: ../drawio/boitier.drawio
+.. drawio-figure:: ../drawio/dissipateur.drawio
    :alt: Gabarit de perçage du boîtier
    :align: center
    :page-index: 1
