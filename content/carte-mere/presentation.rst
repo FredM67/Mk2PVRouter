@@ -463,7 +463,7 @@ LED témoins
 
 Deux LED témoins :term:`CMS` sont situées en haut à gauche de la carte :
 
-- **ON** : allumée lorsque la carte est sous tension (rail +3,3 V actif)
+- **ON** : allumée lorsque la carte est sous tension
 - **+5V** : allumée lorsque le rail +5 V des sorties est actif (cavalier « +5V Rail » fermé)
 
 Intégration du module mk2Wifi
