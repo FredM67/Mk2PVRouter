@@ -53,6 +53,31 @@ Si aucun signal n'est disponible sur les ports **CT1-CT3**, les formes d'onde de
 Seuls les signaux de tension afficheront un aspect sinusoïdal.
 Pour vérifier le fonctionnement des ports **CT1-CT3** pendant que le :term:`PCB` est testé sur le banc, un câblage adapté sera nécessaire.
 
+Prochaines Étapes
+-----------------
+
+✅ Le firmware est maintenant installé et fonctionnel !
+
+**Prochaines étapes :**
+
+#. **Étalonnage** : Voir chapitre :ref:`etalonnage-triphase`
+
+   L’étalonnage est **OBLIGATOIRE** pour que le routeur fonctionne correctement.
+
+#. **Installation finale** : Connexion au réseau électrique (faire appel à un électricien qualifié)
+
+#. **Configuration avancée** : Relais, sondes de température, double tarif, etc.
+
+.. warning::
+   Ne pas connecter le routeur au réseau électrique domestique avant d’avoir :
+
+   - [ ] Vérifié toutes les soudures (pas de pont, pas de soudure froide)
+   - [ ] Lu le chapitre de sécurité
+   - [ ] Fait appel à un électricien qualifié (fortement recommandé)
+
+.. important::
+   **FONCTIONNALITÉ** : L’étalonnage doit être effectué après l’installation électrique pour que le routeur mesure correctement et fonctionne de manière optimale. Le routeur peut être connecté sans étalonnage (pas de danger), mais ne fonctionnera pas correctement.
+
 .. |br| raw:: html
 
   <br/>
