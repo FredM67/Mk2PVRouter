@@ -108,7 +108,7 @@ Connecteurs
      - Molex SL 1×02 (pas 2,54 mm)
      - Entrée :term:`CT` L3 (triphasé uniquement)
    * - D2 à D13
-     - Molex SL 1×02 (GND, I/O) + Molex SL 1×03 (GND, I/O, VCC) par sortie
+     - Molex SL 1×02 (GND, I/O) + Molex SL 1×03 (GND, I/O, +5 V) par sortie
      - Sorties numériques — voir :ref:`sorties-numeriques`
 
 Brochage des connecteurs
@@ -251,9 +251,9 @@ Sorties numériques D2–D13
 Chaque sortie numérique (D2 à D13) dispose de **deux connecteurs Molex SL** sur la carte :
 
 - **1×02** (2 broches) : GND, I/O
-- **1×03** (3 broches) : GND, I/O, VCC
+- **1×03** (3 broches) : GND, I/O, +5 V
 
-Le connecteur **1×03** (GND, I/O, VCC) sert à raccorder l’étage de sortie (:term:`triac <Triac>` ou relais), qui a besoin de l’alimentation. La broche VCC de ces connecteurs est reliée au **rail +5 V**, activé par le cavalier **+5V Rail** (voir ci-dessous). Le connecteur **1×02** (GND, I/O) sert à raccorder la carte indicateur LED (voir :ref:`carte-indicateur`), qui n’a besoin que du signal de commande.
+Le connecteur **1×03** (GND, I/O, +5 V) sert à raccorder l’étage de sortie (:term:`triac <Triac>` ou relais), qui a besoin de l’alimentation. La broche +5 V de ces connecteurs est reliée au **rail +5 V**, activé par le cavalier **+5V Rail** (voir ci-dessous). Le connecteur **1×02** (GND, I/O) sert à raccorder la carte indicateur LED (voir :ref:`carte-indicateur`), qui n’a besoin que du signal de commande.
 
 .. list-table:: Disponibilité des sorties numériques
    :header-rows: 1

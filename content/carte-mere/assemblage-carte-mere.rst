@@ -163,12 +163,14 @@ Soudez les connecteurs suivants :
 Connecteurs sorties numériques (D2–D13)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Chaque sortie numérique dispose de deux emplacements Molex SL : un 2 broches (GND, I/O) et un 3 broches (GND, I/O, VCC). Soudez uniquement les connecteurs correspondant aux sorties utilisées dans votre configuration.
+Chaque sortie numérique dispose de deux emplacements Molex SL : un 2 broches (GND, I/O) et un 3 broches (GND, I/O, +5 V). Soudez uniquement les connecteurs correspondant aux sorties utilisées dans votre configuration.
 
 .. todo:: Photo à fournir — connecteurs Molex 1×02 et 1×03 soudés sur les sorties numériques.
 
 .. note::
    Les connecteurs fournis dépendent de la configuration commandée. Inutile de souder des connecteurs sur des sorties non utilisées.
+
+   La broche +5 V du connecteur 1×03 est alimentée par le **rail +5 V des sorties**, **désactivé par défaut**. Ce rail est uniquement nécessaire si vous utilisez des **cartes de sortie relais** (le relais a besoin du +5 V pour sa bobine). Pour l’activer, fermez le cavalier de soudure **« +5V Rail »** situé en haut à droite de la carte, près du connecteur RESET (voir :ref:`cavaliers`).
 
    - **D2\*, D10\*–D13\*** : réservées au module RF (si soudé)
    - **D5#–D9#** : partagées avec le module :term:`mk2Wifi` (si présent)
