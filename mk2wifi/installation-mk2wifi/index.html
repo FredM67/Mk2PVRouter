@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-03-30T22:17:00+02:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation du module mk2Wifi &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Perçages" href="../../boitier/percages/" />
+    <link rel="prev" title="Module mk2Wifi" href="../presentation-mk2wifi/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation du module mk2Wifi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#soudure-des-barrettes">Soudure des barrettes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-physique">Installation physique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#programmation-initiale-usb-c">Programmation initiale (USB-C)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#procedure">Procédure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mises-a-jour-ota">Mises à jour OTA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ecran-oled-optionnel">Écran OLED (optionnel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#verification">Vérification</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/logiciel-etalonnage-monophase/">Monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/logiciel-etalonnage-triphase/">Triphasé</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-led-et-signalisation">Problèmes LED et Signalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-communication-rf">💻 Problèmes de Communication RF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#obtenir-de-laide">Obtenir de l’Aide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation du module mk2Wifi</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/mk2wifi/installation-mk2wifi.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-du-module-mk2wifi">
+<span id="installation-mk2wifi"></span><h1>Installation du module mk2Wifi<a class="headerlink" href="#installation-du-module-mk2wifi" title="Lien vers cette rubrique"></a></h1>
+<p>⏱️ <strong>Temps estimé</strong> : 30–45 minutes</p>
+<p>🔧 <strong>Niveau de difficulté</strong> : Débutant</p>
+<div class="admonition-prerequis admonition">
+<p class="admonition-title">📋 Prérequis</p>
+<p>Avant de commencer ce chapitre :</p>
+<div class="line-block">
+<div class="line">☐ Chapitre <a class="reference internal" href="../../safety-overview/#safety-overview"><span class="std std-ref">⚠️ Sécurité — À Lire Absolument Avant de Commencer</span></a> lu et compris</div>
+<div class="line">☐ Chapitre <a class="reference internal" href="../presentation-mk2wifi/#presentation-mk2wifi"><span class="std std-ref">Module mk2Wifi</span></a> lu</div>
+<div class="line">☐ Carte principale assemblée et testée</div>
+<div class="line">☐ Cavalier TEMP configuré selon votre choix (voir <a class="reference internal" href="../../carte-mere/cavaliers/#cavaliers"><span class="std std-ref">Configuration des cavaliers</span></a>)</div>
+<div class="line">☐ Câble USB-C disponible</div>
+<div class="line">☐ Ordinateur avec port USB</div>
+</div>
+</div>
+<section id="soudure-des-barrettes">
+<h2>Soudure des barrettes<a class="headerlink" href="#soudure-des-barrettes" title="Lien vers cette rubrique"></a></h2>
+<p>Le module mk2Wifi est livré entièrement assemblé (composants <a class="reference internal" href="../../glossary/#term-CMS"><span class="xref std std-term">CMS</span></a>). Seules les deux <strong>barrettes</strong> (TRIG_EXT et UART_EXT, 1×06, 2,54 mm) doivent être soudées par l’utilisateur — mâles ou femelles, selon le choix fait sur la carte principale.</p>
+<ol class="arabic simple">
+<li><p>Positionnez chaque barrette dans son emplacement</p></li>
+<li><p>Soudez une broche, vérifiez que la barrette est perpendiculaire au <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p></li>
+<li><p>Soudez les broches restantes</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">À faire</p>
+<p>Photo à fournir — barrettes TRIG_EXT et UART_EXT soudées et perpendiculaires au PCB.</p>
+</div>
+</section>
+<section id="installation-physique">
+<h2>Installation physique<a class="headerlink" href="#installation-physique" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>COUPER L’ALIMENTATION SECTEUR</strong> avant toute manipulation.</p>
+<p>Le routeur doit être <strong>hors tension</strong> pour brancher ou débrancher le module mk2Wifi.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Avant de brancher le module, vérifiez que le cavalier <strong>V sel.</strong> de la carte principale est en position <strong>3–centre (3,3 V)</strong>. Les broches GPIO de l’ESP32-C6 ne tolèrent que 3,3 V — une tension de 5 V sur ces lignes <strong>endommagerait le module</strong> (voir <a class="reference internal" href="../../carte-mere/cavaliers/#cavaliers"><span class="std std-ref">Configuration des cavaliers</span></a>).</p>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Vérifiez l’orientation</strong> : Les connecteurs TRIG_EXT et UART_EXT du module doivent s’aligner avec ceux de la carte principale. Le module ne doit pas être retourné.</p></li>
+<li><p><strong>Enfoncez le module</strong> fermement mais sans forcer sur les deux connecteurs de la carte principale (TRIG_EXT et UART_EXT)</p></li>
+<li><p><strong>Vérifiez</strong> que le module est bien en contact sur toute la longueur des deux connecteurs</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Le module peut être branché à l’envers — les connecteurs ne possèdent pas de détrompeur. Vérifiez visuellement l’orientation et l’alignement avant d’enfoncer le module. Un branchement inversé peut endommager le module et/ou la carte principale.</p>
+</div>
+</section>
+<section id="programmation-initiale-usb-c">
+<h2>Programmation initiale (USB-C)<a class="headerlink" href="#programmation-initiale-usb-c" title="Lien vers cette rubrique"></a></h2>
+<p>Le premier chargement du firmware se fait obligatoirement via le connecteur USB-C. Les mises à jour suivantes pourront se faire via <a class="reference internal" href="../../glossary/#term-OTA"><span class="xref std std-term">OTA</span></a> (WiFi).</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p><strong>Ne pas connecter l’USB-C lorsque la carte mk2Wifi est branchée sur la carte principale.</strong></p>
+<p>Débranchez le module de la carte principale avant de connecter le câble USB-C.</p>
+</div>
+<section id="procedure">
+<h3>Procédure<a class="headerlink" href="#procedure" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic">
+<li><p><strong>Débranchez le module</strong> de la carte principale (si connecté)</p></li>
+<li><p><strong>Connectez le câble USB-C</strong> entre le module et votre ordinateur</p></li>
+<li><p><strong>Passez en mode téléchargement</strong> : Maintenez le <strong>bouton-poussoir</strong> enfoncé (GPIO9 à l’état bas) pendant la mise sous tension, puis relâchez</p>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Il s’agit du petit bouton-poussoir situé sur la carte. Si le module est déjà alimenté par USB, débranchez et rebranchez le câble USB-C tout en maintenant le bouton enfoncé.</p>
+</div>
+</li>
+<li><p><strong>L’ESP32-C6</strong> dispose d’un contrôleur USB-série/JTAG intégré — aucun programmateur externe n’est nécessaire</p></li>
+<li><p><strong>Chargez le firmware</strong> à l’aide de votre outil de développement préféré (Arduino IDE, PlatformIO, esptool, etc.)</p></li>
+<li><p><strong>Après le chargement</strong>, débranchez le câble USB-C</p></li>
+<li><p><strong>Rebranchez le module</strong> sur la carte principale</p></li>
+</ol>
+</section>
+</section>
+<section id="mises-a-jour-ota">
+<h2>Mises à jour OTA<a class="headerlink" href="#mises-a-jour-ota" title="Lien vers cette rubrique"></a></h2>
+<p>Après le premier chargement par USB-C, les mises à jour du firmware peuvent se faire <strong>sans fil</strong> via WiFi (<a class="reference internal" href="../../glossary/#term-OTA"><span class="xref std std-term">OTA</span></a>).</p>
+<ol class="arabic simple">
+<li><p>Assurez-vous que le module mk2Wifi est connecté à votre réseau WiFi</p></li>
+<li><p>Lancez la mise à jour OTA depuis votre outil de développement</p></li>
+<li><p>Le module redémarre automatiquement après la mise à jour</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La connexion USB-C n’est nécessaire que pour le <strong>premier chargement</strong> du firmware. Toutes les mises à jour suivantes se font via OTA.</p>
+</div>
+</section>
+<section id="ecran-oled-optionnel">
+<h2>Écran OLED (optionnel)<a class="headerlink" href="#ecran-oled-optionnel" title="Lien vers cette rubrique"></a></h2>
+<p>Le module mk2Wifi dispose d’un connecteur <strong>OLED</strong> (Molex SL 1×4) pour un écran I2C.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le bus I2C de l’écran OLED est <strong>local au module mk2Wifi</strong>. Il n’est pas partagé avec la carte principale. Cela signifie que l’écran OLED du mk2Wifi est <strong>indépendant</strong> du connecteur OLED de la carte principale.</p>
+<p>En mode triphasé, l’écran OLED de la carte principale n’est pas disponible (broches A4/A5 utilisées pour la mesure). L’écran OLED via le mk2Wifi est alors la seule option d’affichage.</p>
+</div>
+</section>
+<section id="verification">
+<h2>Vérification<a class="headerlink" href="#verification" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition-point-de-controle-module-mk2wifi admonition">
+<p class="admonition-title">✅ Point de Contrôle — Module mk2Wifi</p>
+<p>Après l’installation, vérifiez :</p>
+<div class="line-block">
+<div class="line">☐ Module correctement enfoncé sur les deux connecteurs (TRIG_EXT et UART_EXT)</div>
+<div class="line">☐ LED témoin <strong>D1</strong> allumée lorsque la carte principale est sous tension</div>
+<div class="line">☐ Firmware chargé avec succès (premier chargement via USB-C)</div>
+<div class="line">☐ Communication série fonctionnelle (données visibles sur le moniteur série)</div>
+<div class="line">☐ Connexion WiFi établie (si le firmware WiFi est configuré)</div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../presentation-mk2wifi/" class="btn btn-neutral float-left" title="Module mk2Wifi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../../boitier/percages/" class="btn btn-neutral float-right" title="Perçages" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 30 mars 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/mk2wifi/installation-mk2wifi.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/mk2wifi/installation-mk2wifi.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-03-07T23:49:10+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validation et Dépannage — Carte de Sortie &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Sortie relais tout-ou-rien" href="../carte-sortie-relais/" />
+    <link rel="prev" title="Tests de la Carte de Sortie" href="../carte-sortie-tests/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Validation et Dépannage — Carte de Sortie</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#probleme-1-lampe-ne-sallume-jamais">Problème 1 : Lampe Ne S’Allume Jamais</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#probleme-2-lampe-reste-allumee-en-permanence">Problème 2 : Lampe Reste Allumée en Permanence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#probleme-3-gresillement-ou-arc-electrique">Problème 3 : Grésillement ou Arc Électrique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#probleme-4-carte-chauffe-excessivement">Problème 4 : Carte Chauffe Excessivement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#validation-finale-de-la-carte">Validation Finale de la Carte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checklist-avant-installation">Checklist Avant Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation-de-la-carte-testee">Documentation de la Carte Testée</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prochaines-etapes">Prochaines Étapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#apres-validation-de-toutes-les-cartes">Après Validation de TOUTES les Cartes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ressources-complementaires">Ressources Complémentaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation-technique">Documentation Technique</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/logiciel-etalonnage-monophase/">Monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/logiciel-etalonnage-triphase/">Triphasé</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-led-et-signalisation">Problèmes LED et Signalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-communication-rf">💻 Problèmes de Communication RF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#obtenir-de-laide">Obtenir de l’Aide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Validation et Dépannage — Carte de Sortie</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/etage-sortie/carte-sortie-validation.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="validation-et-depannage-carte-de-sortie">
+<span id="carte-sortie-validation"></span><h1>Validation et Dépannage — Carte de Sortie<a class="headerlink" href="#validation-et-depannage-carte-de-sortie" title="Lien vers cette rubrique"></a></h1>
+<section id="probleme-1-lampe-ne-sallume-jamais">
+<h2>Problème 1 : Lampe Ne S’Allume Jamais<a class="headerlink" href="#probleme-1-lampe-ne-sallume-jamais" title="Lien vers cette rubrique"></a></h2>
+<p><strong>Causes possibles :</strong></p>
+<p>☐ <a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">Optocoupleur</span></a> mal inséré (sens inversé)</p>
+<blockquote>
+<div><p><strong>Test</strong> : Retirer optocoupleur, vérifier repère alignement, réinsérer</p>
+</div></blockquote>
+<p>☐ <a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">Optocoupleur</span></a> défectueux</p>
+<blockquote>
+<div><p><strong>Test</strong> : Remplacer par optocoupleur neuf</p>
+</div></blockquote>
+<p>☐ Résistance R1 mal soudée ou mauvaise valeur</p>
+<blockquote>
+<div><p><strong>Test</strong> : Vérifier continuité, mesurer résistance (120 Ω pour 3,3 V, 180 Ω pour 5 V)</p>
+</div></blockquote>
+<p>☐ <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">Triac</span></a> défectueux (circuit ouvert)</p>
+<blockquote>
+<div><p><strong>Test</strong> : Mesurer résistance bornes triac (devrait être quelques Ω dans un sens)</p>
+</div></blockquote>
+<p>☐ Soudure froide sur patte <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a></p>
+<blockquote>
+<div><p><strong>Action</strong> : Refaire soudures triac avec fer très chaud (450 °C)</p>
+</div></blockquote>
+</section>
+<section id="probleme-2-lampe-reste-allumee-en-permanence">
+<h2>Problème 2 : Lampe Reste Allumée en Permanence<a class="headerlink" href="#probleme-2-lampe-reste-allumee-en-permanence" title="Lien vers cette rubrique"></a></h2>
+<p><strong>Causes possibles :</strong></p>
+<p>☐ <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">Triac</span></a> en court-circuit (détruit)</p>
+<blockquote>
+<div><p><strong>Cause probable</strong> : Surchauffe lors soudure, décharge électrostatique</p>
+<p><strong>Action</strong> : Remplacer triac (attention ESD lors manipulation)</p>
+</div></blockquote>
+<p>☐ Pont de soudure entre bornes <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a></p>
+<blockquote>
+<div><p><strong>Test</strong> : Inspection visuelle loupe, vérifier continuité</p>
+<p><strong>Action</strong> : Retirer excédent soudure avec tresse</p>
+</div></blockquote>
+<p>☐ Condensateur parasite (rare)</p>
+<blockquote>
+<div><p><strong>Action</strong> : Vérifier pistes <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a> pas de court-circuit</p>
+</div></blockquote>
+</section>
+<section id="probleme-3-gresillement-ou-arc-electrique">
+<h2>Problème 3 : Grésillement ou Arc Électrique<a class="headerlink" href="#probleme-3-gresillement-ou-arc-electrique" title="Lien vers cette rubrique"></a></h2>
+<p><strong>Causes possibles :</strong></p>
+<p>☐ Soudure insuffisante sur agrafes cuivre</p>
+<blockquote>
+<div><p><strong>Symptôme</strong> : Arc entre agrafe et piste <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p>
+<p><strong>Action</strong> : <strong>ARRÊTER IMMÉDIATEMENT</strong>, refaire soudures avec beaucoup de soudure</p>
+</div></blockquote>
+<p>☐ Écart entre <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> et <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a> (mauvais contact)</p>
+<blockquote>
+<div><p><strong>Action</strong> : Dessouder triac, aplatir pattes, ressouder avec triac bien plaqué</p>
+</div></blockquote>
+<p>☐ Condensateur de snubber manquant (si prévu sur schéma)</p>
+<blockquote>
+<div><p><strong>Action</strong> : Ajouter condensateur + résistance snubber selon schéma</p>
+</div></blockquote>
+</section>
+<section id="probleme-4-carte-chauffe-excessivement">
+<h2>Problème 4 : Carte Chauffe Excessivement<a class="headerlink" href="#probleme-4-carte-chauffe-excessivement" title="Lien vers cette rubrique"></a></h2>
+<p><strong>Causes possibles :</strong></p>
+<p>☐ Résistance de contact trop élevée</p>
+<blockquote>
+<div><p><strong>Diagnostic</strong> : Mesurer tension chute entre agrafe et piste (&lt; 0,1 V attendu)</p>
+<p><strong>Action</strong> : Refaire soudures avec fer 450 °C + soudure abondante</p>
+</div></blockquote>
+<p>☐ Section agrafes cuivre insuffisante</p>
+<blockquote>
+<div><p><strong>Action</strong> : Remplacer par cuivre 2,5 mm² au lieu de 1,5 mm²</p>
+</div></blockquote>
+<p>☐ Charge trop importante pour le dissipateur (&gt; 3 000 W ~ 13 A)</p>
+<blockquote>
+<div><p><strong>Action</strong> : Vérifier puissance charge (doit être ≤ 3 000 W), utiliser dissipateur plus grand si besoin</p>
+</div></blockquote>
+</section>
+<section id="validation-finale-de-la-carte">
+<h2>Validation Finale de la Carte<a class="headerlink" href="#validation-finale-de-la-carte" title="Lien vers cette rubrique"></a></h2>
+</section>
+<section id="checklist-avant-installation">
+<h2>Checklist Avant Installation<a class="headerlink" href="#checklist-avant-installation" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition-validation-complete-carte-de-sortie admonition">
+<p class="admonition-title">✅ Validation Complète — Carte de Sortie</p>
+<p>Avant de considérer la carte comme validée :</p>
+<p>☐ <strong>Test fonctionnel réussi</strong> : Lampe s’allume/s’éteint correctement</p>
+<p>☐ <strong>Test charge 100 W réussi</strong> : 5 minutes sans problème</p>
+<p>☐ <strong>Température acceptable</strong> : Carte et <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> &lt; 60 °C</p>
+<p>☐ <strong>Aucune odeur ou fumée</strong> durant tous les tests</p>
+<p>☐ <strong>Soudures haute puissance re-vérifiées</strong> visuellement (loupe)</p>
+<p>☐ <strong>Pas de grésillement</strong> ni arc électrique</p>
+<p>☐ <strong>Commutation silencieuse</strong> (caractéristique du triac)</p>
+<p>☐ <strong>Documentation</strong> : Valeurs R1-R3 notées, tension système (3,3 V ou 5 V) notée</p>
+<p><strong>Si TOUS les points sont cochés → La carte est validée et prête pour montage final</strong></p>
+</div>
+</section>
+<section id="documentation-de-la-carte-testee">
+<h2>Documentation de la Carte Testée<a class="headerlink" href="#documentation-de-la-carte-testee" title="Lien vers cette rubrique"></a></h2>
+<p>Il est recommandé de noter sur un papier (à conserver avec la carte) :</p>
+<ul class="simple">
+<li><p><strong>Date du test</strong> : ___/___/______</p></li>
+<li><p><strong>Tension système</strong> : ☐ 3,3 V  ☐ 5 V</p></li>
+<li><p><strong>Valeur R1</strong> : _____ Ω (120 Ω pour 3,3 V, 180 Ω pour 5 V)</p></li>
+<li><p><strong>Valeur R2</strong> : _____ Ω (330 Ω)</p></li>
+<li><p><strong>Valeur R3</strong> : _____ Ω (360 Ω)</p></li>
+<li><p><strong>Référence :term:`triac &lt;Triac&gt;`</strong> : __________ (ex :  BTA41-600B)</p></li>
+<li><p><strong>Charge testée</strong> : _____ W (ex : 100 W)</p></li>
+<li><p><strong>Durée test</strong> : _____ minutes</p></li>
+<li><p><strong>Résultat</strong> : ☐ ✅ Validée  ☐ ❌ Défectueuse</p></li>
+</ul>
+</section>
+<section id="prochaines-etapes">
+<h2>Prochaines Étapes<a class="headerlink" href="#prochaines-etapes" title="Lien vers cette rubrique"></a></h2>
+</section>
+<section id="apres-validation-de-toutes-les-cartes">
+<h2>Après Validation de TOUTES les Cartes<a class="headerlink" href="#apres-validation-de-toutes-les-cartes" title="Lien vers cette rubrique"></a></h2>
+<p>Une fois que vous avez assemblé et testé avec succès :</p>
+<p>✅ <strong>Carte-mère</strong> (monophasée ou triphasée) — testée électriquement</p>
+<p>✅ <strong>Toutes les cartes de sortie</strong> (autant que de sorties souhaitées) — testées individuellement</p>
+<p><strong>Vous pouvez passer aux chapitres suivants :</strong></p>
+<ol class="arabic">
+<li><p><strong>Perçages du boîtier</strong> — <a class="reference internal" href="../../boitier/percages/#percage-carte-mere"><span class="std std-ref">Perçage pour la carte-mère</span></a></p>
+<p>Préparer le boîtier pour accueillir les cartes et les dissipateurs</p>
+</li>
+<li><p><strong>Câblage interne</strong></p>
+<p>Connexion carte-mère ↔ cartes de sortie ↔ secteur</p>
+</li>
+<li><p><strong>Montage des dissipateurs</strong></p>
+<p>Fixation des triacs sur dissipateurs thermiques en façade</p>
+</li>
+<li><p><strong>Installation du logiciel</strong></p>
+<p>Téléversement firmware, configuration, étalonnage</p>
+</li>
+<li><p><strong>Tests système complet</strong></p>
+<p>Validation fonctionnelle de l’ensemble avant installation finale</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>💡 <strong>Conseil Important</strong></p>
+<p><strong>Conservez les cartes de sortie testées dans un endroit propre et sec.</strong></p>
+<p>Évitez de toucher les pistes haute tension avec les doigts (graisse → oxydation).</p>
+<p>Si stockage prolongé (&gt; 1 mois), protégez avec film antistatique.</p>
+</div>
+</section>
+<section id="ressources-complementaires">
+<h2>Ressources Complémentaires<a class="headerlink" href="#ressources-complementaires" title="Lien vers cette rubrique"></a></h2>
+</section>
+<section id="documentation-technique">
+<h2>Documentation Technique<a class="headerlink" href="#documentation-technique" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p><strong>Datasheet</strong> <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> BTA41 : Caractéristiques électriques, courbes thermiques</p></li>
+<li><p><strong>Datasheet</strong> <a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a> MOC3043 : Schéma interne, caractéristiques LED</p></li>
+<li><p><strong>Guide soudure haute puissance</strong> : <a class="reference internal" href="../../soldering-tutorial/#soldering-tutorial"><span class="std std-ref">Guide de Soudure pour Débutants</span></a></p></li>
+</ul>
+<div class="admonition-recapitulatif-final admonition">
+<p class="admonition-title">🎯 Récapitulatif Final</p>
+<p><strong>Vous avez maintenant assemblé une carte de sortie triac fonctionnelle !</strong></p>
+<p>Cette carte utilise un <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> BTA41 (40 A nominaux) mais, en raison de la taille du dissipateur, la charge est limitée à <strong>3 000 W</strong> (~13 A à 230 V) pour un fonctionnement sûr et fiable.</p>
+<p><strong>Points clés à retenir :</strong></p>
+<ul class="simple">
+<li><p>Soudures haute puissance = <strong>CRITIQUE</strong> pour sécurité</p></li>
+<li><p>Test progressif (sans tension → basse charge → haute charge)</p></li>
+<li><p><a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">Triac</span></a> fonctionne UNIQUEMENT avec charges résistives</p></li>
+<li><p>Commutation silencieuse = avantage majeur vs relais mécanique</p></li>
+</ul>
+<p><strong>Félicitations pour votre travail minutieux ! 🎉</strong></p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../carte-sortie-tests/" class="btn btn-neutral float-left" title="Tests de la Carte de Sortie" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../carte-sortie-relais/" class="btn btn-neutral float-right" title="Sortie relais tout-ou-rien" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 07 mars 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/etage-sortie/carte-sortie-validation.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/etage-sortie/carte-sortie-validation.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

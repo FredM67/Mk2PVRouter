@@ -1,0 +1,610 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-03-07T23:51:00+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Étage de sortie &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Tests de la Carte de Sortie" href="../carte-sortie-tests/" />
+    <link rel="prev" title="Tests électriques" href="../../carte-mere/tests-electriques/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Étage de sortie</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#principe-de-fonctionnement-dune-sortie-triac">Principe de Fonctionnement d’une Sortie Triac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#controle-de-la-puissance">Contrôle de la Puissance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#applications-typiques">Applications typiques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#avantages-compares-a-un-relais">Avantages comparés à un relais</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#considerations-techniques">Considérations Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#composition-dun-kit-pour-etage-de-sortie-triac">Composition d’un kit pour étage de sortie triac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assemblage-dune-carte-de-sortie">Assemblage d’une carte de sortie</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mesures-de-securite-obligatoires">Mesures de Sécurité OBLIGATOIRES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pendant-le-premier-test">Pendant le Premier Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#en-cas-de-fumee-ou-odeur-de-brule">En Cas de Fumée ou Odeur de Brûlé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verification-de-qualite">Vérification de Qualité</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-des-agrafes-en-cuivre-massif">Installation des <em>agrafes</em> en cuivre massif</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-des-composants-de-faible-puissance-support-dil">Installation des composants de faible puissance, support <span class="xref std std-term">DIL</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#soudure-des-connecteurs-type-molex">Soudure des connecteurs type Molex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#soudure-de-la-partie-haute-puissance-haute-tension">Soudure de la partie <em>haute puissance</em>/<em>haute tension</em></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#connecteur-haute-puissance">Connecteur haute puissance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#triac"><span class="xref std std-term">triac</span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-de-loptocoupleur">Installation de l’<span class="xref std std-term">optocoupleur</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/logiciel-etalonnage-monophase/">Monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/logiciel-etalonnage-triphase/">Triphasé</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-led-et-signalisation">Problèmes LED et Signalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-communication-rf">💻 Problèmes de Communication RF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#obtenir-de-laide">Obtenir de l’Aide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Étage de sortie</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/etage-sortie/carte-sortie.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="etage-de-sortie">
+<span id="carte-sortie"></span><h1>Étage de sortie<a class="headerlink" href="#etage-de-sortie" title="Lien vers cette rubrique"></a></h1>
+<p>⏱️ <strong>Temps estimé</strong> : 2–3 heures (débutant), 1–1,5 heures (expérimenté)</p>
+<p>🔧 <strong>Niveau de difficulté</strong> : Avancé</p>
+<p>⚠️ <strong>Niveau de risque</strong> : Élevé (haute puissance, risque d’incendie)</p>
+<div class="line-block">
+<div class="line">Le <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a>, également connu sous le nom de triode pour courant alternatif, appartient à la catégorie des thyristors et sert d’interrupteur semi-conducteur. Il a la capacité unique de gérer le courant dans les deux directions, ce qui le rend idéal pour les applications utilisant du courant alternatif (AC).</div>
+<div class="line">Utilisé pour ajuster la puissance fournie à des dispositifs purement résistifs comme des radiateurs, des chauffe-eau ou des lampes à incandescence, le triac permet de moduler avec précision l’énergie distribuée. Cela offre un contrôle fin sur le niveau de chaleur ou d’éclairage produit.</div>
+</div>
+<nav class="contents local" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#principe-de-fonctionnement-dune-sortie-triac" id="id9">Principe de Fonctionnement d’une Sortie Triac</a></p></li>
+<li><p><a class="reference internal" href="#controle-de-la-puissance" id="id10">Contrôle de la Puissance</a></p></li>
+<li><p><a class="reference internal" href="#applications-typiques" id="id11">Applications typiques</a></p></li>
+<li><p><a class="reference internal" href="#considerations-techniques" id="id12">Considérations Techniques</a></p></li>
+<li><p><a class="reference internal" href="#composition-dun-kit-pour-etage-de-sortie-triac" id="id13">Composition d’un kit pour étage de sortie triac</a></p></li>
+<li><p><a class="reference internal" href="#assemblage-dune-carte-de-sortie" id="id14">Assemblage d’une carte de sortie</a></p></li>
+</ul>
+</nav>
+<div class="admonition-prerequis admonition">
+<p class="admonition-title">📋 Prérequis</p>
+<p>Avant de commencer ce chapitre :</p>
+<p>☐ Chapitre <a class="reference internal" href="../../safety-overview/#safety-overview"><span class="std std-ref">⚠️ Sécurité — À Lire Absolument Avant de Commencer</span></a> lu et compris</p>
+<p>☐ Carte-mère complètement assemblée et testée</p>
+<p>☐ Outils nécessaires à disposition (fer à souder haute puissance, pince coupante, tournevis)</p>
+<p>☐ Temps disponible (2–3 heures pour débutant)</p>
+<p>☐ Extincteur à proximité (soudure haute puissance)</p>
+<p>☐ Lecture complète du chapitre avant de commencer</p>
+</div>
+<section id="principe-de-fonctionnement-dune-sortie-triac">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Principe de Fonctionnement d’une Sortie Triac</a><a class="headerlink" href="#principe-de-fonctionnement-dune-sortie-triac" title="Lien vers cette rubrique"></a></h2>
+<div class="line-block">
+<div class="line">Un <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> est activé par un signal de déclenchement envoyé à sa broche de commande, également connue sous le nom de gâchette ou <em>gate</em>.</div>
+<div class="line">Lorsque ce signal dépasse un seuil spécifique, le triac s’active et commence à conduire le courant, permettant ainsi son passage.</div>
+<div class="line">Une fois activé, le triac continue de conduire le courant jusqu’à ce que celui-ci descende en dessous d’un certain niveau, souvent proche de zéro.</div>
+<div class="line">Ce phénomène se produit automatiquement à la fin de chaque demi-cycle du courant alternatif, entraînant l’arrêt du passage du courant.</div>
+</div>
+</section>
+<section id="controle-de-la-puissance">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Contrôle de la Puissance</a><a class="headerlink" href="#controle-de-la-puissance" title="Lien vers cette rubrique"></a></h2>
+<div class="line-block">
+<div class="line">Pour contrôler la puissance fournie à un appareil résistif, on utilise souvent une technique appelée variation de phase ou gradation.</div>
+<div class="line">Elle consiste à retarder l’amorçage du <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> dans chaque demi-cycle de la tension alternative. En ne déclenchant le triac que pendant une portion de chaque demi-cycle, on réduit la quantité d’énergie fournie à la charge.</div>
+<div class="line">Plus le retard est important, plus la puissance transmise est faible, et inversement.</div>
+<div class="line">Le principal inconvénient de cette méthode est qu’elle génère des harmoniques dans le réseau électrique.</div>
+</div>
+<div class="line-block">
+<div class="line">Une autre approche consiste à ne laisser passer que des sinusoïdes complètes, une technique connue sous le nom de modulation par trains d’ondes ou <em>burst fire control</em>.</div>
+<div class="line">Le principal inconvénient de cette méthode est que la gradation est moins précise, mais l’expérience a montré que cela ne pose pas de problème avec les compteurs électriques en France, quel que soit le modèle.</div>
+<div class="line">Le principal <strong>avantage</strong> de cette méthode est qu’elle ne génère aucune harmonique dans le réseau électrique.</div>
+</div>
+</section>
+<section id="applications-typiques">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Applications typiques</a><a class="headerlink" href="#applications-typiques" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p><strong>Éclairage</strong> : Les <em>dimmers</em>, ou variateurs de lumière, exploitent les triacs pour moduler l’intensité lumineuse. En ajustant le moment d’activation du <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a>, il est possible de faire varier la luminosité des lampes.</p></li>
+<li><p><strong>Chauffage</strong> : Dans le cas des chauffages électriques, les triacs servent à contrôler la température. En changeant la durée pendant laquelle le courant est conduit, on peut régler la quantité de chaleur émise par l’appareil de chauffage.</p></li>
+</ul>
+<section id="avantages-compares-a-un-relais">
+<h3>Avantages comparés à un relais<a class="headerlink" href="#avantages-compares-a-un-relais" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p><strong>Contrôle Fin</strong> : Le <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> offre une gestion très précise de la puissance, ce qui est parfait pour les applications nécessitant un ajustement délicat.</p></li>
+<li><p><strong>Commutation Sans Bruit</strong> : À l’inverse des relais mécaniques, les triacs fonctionnent sans produire de bruit de clic caractéristique lors de la commutation.</p></li>
+<li><p><strong>Absence de Composants Mobiles</strong> : Le fait qu’il n’y ait pas de composants mobiles diminue l’usure due au mouvement, ce qui rend le système de commutation plus fiable et prolonge sa durée de vie.</p></li>
+</ul>
+</section>
+</section>
+<section id="considerations-techniques">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Considérations Techniques</a><a class="headerlink" href="#considerations-techniques" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p><strong>Dissipation Thermique</strong> : L’utilisation des triacs entraîne une production de chaleur pendant leur fonctionnement. Il est crucial d’assurer une bonne évacuation de cette chaleur, généralement à l’aide de dispositifs tels que des radiateurs ou des dissipateurs thermiques.</p></li>
+<li><p><strong>Compatibilité de Charge</strong> : Du fait que le <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> interrompt le courant de manière périodique, seuls les équipements résistifs (comme les chauffages ou les lampes) sont adaptés pour être contrôlés par un triac.</p></li>
+</ul>
+</section>
+<section id="composition-dun-kit-pour-etage-de-sortie-triac">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Composition d’un kit pour étage de sortie triac</a><a class="headerlink" href="#composition-dun-kit-pour-etage-de-sortie-triac" title="Lien vers cette rubrique"></a></h2>
+<p>Ce kit contient tout le nécessaire pour assembler un circuit de sortie :</p>
+<ul class="simple">
+<li><p>Un <strong>circuit imprimé</strong> qui distingue clairement les zones de basse et de haute tension de chaque côté.</p></li>
+<li><p>Une <strong>résistance R1</strong>, dont la valeur est choisie en fonction de la tension nominale du système et du modèle d’<a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a> utilisé.</p></li>
+<li><p>Une <strong>résistance R2</strong>, sélectionnée selon le modèle d’optocoupleur.</p></li>
+<li><p>Une <strong>résistance R3</strong>.</p></li>
+<li><p>Un <strong>support</strong> <a class="reference internal" href="../../glossary/#term-DIL"><span class="xref std std-term">DIL</span></a> pour l’optocoupleur, comportant deux rangées de trois broches.</p></li>
+<li><p>Deux paires de <strong>connecteurs type Molex</strong>.</p></li>
+<li><p>Un <strong>isolant</strong> qui assure à la fois l’isolation électrique et la conduction thermique.</p></li>
+<li><p>Un <strong>triac</strong>, adapté aux exigences spécifiques de l’application.</p></li>
+<li><p>Un <strong>connecteur de puissance</strong> qui dispose habituellement de trois broches, la broche centrale étant inutilisée.</p></li>
+<li><p>Un <strong>morceau de cuivre massif</strong> de 1.5 mm² de section.</p></li>
+</ul>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/Kit-sortie.jpg"><img alt="Contenu d’un kit de sortie" height="326" src="../../_images/Kit-sortie.jpg" width="354" />
+</a>
+<figcaption>
+<p><span class="caption-text">Contenu d’un kit de sortie</span><a class="headerlink" href="#id1" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="assemblage-dune-carte-de-sortie">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Assemblage d’une carte de sortie</a><a class="headerlink" href="#assemblage-dune-carte-de-sortie" title="Lien vers cette rubrique"></a></h2>
+<p>Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet ordre :</p>
+<ol class="arabic simple">
+<li><p>résistances</p></li>
+<li><p>support <a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a></p></li>
+<li><p>connecteur·s Molex</p></li>
+<li><p>connecteur de puissance</p></li>
+<li><p><a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a></p></li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>⚠️⚠️⚠️ <strong>DANGER — RISQUE D’INCENDIE</strong> ⚠️⚠️⚠️</p>
+<p>Il est crucial de prêter une attention particulière à la <strong>qualité</strong> des soudures sur la section <strong>haute tension</strong> de cette carte.</p>
+<p>Une soudure haute puissance défectueuse peut provoquer :</p>
+<p><strong>Scénarios Dangereux</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Surchauffe</strong> → Fonte des plastiques → Dégagement toxique → Incendie</p></li>
+<li><p><strong>Arc électrique</strong> → Étincelles → Ignition matériaux → Incendie</p></li>
+<li><p><strong>Court-circuit</strong> → Chaleur intense → Fusion composants → Incendie</p></li>
+</ol>
+<p><strong>La carte peut prendre feu SANS AVERTISSEMENT à la mise sous tension !</strong></p>
+</div>
+<section id="mesures-de-securite-obligatoires">
+<h3>Mesures de Sécurité OBLIGATOIRES<a class="headerlink" href="#mesures-de-securite-obligatoires" title="Lien vers cette rubrique"></a></h3>
+<p>Avant de commencer cette section :</p>
+<p>☐ <strong>Extincteur présent</strong> — Type ABC minimum, à portée de main</p>
+<p>☐ <strong>Détecteur de fumée</strong> — Fonctionnel et testé</p>
+<p>☐ <strong>Surface isolante et ininflammable</strong> — Travailler sur céramique, bois sec (PAS métal/plastique)</p>
+<p>☐ <strong>Quelqu’un d’autre présent</strong> — En cas d’urgence</p>
+<p>☐ <strong>Savoir où est le tableau électrique</strong> — Pour couper alimentation si fumée</p>
+<p>☐ <strong>Fenêtres ouvertes</strong> — Pour ventilation et évacuation fumée</p>
+<p>☐ <strong>Connaître itinéraire évacuation</strong> — Ne jamais bloquer sorties</p>
+</section>
+<section id="pendant-le-premier-test">
+<h3>Pendant le Premier Test<a class="headerlink" href="#pendant-le-premier-test" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p>⚠️ Rester à côté pendant les 5 premières minutes de fonctionnement</p></li>
+<li><p>⚠️ Surveiller odeurs inhabituelles (plastique brûlé)</p></li>
+<li><p>⚠️ Surveiller fumée</p></li>
+<li><p>⚠️ Écouter grésillements anormaux</p></li>
+</ul>
+</section>
+<section id="en-cas-de-fumee-ou-odeur-de-brule">
+<h3>En Cas de Fumée ou Odeur de Brûlé<a class="headerlink" href="#en-cas-de-fumee-ou-odeur-de-brule" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>COUPER ALIMENTATION IMMÉDIATEMENT</strong> (disjoncteur)</p></li>
+<li><p><strong>NE PAS TOUCHER le routeur</strong> (peut être très chaud)</p></li>
+<li><p><strong>Si flammes visibles</strong> → Utiliser extincteur CO₂ ou poudre (PAS D’EAU !)</p></li>
+<li><p><strong>Si fumée importante</strong> → Évacuer et appeler pompiers (18)</p></li>
+<li><p><strong>Laisser refroidir 30 minutes</strong> minimum avant d’inspecter</p></li>
+</ol>
+</section>
+<section id="verification-de-qualite">
+<h3>Vérification de Qualité<a class="headerlink" href="#verification-de-qualite" title="Lien vers cette rubrique"></a></h3>
+<p>Avant de mettre sous tension, vérifiez (loupe recommandée) :</p>
+<p>☐ Soudure brillante et lisse (pas terne/granuleuse)</p>
+<p>☐ Remplissage complet du trou traversant</p>
+<p>☐ Soudure visible des DEUX côtés du <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></p>
+<p>☐ Pas de micro-fissures</p>
+<p>☐ Pas de soudure débordant sur pistes voisines</p>
+<p>⚠️ <strong>Si UN SEUL point n’est pas parfait → REFAIRE LA SOUDURE !</strong></p>
+<p><strong>Votre vie et votre maison valent plus que 5 minutes de travail supplémentaire.</strong></p>
+</section>
+<section id="installation-des-agrafes-en-cuivre-massif">
+<h3>Installation des <em>agrafes</em> en cuivre massif<a class="headerlink" href="#installation-des-agrafes-en-cuivre-massif" title="Lien vers cette rubrique"></a></h3>
+<p>La première étape du montage consiste à installer des <em>agrafes</em> en cuivre pur pour augmenter la capacité de la carte à supporter des courants forts.</p>
+<p>Il est recommandé d’utiliser du cuivre d’une section transversale de 1,5 mm², compte tenu de la courte distance entre le <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> et le connecteur de puissance.</p>
+<p>Les emplacements pour ces agrafes sont marqués sur le circuit imprimé par des lignes épaisses sur la couche de sérigraphie, avec un espacement d’environ 5 mm entre les trous.</p>
+<p>Pour installer les agrafes, commencez par plier le fil de cuivre afin qu’il traverse ces trous.</p>
+<p>Puis, pliez les extrémités vers l’extérieur et pressez-les fermement contre la face inférieure du circuit imprimé. L’utilisation d’une pince multiprise facilitera cette tâche, tout en prenant soin de ne pas abîmer le circuit.</p>
+<p>Une fois les agrafes correctement mises en place, coupez les quatre extrémités à la longueur nécessaire.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/Pose-agrafes.jpg"><img alt="Vue dessus/dessous, agrafes posées" height="144" src="../../_images/Pose-agrafes.jpg" width="150" />
+</a>
+<figcaption>
+<p><span class="caption-text">Vue dessus/dessous, agrafes posées</span><a class="headerlink" href="#id2" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-point-de-controle-agrafes-en-cuivre admonition">
+<p class="admonition-title">✅ Point de Contrôle — Agrafes en Cuivre</p>
+<p>Avant de continuer, vérifiez :</p>
+<div class="line-block">
+<div class="line">☐ Agrafes en cuivre massif 1,5 mm² correctement installées</div>
+<div class="line">☐ Extrémités pliées fermement contre le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></div>
+<div class="line">☐ Longueur des extrémités coupée correctement</div>
+<div class="line">☐ Pas de court-circuit avec les pistes adjacentes</div>
+<div class="line">☐ Agrafes bien fixées et stables</div>
+</div>
+</div>
+</section>
+<section id="installation-des-composants-de-faible-puissance-support-dil">
+<h3>Installation des composants de faible puissance, support <a class="reference internal" href="../../glossary/#term-DIL"><span class="xref std std-term">DIL</span></a><a class="headerlink" href="#installation-des-composants-de-faible-puissance-support-dil" title="Lien vers cette rubrique"></a></h3>
+<p>Une fois les agrafes de cuivre mises en place, il est temps d’installer les composants qui nécessitent peu de puissance.</p>
+<p>Selon le plan du circuit :</p>
+<ul class="simple">
+<li><p>La résistance <strong>R1</strong> doit être de <strong>120 Ω</strong> si le circuit est alimenté en <strong>3,3 V</strong>, ou de <strong>180 Ω</strong> pour une alimentation en <strong>5 V</strong>.</p></li>
+<li><p>La résistance <strong>R2</strong> doit avoir une valeur de <strong>330 Ω</strong>.</p></li>
+<li><p>La résistance <strong>R3</strong> doit être de <strong>360 Ω</strong>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pour des besoins spécifiques, un autre type d’<a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a> pourrait être nécessaire.
+Dans ce cas, les valeurs des résistances peuvent varier.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Indication</p>
+<p>Pour assurer que le support <a class="reference internal" href="../../glossary/#term-DIL"><span class="xref std std-term">DIL</span></a> soit correctement fixé et en contact total avec le circuit imprimé, commencez par souder une seule de ses broches.
+Ensuite, vérifiez que le support est bien en place et parfaitement aligné avant de procéder à la soudure des cinq broches restantes.</p>
+</div>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/Soudure-Rs-DIL.jpg"><img alt="Vue dessus/dessous, résistances et support :term:`DIL` soudés" height="184" src="../../_images/Soudure-Rs-DIL.jpg" width="200" />
+</a>
+<figcaption>
+<p><span class="caption-text">Vue dessus/dessous, résistances et support <a class="reference internal" href="../../glossary/#term-DIL"><span class="xref std std-term">DIL</span></a> soudés</span><a class="headerlink" href="#id3" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-point-de-controle-composants-faible-puissance admonition">
+<p class="admonition-title">✅ Point de Contrôle — Composants Faible Puissance</p>
+<p>Avant de continuer, vérifiez :</p>
+<div class="line-block">
+<div class="line">☐ Résistances R1, R2, R3 aux bons emplacements (valeurs correctes pour tension système)</div>
+<div class="line">☐ Support <a class="reference internal" href="../../glossary/#term-DIL"><span class="xref std std-term">DIL</span></a> bien plaqué contre le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></div>
+<div class="line">☐ <strong>Encoche du support DIL</strong> correctement orientée</div>
+<div class="line">☐ Toutes les soudures propres et brillantes</div>
+<div class="line">☐ Pas de pont de soudure entre les pistes</div>
+</div>
+</div>
+</section>
+<section id="soudure-des-connecteurs-type-molex">
+<h3>Soudure des connecteurs type Molex<a class="headerlink" href="#soudure-des-connecteurs-type-molex" title="Lien vers cette rubrique"></a></h3>
+<div class="line-block">
+<div class="line">Ces connecteurs ont une hauteur similaire au connecteur de puissance.</div>
+<div class="line">Il sera recommandé de souder la broche centrale du connecteur de puissance en premier. En effet, ce dernier peut être facilement maintenu pour cette opération grâce aux agrafes précédemment installées.</div>
+<div class="line">Une fois soudé, ce connecteur sera d’une grande aide pour souder les deux autres connecteurs type Molex.</div>
+</div>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/Maintien-connecteur.jpg"><img alt="Connecteur de puissance, broche centrale soudée" height="183" src="../../_images/Maintien-connecteur.jpg" width="292" />
+</a>
+<figcaption>
+<p><span class="caption-text">Connecteur de puissance, broche centrale soudée</span><a class="headerlink" href="#id4" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/Soudure-Molex.jpg"><img alt="Connecteurs type Molex soudés" height="170" src="../../_images/Soudure-Molex.jpg" width="336" />
+</a>
+<figcaption>
+<p><span class="caption-text">Connecteurs type Molex soudés</span><a class="headerlink" href="#id5" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-point-de-controle-connecteurs-molex admonition">
+<p class="admonition-title">✅ Point de Contrôle — Connecteurs Molex</p>
+<p>Avant de continuer, vérifiez :</p>
+<div class="line-block">
+<div class="line">☐ Connecteur de puissance broche centrale soudée</div>
+<div class="line">☐ Deux connecteurs type Molex soudés</div>
+<div class="line">☐ <strong>Détrompeur correctement orienté</strong> (Molex polarisés)</div>
+<div class="line">☐ Connecteurs bien plaqués contre le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a></div>
+<div class="line">☐ Soudures solides et propres</div>
+</div>
+</div>
+</section>
+<section id="soudure-de-la-partie-haute-puissance-haute-tension">
+<h3>Soudure de la partie <em>haute puissance</em>/<em>haute tension</em><a class="headerlink" href="#soudure-de-la-partie-haute-puissance-haute-tension" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>La qualité des soudures est d’une importance <strong>capitale</strong> pour cette étape.</p>
+<p><strong>Rappel :</strong> Voir les mesures de sécurité OBLIGATOIRES et la vérification de qualité au début de ce chapitre.</p>
+<p>Une soudure défectueuse peut provoquer un incendie lors de la mise sous tension !</p>
+</div>
+<section id="connecteur-haute-puissance">
+<h4>Connecteur haute puissance<a class="headerlink" href="#connecteur-haute-puissance" title="Lien vers cette rubrique"></a></h4>
+<p>Ce composant peut être maintenu provisoirement en place en pliant légèrement les agrafes en cuivre pour qu’elles pincent les broches saillantes.</p>
+<p>Ensuite, avec un fer à souder bien chaud (réglez la température à 450 °C si possible), appliquez généreusement de la soudure.</p>
+</section>
+<section id="triac">
+<h4><a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a><a class="headerlink" href="#triac" title="Lien vers cette rubrique"></a></h4>
+<p>De la même manière, ce composant peut être maintenu provisoirement en place en pliant légèrement les agrafes en cuivre pour qu’elles pincent les broches saillantes.</p>
+<p>Seuls <strong>1</strong> à <strong>2 mm</strong> des pattes du triac devraient dépasser.</p>
+<p>Pour faciliter cette opération et aussi pour protéger le triac des hautes températures, il est conseillé de plaquer le triac contre l’un des dissipateurs non encore monté que vous avez à disposition. Vous pouvez utiliser une pince à linge ou toute autre pince à ressort.</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/Positionnement-triac.jpg"><img alt="Positionnement du triac" height="338" src="../../_images/Positionnement-triac.jpg" width="400" />
+</a>
+<figcaption>
+<p><span class="caption-text">Positionnement du triac</span><a class="headerlink" href="#id6" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<p>Pour les soudures au niveau de chacune des agrafes, un bon fer chaud et beaucoup de soudure seront nécessaires.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Lors de la soudure du triac, veillez à bien vérifier que la soudure est <em>remontée</em> de l’autre côté du circuit.</p>
+<p>Cela assurera une continuité parfaite mais aussi une solidité accrue.</p>
+</div>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/Triac-connecteur-soudés.jpg"><img alt="Triac et connecteur soudés" height="624" src="../../_images/Triac-connecteur-soud%C3%A9s.jpg" width="400" />
+</a>
+<figcaption>
+<p><span class="caption-text">Triac et connecteur soudés</span><a class="headerlink" href="#id7" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-point-de-controle-critique-haute-puissance admonition">
+<p class="admonition-title">✅ Point de Contrôle — CRITIQUE — Haute Puissance</p>
+<p>⚠️ <strong>VÉRIFICATION OBLIGATOIRE AVANT MISE SOUS TENSION</strong> ⚠️</p>
+<div class="line-block">
+<div class="line">☐ <strong>Connecteur haute puissance : soudure ABONDANTE et brillante</strong></div>
+<div class="line">☐ <strong>Triac : soudure remontée de l’autre côté du PCB</strong> (continuité vérifiée)</div>
+<div class="line">☐ <strong>Soudures agrafes : généreuses et solides</strong> (fer très chaud utilisé)</div>
+<div class="line">☐ <strong>Aucun brin de cuivre apparent</strong> risquant court-circuit</div>
+<div class="line">☐ <strong>Inspection visuelle loupe : pas de fissure ni joint froid</strong></div>
+</div>
+<p>🔥 Une soudure défectueuse = RISQUE D’INCENDIE 🔥</p>
+</div>
+</section>
+</section>
+<section id="installation-de-loptocoupleur">
+<h3>Installation de l’<a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a><a class="headerlink" href="#installation-de-loptocoupleur" title="Lien vers cette rubrique"></a></h3>
+<div class="line-block">
+<div class="line">L’<a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a>, un composant essentiel doté de 6 broches, sert de liaison entre les sections du circuit fonctionnant à basse et à haute tension.</div>
+<div class="line">Pour l’installer correctement, alignez le repère présent sur le composant (indiqué en rouge) avec le cercle sur le circuit imprimé (<a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>).</div>
+</div>
+<div class="line-block">
+<div class="line">Une installation inversée de l’<a class="reference internal" href="../../glossary/#term-Optocoupleur"><span class="xref std std-term">optocoupleur</span></a> ne permettra pas au circuit de fonctionner correctement.</div>
+<div class="line">Toutefois, la conception des broches de l’optocoupleur est telle qu’il ne devrait pas être endommagé en cas d’erreur de montage.</div>
+</div>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../_images/Carte-assemblée.jpg"><img alt="Carte assemblée" height="210" src="../../_images/Carte-assembl%C3%A9e.jpg" width="326" />
+</a>
+<figcaption>
+<p><span class="caption-text">Carte assemblée</span><a class="headerlink" href="#id8" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-point-de-controle-final-carte-de-sortie-complete admonition">
+<p class="admonition-title">✅ Point de Contrôle Final — Carte de Sortie Complète</p>
+<p>Avant le test sous tension, vérifiez :</p>
+<div class="line-block">
+<div class="line">☐ <strong>Optocoupleur correctement orienté</strong> (repère rouge aligné avec cercle <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>)</div>
+<div class="line">☐ Toutes les soudures haute puissance re-vérifiées (connecteur, <a class="reference internal" href="../../glossary/#term-Triac"><span class="xref std std-term">triac</span></a>, agrafes)</div>
+<div class="line">☐ Pas de court-circuit visible (inspection visuelle complète)</div>
+<div class="line">☐ Pas de flux de soudure résiduel conducteur</div>
+<div class="line">☐ <strong>Extincteur à portée de main pour le premier test</strong></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../../carte-mere/tests-electriques/" class="btn btn-neutral float-left" title="Tests électriques" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../carte-sortie-tests/" class="btn btn-neutral float-right" title="Tests de la Carte de Sortie" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 07 mars 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/etage-sortie/carte-sortie.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/etage-sortie/carte-sortie.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

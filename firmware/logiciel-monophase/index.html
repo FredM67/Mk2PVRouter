@@ -1,0 +1,759 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-04-05T20:09:41+02:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation et tests — Monophasé &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Étalonnage — Monophasé" href="../etalonnage-monophase/" />
+    <link rel="prev" title="Monophasé" href="../logiciel-etalonnage-monophase/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../logiciel-etalonnage-monophase/">Monophasé</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation et tests — Monophasé</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pre-requis">Pré-requis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#carte-usb-vers-uart">Carte USB vers UART</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logiciel-de-programmation">Logiciel de programmation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mise-en-place">Mise en place</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-du-firmware">Installation du Firmware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installation-de-u8g2">Installation de U8g2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#etape-1-telechargement-du-firmware">Étape 1 : Téléchargement du Firmware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#etape-2-configuration-du-firmware">Étape 2 : Configuration du Firmware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#etape-3-connexion-et-programmation">Étape 3 : Connexion et Programmation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#test-de-la-partie-mesures">Test de la partie <em>mesures</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prochaines-etapes">Prochaines Étapes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../etalonnage-monophase/">Étalonnage — Monophasé</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../logiciel-etalonnage-triphase/">Triphasé</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-led-et-signalisation">Problèmes LED et Signalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/#problemes-de-communication-rf">💻 Problèmes de Communication RF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#obtenir-de-laide">Obtenir de l’Aide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../logiciel-etalonnage-monophase/">Monophasé</a></li>
+      <li class="breadcrumb-item active">Installation et tests — Monophasé</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/firmware/logiciel-monophase.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-et-tests-monophase">
+<span id="logiciel-monophase"></span><h1>Installation et tests — Monophasé<a class="headerlink" href="#installation-et-tests-monophase" title="Lien vers cette rubrique"></a></h1>
+<div class="line-block">
+<div class="line">Une fois le processeur installé, il serait judicieux de vérifier que l’alimentation électrique fonctionne toujours correctement.</div>
+<div class="line">Si c’est le cas, nous pouvons exécuter un croquis (programme) pour vérifier si le processeur fonctionne correctement.</div>
+</div>
+<div class="line-block">
+<div class="line">Nous allons maintenant tester le bon fonctionnement des autres parties matérielles de la carte-mère.</div>
+<div class="line">Cela permettra à la fois de s’assurer que le processeur est opérationnel et de vérifier que les autres composants sont correctement installés et/ou assemblés.</div>
+</div>
+<div class="line-block">
+<div class="line">Pour cette prochaine étape, un dispositif de programmation approprié doit être mis en place.</div>
+</div>
+<nav class="contents local" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#pre-requis" id="id1">Pré-requis</a></p></li>
+<li><p><a class="reference internal" href="#installation-du-firmware" id="id2">Installation du Firmware</a></p></li>
+<li><p><a class="reference internal" href="#test-de-la-partie-mesures" id="id3">Test de la partie <em>mesures</em></a></p></li>
+<li><p><a class="reference internal" href="#prochaines-etapes" id="id4">Prochaines Étapes</a></p></li>
+</ul>
+</nav>
+<section id="pre-requis">
+<span id="test-logiciel-requirements"></span><h2><a class="toc-backref" href="#id1" role="doc-backlink">Pré-requis</a><a class="headerlink" href="#pre-requis" title="Lien vers cette rubrique"></a></h2>
+<p>Pour cette étape, il vous faudra :</p>
+<ul class="simple">
+<li><p>Un ordinateur (PC ou équivalent) avec un port USB libre. Cet ordinateur peut fonctionner sous Windows, MacOS ou Linux.</p></li>
+<li><p>Un programmateur USB vers UART (par exemple, un programmateur <a class="reference internal" href="../../glossary/#term-FTDI"><span class="xref std std-term">FTDI</span></a>).</p></li>
+<li><p>Un câble USB approprié pour connecter le programmateur à l’ordinateur de programmation.</p></li>
+<li><p>Un câble d’alimentation électrique pour le routeur.</p></li>
+</ul>
+<section id="carte-usb-vers-uart">
+<h3>Carte USB vers UART<a class="headerlink" href="#carte-usb-vers-uart" title="Lien vers cette rubrique"></a></h3>
+<div class="line-block">
+<div class="line">Un programmateur USB vers UART est nécessaire pour télécharger le croquis (programme) sur le processeur.</div>
+<div class="line">Ce programmateur est également utilisé pour surveiller les messages de débogage envoyés par le processeur.</div>
+</div>
+<div class="line-block">
+<div class="line">Selon le système d’exploitation (Windows, MacOS ou Linux) de l’ordinateur de programmation, il peut être nécessaire d’installer un pilote pour le programmateur.</div>
+<div class="line">Les pilotes pour le programmateur <a class="reference internal" href="../../glossary/#term-FTDI"><span class="xref std std-term">FTDI</span></a> sont disponibles sur le site Web du fabricant.</div>
+</div>
+<div class="line-block">
+<div class="line">Les pilotes disponibles sur le site <a class="reference external" href="https://www.ftdichip.com/" rel="noreferrer" target="_blank">FTDI</a> devraient convenir à la plupart des cas d’utilisation.</div>
+<div class="line">Il conviendra de choisir les pilotes de type <strong>VCP</strong> (Virtual COM Port).</div>
+</div>
+</section>
+<section id="logiciel-de-programmation">
+<h3>Logiciel de programmation<a class="headerlink" href="#logiciel-de-programmation" title="Lien vers cette rubrique"></a></h3>
+<p>Pour programmer l’Arduino, vous aurez besoin d’un logiciel de programmation.</p>
+<div class="line-block">
+<div class="line">Le logiciel le plus convivial et le plus simple pour accomplir cette tâche est l’Arduino IDE.</div>
+<div class="line">Il est facile à installer et à utiliser, et il est spécialement conçu pour programmer des cartes Arduino.</div>
+</div>
+<div class="line-block">
+<div class="line">Cependant, vous pouvez également utiliser Visual Studio Code avec l’extension PlatformIO.</div>
+<div class="line">Cette combinaison offre un environnement de développement plus avancé et de nombreuses fonctionnalités supplémentaires pour les utilisateurs expérimentés.</div>
+</div>
+<p>Assurez-vous d’installer l’un de ces logiciels avant de continuer avec la programmation de votre carte.</p>
+<div class="line-block">
+<div class="line">L’<strong>Arduino IDE</strong> peut être téléchargé à partir du site <a class="reference external" href="https://www.arduino.cc/en/software" rel="noreferrer" target="_blank">Arduino</a>.</div>
+<div class="line">Pour Windows, veillez à choisir la version <strong>Windows</strong> et non <span class="sphinxnotes-strike" style="text-decoration: line-through;">Windows App</span>.</div>
+</div>
+<div class="line-block">
+<div class="line">Si vous êtes totalement débutant dans le domaine de l’Arduino, nous vous recommandons de consulter le tutoriel <a class="reference external" href="https://zestedesavoir.com/tutoriels/686/arduino-premiers-pas-en-informatique-embarquee/742_decouverte-de-larduino/" rel="noreferrer" target="_blank">Découverte de l’Arduino</a> par exemple.</div>
+<div class="line">Il y en a beaucoup d’autres disponibles sur Internet.</div>
+</div>
+</section>
+<section id="mise-en-place">
+<h3>Mise en place<a class="headerlink" href="#mise-en-place" title="Lien vers cette rubrique"></a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Remarque</p>
+<p>La carte <a class="reference internal" href="../../glossary/#term-FTDI"><span class="xref std std-term">FTDI</span></a> dispose d’un commutateur ou d’un cavalier pour choisir entre <strong>3,3 V</strong> et <strong>5 V</strong>.
+Assurez-vous que le cavalier est correctement positionné pour la tension de fonctionnement de la carte-mère.</p>
+</div>
+<div class="line-block">
+<div class="line">Un programmateur USB vers UART doit être connecté au connecteur <a class="reference internal" href="../../glossary/#term-FTDI"><span class="xref std std-term">FTDI</span></a> du <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a> comme indiqué ci-dessous.</div>
+<div class="line">L’autre extrémité du programmateur doit être connectée à l’ordinateur de programmation (PC ou équivalent) via un câble USB approprié.</div>
+</div>
+<p>La broche à une extrémité du connecteur à 6 voies du programmateur sera étiquetée <strong>Gnd</strong>. Cette broche doit correspondre au marquage <strong>0 V</strong> sur le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>.</p>
+<div class="line-block">
+<div class="line">Ici, nous utilisons le programmateur <a class="reference internal" href="../../glossary/#term-FTDI"><span class="xref std std-term">FTDI</span></a>. Notez qu’il doit être monté dans le sens inverse.</div>
+<div class="line">La broche <strong>Gnd</strong> doit toujours être la plus proche du bord de la carte.</div>
+</div>
+<div class="line-block">
+<div class="line">Pour éviter de tordre le connecteur du programmateur, vous pouvez fabriquer un simple câble d’extension comme indiqué ici.</div>
+<div class="line">Seules quatre des lignes sont réellement utilisées (données <strong>Tx</strong> &amp; <strong>Rx</strong>, masse et réinitialisation).</div>
+<div class="line">Aucune des lignes d’alimentation électrique n’est utilisée par cette carte.</div>
+</div>
+<p>Le fil noir est destiné à la connexion <strong>GND</strong> (ou <strong>0 V</strong>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La carte <a class="reference internal" href="../../glossary/#term-FTDI"><span class="xref std std-term">FTDI</span></a> ne peut pas alimenter la carte-mère.</p>
+<p>Le routeur doit toujours être alimenté par sa propre source d’alimentation.</p>
+</div>
+</section>
+</section>
+<section id="installation-du-firmware">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Installation du Firmware</a><a class="headerlink" href="#installation-du-firmware" title="Lien vers cette rubrique"></a></h2>
+<p>Firmware : <code class="docutils literal notranslate"><span class="pre">Mk2_fasterControl_Full</span></code> — <a class="reference external" href="https://github.com/FredM67/PVRouter-1-phase" rel="noreferrer" target="_blank">PVRouter-1-phase</a></p>
+<p><strong>Étapes communes à toutes les versions</strong> : <a class="reference internal" href="../../installation-logiciel/#installation-logiciel"><span class="std std-ref">Installation des Logiciels</span></a></p>
+<section id="installation-de-u8g2">
+<h3>Installation de U8g2<a class="headerlink" href="#installation-de-u8g2" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cette bibliothèque est <strong>uniquement nécessaire pour les PCB monophasés</strong> équipés d’un affichage.
+Les versions triphasées n’utilisent pas cette bibliothèque.</p>
+</div>
+<p>Cette bibliothèque gère l’affichage sur écran.</p>
+<ol class="arabic simple">
+<li><p>Dans le Gestionnaire de bibliothèques d’Arduino IDE</p></li>
+<li><p>Dans le champ de recherche, taper : <cite>U8g2</cite></p></li>
+<li><p>Trouver <strong>« U8g2 »</strong> par oliver</p></li>
+<li><p>Cliquer sur <strong>« Installer »</strong></p></li>
+</ol>
+</section>
+<section id="etape-1-telechargement-du-firmware">
+<h3>Étape 1 : Téléchargement du Firmware<a class="headerlink" href="#etape-1-telechargement-du-firmware" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Ouvrir le navigateur : <a class="reference external" href="https://github.com/FredM67/PVRouter-1-phase" rel="noreferrer" target="_blank">https://github.com/FredM67/PVRouter-1-phase</a></p></li>
+<li><p>Cliquer sur le bouton vert <strong>« Code »</strong> → <strong>« Download ZIP »</strong></p></li>
+<li><p>Enregistrer le fichier <cite>PVRouter-1-phase-main.zip</cite></p></li>
+<li><p>Extraire le contenu dans un dossier de votre choix (exemple : <cite>Documents/Arduino/</cite>)</p></li>
+<li><p>Le firmware se trouve dans : <cite>PVRouter-1-phase-main/Mk2_fasterControl_Full/</cite></p></li>
+</ol>
+<section id="structure-du-firmware">
+<h4>Structure du Firmware<a class="headerlink" href="#structure-du-firmware" title="Lien vers cette rubrique"></a></h4>
+<p>Après extraction, vous devriez avoir :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Mk2_fasterControl_Full/
+├── Mk2_fasterControl_Full.ino  (fichier principal)
+├── config.h                     (configuration utilisateur)
+├── calibration.h                (paramètres d’étalonnage)
+├── dualtarif.h
+├── processing.cpp
+├── temperature.cpp
+├── utils_temp.h
+└── ... (autres fichiers)
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Seuls deux fichiers doivent être modifiés par l’utilisateur :</p>
+<ul class="simple">
+<li><p><strong>config.h</strong> — Configuration générale (pins, type d’affichage, sorties)</p></li>
+<li><p><strong>calibration.h</strong> — Paramètres d’étalonnage (à remplir après l’étalonnage)</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="etape-2-configuration-du-firmware">
+<h3>Étape 2 : Configuration du Firmware<a class="headerlink" href="#etape-2-configuration-du-firmware" title="Lien vers cette rubrique"></a></h3>
+<section id="ouverture-du-projet">
+<h4>Ouverture du Projet<a class="headerlink" href="#ouverture-du-projet" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p>Lancer Arduino IDE</p></li>
+<li><p>Menu : <strong>Fichier → Ouvrir</strong></p></li>
+<li><p>Naviguer vers le dossier du firmware</p></li>
+<li><p>Ouvrir le fichier <cite>Mk2_fasterControl_Full.ino</cite></p></li>
+<li><p>Arduino IDE ouvre plusieurs onglets (c’est normal)</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les autres fichiers (<cite>.cpp</cite>, <cite>.h</cite>) s’affichent automatiquement dans des onglets séparés.</p>
+</div>
+</section>
+<section id="configuration-dans-config-h">
+<h4>Configuration dans <cite>config.h</cite><a class="headerlink" href="#configuration-dans-config-h" title="Lien vers cette rubrique"></a></h4>
+<p>Cliquer sur l’onglet <strong>`config.h`</strong> pour le modifier.</p>
+<section id="version-du-pcb">
+<h5>Version du PCB<a class="headerlink" href="#version-du-pcb" title="Lien vers cette rubrique"></a></h5>
+<p>Selon la version de votre PCB :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Ancienne version de PCB (avant 2023)</span>
+<span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">OLD_PCB</span><span class="p">{</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="p">};</span>
+
+<span class="c1">// Nouvelle version de PCB (2023+)</span>
+<span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">OLD_PCB</span><span class="p">{</span><span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Si vous avez reçu votre kit après 2 023, mettez <cite>false</cite>.</p>
+</div>
+</section>
+<section id="format-de-sortie-serie">
+<h5>Format de Sortie Série<a class="headerlink" href="#format-de-sortie-serie" title="Lien vers cette rubrique"></a></h5>
+<p>Pour débuter, laisser le mode lisible par un humain :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">SerialOutputType</span><span class="w"> </span><span class="n">SERIAL_OUTPUT_TYPE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SerialOutputType</span><span class="o">::</span><span class="n">HumanReadable</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Options disponibles :</p>
+<ul class="simple">
+<li><p><cite>HumanReadable</cite> : Affichage facile à lire (recommandé pour débuter)</p></li>
+<li><p><cite>IoT</cite> : Format compact pour IoT</p></li>
+<li><p><cite>JSON</cite> : Format JSON pour intégration domotique</p></li>
+</ul>
+</section>
+<section id="type-daffichage">
+<h5>Type d’Affichage<a class="headerlink" href="#type-daffichage" title="Lien vers cette rubrique"></a></h5>
+<p>Si vous n’avez pas d’afficheur :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">DisplayType</span><span class="w"> </span><span class="n">TYPE_OF_DISPLAY</span><span class="p">{</span><span class="w"> </span><span class="n">DisplayType</span><span class="o">::</span><span class="n">NONE</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p>Options disponibles :</p>
+<ul class="simple">
+<li><p><cite>NONE</cite> : Pas d’affichage</p></li>
+<li><p><cite>SEG</cite> : Afficheur 7 segments (logiciel)</p></li>
+<li><p><cite>SEG_HW</cite> : Afficheur 7 segments (matériel)</p></li>
+</ul>
+</section>
+<section id="configuration-des-sorties-triac">
+<h5>Configuration des Sorties Triac<a class="headerlink" href="#configuration-des-sorties-triac" title="Lien vers cette rubrique"></a></h5>
+<p>Définir le nombre de sorties et leurs broches :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Exemple : 2 sorties triac</span>
+<span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">NO_OF_DUMPLOADS</span><span class="p">{</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">};</span>
+
+<span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">IoPinMapping</span><span class="w"> </span><span class="n">physicalPin_dump_load</span><span class="p">[</span><span class="n">NO_OF_DUMPLOADS</span><span class="p">]{</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">DivertorConfig</span><span class="p">(</span><span class="n">NORMAL</span><span class="p">)</span><span class="w"> </span><span class="p">},</span><span class="w">    </span><span class="c1">// Sortie 1 sur broche D5</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">DivertorConfig</span><span class="p">(</span><span class="n">NORMAL</span><span class="p">)</span><span class="w"> </span><span class="p">},</span><span class="w">    </span><span class="c1">// Sortie 2 sur broche D4</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="ordre-de-demarrage">
+<h5>Ordre de Démarrage<a class="headerlink" href="#ordre-de-demarrage" title="Lien vers cette rubrique"></a></h5>
+<p>Définir la priorité des charges :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">dumpLoad_startup_sequence</span><span class="p">[</span><span class="n">NO_OF_DUMPLOADS</span><span class="p">]{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p>Signification : Démarrer d’abord la sortie 0, puis la sortie 1.</p>
+</section>
+<section id="sondes-de-temperature-optionnel">
+<h5>Sondes de Température (Optionnel)<a class="headerlink" href="#sondes-de-temperature-optionnel" title="Lien vers cette rubrique"></a></h5>
+<p>Si vous utilisez des sondes DS18B20, décommenter la ligne :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define TEMP_ENABLED</span>
+</pre></div>
+</div>
+<p>Et configurer les adresses des sondes :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">DeviceAddress</span><span class="w"> </span><span class="n">sensor_list</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="mh">0x28</span><span class="p">,</span><span class="w"> </span><span class="mh">0xAA</span><span class="p">,</span><span class="w"> </span><span class="mh">0xBB</span><span class="p">,</span><span class="w"> </span><span class="mh">0xCC</span><span class="p">,</span><span class="w"> </span><span class="mh">0xDD</span><span class="p">,</span><span class="w"> </span><span class="mh">0xEE</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="w"> </span><span class="p">},</span><span class="w">  </span><span class="c1">// Sonde 1</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="mh">0x28</span><span class="p">,</span><span class="w"> </span><span class="mh">0xAA</span><span class="p">,</span><span class="w"> </span><span class="mh">0xBB</span><span class="p">,</span><span class="w"> </span><span class="mh">0xCC</span><span class="p">,</span><span class="w"> </span><span class="mh">0xDD</span><span class="p">,</span><span class="w"> </span><span class="mh">0xEE</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="w"> </span><span class="p">},</span><span class="w">  </span><span class="c1">// Sonde 2</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="mh">0x28</span><span class="p">,</span><span class="w"> </span><span class="mh">0xAA</span><span class="p">,</span><span class="w"> </span><span class="mh">0xBB</span><span class="p">,</span><span class="w"> </span><span class="mh">0xCC</span><span class="p">,</span><span class="w"> </span><span class="mh">0xDD</span><span class="p">,</span><span class="w"> </span><span class="mh">0xEE</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="w"> </span><span class="p">},</span><span class="w">  </span><span class="c1">// Sonde 3</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les adresses des sondes seront trouvées lors du premier lancement (voir Moniteur Série).</p>
+</div>
+</section>
+</section>
+<section id="configuration-dans-calibration-h">
+<h4>Configuration dans <cite>calibration.h</cite><a class="headerlink" href="#configuration-dans-calibration-h" title="Lien vers cette rubrique"></a></h4>
+<p>Ce fichier contient les paramètres d’étalonnage.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Ne modifiez <strong>PAS</strong> ce fichier maintenant — les valeurs seront déterminées lors de l’étalonnage
+(voir chapitre <a class="reference internal" href="../etalonnage-monophase/#etalonnage-monophase"><span class="std std-ref">Étalonnage — Monophasé</span></a>).</p>
+</div>
+<p>Les paramètres par défaut permettent de tester le routeur.</p>
+</section>
+</section>
+<section id="etape-3-connexion-et-programmation">
+<h3>Étape 3 : Connexion et Programmation<a class="headerlink" href="#etape-3-connexion-et-programmation" title="Lien vers cette rubrique"></a></h3>
+<section id="preparation">
+<h4>Préparation<a class="headerlink" href="#preparation" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>L’adaptateur FTDI ne peut <strong>PAS</strong> alimenter le routeur seul !</p>
+<p>Le routeur doit être alimenté par sa propre alimentation 230 V.</p>
+</div>
+</section>
+<section id="connexion-du-routeur">
+<h4>Connexion du Routeur<a class="headerlink" href="#connexion-du-routeur" title="Lien vers cette rubrique"></a></h4>
+<p>Le PCB dispose d’un connecteur 6 broches pour l’adaptateur FTDI. Si votre adaptateur a un connecteur compatible, branchez-le directement — c’est la méthode la plus simple.</p>
+<p>Si vous utilisez des fils individuels, suivez les instructions ci-dessous.</p>
+<ol class="arabic">
+<li><p>⚠️ <strong>Couper l’alimentation secteur</strong> du routeur (disjoncteur)</p></li>
+<li><p>Brancher l’adaptateur FTDI sur le routeur :</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Broche FTDI</p></th>
+<th class="head"><p>Broche PCB</p></th>
+<th class="head"><p>Couleur câble (FTDI)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GND</p></td>
+<td><p>0 V (ou GND)</p></td>
+<td><p>Noir</p></td>
+</tr>
+<tr class="row-odd"><td><p>TX (Transmit)</p></td>
+<td><p>RX (Receive)</p></td>
+<td><p>Vert ou Orange</p></td>
+</tr>
+<tr class="row-even"><td><p>RX (Receive)</p></td>
+<td><p>TX (Transmit)</p></td>
+<td><p>Blanc ou Jaune</p></td>
+</tr>
+<tr class="row-odd"><td><p>VCC</p></td>
+<td><p><strong>NE PAS CONNECTER</strong></p></td>
+<td><p>Rouge (laisser libre)</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>⚠️ <strong>Câblage manuel uniquement</strong> : NE PAS connecter le fil VCC (rouge) de l’adaptateur FTDI au routeur !</p>
+<p>Cela peut endommager l’adaptateur FTDI ou le routeur.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Vérifier le cavalier ou switch de l’adaptateur FTDI :</p>
+<ul class="simple">
+<li><p>Position <strong>3,3 V</strong> si routeur en 3,3 V</p></li>
+<li><p>Position <strong>5 V</strong> si routeur en 5 V</p></li>
+</ul>
+</li>
+<li><p>Connecter l’adaptateur FTDI à l’ordinateur (port USB)</p></li>
+<li><p><strong>Mettre le routeur sous tension</strong> (réenclencher le disjoncteur)</p></li>
+</ol>
+</section>
+<section id="configuration-arduino-ide">
+<h4>Configuration Arduino IDE<a class="headerlink" href="#configuration-arduino-ide" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p>Menu : <strong>Outils → Type de carte → Arduino AVR Boards → Arduino Uno</strong></p></li>
+<li><p>Menu : <strong>Outils → Port → COMx</strong> (Windows) ou <cite>/dev/tty.usbserial-xxx</cite> (Mac/Linux)</p>
+<ul class="simple">
+<li><p>Choisir le port correspondant à l’adaptateur FTDI</p></li>
+<li><p>Si plusieurs ports : essayer chacun jusqu’à ce que ça fonctionne</p></li>
+</ul>
+</li>
+<li><p>Menu : <strong>Outils → Programmateur → AVRISP mkII</strong> (ou laisser par défaut)</p></li>
+</ol>
+</section>
+<section id="compilation-et-televersement">
+<h4>Compilation et Téléversement<a class="headerlink" href="#compilation-et-televersement" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-checklist-avant-televersement admonition">
+<p class="admonition-title">Checklist avant téléversement</p>
+<ul class="simple">
+<li><p>[ ] Modifications sauvegardées dans <cite>config.h</cite></p></li>
+<li><p>[ ] Routeur alimenté (230 V)</p></li>
+<li><p>[ ] Adaptateur FTDI connecté (USB + PCB)</p></li>
+<li><p>[ ] Bon port COM sélectionné</p></li>
+<li><p>[ ] Type de carte = Arduino Uno</p></li>
+</ul>
+</div>
+<ol class="arabic simple">
+<li><p>Cliquer sur le bouton <strong>« Vérifier »</strong> (✓) pour compiler</p>
+<ul class="simple">
+<li><p>Attendre la compilation (1–2 minutes la première fois)</p></li>
+<li><p>Vérifier qu’il n’y a <strong>aucune erreur</strong></p></li>
+</ul>
+</li>
+<li><p>Si la compilation réussit, cliquer sur <strong>« Téléverser »</strong> (→)</p>
+<ul class="simple">
+<li><p>La LED <strong>TX</strong> sur l’adaptateur FTDI clignote</p></li>
+<li><p>La LED <strong>RX</strong> sur le routeur clignote</p></li>
+<li><p>Attendre le message <strong>« Téléversement terminé »</strong></p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Si la compilation échoue avec des erreurs sur <cite>std::array</cite> ou <cite>constexpr</cite>,
+c’est que le fichier <cite>platform.txt</cite> n’a pas été correctement modifié (voir <a class="reference internal" href="../../installation-logiciel/#arduino-cpp17-config"><span class="std std-ref">Configuration Arduino IDE pour C++17</span></a>).</p>
+</div>
+</section>
+<section id="resolution-des-problemes">
+<h4>Résolution des Problèmes<a class="headerlink" href="#resolution-des-problemes" title="Lien vers cette rubrique"></a></h4>
+<section id="erreur-avrdude-stk500-recv-programmer-is-not-responding">
+<h5>Erreur : <cite>avrdude: stk500_recv(): programmer is not responding</cite><a class="headerlink" href="#erreur-avrdude-stk500-recv-programmer-is-not-responding" title="Lien vers cette rubrique"></a></h5>
+<p><strong>Causes possibles :</strong></p>
+<ol class="arabic simple">
+<li><p>Mauvais port COM sélectionné → Essayer un autre port</p></li>
+<li><p>Routeur non alimenté → Vérifier l’alimentation 230 V</p></li>
+<li><p>Câblage FTDI incorrect → Vérifier TX ↔ RX inversés</p></li>
+<li><p>ATmega328P mal inséré → Vérifier l’orientation et l’insertion complète</p></li>
+</ol>
+</section>
+<section id="erreur-error-constexpr-does-not-name-a-type">
+<h5>Erreur : <cite>error: “constexpr” does not name a type</cite><a class="headerlink" href="#erreur-error-constexpr-does-not-name-a-type" title="Lien vers cette rubrique"></a></h5>
+<p>Le fichier <cite>platform.txt</cite> n’a pas été modifié correctement.</p>
+<p><strong>Solution :</strong> Reprendre <a class="reference internal" href="../../installation-logiciel/#arduino-cpp17-config"><span class="std std-ref">Configuration Arduino IDE pour C++17</span></a>.</p>
+</section>
+<section id="port-com-napparait-pas">
+<h5>Port COM n’apparaît pas<a class="headerlink" href="#port-com-napparait-pas" title="Lien vers cette rubrique"></a></h5>
+<ol class="arabic simple">
+<li><p>Vérifier que les pilotes FTDI sont installés (<a class="reference internal" href="../../installation-logiciel/#install-etape1-ftdi"><span class="std std-ref">Installation Pilotes FTDI</span></a>)</p></li>
+<li><p>Débrancher/rebrancher l’adaptateur FTDI</p></li>
+<li><p>Redémarrer l’ordinateur</p></li>
+</ol>
+</section>
+</section>
+<section id="ouverture-du-moniteur-serie">
+<h4>Ouverture du Moniteur Série<a class="headerlink" href="#ouverture-du-moniteur-serie" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p>Menu : <strong>Outils → Moniteur série</strong></p></li>
+<li><p>Configurer en bas à droite :</p>
+<ul class="simple">
+<li><p><strong>Vitesse (baud rate)</strong> : <cite>9600</cite></p></li>
+<li><p><strong>Fin de ligne</strong> : <cite>Retour chariot et Nouvelle ligne</cite> (NL &amp; CR)</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="messages-attendus">
+<h4>Messages Attendus<a class="headerlink" href="#messages-attendus" title="Lien vers cette rubrique"></a></h4>
+<p>Si tout fonctionne, vous devriez voir des messages s’afficher :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Mk2PVRouter v3.x
+Initialisation...
+CT1: 0 W
+CT2: 0 W  (si triphasé)
+CT3: 0 W  (si triphasé)
+Grid: 230 V
+Load 1: OFF
+Load 2: OFF
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les valeurs exactes dépendent de votre installation et de l’étalonnage.</p>
+</div>
+</section>
+<section id="si-aucun-message-napparait">
+<h4>Si Aucun Message n’Apparaît<a class="headerlink" href="#si-aucun-message-napparait" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p>Vérifier que le bon baud rate est sélectionné (9600 bauds)</p></li>
+<li><p>Vérifier le câblage FTDI (TX ↔ RX)</p></li>
+<li><p>Vérifier que le routeur est alimenté</p></li>
+<li><p>Vérifier l’oscillateur 16 MHz et les condensateurs C7/C8</p></li>
+</ol>
+</section>
+<section id="adresses-des-sondes-de-temperature">
+<h4>Adresses des Sondes de Température<a class="headerlink" href="#adresses-des-sondes-de-temperature" title="Lien vers cette rubrique"></a></h4>
+<p>Si vous avez activé <cite>TEMP_ENABLED</cite>, le moniteur série affichera les adresses détectées :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Temperature sensor 0 address: 28 AA BB CC DD EE FF 01
+Temperature sensor 1 address: 28 AA BB CC DD EE FF 02
+</pre></div>
+</div>
+<p>Copier ces adresses dans <cite>config.h</cite> (section sondes de température).</p>
+</section>
+</section>
+</section>
+<section id="test-de-la-partie-mesures">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Test de la partie <em>mesures</em></a><a class="headerlink" href="#test-de-la-partie-mesures" title="Lien vers cette rubrique"></a></h2>
+<div class="line-block">
+<div class="line">Le transformateur ZMPT101K (TR1) fournit le signal de mesure de tension CA.</div>
+<div class="line">Cela peut être vérifié en exécutant un programme (croquis) qui affiche les mesures analogiques prises par le processeur Atmel (<strong>IC1</strong>).</div>
+</div>
+<p>Le programme, qui se trouve également sur la page Téléchargements, est : <em>RawSamplesTool_2chan.ino</em></p>
+<div class="line-block">
+<div class="line">Après avoir téléchargé ce croquis sur le processeur via l’Arduino IDE, la fenêtre série (icône en forme de loupe) doit être ouverte.</div>
+<div class="line">Après avoir terminé chaque exécution, le programme peut être redémarré à partir du clavier en saisissant le caractère « <strong>g</strong> », suivi de <em>Entrée</em>.</div>
+</div>
+<div class="line-block">
+<div class="line">Le programme <em>RawSamplesTool_2chan</em> affiche les échantillons de tension alternative et de courant pour un ou plusieurs cycles secteur complets.</div>
+<div class="line">Si un courant important est mesuré ainsi que la tension, les résultats affichés sembleront plus intéressants.</div>
+</div>
+<div class="line-block">
+<div class="line">Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a> branché sur <strong>CT2</strong>.</div>
+<div class="line">Lorsque le <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a> a été déplacé vers le port <a class="reference internal" href="../../glossary/#term-CT"><span class="xref std std-term">CT</span></a>1, la sortie résultante semblait presque identique, mais avec les caractères « <strong>1</strong> » et « <strong>2</strong> » inversés.</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">RSResults_V_and_I2.txt</span></code></p>
+<div class="line-block">
+<div class="line">Si aucun signal n’est disponible sur les ports <strong>CT1</strong> et <strong>CT2</strong>, les formes d’onde de ces canaux seront toutes deux des lignes droites.</div>
+<div class="line">Seul le signal de tension affichera un aspect sinusoïdal.</div>
+<div class="line">Pour vérifier le fonctionnement des ports <strong>CT1</strong> et <strong>CT2</strong> pendant que le <a class="reference internal" href="../../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a> est testé sur le banc, un câblage adapté sera nécessaire.</div>
+</div>
+</section>
+<section id="prochaines-etapes">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Prochaines Étapes</a><a class="headerlink" href="#prochaines-etapes" title="Lien vers cette rubrique"></a></h2>
+<p>✅ Le firmware est maintenant installé et fonctionnel !</p>
+<p><strong>Prochaines étapes :</strong></p>
+<ol class="arabic">
+<li><p><strong>Étalonnage</strong> : Voir chapitre <a class="reference internal" href="../etalonnage-monophase/#etalonnage-monophase"><span class="std std-ref">Étalonnage — Monophasé</span></a></p>
+<p>L’étalonnage est <strong>OBLIGATOIRE</strong> pour que le routeur fonctionne correctement.</p>
+</li>
+<li><p><strong>Installation finale</strong> : Connexion au réseau électrique (faire appel à un électricien qualifié)</p></li>
+<li><p><strong>Configuration avancée</strong> : Relais, sondes de température, double tarif, etc.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Ne pas connecter le routeur au réseau électrique domestique avant d’avoir :</p>
+<ul class="simple">
+<li><p>[ ] Vérifié toutes les soudures (pas de pont, pas de soudure froide)</p></li>
+<li><p>[ ] Lu le chapitre de sécurité</p></li>
+<li><p>[ ] Fait appel à un électricien qualifié (fortement recommandé)</p></li>
+</ul>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>FONCTIONNALITÉ</strong> : L’étalonnage doit être effectué après l’installation électrique pour que le routeur mesure correctement et fonctionne de manière optimale. Le routeur peut être connecté sans étalonnage (pas de danger), mais ne fonctionnera pas correctement.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../logiciel-etalonnage-monophase/" class="btn btn-neutral float-left" title="Monophasé" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../etalonnage-monophase/" class="btn btn-neutral float-right" title="Étalonnage — Monophasé" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 05 avril 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/firmware/logiciel-monophase.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/firmware/logiciel-monophase.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

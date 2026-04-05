@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-03-07T23:49:10+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mise en Service et Maintenance &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=b8b12719"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../_static/clickable-images.js?v=cb5602a2"></script>
+      <script data-domain="fredm67.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="Guide de Dépannage" href="../troubleshooting/" />
+    <link rel="prev" title="Capteurs de Courant et Connexions Électriques" href="../installation-finale-connexions/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-mere/tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/logiciel-etalonnage-monophase/">Monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/logiciel-etalonnage-triphase/">Triphasé</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mise en Service et Maintenance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#premiere-mise-sous-tension">Première Mise Sous Tension</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#liste-de-verification-finale">Liste de Vérification Finale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#procedure-de-mise-sous-tension">Procédure de Mise Sous Tension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#surveillance-post-installation">Surveillance Post-Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tests-de-fonctionnement">Tests de Fonctionnement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test-de-detection-de-production">Test de Détection de Production</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-de-securite-triac">Test de Sécurité <span class="xref std std-term">triac</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-de-coupure-d-urgence">Test de Coupure d’Urgence</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#resolution-de-problemes-courants">Résolution de Problèmes Courants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#le-routeur-ne-s-allume-pas">Le routeur ne s’allume pas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#le-routeur-fonctionne-a-l-envers">Le routeur fonctionne à l’envers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#la-charge-ne-s-active-jamais">La charge ne s’active jamais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#le-disjoncteur-saute">Le disjoncteur saute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#odeur-de-brule">Odeur de brûlé</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#maintenance-et-surveillance">Maintenance et Surveillance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#verifications-periodiques">Vérifications Périodiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#signes-d-alerte">Signes d’Alerte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#depose-et-remplacement">Dépose et Remplacement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#numeros-d-urgence">Numéros d’Urgence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ressources-complementaires">Ressources Complémentaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#avertissement-final">Avertissement Final</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-led-et-signalisation">Problèmes LED et Signalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-electrique/#problemes-de-communication-rf">💻 Problèmes de Communication RF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#obtenir-de-laide">Obtenir de l’Aide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting-mk2wifi/#conclusion">Conclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Mise en Service et Maintenance</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/installation-finale-mise-en-service.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mise-en-service-et-maintenance">
+<span id="installation-finale-mise-en-service"></span><h1>Mise en Service et Maintenance<a class="headerlink" href="#mise-en-service-et-maintenance" title="Lien vers cette rubrique"></a></h1>
+<section id="premiere-mise-sous-tension">
+<h2>Première Mise Sous Tension<a class="headerlink" href="#premiere-mise-sous-tension" title="Lien vers cette rubrique"></a></h2>
+<section id="liste-de-verification-finale">
+<h3>Liste de Vérification Finale<a class="headerlink" href="#liste-de-verification-finale" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition-checklist-avant-premiere-mise-sous-tension admonition">
+<p class="admonition-title">✅ Checklist Avant Première Mise Sous Tension</p>
+<p>Avant de réenclencher le disjoncteur :</p>
+<p>☐ Toutes les connexions serrées et vérifiées</p>
+<p>☐ Aucun brin de cuivre apparent</p>
+<p>☐ <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> installés dans le bon sens (flèche vérifiée)</p>
+<p>☐ Câbles de section correcte pour la puissance</p>
+<p>☐ Disjoncteur dédié correctement dimensionné</p>
+<p>☐ Tous les couvercles du tableau refermés</p>
+<p>☐ Aucun outil ne reste dans le tableau</p>
+<p>☐ Extincteur à portée de main</p>
+<p>☐ Personne présente pour surveiller</p>
+<p>☐ Téléphone à portée pour appeler secours si besoin</p>
+</div>
+</section>
+<section id="procedure-de-mise-sous-tension">
+<h3>Procédure de Mise Sous Tension<a class="headerlink" href="#procedure-de-mise-sous-tension" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Laisser les disjoncteurs du routeur ET des charges en position OFF</strong></p></li>
+<li><p><strong>Réenclencher le disjoncteur général</strong> du tableau</p></li>
+<li><p><strong>Vérifier que le reste de l’installation fonctionne</strong> (lumières, prises)</p></li>
+<li><p><strong>Se positionner devant le tableau</strong> avec extincteur à portée</p></li>
+<li><p><strong>Enclencher le disjoncteur dédié du Mk2PVRouter</strong></p></li>
+<li><p><strong>Observer pendant 30 secondes</strong> :</p>
+<ul class="simple">
+<li><p>Pas d’odeur de brûlé</p></li>
+<li><p>Pas de fumée</p></li>
+<li><p>Pas de grésillement</p></li>
+<li><p>Disjoncteur ne saute pas</p></li>
+</ul>
+</li>
+<li><p><strong>Vérifier le fonctionnement du Mk2PVRouter</strong> :</p>
+<ul class="simple">
+<li><p>LED d’alimentation allumée</p></li>
+<li><p>Écran affiche des données (si présent)</p></li>
+<li><p>Pas de bruit anormal</p></li>
+</ul>
+</li>
+<li><p><strong>Enclencher les disjoncteurs des charges</strong> un par un, en vérifiant après chaque enclenchement l’absence d’anomalie (odeur, grésillement, disjoncteur qui saute)</p></li>
+</ol>
+</section>
+<section id="surveillance-post-installation">
+<h3>Surveillance Post-Installation<a class="headerlink" href="#surveillance-post-installation" title="Lien vers cette rubrique"></a></h3>
+<p>Pendant les <strong>premières 24 heures</strong> :</p>
+<ul class="simple">
+<li><p>⚠️ <strong>Rester à proximité les 2 premières heures</strong> de fonctionnement</p></li>
+<li><p>⚠️ <strong>Vérifier régulièrement</strong> (toutes les 30 minutes au début) :</p>
+<ul>
+<li><p>Pas d’échauffement anormal des connexions et du dissipateur du <a class="reference internal" href="../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> (toucher avec dos de la main — le dissipateur peut être tiède, mais pas brûlant)</p></li>
+<li><p>Pas d’odeur de brûlé</p></li>
+<li><p>Pas de fumée</p></li>
+<li><p>Fonctionnement correct du routeur</p></li>
+</ul>
+</li>
+<li><p>⚠️ <strong>Si le moindre problème est détecté</strong> :</p>
+<ol class="arabic simple">
+<li><p>Couper IMMÉDIATEMENT le disjoncteur du Mk2PVRouter</p></li>
+<li><p>Couper le disjoncteur général si fumée ou odeur forte</p></li>
+<li><p>Laisser refroidir 30 minutes</p></li>
+<li><p>Inspecter visuellement toutes les connexions</p></li>
+<li><p>Faire vérifier par un électricien avant de remettre sous tension</p></li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+<section id="tests-de-fonctionnement">
+<h2>Tests de Fonctionnement<a class="headerlink" href="#tests-de-fonctionnement" title="Lien vers cette rubrique"></a></h2>
+<section id="test-de-detection-de-production">
+<h3>Test de Détection de Production<a class="headerlink" href="#test-de-detection-de-production" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Allumer un appareil de forte puissance</strong> (bouilloire, radiateur 2 000 W)</p></li>
+<li><p><strong>Observer l’affichage du routeur</strong> :</p>
+<ul class="simple">
+<li><p>La puissance consommée doit être affichée en positif</p></li>
+<li><p>Le routeur ne doit PAS activer la charge</p></li>
+</ul>
+</li>
+<li><p><strong>Éteindre l’appareil</strong></p></li>
+<li><p><strong>Simuler une production</strong> (si possible, ou attendre production solaire)</p>
+<ul class="simple">
+<li><p>Si injection réseau détectée → Le routeur doit activer la charge</p></li>
+<li><p>Puissance doit être affichée en négatif (injection)</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="test-de-securite-triac">
+<h3>Test de Sécurité <a class="reference internal" href="../glossary/#term-Triac"><span class="xref std std-term">triac</span></a><a class="headerlink" href="#test-de-securite-triac" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Vérifier que la charge ne s’active PAS</strong> en l’absence de production solaire</p></li>
+<li><p><strong>Attendre une période de production solaire</strong> (journée ensoleillée)</p>
+<ul class="simple">
+<li><p>Quand la production dépasse la consommation du foyer, le routeur doit activer la charge</p></li>
+<li><p>Plus l’excédent est important, plus la puissance routée augmente</p></li>
+<li><p>Observer la montée progressive de la puissance routée sur l’écran ou les logs série</p></li>
+</ul>
+</li>
+<li><p><strong>Quand la production diminue</strong> (passage nuageux, fin de journée)</p>
+<ul class="simple">
+<li><p>La puissance routée doit diminuer en proportion</p></li>
+<li><p>Dès que la consommation dépasse la production, la charge doit se désactiver complètement</p></li>
+<li><p>Aucune injection réseau ne doit subsister</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="test-de-coupure-d-urgence">
+<h3>Test de Coupure d’Urgence<a class="headerlink" href="#test-de-coupure-d-urgence" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Couper le disjoncteur dédié du routeur</strong></p>
+<ul class="simple">
+<li><p>Le routeur doit s’éteindre immédiatement</p></li>
+<li><p>La charge doit se désactiver</p></li>
+</ul>
+</li>
+<li><p><strong>Réenclencher le disjoncteur</strong></p>
+<ul class="simple">
+<li><p>Le routeur doit redémarrer normalement</p></li>
+<li><p>Pas de défaut affiché</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="resolution-de-problemes-courants">
+<h2>Résolution de Problèmes Courants<a class="headerlink" href="#resolution-de-problemes-courants" title="Lien vers cette rubrique"></a></h2>
+<section id="le-routeur-ne-s-allume-pas">
+<h3>Le routeur ne s’allume pas<a class="headerlink" href="#le-routeur-ne-s-allume-pas" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Causes possibles :</strong></p>
+<p>☐ Disjoncteur pas enclenché ou défectueux</p>
+<p>☐ Fusible grillé sur la carte-mère (un fusible par conducteur actif : 2 en monophasé N+L, 4 en triphasé N+L1+L2+L3)</p>
+<p>☐ Connexion d’alimentation desserrée</p>
+<p>☐ Transformateur d’alimentation défectueux</p>
+<p>☐ Court-circuit sur l’alimentation</p>
+<p><strong>Actions :</strong></p>
+<ol class="arabic simple">
+<li><p>Vérifier que le disjoncteur est bien enclenché</p></li>
+<li><p>Mesurer la tension en sortie du disjoncteur dédié (230 V attendu entre phase et neutre)</p></li>
+<li><p>Vérifier les fusibles sur le routeur</p></li>
+<li><p>Inspecter visuellement toutes les soudures</p></li>
+</ol>
+</section>
+<section id="le-routeur-fonctionne-a-l-envers">
+<h3>Le routeur fonctionne à l’envers<a class="headerlink" href="#le-routeur-fonctionne-a-l-envers" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Le routeur active la charge quand vous consommez et la désactive quand vous produisez</p>
+<p><strong>Cause :</strong> <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> installé à l’envers</p>
+<p><strong>Solution :</strong></p>
+<ol class="arabic simple">
+<li><p>Couper le disjoncteur général</p></li>
+<li><p>Retourner le <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> (inverser le sens de la flèche), ou inverser les fils K ↔ L sur le connecteur jack</p></li>
+<li><p>Remettre sous tension et retester</p></li>
+</ol>
+</section>
+<section id="la-charge-ne-s-active-jamais">
+<h3>La charge ne s’active jamais<a class="headerlink" href="#la-charge-ne-s-active-jamais" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Causes possibles :</strong></p>
+<p>☐ <a class="reference internal" href="../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> défectueux (court-circuit ou ouvert)</p>
+<p>☐ Connexion charge desserrée</p>
+<p>☐ Charge défectueuse (chauffe-eau HS)</p>
+<p>☐ Problème logiciel (seuil de déclenchement trop élevé)</p>
+<p><strong>Actions :</strong></p>
+<ol class="arabic simple">
+<li><p>Vérifier les logs du routeur (seuil, puissance mesurée)</p></li>
+<li><p>Vérifier la résistance de la charge (multimètre)</p></li>
+<li><p>Tester le triac avec un multimètre</p></li>
+<li><p>Vérifier les paramètres logiciels</p></li>
+</ol>
+</section>
+<section id="le-disjoncteur-saute">
+<h3>Le disjoncteur saute<a class="headerlink" href="#le-disjoncteur-saute" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Causes possibles :</strong></p>
+<p>☐ Court-circuit dans le routeur ou la charge</p>
+<p>☐ Surcharge (charge trop puissante pour le calibre du disjoncteur)</p>
+<p>☐ Défaut d’isolation (fuite à la terre)</p>
+<p>☐ Disjoncteur défectueux ou sous-dimensionné</p>
+<p><strong>Actions :</strong></p>
+<ol class="arabic simple">
+<li><p><strong>NE PAS réenclencher immédiatement</strong></p></li>
+<li><p>Débrancher la charge du routeur</p></li>
+<li><p>Réenclencher le disjoncteur → Si le disjoncteur tient : Le problème vient de la charge</p></li>
+<li><p>Si le disjoncteur saute toujours : Le problème vient du routeur → Faire vérifier par un électricien</p></li>
+</ol>
+</section>
+<section id="odeur-de-brule">
+<h3>Odeur de brûlé<a class="headerlink" href="#odeur-de-brule" title="Lien vers cette rubrique"></a></h3>
+<p><strong>ACTION IMMÉDIATE :</strong></p>
+<ol class="arabic simple">
+<li><p>⚠️ <strong>COUPER LE DISJONCTEUR GÉNÉRAL IMMÉDIATEMENT</strong></p></li>
+<li><p>⚠️ <strong>Évacuer si fumée importante</strong></p></li>
+<li><p>⚠️ <strong>Appeler les pompiers (18) si flammes visibles</strong></p></li>
+<li><p>Laisser refroidir 30 minutes minimum</p></li>
+<li><p><strong>Faire inspecter par un électricien</strong> avant de remettre sous tension</p></li>
+</ol>
+</section>
+</section>
+<section id="maintenance-et-surveillance">
+<h2>Maintenance et Surveillance<a class="headerlink" href="#maintenance-et-surveillance" title="Lien vers cette rubrique"></a></h2>
+<section id="verifications-periodiques">
+<h3>Vérifications Périodiques<a class="headerlink" href="#verifications-periodiques" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Tous les 6 mois :</strong></p>
+<p>☐ Inspecter visuellement toutes les connexions</p>
+<p>☐ Vérifier qu’aucune connexion n’est desserrée (vibrations)</p>
+<p>☐ Vérifier l’absence d’échauffement anormal</p>
+<p>☐ Nettoyer la poussière accumulée (disjoncteur coupé)</p>
+<p>☐ Vérifier le bon fonctionnement du routeur</p>
+<p><strong>Tous les ans :</strong></p>
+<p>☐ Faire vérifier l’installation par un électricien</p>
+<p>☐ Vérifier l’étalonnage du routeur</p>
+<p>☐ Vérifier l’état du <a class="reference internal" href="../glossary/#term-Triac"><span class="xref std std-term">triac</span></a> et de son dissipateur (traces de surchauffe, décoloration)</p>
+<p>☐ Vérifier les <a class="reference internal" href="../glossary/#term-CT"><span class="xref std std-term">CT</span></a> (clip de fermeture pas cassé)</p>
+</section>
+<section id="signes-d-alerte">
+<h3>Signes d’Alerte<a class="headerlink" href="#signes-d-alerte" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Appeler un électricien IMMÉDIATEMENT si :</strong></p>
+<p>⚠️ Odeur de brûlé persistante</p>
+<p>⚠️ Échauffement anormal d’une connexion</p>
+<p>⚠️ Grésillement ou bruit anormal</p>
+<p>⚠️ Disjoncteur qui saute régulièrement</p>
+<p>⚠️ Fumée, même légère</p>
+<p>⚠️ Fonctionnement erratique du routeur</p>
+</section>
+<section id="depose-et-remplacement">
+<h3>Dépose et Remplacement<a class="headerlink" href="#depose-et-remplacement" title="Lien vers cette rubrique"></a></h3>
+<p>Si vous devez déposer le routeur :</p>
+<ol class="arabic simple">
+<li><p><strong>Couper le disjoncteur dédié</strong></p></li>
+<li><p><strong>Couper le disjoncteur général</strong> (sécurité supplémentaire)</p></li>
+<li><p><strong>Vérifier l’absence de tension</strong></p></li>
+<li><p><strong>Débrancher les charges</strong> des étages de sortie</p></li>
+<li><p><strong>Débrancher l’alimentation</strong> du routeur (câble secteur)</p></li>
+<li><p><strong>Ouvrir les CT</strong> (déclipser) puis débrancher les jacks</p></li>
+<li><p><strong>Retirer le routeur</strong></p></li>
+</ol>
+<p>Pour le remplacement, suivre la procédure d’installation depuis le début.</p>
+</section>
+</section>
+<section id="numeros-d-urgence">
+<h2>Numéros d’Urgence<a class="headerlink" href="#numeros-d-urgence" title="Lien vers cette rubrique"></a></h2>
+<p>En cas de problème grave :</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>📞 <strong>Numéros d’urgence en France</strong></p>
+<ul class="simple">
+<li><p><strong>15</strong> : SAMU (urgence médicale - électrocution)</p></li>
+<li><p><strong>18</strong> : Pompiers (incendie électrique)</p></li>
+<li><p><strong>112</strong> : Numéro d’urgence européen (fonctionne partout)</p></li>
+</ul>
+<p><strong>En cas d’électrocution :</strong></p>
+<ol class="arabic simple">
+<li><p><strong>NE PAS toucher la victime</strong> si encore sous tension</p></li>
+<li><p><strong>Couper le disjoncteur général IMMÉDIATEMENT</strong></p></li>
+<li><p><strong>Appeler le 15</strong> (SAMU)</p></li>
+<li><p>Pratiquer massage cardiaque si formation aux premiers secours</p></li>
+<li><p>Ne pas déplacer la victime sauf danger immédiat</p></li>
+</ol>
+</div>
+</section>
+<section id="ressources-complementaires">
+<h2>Ressources Complémentaires<a class="headerlink" href="#ressources-complementaires" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition-documentation-technique admonition">
+<p class="admonition-title">📚 Documentation Technique</p>
+<ul class="simple">
+<li><p><strong>Norme NF C 15-100</strong> : <a class="reference external" href="https://www.promotelec.com/" rel="noreferrer" target="_blank">https://www.promotelec.com/</a></p></li>
+<li><p><strong>Guide Consuel</strong> : <a class="reference external" href="https://www.consuel.com/" rel="noreferrer" target="_blank">https://www.consuel.com/</a></p></li>
+<li><p><strong>Formation habilitation électrique</strong> : Rechercher « formation habilitation électrique » + votre ville</p></li>
+</ul>
+</div>
+<div class="admonition-forum-et-support admonition">
+<p class="admonition-title">🔧 Forum et Support</p>
+<ul class="simple">
+<li><p><strong>GitHub Issues</strong> : <a class="reference external" href="https://github.com/FredM67/Mk2PVRouter/issues" rel="noreferrer" target="_blank">https://github.com/FredM67/Mk2PVRouter/issues</a></p></li>
+<li><p><strong>GitHub Discussions</strong> : <a class="reference external" href="https://github.com/FredM67/PVRouter-3-phase/discussions" rel="noreferrer" target="_blank">https://github.com/FredM67/PVRouter-3-phase/discussions</a></p></li>
+</ul>
+</div>
+</section>
+<section id="avertissement-final">
+<h2>Avertissement Final<a class="headerlink" href="#avertissement-final" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>⚡ <strong>DERNIER AVERTISSEMENT</strong> ⚡</p>
+<p>L’installation d’un équipement électrique dans le tableau de distribution est une opération <strong>À HAUT RISQUE</strong> :</p>
+<ul class="simple">
+<li><p>Risque de <strong>MORT par électrocution</strong></p></li>
+<li><p>Risque <strong>d’INCENDIE</strong></p></li>
+<li><p>Risque de <strong>dégâts matériels</strong> importants</p></li>
+</ul>
+<p><strong>Ce guide est fourni à titre informatif UNIQUEMENT.</strong></p>
+<p><strong>Les auteurs déclinent toute responsabilité en cas d’accident, de dommage matériel ou corporel résultant d’une installation non conforme ou réalisée par une personne non qualifiée.</strong></p>
+<p><strong>Pour votre sécurité et celle de votre famille, faites appel à un électricien certifié.</strong></p>
+<p><strong>Votre vie n’a pas de prix.</strong></p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../installation-finale-connexions/" class="btn btn-neutral float-left" title="Capteurs de Courant et Connexions Électriques" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../troubleshooting/" class="btn btn-neutral float-right" title="Guide de Dépannage" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 07 mars 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/installation-finale-mise-en-service.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/installation-finale-mise-en-service.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
