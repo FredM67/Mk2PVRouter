@@ -163,7 +163,7 @@ Si Tension Correcte mais Pas de Fonctionnement
 
  #. ☐ **Firmware programmé ?**
 
-    - Voir la section :ref:`logiciel`
+    - Voir la section :ref:`logiciel-monophase` ou :ref:`logiciel-triphase`
     - ATmega328P vierge ne fait rien
 
 Causes Fréquentes — Résumé

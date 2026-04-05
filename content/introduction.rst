@@ -58,7 +58,7 @@ L’assemblage complet va nécessiter plusieurs étapes :
 #. Montage des circuits soudés dans le boîtier (voir :ref:`assemblage-boitier`)
 #. Confection des câbles et câblage (voir :ref:`confection-cables`)
 #. Installation du logiciel et firmware (voir chapitre :ref:`installation-logiciel`)
-#. Tests logiciels et étalonnage (voir :ref:`logiciel` et :ref:`etalonnage`)
+#. Tests logiciels et étalonnage (voir :ref:`logiciel-etalonnage-monophase` ou :ref:`logiciel-etalonnage-triphase`)
 
 **Durées indicatives par étape :**
 

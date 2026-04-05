@@ -25,7 +25,7 @@ Voici les étapes principales du fonctionnement du Mk2PVRouter :
 
 #. **Étalonnage et précision** :
 
-   - Pour garantir une gestion optimale, le routeur doit être étalonné en fonction des caractéristiques spécifiques de l’installation électrique (voir :ref:`etalonnage`).
+   - Pour garantir une gestion optimale, le routeur doit être étalonné en fonction des caractéristiques spécifiques de l’installation électrique (voir :ref:`etalonnage-monophase` ou :ref:`etalonnage-triphase`).
 
 #. **Avantages** :
 
