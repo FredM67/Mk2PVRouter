@@ -148,6 +148,7 @@ Soudez les connecteurs suivants :
 #. **OLED** (Molex SL 1×04) — Connecteur écran I2C
 #. **TRIG_EXT** (barrette mâle 1×06) — Connecteur déclenchement/GPIO
 #. **UART_EXT** (barrette mâle 1×06) — Connecteur UART + DS18B20
+#. **RESET** (Molex SL 1×02) — Connecteur bouton de réinitialisation
 
 .. todo:: Photo à fournir — connecteurs signaux soudés et perpendiculaires au PCB.
 
@@ -188,7 +189,7 @@ Configurez les cavaliers selon votre configuration. Consultez le chapitre :ref:
    | ☐ Connecteur SMA soudé solidement (si module RF utilisé)
    | ☐ Module RFM69CW soudé et V sel. en 3,3 V (si module RF utilisé)
    | ☐ GND_LINK configuré (ouvert ou fermé selon votre installation)
-   | ☐ Tous les connecteurs signaux soudés et perpendiculaires
+   | ☐ Tous les connecteurs signaux soudés et perpendiculaires (FTDI, OLED, TRIG_EXT, UART_EXT, RESET)
    | ☐ Cavaliers configurés selon votre configuration (voir :ref:`cavaliers`)
    | ☐ Toutes les soudures propres et brillantes
    | ☐ Pas de pont de soudure

@@ -136,7 +136,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - (opt.)
      - (opt.)
      - (opt.)
-   * - Connecteurs signaux (FTDI, OLED, TRIG_EXT, UART_EXT)
+   * - Connecteurs signaux (FTDI, OLED, TRIG_EXT, UART_EXT, RESET)
      - ✔
      - ✔
      - ✔
