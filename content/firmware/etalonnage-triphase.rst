@@ -30,7 +30,7 @@
     :local:
     :depth: 2
 
-.. include:: common/etalonnage-intro.inc.rst
+.. include:: ../common/etalonnage-intro.inc.rst
 
 En triphasé, chaque phase doit être étalonnée individuellement. Le paramètre à ajuster est ``f_powerCal`` pour chaque phase.
 

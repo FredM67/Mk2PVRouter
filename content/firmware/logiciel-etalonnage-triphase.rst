@@ -7,5 +7,5 @@ Triphasé
 .. toctree::
    :hidden:
 
-   firmware/logiciel-triphase
+   logiciel-triphase
    etalonnage-triphase

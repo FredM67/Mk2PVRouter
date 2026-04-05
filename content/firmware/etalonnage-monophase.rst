@@ -25,7 +25,7 @@
     :local:
     :depth: 2
 
-.. include:: common/etalonnage-intro.inc.rst
+.. include:: ../common/etalonnage-intro.inc.rst
 
 :term:`CT` *grille/réseau*
 --------------------------

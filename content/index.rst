@@ -132,8 +132,8 @@ Bienvenue dans la documentation du Mk2PVRouter !
    :caption: 💻 Logiciel & Étalonnage
    :hidden:
 
-   logiciel-etalonnage-monophase
-   logiciel-etalonnage-triphase
+   firmware/logiciel-etalonnage-monophase
+   firmware/logiciel-etalonnage-triphase
 
 .. toctree::
    :caption: 🏠 Installation Finale

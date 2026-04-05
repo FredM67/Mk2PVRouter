@@ -7,5 +7,5 @@ Monophasé
 .. toctree::
    :hidden:
 
-   firmware/logiciel-monophase
+   logiciel-monophase
    etalonnage-monophase
