@@ -12,6 +12,7 @@ RUN ARCH=$(dpkg --print-architecture) \
        | grep browser_download_url | grep "${ARCH}" | grep '\.deb' | head -1 | cut -d '"' -f 4) \
     && curl -Lo /tmp/drawio.deb "$DRAWIO_URL" \
     && apt-get update \
+    && apt-get install -y libasound2t64 \
     && apt-get -f install -y /tmp/drawio.deb \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/drawio.deb
