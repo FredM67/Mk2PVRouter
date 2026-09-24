@@ -117,17 +117,17 @@ Le module mk2Wifi dispose de **5 cavaliers de soudure** qui permettent de décon
    :widths: 20 80
 
    * - Cavalier
-     - Fonction
+     - Liaison (via une résistance série de 1 kΩ)
    * - D5
-     - GPIO 5 (TRIG_EXT broche 5)
+     - GPIO0 de l’ESP32-C6 ↔ D5 du routeur (TRIG_EXT broche 5)
    * - D6
-     - GPIO 6 (TRIG_EXT broche 4)
+     - GPIO5 de l’ESP32-C6 ↔ D6 du routeur (TRIG_EXT broche 4)
    * - D7
-     - GPIO 7 (TRIG_EXT broche 3)
+     - GPIO4 de l’ESP32-C6 ↔ D7 du routeur (TRIG_EXT broche 3)
    * - D8
-     - GPIO 8 (TRIG_EXT broche 2)
+     - GPIO3 de l’ESP32-C6 ↔ D8 du routeur (TRIG_EXT broche 2)
    * - D9
-     - GPIO 9 (TRIG_EXT broche 6)
+     - GPIO1 de l’ESP32-C6 ↔ D9 du routeur (TRIG_EXT broche 6)
 
 Pour utiliser une sortie de déclenchement, le cavalier correspondant doit être **fermé** (goutte de soudure entre les deux pastilles). Cela permet de n’activer que les sorties réellement utilisées et de libérer les autres broches pour d’autres usages sur la carte principale.
 
