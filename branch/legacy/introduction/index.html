@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2025-12-02T11:02:27+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/clickable-graphviz.js?v=b703d362"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="Principe de fonctionnement" href="../principe-fonctionnement/" />
+    <link rel="prev" title="⚠️ Sécurité — À Lire Absolument Avant de Commencer" href="../safety-overview/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#contenu-du-kit">Contenu du kit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#etapes-dassemblage">Étapes d’assemblage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recommandations-pour-les-etapes-de-soudure">Recommandations pour les étapes de soudure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#composants-polarises-explication-pour-debutants">Composants Polarisés — Explication pour Débutants</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#composants-a-surveiller">Composants à Surveiller</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#materiels-necessaires">Matériels nécessaires</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">1~ Kit monophasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mono/soudures-mono/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/percages-mono/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/carte-sortie-relais-mono/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/confection-cables-mono/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/assemblage-mono/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/test-logiciel-mono/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/etalonnage-mono/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">3~ Kit triphasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tri/soudures-tri/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/percages-tri/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/carte-sortie-relais-tri/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/confection-cables-tri/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/assemblage-tri/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/test-logiciel-tri/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/etalonnage-tri/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">🔧 Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/introduction.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<span id="id1"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Lien vers cette rubrique"></a></h1>
+<div class="line-block">
+<div class="line">Cette documentation est applicable à toutes les versions du Mk2PVRouter, qu’elles soient monophasées ou triphasées.</div>
+<div class="line">La majorité des informations sont pertinentes pour les deux versions.</div>
+<div class="line">Chaque version a son propre chapitre.</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>⚠️ <strong>SÉCURITÉ AVANT TOUT</strong> : Avant de commencer l’assemblage, lisez impérativement le chapitre <a class="reference internal" href="../safety-overview/#safety-overview"><span class="std std-ref">⚠️ Sécurité — À Lire Absolument Avant de Commencer</span></a>.</p>
+<p>Ce projet implique la manipulation de composants électroniques sensibles et, plus tard, de tensions dangereuses (230 V).</p>
+</div>
+<p><strong>Niveau de difficulté :</strong> 🔧🔧🔧 Intermédiaire</p>
+<ul class="simple">
+<li><p>Nécessite des compétences de base en soudure</p></li>
+<li><p>Une bonne dextérité manuelle</p></li>
+<li><p>De la patience et de la minutie</p></li>
+</ul>
+<p><strong>Durée totale estimée :</strong></p>
+<dl class="simple">
+<dt>⏱️ <strong>Temps d’assemblage complet :</strong></dt><dd><ul class="simple">
+<li><p>Débutant en soudure : 12-15 heures (réparties sur plusieurs sessions)</p></li>
+<li><p>Expérience intermédiaire : 8-10 heures</p></li>
+<li><p>Expérimenté : 5-7 heures</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Il est recommandé de travailler par sessions de 2-3 heures maximum pour maintenir concentration et précision.</p>
+</div>
+<hr class="docutils" />
+<section id="contenu-du-kit">
+<h2>Contenu du kit<a class="headerlink" href="#contenu-du-kit" title="Lien vers cette rubrique"></a></h2>
+<p>Dans le kit, vous trouverez :</p>
+<ul class="simple">
+<li><p>le circuit imprimé (<a class="reference internal" href="../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>) de la carte-mère</p></li>
+<li><p>un ou plusieurs circuits imprimés pour chaque sortie</p></li>
+<li><p>des composants électroniques (résistances, condensateurs…). <br/>
+Attention, certains sont sensibles à l’électricité statique, il faut donc les manipuler avec soin.</p></li>
+<li><p>un boîtier</p></li>
+<li><p>des câbles</p></li>
+</ul>
+</section>
+<section id="etapes-dassemblage">
+<h2>Étapes d’assemblage<a class="headerlink" href="#etapes-dassemblage" title="Lien vers cette rubrique"></a></h2>
+<p>L’assemblage complet va nécessiter plusieurs étapes :</p>
+<ol class="arabic simple">
+<li><p>Soudure et tests de la carte-mère</p></li>
+<li><p>Soudure et tests de la ou les cartes de sortie</p></li>
+<li><p>Perçage du boîtier et des dissipateurs thermiques</p></li>
+<li><p>Montage des circuits soudés dans le boîtier</p></li>
+<li><p>Confection des câbles et câblage</p></li>
+<li><p>Installation du logiciel et firmware (voir chapitre <a class="reference internal" href="../installation-logiciel/#installation-logiciel"><span class="std std-ref">Installation des Logiciels</span></a>)</p></li>
+<li><p>Tests et étalonnage</p></li>
+</ol>
+<p><strong>Durées indicatives par étape :</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Étape</p></th>
+<th class="head"><p>Débutant</p></th>
+<th class="head"><p>Expérimenté</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Soudure carte-mère + tests</p></td>
+<td><p>3-4 h</p></td>
+<td><p>1,5-2 h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Soudure cartes sortie + tests</p></td>
+<td><p>1,5-2 h</p></td>
+<td><p>45 min-1 h</p></td>
+</tr>
+<tr class="row-even"><td><p>Perçages</p></td>
+<td><p>2-3 h</p></td>
+<td><p>1-1,5 h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Montage dans boîtier</p></td>
+<td><p>1-2 h</p></td>
+<td><p>30 min-1 h</p></td>
+</tr>
+<tr class="row-even"><td><p>Câblage</p></td>
+<td><p>2-3 h</p></td>
+<td><p>1-1,5 h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Logiciel + étalonnage</p></td>
+<td><p>3-4 h</p></td>
+<td><p>2-3 h</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="recommandations-pour-les-etapes-de-soudure">
+<h2>Recommandations pour les étapes de soudure<a class="headerlink" href="#recommandations-pour-les-etapes-de-soudure" title="Lien vers cette rubrique"></a></h2>
+<p>Les composants électroniques nécessaires sont très divers. Certains sont passifs (comme les résistances), tandis que d’autres sont actifs (comme l’AtMega328P).
+Tous ces composants sont généralement sensibles à l’électricité statique.
+Il est donc essentiel de les manipuler avec soin et, si possible, de se mettre à la terre pour éviter toute décharge électrostatique.</p>
+<section id="composants-polarises-explication-pour-debutants">
+<h3>Composants Polarisés — Explication pour Débutants<a class="headerlink" href="#composants-polarises-explication-pour-debutants" title="Lien vers cette rubrique"></a></h3>
+<p>Certains composants ont un <strong>SENS OBLIGATOIRE</strong> (comme une pile : + et -).</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>⚠️ Si installés à l’envers :</p>
+<ul class="simple">
+<li><p>Le routeur NE FONCTIONNERA PAS</p></li>
+<li><p>Le composant peut <strong>EXPLOSER</strong> (condensateurs électrolytiques)</p></li>
+<li><p>Vous devrez potentiellement tout refaire</p></li>
+</ul>
+</div>
+<section id="composants-a-surveiller">
+<h4>Composants à Surveiller<a class="headerlink" href="#composants-a-surveiller" title="Lien vers cette rubrique"></a></h4>
+<p><strong>1. Diodes</strong> — Repérer la bande</p>
+<blockquote>
+<div><p>La bande sur la diode DOIT correspondre à la bande sur le <a class="reference internal" href="../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>.</p>
+<p>Les diodes ne laissent passer le courant que dans un sens. Si inversées, elles empêchent le circuit de fonctionner.</p>
+</div></blockquote>
+<p><strong>2. Condensateurs électrolytiques</strong> — Repérer la bande blanche (-)</p>
+<blockquote>
+<div><p>La bande blanche (parfois avec des signes -) indique le côté négatif.</p>
+<p>Ces condensateurs peuvent exploser s’ils sont soudés à l’envers !</p>
+</div></blockquote>
+<p><strong>3. Circuits intégrés (IC)</strong> — Repérer l’encoche ou le point</p>
+<blockquote>
+<div><p>L’encoche (ou le point marquant la broche 1) doit correspondre au dessin sur le <a class="reference internal" href="../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>.</p>
+<p>Les IC mal orientés ne fonctionneront pas et peuvent être endommagés.</p>
+</div></blockquote>
+<p><strong>4. Régulateurs de tension</strong> — Forme du boîtier</p>
+<blockquote>
+<div><p>Le régulateur a une forme particulière qui doit correspondre au dessin sur le <a class="reference internal" href="../glossary/#term-PCB"><span class="xref std std-term">PCB</span></a>.</p>
+</div></blockquote>
+<p>💡 <strong>Règle d’or :</strong> VÉRIFIER 3 FOIS AVANT DE SOUDER !</p>
+<p>Les composants non polarisés (résistances, condensateurs céramiques) peuvent être soudés dans n’importe quel sens.</p>
+<p>Les composants varient également en taille, allant de quelques millimètres à plusieurs centimètres (dans le cas des transformateurs).</p>
+<p>Pour des raisons pratiques, il est recommandé de procéder à la soudure en suivant un ordre précis basé sur la taille des composants.</p>
+<p>Ainsi, l’ordre de soudure recommandé est le suivant :</p>
+<ol class="arabic simple">
+<li><p>Résistances et diodes, et éventuellement les ponts</p></li>
+<li><p>Supports IC1 et IC2 (et éventuellement IC3, IC4 selon le kit) (ne pas insérer les circuits intégrés dans les supports à ce stade)</p></li>
+<li><p>Condensateurs non polarisés « orange », oscillateur</p></li>
+<li><p>Pont·s de diodes</p></li>
+<li><p>Les fusibles</p></li>
+<li><p>Tous les connecteurs SIL noirs et le connecteur d’affichage, le cas échéant</p></li>
+<li><p>Condensateurs polarisés (noirs ou bleus)</p></li>
+<li><p>Le socle pour l’antenne, le cas échéant</p></li>
+<li><p>Le gros connecteur « haute tension »</p></li>
+<li><p>Le·s régulateur·s de tension</p></li>
+<li><p>Enfin, le·s transformateur·s</p></li>
+</ol>
+<p>Suivre cette séquence précise permet d’éviter de tordre les pattes des composants ou d’avoir à utiliser de l’adhésif, entre autres.</p>
+</section>
+</section>
+</section>
+<section id="materiels-necessaires">
+<h2>Matériels nécessaires<a class="headerlink" href="#materiels-necessaires" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>fer à souder</p></li>
+<li><p>fil de soudure</p></li>
+<li><p>pince coupante</p></li>
+<li><p>pince à sertir les cosses ou pince multifonction</p></li>
+<li><p>tournevis cruciforme</p></li>
+<li><p>clé plate ou douille de <strong>5,5</strong></p></li>
+<li><p>clé plate de <strong>10</strong></p></li>
+<li><p>clé six pans de <strong>2</strong> et <strong>2,5</strong></p></li>
+<li><p>une perceuse à colonne si possible, sinon n’importe quelle perceuse.</p></li>
+<li><p>foret métal de <strong>3 mm</strong></p></li>
+<li><p>foret métal de <strong>4 mm</strong></p></li>
+<li><p>foret (bois ou métal) de <strong>8 mm</strong></p></li>
+<li><p>foret (bois ou métal) ou fraise de <strong>20 mm</strong></p></li>
+<li><p>fraise de <strong>35 mm</strong></p></li>
+<li><p>colle thermofusible</p></li>
+<li><p>gaine thermorétractable</p></li>
+<li><p>multimètre (au minimum voltmètre et ohmmètre)</p></li>
+</ul>
+<p>Certains matériels sont optionnels (fraise de 35 mm, colle, gaine). Cependant, ils faciliteront certaines étapes et permettront de réaliser un travail plus soigné et mieux fini.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../safety-overview/" class="btn btn-neutral float-left" title="⚠️ Sécurité — À Lire Absolument Avant de Commencer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../principe-fonctionnement/" class="btn btn-neutral float-right" title="Principe de fonctionnement" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 02 décembre 2025.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="../_static/Manuel_1.pdf">PDF1</a></dd>
+        
+          <dd><a href="../_static/Manuel_2.pdf">PDF2</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/introduction.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/introduction.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
