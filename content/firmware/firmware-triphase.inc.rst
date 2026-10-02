@@ -17,10 +17,11 @@ Après extraction, vous devriez avoir :
    Mk2_3phase_RFdatalog_temp/
    ├── Mk2_3phase_RFdatalog_temp.ino  (fichier principal)
    ├── config.h                     (configuration utilisateur)
+   ├── config_system.h              (fréquence du réseau, période d’envoi des données)
+   ├── config_rf.h                  (liaison radio, si elle est utilisée)
    ├── calibration.h                (paramètres d’étalonnage)
-   ├── dualtarif.h
+   ├── dualtariff.h
    ├── processing.cpp
-   ├── temperature.cpp
    ├── utils_temp.h
    └── ... (autres fichiers)
 
@@ -54,21 +55,21 @@ Configuration dans `config.h`
 
 Cliquer sur l’onglet **`config.h`** pour le modifier.
 
-Version du PCB
-##############
+Carte-mère
+##########
 
-Selon la version de votre PCB :
+Selon votre carte-mère :
 
 .. code-block:: cpp
 
-   // Ancienne version de PCB (avant 2023)
-   inline constexpr bool OLD_PCB{ true };
+   // Ancienne carte triphasée
+   inline constexpr PcbVersion PCB_VERSION{ PcbVersion::OLD };
 
-   // Nouvelle version de PCB (2023+)
-   inline constexpr bool OLD_PCB{ false };
+   // Carte universelle 3phaseDiverter (rév. 6.0 et suivantes)
+   inline constexpr PcbVersion PCB_VERSION{ PcbVersion::NEW };
 
-.. tip::
-   Si vous avez reçu votre kit après 2 023, mettez `false`.
+.. warning::
+   Les deux cartes ne mesurent pas de la même façon : la carte universelle utilise la référence interne 1,1 V de l’ATmega328P, que le firmware n’active qu’avec `PcbVersion::NEW`. Un mauvais choix donne des mesures fausses. Après un changement, refaire l’étalonnage.
 
 Format de Sortie Série
 ######################
@@ -89,17 +90,20 @@ Options disponibles :
 Configuration des Sorties Triac
 ###############################
 
-Définir le nombre de sorties et leurs broches :
+Définir le nombre de sorties et la broche de chacune :
 
 .. code-block:: cpp
 
    // Exemple : 2 sorties triac
    inline constexpr uint8_t NO_OF_DUMPLOADS{ 2 };
 
-   inline constexpr IoPinMapping physicalPin_dump_load[NO_OF_DUMPLOADS]{
-     { 5, DivertorConfig(NORMAL) },    // Sortie 1 sur broche D5
-     { 4, DivertorConfig(NORMAL) },    // Sortie 2 sur broche D4
+   inline constexpr uint8_t physicalLoadPin[NO_OF_DUMPLOADS]{
+     Load::local(5),  // Sortie 1 sur la broche D5
+     Load::local(6)   // Sortie 2 sur la broche D6
    };
+
+.. note::
+   Une charge pilotée par radio par une unité distante s’écrit `Load::remote(1)` (unité 1, de 1 à 3) au lieu de `Load::local(…)`.
 
 Ordre de Démarrage
 ##################
@@ -108,32 +112,29 @@ Définir la priorité des charges :
 
 .. code-block:: cpp
 
-   inline constexpr uint8_t dumpLoad_startup_sequence[NO_OF_DUMPLOADS]{ 0, 1 };
+   inline constexpr uint8_t loadPrioritiesAtStartup[NO_OF_DUMPLOADS]{ 0, 1 };
 
 Signification : Démarrer d’abord la sortie 0, puis la sortie 1.
 
 Sondes de Température (Optionnel)
 #################################
 
-Si vous utilisez des sondes DS18B20, décommenter la ligne :
+Si vous utilisez des sondes DS18B20, activer la mesure :
 
 .. code-block:: cpp
 
-   #define TEMP_ENABLED
+   inline constexpr bool TEMP_SENSOR_PRESENT{ true };
 
-Et configurer les adresses des sondes :
+Puis indiquer la broche du bus *OneWire* (D3 par défaut, qui a déjà sa résistance de *pull-up*) et les adresses des sondes :
 
 .. code-block:: cpp
 
-   inline constexpr DeviceAddress sensor_list[3]
-   {
-     { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x01 },  // Sonde 1
-     { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x02 },  // Sonde 2
-     { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x03 },  // Sonde 3
-   };
+   inline constexpr TemperatureSensing temperatureSensing{ 3,
+                                                           { { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x01 },     // Sonde 1
+                                                             { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x02 } } };  // Sonde 2
 
 .. note::
-   Les adresses des sondes seront trouvées lors du premier lancement (voir Moniteur Série).
+   Le firmware ne recherche pas les sondes : relevez leurs adresses avec un programme de scan *OneWire* (exemples de l’Arduino IDE ou sur Internet). Collez une étiquette avec l’adresse sur le câble de chaque sonde.
 
 Configuration dans `calibration.h`
 """"""""""""""""""""""""""""""""""
