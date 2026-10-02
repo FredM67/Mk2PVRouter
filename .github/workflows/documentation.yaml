@@ -6,16 +6,14 @@ on:
   # result of that push run; pull_request only builds PRs from forks (see the
   # Build job), so that a change is never built twice.
   push:
+    # the 3-phase submodule is not ignored: it brings the configurator (/configurateur/)
     paths-ignore:
-      - '.gitmodules'
       - '1-phase/**'
-      - '3-phase/**'
       - 'hardware/**'
   pull_request:
+    # the 3-phase submodule is not ignored: it brings the configurator (/configurateur/)
     paths-ignore:
-      - '.gitmodules'
       - '1-phase/**'
-      - '3-phase/**'
       - 'hardware/**'
   workflow_dispatch: {}
 

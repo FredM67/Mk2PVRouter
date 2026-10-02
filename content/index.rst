@@ -134,6 +134,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    firmware/logiciel-etalonnage-monophase
    firmware/logiciel-etalonnage-triphase
+   firmware/configurateur-triphase
 
 .. toctree::
    :caption: 🏠 Installation Finale
