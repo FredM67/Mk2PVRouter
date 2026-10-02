@@ -6,14 +6,16 @@ on:
   # result of that push run; pull_request only builds PRs from forks (see the
   # Build job), so that a change is never built twice.
   push:
+    # the submodules are not ignored: they bring the configurators (/configurateur/,
+    # /configurateur-monophase/)
     paths-ignore:
       - '.gitmodules'
-      - '3-phase/**'
       - 'hardware/**'
   pull_request:
+    # the submodules are not ignored: they bring the configurators (/configurateur/,
+    # /configurateur-monophase/)
     paths-ignore:
       - '.gitmodules'
-      - '3-phase/**'
       - 'hardware/**'
   workflow_dispatch: {}
   # Every night, the dev version is rebuilt, to pick up the firmware dev
