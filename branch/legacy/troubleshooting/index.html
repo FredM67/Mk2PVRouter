@@ -1,0 +1,1705 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-02-18T18:35:21+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔧 Guide de Dépannage &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/clickable-graphviz.js?v=b703d362"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Recherche" href="../search/" />
+    <link rel="next" title="Glossaire" href="../glossary/" />
+    <link rel="prev" title="Installation Finale dans le Système Électrique" href="../installation-finale/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">1~ Kit monophasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../mono/soudures-mono/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/percages-mono/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/carte-sortie-relais-mono/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/confection-cables-mono/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/assemblage-mono/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/test-logiciel-mono/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mono/etalonnage-mono/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">3~ Kit triphasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tri/soudures-tri/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/percages-tri/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/carte-sortie-relais-tri/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/confection-cables-tri/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/assemblage-tri/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/test-logiciel-tri/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tri/etalonnage-tri/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">🔧 Guide de Dépannage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#differences-monophase-triphase">📋 Différences Monophasé/Triphasé</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#problemes-apres-soudure-de-la-carte">🔌 Problèmes Après Soudure de la Carte</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#la-carte-ne-sallume-pas">La Carte ne s’Allume Pas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#verifications-de-base">Vérifications de Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#si-pas-de-tension-au-test-vcc">Si Pas de Tension au Test VCC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qualite-des-soudures">Qualité des Soudures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pont-de-soudure-court-circuit">Pont de Soudure (Court-Circuit)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#si-tension-correcte-mais-pas-de-fonctionnement">Si Tension Correcte mais Pas de Fonctionnement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#causes-frequentes-resume">Causes Fréquentes — Résumé</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#problemes-de-programmation-du-firmware">Problèmes de Programmation du Firmware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#le-firmware-ne-se-televerse-pas">Le Firmware ne se Téléverse Pas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#verifications-de-la-connexion-ftdi">Vérifications de la Connexion FTDI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#problemes-port-usb-windows">Problèmes Port USB Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#problemes-arduino-ide">Problèmes Arduino IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#firmware-se-televerse-mais-rien-ne-fonctionne">Firmware se Téléverse mais Rien ne Fonctionne</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#verification-via-moniteur-serie">Vérification via Moniteur Série</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#erreur-out-of-memory-lors-de-la-compilation">Erreur « Out of Memory » lors de la Compilation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#problemes-electriques-tests-et-usage">⚡ Problèmes Électriques — Tests et Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fusible-saute-immediatement">Fusible Saute Immédiatement</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#causes-possibles">Causes Possibles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#procedure-de-diagnostic">Procédure de Diagnostic</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tensions-incorrectes-aux-points-de-test">Tensions Incorrectes aux Points de Test</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#valeurs-de-reference">Valeurs de Référence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#diagnostic-par-tension">Diagnostic par Tension</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#problemes-detalonnage-et-mesures">Problèmes d’Étalonnage et Mesures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mesures-de-puissance-incoherentes">Mesures de Puissance Incohérentes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#verifications-ct-current-transformer">Vérifications CT (Current Transformer)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#verifications-electroniques">Vérifications Électroniques</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Valeurs de Référence</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#etalonnage-ne-converge-pas">Étalonnage ne Converge Pas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#problemes-led-et-signalisation">Problèmes LED et Signalisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#led-ne-sallume-jamais">LED ne s’Allume Jamais</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Vérifications de Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-de-la-led">Test de la LED</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#led-toujours-allumee">LED Toujours Allumée</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#led-clignote-bizarrement">LED Clignote Bizarrement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#problemes-de-routage-charge-ne-chauffe-pas">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#routeur-fonctionne-mais-charge-pas-alimentee">Routeur Fonctionne mais Charge Pas Alimentée</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#verifications-triac">Vérifications Triac</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-du-triac">Test du Triac</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#verifications-charge">Vérifications Charge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#triac-surchauffe">Triac Surchauffe</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#problemes-de-communication-rf">💻 Problèmes de Communication RF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-rf-ne-repond-pas">Module RF ne Répond Pas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#verifications-materielles">Vérifications Matérielles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#depannage-communication">Dépannage Communication</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#obtenir-de-laide">Obtenir de l’Aide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#si-aucune-solution-ne-fonctionne">Si Aucune Solution ne Fonctionne</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ressources-communautaires">Ressources Communautaires</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#informations-a-fournir">Informations à Fournir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#photos-utiles-exemples">📸 Photos Utiles — Exemples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#avant-de-poster">Avant de Poster</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#annexe-outils-de-diagnostic-essentiels">🛠️ Annexe — Outils de Diagnostic Essentiels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#multimetre-utilisation-de-base">Multimètre — Utilisation de Base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loupe-ou-microscope-usb">Loupe ou Microscope USB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oscilloscope-optionnel">Oscilloscope (Optionnel)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pince-amperemetrique">Pince Ampèremétrique</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">🔧 Guide de Dépannage</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/troubleshooting.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="guide-de-depannage">
+<span id="troubleshooting"></span><h1>🔧 Guide de Dépannage<a class="headerlink" href="#guide-de-depannage" title="Lien vers cette rubrique"></a></h1>
+<p>Ce chapitre vous aide à diagnostiquer et résoudre les problèmes courants rencontrés lors de l’assemblage et de l’utilisation du Mk2PVRouter.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Avant de commencer le dépannage :</strong></p>
+<ul class="simple">
+<li><p>Toujours <strong>couper l’alimentation</strong> au disjoncteur avant toute intervention</p></li>
+<li><p>Vérifier l’absence de tension avec un testeur</p></li>
+<li><p>Prendre des photos avant de modifier quoi que ce soit</p></li>
+<li><p>Noter tous les symptômes observés</p></li>
+</ul>
+</div>
+<nav class="contents local" id="sections-du-guide-de-depannage">
+<p class="topic-title">Sections du guide de dépannage</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#differences-monophase-triphase" id="id9">📋 Différences Monophasé/Triphasé</a></p></li>
+<li><p><a class="reference internal" href="#problemes-apres-soudure-de-la-carte" id="id10">🔌 Problèmes Après Soudure de la Carte</a></p>
+<ul>
+<li><p><a class="reference internal" href="#la-carte-ne-sallume-pas" id="id11">La Carte ne s’Allume Pas</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#problemes-de-programmation-du-firmware" id="id12">Problèmes de Programmation du Firmware</a></p>
+<ul>
+<li><p><a class="reference internal" href="#le-firmware-ne-se-televerse-pas" id="id13">Le Firmware ne se Téléverse Pas</a></p></li>
+<li><p><a class="reference internal" href="#firmware-se-televerse-mais-rien-ne-fonctionne" id="id14">Firmware se Téléverse mais Rien ne Fonctionne</a></p></li>
+<li><p><a class="reference internal" href="#erreur-out-of-memory-lors-de-la-compilation" id="id15">Erreur « Out of Memory » lors de la Compilation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#problemes-electriques-tests-et-usage" id="id16">⚡ Problèmes Électriques — Tests et Usage</a></p>
+<ul>
+<li><p><a class="reference internal" href="#fusible-saute-immediatement" id="id17">Fusible Saute Immédiatement</a></p></li>
+<li><p><a class="reference internal" href="#tensions-incorrectes-aux-points-de-test" id="id18">Tensions Incorrectes aux Points de Test</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#problemes-detalonnage-et-mesures" id="id19">Problèmes d’Étalonnage et Mesures</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mesures-de-puissance-incoherentes" id="id20">Mesures de Puissance Incohérentes</a></p></li>
+<li><p><a class="reference internal" href="#etalonnage-ne-converge-pas" id="id21">Étalonnage ne Converge Pas</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#problemes-led-et-signalisation" id="id22">Problèmes LED et Signalisation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#led-ne-sallume-jamais" id="id23">LED ne s’Allume Jamais</a></p></li>
+<li><p><a class="reference internal" href="#led-toujours-allumee" id="id24">LED Toujours Allumée</a></p></li>
+<li><p><a class="reference internal" href="#led-clignote-bizarrement" id="id25">LED Clignote Bizarrement</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#problemes-de-routage-charge-ne-chauffe-pas" id="id26">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#routeur-fonctionne-mais-charge-pas-alimentee" id="id27">Routeur Fonctionne mais Charge Pas Alimentée</a></p></li>
+<li><p><a class="reference internal" href="#triac-surchauffe" id="id28">Triac Surchauffe</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#problemes-de-communication-rf" id="id29">💻 Problèmes de Communication RF</a></p>
+<ul>
+<li><p><a class="reference internal" href="#module-rf-ne-repond-pas" id="id30">Module RF ne Répond Pas</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#obtenir-de-laide" id="id31">Obtenir de l’Aide</a></p>
+<ul>
+<li><p><a class="reference internal" href="#si-aucune-solution-ne-fonctionne" id="id32">Si Aucune Solution ne Fonctionne</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#annexe-outils-de-diagnostic-essentiels" id="id33">🛠️ Annexe — Outils de Diagnostic Essentiels</a></p>
+<ul>
+<li><p><a class="reference internal" href="#multimetre-utilisation-de-base" id="id34">Multimètre — Utilisation de Base</a></p></li>
+<li><p><a class="reference internal" href="#loupe-ou-microscope-usb" id="id35">Loupe ou Microscope USB</a></p></li>
+<li><p><a class="reference internal" href="#oscilloscope-optionnel" id="id36">Oscilloscope (Optionnel)</a></p></li>
+<li><p><a class="reference internal" href="#pince-amperemetrique" id="id37">Pince Ampèremétrique</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#conclusion" id="id38">Conclusion</a></p></li>
+</ul>
+</nav>
+<section id="differences-monophase-triphase">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">📋 Différences Monophasé/Triphasé</a><a class="headerlink" href="#differences-monophase-triphase" title="Lien vers cette rubrique"></a></h2>
+<p>Ce guide couvre les versions <strong>monophasée</strong> et <strong>triphasée</strong> du Mk2PVRouter.</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Composants selon la version</span><a class="headerlink" href="#id4" title="Lien vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Composant</p></th>
+<th class="head"><p>Monophasé</p></th>
+<th class="head"><p>Triphasé</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fusibles</p></td>
+<td><p>FS1</p></td>
+<td><p>FS1, FS2, FS3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Transformateurs</p></td>
+<td><p>TXFR1</p></td>
+<td><p>TXFR1, TXFR2, TXFR3</p></td>
+</tr>
+<tr class="row-even"><td><p>Ponts redresseurs</p></td>
+<td><p>BR1</p></td>
+<td><p>BR1, BR2, BR3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Régulateur 3.3 V/5 V</p></td>
+<td><p>VR1</p></td>
+<td><p>VR1 (commun)</p></td>
+</tr>
+<tr class="row-even"><td><p>Capteurs de courant (CT)</p></td>
+<td><p>1 CT (phase principale)</p></td>
+<td><p>3 CT (un par phase)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sorties triac</p></td>
+<td><p>1 ou plusieurs (selon modèle)</p></td>
+<td><p>1 ou plusieurs (selon modèle)</p></td>
+</tr>
+<tr class="row-even"><td><p>Sorties relais</p></td>
+<td><p>0 ou plusieurs (selon modèle)</p></td>
+<td><p>0 ou plusieurs (selon modèle)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dans ce guide, les instructions utilisent la notation :</p>
+<ul class="simple">
+<li><p><strong>Mono :</strong> composants pour version monophasée</p></li>
+<li><p><strong>Tri :</strong> composants pour version triphasée</p></li>
+</ul>
+</div>
+</section>
+<section id="problemes-apres-soudure-de-la-carte">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">🔌 Problèmes Après Soudure de la Carte</a><a class="headerlink" href="#problemes-apres-soudure-de-la-carte" title="Lien vers cette rubrique"></a></h2>
+<section id="la-carte-ne-sallume-pas">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">La Carte ne s’Allume Pas</a><a class="headerlink" href="#la-carte-ne-sallume-pas" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Pas de tension aux points de test, aucun signe de vie</p>
+<section id="verifications-de-base">
+<h4>Vérifications de Base<a class="headerlink" href="#verifications-de-base" title="Lien vers cette rubrique"></a></h4>
+<p>Effectuez ces vérifications dans l’ordre :</p>
+<div class="admonition-liste-de-controle-alimentation admonition">
+<p class="admonition-title">Liste de contrôle — Alimentation</p>
+<ol class="arabic simple">
+<li><p>☐ L’alimentation secteur est-elle branchée ?</p></li>
+<li><p>☐ Le disjoncteur est-il enclenché ?</p></li>
+<li><p>☐ <strong>Fusibles intacts ?</strong></p>
+<ul class="simple">
+<li><p>Mono : FS1</p></li>
+<li><p>Tri : FS1, FS2, FS3</p></li>
+<li><p>Vérifier avec multimètre en mode continuité</p></li>
+<li><p>Un fusible grillé indique un court-circuit</p></li>
+</ul>
+</li>
+<li><p>☐ Tension au point Test VCC = 3.3 V ou 5 V ?</p>
+<ul class="simple">
+<li><p>Multimètre en mode tension continue (DC)</p></li>
+<li><p>Mesurer entre VCC et GND</p></li>
+<li><p>Si pas de tension → Problème alimentation</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="si-pas-de-tension-au-test-vcc">
+<h4>Si Pas de Tension au Test VCC<a class="headerlink" href="#si-pas-de-tension-au-test-vcc" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>COUPER L’ALIMENTATION</strong> avant toute vérification de composants !</p>
+</div>
+<p>Vérifier les composants d’alimentation :</p>
+<div class="admonition-composants-a-verifier admonition">
+<p class="admonition-title">Composants à vérifier</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Pont·s redresseur·s dans le bon sens ?</strong></p>
+<ul class="simple">
+<li><p>Mono : BR1</p></li>
+<li><p>Tri : BR1, BR2, BR3</p></li>
+<li><p>Repérer la bande ou marquage sur la diode</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Régulateur VR1</strong> dans le bon sens ?</p>
+<ul class="simple">
+<li><p>Vérifier l’orientation selon le schéma</p></li>
+<li><p>Les 3 pattes doivent correspondre (E-C-B ou G-S-D)</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Condensateurs C1/C2</strong> polarité correcte ?</p>
+<ul class="simple">
+<li><p>Bande blanche = côté négatif (-)</p></li>
+<li><p>Vérifier marquage sur PCB</p></li>
+<li><p>⚠️ Si inversés : risque d’explosion à la mise sous tension !</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Transformateur·s bien soudé·s ?</strong></p>
+<ul class="simple">
+<li><p>Mono : TXFR1</p></li>
+<li><p>Tri : TXFR1, TXFR2, TXFR3</p></li>
+<li><p>Soudures brillantes et lisses (pas ternes) ?</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="qualite-des-soudures">
+<h4>Qualité des Soudures<a class="headerlink" href="#qualite-des-soudures" title="Lien vers cette rubrique"></a></h4>
+<figure class="align-center" id="id5">
+<img alt="Comparaison soudure bonne vs mauvaise" src="../_images/soudure-bonne-vs-mauvaise.png" />
+<figcaption>
+<p><span class="caption-text">Exemples de bonnes et mauvaises soudures</span><a class="headerlink" href="#id5" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Caractéristiques d’une bonne soudure :</strong></p>
+<ul class="simple">
+<li><p>✅ Aspect brillant et lisse</p></li>
+<li><p>✅ Forme de volcan (concave)</p></li>
+<li><p>✅ Mouille à la fois la patte et la pastille</p></li>
+<li><p>✅ Pas de boule séparée</p></li>
+</ul>
+<p><strong>Soudure froide (défectueuse) :</strong></p>
+<ul class="simple">
+<li><p>❌ Aspect terne, granuleux</p></li>
+<li><p>❌ Soudure en boule qui ne mouille pas</p></li>
+<li><p>❌ Fissures visibles</p></li>
+<li><p>❌ Contact électrique mauvais ou inexistant</p></li>
+</ul>
+<p><strong>Solution :</strong> Refaire les soudures suspectes :</p>
+<ol class="arabic simple">
+<li><p>Chauffer à nouveau avec fer à souder (350 °C)</p></li>
+<li><p>Ajouter un peu de flux si disponible</p></li>
+<li><p>Ajouter un peu de soudure fraîche</p></li>
+<li><p>Laisser refroidir sans bouger</p></li>
+</ol>
+</section>
+<section id="pont-de-soudure-court-circuit">
+<h4>Pont de Soudure (Court-Circuit)<a class="headerlink" href="#pont-de-soudure-court-circuit" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Symptôme :</strong> Deux pistes ou broches reliées par erreur</p>
+<p><strong>Détection :</strong></p>
+<ul class="simple">
+<li><p>Inspection visuelle avec une loupe</p></li>
+<li><p>Multimètre en mode continuité entre broches qui ne devraient pas être connectées</p></li>
+</ul>
+<p><strong>Solution — Retrait avec tresse à dessouder :</strong></p>
+<ol class="arabic simple">
+<li><p>Placer tresse à dessouder sur le pont</p></li>
+<li><p>Appliquer fer à souder sur la tresse</p></li>
+<li><p>La soudure est absorbée par capillarité</p></li>
+<li><p>Répéter si nécessaire avec section propre de tresse</p></li>
+</ol>
+<p><strong>Alternative — Retrait avec pompe à dessouder :</strong></p>
+<ol class="arabic simple">
+<li><p>Chauffer le pont avec fer à souder</p></li>
+<li><p>Approcher la pompe</p></li>
+<li><p>Activer la pompe (aspiration)</p></li>
+<li><p>Nettoyer et recommencer si nécessaire</p></li>
+</ol>
+</section>
+<section id="si-tension-correcte-mais-pas-de-fonctionnement">
+<h4>Si Tension Correcte mais Pas de Fonctionnement<a class="headerlink" href="#si-tension-correcte-mais-pas-de-fonctionnement" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-verifications-microcontroleur admonition">
+<p class="admonition-title">Vérifications microcontrôleur</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>ATmega328</strong> bien inséré dans le support ?</p>
+<ul class="simple">
+<li><p>Toutes les pattes dans les trous ?</p></li>
+<li><p>Pas de patte pliée sous le boîtier ?</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>ATmega328</strong> dans le bon sens ?</p>
+<ul class="simple">
+<li><p>⚠️ <strong>CRITIQUE</strong> : Encoche alignée avec marquage PCB ?</p></li>
+<li><p>Si inversé → <strong>Puce détruite à la mise sous tension !</strong></p></li>
+<li><p>Vérifier 3 fois avant d’alimenter</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Firmware programmé ?</strong></p>
+<ul class="simple">
+<li><p>Voir la section <a class="reference internal" href="../mono/test-logiciel-mono/#test-logiciel-mono"><span class="std std-ref">Tests logiciels</span></a> ou <a class="reference internal" href="../tri/test-logiciel-tri/#test-logiciel-tri"><span class="std std-ref">Tests logiciels</span></a></p></li>
+<li><p>ATmega328 vierge ne fait rien</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="causes-frequentes-resume">
+<h4>Causes Fréquentes — Résumé<a class="headerlink" href="#causes-frequentes-resume" title="Lien vers cette rubrique"></a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Symptôme</p></th>
+<th class="head"><p>Cause Probable</p></th>
+<th class="head"><p>Solution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Aucune tension VCC</p></td>
+<td><p>Fusible grillé</p></td>
+<td><p>Trouver le court-circuit, remplacer le fusible</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tension VCC faible (&lt;3 V)</p></td>
+<td><p>Régulateur défectueux</p></td>
+<td><p>Vérifier l’orientation, remplacer</p></td>
+</tr>
+<tr class="row-even"><td><p>Tension OK, rien ne fonctionne</p></td>
+<td><p>ATmega328 mal inséré/inversé</p></td>
+<td><p>Vérifier l’orientation, réinsérer</p></td>
+</tr>
+<tr class="row-odd"><td><p>Soudures ternes</p></td>
+<td><p>Soudure froide</p></td>
+<td><p>Refaire les soudures avec plus de chaleur</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="problemes-de-programmation-du-firmware">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Problèmes de Programmation du Firmware</a><a class="headerlink" href="#problemes-de-programmation-du-firmware" title="Lien vers cette rubrique"></a></h2>
+<section id="le-firmware-ne-se-televerse-pas">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Le Firmware ne se Téléverse Pas</a><a class="headerlink" href="#le-firmware-ne-se-televerse-pas" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Erreur dans Arduino IDE lors du téléversement</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>avrdude: stk500_recv(): programmer is not responding
+avrdude: stk500_getsync() attempt 1 of 10: not in sync
+</pre></div>
+</div>
+<section id="verifications-de-la-connexion-ftdi">
+<h4>Vérifications de la Connexion FTDI<a class="headerlink" href="#verifications-de-la-connexion-ftdi" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-liste-de-controle-connexion-ftdi admonition">
+<p class="admonition-title">Liste de contrôle — Connexion FTDI</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Câblage FTDI correct ?</strong></p>
+<ul class="simple">
+<li><p><strong>GND (noir)</strong> → <strong>GND</strong> sur PCB</p></li>
+<li><p><strong>TX (vert)</strong> → <strong>RX</strong> sur PCB</p></li>
+<li><p><strong>RX (blanc)</strong> → <strong>TX</strong> sur PCB</p></li>
+<li><p>⚠️ <strong>NE PAS</strong> connecter VCC si routeur alimenté !</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>ATmega328 bien inséré ?</strong></p>
+<ul class="simple">
+<li><p>Toutes les pattes dans le support ?</p></li>
+<li><p>Orientation correcte (encoche) ?</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Routeur alimenté en 230 V ?</strong></p>
+<ul class="simple">
+<li><p>Le FTDI ne fournit <strong>PAS</strong> de courant</p></li>
+<li><p>Alimentation secteur obligatoire</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Bon port COM sélectionné dans Arduino IDE ?</strong></p>
+<ul class="simple">
+<li><p>Menu : Outils → Port → COMX</p></li>
+<li><p>Essayer chaque port disponible</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Pilotes FTDI installés ?</strong></p>
+<ul class="simple">
+<li><p>Télécharger les pilotes sur ftdichip.com</p></li>
+<li><p>Windows : Gestionnaire de périphériques doit montrer « USB Serial Port »</p></li>
+<li><p>Linux : <code class="docutils literal notranslate"><span class="pre">dmesg</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">tty</span></code> doit montrer nouveau périphérique</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="problemes-port-usb-windows">
+<h4>Problèmes Port USB Windows<a class="headerlink" href="#problemes-port-usb-windows" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Symptôme :</strong> Port COM n’apparaît pas dans Arduino IDE</p>
+<p><strong>Solutions :</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Vérifier Gestionnaire de périphériques</strong></p>
+<ul class="simple">
+<li><p>Ouvrir : Panneau de configuration → Gestionnaire de périphériques</p></li>
+<li><p>Chercher : « Ports (COM et LPT) »</p></li>
+<li><p>Doit afficher : « USB Serial Port (COMx) »</p></li>
+<li><p>Si point d’exclamation jaune → Pilote problématique</p></li>
+</ul>
+</li>
+<li><p><strong>Réinstaller pilotes FTDI</strong></p>
+<ul class="simple">
+<li><p>Désinstaller pilote actuel (clic droit → Désinstaller)</p></li>
+<li><p>Débrancher FTDI</p></li>
+<li><p>Redémarrer ordinateur</p></li>
+<li><p>Rebrancher FTDI</p></li>
+<li><p>Windows devrait installer automatiquement</p></li>
+</ul>
+</li>
+<li><p><strong>Essayer autre port USB</strong></p>
+<ul class="simple">
+<li><p>Certains ports USB peuvent avoir problèmes</p></li>
+<li><p>Préférer ports USB directs (pas hub)</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="problemes-arduino-ide">
+<h4>Problèmes Arduino IDE<a class="headerlink" href="#problemes-arduino-ide" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-configuration-arduino-ide admonition">
+<p class="admonition-title">Configuration Arduino IDE</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Type de carte correct ?</strong></p>
+<ul class="simple">
+<li><p>Menu : Outils → Type de carte → <strong>Arduino Uno</strong></p></li>
+<li><p>Pas Arduino Nano, pas Mega</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Processeur correct ?</strong> (si option disponible)</p>
+<ul class="simple">
+<li><p>ATmega328P</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Vitesse correcte ?</strong></p>
+<ul class="simple">
+<li><p>9 600 bauds pour Moniteur Série</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<p><strong>Solutions supplémentaires :</strong></p>
+<ul class="simple">
+<li><p>Fermer et rouvrir Arduino IDE</p></li>
+<li><p>Débrancher/rebrancher FTDI</p></li>
+<li><p>Essayer sur autre ordinateur (test matériel vs logiciel)</p></li>
+</ul>
+</section>
+</section>
+<section id="firmware-se-televerse-mais-rien-ne-fonctionne">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Firmware se Téléverse mais Rien ne Fonctionne</a><a class="headerlink" href="#firmware-se-televerse-mais-rien-ne-fonctionne" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Téléversement réussi mais routeur inactif</p>
+<section id="verification-via-moniteur-serie">
+<h4>Vérification via Moniteur Série<a class="headerlink" href="#verification-via-moniteur-serie" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic">
+<li><p><strong>Ouvrir Moniteur Série</strong></p>
+<ul class="simple">
+<li><p>Menu : Outils → Moniteur série</p></li>
+<li><p>Ou raccourci : Ctrl+Maj+M</p></li>
+</ul>
+</li>
+<li><p><strong>Régler paramètres en bas à droite :</strong></p>
+<ul class="simple">
+<li><p><strong>Baud rate :</strong> 9 600</p></li>
+<li><p><strong>Fin de ligne :</strong> « Les deux, CR+LF »</p></li>
+</ul>
+</li>
+<li><p><strong>Appuyer sur bouton Reset du routeur</strong></p></li>
+<li><p><strong>Vous devriez voir :</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Mk2PVRouter v3.1 — Mono
+Initialisation...
+CT1: 0 W
+CT2: 0 W
+Sortie 1: OFF
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>Si pas de messages :</strong></p>
+<div class="admonition-diagnostics-oscillateur admonition">
+<p class="admonition-title">Diagnostics oscillateur</p>
+<p>Le microcontrôleur nécessite un oscillateur pour fonctionner.</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Quartz/résonateur bien soudé ?</strong></p>
+<ul class="simple">
+<li><p>Composant à 2 pattes près de l’ATmega328</p></li>
+<li><p>Soudures correctes ?</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Condensateurs C6/C7 présents ?</strong> (si quartz externe)</p>
+<ul class="simple">
+<li><p>Condensateurs 22 pF de chaque côté du quartz</p></li>
+<li><p>Valeur correcte ?</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<p><strong>Si messages bizarres/illisibles :</strong></p>
+<ul class="simple">
+<li><p>Vérifier que le baud rate = 9 600</p></li>
+<li><p>Si toujours illisible → Problème oscillateur (fréquence incorrecte)</p></li>
+</ul>
+</section>
+</section>
+<section id="erreur-out-of-memory-lors-de-la-compilation">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Erreur « Out of Memory » lors de la Compilation</a><a class="headerlink" href="#erreur-out-of-memory-lors-de-la-compilation" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Sketch too big; see https://support.arduino.cc/hc/en-us/articles/360013825179
+</pre></div>
+</div>
+<p><strong>Cause :</strong> Trop de fonctionnalités activées dans config.h</p>
+<p><strong>Solution :</strong></p>
+<ol class="arabic">
+<li><p>Ouvrir onglet <code class="docutils literal notranslate"><span class="pre">config.h</span></code> dans Arduino IDE</p></li>
+<li><p>Désactiver fonctionnalités non nécessaires :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Commenter les lignes avec //</span>
+<span class="c1">// #define ENABLE_DEBUG // Désactive messages debug</span>
+<span class="c1">// #define ENABLE_RF_MODULE // Désactive module RF</span>
+<span class="c1">// #define ENABLE_RELAY_OUTPUT // Si que sorties triac</span>
+</pre></div>
+</div>
+</li>
+<li><p>Recompiler et téléverser</p></li>
+</ol>
+</section>
+</section>
+<section id="problemes-electriques-tests-et-usage">
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">⚡ Problèmes Électriques — Tests et Usage</a><a class="headerlink" href="#problemes-electriques-tests-et-usage" title="Lien vers cette rubrique"></a></h2>
+<section id="fusible-saute-immediatement">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">Fusible Saute Immédiatement</a><a class="headerlink" href="#fusible-saute-immediatement" title="Lien vers cette rubrique"></a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>DANGER — COURT-CIRCUIT PRÉSENT !</strong></p>
+<p><strong>NE PAS</strong> remplacer le fusible sans trouver la cause !</p>
+<p>Un fusible qui saute protège contre incendie/destruction.
+Remplacer sans diagnostic = risque d’incendie.</p>
+</div>
+<p><strong>Symptôme :</strong> Fusible·s grille(nt) à la mise sous tension</p>
+<section id="causes-possibles">
+<h4>Causes Possibles<a class="headerlink" href="#causes-possibles" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-diagnostics-court-circuit admonition">
+<p class="admonition-title">Diagnostics court-circuit</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Court-circuit dans transformateur·s</strong></p>
+<ul class="simple">
+<li><p>Mono : TXFR1</p></li>
+<li><p>Tri : TXFR1, TXFR2, TXFR3</p></li>
+</ul>
+</li>
+</ol>
+<ul class="simple">
+<li><p>Mesurer la résistance des enroulements (doit être ~1-10 kΩ)</p></li>
+<li><p>Si &lt;10 Ω → Transformateur défectueux</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>☐ <strong>Pont de soudure sur pistes haute tension</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Inspecter visuellement avec une loupe</p></li>
+<li><p>Zone 230 V particulièrement critique</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>☐ <strong>Condensateur en court-circuit</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>C1 ou C2 défectueux</p></li>
+<li><p>Rare mais possible</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>☐ <strong>Régulateur VR1 défectueux</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Peut être en court-circuit si défaut fabrication</p></li>
+<li><p>Ou endommagé par soudure trop chaude</p></li>
+</ul>
+</div>
+</section>
+<section id="procedure-de-diagnostic">
+<h4>Procédure de Diagnostic<a class="headerlink" href="#procedure-de-diagnostic" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Débrancher l’alimentation et attendre 5 minutes avant ces tests !</p>
+<p>Les condensateurs peuvent rester chargés.</p>
+</div>
+<ol class="arabic">
+<li><p><strong>Retirer le fusible</strong></p></li>
+<li><p><strong>Mesurer la résistance entre phase et neutre</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Multimètre en mode Ohm (Ω)</p></li>
+<li><p>Mesurer à l’entrée du transformateur</p></li>
+<li><p>Valeur attendue : <strong>&gt; 1 kΩ</strong></p></li>
+<li><p>Si <strong>&lt; 100 Ω</strong> → Court-circuit présent</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Inspection visuelle minutieuse</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Loupe recommandée</p></li>
+<li><p>Chercher :</p>
+<ul>
+<li><p>Traces de brûlure</p></li>
+<li><p>Soudures touchant plusieurs pistes</p></li>
+<li><p>Composants noircis</p></li>
+<li><p>Fils dénudés touchant boîtier métallique</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Test par élimination</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Dessouder un côté du/des transformateur·s (TXFR1 pour mono, ou TXFR1/TXFR2/TXFR3 pour tri)</p></li>
+<li><p>Remesurer résistance</p></li>
+<li><p>Si court-circuit persiste → Problème sur PCB</p></li>
+<li><p>Si disparaît → Transformateur défectueux</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Remplacement fusible</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Utiliser <strong>même valeur</strong> que fusible d’origine</p></li>
+<li><p>Type : temporisé (slow-blow) recommandé</p></li>
+<li><p>⚠️ Jamais de fusible plus fort !</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+<section id="tensions-incorrectes-aux-points-de-test">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Tensions Incorrectes aux Points de Test</a><a class="headerlink" href="#tensions-incorrectes-aux-points-de-test" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Tensions mesurées différentes des valeurs attendues</p>
+<section id="valeurs-de-reference">
+<h4>Valeurs de Référence<a class="headerlink" href="#valeurs-de-reference" title="Lien vers cette rubrique"></a></h4>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Tensions normales</span><a class="headerlink" href="#id6" title="Lien vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Point de Test</p></th>
+<th class="head"><p>Valeur Attendue</p></th>
+<th class="head"><p>Tolérance</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>VCC (3.3 V)</p></td>
+<td><p>3.3 V</p></td>
+<td><p>±0.2 V (3.1-3.5 V)</p></td>
+</tr>
+<tr class="row-odd"><td><p>VCC (5 V)</p></td>
+<td><p>5.0 V</p></td>
+<td><p>±0.3 V (4.7-5.3 V)</p></td>
+</tr>
+<tr class="row-even"><td><p>Sortie ADC (repos)</p></td>
+<td><p>VCC/2</p></td>
+<td><p>±0.5 V</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gate triac (actif)</p></td>
+<td><p>~2-5 V (pulsé)</p></td>
+<td><p>Variable</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="diagnostic-par-tension">
+<h4>Diagnostic par Tension<a class="headerlink" href="#diagnostic-par-tension" title="Lien vers cette rubrique"></a></h4>
+<p><strong>VCC trop faible (&lt;3 V pour système 3.3 V) :</strong></p>
+<ul class="simple">
+<li><p>Régulateur VR1 défectueux ou mal orienté</p></li>
+<li><p>Court-circuit partiel consommant trop de courant</p></li>
+<li><p>Transformateur sous-dimensionné (mauvaise référence)</p></li>
+</ul>
+<p><strong>VCC trop élevée (&gt;5.5 V) :</strong></p>
+<ul class="simple">
+<li><p>⚠️ <strong>DANGER</strong> pour ATmega328 (max absolu = 6 V)</p></li>
+<li><p>Régulateur absent ou court-circuité</p></li>
+<li><p><strong>COUPER L’ALIMENTATION IMMÉDIATEMENT</strong></p></li>
+</ul>
+<p><strong>Tension ADC incorrecte (pas à VCC/2) :</strong></p>
+<ul class="simple">
+<li><p>Résistances R8/R9 (burden résistors) mauvaise valeur</p></li>
+<li><p>Condensateurs C11/C12/C13 défectueux</p></li>
+<li><p>Pont de soudure dans zone analogique</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="problemes-detalonnage-et-mesures">
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">Problèmes d’Étalonnage et Mesures</a><a class="headerlink" href="#problemes-detalonnage-et-mesures" title="Lien vers cette rubrique"></a></h2>
+<section id="mesures-de-puissance-incoherentes">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">Mesures de Puissance Incohérentes</a><a class="headerlink" href="#mesures-de-puissance-incoherentes" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Le routeur affiche des valeurs fantaisistes (très éloignées réalité)</p>
+<section id="verifications-ct-current-transformer">
+<h4>Vérifications CT (Current Transformer)<a class="headerlink" href="#verifications-ct-current-transformer" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-liste-de-controle-ct admonition">
+<p class="admonition-title">Liste de contrôle — CT</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>CT dans le bon sens ?</strong></p>
+<ul class="simple">
+<li><p>Flèche sur CT doit pointer vers <strong>source</strong> (compteur/disjoncteur)</p></li>
+<li><p>Pas vers la charge</p></li>
+<li><p>⚠️ Si inversé : valeurs négatives ou erronées</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>CT sur la bonne phase ?</strong></p>
+<ul class="simple">
+<li><p>Version mono : CT sur phase principale</p></li>
+<li><p>Version tri : CT sur chacune des 3 phases</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>CT bien fermé ?</strong></p>
+<ul class="simple">
+<li><p>Le noyau magnétique doit être complètement fermé</p></li>
+<li><p>Pas d’espace/jeu</p></li>
+<li><p>Clip bien enclenché</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>CT sur UN SEUL câble ?</strong></p>
+<ul class="simple">
+<li><p>Ne jamais entourer phase + neutre ensemble</p></li>
+<li><p>Annulerait la mesure (courant total = 0)</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Connexion CT sur PCB correcte ?</strong></p>
+<ul class="simple">
+<li><p>Connecteur jack bien enfoncé</p></li>
+<li><p>Pas de faux contact</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="verifications-electroniques">
+<h4>Vérifications Électroniques<a class="headerlink" href="#verifications-electroniques" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-composants-de-mesure admonition">
+<p class="admonition-title">Composants de mesure</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Burden résistances correctes ?</strong></p>
+<ul class="simple">
+<li><p>R8/R9 : Typiquement 120 Ω pour système 3.3 V</p></li>
+<li><p>Vérifier la valeur avec un multimètre</p></li>
+<li><p>Code couleur : Marron-Rouge-Marron-Or = 120 Ω</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Condensateurs C11/C12/C13 bien soudés ?</strong></p>
+<ul class="simple">
+<li><p>Forment filtre passe-bas anti-repliement</p></li>
+<li><p>Valeurs typiques : 10 nF ou 100 nF</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Pas de pont de soudure autour ADC ?</strong></p>
+<ul class="simple">
+<li><p>Zone très sensible</p></li>
+<li><p>Vérifier à la loupe</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="id2">
+<h4>Valeurs de Référence<a class="headerlink" href="#id2" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Test de cohérence :</strong></p>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">Tests de validation mesures</span><a class="headerlink" href="#id7" title="Lien vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Condition</p></th>
+<th class="head"><p>Valeur Attendue</p></th>
+<th class="head"><p>Tolérance</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Sans charge (0 W réel)</p></td>
+<td><p>0 W ±10 W</p></td>
+<td><p>Normal</p></td>
+</tr>
+<tr class="row-odd"><td><p>Avec charge 2 000 W</p></td>
+<td><p>1 900-2100 W</p></td>
+<td><p>±5% après étalonnage</p></td>
+</tr>
+<tr class="row-even"><td><p>Production 3 000 W</p></td>
+<td><p>2 850-3150 W</p></td>
+<td><p>±5%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Écart &gt;20%</p></td>
+<td><p>Problème matériel</p></td>
+<td><p>À investiguer</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Si écart &gt;20% après étalonnage :</strong></p>
+<ul class="simple">
+<li><p>CT défectueux (rare mais possible)</p></li>
+<li><p>Burden résistances mauvaise valeur</p></li>
+<li><p>Problème ADC du microcontrôleur</p></li>
+<li><p>Interférences électromagnétiques (câble CT trop long/près moteur)</p></li>
+</ul>
+</section>
+</section>
+<section id="etalonnage-ne-converge-pas">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Étalonnage ne Converge Pas</a><a class="headerlink" href="#etalonnage-ne-converge-pas" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Impossible d’obtenir valeurs correctes malgré ajustements</p>
+<p><strong>Causes possibles :</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Charge de référence instable</strong></p>
+<ul class="simple">
+<li><p>Utiliser une résistance pure (radiateur, chauffe-eau)</p></li>
+<li><p>Pas de charge à découpage (ordinateur, LED)</p></li>
+<li><p>Puissance doit être stable ±2%</p></li>
+</ul>
+</li>
+<li><p><strong>Mesure de référence inexacte</strong></p>
+<ul class="simple">
+<li><p>Pince ampèremétrique : ±3% précision minimum</p></li>
+<li><p>Wattmètre : Classe 1 minimum</p></li>
+<li><p>Multimètre basique insuffisant</p></li>
+</ul>
+</li>
+<li><p><strong>Interférences</strong></p>
+<ul class="simple">
+<li><p>Variateurs de vitesse moteur</p></li>
+<li><p>Plaques à induction</p></li>
+<li><p>Équipements RF à proximité</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Procédure recommandée :</strong></p>
+<ol class="arabic simple">
+<li><p>Couper TOUS les autres appareils</p></li>
+<li><p>Utiliser une charge purement résistive 1 500-2000 W</p></li>
+<li><p>Laisser stabiliser 5 minutes</p></li>
+<li><p>Mesurer avec un instrument calibré</p></li>
+<li><p>Ajuster calibration</p></li>
+<li><p>Vérifier avec une autre charge différente</p></li>
+</ol>
+</section>
+</section>
+<section id="problemes-led-et-signalisation">
+<h2><a class="toc-backref" href="#id22" role="doc-backlink">Problèmes LED et Signalisation</a><a class="headerlink" href="#problemes-led-et-signalisation" title="Lien vers cette rubrique"></a></h2>
+<section id="led-ne-sallume-jamais">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">LED ne s’Allume Jamais</a><a class="headerlink" href="#led-ne-sallume-jamais" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> LED témoin ne s’allume pas malgré routage actif</p>
+<section id="id3">
+<h4>Vérifications de Base<a class="headerlink" href="#id3" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-diagnostic-led admonition">
+<p class="admonition-title">Diagnostic LED</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>LED bien soudée ?</strong></p>
+<ul class="simple">
+<li><p>Soudures brillantes ?</p></li>
+<li><p>Contact avec pastilles ?</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>LED dans le bon sens ?</strong></p>
+<ul class="simple">
+<li><p>Patte longue = Anode (+)</p></li>
+<li><p>Patte courte = Cathode (-)</p></li>
+<li><p>Repère plat sur LED = côté cathode (-)</p></li>
+<li><p>⚠️ Si inversée : ne s’allumera JAMAIS</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Résistance série LED présente ?</strong></p>
+<ul class="simple">
+<li><p>Typiquement 220 Ω ou 470 Ω</p></li>
+<li><p>Protège la LED</p></li>
+<li><p>Si absente : LED peut griller</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Carte sortie triac fonctionne ?</strong></p>
+<ul class="simple">
+<li><p>Tester le routage avec une charge</p></li>
+<li><p>Si charge activée mais pas LED → Problème LED/résistance</p></li>
+<li><p>Si charge pas activée → Problème triac (voir section suivante)</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="test-de-la-led">
+<h4>Test de la LED<a class="headerlink" href="#test-de-la-led" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Test avec pile 3 V (2× AA/AAA) :</strong></p>
+<ol class="arabic simple">
+<li><p>Dessouder LED du PCB</p></li>
+<li><p>Connecter :</p>
+<ul class="simple">
+<li><p><strong>+</strong> pile → <strong>Résistance 220 Ω</strong> → <strong>Anode LED</strong> (patte longue)</p></li>
+<li><p><strong>-</strong> pile → <strong>Cathode LED</strong> (patte courte)</p></li>
+</ul>
+</li>
+<li><p>LED doit s’allumer</p>
+<ul class="simple">
+<li><p>Si oui : LED OK, problème sur PCB</p></li>
+<li><p>Si non : LED grillée, remplacer</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="led-toujours-allumee">
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">LED Toujours Allumée</a><a class="headerlink" href="#led-toujours-allumee" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> LED reste allumée en permanence même sans excédent</p>
+<p><strong>Causes possibles :</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Triac en court-circuit</strong></p>
+<ul class="simple">
+<li><p>Triac défectueux ou détruit</p></li>
+<li><p>Mesurer la résistance MT1-MT2 (doit être &gt;1 MΩ à froid)</p></li>
+</ul>
+</li>
+<li><p><strong>Opto-coupleur défectueux</strong></p>
+<ul class="simple">
+<li><p>MOC3041/MOC3043 en court-circuit</p></li>
+<li><p>Remplacer le composant</p></li>
+</ul>
+</li>
+<li><p><strong>Problème firmware</strong></p>
+<ul class="simple">
+<li><p>Sortie forcée ON dans configuration</p></li>
+<li><p>Vérifier le Moniteur Série Arduino IDE</p></li>
+<li><p>Commandes de test actives ?</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="led-clignote-bizarrement">
+<h3><a class="toc-backref" href="#id25" role="doc-backlink">LED Clignote Bizarrement</a><a class="headerlink" href="#led-clignote-bizarrement" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Comportement LED inattendu</p>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">Diagnostic comportement LED</span><a class="headerlink" href="#id8" title="Lien vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Comportement</p></th>
+<th class="head"><p>Signification</p></th>
+<th class="head"><p>Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Toutes éteintes permanent</p></td>
+<td><p>Pas d’excédent OU routeur non fonctionnel</p></td>
+<td><p>Vérifier la production solaire et le moniteur série</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toutes allumées permanent</p></td>
+<td><p>Excédent max OU charge saturée</p></td>
+<td><p>Normal si chauffe-eau à température</p></td>
+</tr>
+<tr class="row-even"><td><p>Clignotement très rapide (&lt;0.5s)</p></td>
+<td><p>Beaucoup d’excédent (80-100%)</p></td>
+<td><p>Normal en pleine production</p></td>
+</tr>
+<tr class="row-odd"><td><p>Clignotement lent (&gt;2s)</p></td>
+<td><p>Peu d’excédent (10-30%)</p></td>
+<td><p>Normal début/fin journée</p></td>
+</tr>
+<tr class="row-even"><td><p>Clignotement erratique</p></td>
+<td><p>Mesures instables</p></td>
+<td><p>Vérifier le CT et $1’$2talonnage</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="problemes-de-routage-charge-ne-chauffe-pas">
+<h2><a class="toc-backref" href="#id26" role="doc-backlink">🔥 Problèmes de Routage — Charge ne Chauffe Pas</a><a class="headerlink" href="#problemes-de-routage-charge-ne-chauffe-pas" title="Lien vers cette rubrique"></a></h2>
+<section id="routeur-fonctionne-mais-charge-pas-alimentee">
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">Routeur Fonctionne mais Charge Pas Alimentée</a><a class="headerlink" href="#routeur-fonctionne-mais-charge-pas-alimentee" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> LEDs actives, routeur semble fonctionner, mais charge froide</p>
+<section id="verifications-triac">
+<h4>Vérifications Triac<a class="headerlink" href="#verifications-triac" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Manipulation haute tension ! Couper le disjoncteur avant intervention.</p>
+</div>
+<div class="admonition-diagnostic-etage-de-puissance admonition">
+<p class="admonition-title">Diagnostic étage de puissance</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Triac bien soudé sur dissipateur ?</strong></p>
+<ul class="simple">
+<li><p>Contact thermique ET électrique</p></li>
+<li><p>Pas de jeu mécanique</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Isolant électrique présent ?</strong></p>
+<ul class="simple">
+<li><p>Mica ou silicone entre triac et dissipateur</p></li>
+<li><p>Évite court-circuit (dissipateur relié terre)</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Vis triac bien serrée ?</strong></p>
+<ul class="simple">
+<li><p>Couple serrage important pour contact thermique</p></li>
+<li><p>Pas trop serré (risque fissure boîtier triac)</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Pâte thermique appliquée ?</strong></p>
+<ul class="simple">
+<li><p>Mince couche uniforme</p></li>
+<li><p>Améliore transfert thermique</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Câblage haute puissance correct ?</strong></p>
+<ul class="simple">
+<li><p><strong>Phase</strong> sur borne <strong>L</strong></p></li>
+<li><p><strong>Neutre</strong> sur borne <strong>N</strong></p></li>
+<li><p>Vis bornier bien serrées</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="test-du-triac">
+<h4>Test du Triac<a class="headerlink" href="#test-du-triac" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Mesure à froid (hors tension) :</strong></p>
+<ol class="arabic simple">
+<li><p>Couper l’alimentation</p></li>
+<li><p>Multimètre en mode Ohm (Ω)</p></li>
+<li><p>Mesurer la résistance MT1-MT2 :</p>
+<ul class="simple">
+<li><p>Doit être <strong>&gt; 1 MΩ</strong> (quasi ouvert)</p></li>
+<li><p>Si &lt; 100 Ω → Triac en court-circuit (détruit)</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Test fonctionnel (sous tension) :</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Manipulations haute tension ! Compétences électriques requises.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Connecter voltmètre aux bornes charge</p></li>
+<li><p>Mettre routeur sous tension avec excédent</p></li>
+<li><p>Observer tension :</p>
+<ul class="simple">
+<li><p>Doit être ~230 V RMS quand LED active</p></li>
+<li><p>Doit être ~0 V quand LED éteinte</p></li>
+<li><p>Si toujours 0 V → Triac ne conduit pas</p></li>
+<li><p>Si toujours 230 V → Triac bloqué ON (défectueux)</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Mesure signal gate :</strong></p>
+<ol class="arabic simple">
+<li><p>Oscilloscope ou multimètre AC sur gate triac</p></li>
+<li><p>En fonctionnement :</p>
+<ul class="simple">
+<li><p>Doit montrer impulsions 2-5 V</p></li>
+<li><p>Fréquence 50/100 Hz (burst fire)</p></li>
+<li><p>Si pas d’impulsions → Problème opto-coupleur ou routage signal</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="verifications-charge">
+<h4>Vérifications Charge<a class="headerlink" href="#verifications-charge" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Chauffe-eau :</strong></p>
+<ul class="simple">
+<li><p>☐ Thermostat non déclenché ? (température max atteinte)</p></li>
+<li><p>☐ Thermostat pas coupé manuellement ?</p></li>
+<li><p>☐ Résistance chauffe-eau fonctionnelle ?</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Tester résistance : doit être ~25-30 Ω pour 2 000 W</p></li>
+<li><p>Si infinie → Résistance coupée/brûlée</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Radiateur électrique :</strong></p>
+<ul class="simple">
+<li><p>☐ Interrupteur radiateur allumé ?</p></li>
+<li><p>☐ Thermostat radiateur pas en position MIN ?</p></li>
+</ul>
+<p><strong>Test charge indépendamment :</strong></p>
+<ol class="arabic simple">
+<li><p>Déconnecter charge du routeur</p></li>
+<li><p>Brancher directement sur prise secteur</p></li>
+<li><p>Vérifier le fonctionnement</p></li>
+<li><p>Si charge ne chauffe pas → Problème charge, pas routeur</p></li>
+</ol>
+</section>
+</section>
+<section id="triac-surchauffe">
+<h3><a class="toc-backref" href="#id28" role="doc-backlink">Triac Surchauffe</a><a class="headerlink" href="#triac-surchauffe" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Dissipateur très chaud (&gt;60 °C au toucher)</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Surchauffe = risque de destruction du triac et incendie !</p>
+</div>
+<p><strong>Causes possibles :</strong></p>
+<ol class="arabic">
+<li><p><strong>Puissance de la charge trop élevée</strong></p>
+<ul class="simple">
+<li><p>Les dissipateurs fournis sont dimensionnés pour un <strong>maximum de 3 kW</strong></p></li>
+<li><p>Vérifier que la charge connectée ne dépasse pas cette limite</p></li>
+<li><p>Exemples :</p>
+<ul>
+<li><p>✅ Chauffe-eau 2 000-3000 W : OK</p></li>
+<li><p>✅ Radiateur électrique 2 000 W : OK</p></li>
+<li><p>❌ Charge &gt;3 kW : Dépasse les spécifications !</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Dissipateur mal orienté</strong></p>
+<ul class="simple">
+<li><p>⚠️ <strong>IMPORTANT</strong> : Le dissipateur <strong>DOIT être en position verticale</strong></p></li>
+<li><p>Permet la convection naturelle de l’air</p></li>
+<li><p>Si horizontal : refroidissement insuffisant → surchauffe</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les dissipateurs sont vissés sur l’<strong>extérieur</strong> du boîtier.
+Aucun trou de ventilation n’est nécessaire dans le boîtier.</p>
+</div>
+</li>
+<li><p><strong>Contact thermique insuffisant</strong></p>
+<ul class="simple">
+<li><p>Pâte thermique absente/mal appliquée</p></li>
+<li><p>Vissage insuffisant</p></li>
+<li><p>Surface du dissipateur pas plane</p></li>
+<li><p>Isolant électrique (mica/silicone) mal positionné</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Solutions :</strong></p>
+<ul class="simple">
+<li><p>Vérifier que la charge ≤ 3 kW (mesurer avec pince ampèremétrique)</p></li>
+<li><p><strong>S’assurer que le dissipateur est vertical</strong></p></li>
+<li><p>Améliorer le contact thermique (pâte, serrage correct)</p></li>
+<li><p>Si charge &gt;3 kW : utiliser plusieurs sorties en parallèle ou réduire la puissance</p></li>
+</ul>
+</section>
+</section>
+<section id="problemes-de-communication-rf">
+<h2><a class="toc-backref" href="#id29" role="doc-backlink">💻 Problèmes de Communication RF</a><a class="headerlink" href="#problemes-de-communication-rf" title="Lien vers cette rubrique"></a></h2>
+<section id="module-rf-ne-repond-pas">
+<h3><a class="toc-backref" href="#id30" role="doc-backlink">Module RF ne Répond Pas</a><a class="headerlink" href="#module-rf-ne-repond-pas" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Symptôme :</strong> Pas de communication radio (si module RF installé)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cette section concerne uniquement les kits avec module RF optionnel.</p>
+</div>
+<section id="verifications-materielles">
+<h4>Vérifications Matérielles<a class="headerlink" href="#verifications-materielles" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition-diagnostic-module-rf admonition">
+<p class="admonition-title">Diagnostic module RF</p>
+<ol class="arabic simple">
+<li><p>☐ <strong>Module RF bien soudé/enfiché ?</strong></p>
+<ul class="simple">
+<li><p>Toutes broches en contact ?</p></li>
+<li><p>Orientation correcte ?</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Antenne connectée ?</strong></p>
+<ul class="simple">
+<li><p>Module 433 MHz : antenne filaire 17 cm</p></li>
+<li><p>Module 868 MHz : antenne filaire 8.6 cm</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Firmware compilé avec RF activé ?</strong></p>
+<ul class="simple">
+<li><p>Dans <code class="docutils literal notranslate"><span class="pre">config.h</span></code> : <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">ENABLE_RF_MODULE</span></code></p></li>
+<li><p>Recompiler et téléverser si nécessaire</p></li>
+</ul>
+</li>
+<li><p>☐ <strong>Messages RF dans Moniteur Série ?</strong></p>
+<ul class="simple">
+<li><p>Doit afficher : « RF initialized » au démarrage</p></li>
+<li><p>Si « RF init failed » → Problème communication</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</section>
+<section id="depannage-communication">
+<h4>Dépannage Communication<a class="headerlink" href="#depannage-communication" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Test émetteur :</strong></p>
+<ol class="arabic simple">
+<li><p>Ouvrir Moniteur Série (9 600 bauds)</p></li>
+<li><p>Forcer émission commande test</p></li>
+<li><p>Observer messages debug</p></li>
+</ol>
+<p><strong>Problèmes fréquents :</strong></p>
+<ul class="simple">
+<li><p>Mauvaise broche SPI (vérifier schéma)</p></li>
+<li><p>Module 3.3 V alimenté en 5 V (destruction possible)</p></li>
+<li><p>Interférences (éloigner de charges puissance)</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="obtenir-de-laide">
+<h2><a class="toc-backref" href="#id31" role="doc-backlink">Obtenir de l’Aide</a><a class="headerlink" href="#obtenir-de-laide" title="Lien vers cette rubrique"></a></h2>
+<section id="si-aucune-solution-ne-fonctionne">
+<h3><a class="toc-backref" href="#id32" role="doc-backlink">Si Aucune Solution ne Fonctionne</a><a class="headerlink" href="#si-aucune-solution-ne-fonctionne" title="Lien vers cette rubrique"></a></h3>
+<section id="ressources-communautaires">
+<h4>Ressources Communautaires<a class="headerlink" href="#ressources-communautaires" title="Lien vers cette rubrique"></a></h4>
+<ol class="arabic simple">
+<li><p><strong>Communauté Facebook :</strong> <a class="reference external" href="https://www.facebook.com/groups/3571488193062570" rel="noreferrer" target="_blank">https://www.facebook.com/groups/3571488193062570</a></p>
+<ul class="simple">
+<li><p>Moteur de recherche (problème déjà résolu ?)</p></li>
+<li><p>Poster nouveau sujet avec détails</p></li>
+</ul>
+</li>
+<li><p><strong>Email support :</strong> <a class="reference external" href="mailto:support&#37;&#52;&#48;mk2pvrouter&#46;fr" rel="noreferrer" target="_blank">support<span>&#64;</span>mk2pvrouter<span>&#46;</span>fr</a></p>
+<ul class="simple">
+<li><p>Temps réponse : 2-5 jours ouvrés</p></li>
+</ul>
+</li>
+<li><p><strong>GitHub Issues :</strong> <a class="reference external" href="https://github.com/FredM67/Mk2PVRouter/issues" rel="noreferrer" target="_blank">https://github.com/FredM67/Mk2PVRouter/issues</a></p>
+<ul class="simple">
+<li><p>Pour bugs firmware</p></li>
+<li><p>Améliorations suggestions</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="informations-a-fournir">
+<h4>Informations à Fournir<a class="headerlink" href="#informations-a-fournir" title="Lien vers cette rubrique"></a></h4>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>📞 Pour obtenir une aide efficace, inclure :</strong></p>
+<p>☐ <strong>Description détaillée problème</strong></p>
+<ul class="simple">
+<li><p>Symptômes observés</p></li>
+<li><p>Quand ça se produit</p></li>
+<li><p>Qu’avez-vous déjà essayé ?</p></li>
+</ul>
+<p>☐ <strong>Photos haute résolution</strong></p>
+<ul class="simple">
+<li><p>Dessus carte (composants)</p></li>
+<li><p>Dessous carte (soudures)</p></li>
+<li><p>Zones suspectes en gros plan</p></li>
+</ul>
+<p>☐ <strong>Mesures électriques</strong></p>
+<ul class="simple">
+<li><p>Tensions aux points de test</p></li>
+<li><p>Résistances composants suspects</p></li>
+</ul>
+<p>☐ <strong>Messages d’erreur complets</strong></p>
+<ul class="simple">
+<li><p>Copier-coller depuis Moniteur Série Arduino IDE</p></li>
+<li><p>Ou capture d’écran</p></li>
+</ul>
+<p>☐ <strong>Informations configuration</strong></p>
+<ul class="simple">
+<li><p>Version firmware (voir Moniteur Série au démarrage)</p></li>
+<li><p>Version kit (mono/tri, nombre sorties)</p></li>
+<li><p>Système 3.3 V ou 5 V ?</p></li>
+</ul>
+</div>
+</section>
+<section id="photos-utiles-exemples">
+<h4>📸 Photos Utiles — Exemples<a class="headerlink" href="#photos-utiles-exemples" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Photo dessus (composants) :</strong></p>
+<ul class="simple">
+<li><p>Vue d’ensemble carte complète</p></li>
+<li><p>Netteté suffisante pour lire références composants</p></li>
+<li><p>Éclairage uniforme sans reflets</p></li>
+</ul>
+<p><strong>Photo dessous (soudures) :</strong></p>
+<ul class="simple">
+<li><p>Macro sur soudures suspectes</p></li>
+<li><p>Toutes soudures visibles (pas de zones d’ombre)</p></li>
+<li><p>Angle permettant voir qualité (brillant/terne)</p></li>
+</ul>
+<p><strong>Photos contexte :</strong></p>
+<ul class="simple">
+<li><p>Installation dans boîtier</p></li>
+<li><p>Câblage complet</p></li>
+<li><p>Connexions CT</p></li>
+<li><p>Étiquettes équipements</p></li>
+</ul>
+</section>
+<section id="avant-de-poster">
+<h4>Avant de Poster<a class="headerlink" href="#avant-de-poster" title="Lien vers cette rubrique"></a></h4>
+<p><strong>Checklist pré-demande :</strong></p>
+<ul class="simple">
+<li><p>☐ J’ai lu toute la section pertinente du guide dépannage</p></li>
+<li><p>☐ J’ai vérifié tous les points de la liste de contrôle</p></li>
+<li><p>☐ J’ai cherché le problème sur forum (peut-être déjà résolu)</p></li>
+<li><p>☐ J’ai préparé photos/mesures/infos nécessaires</p></li>
+<li><p>☐ J’ai relu pour clarté et complétude</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Plus votre demande est précise et documentée, plus rapide sera la résolution !</p>
+</div>
+</section>
+</section>
+</section>
+<section id="annexe-outils-de-diagnostic-essentiels">
+<h2><a class="toc-backref" href="#id33" role="doc-backlink">🛠️ Annexe — Outils de Diagnostic Essentiels</a><a class="headerlink" href="#annexe-outils-de-diagnostic-essentiels" title="Lien vers cette rubrique"></a></h2>
+<section id="multimetre-utilisation-de-base">
+<h3><a class="toc-backref" href="#id34" role="doc-backlink">Multimètre — Utilisation de Base</a><a class="headerlink" href="#multimetre-utilisation-de-base" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Mode Tension Continue (V⎓ ou VDC) :</strong></p>
+<ul class="simple">
+<li><p>Mesurer VCC et les tensions d’alimentation</p></li>
+<li><p>Sonde noire sur GND, rouge sur point à mesurer</p></li>
+<li><p>Calibres : 20 V pour 3.3 V/5 V, 200 V pour &gt;12 V</p></li>
+</ul>
+<p><strong>Mode Tension Alternative (V~ ou VAC) :</strong></p>
+<ul class="simple">
+<li><p>Mesurer 230 V secteur</p></li>
+<li><p>⚠️ Danger haute tension !</p></li>
+<li><p>Calibre minimum : 750 V</p></li>
+</ul>
+<p><strong>Mode Résistance (Ω) :</strong></p>
+<ul class="simple">
+<li><p>Mesurer les résistances, tester la continuité</p></li>
+<li><p>⚠️ Toujours hors tension !</p></li>
+<li><p>Calibres : 200 Ω, 2 kΩ, 20 kΩ, 200 kΩ</p></li>
+</ul>
+<p><strong>Mode Continuité (♪) :</strong></p>
+<ul class="simple">
+<li><p>Tester connexions, détecter court-circuits</p></li>
+<li><p>Bip si résistance &lt;50 Ω</p></li>
+<li><p>Idéal pour vérifier soudures, tracer pistes</p></li>
+</ul>
+</section>
+<section id="loupe-ou-microscope-usb">
+<h3><a class="toc-backref" href="#id35" role="doc-backlink">Loupe ou Microscope USB</a><a class="headerlink" href="#loupe-ou-microscope-usb" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Utilité :</strong></p>
+<ul class="simple">
+<li><p>Inspecter qualité soudures</p></li>
+<li><p>Détecter ponts microscopiques</p></li>
+<li><p>Vérifier l’orientation des composants CMS</p></li>
+</ul>
+<p><strong>Recommandation :</strong></p>
+<ul class="simple">
+<li><p>Loupe ×5 à ×10 minimum</p></li>
+<li><p>Microscope USB 200× pour inspection détaillée</p></li>
+<li><p>Éclairage LED intégré essentiel</p></li>
+</ul>
+</section>
+<section id="oscilloscope-optionnel">
+<h3><a class="toc-backref" href="#id36" role="doc-backlink">Oscilloscope (Optionnel)</a><a class="headerlink" href="#oscilloscope-optionnel" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Pour diagnostics avancés :</strong></p>
+<ul class="simple">
+<li><p>Visualiser signal gate triac</p></li>
+<li><p>Vérifier oscillateur ATmega328</p></li>
+<li><p>Analyser formes d’ondes ADC</p></li>
+</ul>
+<p><strong>Alternative économique :</strong></p>
+<ul class="simple">
+<li><p>Oscilloscope USB 20 MHz (50-100€)</p></li>
+<li><p>Suffisant pour diagnostics DIY</p></li>
+</ul>
+</section>
+<section id="pince-amperemetrique">
+<h3><a class="toc-backref" href="#id37" role="doc-backlink">Pince Ampèremétrique</a><a class="headerlink" href="#pince-amperemetrique" title="Lien vers cette rubrique"></a></h3>
+<p><strong>Utilité :</strong></p>
+<ul class="simple">
+<li><p>Mesurer courant sans couper câble</p></li>
+<li><p>Vérifier puissance réelle charge</p></li>
+<li><p>Indispensable pour étalonnage</p></li>
+</ul>
+<p><strong>Spécifications minimum :</strong></p>
+<ul class="simple">
+<li><p>Plage : 0-20 A AC</p></li>
+<li><p>Précision : ±3%</p></li>
+<li><p>Lecture True RMS recommandée</p></li>
+</ul>
+</section>
+</section>
+<section id="conclusion">
+<h2><a class="toc-backref" href="#id38" role="doc-backlink">Conclusion</a><a class="headerlink" href="#conclusion" title="Lien vers cette rubrique"></a></h2>
+<p>Ce guide de dépannage couvre les problèmes les plus fréquents rencontrés lors de l’assemblage et de l’utilisation du Mk2PVRouter.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Règles d’or du dépannage :</strong></p>
+<ol class="arabic simple">
+<li><p>Toujours couper l’alimentation avant intervention</p></li>
+<li><p>Procéder méthodiquement (listes de contrôle)</p></li>
+<li><p>Prendre photos AVANT toute modification</p></li>
+<li><p>Si doute : demander aide plutôt que forcer</p></li>
+<li><p>Un composant coûte moins cher qu’un routeur détruit !</p></li>
+</ol>
+</div>
+<p><strong>En cas de doute sérieux :</strong></p>
+<ul class="simple">
+<li><p>Ne pas prendre de risques avec 230 V</p></li>
+<li><p>Faire appel à un électricien qualifié</p></li>
+<li><p>Votre sécurité prime sur tout le reste</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>💡 <strong>Prévention &gt; Réparation</strong></p>
+<ul class="simple">
+<li><p>Vérifier 3 fois avant de souder</p></li>
+<li><p>Tester progressivement (pas tout d’un coup)</p></li>
+<li><p>Noter les modifications (traçabilité)</p></li>
+<li><p>Prendre des pauses (fatigue = erreurs)</p></li>
+</ul>
+</div>
+<p>Bon courage dans votre dépannage ! 🔧</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../installation-finale/" class="btn btn-neutral float-left" title="Installation Finale dans le Système Électrique" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../glossary/" class="btn btn-neutral float-right" title="Glossaire" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 18 février 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="../_static/Manuel_1.pdf">PDF1</a></dd>
+        
+          <dd><a href="../_static/Manuel_2.pdf">PDF2</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/troubleshooting.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/troubleshooting.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
