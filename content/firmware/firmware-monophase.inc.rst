@@ -32,10 +32,10 @@ Après extraction, vous devriez avoir :
    Mk2_fasterControl_Full/
    ├── Mk2_fasterControl_Full.ino  (fichier principal)
    ├── config.h                     (configuration utilisateur)
+   ├── config_system.h              (fréquence du réseau, seuils d’export)
    ├── calibration.h                (paramètres d’étalonnage)
-   ├── dualtarif.h
+   ├── dualtariff.h
    ├── processing.cpp
-   ├── temperature.cpp
    ├── utils_temp.h
    └── ... (autres fichiers)
 
@@ -115,17 +115,17 @@ Options disponibles :
 Configuration des Sorties Triac
 ###############################
 
-Définir le nombre de sorties et leurs broches :
+Définir le nombre de sorties et la broche de chacune :
 
 .. code-block:: cpp
 
    // Exemple : 2 sorties triac
    inline constexpr uint8_t NO_OF_DUMPLOADS{ 2 };
 
-   inline constexpr IoPinMapping physicalPin_dump_load[NO_OF_DUMPLOADS]{
-     { 5, DivertorConfig(NORMAL) },    // Sortie 1 sur broche D5
-     { 4, DivertorConfig(NORMAL) },    // Sortie 2 sur broche D4
-   };
+   inline constexpr uint8_t physicalLoadPin[NO_OF_DUMPLOADS]{ 4, 3 };  // Sortie 1 sur D4, sortie 2 sur D3
+
+.. note::
+   Par défaut, D3 est la broche de marche forcée (`forcePin`) : pour l’utiliser comme sortie, mettre `forcePin` sur une autre broche libre, ou bien `forcePin` à `0xff` et `OVERRIDE_PIN_PRESENT` à `false`. Avec l’afficheur 7 segments, peu de broches restent libres (voir les commentaires de `config.h`).
 
 Ordre de Démarrage
 ##################
@@ -134,32 +134,29 @@ Définir la priorité des charges :
 
 .. code-block:: cpp
 
-   inline constexpr uint8_t dumpLoad_startup_sequence[NO_OF_DUMPLOADS]{ 0, 1 };
+   inline constexpr uint8_t loadPrioritiesAtStartup[NO_OF_DUMPLOADS]{ 0, 1 };
 
 Signification : Démarrer d’abord la sortie 0, puis la sortie 1.
 
 Sondes de Température (Optionnel)
 #################################
 
-Si vous utilisez des sondes DS18B20, décommenter la ligne :
+Si vous utilisez des sondes DS18B20, activer la mesure :
 
 .. code-block:: cpp
 
-   #define TEMP_ENABLED
+   inline constexpr bool TEMP_SENSOR_PRESENT{ true };
 
-Et configurer les adresses des sondes :
+Puis indiquer la broche du bus *OneWire* (une broche libre, avec une résistance de *pull-up*) et les adresses des sondes :
 
 .. code-block:: cpp
 
-   inline constexpr DeviceAddress sensor_list[3]
-   {
-     { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x01 },  // Sonde 1
-     { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x02 },  // Sonde 2
-     { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x03 },  // Sonde 3
-   };
+   inline constexpr TemperatureSensing temperatureSensing{ 2,
+                                                           { { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x01 },     // Sonde 1
+                                                             { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x02 } } };  // Sonde 2
 
 .. note::
-   Les adresses des sondes seront trouvées lors du premier lancement (voir Moniteur Série).
+   Le firmware ne recherche pas les sondes : relevez leurs adresses avec un programme de scan *OneWire* (exemples de l’Arduino IDE ou sur Internet). Collez une étiquette avec l’adresse sur le câble de chaque sonde.
 
 Configuration dans `calibration.h`
 """"""""""""""""""""""""""""""""""
