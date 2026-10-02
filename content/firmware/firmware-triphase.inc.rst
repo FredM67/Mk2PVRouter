@@ -34,6 +34,9 @@ Après extraction, vous devriez avoir :
 Étape 2 : Configuration du Firmware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. tip::
+   Le :ref:`configurateur <configurateur-triphase>` écrit ``config.h`` (et, avec le module mk2Wifi, le YAML ESPHome) à partir d’une description de votre installation, en vérifiant vos choix. Il suffit ensuite de remplacer les fichiers et de garder votre ``calibration.h``.
+
 Ouverture du Projet
 """""""""""""""""""
 

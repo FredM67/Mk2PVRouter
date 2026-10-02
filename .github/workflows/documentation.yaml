@@ -3,16 +3,14 @@ name: Sphinx
 
 on:
   push:
+    # the 3-phase submodule is not ignored: it brings the configurator (/configurateur/)
     paths-ignore:
-      - '.gitmodules'
       - '1-phase/**'
-      - '3-phase/**'
       - 'hardware/**'
   pull_request:
+    # the 3-phase submodule is not ignored: it brings the configurator (/configurateur/)
     paths-ignore:
-      - '.gitmodules'
       - '1-phase/**'
-      - '3-phase/**'
       - 'hardware/**'
   workflow_dispatch: {}
 
