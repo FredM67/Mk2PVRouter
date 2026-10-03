@@ -37,13 +37,13 @@ Si Aucun Message n’Apparaît
 Adresses des Sondes de Température
 """""""""""""""""""""""""""""""""""
 
-Si vous avez activé `TEMP_ENABLED`, le moniteur série affichera les adresses détectées :
+Le routeur ne recherche pas les sondes : il lit celles dont les adresses sont dans `config.h`. Pour relever les adresses, téléverser l’exemple de la bibliothèque *OneWire* (**Fichier → Exemples → OneWire → DS18x20_Temperature**), en changeant au besoin la broche dans `OneWire ds(…)`. Le moniteur série affiche alors l’adresse de chaque sonde branchée :
 
 .. code-block:: text
 
-   Temperature sensor 0 address: 28 AA BB CC DD EE FF 01
-   Temperature sensor 1 address: 28 AA BB CC DD EE FF 02
+   ROM = 28 AA BB CC DD EE FF 1
+   ROM = 28 AA BB CC DD EE FF 2
 
-Copier ces adresses dans `config.h` (section sondes de température).
+Copier ces adresses dans `config.h` (section sondes de température, chaque octet sous la forme `0x28`, `0xAA`…, un octet affiché `1` s’écrit `0x01`), puis téléverser à nouveau le firmware du routeur. Coller une étiquette avec l’adresse sur le câble de chaque sonde.
 
 

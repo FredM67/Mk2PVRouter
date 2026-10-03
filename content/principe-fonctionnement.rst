@@ -121,4 +121,4 @@ Le Mk2PVRouter offre également des fonctionnalités avancées :
   - Il est également possible de piloter certaines fonctions du routeur via Home Assistant, comme la **marche forcée**.
 
   .. note::
-     Pour plus de détails sur l’intégration avec Home Assistant et pour accéder à un fichier YAML prêt à l’emploi pour ESPHome, consultez ce `Gist <https://gist.github.com/FredM67/986e1cb0fc020fa6324ccc151006af99>`_.
+     Pour le routeur triphasé, le :ref:`configurateur <configurateur-triphase>` génère un fichier YAML ESPHome prêt à l’emploi, cohérent avec la configuration du routeur. Pour plus de détails sur l’intégration avec Home Assistant, consultez aussi ce `Gist <https://gist.github.com/FredM67/986e1cb0fc020fa6324ccc151006af99>`_.
