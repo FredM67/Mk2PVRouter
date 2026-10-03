@@ -23,8 +23,9 @@ Vous décrivez votre installation :
 - les **charges** (triacs), pilotées par le routeur ou par une unité distante par radio, et leurs priorités ;
 - les **relais** ;
 - les **entrées de commande** : arrêt du routage, arrêt du routeur, marche forcée, rotation des priorités ;
-- le **double tarif**, les **sondes de température**, la **radio** (RFM69) ;
-- le **module mk2Wifi**.
+- le **double tarif**, les **sondes de température** ;
+- le **module mk2Wifi** ;
+- la **radio** (RFM69) et les **unités distantes**, plus rarement utilisées.
 
 Il vérifie la cohérence de vos choix au fur et à mesure (broche utilisée deux fois, broche réservée à la radio, valeur hors limites…), avec les mêmes règles que le compilateur, et en plus ce que le compilateur ne peut pas voir, comme le câblage du module mk2Wifi.
 
