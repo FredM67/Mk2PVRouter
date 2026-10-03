@@ -38,7 +38,7 @@ Utilisation
 -----------
 
 #. Ouvrir le configurateur et décrire l’installation, section par section.
-#. Corriger les problèmes signalés à droite (les erreurs bloquent la génération des fichiers, les avertissements non).
+#. Consulter les **Vérifications** à droite : corriger les erreurs (en rouge), sans quoi les fichiers ne sont pas générés ; les avertissements (en orange) sont à vérifier, mais ne bloquent rien.
 #. Cliquer sur **« Tout télécharger (ZIP) »**.
 #. Copier les fichiers du routeur dans le dossier ``Mk2_3phase_RFdatalog_temp``, à la place des fichiers du même nom.
 #. **Garder votre** ``calibration.h`` : le configurateur ne le modifie pas.
