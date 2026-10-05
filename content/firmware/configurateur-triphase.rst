@@ -40,9 +40,10 @@ Utilisation
 
 #. Ouvrir le configurateur et décrire l’installation, section par section.
 #. Consulter les **Vérifications** à droite : corriger les erreurs (en rouge), sans quoi les fichiers ne sont pas générés ; les avertissements (en orange) sont à vérifier, mais ne bloquent rien.
-#. Cliquer sur **« Tout télécharger (ZIP) »**.
-#. Copier les fichiers du routeur dans le dossier ``Mk2_3phase_RFdatalog_temp``, à la place des fichiers du même nom.
-#. **Garder votre** ``calibration.h`` : le configurateur ne le modifie pas.
+#. Avec Chrome ou Edge, cliquer sur **« Enregistrer dans le dossier du firmware… »** et choisir le dossier du firmware décompressé (celui qui contient ``Mk2_3phase_RFdatalog_temp`` et ``RemoteLoadReceiver``). Après confirmation, le configurateur y écrit tous les fichiers, à la place de ceux du même nom ; chaque unité distante reçoit son dossier ``RemoteLoadReceiver-unitN``.
+
+   Avec un autre navigateur, cliquer sur **« Tout télécharger (ZIP) »**, puis copier les fichiers du routeur dans le dossier ``Mk2_3phase_RFdatalog_temp``, à la place des fichiers du même nom.
+#. **Garder votre** ``calibration.h`` : le configurateur ne le modifie jamais.
 #. Compiler et téléverser comme d’habitude (voir :ref:`logiciel-triphase`).
 
 .. tip::
