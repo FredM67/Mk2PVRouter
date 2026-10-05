@@ -185,3 +185,30 @@ simplepdf_weasyprint_flags = ['-s', os.path.join(os.path.dirname(__file__), '_st
 #     'printindex': r'\footnotesize\raggedright\printindex',
 # }
 # latex_show_urls = 'footnote'
+
+# -- Configurator --------------------------------------------------------------
+# The firmware configurator of the 3-phase router lives with its firmware (3-phase/configurator,
+# tested there against the shipped config files) and is published here, at /configurateur/, from
+# the submodule: the online version always matches the documented firmware.
+import shutil
+
+configurator_dir = os.path.join(os.path.dirname(__file__), '..', '3-phase', 'configurator')
+
+
+def copy_configurator(app, exception):
+    if exception or app.builder.format != 'html':
+        return
+    if not os.path.isfile(os.path.join(configurator_dir, 'index.html')):
+        from sphinx.util import logging
+        logging.getLogger(__name__).warning('configurator not found in %s (submodule too old?)', configurator_dir)
+        return
+    target = os.path.join(app.outdir, 'configurateur')
+    os.makedirs(target, exist_ok=True)
+    for name in os.listdir(configurator_dir):
+        # the page only: the tests, presets and scripts stay in the firmware repository
+        if name.endswith(('.html', '.css', '.js')):
+            shutil.copy2(os.path.join(configurator_dir, name), target)
+
+
+def setup(app):
+    app.connect('build-finished', copy_configurator)
