@@ -60,7 +60,7 @@ Utilisation
 Étalonnage
 ----------
 
-Cochez **« Mode étalonnage »** : le configurateur ne montre plus que ce qui sert à l’étalonnage (les autres réglages sont conservés), et le ``config.h`` généré met le routeur en mode étalonnage, où il mesure sans rien commuter.
+Cochez **« Mode étalonnage »** : le configurateur ne montre plus que ce qui sert à l’étalonnage (les autres réglages sont conservés), et le ``config.h`` généré met le routeur en mode étalonnage, où il mesure sans rien commuter, avec la sortie série lisible (votre choix habituel revient en quittant le mode).
 
 #. Chargez votre ``calibration.h`` avec **« Charger mon calibration.h »**, ou saisissez les valeurs de ``f_powerCal`` (et de ``f_voltageCal``) avec lesquelles tourne le routeur.
 #. Avec une forte charge résistive sur une phase, relevez au même moment la puissance affichée par le routeur (``P1``, ``P2``, ``P3``) et celle d’un appareil de référence pincé sur le même câble, et saisissez-les. La tension (``V1``…) se corrige de la même façon.
