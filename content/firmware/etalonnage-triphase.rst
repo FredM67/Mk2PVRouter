@@ -167,6 +167,9 @@ Appareils de mesure possibles
      - :math:`P_{\text{mesuré}}` est la puissance mesurée par l'appareil.
      - :math:`P_{routeur}` est la puissance affichée par le routeur.
 
+   .. tip::
+      Le :ref:`configurateur <configurateur-triphase>` fait ce calcul pour vous : cochez « Mode étalonnage », chargez votre ``calibration.h`` (ou saisissez ses valeurs) et entrez, pour chaque phase, la puissance du routeur et celle de l’appareil. Il donne les nouvelles valeurs et réécrit votre ``calibration.h`` avec elles.
+
 #. **Validation** :
 
    - Téléversez le sketch mis à jour sur le routeur.
