@@ -2,6 +2,9 @@
 name: Sphinx
 
 on:
+  # Every push builds, on any branch. A PR from a branch of this repo shows the
+  # result of that push run; pull_request only builds PRs from forks (see the
+  # Build job), so that a change is never built twice.
   push:
     paths-ignore:
       - '.gitmodules'
@@ -16,6 +19,12 @@ on:
       - 'hardware/**'
   workflow_dispatch: {}
 
+# One run at a time per branch (or fork PR): a new push cancels the run of the
+# previous commit. Deployments (main and legacy) are never cancelled.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/legacy' }}
+
 # If these SPHINXOPTS are enabled, then be strict about the builds and
 # fail on any warnings
 #env:
@@ -25,11 +34,22 @@ on:
 jobs:
   Build:
     name: Build and gh-pages
+    # Same-repo PRs are already built by their push run
+    if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository }}
     runs-on: ubuntu-latest
+    # Debian trixie with Python 3.14, as the devcontainer: weasyprint (PDF)
+    # segfaults on ubuntu-26.04, the system of ubuntu-latest
+    container: python:3.14-trixie
     permissions:
       contents: write
 
     steps:
+      # git-lfs is not in the image, and the checkout below needs it
+      - name: Install git-lfs
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends git-lfs
+
       # https://github.com/marketplace/actions/checkout
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -37,6 +57,12 @@ jobs:
           fetch-depth: 0
           lfs: true
           submodules: true
+
+      # In the container, the workspace belongs to another user than root, and
+      # git refuses it ("dubious ownership") once the checkout is done; the
+      # build needs git (sphinx_last_updated_by_git), submodules included
+      - name: Trust the workspace for git
+        run: git config --global --add safe.directory '*'
 
       - name: Get drawio latest release version
         id: drawio-version
@@ -50,9 +76,9 @@ jobs:
         uses: actions/cache@v6
         with:
           path: ~/drawio-cache
-          key: ${{ runner.os }}-drawio-${{ steps.drawio-version.outputs.version }}-${{ runner.arch }}
+          key: trixie-drawio-${{ steps.drawio-version.outputs.version }}-${{ runner.arch }}
           restore-keys: |
-            ${{ runner.os }}-drawio-
+            trixie-drawio-
 
       - name: Download drawio
         if: steps.cache-drawio.outputs.cache-hit != 'true'
@@ -61,18 +87,14 @@ jobs:
           cd ~/drawio-cache
           curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep `dpkg --print-architecture` | grep '\.deb' | cut -d '"' -f 4 | wget -i -
 
-      - name: Install drawio & graphviz
+      # Same packages as .devcontainer/Dockerfile: graphviz, xvfb (headless
+      # drawio), the Pango/HarfBuzz libraries of weasyprint and its fonts
+      - name: Install drawio, graphviz and the PDF libraries
         run: |
-          sudo apt-get update
-          sudo apt-get -y install graphviz
-          sudo apt-get -f install ~/drawio-cache/drawio-amd64-*.deb
-
-      # https://github.com/marketplace/actions/setup-python
-      # ^-- This gives info on matrix testing.
-      - name: Install Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: '>=3.12' 
+          apt-get install -y --no-install-recommends graphviz xvfb libasound2t64 \
+            libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0 \
+            fonts-dejavu-core fonts-noto-color-emoji
+          apt-get -f install -y ~/drawio-cache/drawio-amd64-*.deb
 
       # https://docs.github.com/en/actions/guides/building-and-testing-python#caching-dependencies
       # ^-- How to set up caching for pip on Ubuntu
@@ -80,10 +102,9 @@ jobs:
         uses: actions/cache@v6
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          key: trixie-py3.14-pip-${{ hashFiles('requirements.txt') }}
           restore-keys: |
-            ${{ runner.os }}-pip-
-            ${{ runner.os }}-
+            trixie-py3.14-pip-
 
       # https://docs.github.com/en/actions/guides/building-and-testing-python#installing-dependencies
       # ^-- This gives info on installing dependencies with pip

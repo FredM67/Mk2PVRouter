@@ -6,11 +6,15 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "postCreateCommand": "pip install --upgrade pip && pip install -U -r requirements.txt && git config --global url.\"https://github.com/\".insteadOf \"git@github.com:\"",
+  "postCreateCommand": "curl -fsSL https://claude.ai/install.sh | bash && git submodule update --init --depth 1 && pip install --upgrade pip && pip install -U -r requirements.txt && git config --global url.\"https://github.com/\".insteadOf \"git@github.com:\"",
   "postAttachCommand": "gh auth setup-git 2>/dev/null || echo 'Run \"gh auth login\" to enable git push/pull'",
+  "remoteEnv": {
+    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
+        "anthropic.claude-code",
         "lextudio.restructuredtext",
         "trond-snekvik.simple-rst",
         "ms-python.python",

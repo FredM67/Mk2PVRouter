@@ -1,8 +1,12 @@
-FROM mcr.microsoft.com/devcontainers/python:3.12
+FROM mcr.microsoft.com/devcontainers/python:3.14-trixie
 
-# Install Graphviz and xvfb (needed for headless DrawIO rendering)
+# Graphviz, xvfb (needed for headless DrawIO rendering), and for the PDF
+# (make simplepdf): the Pango/HarfBuzz libraries of weasyprint and the fonts
+# it uses in CI (DejaVu, Noto Color Emoji for the emojis of the docs)
 RUN apt-get update \
     && apt-get install -y --no-install-recommends graphviz xvfb \
+       libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0 \
+       fonts-dejavu-core fonts-noto-color-emoji \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
