@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2025-12-01T15:37:13+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carte-mère monophasée &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">1~ Kit monophasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../soudures-mono/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../percages-mono/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais-mono/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../confection-cables-mono/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-mono/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-mono/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage-mono/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">3~ Kit triphasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/soudures-tri/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/percages-tri/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/carte-sortie-relais-tri/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/confection-cables-tri/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/assemblage-tri/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/test-logiciel-tri/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/etalonnage-tri/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">🔧 Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Carte-mère monophasée</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/mono/carte-mere-mono-short.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="carte-mere-monophasee">
+<span id="carte-mere-mono-short"></span><h1>Carte-mère monophasée<a class="headerlink" href="#carte-mere-monophasee" title="Lien vers cette rubrique"></a></h1>
+<nav class="contents local" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ordre-de-soudure" id="id11">Ordre de soudure</a></p></li>
+<li><p><a class="reference internal" href="#resistances" id="id12">Résistances</a></p></li>
+<li><p><a class="reference internal" href="#diodes" id="id13">Diodes</a></p></li>
+<li><p><a class="reference internal" href="#supports-circuits-integres" id="id14">Supports circuits intégrés</a></p></li>
+<li><p><a class="reference internal" href="#condensateurs-ceramiques-et-oscillateur" id="id15">Condensateurs céramiques et oscillateur</a></p></li>
+<li><p><a class="reference internal" href="#pont-redresseur-ou-pont-de-diodes" id="id16">Pont redresseur ou pont de diodes</a></p></li>
+<li><p><a class="reference internal" href="#fusible" id="id17">Fusible</a></p></li>
+<li><p><a class="reference internal" href="#connecteur-secteur" id="id18">Connecteur secteur</a></p></li>
+<li><p><a class="reference internal" href="#connecteurs-sil-molex" id="id19">Connecteurs SIL/Molex</a></p></li>
+<li><p><a class="reference internal" href="#inductance" id="id20">Inductance</a></p></li>
+<li><p><a class="reference internal" href="#condensateurs-electrolytiques" id="id21">Condensateurs électrolytiques</a></p></li>
+<li><p><a class="reference internal" href="#varistance" id="id22">Varistance</a></p></li>
+<li><p><a class="reference internal" href="#regulateur-de-tension" id="id23">Régulateur de tension</a></p></li>
+<li><p><a class="reference internal" href="#transformateur" id="id24">Transformateur</a></p></li>
+</ul>
+</nav>
+<hr class="docutils" />
+<section id="ordre-de-soudure">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Ordre de soudure</a><a class="headerlink" href="#ordre-de-soudure" title="Lien vers cette rubrique"></a></h2>
+<div class="line-block">
+<div class="line">Il est fortement recommandé de suivre l’ordre de soudure indiqué.</div>
+<div class="line"><br /></div>
+<div class="line">Cela vous épargnera des soucis par rapport au maintien des composants lors de la soudure.</div>
+<div class="line">En effet, les composants à souder sont insérés sur la face <em>avant</em> du circuit imprimé, tandis que la soudure se fait sur la face <em>arrière</em>.</div>
+<div class="line">Il faudra donc à chaque fois retourner le circuit imprimé pour souder les composants.</div>
+<div class="line"><br /></div>
+<div class="line">Si vous soudez un composant haut en premier, par exemple un transformateur, tous les autres composants auront tendance à tomber lorsque vous retournerez le circuit imprimé pour les souder.</div>
+</div>
+<p>Voici l’ordre de soudure recommandé :</p>
+<ol class="arabic simple">
+<li><p>résistances,</p></li>
+<li><p>diodes,</p></li>
+<li><p>socles de circuits intégrés,</p></li>
+<li><p>oscillateur et ses 2 condensateurs associés,</p></li>
+<li><p>condensateurs céramiques non polarisés,</p></li>
+<li><p>pont·s de diodes,</p></li>
+<li><p>fusibles,</p></li>
+<li><p>connecteur·s d’alimentation,</p></li>
+<li><p>socle FTDI,</p></li>
+<li><p>socles de CTs et socle·s de sortie,</p></li>
+<li><p>inductance,</p></li>
+<li><p>condensateurs électrolytiques polarisés,</p></li>
+<li><p>varistance·s,</p></li>
+<li><p>régulateur de tension (format transistor),</p></li>
+<li><p>transformateur·s</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cette liste est exhaustive et peut varier en fonction de la configuration de votre carte mère.</p>
+</div>
+<hr class="docutils" />
+<section id="soudure-des-composants">
+<h3>Soudure des composants<a class="headerlink" href="#soudure-des-composants" title="Lien vers cette rubrique"></a></h3>
+</section>
+</section>
+<section id="resistances">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Résistances</a><a class="headerlink" href="#resistances" title="Lien vers cette rubrique"></a></h2>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/Carte-mere-mono-01.png"><img alt="Résistances soudées" height="216" src="../../_images/Carte-mere-mono-01.png" width="288" />
+</a>
+<figcaption>
+<p><span class="caption-text">Carte-mère avec résistances soudées</span><a class="headerlink" href="#id1" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="diodes">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Diodes</a><a class="headerlink" href="#diodes" title="Lien vers cette rubrique"></a></h2>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/Carte-mere-mono-02.png"><img alt="Diodes soudées" height="216" src="../../_images/Carte-mere-mono-02.png" width="288" />
+</a>
+<figcaption>
+<p><span class="caption-text">Carte-mère avec diodes soudées</span><a class="headerlink" href="#id2" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="supports-circuits-integres">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Supports circuits intégrés</a><a class="headerlink" href="#supports-circuits-integres" title="Lien vers cette rubrique"></a></h2>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/Carte-mere-mono-03.png"><img alt="Supports CI soudés" height="216" src="../../_images/Carte-mere-mono-03.png" width="288" />
+</a>
+<figcaption>
+<p><span class="caption-text">Carte-mère avec supports CI soudés</span><a class="headerlink" href="#id3" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="condensateurs-ceramiques-et-oscillateur">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Condensateurs céramiques et oscillateur</a><a class="headerlink" href="#condensateurs-ceramiques-et-oscillateur" title="Lien vers cette rubrique"></a></h2>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/Carte-mere-mono-04.png"><img alt="Oscillateur et ses condensateurs associés soudés" height="216" src="../../_images/Carte-mere-mono-04.png" width="288" />
+</a>
+<figcaption>
+<p><span class="caption-text">Carte-mère avec oscillateur et ses condensateurs associés soudés</span><a class="headerlink" href="#id4" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/Carte-mere-mono-05.png"><img alt="Condensateurs céramiques soudés" height="216" src="../../_images/Carte-mere-mono-05.png" width="288" />
+</a>
+<figcaption>
+<p><span class="caption-text">Carte-mère avec condensateurs céramiques soudés</span><a class="headerlink" href="#id5" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pont-redresseur-ou-pont-de-diodes">
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">Pont redresseur ou pont de diodes</a><a class="headerlink" href="#pont-redresseur-ou-pont-de-diodes" title="Lien vers cette rubrique"></a></h2>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/Carte-mere-mono-06.png"><img alt="Pont redresseur soudé" height="216" src="../../_images/Carte-mere-mono-06.png" width="288" />
+</a>
+<figcaption>
+<p><span class="caption-text">Carte-mère avec pont redresseur soudé</span><a class="headerlink" href="#id6" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="fusible">
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Fusible</a><a class="headerlink" href="#fusible" title="Lien vers cette rubrique"></a></h2>
+<p>!! Manque photo !!</p>
+</section>
+<section id="connecteur-secteur">
+<h2><a class="toc-backref" href="#id18" role="doc-backlink">Connecteur secteur</a><a class="headerlink" href="#connecteur-secteur" title="Lien vers cette rubrique"></a></h2>
+<p>!! Manque photo !!</p>
+</section>
+<section id="connecteurs-sil-molex">
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">Connecteurs SIL/Molex</a><a class="headerlink" href="#connecteurs-sil-molex" title="Lien vers cette rubrique"></a></h2>
+<p>!! Manque photo !!</p>
+</section>
+<section id="inductance">
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">Inductance</a><a class="headerlink" href="#inductance" title="Lien vers cette rubrique"></a></h2>
+<p>!! Manque photo !!</p>
+</section>
+<section id="condensateurs-electrolytiques">
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">Condensateurs électrolytiques</a><a class="headerlink" href="#condensateurs-electrolytiques" title="Lien vers cette rubrique"></a></h2>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/Carte-mere-mono-12.png"><img alt="Condensateurs électrolytiques soudés" height="216" src="../../_images/Carte-mere-mono-12.png" width="288" />
+</a>
+<figcaption>
+<p><span class="caption-text">Carte-mère avec condensateurs électrolytiques soudés</span><a class="headerlink" href="#id7" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="varistance">
+<h2><a class="toc-backref" href="#id22" role="doc-backlink">Varistance</a><a class="headerlink" href="#varistance" title="Lien vers cette rubrique"></a></h2>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../_images/Carte-mere-mono-13.png"><img alt="Varistance soudée" height="216" src="../../_images/Carte-mere-mono-13.png" width="288" />
+</a>
+<figcaption>
+<p><span class="caption-text">Carte-mère avec varistance soudée</span><a class="headerlink" href="#id8" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="regulateur-de-tension">
+<h2><a class="toc-backref" href="#id23" role="doc-backlink">Régulateur de tension</a><a class="headerlink" href="#regulateur-de-tension" title="Lien vers cette rubrique"></a></h2>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../../_images/Carte-mere-mono-14.png"><img alt="Régulateur de tension soudé" height="216" src="../../_images/Carte-mere-mono-14.png" width="288" />
+</a>
+<figcaption>
+<p><span class="caption-text">Carte-mère avec régulateur de tension soudé</span><a class="headerlink" href="#id9" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="transformateur">
+<h2><a class="toc-backref" href="#id24" role="doc-backlink">Transformateur</a><a class="headerlink" href="#transformateur" title="Lien vers cette rubrique"></a></h2>
+<figure class="align-center" id="id10">
+<a class="reference internal image-reference" href="../../_images/Carte-mere-mono-15.png"><img alt="Transformateur soudé" height="216" src="../../_images/Carte-mere-mono-15.png" width="288" />
+</a>
+<figcaption>
+<p><span class="caption-text">Carte-mère avec transformateur soudé</span><a class="headerlink" href="#id10" title="Lien vers cette image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 01 décembre 2025.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="../_static/Manuel_1.pdf">PDF1</a></dd>
+        
+          <dd><a href="../_static/Manuel_2.pdf">PDF2</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/mono/carte-mere-mono-short.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/mono/carte-mere-mono-short.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
