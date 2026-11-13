@@ -3,6 +3,9 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import sys
+from pathlib import Path
+
 import sphinx.ext.mathjax
 import zoneinfo
 
@@ -19,6 +22,9 @@ conf_py_path = "/content/" # with leading and trailing slash
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+
+# Local extensions (_ext/)
+sys.path.insert(0, str(Path(__file__).parent / '_ext'))
 
 extensions = [
     # githubpages just adds a .nojekyll file
@@ -40,6 +46,7 @@ extensions = [
     # 'hoverxref.extension',
     'sphinx_new_tab_link',
     'sphinx_last_updated_by_git',
+    'singlepage',  # _ext/singlepage.py: links and ids of simplepdf/singlehtml
 ]
 
 # Make sure the target is unique
