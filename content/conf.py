@@ -65,6 +65,25 @@ drawio_builder_export_format = {"simplepdf": "png"}
 drawio_no_sandbox = True
 drawio_disable_verbose_electron = True
 
+
+# sphinxcontrib-drawio checks :page-index: as 0-based ([0, pages - 1]) but hands it
+# unchanged to the drawio CLI, which counts pages from 1. So `:page-index: 1`, the
+# first page for drawio, triggers a false "out of range" warning. Drop it only when
+# the index is one past the extension's range; a really wrong index still warns.
+import logging
+import re
+
+
+class _DrawioOneBasedPageFilter(logging.Filter):
+    _out_of_range = re.compile(r'selected page (\d+) is out of range \[0,(\d+)\]')
+
+    def filter(self, record):
+        match = self._out_of_range.fullmatch(record.getMessage())
+        return not (match and int(match[1]) == int(match[2]) + 1)
+
+
+logging.getLogger('sphinx.sphinxcontrib.drawio').addFilter(_DrawioOneBasedPageFilter())
+
 # hoverxref_roles = [
 #     'term',
 # ]
