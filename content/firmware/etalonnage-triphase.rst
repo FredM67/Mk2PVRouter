@@ -54,7 +54,7 @@ Le fichier ``calibration.h`` contient un jeu de valeurs par carte-mère, et le r
 
 Seule la puissance compte pour le routage : la tension (``V1``, ``V2``, ``V3``) n’est qu’affichée.
 
-**Carte universelle** : le facteur de puissance est donné par ampère de calibre de sonde, ``f_powerCal`` = ``f_powerCalPerAmp`` × ``f_ctRating``. Avant d’étalonner, vérifiez que ``f_ctRating`` contient bien le calibre de chacune de vos sondes, en ampères (50 pour une sonde 50 A / 333 mV ; 666 / R pour une sonde à sortie courant avec une résistance de charge R). Les valeurs par défaut découlent de la conception de la carte : le routeur est en général précis à quelques pour cent sans étalonnage, qui reste recommandé.
+**Carte universelle** : le facteur de puissance est donné par ampère de calibre de sonde, ``f_powerCal`` = ``f_powerCalPerAmp`` × ``f_ctRating``. Avant d’étalonner, vérifiez que ``f_ctRating`` contient bien le calibre de chacune de vos sondes, en ampères (50 pour une sonde 50 A / 333 mV ; 666 / R pour une sonde à sortie courant avec une résistance de charge R). Les valeurs par défaut découlent de la conception de la carte, corrigée par l’étalonnage d’une première carte : le routeur est en général précis à quelques pour cent sans étalonnage, qui reste recommandé.
 
 **Ancienne carte** : les valeurs se trouvent uniquement par étalonnage ; 0,05 est un bon départ pour ``f_powerCalOldBoard``.
 
