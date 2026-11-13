@@ -25,7 +25,8 @@ on:
 jobs:
   Build:
     name: Build and gh-pages
-    runs-on: ubuntu-latest
+    # weasyprint (PDF) segfaults on ubuntu-26.04, the current ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
 
@@ -72,7 +73,7 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v7
         with:
-          python-version: '3.14'  # weasyprint (PDF) segfaults on Python 3.15
+          python-version: '3.14'
 
       # https://docs.github.com/en/actions/guides/building-and-testing-python#caching-dependencies
       # ^-- How to set up caching for pip on Ubuntu
