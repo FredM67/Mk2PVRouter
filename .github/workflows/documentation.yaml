@@ -2,7 +2,10 @@
 name: Sphinx
 
 on:
+  # Pushes only on the deployed branches; other branches build through their PR
+  # (or by hand, workflow_dispatch), so that a PR does not build everything twice.
   push:
+    branches: [main, legacy]
     paths-ignore:
       - '.gitmodules'
       - '1-phase/**'
@@ -15,6 +18,12 @@ on:
       - '3-phase/**'
       - 'hardware/**'
   workflow_dispatch: {}
+
+# A new push to a PR cancels the run of its previous commit. Deployments
+# (pushes to main and legacy) are never cancelled.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 # If these SPHINXOPTS are enabled, then be strict about the builds and
 # fail on any warnings
