@@ -2,10 +2,10 @@
 name: Sphinx
 
 on:
-  # Pushes only on the deployed branches; other branches build through their PR
-  # (or by hand, workflow_dispatch), so that a PR does not build everything twice.
+  # Every push builds, on any branch. A PR from a branch of this repo shows the
+  # result of that push run; pull_request only builds PRs from forks (see the
+  # Build job), so that a change is never built twice.
   push:
-    branches: [main, legacy]
     paths-ignore:
       - '.gitmodules'
       - '1-phase/**'
@@ -19,11 +19,11 @@ on:
       - 'hardware/**'
   workflow_dispatch: {}
 
-# A new push to a PR cancels the run of its previous commit. Deployments
-# (pushes to main and legacy) are never cancelled.
+# One run at a time per branch (or fork PR): a new push cancels the run of the
+# previous commit. Deployments (main and legacy) are never cancelled.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/legacy' }}
 
 # If these SPHINXOPTS are enabled, then be strict about the builds and
 # fail on any warnings
@@ -34,6 +34,8 @@ concurrency:
 jobs:
   Build:
     name: Build and gh-pages
+    # Same-repo PRs are already built by their push run
+    if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository }}
     # weasyprint (PDF) segfaults on ubuntu-26.04, the current ubuntu-latest
     runs-on: ubuntu-24.04
     permissions:
