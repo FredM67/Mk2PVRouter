@@ -1,5 +1,3 @@
-.. _test-logiciel-requirements:
-
 Pré-requis
 ----------
 
