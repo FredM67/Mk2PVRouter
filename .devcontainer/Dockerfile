@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/python:3.12
+FROM mcr.microsoft.com/devcontainers/python:3.14-trixie
 
 # Install Graphviz and xvfb (needed for headless DrawIO rendering)
 RUN apt-get update \
