@@ -11,3 +11,8 @@ content/img/mainboard-*.png
 content/img/mk2wifi-*.png
 content/img/indicator-*.png
 __pycache__/
+
+# Host CA certificates copied by the devcontainer initializeCommand; the folder
+# itself is kept (.gitkeep) so that the image also builds without it
+.devcontainer/certs/*
+!.devcontainer/certs/.gitkeep
