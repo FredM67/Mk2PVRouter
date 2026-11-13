@@ -32,7 +32,33 @@
 
 .. include:: ../common/etalonnage-intro.inc.rst
 
-En triphasé, chaque phase doit être étalonnée individuellement. Le paramètre à ajuster est ``f_powerCal`` pour chaque phase.
+En triphasé, chaque phase doit être étalonnée individuellement.
+
+Valeurs à ajuster selon la carte
+--------------------------------
+
+Le fichier ``calibration.h`` contient un jeu de valeurs par carte-mère, et le routeur utilise celui de ``PCB_VERSION`` (dans ``config.h``) :
+
+.. list-table::
+   :header-rows: 1
+
+   * - Carte
+     - Puissance (pour le routage)
+     - Tension (pour l’affichage)
+   * - Ancienne carte triphasée (``PcbVersion::OLD``)
+     - ``f_powerCalOldBoard``
+     - ``f_voltageCalOldBoard``
+   * - Carte universelle 3phaseDiverter (``PcbVersion::NEW``)
+     - ``f_powerCalPerAmp``, multipliée par ``f_ctRating``
+     - ``f_voltageCalNewBoard``
+
+Seule la puissance compte pour le routage : la tension (``V1``, ``V2``, ``V3``) n’est qu’affichée.
+
+**Carte universelle** : le facteur de puissance est donné par ampère de calibre de sonde, ``f_powerCal`` = ``f_powerCalPerAmp`` × ``f_ctRating``. Avant d’étalonner, vérifiez que ``f_ctRating`` contient bien le calibre de chacune de vos sondes, en ampères (50 pour une sonde 50 A / 333 mV ; 666 / R pour une sonde à sortie courant avec une résistance de charge R). Les valeurs par défaut découlent de la conception de la carte : le routeur est en général précis à quelques pour cent sans étalonnage, qui reste recommandé.
+
+**Ancienne carte** : les valeurs se trouvent uniquement par étalonnage ; 0,05 est un bon départ pour ``f_powerCalOldBoard``.
+
+Dans la suite de ce chapitre, ``f_powerCal`` désigne la valeur de puissance de votre carte : ``f_powerCalOldBoard`` ou ``f_powerCalPerAmp``. La formule de correction est la même pour les deux.
 
 Méthode avec le compteur de distribution
 -----------------------------------------
@@ -55,6 +81,8 @@ Il est possible également de relever la consommation affichée par le compteur 
 Il faudra alors faire correspondre la puissance affichée par le routeur dans le Moniteur Série de l'Arduino IDE avec celle affichée par le compteur.
 D'où l'intérêt de ne pas avoir d'appareils qui vont se mettre en route sporadiquement (réfrigérateur…).
 
+Pour cela, le routeur doit être en sortie lisible : ``SERIAL_OUTPUT_TYPE`` à ``SerialOutputType::HumanReadable`` dans ``config.h`` (le ``config.h`` fourni est en mode ``IoT``). Le mode étalonnage du :ref:`configurateur <configurateur-triphase>` le fait pour vous.
+
 L'affichage dans le Moniteur Série se présente comme ceci : ::
 
     1797.67, P:-21, P1:368, P2:-113, P3:-276, V1:233.24, V2:233.82, V3:233.84, (minSampleSets/MC 32, #ofSampleSets 8014)
@@ -71,11 +99,22 @@ Si vous étalonnez la phase **L1**, alors **P1** devra afficher la même valeur 
 Comment trouver le bon ``f_powerCal`` du premier coup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Avant de télécharger le sketch d'étalonnage, veillez à définir les valeurs comme ceci :
+Avant de téléverser le firmware, partez de valeurs connues dans ``calibration.h``.
+
+Ancienne carte :
 
 .. code-block:: cpp
 
-   constexpr float f_powerCal[NO_OF_PHASES]{0.05000f, 0.05000f, 0.05000f};
+   inline constexpr float f_powerCalOldBoard[NO_OF_PHASES]{ 0.05000F, 0.05000F, 0.05000F };
+
+Carte universelle, avec les valeurs par défaut et le calibre de vos sondes :
+
+.. code-block:: cpp
+
+   inline constexpr float f_ctRating[NO_OF_PHASES]{ 50.0F, 50.0F, 50.0F };
+   inline constexpr float f_powerCalPerAmp[NO_OF_PHASES]{ 0.00286405F, 0.00286405F, 0.00286405F };
+
+L'exemple ci-dessous part de l'ancienne carte (0,05) ; avec la carte universelle, le calcul est le même à partir de ``f_powerCalPerAmp``.
 
 | Supposons que le compteur affiche **2250**, et que le log du routeur affiche **2000**.
 | On aura alors :
@@ -105,7 +144,7 @@ Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu'au
    | ☐ **f_powerCal trouvé pour CHAQUE phase** (L1, L2, L3)
    | ☐ Valeur de chaque phase synchronisée avec compteur
    | ☐ **Chaque CT marqué** avec son numéro de phase correspondant
-   | ☐ Documentation complète : f_powerCal[0], f_powerCal[1], f_powerCal[2]
+   | ☐ Documentation complète : valeur de puissance de chaque phase (et, carte universelle, calibre de chaque sonde)
    | ☐ Test de vérification sur les 3 phases (somme = puissance totale compteur)
 
 
@@ -168,7 +207,7 @@ Appareils de mesure possibles
      - :math:`P_{routeur}` est la puissance affichée par le routeur.
 
    .. tip::
-      Le :ref:`configurateur <configurateur-triphase>` fait ce calcul pour vous : cochez « Mode étalonnage », chargez votre ``calibration.h`` (ou saisissez ses valeurs) et entrez, pour chaque phase, la puissance du routeur et celle de l’appareil. Il donne les nouvelles valeurs et réécrit votre ``calibration.h`` avec elles.
+      Le :ref:`configurateur <configurateur-triphase>` fait ce calcul pour vous : cochez « Mode étalonnage », chargez votre ``calibration.h`` (ou saisissez ses valeurs, et pour la carte universelle le calibre des sondes) et entrez, pour chaque phase, la puissance du routeur et celle de l’appareil. Il donne les nouvelles valeurs et réécrit votre ``calibration.h`` avec elles.
 
 #. **Validation** :
 

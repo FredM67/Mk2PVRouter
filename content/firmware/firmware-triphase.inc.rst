@@ -71,10 +71,12 @@ Selon votre carte-mère :
 .. warning::
    Les deux cartes ne mesurent pas de la même façon : la carte universelle utilise la référence interne 1,1 V de l’ATmega328P, que le firmware n’active qu’avec `PcbVersion::NEW`. Un mauvais choix donne des mesures fausses. Après un changement, refaire l’étalonnage.
 
+Le `config.h` fourni avec le firmware est réglé pour la carte universelle (`PcbVersion::NEW`) : avec l’ancienne carte, mettre `PcbVersion::OLD`.
+
 Format de Sortie Série
 ######################
 
-Pour débuter, laisser le mode lisible par un humain :
+Le `config.h` fourni est en mode `IoT`, pour le module mk2Wifi. Pour les premiers tests au moniteur série, passer en mode lisible par un humain :
 
 .. code-block:: cpp
 
@@ -83,8 +85,11 @@ Pour débuter, laisser le mode lisible par un humain :
 Options disponibles :
 
 - `HumanReadable` : Affichage facile à lire (recommandé pour débuter)
-- `IoT` : Format compact pour IoT
+- `IoT` : Format compact pour le module mk2Wifi et Home Assistant (9600 bauds, 7E1)
 - `JSON` : Format JSON pour intégration domotique
+
+.. note::
+   Dans tous les modes, le routeur affiche sa configuration au démarrage, pour vérifier avec quels réglages il tourne. En mode `IoT`, il le fait à 9600 bauds 8N1 (le réglage par défaut du moniteur série), puis passe en 7E1 : les caractères illisibles qui suivent dans le moniteur série sont normaux. En mode `JSON`, ces lignes précèdent la première ligne JSON. Les messages d’état en cours de fonctionnement (relais, rotation des priorités, heures creuses…) ne s’affichent qu’en mode `HumanReadable`.
 
 
 Configuration des Sorties Triac
@@ -139,10 +144,24 @@ Puis indiquer la broche du bus *OneWire* (D3 par défaut, qui a déjà sa résis
 Configuration dans `calibration.h`
 """"""""""""""""""""""""""""""""""
 
-Ce fichier contient les paramètres d’étalonnage.
+Ce fichier contient les paramètres d’étalonnage, avec un jeu de valeurs par carte-mère : le routeur utilise celui de `PCB_VERSION`.
+
+.. code-block:: cpp
+
+   // Ancienne carte
+   inline constexpr float f_powerCalOldBoard[NO_OF_PHASES]{ 0.05000F, 0.05000F, 0.05000F };
+   inline constexpr float f_voltageCalOldBoard[NO_OF_PHASES]{ 0.8151F, 0.8184F, 0.8195F };
+   // Carte universelle
+   inline constexpr float f_ctRating[NO_OF_PHASES]{ 50.0F, 50.0F, 50.0F };
+   inline constexpr float f_powerCalPerAmp[NO_OF_PHASES]{ 0.00286405F, 0.00286405F, 0.00286405F };
+   inline constexpr float f_voltageCalNewBoard[NO_OF_PHASES]{ 0.888065256F, 0.888065256F, 0.888065256F };
+
+**Carte universelle** : `f_ctRating` est le calibre (courant nominal) de la sonde de chaque phase, en ampères. Si vos sondes ne sont pas des 50 A / 333 mV, indiquez dès maintenant leur calibre : avec une sonde à sortie courant et une résistance de charge R (par exemple YHDC SCT-013-000), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Avec les valeurs par défaut, le routeur est en général précis à quelques pour cent sans étalonnage.
+
+**Ancienne carte** : si votre routeur était déjà étalonné avec une version précédente du firmware, recopiez vos anciennes valeurs de `f_powerCal` et `f_voltageCal` dans `f_powerCalOldBoard` et `f_voltageCalOldBoard`.
 
 .. warning::
-   Ne modifiez **PAS** ce fichier maintenant — les valeurs seront déterminées lors de l’étalonnage
+   Ne modifiez **PAS** les autres valeurs maintenant — elles seront déterminées lors de l’étalonnage
    (voir chapitre :ref:`etalonnage-triphase`).
 
 Les paramètres par défaut permettent de tester le routeur.

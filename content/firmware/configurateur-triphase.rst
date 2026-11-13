@@ -38,14 +38,14 @@ Il produit ensuite :
 Utilisation
 -----------
 
-#. Ouvrir le configurateur et décrire l’installation, section par section.
+#. Ouvrir le configurateur et décrire l’installation, section par section. Par défaut, il part de la carte universelle 3phaseDiverter avec le module mk2Wifi (sortie série **IoT**) : avec l’ancienne carte triphasée, la choisir en premier.
 #. Consulter les **Vérifications** à droite : corriger les erreurs (en rouge), sans quoi les fichiers ne sont pas générés ; les avertissements (en orange) sont à vérifier, mais ne bloquent rien.
 #. Avec Chrome ou Edge, cliquer sur **« Enregistrer dans le dossier du firmware… »** et choisir le dossier du firmware décompressé (celui qui contient ``Mk2_3phase_RFdatalog_temp`` et ``RemoteLoadReceiver``). Après confirmation, le configurateur y écrit tous les fichiers, à la place de ceux du même nom ; chaque unité distante reçoit son dossier ``RemoteLoadReceiver-unitN``.
 
    Avant d’écrire, il sauvegarde ce qu’il remplace dans ``configurator-backup/<date_heure>``. Si vous passez à moins d’unités distantes, les dossiers des unités en trop y sont déplacés.
 
    Avec un autre navigateur, cliquer sur **« Tout télécharger (ZIP) »**, puis copier les fichiers du routeur dans le dossier ``Mk2_3phase_RFdatalog_temp``, à la place des fichiers du même nom.
-#. **Garder votre** ``calibration.h`` : le configurateur ne le modifie jamais.
+#. **Garder votre** ``calibration.h`` : en dehors du mode étalonnage (voir ci-dessous), le configurateur ne le modifie jamais.
 #. Compiler et téléverser comme d’habitude (voir :ref:`logiciel-triphase`).
 
 .. tip::
@@ -62,8 +62,14 @@ Utilisation
 
 Cochez **« Mode étalonnage »** : le configurateur ne montre plus que ce qui sert à l’étalonnage (les autres réglages sont conservés), et le ``config.h`` généré met le routeur en mode étalonnage, où il mesure sans rien commuter, avec la sortie série lisible (votre choix habituel revient en quittant le mode).
 
-#. Chargez votre ``calibration.h`` avec **« Charger mon calibration.h »**, ou saisissez les valeurs de ``f_powerCal`` (et de ``f_voltageCal``) avec lesquelles tourne le routeur.
-#. Avec une forte charge résistive sur une phase, relevez au même moment la puissance affichée par le routeur (``P1``, ``P2``, ``P3``) et celle d’un appareil de référence pincé sur le même câble, et saisissez-les. La tension (``V1``…) se corrige de la même façon.
+``calibration.h`` contient un jeu de valeurs par carte-mère. Le configurateur ne montre et ne corrige que celles de la carte choisie dans la page :
+
+- **ancienne carte triphasée** : ``f_powerCalOldBoard`` (puissance) et ``f_voltageCalOldBoard`` (tension) ;
+- **carte universelle** : ``f_ctRating`` (calibre des sondes), ``f_powerCalPerAmp`` (puissance, par ampère de calibre) et ``f_voltageCalNewBoard`` (tension).
+
+#. **Carte universelle seulement** : indiquez d’abord le **calibre de la sonde** de chaque phase (``f_ctRating``), en ampères : 50 pour une sonde 50 A / 333 mV. Avec une sonde à sortie courant et une résistance de charge R, comme la YHDC SCT-013-000 (2000:1), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Après un changement de sonde, téléversez avant de faire les relevés.
+#. Chargez votre ``calibration.h`` avec **« Charger mon calibration.h »**, ou saisissez les valeurs de puissance (et de tension) avec lesquelles tourne le routeur. Le fichier doit venir de la même version du firmware : un ``calibration.h`` plus ancien, avec un seul ``f_powerCal``, est refusé.
+#. Avec une forte charge résistive sur une phase, relevez au même moment la puissance affichée par le routeur (``P1``, ``P2``, ``P3``) et celle d’un appareil de référence pincé sur le même câble, et saisissez-les. La tension (``V1``…) se corrige de la même façon, mais elle ne sert qu’à l’affichage : seule la puissance compte pour le routage.
 #. Le configurateur calcule la nouvelle valeur (valeur actuelle × appareil / routeur) et la signale si elle est douteuse : sonde à l’envers, charge trop faible, écart trop grand. Copiez les lignes données, ou enregistrez les fichiers : votre ``calibration.h`` est réécrit avec les nouvelles valeurs, le reste du fichier intact.
 #. Téléversez, puis cliquez sur **« Nouvelles valeurs téléversées : nouvelle mesure »** pour vérifier ou affiner.
 #. Une fois étalonné, décochez **« Mode étalonnage »** et téléversez à nouveau.
@@ -75,6 +81,14 @@ Avec le module mk2Wifi, le configurateur règle la sortie série du routeur en m
 
 - un capteur pour chaque mesure réellement envoyée par le routeur (puissances, tensions, taux de routage de chaque charge, relais, températures, heures creuses…) ;
 - une commande pour chaque entrée du routeur reliée au module (D5 à D9).
+
+Le YAML utilise le composant ``mk2pvrouter`` intégré à ESPHome (version 2026.10.0 et suivantes).
+
+.. note::
+   Pour mettre à jour un YAML écrit pour une version plus ancienne, le plus simple est de le régénérer avec le configurateur. À la main : supprimer le bloc ``external_components``, écrire ``tag:`` au lieu de ``tag_name:`` dans les capteurs, et supprimer ``update_interval`` sous ``mk2pvrouter:``.
+
+.. note::
+   Au démarrage, le routeur affiche sa configuration à 9600 bauds 8N1, puis passe en 7E1 pour les données destinées à Home Assistant. Le module ignore tout ce qui précède la première trame : ces lignes ne le gênent pas.
 
 .. important::
    Les commandes sont **sûres en cas de défaut** : le module ne tire une entrée du routeur à l’état bas que pour l’état non par défaut, et la relâche sinon. Un fil coupé, un pont de soudure ouvert ou un module qui redémarre laissent donc le routeur dans son état normal : routage actif, routeur en marche, pas de marche forcée. À chaque démarrage du module, toutes les commandes reviennent à cet état.
