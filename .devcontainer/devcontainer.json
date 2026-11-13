@@ -6,8 +6,14 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "postCreateCommand": "curl -fsSL https://claude.ai/install.sh | bash && git submodule update --init --depth 1 && pip install --upgrade pip && pip install -U -r requirements.txt && git config --global url.\"https://github.com/\".insteadOf \"git@github.com:\"",
+  "initializeCommand": "mkdir -p .devcontainer/certs && cp /usr/local/share/ca-certificates/*.crt .devcontainer/certs/ 2>/dev/null || true",
+  "postCreateCommand": "curl -fsSL https://claude.ai/install.sh -o /tmp/claude-install.sh && bash /tmp/claude-install.sh && git submodule update --init --depth 1 && pip install --upgrade pip && pip install -U -r requirements.txt && git config --global url.\"https://github.com/\".insteadOf \"git@github.com:\"",
   "postAttachCommand": "gh auth setup-git 2>/dev/null || echo 'Run \"gh auth login\" to enable git push/pull'",
+  "containerEnv": {
+    "NODE_EXTRA_CA_CERTS": "/etc/ssl/certs/ca-certificates.crt",
+    "REQUESTS_CA_BUNDLE": "/etc/ssl/certs/ca-certificates.crt",
+    "PIP_CERT": "/etc/ssl/certs/ca-certificates.crt"
+  },
   "remoteEnv": {
     "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}"
   },

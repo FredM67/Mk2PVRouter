@@ -11,3 +11,6 @@ content/img/mainboard-*.png
 content/img/mk2wifi-*.png
 content/img/indicator-*.png
 __pycache__/
+
+# Host CA certificates copied by the devcontainer initializeCommand
+.devcontainer/certs/

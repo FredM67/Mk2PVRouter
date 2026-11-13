@@ -1,5 +1,10 @@
 FROM mcr.microsoft.com/devcontainers/python:3.14-trixie
 
+# Extra CA certificates of the host (e.g. a company proxy such as Zscaler that
+# intercepts HTTPS), copied into certs/ by initializeCommand. Empty elsewhere.
+COPY certs/ /usr/local/share/ca-certificates/host/
+RUN update-ca-certificates
+
 # Graphviz, xvfb (needed for headless DrawIO rendering), and for the PDF
 # (make simplepdf): the Pango/HarfBuzz libraries of weasyprint and the fonts
 # it uses in CI (DejaVu, Noto Color Emoji for the emojis of the docs)
