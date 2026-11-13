@@ -58,6 +58,12 @@ jobs:
           lfs: true
           submodules: true
 
+      # In the container, the workspace belongs to another user than root, and
+      # git refuses it ("dubious ownership") once the checkout is done; the
+      # build needs git (sphinx_last_updated_by_git), submodules included
+      - name: Trust the workspace for git
+        run: git config --global --add safe.directory '*'
+
       - name: Get drawio latest release version
         id: drawio-version
         run: |
