@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2025-11-29T00:46:52+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tests &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Introduction &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#installation-pilotes-ftdi">Installation Pilotes FTDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/#choix-de-lenvironnement-de-developpement">Choix de l’Environnement de Développement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">1~ Kit monophasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../soudures-mono/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../percages-mono/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../carte-sortie-relais-mono/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../confection-cables-mono/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assemblage-mono/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-mono/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../etalonnage-mono/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">3~ Kit triphasé</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/soudures-tri/">Soudures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/percages-tri/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/carte-sortie-relais-tri/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/confection-cables-tri/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/assemblage-tri/">Assemblage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/test-logiciel-tri/">Tests logiciels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tri/etalonnage-tri/">Étalonnage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">🔧 Guide de Dépannage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-de-base-pour-debutants">Termes de Base pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/#termes-techniques-avances">Termes Techniques Avancés</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tests</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/mono/carte-mere-mono-tests.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tests">
+<span id="carte-mere-mono-tests"></span><h1>Tests<a class="headerlink" href="#tests" title="Lien vers cette rubrique"></a></h1>
+<p>À ce stade, tous les composants ont été soudés sur la carte mère.</p>
+<div class="line-block">
+<div class="line">Avant de passer aux tests, il est crucial d’effectuer une dernière vérification de chaque point de soudure.</div>
+<div class="line">Assurez-vous que toutes les soudures sont propres, sans court-circuit, et que tous les composants sont correctement positionnés, qu’il ne reste pas de morceaux de pattes coupées …</div>
+</div>
+<p>Il est maintenant temps de procéder aux tests pour vérifier que tout fonctionne correctement.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../test-logiciel-mono/">Tests logiciels</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test-logiciel-mono/#pre-requis">Pré-requis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../test-logiciel-mono/#carte-usb-vers-uart">Carte USB vers UART</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test-logiciel-mono/#logiciel-de-programmation">Logiciel de programmation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test-logiciel-mono/#mise-en-place">Mise en place</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../test-logiciel-mono/#installation-du-firmware">Installation du Firmware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../test-logiciel-mono/#installation-de-u8g2">Installation de U8g2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test-logiciel-mono/#etape-1-telechargement-du-firmware">Étape 1 : Téléchargement du Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test-logiciel-mono/#etape-2-configuration-du-firmware">Étape 2 : Configuration du Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test-logiciel-mono/#etape-3-connexion-et-programmation">Étape 3 : Connexion et Programmation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test-logiciel-mono/#etape-4-verification-du-fonctionnement">Étape 4 : Vérification du Fonctionnement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test-logiciel-mono/#prochaines-etapes">Prochaines Étapes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../test-logiciel-mono/#test-de-la-partie-mesures">Test de la partie <em>mesures</em></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 29 novembre 2025.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (stable)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/">latest</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/">legacy (mono/tri)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="../_static/Manuel_1.pdf">PDF1</a></dd>
+        
+          <dd><a href="../_static/Manuel_2.pdf">PDF2</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/main/content/mono/carte-mere-mono-tests.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/main/content/mono/carte-mere-mono-tests.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
