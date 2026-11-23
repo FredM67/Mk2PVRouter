@@ -7,11 +7,12 @@ RUN update-ca-certificates
 
 # Graphviz, xvfb (needed for headless DrawIO rendering), and for the PDF
 # (make simplepdf): the Pango/HarfBuzz libraries of weasyprint and the fonts
-# it uses in CI (DejaVu, Noto Color Emoji for the emojis of the docs)
+# it uses in CI (DejaVu, Noto Color Emoji for the emojis of the docs, Symbola for
+# the symbols the other two lack, such as ⏚ and ⎓)
 RUN apt-get update \
     && apt-get install -y --no-install-recommends graphviz xvfb \
        libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0 \
-       fonts-dejavu-core fonts-noto-color-emoji \
+       fonts-dejavu-core fonts-noto-color-emoji fonts-symbola \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
