@@ -1,16 +1,16 @@
 {# Keep in sync with https://github.com/readthedocs/sphinx_rtd_theme/blob/master/sphinx_rtd_theme/versions.html #}
 {# Add rst-badge after rst-versions for small badge style. #}
-<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="{{ _('Versions') }}">
+<div class="rst-versions" data-current-base="{{ doc_base }}" data-toggle="rst-versions" role="note" aria-label="{{ _('Versions') }}">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Documentation</span>
-      v{{ release }} ({{ "latest" if is_latest else "stable" }})
+      v{{ release }} ({{ doc_version }})
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
       <dl>
         <dt>{{ _('Versions') }}</dt>
         {% for slug, url in versions %}
-          <dd><a href="{{ url }}">{{ slug }}</a></dd>
+          <dd><a href="{{ url }}" data-base="{{ url }}">{{ slug }}</a></dd>
         {% endfor %}
       </dl>
       <dl>

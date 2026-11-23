@@ -18,6 +18,16 @@ To get an overview of the project, read the [README](README.md). Here are some r
 - [Collaborating with pull requests](https://docs.github.com/en/github/collaborating-with-pull-requests)
 
 
+## Which branch for a documentation change
+
+Only `main`, `legacy` and `dev` are published; any other branch is built as a check only.
+
+- Documentation for **unreleased firmware** goes to `dev` (published at `/Mk2PVRouter/branch/dev/`, with the firmware `dev`).
+- **Fixes to the released documentation** go to `main` (published at `/Mk2PVRouter/`).
+- At a **release**, `dev` is merged into `main`.
+
+Open your pull request against the matching branch.
+
 ## Getting started
 
 To navigate our codebase with confidence, see [the introduction to working in the docs repository](/contributing/working-in-docs-repository.md) :confetti_ball:. For more information on how we write our markdown files, see [the GitHub Markdown reference](contributing/content-markup-reference.md).

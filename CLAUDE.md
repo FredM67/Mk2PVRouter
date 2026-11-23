@@ -413,18 +413,21 @@ The documentation has two deployment targets:
 Workflow: `.github/workflows/documentation.yaml`
 
 Triggers on:
-- Push to any branch (except changes to submodules)
-- Pull requests
+- Push to any branch (except changes to `.gitmodules`, `3-phase/` and `hardware/`; a change to `1-phase/` does build)
+- Pull requests from forks (a PR from a branch of this repository is already built by its push run)
 - Manual workflow dispatch
+- A nightly schedule, which builds `dev` with the latest firmware `dev`
 
 Build process:
 1. Installs DrawIO (with caching) for diagram rendering
 2. Installs Graphviz for graph diagrams
 3. Installs Python dependencies from `requirements.txt`
 4. Builds HTML documentation with Sphinx
-5. Deploys to GitHub Pages (on main and legacy branches)
+5. Deploys to GitHub Pages (on `main`, `legacy` and `dev` only; other branches are built as a check)
 
-**Note**: Changes to submodules (`1-phase/`, `3-phase/`, `hardware/`) do NOT trigger documentation builds since they're maintained separately.
+Published versions: stable (`main`) at `/Mk2PVRouter/`, dev at `/Mk2PVRouter/branch/dev/`, legacy at `/Mk2PVRouter/branch/legacy/`. When building `dev`, the `1-phase` and `3-phase` submodules are moved to the firmware `dev` instead of the commits they pin. Dev pages carry a banner.
+
+**Which branch**: documentation for unreleased firmware goes to `dev`; fixes to the released documentation go to `main`; at a release, `dev` is merged into `main`.
 
 #### 2. ReadTheDocs
 
@@ -440,7 +443,7 @@ The documentation has undergone significant improvements:
 - **Universal board restructure**: Replaced separate mono/tri documentation with unified structure for the 3phaseDiverter universal board. Old mono/tri docs preserved on the `legacy` branch.
 - **New sections**: `carte-mere/`, `mk2wifi/`, `firmware/`, `etage-sortie/`, `boitier/` directories with standalone content files.
 - **Build-time asset pipeline**: Hardware renders copied from `hardware/` submodule at build time via `make copy-assets`.
-- **Version selector**: `legacy` branch deployed alongside `main` for users with older mono/tri-specific boards.
+- **Version selector**: `legacy` (older mono/tri-specific boards) and `dev` (unreleased firmware) branches deployed alongside `main`.
 - Build quality improved from 73 warnings → 5 warnings (93% reduction)
 - Added 16 verification checkpoints across assembly guides
 - Created comprehensive safety chapter (684 lines)

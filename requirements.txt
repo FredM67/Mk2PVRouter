@@ -12,3 +12,4 @@ sphinx-new-tab-link
 sphinx-last-updated-by-git
 sphinx-multiversion
 tzdata
+pytest
