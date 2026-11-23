@@ -173,7 +173,7 @@ Termes de Base pour Débutants
      | - La tension du réseau électrique (230 V)
      | - Le courant consommé/produit (A)
      | - La puissance (W)
-     | Sans étalonnage, les mesures sont fausses et le routeur ne fonctionne pas correctement.
+     | En triphasé, l’étalonnage est obligatoire (voir :ref:`etalonnage-triphase`). En monophasé, il n’est pas nécessaire pour dévier vers les triacs, mais il donne des valeurs réalistes et sert à tous les réglages en watts (voir :ref:`etalonnage-monophase`).
 
    Routeur solaire
      | Appareil qui **redirige automatiquement** l’excédent de production photovoltaïque vers des charges (chauffe-eau, radiateur) au lieu de l’injecter sur le réseau.

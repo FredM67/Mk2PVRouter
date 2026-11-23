@@ -25,7 +25,7 @@ Voici les étapes principales du fonctionnement du Mk2PVRouter :
 
 #. **Étalonnage et précision** :
 
-   - Pour garantir une gestion optimale, le routeur doit être étalonné en fonction des caractéristiques spécifiques de l’installation électrique (voir :ref:`etalonnage-monophase` ou :ref:`etalonnage-triphase`).
+   - En triphasé, le routeur doit être étalonné (voir :ref:`etalonnage-triphase`) : il additionne les trois phases, et une seule phase mal mesurée fausse la somme. En monophasé, l’étalonnage n’est pas nécessaire pour dévier vers les triacs, mais il donne des valeurs réalistes et sert à tous les réglages en watts (voir :ref:`etalonnage-monophase`).
 
 #. **Avantages** :
 

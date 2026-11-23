@@ -139,7 +139,7 @@ Puis indiquer la broche du bus *OneWire* (D3 par défaut, qui a déjà sa résis
                                                              { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x02 } } };  // Sonde 2
 
 .. note::
-   Le firmware ne recherche pas les sondes : relevez leurs adresses avec un programme de scan *OneWire* (exemples de l’Arduino IDE ou sur Internet). Collez une étiquette avec l’adresse sur le câble de chaque sonde.
+   Le firmware ne recherche pas les sondes en fonctionnement normal : en mode étalonnage, il les liste au démarrage sur le moniteur série ; sinon, relevez leurs adresses avec un programme de scan *OneWire* (exemples de l’Arduino IDE ou sur Internet). Collez une étiquette avec l’adresse sur le câble de chaque sonde.
 
 Configuration dans `calibration.h`
 """"""""""""""""""""""""""""""""""

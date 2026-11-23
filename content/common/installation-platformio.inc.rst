@@ -116,7 +116,7 @@ Ouverture du Projet
 #. Dans **PIO Home**, cliquer sur **« Open Project »**
 #. Naviguer vers le dossier du firmware :
 
-   - Mono : `PVRouter-1-phase-main/Mk2_fasterControl_Full/`
+   - Mono : `PVRouter-1-phase-dev/Mk2_1phase_RFdatalog_temp/`
    - Tri : `PVRouter-3-phase-main/Mk2_3phase_RFdatalog_temp/`
 
 #. PlatformIO détecte automatiquement le fichier `platformio.ini`
