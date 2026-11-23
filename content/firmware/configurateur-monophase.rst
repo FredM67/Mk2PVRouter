@@ -60,15 +60,29 @@ Utilisation
 Étalonnage
 ----------
 
-Cochez **« Mode étalonnage »** : le ``config.h`` généré met le routeur en mode étalonnage, où il mesure sans rien commuter, avec la sortie série lisible. Le configurateur ne montre et ne corrige que les valeurs de la carte choisie :
+Cochez **« Mode étalonnage »** : le routeur mesure sans rien commuter, avec la sortie série lisible. La page ne montre plus que ce qui sert à l’étalonnage, les autres sections sont masquées et leurs réglages conservés. Le ``config.h`` généré met le routeur en mode étalonnage, et votre choix habituel revient en décochant le mode.
+
+``calibration.h`` contient un jeu de valeurs par carte. Le configurateur ne montre et ne corrige que celles de la carte choisie dans la page :
 
 - **anciennes cartes** : ``f_powerCalOldBoard`` (puissance réseau), ``f_powerCalDivertedOldBoard`` (puissance routée, CT2) et ``f_voltageCalOldBoard`` (tension) ;
 - **carte universelle** : ``f_ctRating`` et ``f_ctRatingDiverted`` (calibres des sondes CT1 et CT2), ``f_powerCalPerAmp`` (puissance, par ampère de calibre) et ``f_voltageCalNewBoard`` (tension).
 
-#. Chargez votre ``calibration.h`` avec **« Charger mon calibration.h »**, ou saisissez les valeurs avec lesquelles tourne le routeur.
-#. Avec une forte charge résistive, relevez au même moment la puissance réseau affichée par le routeur (``P``) et celle d’un appareil de référence pincé sur le même câble, et saisissez-les ; de même pour la tension (``V``).
-#. Avec CT2, relevez aussi la puissance routée (``diverted``, en W) avec l’appareil pincé sur le câble de CT2. Le mode étalonnage ne commute jamais de charge : il faut une charge résistive câblée à travers CT2 et mise en marche autrement. Sur la carte universelle, ce relevé corrige ``f_ctRatingDiverted``.
-#. Le configurateur calcule les nouvelles valeurs (valeur actuelle × appareil / routeur). Copiez les lignes données, ou enregistrez les fichiers : votre ``calibration.h`` est réécrit avec les nouvelles valeurs, le reste du fichier intact.
-#. Une fois étalonné, décochez **« Mode étalonnage »** et téléversez à nouveau.
+À l’écran :
 
-Voir aussi :ref:`etalonnage-monophase`.
+- **« Charger mon calibration.h »** (facultatif) : la page réécrit votre fichier avec les nouvelles valeurs, le reste du fichier intact. Sans lui, saisissez les valeurs actuelles et copiez les lignes données. Le fichier doit venir de la même version du firmware : s’il manque des valeurs, il est refusé.
+- **Calibre de CT1** (carte universelle seulement) : le courant nominal de CT1, en A. Le calibre de CT2 vient avec la puissance routée.
+- **Puissance réseau** : la valeur actuelle, les relevés **Routeur (W)** et **Appareil (W)** (``P`` sur le moniteur série), et la **Nouvelle valeur** calculée (valeur actuelle × appareil / routeur).
+- **Tension** (facultative, pour le journal seulement) : de même, avec ``V``.
+- **Puissance routée** (avec CT2) : de même, avec ``diverted`` (la puissance en W, pas l’énergie en Wh). Sur la carte universelle, la valeur actuelle est le calibre de CT2 (``f_ctRatingDiverted``), en A, et la nouvelle valeur tient compte de la correction réseau que prend ``f_powerCalPerAmp``. Le mode étalonnage ne commute jamais de charge : ce relevé demande une charge résistive câblée à travers CT2 et mise en marche autrement.
+- **Pour calibration.h** : les lignes à copier dans le fichier.
+- **Fichiers pour le routeur** : le ``config.h`` (à téléverser en premier) et votre ``calibration.h`` avec les nouvelles valeurs.
+- **« Nouvelles valeurs téléversées : nouvelle mesure »** : les nouvelles valeurs deviennent les valeurs actuelles et les relevés sont effacés, pour vérifier ou affiner.
+
+Une valeur laissée vide garde sa valeur actuelle. Dans les **Vérifications**, la page signale, pour chaque relevé :
+
+- une puissance négative sur le routeur : sa sonde est montée à l’envers ;
+- des relevés qui ne sont pas positifs, une valeur actuelle manquante, un calibre de sonde qui n’est pas positif ;
+- une puissance sous 300 W : la correction est imprécise ;
+- une correction suspecte (inférieure à ×0,5 ou supérieure à ×2) : vérifiez le câblage, et que les deux relevés portent sur le même câble, au même moment.
+
+La marche à suivre, pas à pas : :ref:`etalonnage-monophase`

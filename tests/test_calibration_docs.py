@@ -1,6 +1,8 @@
 import re
 from pathlib import Path
 
+import pytest
+
 CONTENT = Path(__file__).resolve().parent.parent / 'content'
 
 TRI = 'firmware/etalonnage-triphase.rst'
@@ -136,3 +138,19 @@ def test_mono_is_single_phase():
 def test_mono_linky_is_apparent_power():
     body = section_body(read(MONO), 'Ce qu’il vous faut')
     assert 'Linky' in body and 'VA' in body
+
+
+def _etalonnage_section(path: str) -> str:
+    """Text of the '-' section called « Étalonnage » of a configurator page."""
+    return section_body(read(path), 'Étalonnage')
+
+
+@pytest.mark.parametrize('page,label', [
+    ('firmware/configurateur-triphase.rst', 'etalonnage-triphase'),
+    ('firmware/configurateur-monophase.rst', 'etalonnage-monophase'),
+])
+def test_configurator_calibration_points_to_page(page, label):
+    body = _etalonnage_section(page)
+    assert body.strip(), page
+    assert f':ref:`{label}`' in body, page
+    assert not re.search(r'^\s*(?:#\.|\d+\.)\s', body, flags=re.M), page

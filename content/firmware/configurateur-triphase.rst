@@ -60,19 +60,30 @@ Utilisation
 Étalonnage
 ----------
 
-Cochez **« Mode étalonnage »** : le configurateur ne montre plus que ce qui sert à l’étalonnage (les autres réglages sont conservés), et le ``config.h`` généré met le routeur en mode étalonnage, où il mesure sans rien commuter, avec la sortie série lisible (votre choix habituel revient en quittant le mode).
+Cochez **« Mode étalonnage »** : le routeur mesure sans rien commuter, avec la sortie série lisible. La page ne montre plus que ce qui sert à l’étalonnage, les autres sections sont masquées et leurs réglages conservés. Le ``config.h`` généré met le routeur en mode étalonnage, et votre choix habituel revient en décochant le mode.
 
 ``calibration.h`` contient un jeu de valeurs par carte-mère. Le configurateur ne montre et ne corrige que celles de la carte choisie dans la page :
 
 - **ancienne carte triphasée** : ``f_powerCalOldBoard`` (puissance) et ``f_voltageCalOldBoard`` (tension) ;
 - **carte universelle** : ``f_ctRating`` (calibre des sondes), ``f_powerCalPerAmp`` (puissance, par ampère de calibre) et ``f_voltageCalNewBoard`` (tension).
 
-#. Chargez votre ``calibration.h`` avec **« Charger mon calibration.h »**, ou saisissez les valeurs de puissance (et de tension) avec lesquelles tourne le routeur. Le fichier doit venir de la même version du firmware : un ``calibration.h`` plus ancien, avec un seul ``f_powerCal``, est refusé.
-#. **Carte universelle seulement** : vérifiez ensuite le **calibre de la sonde** de chaque phase (``f_ctRating``) (repris de votre fichier s’il est chargé), en ampères : 50 pour une sonde 50 A / 333 mV. Avec une sonde à sortie courant et une résistance de charge R, comme la YHDC SCT-013-000 (2000:1), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Si vous le changez, téléversez avant de faire les relevés.
-#. Avec une forte charge résistive sur une phase, relevez au même moment la puissance affichée par le routeur (``P1``, ``P2``, ``P3``) et celle d’un appareil de référence pincé sur le même câble, et saisissez-les. La tension (``V1``…) se corrige de la même façon, mais elle ne sert qu’à l’affichage : seule la puissance compte pour le routage.
-#. Le configurateur calcule la nouvelle valeur (valeur actuelle × appareil / routeur) et la signale si elle est douteuse : sonde à l’envers, charge trop faible, écart trop grand. Copiez les lignes données, ou enregistrez les fichiers : votre ``calibration.h`` est réécrit avec les nouvelles valeurs, le reste du fichier intact.
-#. Téléversez, puis cliquez sur **« Nouvelles valeurs téléversées : nouvelle mesure »** pour vérifier ou affiner.
-#. Une fois étalonné, décochez **« Mode étalonnage »** et téléversez à nouveau.
+À l’écran :
+
+- **« Charger mon calibration.h »** (facultatif) : la page réécrit votre fichier avec les nouvelles valeurs, le reste du fichier intact. Sans lui, saisissez les valeurs actuelles et copiez les lignes données. Le fichier doit venir de la même version du firmware : un ``calibration.h`` plus ancien, avec un seul ``f_powerCal``, est refusé.
+- **Calibre des sondes** (carte universelle seulement) : le courant nominal de la sonde de chaque phase, en A, repris de votre fichier s’il est chargé.
+- **Puissance** et **Tension** : pour chaque phase, la valeur actuelle, les relevés **Routeur (W)** et **Appareil (W)** (ou **(V)** pour la tension), et la **Nouvelle valeur** calculée (valeur actuelle × appareil / routeur). Une phase laissée vide garde sa valeur. La tension est facultative : elle ne sert qu’à l’affichage.
+- **Pour calibration.h** : les lignes à copier dans le fichier.
+- **Fichiers pour le routeur** : le ``config.h`` (à téléverser en premier) et votre ``calibration.h`` avec les nouvelles valeurs.
+- **« Nouvelles valeurs téléversées : nouvelle mesure »** : les nouvelles valeurs deviennent les valeurs actuelles et les relevés sont effacés, pour vérifier ou affiner.
+
+Dans les **Vérifications**, la page signale, phase par phase :
+
+- une puissance négative sur le routeur : sa sonde est montée à l’envers, ou n’est pas sur la phase de son entrée tension ;
+- des relevés qui ne sont pas positifs, une valeur actuelle manquante, un calibre de sonde qui n’est pas positif ;
+- une charge sous 300 W : la correction est imprécise ;
+- une correction suspecte (inférieure à ×0,5 ou supérieure à ×2) : vérifiez le câblage, et que les deux relevés portent sur la même phase, au même moment.
+
+La marche à suivre, pas à pas : :ref:`etalonnage-triphase`
 
 Module mk2Wifi
 --------------
