@@ -8,22 +8,27 @@ on:
   push:
     paths-ignore:
       - '.gitmodules'
-      - '1-phase/**'
       - '3-phase/**'
       - 'hardware/**'
   pull_request:
     paths-ignore:
       - '.gitmodules'
-      - '1-phase/**'
       - '3-phase/**'
       - 'hardware/**'
   workflow_dispatch: {}
+  # Every night, the dev version is rebuilt, to pick up the firmware dev
+  # (a submodule, which does not trigger a build by itself). GITHUB_REF is the
+  # default branch (main) on a schedule: the dev branch is named explicitly.
+  schedule:
+    - cron: '17 3 * * *'
 
 # One run at a time per branch (or fork PR): a new push cancels the run of the
-# previous commit. Deployments (main and legacy) are never cancelled.
+# previous commit. Deployments (main, legacy and dev) are never cancelled. The
+# scheduled run has its own group: it builds dev, and must not replace a queued
+# run of main.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
-  cancel-in-progress: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/legacy' }}
+  group: ${{ github.workflow }}-${{ github.event_name == 'schedule' && 'schedule-dev' || github.head_ref || github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/legacy' && github.ref != 'refs/heads/dev' }}
 
 # If these SPHINXOPTS are enabled, then be strict about the builds and
 # fail on any warnings
@@ -42,6 +47,9 @@ jobs:
     container: python:3.14-trixie
     permissions:
       contents: write
+    outputs:
+      # The branch built: dev for a schedule, the pushed branch otherwise
+      branch: ${{ steps.branch.outputs.branch }}
 
     steps:
       # git-lfs is not in the image, and the checkout below needs it
@@ -54,6 +62,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
         with:
+          # A schedule runs on the default branch: build dev instead (the run
+          # fails here if dev does not exist yet, nothing is deployed)
+          ref: ${{ github.event_name == 'schedule' && 'dev' || '' }}
           fetch-depth: 0
           lfs: true
           submodules: true
@@ -63,6 +74,32 @@ jobs:
       # build needs git (sphinx_last_updated_by_git), submodules included
       - name: Trust the workspace for git
         run: git config --global --add safe.directory '*'
+
+      # The branch built, computed once: GITHUB_REF is main on a schedule
+      - name: Get the branch built
+        id: branch
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          REF: ${{ github.ref }}
+        run: |
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            brname=dev
+          else
+            brname="${REF##refs/heads/}"
+          fi
+          echo "branch=$brname" >> $GITHUB_OUTPUT
+          echo "Branch built: $brname"
+
+      # The dev documentation describes the dev firmware, not the one pinned by
+      # the submodules (the checkout above gives the commits recorded in them)
+      - name: Pull the firmware dev
+        if: ${{ github.ref == 'refs/heads/dev' || github.event_name == 'schedule' }}
+        run: |
+          for sub in 1-phase 3-phase; do
+            git -C $sub fetch origin dev
+            git -C $sub checkout FETCH_HEAD
+            git -C $sub log --oneline -1
+          done
 
       - name: Get drawio latest release version
         id: drawio-version
@@ -130,11 +167,16 @@ jobs:
 
       # Build
       - uses: sphinx-doc/github-problem-matcher@master
+      # conf.py reads the branch from GITHUB_REF
       - name: Build Sphinx documentation
+        env:
+          GITHUB_REF: ${{ github.event_name == 'schedule' && 'refs/heads/dev' || github.ref }}
         run: |
           make dirhtml
 
       - name: Generate PDF
+        env:
+          GITHUB_REF: ${{ github.event_name == 'schedule' && 'refs/heads/dev' || github.ref }}
         run: |
           make simplepdf
           mkdir -p _build/dirhtml/_static
@@ -153,6 +195,12 @@ jobs:
     name: Update gh-pages
     runs-on: ubuntu-latest
     needs: [Build]
+    # One deployment at a time, queued, never cancelled
+    concurrency:
+      group: gh-pages
+      cancel-in-progress: false
+    env:
+      BRANCH: ${{ needs.Build.outputs.branch }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -166,7 +214,7 @@ jobs:
 
       # https://github.com/marketplace/actions/checkout
       - name: Clone old gh-pages
-        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' }}
         run: |
           set -x
           git fetch
@@ -176,7 +224,7 @@ jobs:
       # If a push and main, copy build to _gh-pages/ as the "main"
       # deployment.
       - name: Copy new build (main)
-        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && env.BRANCH == 'main' }}
         run: |
           set -x
           # Delete everything under _gh-pages/ that is from the
@@ -185,22 +233,20 @@ jobs:
           # _gh-pages itself.
           find _gh-pages/ -mindepth 1 ! -path '_gh-pages/branch*' -delete
           rsync -a _build/dirhtml/ _gh-pages/
-      # If a push and not on main, then copy the build to
-      # _gh-pages/branch/$brname (transforming '/' into '--')
+      # If a push (or the nightly dev build) and not on main, then copy the
+      # build to _gh-pages/branch/$brname (transforming '/' into '--')
       - name: Copy new build (branch)
-        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref != 'refs/heads/main' }}
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule') && env.BRANCH != 'main' }}
         run: |
           set -x
-          #brname=$(git rev-parse --abbrev-ref HEAD)
-          brname="${{github.ref}}"
-          brname="${brname##refs/heads/}"
+          brname="$BRANCH"
           brdir=${brname//\//--}   # replace '/' with '--'
           rm -rf   _gh-pages/branch/${brdir}
           rsync -a _build/dirhtml/ _gh-pages/branch/${brdir}
       # Go through each branch in _gh-pages/branch/, if it's not a
       # ref, then delete it.
       - name: Delete old feature branches
-        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' }}
         run: |
           set -x
           for brdir in `ls _gh-pages/branch/` ; do
@@ -220,8 +266,12 @@ jobs:
   # https://github.com/peaceiris/actions-gh-pages                    
   Deploy:
     runs-on: ubuntu-latest
-    needs: [Update_gh-pages]
-    if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/legacy' }}
+    needs: [Build, Update_gh-pages]
+    # The branch built, not github.ref (main on a schedule, which builds dev)
+    if: ${{ contains(fromJSON('["main", "legacy", "dev"]'), needs.Build.outputs.branch) && github.event_name != 'pull_request' }}
+    concurrency:
+      group: gh-pages
+      cancel-in-progress: false
     steps:
       - uses: actions/download-artifact@v8
         with:
@@ -230,7 +280,7 @@ jobs:
           
       - name: Deploy gh-pages
         uses: peaceiris/actions-gh-pages@v4
-        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' }}
         #if: ${{ success() && github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: gh-pages
