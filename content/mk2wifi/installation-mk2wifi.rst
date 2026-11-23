@@ -60,6 +60,9 @@ Le premier chargement du firmware se fait obligatoirement via le connecteur USB-
 
    Débranchez le module de la carte principale avant de connecter le câble USB-C.
 
+.. tip::
+   Pour le routeur triphasé, le :ref:`configurateur <configurateur-triphase>` génère le YAML ESPHome du module, cohérent avec le ``config.h`` du routeur, et indique les ponts de soudure à fermer.
+
 Procédure
 ~~~~~~~~~
 

@@ -17,10 +17,11 @@ Après extraction, vous devriez avoir :
    Mk2_3phase_RFdatalog_temp/
    ├── Mk2_3phase_RFdatalog_temp.ino  (fichier principal)
    ├── config.h                     (configuration utilisateur)
+   ├── config_system.h              (fréquence du réseau, période d’envoi des données)
+   ├── config_rf.h                  (liaison radio, si elle est utilisée)
    ├── calibration.h                (paramètres d’étalonnage)
-   ├── dualtarif.h
+   ├── dualtariff.h
    ├── processing.cpp
-   ├── temperature.cpp
    ├── utils_temp.h
    └── ... (autres fichiers)
 
@@ -33,6 +34,9 @@ Après extraction, vous devriez avoir :
 
 Étape 2 : Configuration du Firmware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. tip::
+   Le :ref:`configurateur <configurateur-triphase>` écrit ``config.h`` (et, avec le module mk2Wifi, le YAML ESPHome) à partir d’une description de votre installation, en vérifiant vos choix. Il suffit ensuite de remplacer les fichiers et de garder votre ``calibration.h``.
 
 Ouverture du Projet
 """""""""""""""""""
@@ -51,26 +55,28 @@ Configuration dans `config.h`
 
 Cliquer sur l’onglet **`config.h`** pour le modifier.
 
-Version du PCB
-##############
+Carte-mère
+##########
 
-Selon la version de votre PCB :
+Selon votre carte-mère :
 
 .. code-block:: cpp
 
-   // Ancienne version de PCB (avant 2023)
-   inline constexpr bool OLD_PCB{ true };
+   // Ancienne carte triphasée
+   inline constexpr PcbVersion PCB_VERSION{ PcbVersion::OLD };
 
-   // Nouvelle version de PCB (2023+)
-   inline constexpr bool OLD_PCB{ false };
+   // Carte universelle 3phaseDiverter (rév. 6.0 et suivantes)
+   inline constexpr PcbVersion PCB_VERSION{ PcbVersion::NEW };
 
-.. tip::
-   Si vous avez reçu votre kit après 2 023, mettez `false`.
+.. warning::
+   Les deux cartes ne mesurent pas de la même façon : la carte universelle utilise la référence interne 1,1 V de l’ATmega328P, que le firmware n’active qu’avec `PcbVersion::NEW`. Un mauvais choix donne des mesures fausses. Après un changement, refaire l’étalonnage.
+
+Le `config.h` fourni avec le firmware est réglé pour la carte universelle (`PcbVersion::NEW`) : avec l’ancienne carte, mettre `PcbVersion::OLD`.
 
 Format de Sortie Série
 ######################
 
-Pour débuter, laisser le mode lisible par un humain :
+Le `config.h` fourni est en mode `IoT`, pour le module mk2Wifi. Pour les premiers tests au moniteur série, passer en mode lisible par un humain :
 
 .. code-block:: cpp
 
@@ -79,24 +85,30 @@ Pour débuter, laisser le mode lisible par un humain :
 Options disponibles :
 
 - `HumanReadable` : Affichage facile à lire (recommandé pour débuter)
-- `IoT` : Format compact pour IoT
+- `IoT` : Format compact pour le module mk2Wifi et Home Assistant (9600 bauds, 7E1)
 - `JSON` : Format JSON pour intégration domotique
+
+.. note::
+   Dans tous les modes, le routeur affiche sa configuration au démarrage, pour vérifier avec quels réglages il tourne. En mode `IoT`, il le fait à 9600 bauds 8N1 (le réglage par défaut du moniteur série), puis passe en 7E1 : les caractères illisibles qui suivent dans le moniteur série sont normaux. En mode `JSON`, ces lignes précèdent la première ligne JSON. Les messages d’état en cours de fonctionnement (relais, rotation des priorités, heures creuses…) ne s’affichent qu’en mode `HumanReadable`.
 
 
 Configuration des Sorties Triac
 ###############################
 
-Définir le nombre de sorties et leurs broches :
+Définir le nombre de sorties et la broche de chacune :
 
 .. code-block:: cpp
 
    // Exemple : 2 sorties triac
    inline constexpr uint8_t NO_OF_DUMPLOADS{ 2 };
 
-   inline constexpr IoPinMapping physicalPin_dump_load[NO_OF_DUMPLOADS]{
-     { 5, DivertorConfig(NORMAL) },    // Sortie 1 sur broche D5
-     { 4, DivertorConfig(NORMAL) },    // Sortie 2 sur broche D4
+   inline constexpr uint8_t physicalLoadPin[NO_OF_DUMPLOADS]{
+     Load::local(5),  // Sortie 1 sur la broche D5
+     Load::local(6)   // Sortie 2 sur la broche D6
    };
+
+.. note::
+   Une charge pilotée par radio par une unité distante s’écrit `Load::remote(1)` (unité 1, de 1 à 3) au lieu de `Load::local(…)`.
 
 Ordre de Démarrage
 ##################
@@ -105,40 +117,51 @@ Définir la priorité des charges :
 
 .. code-block:: cpp
 
-   inline constexpr uint8_t dumpLoad_startup_sequence[NO_OF_DUMPLOADS]{ 0, 1 };
+   inline constexpr uint8_t loadPrioritiesAtStartup[NO_OF_DUMPLOADS]{ 0, 1 };
 
 Signification : Démarrer d’abord la sortie 0, puis la sortie 1.
 
 Sondes de Température (Optionnel)
 #################################
 
-Si vous utilisez des sondes DS18B20, décommenter la ligne :
+Si vous utilisez des sondes DS18B20, activer la mesure :
 
 .. code-block:: cpp
 
-   #define TEMP_ENABLED
+   inline constexpr bool TEMP_SENSOR_PRESENT{ true };
 
-Et configurer les adresses des sondes :
+Puis indiquer la broche du bus *OneWire* (D3 par défaut, qui a déjà sa résistance de *pull-up*) et les adresses des sondes :
 
 .. code-block:: cpp
 
-   inline constexpr DeviceAddress sensor_list[3]
-   {
-     { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x01 },  // Sonde 1
-     { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x02 },  // Sonde 2
-     { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x03 },  // Sonde 3
-   };
+   inline constexpr TemperatureSensing temperatureSensing{ 3,
+                                                           { { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x01 },     // Sonde 1
+                                                             { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x02 } } };  // Sonde 2
 
 .. note::
-   Les adresses des sondes seront trouvées lors du premier lancement (voir Moniteur Série).
+   Le firmware ne recherche pas les sondes : relevez leurs adresses avec un programme de scan *OneWire* (exemples de l’Arduino IDE ou sur Internet). Collez une étiquette avec l’adresse sur le câble de chaque sonde.
 
 Configuration dans `calibration.h`
 """"""""""""""""""""""""""""""""""
 
-Ce fichier contient les paramètres d’étalonnage.
+Ce fichier contient les paramètres d’étalonnage, avec un jeu de valeurs par carte-mère : le routeur utilise celui de `PCB_VERSION`.
+
+.. code-block:: cpp
+
+   // Ancienne carte
+   inline constexpr float f_powerCalOldBoard[NO_OF_PHASES]{ 0.05000F, 0.05000F, 0.05000F };
+   inline constexpr float f_voltageCalOldBoard[NO_OF_PHASES]{ 0.8151F, 0.8184F, 0.8195F };
+   // Carte universelle
+   inline constexpr float f_ctRating[NO_OF_PHASES]{ 50.0F, 50.0F, 50.0F };
+   inline constexpr float f_powerCalPerAmp[NO_OF_PHASES]{ 0.00286405F, 0.00286405F, 0.00286405F };
+   inline constexpr float f_voltageCalNewBoard[NO_OF_PHASES]{ 0.888065256F, 0.888065256F, 0.888065256F };
+
+**Carte universelle** : `f_ctRating` est le calibre (courant nominal) de la sonde de chaque phase, en ampères. Si vos sondes ne sont pas des 50 A / 333 mV, indiquez dès maintenant leur calibre : avec une sonde à sortie courant et une résistance de charge R (par exemple YHDC SCT-013-000), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Avec les valeurs par défaut, le routeur est en général précis à quelques pour cent sans étalonnage.
+
+**Ancienne carte** : si votre routeur était déjà étalonné avec une version précédente du firmware, recopiez vos anciennes valeurs de `f_powerCal` et `f_voltageCal` dans `f_powerCalOldBoard` et `f_voltageCalOldBoard`.
 
 .. warning::
-   Ne modifiez **PAS** ce fichier maintenant — les valeurs seront déterminées lors de l’étalonnage
+   Ne modifiez **PAS** les autres valeurs maintenant — elles seront déterminées lors de l’étalonnage
    (voir chapitre :ref:`etalonnage-triphase`).
 
 Les paramètres par défaut permettent de tester le routeur.
