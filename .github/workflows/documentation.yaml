@@ -183,10 +183,11 @@ jobs:
             git -C $sub log --oneline -1
           done
 
-      # The image has requirements.txt installed: this only adds what a change
-      # of it brings, before the image is rebuilt (a fork PR, for instance)
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
+      # The image has requirements.txt installed. A fork PR runs on the latest
+      # image, which may predate its requirements.txt: only then add what it brings
+      - name: Install Python dependencies (fork PR on the latest image)
+        if: ${{ endsWith(needs.Image.outputs.image, ':latest') }}
+        run: pip install --root-user-action=ignore --no-cache-dir -r requirements.txt
 
       - name: Debugging information
         run: |
@@ -204,7 +205,7 @@ jobs:
 
       - name: List installed python packages
         run: |
-          pip list
+          pip --no-cache-dir list
 
       # Build
       - uses: sphinx-doc/github-problem-matcher@master
