@@ -3,6 +3,8 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import os
+import subprocess
 import sys
 from pathlib import Path
 
@@ -17,7 +19,25 @@ copyright = '2026, ENERGIE ROUTER & F. Metrich (aka github:FredM67)'
 author = 'ENERGIE ROUTER & F. Metrich (aka github:FredM67)'
 github_user = "FredM67"
 github_repo_name = "Mk2PVRouter"  # auto-detected from dirname if blank
-github_version = "main"
+
+# The branch being built: GITHUB_REF in CI, else the checked-out branch, else unknown.
+def _build_branch():
+    ref = os.environ.get('GITHUB_REF', '')
+    if ref.startswith('refs/heads/'):
+        return ref[len('refs/heads/'):]
+    try:
+        out = subprocess.run(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], cwd=Path(__file__).parent,
+                             capture_output=True, text=True, check=True).stdout.strip()
+        return out or None
+    except (OSError, subprocess.CalledProcessError):
+        return None
+
+
+sys.path.insert(0, str(Path(__file__).parent))
+from doc_version import describe  # noqa: E402
+
+_doc = describe(_build_branch())
+github_version = _doc['branch']
 conf_py_path = "/content/" # with leading and trailing slash
 
 # -- General configuration ---------------------------------------------------
@@ -158,12 +178,12 @@ html_context = {
     "github_repo": github_repo_name or basename(dirname(realpath(__file__))),
     "github_version": github_version,
     "conf_py_path": conf_py_path,
-    "versions": [
-        ("latest", "/Mk2PVRouter/"),
-        ("legacy (mono/tri)", "/Mk2PVRouter/branch/legacy/"),
-    ],
+    "doc_version": _doc['name'],
+    "doc_base": _doc['base'],
+    "doc_is_stable": _doc['is_stable'],
+    "versions": _doc['versions'],
     "downloads": [
-        ("PDF", "/Mk2PVRouter/_static/Mk2PVRouter.pdf"),
+        ("PDF", _doc['base'] + "_static/Mk2PVRouter.pdf"),
     ],
 }
 
@@ -172,8 +192,7 @@ html_js_files = [
     'clickable-images.js',
 ]
 
-import os
-if os.environ.get('GITHUB_REF', '') == 'refs/heads/'+github_version:
+if os.environ.get('GITHUB_REF', '') == 'refs/heads/main':
     html_js_files.append(
         ('https://plausible.cs.aalto.fi/js/script.js', {"data-domain": "fredm67.github.io", "defer": "defer"}),
     )
