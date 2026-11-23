@@ -314,16 +314,34 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
 
    Où :math:`I_{secondaire\_RMS} = I_{primaire\_RMS} / N` (N = rapport de transformation du CT).
 
-   **Exemple** : CT de 100 A / 50 mA (N = 2000), courant max souhaité = 50 A :
+   **Puissance** : la résistance dissipe :math:`P = I_{secondaire\_RMS}^2 \times R_{burden}`. Faites le calcul avec le courant secondaire **nominal** du CT : c’est le pire cas.
 
-   .. math::
+   **Précision** : prenez une résistance à couche métallique à 1 %. Avec 5 %, la mesure est fausse d’autant, et seul l’étalonnage le rattrape.
 
-      I_{sec} = \frac{50}{2000} = 25\,\text{mA RMS} \quad \Rightarrow \quad R_{burden} = \frac{1{,}1 \times 2000}{2 \times \sqrt{2} \times 50} \approx 15{,}6\,\Omega
+   **Exemple complet** : le CT le plus courant, le YHDC SCT-013-000 (100 A / 50 mA), sur un câble de 50 A au maximum.
 
-   On choisira la valeur standard la plus proche **inférieure** (15 Ω) pour garder une marge de sécurité.
+   #. Rapport de transformation : :math:`N = 100 / 0{,}05 = 2000`.
+   #. Courant secondaire à 50 A : :math:`I_{sec} = 50 / 2000 = 25\,\text{mA RMS}`.
+   #. Burden : :math:`R_{burden} = \frac{1{,}1 \times 2000}{2 \times \sqrt{2} \times 50} \approx 15{,}6\,\Omega`. La valeur normalisée immédiatement inférieure est **15 Ω**.
+   #. Vérification : à 50 A, la tension crête vaut :math:`0{,}025 \times \sqrt{2} \times 15 \approx 0{,}53\,\text{V}`, sous la limite de 0,55 V. Avec 15 Ω, le courant mesurable va jusqu’à 51,9 A environ.
+   #. Puissance : à 50 A, :math:`0{,}025^2 \times 15 \approx 9\,\text{mW}` ; au courant nominal du CT (100 A, 50 mA), :math:`0{,}05^2 \times 15 \approx 38\,\text{mW}`. Une résistance de **0,25 W** suffit largement (l’emplacement, au pas de 12,7 mm, accepte aussi une 0,5 W).
 
-   .. warning::
-      Si le courant mesuré dépasse la valeur prévue, la tension aux bornes du burden dépassera la plage de l’ADC. Les diodes TVS protègent l’entrée du microcontrôleur, mais ne limitent pas le courant dans le burden — la résistance peut surchauffer.
+   Retenez la limite de ce choix : si le courant dépassait nettement 50 A, la tension crête dépasserait 0,55 V (1,06 V à 100 A). D’où la règle : dimensionner le burden pour le courant **maximal** du câble.
+
+   .. danger::
+      **Un burden mal choisi peut détruire l’entrée ADC.**
+
+      Un CT à sortie courant impose son courant : c’est la résistance de burden qui fixe la tension envoyée vers l’ATmega328P (:math:`V = R_{burden} \times I_{secondaire}`).
+
+      - **Valeur trop forte**, ou courant plus fort que prévu : la tension crête dépasse 0,55 V. Le signal est d’abord écrêté (mesures fausses), puis l’entrée de l’ATmega328P est poussée hors de ses limites. La diode :term:`TVS` limite la surtension, mais le microcontrôleur peut quand même être endommagé.
+      - **Pas de burden** : le secondaire du CT est presque ouvert et sa tension monte très haut. La TVS n’est pas faite pour absorber ce courant en permanence : elle peut griller, l’entrée ADC avec elle, et la tension est dangereuse au toucher.
+
+      Pour l’éviter :
+
+      - calculez le burden pour le courant **maximal** du câble mesuré (le calibre du disjoncteur qui le protège), pas pour le courant habituel ;
+      - prenez la valeur normalisée immédiatement **inférieure**, jamais supérieure ;
+      - vérifiez la résistance à l’ohmmètre avant de la souder (les anneaux de couleur se confondent facilement) ;
+      - soudez le burden **avant** de brancher le CT ; branchez le CT sur la carte avant de le refermer sur le câble, et ouvrez-le avant de le débrancher.
 
 .. raw:: html
 
