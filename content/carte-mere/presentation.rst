@@ -314,17 +314,19 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
 
    Où :math:`I_{secondaire\_RMS} = I_{primaire\_RMS} / N` (N = rapport de transformation du CT).
 
-   **Exemple** : CT de 100 A / 50 mA (N = 2000), courant max souhaité = 50 A :
+   **Puissance** : la résistance dissipe :math:`P = I_{secondaire\_RMS}^2 \times R_{burden}`. Faites le calcul avec le courant secondaire **nominal** du CT : c’est le pire cas.
 
-   .. math::
+   **Précision** : prenez une résistance à couche métallique à 1 %. Avec 5 %, la mesure est fausse d’autant, et seul l’étalonnage le rattrape.
 
-      I_{sec} = \frac{50}{2000} = 25\,\text{mA RMS} \quad \Rightarrow \quad R_{burden} = \frac{1{,}1 \times 2000}{2 \times \sqrt{2} \times 50} \approx 15{,}6\,\Omega
+   **Exemple complet** : le CT le plus courant, le YHDC SCT-013-000 (100 A / 50 mA), sur un câble de 50 A au maximum.
 
-   On choisira la valeur standard la plus proche **inférieure** (15 Ω) pour garder une marge de sécurité.
+   #. Rapport de transformation : :math:`N = 100 / 0{,}05 = 2000`.
+   #. Courant secondaire à 50 A : :math:`I_{sec} = 50 / 2000 = 25\,\text{mA RMS}`.
+   #. Burden : :math:`R_{burden} = \frac{1{,}1 \times 2000}{2 \times \sqrt{2} \times 50} \approx 15{,}6\,\Omega`. La valeur normalisée immédiatement inférieure est **15 Ω**.
+   #. Vérification : à 50 A, la tension crête vaut :math:`0{,}025 \times \sqrt{2} \times 15 \approx 0{,}53\,\text{V}`, sous la limite de 0,55 V. Avec 15 Ω, le courant mesurable va jusqu’à 51,9 A environ.
+   #. Puissance : à 50 A, :math:`0{,}025^2 \times 15 \approx 9\,\text{mW}` ; au courant nominal du CT (100 A, 50 mA), :math:`0{,}05^2 \times 15 \approx 38\,\text{mW}`. Une résistance de **0,25 W** suffit largement (l’emplacement, au pas de 12,7 mm, accepte aussi une 0,5 W).
 
-   **Puissance** : la résistance dissipe :math:`P = I_{secondaire\_RMS}^2 \times R_{burden}`. Calculez-la avec le courant secondaire **nominal** du CT, le pire cas : pour un CT 100 A / 50 mA et 15 Ω, :math:`0{,}05^2 \times 15 \approx 0{,}04\,\text{W}`. Une résistance à couche métallique de 0,25 W suffit donc largement ; l’emplacement (pas de 12,7 mm) accepte aussi une 0,5 W.
-
-   La précision compte davantage : prenez une résistance à 1 %. Avec 5 %, la mesure est fausse d’autant, et seul l’étalonnage le rattrape.
+   Retenez la limite de ce choix : si le courant dépassait nettement 50 A, la tension crête dépasserait 0,55 V (1,06 V à 100 A). D’où la règle : dimensionner le burden pour le courant **maximal** du câble.
 
    .. danger::
       **Un burden mal choisi peut détruire l’entrée ADC.**
