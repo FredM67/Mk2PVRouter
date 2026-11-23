@@ -62,28 +62,51 @@ jobs:
             requirements.txt
           sparse-checkout-cone-mode: false
 
-      - name: Get or build the image
+      # The registry API says whether the tag exists: no docker login for
+      # that, only when the image has to be built
+      - name: Is the image already built?
         id: image
         env:
           FORK_PR: ${{ github.event_name == 'pull_request' }}
           ACTOR: ${{ github.actor }}
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          name="ghcr.io/${GITHUB_REPOSITORY,,}-docs"
+          repo="${GITHUB_REPOSITORY,,}-docs"
           key=$(cat .github/docs-image/Dockerfile requirements.txt | sha256sum | cut -c1-16)
           tag="$(date -u +%Y%m)-$key"
-          echo "$TOKEN" | docker login ghcr.io -u "$ACTOR" --password-stdin
-          if docker manifest inspect "$name:$tag" > /dev/null 2>&1; then
-            echo "Image $name:$tag already built"
+          registry_token=$(curl -fsS -u "$ACTOR:$TOKEN" "https://ghcr.io/token?scope=repository:$repo:pull" | jq -r .token)
+          if curl -fsS -o /dev/null -H "Authorization: Bearer $registry_token"               -H "Accept: application/vnd.oci.image.index.v1+json, application/vnd.oci.image.manifest.v1+json, application/vnd.docker.distribution.manifest.v2+json"               "https://ghcr.io/v2/$repo/manifests/$tag"; then
+            echo "Image ghcr.io/$repo:$tag already built"
+            build=false
           elif [ "$FORK_PR" = "true" ]; then
-            echo "A fork PR cannot push $name:$tag: the latest image is used"
+            echo "A fork PR cannot push ghcr.io/$repo:$tag: the latest image is used"
             tag=latest
+            build=false
           else
-            docker build -f .github/docs-image/Dockerfile -t "$name:$tag" -t "$name:latest" .
-            docker push "$name:$tag"
-            docker push "$name:latest"
+            echo "Image ghcr.io/$repo:$tag to build"
+            build=true
           fi
-          echo "image=$name:$tag" >> "$GITHUB_OUTPUT"
+          echo "name=ghcr.io/$repo" >> "$GITHUB_OUTPUT"
+          echo "image=ghcr.io/$repo:$tag" >> "$GITHUB_OUTPUT"
+          echo "build=$build" >> "$GITHUB_OUTPUT"
+
+      - name: Log in to GHCR
+        if: ${{ steps.image.outputs.build == 'true' }}
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push the image
+        if: ${{ steps.image.outputs.build == 'true' }}
+        env:
+          IMAGE: ${{ steps.image.outputs.image }}
+          NAME: ${{ steps.image.outputs.name }}
+        run: |
+          docker build -f .github/docs-image/Dockerfile -t "$IMAGE" -t "$NAME:latest" .
+          docker push "$IMAGE"
+          docker push "$NAME:latest"
 
   Build:
     name: Build and gh-pages
