@@ -3,6 +3,7 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import json
 import os
 import subprocess
 import sys
@@ -240,22 +241,30 @@ simplepdf_weasyprint_flags = ['-s', os.path.join(os.path.dirname(__file__), '_st
 # the submodule: the online version always matches the documented firmware.
 import shutil
 
-configurator_dir = os.path.join(os.path.dirname(__file__), '..', '3-phase', 'configurator')
+# Each firmware repository brings its own configurator: (source folder, folder on the site)
+configurators = [
+    (os.path.join(os.path.dirname(__file__), '..', '3-phase', 'configurator'), 'configurateur'),
+    (os.path.join(os.path.dirname(__file__), '..', '1-phase', 'configurator'), 'configurateur-monophase'),
+]
 
 
 def copy_configurator(app, exception):
     if exception or app.builder.format != 'html':
         return
-    if not os.path.isfile(os.path.join(configurator_dir, 'index.html')):
-        from sphinx.util import logging
-        logging.getLogger(__name__).warning('configurator not found in %s (submodule too old?)', configurator_dir)
-        return
-    target = os.path.join(app.outdir, 'configurateur')
-    os.makedirs(target, exist_ok=True)
-    for name in os.listdir(configurator_dir):
-        # the page only: the tests, presets and scripts stay in the firmware repository
-        if name.endswith(('.html', '.css', '.js')):
-            shutil.copy2(os.path.join(configurator_dir, name), target)
+    for source, folder in configurators:
+        if not os.path.isfile(os.path.join(source, 'index.html')):
+            from sphinx.util import logging
+            logging.getLogger(__name__).warning('configurator not found in %s (submodule too old?)', source)
+            continue
+        target = os.path.join(app.outdir, folder)
+        os.makedirs(target, exist_ok=True)
+        for name in os.listdir(source):
+            # the page only: the tests, presets and scripts stay in the firmware repository
+            if name.endswith(('.html', '.css', '.js')):
+                shutil.copy2(os.path.join(source, name), target)
+        # the version of the site being built: the page tags its title with it on dev
+        with open(os.path.join(target, 'doc-version.js'), 'w', encoding='utf-8') as f:
+            f.write('window.PVR_DOC_VERSION = %s;\n' % json.dumps(_doc['name']))
 
 
 def setup(app):

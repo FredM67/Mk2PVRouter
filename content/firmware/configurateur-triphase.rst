@@ -6,10 +6,10 @@ Configurateur du firmware — Triphasé
 
 Le **configurateur** écrit pour vous les fichiers de configuration du firmware triphasé ``Mk2_3phase_RFdatalog_temp``, à partir d’une simple description de votre installation.
 
-👉 **Ouvrir le configurateur :** `https://fredm67.github.io/Mk2PVRouter/configurateur/ <https://fredm67.github.io/Mk2PVRouter/configurateur/>`_
+👉 **Ouvrir le configurateur :** `configurateur triphasé <../../configurateur/>`_
 
 .. note::
-   Le configurateur ne concerne que le firmware **triphasé** (`PVRouter-3-phase <https://github.com/FredM67/PVRouter-3-phase>`_). Il correspond toujours à la version du firmware décrite dans cette documentation.
+   Le configurateur ne concerne que le firmware **triphasé** (`PVRouter-3-phase <https://github.com/FredM67/PVRouter-3-phase>`_). Pour le routeur monophasé, voir le :ref:`configurateur monophasé <configurateur-monophase>` ; en haut de chaque page, « Routeur : monophasé / triphasé » mène de l’un à l’autre. Il correspond toujours à la version du firmware décrite dans cette documentation.
 
 .. contents:: Sommaire
     :local:
