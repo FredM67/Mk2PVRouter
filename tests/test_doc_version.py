@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'content'))
 
-from doc_version import describe  # noqa: E402
+from doc_version import describe, detect_branch  # noqa: E402
 
 STABLE = '/Mk2PVRouter/'
 DEV = '/Mk2PVRouter/branch/dev/'
@@ -39,3 +39,18 @@ def test_unknown_branch_is_stable():
 
 def test_versions_list():
     assert describe('feat/x')['versions'] == [('stable', STABLE), ('dev', DEV), ('legacy', LEGACY)]
+
+
+def test_detect_branch_doc_branch_wins_over_github_ref():
+    env = {'DOC_BRANCH': 'dev', 'GITHUB_REF': 'refs/heads/main'}
+    assert detect_branch(env, lambda: 'x') == 'dev'
+
+
+def test_detect_branch_github_ref():
+    assert detect_branch({'GITHUB_REF': 'refs/heads/feat/x'}, lambda: 'x') == 'feat/x'
+
+
+def test_detect_branch_empty_doc_branch_and_pull_request_use_fallback():
+    env = {'DOC_BRANCH': '', 'GITHUB_REF': 'refs/pull/1/merge'}
+    assert detect_branch(env, lambda: 'HEAD') == 'HEAD'
+    assert detect_branch({}) is None

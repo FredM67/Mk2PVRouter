@@ -443,7 +443,7 @@ The documentation has undergone significant improvements:
 - **Universal board restructure**: Replaced separate mono/tri documentation with unified structure for the 3phaseDiverter universal board. Old mono/tri docs preserved on the `legacy` branch.
 - **New sections**: `carte-mere/`, `mk2wifi/`, `firmware/`, `etage-sortie/`, `boitier/` directories with standalone content files.
 - **Build-time asset pipeline**: Hardware renders copied from `hardware/` submodule at build time via `make copy-assets`.
-- **Version selector**: `legacy` and `dev` branches deployed alongside `main` for users with older mono/tri-specific boards.
+- **Version selector**: `legacy` (older mono/tri-specific boards) and `dev` (unreleased firmware) branches deployed alongside `main`.
 - Build quality improved from 73 warnings → 5 warnings (93% reduction)
 - Added 16 verification checkpoints across assembly guides
 - Created comprehensive safety chapter (684 lines)

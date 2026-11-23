@@ -162,22 +162,26 @@ jobs:
           git branch -a
           git remote -v
 
+      - name: Run the tests
+        run: python -m pytest tests -q
+
       - name: List installed python packages
         run: |
           pip list
 
       # Build
       - uses: sphinx-doc/github-problem-matcher@master
-      # conf.py reads the branch from GITHUB_REF
+      # conf.py reads the branch from DOC_BRANCH: GITHUB_* variables cannot be
+      # overridden in a workflow. Empty for a fork PR (built as stable).
       - name: Build Sphinx documentation
         env:
-          GITHUB_REF: ${{ github.event_name == 'pull_request' && github.ref || format('refs/heads/{0}', steps.branch.outputs.branch) }}
+          DOC_BRANCH: ${{ github.event_name != 'pull_request' && steps.branch.outputs.branch || '' }}
         run: |
           make dirhtml
 
       - name: Generate PDF
         env:
-          GITHUB_REF: ${{ github.event_name == 'pull_request' && github.ref || format('refs/heads/{0}', steps.branch.outputs.branch) }}
+          DOC_BRANCH: ${{ github.event_name != 'pull_request' && steps.branch.outputs.branch || '' }}
         run: |
           make simplepdf
           mkdir -p _build/dirhtml/_static

@@ -20,11 +20,8 @@ author = 'ENERGIE ROUTER & F. Metrich (aka github:FredM67)'
 github_user = "FredM67"
 github_repo_name = "Mk2PVRouter"  # auto-detected from dirname if blank
 
-# The branch being built: GITHUB_REF in CI, else the checked-out branch, else unknown.
-def _build_branch():
-    ref = os.environ.get('GITHUB_REF', '')
-    if ref.startswith('refs/heads/'):
-        return ref[len('refs/heads/'):]
+# The branch being built: DOC_BRANCH or GITHUB_REF in CI, else the checked-out branch.
+def _git_branch():
     try:
         out = subprocess.run(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], cwd=Path(__file__).parent,
                              capture_output=True, text=True, check=True).stdout.strip()
@@ -34,9 +31,9 @@ def _build_branch():
 
 
 sys.path.insert(0, str(Path(__file__).parent))
-from doc_version import describe  # noqa: E402
+from doc_version import describe, detect_branch  # noqa: E402
 
-_doc = describe(_build_branch())
+_doc = describe(detect_branch(os.environ, _git_branch))
 github_version = _doc['branch']
 conf_py_path = "/content/" # with leading and trailing slash
 
@@ -197,7 +194,8 @@ html_css_files = [
     'version-banner.css',
 ]
 
-if os.environ.get('GITHUB_REF', '') == 'refs/heads/main':
+# Analytics: the main branch built in CI only (not a local build on main)
+if _doc['branch'] == 'main' and os.environ.get('GITHUB_ACTIONS') == 'true':
     html_js_files.append(
         ('https://plausible.cs.aalto.fi/js/script.js', {"data-domain": "fredm67.github.io", "defer": "defer"}),
     )
