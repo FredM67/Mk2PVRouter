@@ -111,3 +111,28 @@ def test_mono_no_old_firmware():
     text = read(MONO)
     for s in ('cal_CT1_v_meter', 'cal_CT2_v_CT1', 'powerCal_grid', 'powerCal_diverted', 'Mk2_fasterControl_Full'):
         assert s not in text, s
+
+
+def test_calibration_pages_have_only_the_four_sections():
+    for page in (TRI, MONO):
+        assert section_order(read(page)) == TITLES, page
+
+
+def test_calibration_pages_do_not_include_a_shared_intro():
+    for page in (TRI, MONO):
+        assert 'etalonnage-intro' not in read(page), page
+
+
+def test_tri_does_not_say_calibration_is_unneeded():
+    text = read(TRI)
+    assert 'sans nécessiter' not in text
+    assert 'obligatoire' in text
+
+
+def test_mono_is_single_phase():
+    assert 'chaque phase' not in read(MONO)
+
+
+def test_mono_linky_is_apparent_power():
+    body = section_body(read(MONO), 'Ce qu’il vous faut')
+    assert 'Linky' in body and 'VA' in body

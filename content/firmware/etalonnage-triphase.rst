@@ -33,13 +33,18 @@
 Ce qu’il vous faut
 ------------------
 
+.. danger::
+   **ALERTE SÉCURITÉ**
+
+   Installer les pinces et l’appareil de référence demande de modifier le câblage électrique. Avant toute manipulation, coupez l’alimentation au tableau et vérifiez l’absence effective de tension avec un testeur. Dans le doute, coupez le disjoncteur principal.
+
 * **Une lecture de référence par phase**, prise en même temps que celle du routeur : un wattmètre enfichable ou une pince wattmétrique sur le câble de la phase.
 * **L’affichage du Linky**, si vous n’avez rien d’autre : il donne la puissance **totale**, des trois phases. Il ne sert donc de référence qu’avec **une seule charge, sur une seule phase**, et toutes les autres consommations de la maison éteintes. Dès qu’il y a une autre consommation, prenez un appareil qui mesure une phase à la fois.
 * **Une forte charge résistive** (chauffe-eau, radiateur, bouilloire) : au moins 300 W, car en dessous la correction est imprécise. Un appareil purement résistif, sans ventilateur ni électronique, simplifie grandement l’étalonnage.
+* **Une consommation constante pendant l’étalonnage** : branchez la charge résistive et débranchez tout le reste, y compris votre ou vos systèmes de production d’électricité.
+* **Les pinces installées sur la phase correspondante**, par rapport à l’alimentation du routeur : la pince de la phase **L1** sur la phase branchée au connecteur **L1** du routeur, et ainsi de suite.
 * **Le** :ref:`configurateur <configurateur-triphase>`, qui fait le calcul pour vous et réécrit votre ``calibration.h``.
 * Votre ``calibration.h`` (celui du dossier du firmware), si vous l’avez déjà modifié : le configurateur peut le charger.
-
-.. include:: ../common/etalonnage-intro.inc.rst
 
 Étalonner avec le configurateur
 -------------------------------

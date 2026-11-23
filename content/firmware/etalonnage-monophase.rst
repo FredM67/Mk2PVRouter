@@ -39,13 +39,12 @@ Ce qu’il vous faut
 
    Tout travail sur le câblage (passer le câble d’une charge à travers CT2, brancher ou débrancher une charge) se fait **disjoncteur coupé au tableau**, après avoir vérifié l’absence de tension avec un testeur. Dans le doute, coupez le disjoncteur principal.
 
-* **Une lecture de référence au point de raccordement**, prise en même temps que celle du routeur : une pince wattmétrique autour du même câble que CT1, ou l’affichage du Linky (sa puissance instantanée). Avec le Linky, éteignez les autres consommations de la maison : il donne la puissance totale.
+* **Une lecture de référence au point de raccordement**, prise en même temps que celle du routeur : une pince wattmétrique autour du même câble que CT1, ou l’affichage du Linky (sa puissance instantanée). Le Linky affiche une puissance apparente (en VA), avec un rafraîchissement lent : avec une charge purement résistive, VA et W sont égaux, à condition d’éteindre toutes les autres consommations de la maison (il donne la puissance totale).
 * **Une forte charge résistive** (chauffe-eau, radiateur, bouilloire) : au moins 300 W, car en dessous la correction est imprécise. Un appareil purement résistif, sans ventilateur ni électronique, simplifie grandement l’étalonnage.
+* **Une consommation constante pendant l’étalonnage** : branchez la charge résistive et débranchez tout le reste, y compris votre ou vos systèmes de production d’électricité.
 * **Le** :ref:`configurateur <configurateur-monophase>`, qui fait le calcul pour vous et réécrit votre ``calibration.h``.
 * Votre ``calibration.h`` (celui du dossier du firmware), si vous l’avez déjà modifié : le configurateur peut le charger.
 * **Si le routeur a une sonde CT2** (énergie routée) et que vous voulez l’étalonner : une charge résistive dont le câble passe **à travers CT2**, par exemple un câble d’extension modifié entre une prise et la charge (un seul des conducteurs traverse la sonde). Le mode étalonnage ne commute jamais de charge : cette charge doit fonctionner par d’autres moyens, branchée directement ou mise en marche à la main.
-
-.. include:: ../common/etalonnage-intro.inc.rst
 
 Étalonner avec le configurateur
 -------------------------------
@@ -86,15 +85,15 @@ Pas à pas
 
 #. Ouvrez le :ref:`configurateur <configurateur-monophase>`, choisissez votre **carte-mère**, puis cochez **« Mode étalonnage »**. La page ne montre plus que ce qui sert à l’étalonnage (vos autres réglages sont conservés).
 #. Chargez votre ``calibration.h`` avec **« Charger mon calibration.h »**, ou saisissez les valeurs avec lesquelles tourne le routeur. Le fichier doit venir de la même version du firmware : s’il manque des valeurs (``f_powerCalOldBoard``, ``f_powerCalDivertedOldBoard``, ``f_voltageCalOldBoard``, ``f_ctRating``, ``f_ctRatingDiverted``, ``f_powerCalPerAmp``, ``f_voltageCalNewBoard``), il est refusé.
-#. **Carte universelle seulement** : vérifiez le **calibre de CT1** (``f_ctRating``), en ampères : 50 pour une sonde 50 A / 333 mV. Avec une sonde à sortie courant et une résistance de charge R, comme la YHDC SCT-013-000 (2000:1), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Si vous le changez, téléversez avant de faire les relevés. Le calibre de CT2 (``f_ctRatingDiverted``) vient avec la puissance routée, plus bas.
-#. Téléversez sur le routeur le ``config.h`` généré par le configurateur : il met le routeur en mode étalonnage, avec la sortie série lisible. Si vous avez chargé votre ``calibration.h``, téléversez-le aussi, il contient les valeurs de départ.
-#. Mettez la forte charge résistive en marche sur l’installation (un chauffe-eau, sans production solaire), et ouvrez le moniteur série de l’Arduino IDE à 9600 bauds. Toutes les 5 secondes, le routeur y affiche :
+#. **Carte universelle seulement** : vérifiez le **calibre de CT1** (``f_ctRating``), en ampères : 50 pour une sonde 50 A / 333 mV. Avec une sonde à sortie courant et une résistance de charge R, comme la YHDC SCT-013-000 (2000:1), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Le calibre de CT2 (``f_ctRatingDiverted``) vient avec la puissance routée, plus bas.
+#. Téléversez sur le routeur le ``config.h`` généré par le configurateur (avec, sur la carte universelle, le calibre de CT1 si vous l’avez changé) : il met le routeur en mode étalonnage, avec la sortie série lisible. Si vous avez chargé votre ``calibration.h``, téléversez-le aussi, il contient les valeurs de départ.
+#. Mettez la forte charge résistive en marche sur l’installation (un chauffe-eau, sans production solaire), et ouvrez le moniteur série à 9600 bauds. Toutes les 5 secondes, le routeur y affiche :
 
    * ``P`` : la puissance au point de raccordement, en W, positive en import (le premier nombre après ``P:``) ;
    * ``V`` : la tension, en V (le nombre après ``V:``) ;
    * ``diverted`` (avec CT2 seulement) : la puissance routée en W, suivie de l’énergie en Wh (``diverted <W> W, <Wh> Wh``). C’est la puissance en W qui sert à l’étalonnage, pas l’énergie.
 
-#. Relevez **au même moment** la puissance du routeur (``P``) et celle de l’appareil de référence, pincé sur le même câble que CT1, et saisissez les deux dans **« Puissance réseau »** (colonnes **Routeur (W)** et **Appareil (W)**). La tension (``V``) se corrige de la même façon, mais elle ne sert qu’à l’affichage : son champ est facultatif.
+#. Relevez **au même moment** la puissance du routeur (``P``) et celle de l’appareil de référence (pince sur le même câble que CT1, ou affichage du Linky), et saisissez les deux dans **« Puissance réseau »** (colonnes **Routeur (W)** et **Appareil (W)**). La tension (``V``) se corrige de la même façon, mais elle ne sert qu’à l’affichage : son champ est facultatif.
 #. **Avec CT2, si vous voulez l’étalonner** : arrêtez la charge, et faites passer son câble à travers CT2 (disjoncteur coupé : voir l’alerte plus haut). Remettez le courant et mettez la charge en marche par un autre moyen que le routeur. Pincez l’appareil de référence sur ce même câble, relevez **au même moment** ``diverted`` (la puissance en W) et la référence, et saisissez-les dans **« Puissance routée »**. Sur les anciennes cartes, cela corrige ``f_powerCalDivertedOldBoard`` ; sur la carte universelle, la valeur actuelle est le calibre de CT2 (``f_ctRatingDiverted``), en A, et la nouvelle valeur tient compte de la correction de CT1 que prend ``f_powerCalPerAmp``.
 #. Le configurateur calcule les nouvelles valeurs (valeur actuelle × appareil / routeur) et signale ce qui est douteux : puissance négative (sonde à l’envers), charge sous 300 W, écart trop grand. Si l’un de ces signalements apparaît, corrigez la cause avant de continuer.
 #. Copiez les lignes données (**« Pour calibration.h »**), ou enregistrez les fichiers : votre ``calibration.h`` est réécrit avec les nouvelles valeurs, le reste du fichier intact. Remplacez-le dans le dossier du firmware et téléversez.
