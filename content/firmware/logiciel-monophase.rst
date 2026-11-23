@@ -35,7 +35,7 @@ Test de la partie *mesures*
 | Le transformateur ZMPT101K (TR1) fournit le signal de mesure de tension CA.
 | Cela peut être vérifié en exécutant un programme (croquis) qui affiche les mesures analogiques prises par le processeur Atmel (**IC1**).
 
-Le programme est *RawSamplesTool_2chan.ino* : il se trouve dans le dossier `dev/RawSamplesTool_2chan/` du dépôt `PVRouter-1-phase <https://github.com/FredM67/PVRouter-1-phase>`_ et se téléverse seul, sans le firmware du routeur.
+Le programme est *RawSamplesTool_2chan.ino* : il se trouve dans le dossier ``dev/RawSamplesTool_2chan/`` du dépôt `PVRouter-1-phase <https://github.com/FredM67/PVRouter-1-phase>`_ et se téléverse seul, sans le firmware du routeur.
 
 .. note::
    Le programme lit la tension sur A3, **CT1** sur A5 et **CT2** sur A4, les entrées de la carte Mk2 de Robin Emley (`OLD_SEG`). Sur les autres cartes (tension A0, **CT1** A1, **CT2** A3), changer les trois numéros de broche en tête du programme.
@@ -64,7 +64,7 @@ Prochaines Étapes
 
 #. **Étalonnage** : Voir chapitre :ref:`etalonnage-monophase`
 
-   L’étalonnage est recommandé : il donne des valeurs réalistes, et il devient nécessaire dès que des relais déroutent le surplus, car leurs seuils sont en watts.
+   L’étalonnage est recommandé : il donne des valeurs réalistes, et il devient nécessaire dès que des relais routent le surplus, car leurs seuils sont en watts.
 
 #. **Installation finale** : Connexion au réseau électrique (faire appel à un électricien qualifié)
 

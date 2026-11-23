@@ -71,7 +71,7 @@ def test_tri_configurator_before_formula():
 def test_tri_linky_is_total():
     body = section_body(read(TRI), 'Ce qu’il vous faut')
     assert 'Linky' in body
-    assert 'une seule phase' in body or 'une phase' in body
+    assert 'une seule phase' in body or 'une seule charge' in body
 
 
 def test_shared_intro_no_contradiction():
@@ -232,3 +232,52 @@ def test_glossary_does_not_say_uncalibrated_router_fails():
 
 def test_logiciel_triphase_has_no_telechargements_page():
     assert not re.search(r'page\s+T[ée]l[ée]chargements', read('firmware/logiciel-triphase.rst'))
+
+
+# Final whole-branch review fixes.
+BOTH = (MONO, TRI)
+INC_MONO = 'firmware/firmware-monophase.inc.rst'
+
+
+@pytest.mark.parametrize('path', BOTH)
+def test_load_runs_without_the_router(path):
+    body = section_body(read(path), 'Ce qu’il vous faut')
+    assert 'sans passer par le routeur' in body
+    assert body.index('bouilloire') < body.index('chauffe-eau')
+
+
+@pytest.mark.parametrize('path', BOTH)
+def test_ct_rating_goes_in_calibration_h(path):
+    text = read(path)
+    assert 'Un calibre se change dans ``calibration.h``' in text
+    assert 'le calibre de CT1 si vous l’avez changé' not in text
+    assert 'téléversez-le aussi' not in text
+
+
+def test_mono_download_from_dev_branch():
+    assert 'PVRouter-1-phase-dev' in read(INC_MONO)
+    assert 'PVRouter-1-phase-main' not in read(INC_MONO)
+    assert 'PVRouter-1-phase-main' not in read('common/installation-platformio.inc.rst')
+
+
+def test_tri_linky_apparent_power():
+    body = section_body(read(TRI), 'Ce qu’il vous faut')
+    assert 'VA' in body
+
+
+def test_mono_danger_box_cabling_only():
+    box = re.search(r'\.\. danger::.*?(?=^\S)', read(MONO), flags=re.M | re.S).group(0)
+    assert 'brancher ou débrancher' not in box
+
+
+def test_tri_no_arduino_ide_serial_monitor():
+    assert 'moniteur série de l’Arduino IDE' not in read(TRI)
+    assert "Moniteur Série de l'Arduino IDE" not in read(TRI)
+
+
+def test_tri_manual_method_has_calibration_mode():
+    assert 'CALIBRATION_MODE' in read(TRI)
+
+
+def test_serial_include_lists_sensors_in_calibration_mode():
+    assert 'mode étalonnage' in read('common/moniteur-serie.inc.rst')

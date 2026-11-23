@@ -19,7 +19,7 @@
    | ☐ Firmware installé et fonctionnel (voir :ref:`logiciel-triphase`)
    | ☐ Routeur alimenté par le secteur
    | ☐ Un appareil de référence : wattmètre, pince wattmétrique ou affichage du Linky
-   | ☐ Une forte charge résistive (chauffe-eau, radiateur)
+   | ☐ Une forte charge résistive (bouilloire, radiateur, chauffe-eau), qui fonctionne sans passer par le routeur
 
 .. important::
    L’étalonnage est **obligatoire** en triphasé. Le routeur calcule la somme algébrique des puissances instantanées des trois phases : une seule phase mal mesurée fausse la somme, donc le routage de l’énergie excédentaire.
@@ -39,8 +39,8 @@ Ce qu’il vous faut
    Installer les pinces et l’appareil de référence demande de modifier le câblage électrique. Avant toute manipulation, coupez l’alimentation au tableau et vérifiez l’absence effective de tension avec un testeur. Dans le doute, coupez le disjoncteur principal.
 
 * **Une lecture de référence par phase**, prise en même temps que celle du routeur : un wattmètre enfichable ou une pince wattmétrique sur le câble de la phase.
-* **L’affichage du Linky**, si vous n’avez rien d’autre : il donne la puissance **totale**, des trois phases. Il ne sert donc de référence qu’avec **une seule charge, sur une seule phase**, et toutes les autres consommations de la maison éteintes. Dès qu’il y a une autre consommation, prenez un appareil qui mesure une phase à la fois.
-* **Une forte charge résistive** (chauffe-eau, radiateur, bouilloire) : au moins 300 W, car en dessous la correction est imprécise. Un appareil purement résistif, sans ventilateur ni électronique, simplifie grandement l’étalonnage.
+* **L’affichage du Linky**, si vous n’avez rien d’autre : il donne la puissance **totale**, des trois phases, en puissance apparente (VA), avec un rafraîchissement lent ; VA et W ne sont égaux qu’avec une charge purement résistive. Il ne sert donc de référence qu’avec **une seule charge, sur une seule phase**, et toutes les autres consommations de la maison éteintes. Dès qu’il y a une autre consommation, prenez un appareil qui mesure une phase à la fois.
+* **Une forte charge résistive** (bouilloire, radiateur, chauffe-eau) : au moins 300 W, car en dessous la correction est imprécise. Un appareil purement résistif, sans ventilateur ni électronique, simplifie grandement l’étalonnage. **Elle doit fonctionner sans passer par le routeur** : le mode étalonnage ne commute rien, donc une charge reliée à une sortie triac du routeur reste éteinte. Branchez une bouilloire ou un radiateur sur une prise, ou faites marcher le chauffe-eau par son propre contacteur, en position forcée.
 * **Une consommation constante pendant l’étalonnage** : branchez la charge résistive et débranchez tout le reste, y compris votre ou vos systèmes de production d’électricité.
 * **Les pinces installées sur la phase correspondante**, par rapport à l’alimentation du routeur : la pince de la phase **L1** sur la phase branchée au connecteur **L1** du routeur, et ainsi de suite.
 * **Le** :ref:`configurateur <configurateur-triphase>`, qui fait le calcul pour vous et réécrit votre ``calibration.h``.
@@ -82,9 +82,9 @@ Pas à pas
 
 #. Ouvrez le :ref:`configurateur <configurateur-triphase>`, choisissez votre carte, puis cochez **« Mode étalonnage »**. La page ne montre plus que ce qui sert à l’étalonnage (vos autres réglages sont conservés).
 #. Chargez votre ``calibration.h`` avec **« Charger mon calibration.h »**, ou saisissez les valeurs de puissance (et de tension) avec lesquelles tourne le routeur. Le fichier doit venir de la même version du firmware : un ``calibration.h`` plus ancien, avec un seul ``f_powerCal``, est refusé.
-#. **Carte universelle seulement** : vérifiez le **calibre de la sonde** de chaque phase (``f_ctRating``), en ampères : 50 pour une sonde 50 A / 333 mV. Avec une sonde à sortie courant et une résistance de charge R, comme la YHDC SCT-013-000 (2000:1), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Si vous le changez, téléversez avant de faire les relevés.
-#. Téléversez sur le routeur le ``config.h`` généré par le configurateur : il met le routeur en mode étalonnage, avec la sortie série lisible. Si vous avez chargé votre ``calibration.h``, téléversez-le aussi, il contient les valeurs de départ.
-#. Branchez la charge résistive sur une phase, par exemple **L1**, et ouvrez le moniteur série de l’Arduino IDE. Il affiche, toutes les 5 secondes, ``P1``, ``P2``, ``P3`` (la puissance de chaque phase) et ``P`` (le total) ; voir l’exemple plus bas, dans :ref:`Pour aller plus loin <etalonnage-triphase-aller-plus-loin>`.
+#. **Carte universelle seulement** : vérifiez le **calibre de la sonde** de chaque phase (``f_ctRating``), en ampères : 50 pour une sonde 50 A / 333 mV. Avec une sonde à sortie courant et une résistance de charge R, comme la YHDC SCT-013-000 (2000:1), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Un calibre se change dans ``calibration.h`` : voir le téléversement ci-dessous.
+#. Dans le dossier du firmware, remplacez ``config.h`` par celui que génère le configurateur : il met le routeur en mode étalonnage, avec la sortie série lisible. Si vous avez changé un calibre, remplacez aussi ``calibration.h`` par le fichier du configurateur (après avoir chargé le vôtre), ou copiez la ligne ``f_ctRating`` qu’il donne dans le vôtre. Téléversez ensuite le firmware (le dossier du sketch) sur le routeur, avant les relevés.
+#. Branchez la charge résistive sur une phase, par exemple **L1**, sans passer par le routeur, et ouvrez le moniteur série. Il affiche, toutes les 5 secondes, ``P1``, ``P2``, ``P3`` (la puissance de chaque phase) et ``P`` (le total) ; voir l’exemple plus bas, dans :ref:`Pour aller plus loin <etalonnage-triphase-aller-plus-loin>`.
 #. Relevez **au même moment** la puissance du routeur (``P1`` pour la phase **L1**) et celle de l’appareil de référence, et saisissez les deux dans la ligne de cette phase. La tension (``V1``…) se corrige de la même façon, mais elle ne sert qu’à l’affichage.
 #. Le configurateur calcule la nouvelle valeur (valeur actuelle × appareil / routeur) et signale ce qui est douteux : puissance négative (sonde à l’envers), charge trop faible, écart trop grand. Si l’un de ces signalements apparaît, corrigez la cause avant de continuer.
 #. Copiez les lignes données, ou enregistrez les fichiers : votre ``calibration.h`` est réécrit avec les nouvelles valeurs, le reste du fichier intact. Remplacez-le dans le dossier du firmware et téléversez.
@@ -144,7 +144,7 @@ La formule de correction
 
 Où :math:`f_{powerCal_{initial}}` est la valeur actuelle (celle du sketch téléversé), :math:`P_{\text{référence}}` la puissance de l’appareil de référence et :math:`P_{routeur}` celle affichée par le routeur.
 
-Le routeur pour cette méthode doit être en sortie lisible : ``SERIAL_OUTPUT_TYPE`` à ``SerialOutputType::HumanReadable`` dans ``config.h`` (le ``config.h`` fourni est en mode ``IoT``). Le mode étalonnage du :ref:`configurateur <configurateur-triphase>` le fait pour vous.
+Le routeur pour cette méthode doit être en sortie lisible : ``SERIAL_OUTPUT_TYPE`` à ``SerialOutputType::HumanReadable`` dans ``config.h`` (le ``config.h`` fourni est en mode ``IoT``), et en mode étalonnage : ``CALIBRATION_MODE`` à ``true``, pour que le routeur ne commute plus aucune charge (remettez-le à ``false`` ensuite). Le mode étalonnage du :ref:`configurateur <configurateur-triphase>` le fait pour vous.
 
 L'affichage dans le Moniteur Série se présente comme ceci : ::
 
@@ -174,7 +174,7 @@ Il faudra aller par tâtonnement. Si le flash du routeur est plus rapide que cel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Il est possible également de relever la consommation affichée par le compteur sur la phase en cours d'étalonnage.
-Il faudra alors faire correspondre la puissance affichée par le routeur dans le Moniteur Série de l'Arduino IDE avec celle affichée par le compteur.
+Il faudra alors faire correspondre la puissance affichée par le routeur dans le moniteur série avec celle affichée par le compteur.
 D'où l'intérêt de ne pas avoir d'appareils qui vont se mettre en route sporadiquement (réfrigérateur…).
 
 Comment trouver le bon ``f_powerCal`` du premier coup
@@ -271,7 +271,7 @@ Appareils de mesure possibles
 
 #. **Ajustement de** ``f_powerCal`` :
 
-   - Comparez la puissance mesurée par l'appareil avec celle affichée dans le Moniteur Série de l'Arduino IDE.
+   - Comparez la puissance mesurée par l'appareil avec celle affichée dans le moniteur série.
    - Utilisez la formule de correction ci-dessus pour ajuster la valeur de ``f_powerCal``.
 
 #. **Validation** :

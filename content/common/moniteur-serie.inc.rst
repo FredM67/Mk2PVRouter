@@ -37,7 +37,7 @@ Si Aucun Message n’Apparaît
 Adresses des Sondes de Température
 """""""""""""""""""""""""""""""""""
 
-Le routeur ne recherche pas les sondes : il lit celles dont les adresses sont dans `config.h`. Pour relever les adresses, téléverser l’exemple de la bibliothèque *OneWire* (**Fichier → Exemples → OneWire → DS18x20_Temperature**), en changeant au besoin la broche dans `OneWire ds(…)`. Le moniteur série affiche alors l’adresse de chaque sonde branchée :
+Le routeur ne recherche pas les sondes : il lit celles dont les adresses sont dans `config.h`. En mode étalonnage (`CALIBRATION_MODE` à `true`, avec `TEMP_SENSOR_PRESENT`), il les liste au démarrage sur le moniteur série, avec la sortie lisible. Sinon, pour relever les adresses, téléverser l’exemple de la bibliothèque *OneWire* (**Fichier → Exemples → OneWire → DS18x20_Temperature**), en changeant au besoin la broche dans `OneWire ds(…)`. Le moniteur série affiche alors l’adresse de chaque sonde branchée :
 
 .. code-block:: text
 

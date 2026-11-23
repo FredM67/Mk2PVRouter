@@ -17,10 +17,11 @@ Elles sont toutes nécessaires, même sans sonde de température, sans module RF
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ouvrir le navigateur : https://github.com/FredM67/PVRouter-1-phase
+#. Choisir la branche `dev` dans le menu des branches, au-dessus de la liste des fichiers
 #. Cliquer sur le bouton vert **« Code »** → **« Download ZIP »**
-#. Enregistrer le fichier `PVRouter-1-phase-main.zip`
+#. Enregistrer le fichier `PVRouter-1-phase-dev.zip`
 #. Extraire le contenu dans un dossier de votre choix (exemple : `Documents/Arduino/`)
-#. Le firmware se trouve dans : `PVRouter-1-phase-main/Mk2_1phase_RFdatalog_temp/`
+#. Le firmware se trouve dans : `PVRouter-1-phase-dev/Mk2_1phase_RFdatalog_temp/`
 
 Structure du Firmware
 """""""""""""""""""""
@@ -154,7 +155,7 @@ Signification : Démarrer d’abord la sortie 0, puis la sortie 1.
 Relais, Sondes de Température, Double Tarif, Radio (Optionnel)
 ##############################################################
 
-Ces fonctions s’activent chacune par un réglage de `config.h`, puis se détaillent plus bas dans le fichier :
+Ces fonctions s’activent chacune par un réglage de `config.h`, puis se détaillent dans ``config.h``, dans la section de chaque fonction :
 
 - **Relais** (`RELAY_DIVERSION`, `relays`) : relais tout-ou-rien pilotés par le surplus.
 - **Sondes de température** (`TEMP_SENSOR_PRESENT`, `temperatureSensing`) : sondes DS18B20, dont il faut indiquer les adresses (le mode étalonnage les liste au démarrage). Collez une étiquette avec l’adresse sur le câble de chaque sonde.

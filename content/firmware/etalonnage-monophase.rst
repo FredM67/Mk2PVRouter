@@ -25,7 +25,7 @@
    | ☐ Firmware installé et fonctionnel (voir :ref:`logiciel-monophase`)
    | ☐ Routeur alimenté par le secteur
    | ☐ Un appareil de référence : pince wattmétrique, wattmètre ou affichage du Linky
-   | ☐ Une forte charge résistive (chauffe-eau, radiateur)
+   | ☐ Une forte charge résistive (bouilloire, radiateur, chauffe-eau), qui fonctionne sans passer par le routeur
 
 .. contents:: Sommaire
     :local:
@@ -37,14 +37,14 @@ Ce qu’il vous faut
 .. danger::
    **ALERTE SÉCURITÉ**
 
-   Tout travail sur le câblage (passer le câble d’une charge à travers CT2, brancher ou débrancher une charge) se fait **disjoncteur coupé au tableau**, après avoir vérifié l’absence de tension avec un testeur. Dans le doute, coupez le disjoncteur principal.
+   Tout travail sur le câblage (passer le câble d’une charge à travers CT2, intervenir dans le tableau ou sur une installation fixe) se fait **disjoncteur coupé au tableau**, après avoir vérifié l’absence de tension avec un testeur. Dans le doute, coupez le disjoncteur principal.
 
 * **Une lecture de référence au point de raccordement**, prise en même temps que celle du routeur : une pince wattmétrique autour du même câble que CT1, ou l’affichage du Linky (sa puissance instantanée). Le Linky affiche une puissance apparente (en VA), avec un rafraîchissement lent : avec une charge purement résistive, VA et W sont égaux, à condition d’éteindre toutes les autres consommations de la maison (il donne la puissance totale).
-* **Une forte charge résistive** (chauffe-eau, radiateur, bouilloire) : au moins 300 W, car en dessous la correction est imprécise. Un appareil purement résistif, sans ventilateur ni électronique, simplifie grandement l’étalonnage.
+* **Une forte charge résistive** (bouilloire, radiateur, chauffe-eau) : au moins 300 W, car en dessous la correction est imprécise. Un appareil purement résistif, sans ventilateur ni électronique, simplifie grandement l’étalonnage. **Elle doit fonctionner sans passer par le routeur** : le mode étalonnage ne commute rien, donc une charge reliée à la sortie triac du routeur reste éteinte. Branchez une bouilloire ou un radiateur sur une prise, ou faites marcher le chauffe-eau par son propre contacteur, en position forcée.
 * **Une consommation constante pendant l’étalonnage** : branchez la charge résistive et débranchez tout le reste, y compris votre ou vos systèmes de production d’électricité.
 * **Le** :ref:`configurateur <configurateur-monophase>`, qui fait le calcul pour vous et réécrit votre ``calibration.h``.
 * Votre ``calibration.h`` (celui du dossier du firmware), si vous l’avez déjà modifié : le configurateur peut le charger.
-* **Si le routeur a une sonde CT2** (énergie routée) et que vous voulez l’étalonner : une charge résistive dont le câble passe **à travers CT2**, par exemple un câble d’extension modifié entre une prise et la charge (un seul des conducteurs traverse la sonde). Le mode étalonnage ne commute jamais de charge : cette charge doit fonctionner par d’autres moyens, branchée directement ou mise en marche à la main.
+* **Si le routeur a une sonde CT2** (énergie routée) et que vous voulez l’étalonner : une charge résistive dont le câble passe **à travers CT2**, par exemple un séparateur de ligne (ou « diviseur de ligne », vendu pour les pinces ampèremétriques), prêt à l’emploi, ou à défaut un câble d’extension modifié entre une prise et la charge (un seul des conducteurs traverse la sonde ; à faire hors tension, en ouvrant seulement la gaine extérieure, sans abîmer l’isolant des conducteurs intérieurs). Le mode étalonnage ne commute jamais de charge : cette charge doit fonctionner par d’autres moyens, branchée directement ou mise en marche à la main.
 
 Étalonner avec le configurateur
 -------------------------------
@@ -86,8 +86,8 @@ Pas à pas
 #. Ouvrez le :ref:`configurateur <configurateur-monophase>`, choisissez votre **carte-mère**, puis cochez **« Mode étalonnage »**. La page ne montre plus que ce qui sert à l’étalonnage (vos autres réglages sont conservés).
 #. Chargez votre ``calibration.h`` avec **« Charger mon calibration.h »**, ou saisissez les valeurs avec lesquelles tourne le routeur. Le fichier doit venir de la même version du firmware : s’il manque des valeurs (``f_powerCalOldBoard``, ``f_powerCalDivertedOldBoard``, ``f_voltageCalOldBoard``, ``f_ctRating``, ``f_ctRatingDiverted``, ``f_powerCalPerAmp``, ``f_voltageCalNewBoard``), il est refusé.
 #. **Carte universelle seulement** : vérifiez le **calibre de CT1** (``f_ctRating``), en ampères : 50 pour une sonde 50 A / 333 mV. Avec une sonde à sortie courant et une résistance de charge R, comme la YHDC SCT-013-000 (2000:1), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Le calibre de CT2 (``f_ctRatingDiverted``) vient avec la puissance routée, plus bas.
-#. Téléversez sur le routeur le ``config.h`` généré par le configurateur (avec, sur la carte universelle, le calibre de CT1 si vous l’avez changé) : il met le routeur en mode étalonnage, avec la sortie série lisible. Si vous avez chargé votre ``calibration.h``, téléversez-le aussi, il contient les valeurs de départ.
-#. Mettez la forte charge résistive en marche sur l’installation (un chauffe-eau, sans production solaire), et ouvrez le moniteur série à 9600 bauds. Toutes les 5 secondes, le routeur y affiche :
+#. Dans le dossier du firmware, remplacez ``config.h`` par celui que génère le configurateur : il met le routeur en mode étalonnage, avec la sortie série lisible. Un calibre se change dans ``calibration.h`` : si vous avez changé celui de CT1, remplacez aussi ``calibration.h`` par le fichier du configurateur (après avoir chargé le vôtre), ou copiez la ligne ``f_ctRating`` qu’il donne dans le vôtre. Téléversez ensuite le firmware (le dossier du sketch) sur le routeur, avant les relevés.
+#. Mettez la forte charge résistive en marche, sans passer par le routeur (une bouilloire ou un radiateur sur une prise, sans production solaire), et ouvrez le moniteur série à 9600 bauds. Toutes les 5 secondes, le routeur y affiche :
 
    * ``P`` : la puissance au point de raccordement, en W, positive en import (le premier nombre après ``P:``) ;
    * ``V`` : la tension, en V (le nombre après ``V:``) ;
@@ -112,8 +112,8 @@ Après avoir téléversé les nouvelles valeurs, refaites un relevé et comparez
 
 Un signe contraire signale un défaut de montage :
 
-* **Puissance négative en import** (``P``), alors qu’une charge fonctionne : CT1 est montée à l’envers. Retournez-la ;
-* **Puissance routée négative** (``diverted``) alors que la charge de CT2 fonctionne : CT2 est montée à l’envers. Retournez-la.
+* ``P`` **négative alors que vous importez** (une charge fonctionne) : CT1 est monté à l’envers. Retournez-le ;
+* **Puissance routée négative** (``diverted``) alors que la charge de CT2 fonctionne : CT2 est monté à l’envers. Retournez-le.
 
 .. admonition:: ✅ Point de Contrôle Final — Étalonnage Monophasé Complet
 
