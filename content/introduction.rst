@@ -96,8 +96,6 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
 Composants polarisés
 ~~~~~~~~~~~~~~~~~~~~
 
-Il n’y a aucun condensateur polarisé à souder sur la carte-mère : le condensateur électrolytique C3 est un composant :term:`CMS`, déjà soudé en usine.
-
 Le **support IC1** (ATmega328P) possède une encoche d’orientation qui doit correspondre au repère sur le :term:`PCB`. Le microcontrôleur sera inséré dans le support après les tests électriques.
 
 Les autres composants traversants de la carte-mère (quartz, connecteurs, fusibles, transformateurs :term:`ZMPT101K`) ne sont pas polarisés ou ont un détrompeur mécanique.

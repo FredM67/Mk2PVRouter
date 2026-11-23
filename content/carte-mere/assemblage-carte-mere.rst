@@ -69,7 +69,7 @@ Le quartz 16 MHz (boîtier HC-49).
 .. todo:: Photo à fournir — quartz X1 soudé.
 
 .. note::
-   Les condensateurs de charge C7 et C8, comme le condensateur électrolytique C3 (220 µF), sont des composants :term:`CMS` déjà soudés en usine.
+   Les condensateurs de charge C7 et C8 sont des composants :term:`CMS` déjà soudés en usine.
 
 Connecteur SMA (antenne RF) — optionnel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
