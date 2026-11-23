@@ -281,6 +281,8 @@ Le connecteur **1×03** (GND, I/O, +5 V) sert à raccorder l’étage de sortie
 
 Les sorties marquées d’un **astérisque (\*)** sur la sérigraphie sont réservées au module RF (RFM69CW) lorsqu’il est soudé. Les sorties marquées d’un **dièse (#)** sont partagées avec le module :term:`mk2Wifi` (voir ci-dessous). Si le module concerné n’est pas présent, ces sorties sont librement utilisables.
 
+.. _types-de-capteurs-de-courant-supportes:
+
 Types de capteurs de courant supportés
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

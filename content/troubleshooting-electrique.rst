@@ -141,7 +141,7 @@ Diagnostic par Tension
 
 - Pont de soudure dans la zone analogique
 - CT branché qui n’est pas à sortie tension 333 mV (un CT à sortie courant sans résistance de :term:`burden <Burden>`)
-- Résistance de burden R18/R28/R38 de mauvaise valeur (solution de dépannage avec un CT à sortie courant, voir :ref:`carte-mere-presentation`)
+- Résistance de burden R18/R28/R38 de mauvaise valeur (solution de dépannage avec un CT à sortie courant, voir :ref:`types-de-capteurs-de-courant-supportes`)
 
 =================================
 Problèmes d’Étalonnage et Mesures
