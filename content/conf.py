@@ -109,6 +109,26 @@ class _DrawioOneBasedPageFilter(logging.Filter):
 
 logging.getLogger('sphinx.sphinxcontrib.drawio').addFilter(_DrawioOneBasedPageFilter())
 
+
+# sphinxcontrib-drawio (0.0.17) records each rendered image in env.original_image_uri under a str
+# key. Sphinx 9 looks these keys up as paths, and a path compared with a str gives a
+# RemovedInSphinx10Warning (asset.py); Sphinx 10 will not find them. Store them as paths.
+from pathlib import PurePath
+
+from sphinxcontrib.drawio import DrawIOConverter
+
+_drawio_handle = DrawIOConverter.handle
+
+
+def _drawio_handle_path_keys(self, node):
+    _drawio_handle(self, node)
+    uris = self.env.original_image_uri
+    for key in [k for k in uris if not isinstance(k, PurePath)]:
+        uris[Path(key)] = uris.pop(key)
+
+
+DrawIOConverter.handle = _drawio_handle_path_keys
+
 # hoverxref_roles = [
 #     'term',
 # ]
@@ -216,6 +236,35 @@ simplepdf_debug = True
 
 # Pass custom page-margin stylesheet to WeasyPrint
 simplepdf_weasyprint_flags = ['-s', os.path.join(os.path.dirname(__file__), '_static', 'pdf-page.css')]
+# WeasyPrint does not know some properties and rules of the theme's web CSS (text-shadow, @media
+# queries, @keyframes...): it ignores them, which is fine for the PDF. Hide these lines only; the
+# other warnings and the errors stay.
+simplepdf_weasyprint_filter = [
+    r'WARNING: Ignored `',
+    r'WARNING: Unknown (empty )?rule ',
+    r'WARNING: (Expected a|Invalid) media type',
+    r'WARNING: Invalid or unsupported selector',
+]
+
+# sphinxcontrib-drawio and myst-nb copy their stylesheet (drawio.css, mystnb.<hash>.css) at
+# build-finished, but simplepdf runs WeasyPrint in its builder's finish(), before: WeasyPrint
+# then fails to load them. Copy them first.
+from sphinx.util.fileutil import copy_asset
+from sphinx_simplepdf.builders.simplepdf import SimplePdfBuilder
+
+_simplepdf_finish = SimplePdfBuilder.finish
+
+
+def _simplepdf_finish_with_assets(self):
+    import sphinxcontrib.drawio
+    from myst_nb.sphinx_ext import add_global_html_resources
+
+    copy_asset(os.path.join(os.path.dirname(sphinxcontrib.drawio.__file__), 'drawio.css'), os.path.join(self.outdir, '_static'))
+    add_global_html_resources(self.app, None)
+    _simplepdf_finish(self)
+
+
+SimplePdfBuilder.finish = _simplepdf_finish_with_assets
 
 # -- Options for LaTeX/PDF output (disabled — TeX Live too old for LuaLaTeX) -----
 # latex_engine = 'lualatex'
@@ -249,7 +298,8 @@ configurators = [
 
 
 def copy_configurator(app, exception):
-    if exception or app.builder.format != 'html':
+    # the HTML site only: the PDF (simplepdf, an HTML builder too) has no use for them
+    if exception or app.builder.format != 'html' or app.builder.name == 'simplepdf':
         return
     for source, folder in configurators:
         if not os.path.isfile(os.path.join(source, 'index.html')):

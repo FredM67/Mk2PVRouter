@@ -133,7 +133,7 @@ jobs:
         run: |
           apt-get install -y --no-install-recommends graphviz xvfb libasound2t64 \
             libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0 \
-            fonts-dejavu-core fonts-noto-color-emoji
+            fonts-dejavu-core fonts-noto-color-emoji fonts-symbola
           apt-get -f install -y ~/drawio-cache/drawio-amd64-*.deb
 
       # https://docs.github.com/en/actions/guides/building-and-testing-python#caching-dependencies
