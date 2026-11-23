@@ -184,6 +184,8 @@ Installation des Bibliothèques
 
 Le firmware nécessite plusieurs bibliothèques externes.
 
+Cette liste est celle du firmware triphasé : le firmware monophasé a la sienne, à la section :ref:`bibliotheques-monophase`.
+
 Ouvrir le Gestionnaire de bibliothèques
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

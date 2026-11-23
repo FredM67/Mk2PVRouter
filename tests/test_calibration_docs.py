@@ -190,3 +190,9 @@ def test_mono_steps_not_mandatory():
     step = text[text.index('**Étalonnage**'):]
     step = step[:step.index('#. **Installation finale**')]
     assert 'relais' in step
+
+
+def test_mono_firmware_names_arduino_libraries():
+    text = read(MONO_INC)
+    for lib in ('U8g2', 'RFM69', 'OneWire'):
+        assert lib in text, lib

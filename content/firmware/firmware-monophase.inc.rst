@@ -1,3 +1,18 @@
+.. _bibliotheques-monophase:
+
+Bibliothèques pour l’Arduino IDE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Avec l’Arduino IDE, installer ces bibliothèques par le Gestionnaire de bibliothèques (menu : **Outils → Gérer les bibliothèques...**) :
+
+- **OneWire** par Jim Studt et al. (version 2.3.7 ou supérieure)
+- **RFM69** par Felix Rusu, LowPowerLab (version 1.5.3 ou supérieure)
+- **U8g2** par Oliver Kraus (version 2.36.5 ou supérieure)
+- **SPI** : incluse avec l’Arduino IDE
+
+Elles sont toutes nécessaires, même sans sonde de température, sans module RF ni afficheur OLED : le code inutilisé est éliminé à la compilation. Avec PlatformIO, tout vient de `platformio.ini` : rien à installer. Voir le `Readme du firmware <https://github.com/FredM67/PVRouter-1-phase/blob/dev/Mk2_1phase_RFdatalog_temp/Readme.md#bibliothèques-requises-pour-larduino-ide>`_.
+
+
 Étape 1 : Téléchargement du Firmware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
