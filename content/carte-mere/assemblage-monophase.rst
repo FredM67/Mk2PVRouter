@@ -163,7 +163,7 @@ Avant de passer aux tests électriques, effectuez une inspection minutieuse de t
    | ☐ **Pas de flux de soudure** résiduel entre les pistes
    | ☐ **Support IC1 vide** (ATmega328P PAS encore inséré)
    | ☐ **Cavaliers configurés** selon votre configuration
-   | ☐ **Composants polarisés** vérifiés (C3)
+   | ☐ **Composants orientés** vérifiés (support IC1, module PS1)
    | ☐ **Carte propre** et exempte de débris
 
 Passez ensuite au chapitre :ref:`tests-electriques` pour vérifier le bon fonctionnement de la carte.

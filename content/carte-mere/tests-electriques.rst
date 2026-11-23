@@ -76,11 +76,6 @@ Test du rail +5 V
    - Vérifiez les soudures du module PS1
    - Vérifiez la diode TVS D1
 
-#. **Vérifiez le condensateur C3** (polarisé) : après quelques secondes sous tension, vérifiez que C3 ne chauffe pas au toucher
-
-   .. danger::
-      Un condensateur électrolytique monté **à l’envers** peut chauffer, gonfler et éclater. Si C3 est chaud ou gonflé, **coupez immédiatement l’alimentation** et corrigez la polarité.
-
 Test du rail +3,3 V
 ~~~~~~~~~~~~~~~~~~~~~
 

@@ -105,12 +105,6 @@ Vérifier les composants d’alimentation :
     - Vérifier l’orientation selon le schéma
     - Vérifier que le point ou l’encoche du module correspond au repère sur le PCB
 
- #. ☐ **Condensateur C3** polarité correcte ?
-
-    - Bande blanche = côté négatif (-)
-    - Vérifier marquage sur PCB
-    - ⚠️ Si inversé : risque d’explosion à la mise sous tension !
-
  #. ☐ **Transformateur·s bien soudé·s ?**
 
     - Mono : TR1
