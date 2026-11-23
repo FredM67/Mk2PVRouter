@@ -74,7 +74,6 @@ Test du rail +5 V
 
    - Vérifiez les fusibles (FS0, FS1)
    - Vérifiez les soudures du module PS1
-   - Vérifiez la diode TVS D1
 
 Test du rail +3,3 V
 ~~~~~~~~~~~~~~~~~~~~~

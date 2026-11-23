@@ -37,13 +37,16 @@ Causes Possibles
 
  #. ☐ **Condensateur en court-circuit**
 
- - C1 (condensateur film secteur) ou C3 (électrolytique) défectueux
+ - C1 (condensateur film secteur) défectueux
  - Rare mais possible
 
  #. ☐ **Module PS1 (MPC10-5) défectueux**
 
  - Peut être en court-circuit si défaut fabrication
  - Ou endommagé par soudure trop chaude
+
+.. note::
+   Seuls les composants traversants que vous avez soudés se vérifient et se remplacent. Un composant :term:`CMS` défectueux n’est pas réparable par l’utilisateur : la carte est à remplacer.
 
 Procédure de Diagnostic
 -----------------------
@@ -185,11 +188,6 @@ Vérifications Électroniques
     - Uniquement nécessaires avec des CT à sortie courant (ex. : SCT-013-000)
     - Pas nécessaires avec des CT à sortie tension (burden intégré)
     - Valeur calculée selon le CT — voir :ref:`carte-mere-presentation`
-
- #. ☐ **Diodes TVS de protection présentes ?**
-
-    - Composants CMS soudés en usine sur les mêmes pastilles que les burden
-    - Vérifier visuellement qu’aucune n’est manquante ou décollée
 
  #. ☐ **Pas de pont de soudure autour ADC ?**
 

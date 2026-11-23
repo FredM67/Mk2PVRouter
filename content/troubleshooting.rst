@@ -322,11 +322,6 @@ Vérification via Moniteur Série
     - Composant à 2 pattes près de l’ATmega328P
     - Soudures correctes ?
 
- #. ☐ **Condensateurs C7/C8 présents ?** (si quartz externe)
-
-    - Condensateurs 22 pF de chaque côté du quartz
-    - Valeur correcte ?
-
 **Si messages bizarres/illisibles :**
 
 - Vérifier que le baud rate = 9 600
