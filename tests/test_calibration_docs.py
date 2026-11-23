@@ -196,3 +196,39 @@ def test_mono_firmware_names_arduino_libraries():
     text = read(MONO_INC)
     for lib in ('U8g2', 'RFM69', 'OneWire'):
         assert lib in text, lib
+
+
+SINGLE_PHASE_PAGES = [
+    'firmware/etalonnage-monophase.rst',
+    'firmware/logiciel-monophase.rst',
+    'firmware/logiciel-etalonnage-monophase.rst',
+    'firmware/configurateur-monophase.rst',
+    'firmware/firmware-monophase.inc.rst',
+]
+
+
+@pytest.mark.parametrize('page', SINGLE_PHASE_PAGES)
+def test_single_phase_pages_never_make_calibration_mandatory(page):
+    text = read(page)
+    for m in re.finditer(r'obligatoire', text, flags=re.I):
+        before = text[max(0, m.start() - 20):m.start()]
+        assert re.search(r'sans\s+(?:être\s+)?(?:\*\*)?$', before), f'{page}: {before!r}'
+
+
+def test_no_sentence_pairs_single_phase_with_mandatory_calibration():
+    pattern = re.compile(r'(?:monophas|1 phase)[^.\n]*[ée]talonnage[^.\n]*obligatoire|[ée]talonnage[^.\n]*obligatoire[^.\n]*monophas', re.I)
+    for path in sorted(CONTENT.rglob('*.rst')):
+        rel = path.relative_to(CONTENT).as_posix()
+        for line in read(rel).split('\n'):
+            m = pattern.search(line)
+            if m and not re.search(r'sans\s+(?:être\s+)?obligatoire|triphas', line, re.I):
+                pytest.fail(f'{rel}: {line.strip()}')
+
+
+def test_glossary_does_not_say_uncalibrated_router_fails():
+    text = read('glossary.rst')
+    assert 'le routeur ne fonctionne pas correctement' not in text
+
+
+def test_logiciel_triphase_has_no_telechargements_page():
+    assert not re.search(r'page\s+T[ée]l[ée]chargements', read('firmware/logiciel-triphase.rst'))

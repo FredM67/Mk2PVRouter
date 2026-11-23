@@ -36,7 +36,7 @@ Test de la partie *mesures*
 Les transformateurs ZMPT101K (TR1, TR2, TR3) fournissent les signaux de mesure de tension CA sur chaque phase.
 Cela peut être vérifié en exécutant un programme (croquis) qui affiche les mesures analogiques prises par le processeur Atmel (**IC1**).
 
-Le programme, qui se trouve également sur la page Téléchargements, est : *RawSamplesTool_6chan.ino*
+Le programme est *RawSamplesTool_6chan.ino* : il se trouve dans le dossier `dev/RawSamplesTool_6chan/` du dépôt `PVRouter-3-phase <https://github.com/FredM67/PVRouter-3-phase>`_ et se téléverse seul, sans le firmware du routeur.
 
 Après avoir téléchargé ce croquis sur le processeur via l'Arduino IDE, la fenêtre série (icône en forme de loupe) doit être ouverte.
 Après avoir terminé chaque exécution, le programme peut être redémarré à partir du clavier en saisissant le caractère « **g** », suivi de *Entrée*.
@@ -62,7 +62,7 @@ Prochaines Étapes
 
 #. **Étalonnage** : Voir chapitre :ref:`etalonnage-triphase`
 
-   L’étalonnage est **OBLIGATOIRE** pour que le routeur fonctionne correctement.
+   L’étalonnage est **OBLIGATOIRE** en triphasé : le routeur additionne les trois phases, et une seule phase mal mesurée fausse la somme.
 
 #. **Installation finale** : Connexion au réseau électrique (faire appel à un électricien qualifié)
 

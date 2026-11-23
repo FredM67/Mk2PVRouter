@@ -54,7 +54,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    #. Choisissez votre configuration (voir :ref:`choix-configuration`).
    #. Assemblez le routeur en suivant les instructions de montage du kit.
-   #. Effectuez l’étalonnage (voir :ref:`etalonnage-monophase` ou :ref:`etalonnage-triphase`).
+   #. Effectuez l’étalonnage : obligatoire en triphasé (voir :ref:`etalonnage-triphase`), recommandé en monophasé (voir :ref:`etalonnage-monophase`).
    #. Configurez les paramètres de votre routeur et téléchargez le firmware.
    #. Connectez le routeur à votre réseau électrique.
    #. Vérifiez le bon fonctionnement du routeur.
