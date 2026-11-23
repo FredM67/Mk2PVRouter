@@ -1,0 +1,8 @@
+{% extends "!layout.html" %}
+{#- Legacy documentation: every page says so, with a link to the current (stable) one. -#}
+{%- block document %}
+<div class="version-banner admonition warning" role="note" style="background: #ffedcc; border-left: 4px solid #f0b37e; padding: 12px; margin-bottom: 24px;">
+  <p style="margin: 0; color: #404040;">Ancienne documentation, pour les cartes mono et triphasées d’origine : pour les cartes actuelles, voir la <a href="/Mk2PVRouter/">documentation stable</a>.</p>
+</div>
+{{ super() }}
+{%- endblock %}
