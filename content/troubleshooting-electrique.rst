@@ -37,13 +37,16 @@ Causes Possibles
 
  #. ☐ **Condensateur en court-circuit**
 
- - C1 (condensateur film secteur) ou C3 (électrolytique) défectueux
+ - C1 (condensateur film secteur) défectueux
  - Rare mais possible
 
  #. ☐ **Module PS1 (MPC10-5) défectueux**
 
  - Peut être en court-circuit si défaut fabrication
  - Ou endommagé par soudure trop chaude
+
+.. note::
+   Seuls les composants traversants que vous avez soudés se vérifient et se remplacent. Un composant :term:`CMS` défectueux n’est pas réparable par l’utilisateur : la carte est à remplacer.
 
 Procédure de Diagnostic
 -----------------------
@@ -106,9 +109,12 @@ Valeurs de Référence
  * - VCC (5 V)
    - 5,0 V
    - ±0,3 V (4,7–5,3 V)
- * - Sortie ADC (repos)
-   - VCC/2
-   - ±0,5 V
+ * - VREF (point de test V_REF, firmware lancé)
+   - 1,1 V
+   - ±0,1 V (1,0–1,2 V)
+ * - Entrées ADC A0–A5 (repos, firmware lancé)
+   - 0,55 V (VREF/2)
+   - ±0,05 V (0,50–0,60 V)
  * - Gate triac (actif)
    - ~2–5 V (pulsé)
    - Variable
@@ -127,11 +133,15 @@ Diagnostic par Tension
 - Régulateur absent ou court-circuité
 - **COUPER L’ALIMENTATION IMMÉDIATEMENT**
 
-**Tension ADC incorrecte (pas à VCC/2) :**
+**VREF ou entrées ADC à 0 V :**
 
-- Résistances de burden R18/R28/R38 mauvaise valeur ou absentes (uniquement si CT à sortie courant)
-- Condensateurs de filtrage défectueux (CMS, soudés en usine)
-- Pont de soudure dans zone analogique
+- Normal tant que le firmware ne tourne pas : c’est lui qui active la référence interne 1,1 V de l’ATmega328P (AREF), que l’amplificateur LMV321A recopie sur VREF. Mesurez VREF et les entrées :term:`ADC` seulement après avoir inséré l’ATmega328P **et** téléversé le firmware.
+
+**Entrées ADC loin de 0,55 V (firmware lancé, VREF correcte) :**
+
+- Pont de soudure dans la zone analogique
+- CT branché qui n’est pas à sortie tension 333 mV (un CT à sortie courant sans résistance de :term:`burden <Burden>`)
+- Résistance de burden R18/R28/R38 de mauvaise valeur (solution de dépannage avec un CT à sortie courant, voir :ref:`carte-mere-presentation`)
 
 =================================
 Problèmes d’Étalonnage et Mesures
@@ -179,17 +189,12 @@ Vérifications Électroniques
 
 .. admonition:: Composants de mesure
 
- #. ☐ **Burden résistances correctes ?**
+ #. ☐ **Résistances de burden correctes ?** (uniquement en dépannage, CT à sortie courant)
 
     - Emplacements R18 / R28 / R38 (THT, un par CT)
     - Uniquement nécessaires avec des CT à sortie courant (ex. : SCT-013-000)
     - Pas nécessaires avec des CT à sortie tension (burden intégré)
     - Valeur calculée selon le CT — voir :ref:`carte-mere-presentation`
-
- #. ☐ **Diodes TVS de protection présentes ?**
-
-    - Composants CMS soudés en usine sur les mêmes pastilles que les burden
-    - Vérifier visuellement qu’aucune n’est manquante ou décollée
 
  #. ☐ **Pas de pont de soudure autour ADC ?**
 

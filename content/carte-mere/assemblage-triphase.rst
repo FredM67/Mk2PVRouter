@@ -35,6 +35,15 @@ Les connecteurs Molex SL 1×02 pour les transformateurs de courant de chaque pha
 
 .. todo:: Photo à fournir — connecteurs CT1–CT3 soudés en configuration triphasée.
 
+Résistances de burden (dépannage, CT à sortie courant uniquement)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. warning::
+   La carte est conçue pour des CT à sortie tension **333 mV** : avec eux, il n’y a rien à souder ici. Une résistance de :term:`burden <Burden>` n’est qu’une **solution de dépannage**, si vous ne disposez que de CT à sortie courant (par ex. SCT-013-000).
+
+#. Calculez la valeur de la résistance pour votre CT (voir :ref:`carte-mere-presentation`, CT à sortie courant)
+#. Soudez une résistance axiale (pas de 12,7 mm) sur l’emplacement **R18** (CT1), **R28** (CT2) et **R38** (CT3, triphasé avec neutre), **par-dessus** la diode :term:`TVS` :term:`CMS` déjà soudée en usine sur les mêmes pastilles
+
 .. note::
    En configuration **sans neutre**, le courant L3 est déduit des mesures de L1 et L2 (:term:`théorème de Blondel <Théorème de Blondel>` : N−1 capteurs suffisent pour N conducteurs).
 
@@ -167,7 +176,7 @@ Avant de passer aux tests électriques, effectuez une inspection minutieuse de t
    | ☐ **Pas de flux de soudure** résiduel entre les pistes
    | ☐ **Support IC1 vide** (ATmega328P PAS encore inséré)
    | ☐ **Cavaliers configurés** selon votre configuration
-   | ☐ **Composants polarisés** vérifiés (C3)
+   | ☐ **Composants orientés** vérifiés (support IC1, module PS1)
    | ☐ **Carte propre** et exempte de débris
 
 Passez ensuite au chapitre :ref:`tests-electriques` pour vérifier le bon fonctionnement de la carte.

@@ -71,20 +71,6 @@ Le quartz 16 MHz (boîtier HC-49).
 .. note::
    Les condensateurs de charge C7 et C8 sont des composants :term:`CMS` déjà soudés en usine.
 
-Condensateur électrolytique C3
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Le condensateur de filtrage 120 µF.
-
-.. warning::
-   Ce composant est **polarisé**. La bande blanche (signes −) indique le côté négatif. Respectez impérativement la polarité indiquée sur le :term:`PCB`.
-
-#. Identifiez la polarité : la **bande blanche** sur le condensateur correspond au côté **négatif** (−)
-#. Insérez le condensateur en respectant la polarité
-#. Soudez les deux pattes
-
-.. todo:: Photo à fournir — condensateur C3 soudé, bande blanche (−) visible et alignée avec le repère PCB.
-
 Connecteur SMA (antenne RF) — optionnel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -148,6 +134,7 @@ Soudez les connecteurs suivants :
 #. **OLED** (Molex SL 1×04) — Connecteur écran I2C
 #. **TRIG_EXT** (barrette mâle 1×06) — Connecteur déclenchement/GPIO
 #. **UART_EXT** (barrette mâle 1×06) — Connecteur UART + DS18B20
+#. **DS18B20** (2 × Molex SL 1×03 : GND, données, +5 V) — Sondes de température, si vous en utilisez
 #. **RESET** (Molex SL 1×02) — Connecteur bouton de réinitialisation
 
 .. todo:: Photo à fournir — connecteurs signaux soudés et perpendiculaires au PCB.
@@ -187,11 +174,10 @@ Configurez les cavaliers selon votre configuration. Consultez le chapitre :ref:
 
    | ☐ Support IC1 correctement orienté (encoche alignée)
    | ☐ Quartz X1 soudé
-   | ☐ Condensateur C3 soudé avec la **bonne polarité**
    | ☐ Connecteur SMA soudé solidement (si module RF utilisé)
    | ☐ Module RFM69CW soudé et V sel. en 3,3 V (si module RF utilisé)
    | ☐ GND_LINK configuré (ouvert ou fermé selon votre installation)
-   | ☐ Tous les connecteurs signaux soudés et perpendiculaires (FTDI, OLED, TRIG_EXT, UART_EXT, RESET)
+   | ☐ Tous les connecteurs signaux soudés et perpendiculaires (FTDI, OLED, TRIG_EXT, UART_EXT, RESET, DS18B20 si utilisés)
    | ☐ Cavaliers configurés selon votre configuration (voir :ref:`cavaliers`)
    | ☐ Toutes les soudures propres et brillantes
    | ☐ Pas de pont de soudure

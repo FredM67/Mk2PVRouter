@@ -299,7 +299,9 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
 
    C’est le type de CT recommandé pour la carte universelle.
 
-**CT à sortie courant** — avec burden THT
+**CT à sortie courant** — solution de dépannage, avec burden THT
+   La carte est conçue pour des CT à sortie tension 333 mV. Un CT à sortie courant avec sa résistance de :term:`burden <Burden>` n’est qu’une solution de dépannage, par exemple en attendant des CT 333 mV.
+
    Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden <Burden>` soudée sur la carte (emplacements **R18** / **R28** / **R38**).
 
    Les emplacements R18 / R28 / R38 sont des **empreintes doubles** : une diode :term:`TVS` de protection est déjà soudée en usine (côté :term:`CMS`). Elle protège l’entrée de l’:term:`ADC` dans le cas où un CT à sortie courant serait branché sans burden. La résistance de burden THT se soude **par-dessus** la TVS, sur les mêmes pastilles.

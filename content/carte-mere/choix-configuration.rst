@@ -106,11 +106,6 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - ✔
      - ✔
      - ✔
-   * - Condensateur électrolytique C3
-     - ✔
-     - ✔
-     - ✔
-     - ✔
    * - Condensateur film C1 (1 µF 310 VAC)
      - ✔
      - ✔
@@ -141,6 +136,11 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - ✔
      - ✔
      - ✔
+   * - Connecteurs DS18B20 (sondes de température, optionnel)
+     - (opt.)
+     - (opt.)
+     - (opt.)
+     - (opt.)
    * - Fusibles FS0, FS1
      - ✔
      - ✔
