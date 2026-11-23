@@ -205,7 +205,7 @@ jobs:
 
       - name: List installed python packages
         run: |
-          pip list
+          pip --no-cache-dir list
 
       # Build
       - uses: sphinx-doc/github-problem-matcher@master
