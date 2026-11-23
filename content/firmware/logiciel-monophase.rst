@@ -21,7 +21,9 @@ Installation et tests — Monophasé
 Installation du Firmware
 -------------------------
 
-Firmware : ``Mk2_fasterControl_Full`` — `PVRouter-1-phase <https://github.com/FredM67/PVRouter-1-phase>`_
+Firmware : ``Mk2_1phase_RFdatalog_temp`` — `PVRouter-1-phase <https://github.com/FredM67/PVRouter-1-phase>`_
+
+.. include:: ../common/ancien-firmware-monophase.inc.rst
 
 **Étapes communes à toutes les versions** : :ref:`installation-logiciel`
 
@@ -33,7 +35,10 @@ Test de la partie *mesures*
 | Le transformateur ZMPT101K (TR1) fournit le signal de mesure de tension CA.
 | Cela peut être vérifié en exécutant un programme (croquis) qui affiche les mesures analogiques prises par le processeur Atmel (**IC1**).
 
-Le programme, qui se trouve également sur la page Téléchargements, est : *RawSamplesTool_2chan.ino*
+Le programme est *RawSamplesTool_2chan.ino* : il se trouve dans le dossier `dev/RawSamplesTool_2chan/` du dépôt `PVRouter-1-phase <https://github.com/FredM67/PVRouter-1-phase>`_ et se téléverse seul, sans le firmware du routeur.
+
+.. note::
+   Le programme lit la tension sur A3, **CT1** sur A5 et **CT2** sur A4, les entrées de la carte Mk2 de Robin Emley (`OLD_SEG`). Sur les autres cartes (tension A0, **CT1** A1, **CT2** A3), changer les trois numéros de broche en tête du programme.
 
 | Après avoir téléchargé ce croquis sur le processeur via l'Arduino IDE, la fenêtre série (icône en forme de loupe) doit être ouverte.
 | Après avoir terminé chaque exécution, le programme peut être redémarré à partir du clavier en saisissant le caractère « **g** », suivi de *Entrée*.
@@ -57,13 +62,13 @@ Prochaines Étapes
 
 **Prochaines étapes :**
 
-#. **Étalonnage** : Voir chapitre :ref:`etalonnage-monophase`
+#. **Étalonnage** : Voir chapitre :ref:`etalonnage-monophase`
 
-   L’étalonnage est **OBLIGATOIRE** pour que le routeur fonctionne correctement.
+   L’étalonnage est recommandé : il donne des valeurs réalistes, et il devient nécessaire dès que des relais déroutent le surplus, car leurs seuils sont en watts.
 
 #. **Installation finale** : Connexion au réseau électrique (faire appel à un électricien qualifié)
 
-#. **Configuration avancée** : Relais, sondes de température, double tarif, etc.
+#. **Configuration avancée** : Relais, sondes de température, double tarif, etc., avec le :ref:`configurateur <configurateur-monophase>`
 
 .. warning::
    Ne pas connecter le routeur au réseau électrique domestique avant d’avoir :
@@ -73,7 +78,7 @@ Prochaines Étapes
    - [ ] Fait appel à un électricien qualifié (fortement recommandé)
 
 .. important::
-   **FONCTIONNALITÉ** : L’étalonnage doit être effectué après l’installation électrique pour que le routeur mesure correctement et fonctionne de manière optimale. Le routeur peut être connecté sans étalonnage (pas de danger), mais ne fonctionnera pas correctement.
+   **FONCTIONNALITÉ** : L’étalonnage se fait après l’installation électrique. Le routeur peut être connecté sans étalonnage (pas de danger), mais ses mesures seront approximatives.
 
 .. |br| raw:: html
 

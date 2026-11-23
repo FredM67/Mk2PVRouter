@@ -154,3 +154,39 @@ def test_configurator_calibration_points_to_page(page, label):
     assert body.strip(), page
     assert f':ref:`{label}`' in body, page
     assert not re.search(r'^\s*(?:#\.|\d+\.)\s', body, flags=re.M), page
+
+
+OLD_FIRMWARE_NAMES = [
+    'Mk2_fasterControl_Full', 'cal_CT1_v_meter', 'cal_CT2_v_CT1', 'powerCal_grid', 'powerCal_diverted',
+    'OLD_PCB', 'physicalPin_dump_load', 'forcePin', 'dumpLoad_startup_sequence', 'TEMP_ENABLED', 'sensor_list',
+]
+ANCIEN = 'common/ancien-firmware-monophase.inc.rst'
+MONO_INSTALL = 'firmware/logiciel-monophase.rst'
+MONO_INC = 'firmware/firmware-monophase.inc.rst'
+
+
+def test_no_old_firmware_anywhere():
+    hits = []
+    for p in sorted(CONTENT.rglob('*.rst')):
+        rel = p.relative_to(CONTENT).as_posix()
+        if rel == ANCIEN:
+            continue
+        text = p.read_text(encoding='utf-8')
+        hits += [f'{rel}: {n}' for n in OLD_FIRMWARE_NAMES if n in text]
+    assert not hits, hits
+
+
+def test_mono_install_names_new_firmware():
+    assert 'Mk2_1phase_RFdatalog_temp' in read(MONO_INSTALL)
+    assert 'Mk2_1phase_RFdatalog_temp' in read(MONO_INC)
+    text = read(MONO_INSTALL)
+    assert '.. include:: ../common/ancien-firmware-monophase.inc.rst' in text
+    assert ':ref:`configurateur-monophase`' in text or '<configurateur-monophase>' in text
+
+
+def test_mono_steps_not_mandatory():
+    text = read(MONO_INSTALL)
+    assert not re.search(r'OBLIGATOIRE', text)
+    step = text[text.index('**Étalonnage**'):]
+    step = step[:step.index('#. **Installation finale**')]
+    assert 'relais' in step

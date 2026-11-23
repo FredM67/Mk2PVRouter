@@ -278,7 +278,7 @@ Le firmware à utiliser dépend de la configuration :
      - Dépôt
    * - Monophasé
      - PVRouter-1-phase
-     - ``Mk2_fasterControl_Full``
+     - ``Mk2_1phase_RFdatalog_temp``
    * - Triphasé avec neutre
      - PVRouter-3-phase
      - ``Mk2_3phase_RFdatalog_temp``
@@ -287,7 +287,7 @@ Le firmware à utiliser dépend de la configuration :
      - ``Mk2_3phase_RFdatalog_temp``
    * - Split-phase
      - PVRouter-1-phase
-     - ``Mk2_fasterControl_Full``
+     - ``Mk2_1phase_RFdatalog_temp``
 
 .. |br| raw:: html
 

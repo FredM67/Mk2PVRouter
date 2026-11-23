@@ -1,18 +1,3 @@
-Installation de U8g2
-^^^^^^^^^^^^^^^^^^^^
-
-.. note::
-   Cette bibliothèque est **uniquement nécessaire pour les PCB monophasés** équipés d’un affichage.
-   Les versions triphasées n’utilisent pas cette bibliothèque.
-
-Cette bibliothèque gère l’affichage sur écran.
-
-#. Dans le Gestionnaire de bibliothèques d’Arduino IDE
-#. Dans le champ de recherche, taper : `U8g2`
-#. Trouver **« U8g2 »** par oliver
-#. Cliquer sur **« Installer »**
-
-
 Étape 1 : Téléchargement du Firmware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -20,7 +5,7 @@ Cette bibliothèque gère l’affichage sur écran.
 #. Cliquer sur le bouton vert **« Code »** → **« Download ZIP »**
 #. Enregistrer le fichier `PVRouter-1-phase-main.zip`
 #. Extraire le contenu dans un dossier de votre choix (exemple : `Documents/Arduino/`)
-#. Le firmware se trouve dans : `PVRouter-1-phase-main/Mk2_fasterControl_Full/`
+#. Le firmware se trouve dans : `PVRouter-1-phase-main/Mk2_1phase_RFdatalog_temp/`
 
 Structure du Firmware
 """""""""""""""""""""
@@ -29,10 +14,11 @@ Après extraction, vous devriez avoir :
 
 .. code-block:: text
 
-   Mk2_fasterControl_Full/
-   ├── Mk2_fasterControl_Full.ino  (fichier principal)
+   Mk2_1phase_RFdatalog_temp/
+   ├── Mk2_1phase_RFdatalog_temp.ino  (fichier principal)
    ├── config.h                     (configuration utilisateur)
    ├── config_system.h              (fréquence du réseau, seuils d’export)
+   ├── config_rf.h                  (liaison radio, si elle est utilisée)
    ├── calibration.h                (paramètres d’étalonnage)
    ├── dualtariff.h
    ├── processing.cpp
@@ -42,12 +28,15 @@ Après extraction, vous devriez avoir :
 .. important::
    Seuls deux fichiers doivent être modifiés par l’utilisateur :
 
-   - **config.h** — Configuration générale (pins, type d’affichage, sorties)
+   - **config.h** — Configuration générale (carte-mère, afficheur, sorties, relais, sondes…)
    - **calibration.h** — Paramètres d’étalonnage (à remplir après l’étalonnage)
 
 
 Étape 2 : Configuration du Firmware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. tip::
+   Le :ref:`configurateur <configurateur-monophase>` écrit ``config.h`` (et, avec le module mk2Wifi, le YAML ESPHome) à partir d’une description de votre installation, en vérifiant vos choix. Il suffit ensuite de remplacer les fichiers et de garder votre ``calibration.h``.
 
 Ouverture du Projet
 """""""""""""""""""
@@ -55,7 +44,7 @@ Ouverture du Projet
 #. Lancer Arduino IDE
 #. Menu : **Fichier → Ouvrir**
 #. Naviguer vers le dossier du firmware
-#. Ouvrir le fichier `Mk2_fasterControl_Full.ino`
+#. Ouvrir le fichier `Mk2_1phase_RFdatalog_temp.ino`
 #. Arduino IDE ouvre plusieurs onglets (c’est normal)
 
 .. note::
@@ -64,28 +53,33 @@ Ouverture du Projet
 Configuration dans `config.h`
 """""""""""""""""""""""""""""
 
-Cliquer sur l’onglet **`config.h`** pour le modifier.
+Cliquer sur l’onglet **`config.h`** pour le modifier. Il décrit l’installation avec des réglages, dont voici les principaux ; le détail de chacun est dans le `Readme du firmware <https://github.com/FredM67/PVRouter-1-phase/blob/dev/Mk2_1phase_RFdatalog_temp/Readme.md>`_.
 
-Version du PCB
-##############
+Carte-mère
+##########
 
-Selon la version de votre PCB :
+Selon votre carte-mère :
 
 .. code-block:: cpp
 
-   // Ancienne version de PCB (avant 2023)
-   inline constexpr bool OLD_PCB{ true };
+   // Carte Mk2 de Robin Emley, afficheur 7 segments
+   inline constexpr PcbVersion PCB_VERSION{ PcbVersion::OLD_SEG };
 
-   // Nouvelle version de PCB (2023+)
-   inline constexpr bool OLD_PCB{ false };
+   // Seconde ancienne carte monophasée, afficheur OLED
+   inline constexpr PcbVersion PCB_VERSION{ PcbVersion::OLD_OLED };
 
-.. tip::
-   Si vous avez reçu votre kit après 2 023, mettez `false`.
+   // Carte universelle (rév. 6.0 et suivantes)
+   inline constexpr PcbVersion PCB_VERSION{ PcbVersion::NEW };
+
+.. warning::
+   Chaque carte a ses entrées analogiques, et la carte universelle utilise la référence interne 1,1 V de l’ATmega328P : un mauvais choix donne des mesures fausses. Après un changement, refaire l’étalonnage.
+
+Le `config.h` fourni avec le firmware est réglé pour la carte universelle (`PcbVersion::NEW`).
 
 Format de Sortie Série
 ######################
 
-Pour débuter, laisser le mode lisible par un humain :
+Le `config.h` fourni est en mode `IoT`, pour le module mk2Wifi. Pour les premiers tests au moniteur série, passer en mode lisible par un humain :
 
 .. code-block:: cpp
 
@@ -94,23 +88,24 @@ Pour débuter, laisser le mode lisible par un humain :
 Options disponibles :
 
 - `HumanReadable` : Affichage facile à lire (recommandé pour débuter)
-- `IoT` : Format compact pour IoT
+- `IoT` : Format compact pour le module mk2Wifi et Home Assistant (9600 bauds, 7E1)
 - `JSON` : Format JSON pour intégration domotique
 
-Type d’Affichage
-################
+Sonde 2 (CT2) et Afficheur
+##########################
 
-Si vous n’avez pas d’afficheur :
+La sonde CT2 mesure l’énergie routée : faire passer par elle les fils de toutes les sorties locales (triacs et relais). Si aucune sonde n’est montée :
 
 .. code-block:: cpp
 
-   inline constexpr DisplayType TYPE_OF_DISPLAY{ DisplayType::NONE };
+   inline constexpr bool DIVERTED_CT_PRESENT{ false };
 
-Options disponibles :
+L’afficheur se règle avec `TYPE_OF_DISPLAY` :
 
 - `NONE` : Pas d’affichage
-- `SEG` : Afficheur 7 segments (logiciel)
-- `SEG_HW` : Afficheur 7 segments (matériel)
+- `SEG` : Afficheur 7 segments (carte `OLD_SEG`)
+- `SEG_HW` : Afficheur 7 segments avec ses circuits d’économie de broches
+- `OLED` : Afficheur OLED (cartes `OLD_OLED` et `NEW`)
 
 Configuration des Sorties Triac
 ###############################
@@ -119,13 +114,16 @@ Définir le nombre de sorties et la broche de chacune :
 
 .. code-block:: cpp
 
-   // Exemple : 2 sorties triac
+   // Exemple : 2 sorties triac
    inline constexpr uint8_t NO_OF_DUMPLOADS{ 2 };
 
-   inline constexpr uint8_t physicalLoadPin[NO_OF_DUMPLOADS]{ 4, 3 };  // Sortie 1 sur D4, sortie 2 sur D3
+   inline constexpr uint8_t physicalLoadPin[NO_OF_DUMPLOADS]{
+     Load::local(5),  // Sortie 1 sur la broche D5
+     Load::local(6)   // Sortie 2 sur la broche D6
+   };
 
 .. note::
-   Par défaut, D3 est la broche de marche forcée (`forcePin`) : pour l’utiliser comme sortie, mettre `forcePin` sur une autre broche libre, ou bien `forcePin` à `0xff` et `OVERRIDE_PIN_PRESENT` à `false`. Avec l’afficheur 7 segments, peu de broches restent libres (voir les commentaires de `config.h`).
+   Le `config.h` fourni a une seule sortie, un triac sur D5. Pour en ajouter, changer ensemble `NO_OF_DUMPLOADS`, `physicalLoadPin` et `loadPrioritiesAtStartup`. Une charge pilotée par radio par une unité distante s’écrit `Load::remote(1)` (unité 1, de 1 à 3) au lieu de `Load::local(…)`.
 
 Ordre de Démarrage
 ##################
@@ -138,34 +136,38 @@ Définir la priorité des charges :
 
 Signification : Démarrer d’abord la sortie 0, puis la sortie 1.
 
-Sondes de Température (Optionnel)
-#################################
+Relais, Sondes de Température, Double Tarif, Radio (Optionnel)
+##############################################################
 
-Si vous utilisez des sondes DS18B20, activer la mesure :
+Ces fonctions s’activent chacune par un réglage de `config.h`, puis se détaillent plus bas dans le fichier :
 
-.. code-block:: cpp
-
-   inline constexpr bool TEMP_SENSOR_PRESENT{ true };
-
-Puis indiquer la broche du bus *OneWire* (une broche libre, avec une résistance de *pull-up*) et les adresses des sondes :
-
-.. code-block:: cpp
-
-   inline constexpr TemperatureSensing temperatureSensing{ 2,
-                                                           { { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x01 },     // Sonde 1
-                                                             { 0x28, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x02 } } };  // Sonde 2
-
-.. note::
-   Le firmware ne recherche pas les sondes : relevez leurs adresses avec un programme de scan *OneWire* (exemples de l’Arduino IDE ou sur Internet). Collez une étiquette avec l’adresse sur le câble de chaque sonde.
+- **Relais** (`RELAY_DIVERSION`, `relays`) : relais tout-ou-rien pilotés par le surplus.
+- **Sondes de température** (`TEMP_SENSOR_PRESENT`, `temperatureSensing`) : sondes DS18B20, dont il faut indiquer les adresses (le mode étalonnage les liste au démarrage). Collez une étiquette avec l’adresse sur le câble de chaque sonde.
+- **Double tarif** (`DUAL_TARIFF`, `dualTariffPin`, `scheduledBoosts`, `iTemperatureThreshold`) : heures creuses et boosts programmés, avec un seuil de température.
+- **Radio** (`RF_LOGGING_PRESENT`, `config_rf.h`) : journalisation et charges distantes par module RFM69.
 
 Configuration dans `calibration.h`
 """"""""""""""""""""""""""""""""""
 
-Ce fichier contient les paramètres d’étalonnage.
+Ce fichier contient les paramètres d’étalonnage, avec un jeu de valeurs par carte-mère : le routeur utilise celui de `PCB_VERSION`.
+
+.. code-block:: cpp
+
+   // Anciennes cartes
+   inline constexpr float f_powerCalOldBoard{ 0.05000F };
+   inline constexpr float f_powerCalDivertedOldBoard{ 0.05000F };
+   inline constexpr float f_voltageCalOldBoard{ 0.805653F };
+   // Carte universelle
+   inline constexpr float f_ctRating{ 50.0F };
+   inline constexpr float f_ctRatingDiverted{ 50.0F };
+   inline constexpr float f_powerCalPerAmp{ 0.00286405F };
+   inline constexpr float f_voltageCalNewBoard{ 0.888065256F };
+
+**Carte universelle** : `f_ctRating` et `f_ctRatingDiverted` sont les calibres (courant nominal) des sondes CT1 et CT2, en ampères. Si vos sondes ne sont pas des 50 A, indiquez dès maintenant leur calibre.
 
 .. warning::
-   Ne modifiez **PAS** ce fichier maintenant — les valeurs seront déterminées lors de l’étalonnage
-   (voir chapitre :ref:`etalonnage-monophase`).
+   Ne modifiez **PAS** les autres valeurs maintenant — elles seront déterminées lors de l’étalonnage
+   (voir chapitre :ref:`etalonnage-monophase`).
 
 Les paramètres par défaut permettent de tester le routeur.
 
@@ -179,8 +181,8 @@ Préparation
 .. note::
 
    L’adaptateur FTDI ne peut **PAS** alimenter le routeur seul !
-   
-   Le routeur doit être alimenté par sa propre alimentation 230 V.
+
+   Le routeur doit être alimenté par sa propre alimentation 230 V.
 
 .. include:: ../common/connexion-ftdi.inc.rst
 
