@@ -109,6 +109,26 @@ class _DrawioOneBasedPageFilter(logging.Filter):
 
 logging.getLogger('sphinx.sphinxcontrib.drawio').addFilter(_DrawioOneBasedPageFilter())
 
+
+# sphinxcontrib-drawio (0.0.17) records each rendered image in env.original_image_uri under a str
+# key. Sphinx 9 looks these keys up as paths, and a path compared with a str gives a
+# RemovedInSphinx10Warning (asset.py); Sphinx 10 will not find them. Store them as paths.
+from pathlib import PurePath
+
+from sphinxcontrib.drawio import DrawIOConverter
+
+_drawio_handle = DrawIOConverter.handle
+
+
+def _drawio_handle_path_keys(self, node):
+    _drawio_handle(self, node)
+    uris = self.env.original_image_uri
+    for key in [k for k in uris if not isinstance(k, PurePath)]:
+        uris[Path(key)] = uris.pop(key)
+
+
+DrawIOConverter.handle = _drawio_handle_path_keys
+
 # hoverxref_roles = [
 #     'term',
 # ]
