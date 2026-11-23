@@ -122,7 +122,10 @@ those repos.
     home page (test with a page deleted from the stable copy).
 - [ ] **Step 5: Commit** `feat: version menu that keeps the page, and a banner on the dev version`.
 
-### Task 3: Configurators per version
+### Task 3: Configurators per version (on top of PR #157, after this PR)
+
+> Moved out of this PR: `copy_configurator` and `configurateur-triphase.rst` only exist in PR #157.
+> After this PR is merged and `dev` exists, #157 is retargeted to `dev` and this task is done on top of it.
 
 **Files:**
 - Modify: `content/conf.py` (`copy_configurator`).
@@ -186,6 +189,6 @@ those repos.
 
 ### After the PR is merged (asks the user first)
 
-- Create `dev` from `main` on GitHub.
+- Create `dev` from `main` on GitHub, retarget PR #157 to `dev`, and do Task 3 on top of it.
 - Run the workflow on `dev` by hand.
 - Check `/Mk2PVRouter/branch/dev/`: the banner, the menu, and the configurator.
