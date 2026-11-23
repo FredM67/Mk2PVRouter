@@ -143,25 +143,39 @@ jobs:
       - name: Trust the workspace for git
         run: git config --global --add safe.directory '*'
 
-      # The branch built, computed once: GITHUB_REF is main on a schedule
+      # The branch built, computed once: GITHUB_REF is main on a schedule.
+      # And the firmware it documents: dev for dev and for the branches based
+      # on dev (they share commits with dev that main does not have), or the
+      # base branch of a fork PR; the pinned submodules (main) otherwise.
       - name: Get the branch built
         id: branch
         env:
           EVENT_NAME: ${{ github.event_name }}
           REF: ${{ github.ref }}
+          BASE_REF: ${{ github.base_ref }}
         run: |
           if [ "$EVENT_NAME" = "schedule" ]; then
             brname=dev
           else
             brname="${REF##refs/heads/}"
           fi
+          firmware=pinned
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            [ "$BASE_REF" = "dev" ] && firmware=dev
+          elif [ "$brname" = "dev" ]; then
+            firmware=dev
+          elif [ "$brname" != "main" ] && [ "$brname" != "legacy" ]               && git rev-parse -q --verify origin/dev > /dev/null; then
+            base=$(git merge-base HEAD origin/dev)
+            git merge-base --is-ancestor "$base" origin/main || firmware=dev
+          fi
           echo "branch=$brname" >> $GITHUB_OUTPUT
-          echo "Branch built: $brname"
+          echo "firmware=$firmware" >> $GITHUB_OUTPUT
+          echo "Branch built: $brname, firmware: $firmware"
 
       # The dev documentation describes the dev firmware, not the one pinned by
       # the submodules (the checkout above gives the commits recorded in them)
       - name: Pull the firmware dev
-        if: ${{ steps.branch.outputs.branch == 'dev' }}
+        if: ${{ steps.branch.outputs.firmware == 'dev' }}
         run: |
           for sub in 1-phase 3-phase; do
             git -C $sub fetch origin dev
