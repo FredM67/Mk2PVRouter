@@ -322,6 +322,10 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
 
    On choisira la valeur standard la plus proche **inférieure** (15 Ω) pour garder une marge de sécurité.
 
+   **Puissance** : la résistance dissipe :math:`P = I_{secondaire\_RMS}^2 \times R_{burden}`. Calculez-la avec le courant secondaire **nominal** du CT, le pire cas : pour un CT 100 A / 50 mA et 15 Ω, :math:`0{,}05^2 \times 15 \approx 0{,}04\,\text{W}`. Une résistance à couche métallique de 0,25 W suffit donc largement ; l’emplacement (pas de 12,7 mm) accepte aussi une 0,5 W.
+
+   La précision compte davantage : prenez une résistance à 1 %. Avec 5 %, la mesure est fausse d’autant, et seul l’étalonnage le rattrape.
+
    .. danger::
       **Un burden mal choisi peut détruire l’entrée ADC.**
 
