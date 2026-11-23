@@ -322,8 +322,20 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
 
    On choisira la valeur standard la plus proche **inférieure** (15 Ω) pour garder une marge de sécurité.
 
-   .. warning::
-      Si le courant mesuré dépasse la valeur prévue, la tension aux bornes du burden dépassera la plage de l’ADC. Les diodes TVS protègent l’entrée du microcontrôleur, mais ne limitent pas le courant dans le burden — la résistance peut surchauffer.
+   .. danger::
+      **Un burden mal choisi peut détruire l’entrée ADC.**
+
+      Un CT à sortie courant impose son courant : c’est la résistance de burden qui fixe la tension envoyée vers l’ATmega328P (:math:`V = R_{burden} \times I_{secondaire}`).
+
+      - **Valeur trop forte**, ou courant plus fort que prévu : la tension crête dépasse 0,55 V. Le signal est d’abord écrêté (mesures fausses), puis l’entrée de l’ATmega328P est poussée hors de ses limites. La diode :term:`TVS` limite la surtension, mais le microcontrôleur peut quand même être endommagé.
+      - **Pas de burden** : le secondaire du CT est presque ouvert et sa tension monte très haut. La TVS n’est pas faite pour absorber ce courant en permanence : elle peut griller, l’entrée ADC avec elle, et la tension est dangereuse au toucher.
+
+      Pour l’éviter :
+
+      - calculez le burden pour le courant **maximal** du câble mesuré (le calibre du disjoncteur qui le protège), pas pour le courant habituel ;
+      - prenez la valeur normalisée immédiatement **inférieure**, jamais supérieure ;
+      - vérifiez la résistance à l’ohmmètre avant de la souder (les anneaux de couleur se confondent facilement) ;
+      - soudez le burden **avant** de brancher le CT ; branchez le CT sur la carte avant de le refermer sur le câble, et ouvrez-le avant de le débrancher.
 
 .. raw:: html
 
