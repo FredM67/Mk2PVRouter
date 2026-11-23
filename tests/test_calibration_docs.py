@@ -75,3 +75,39 @@ def test_tri_linky_is_total():
 def test_shared_intro_no_contradiction():
     assert "sans nécessiter d'étalonnage" not in with_includes(TRI)
     assert 'sans nécessiter d’étalonnage' not in with_includes(TRI)
+
+
+MONO = 'firmware/etalonnage-monophase.rst'
+
+
+def test_mono_section_order():
+    order = section_order(read(MONO))
+    assert all(t in order for t in TITLES), order
+    assert [order.index(t) for t in TITLES] == sorted(order.index(t) for t in TITLES)
+
+
+def test_mono_top_box_has_relays():
+    text = read(MONO)
+    first = re.search(r'^\.\. (?:tip|note|admonition)::.*?(?=^\S)', text, flags=re.M | re.S).group(0)
+    assert 'relais' in first and 'triac' in first
+
+
+def test_mono_readings_and_values():
+    text = read(MONO)
+    for s in ('``P``', '``V``', '``diverted``', 'f_powerCalOldBoard', 'f_powerCalDivertedOldBoard',
+              'f_voltageCalOldBoard', 'f_ctRating', 'f_ctRatingDiverted', 'f_powerCalPerAmp',
+              'f_voltageCalNewBoard'):
+        assert s in text, s
+
+
+def test_mono_ct2_reading_is_safe():
+    text = read(MONO)
+    assert '.. danger::' in text
+    assert text.index('.. danger::') < text.index('à travers CT2')
+    assert 'ne commute jamais' in text
+
+
+def test_mono_no_old_firmware():
+    text = read(MONO)
+    for s in ('cal_CT1_v_meter', 'cal_CT2_v_CT1', 'powerCal_grid', 'powerCal_diverted', 'Mk2_fasterControl_Full'):
+        assert s not in text, s
