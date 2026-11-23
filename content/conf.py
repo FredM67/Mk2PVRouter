@@ -190,6 +190,11 @@ html_context = {
 html_js_files = [
     'clickable-graphviz.js',
     'clickable-images.js',
+    'version-switch.js',
+]
+
+html_css_files = [
+    'version-banner.css',
 ]
 
 if os.environ.get('GITHUB_REF', '') == 'refs/heads/main':

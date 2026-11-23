@@ -1,0 +1,9 @@
+{% extends "!layout.html" %}
+{%- block document %}
+{%- if not doc_is_stable %}
+<div class="version-banner admonition warning" role="note">
+  <p>Version de développement : pour le firmware publié, voir la <a href="{{ versions[0][1] }}" data-base="{{ versions[0][1] }}">documentation stable</a>.</p>
+</div>
+{%- endif %}
+{{ super() }}
+{%- endblock %}
