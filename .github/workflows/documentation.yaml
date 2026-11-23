@@ -40,27 +40,92 @@ concurrency:
 
 
 jobs:
-  Build:
-    name: Build and gh-pages
-    # Same-repo PRs are already built by their push run
+  # The build environment (.github/docs-image/Dockerfile), on GHCR: built only
+  # when its tag is missing, i.e. when the Dockerfile or requirements.txt
+  # changes, and once a month. A fork PR cannot push: it uses the latest image,
+  # and Build installs what requirements.txt adds.
+  Image:
+    name: Build environment
     if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository }}
     runs-on: ubuntu-latest
-    # Debian trixie with Python 3.14, as the devcontainer: weasyprint (PDF)
-    # segfaults on ubuntu-26.04, the system of ubuntu-latest
-    container: python:3.14-trixie
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image: ${{ steps.image.outputs.image }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event_name == 'schedule' && 'dev' || '' }}
+          sparse-checkout: |
+            .github/docs-image
+            requirements.txt
+          sparse-checkout-cone-mode: false
+
+      # The registry API says whether the tag exists: no docker login for
+      # that, only when the image has to be built
+      - name: Is the image already built?
+        id: image
+        env:
+          FORK_PR: ${{ github.event_name == 'pull_request' }}
+          ACTOR: ${{ github.actor }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          repo="${GITHUB_REPOSITORY,,}-docs"
+          key=$(cat .github/docs-image/Dockerfile requirements.txt | sha256sum | cut -c1-16)
+          tag="$(date -u +%Y%m)-$key"
+          registry_token=$(curl -fsS -u "$ACTOR:$TOKEN" "https://ghcr.io/token?scope=repository:$repo:pull" | jq -r .token)
+          if curl -fsS -o /dev/null -H "Authorization: Bearer $registry_token"               -H "Accept: application/vnd.oci.image.index.v1+json, application/vnd.oci.image.manifest.v1+json, application/vnd.docker.distribution.manifest.v2+json"               "https://ghcr.io/v2/$repo/manifests/$tag"; then
+            echo "Image ghcr.io/$repo:$tag already built"
+            build=false
+          elif [ "$FORK_PR" = "true" ]; then
+            echo "A fork PR cannot push ghcr.io/$repo:$tag: the latest image is used"
+            tag=latest
+            build=false
+          else
+            echo "Image ghcr.io/$repo:$tag to build"
+            build=true
+          fi
+          echo "name=ghcr.io/$repo" >> "$GITHUB_OUTPUT"
+          echo "image=ghcr.io/$repo:$tag" >> "$GITHUB_OUTPUT"
+          echo "build=$build" >> "$GITHUB_OUTPUT"
+
+      - name: Log in to GHCR
+        if: ${{ steps.image.outputs.build == 'true' }}
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push the image
+        if: ${{ steps.image.outputs.build == 'true' }}
+        env:
+          IMAGE: ${{ steps.image.outputs.image }}
+          NAME: ${{ steps.image.outputs.name }}
+        run: |
+          docker build -f .github/docs-image/Dockerfile -t "$IMAGE" -t "$NAME:latest" .
+          docker push "$IMAGE"
+          docker push "$NAME:latest"
+
+  Build:
+    name: Build and gh-pages
+    needs: [Image]
+    runs-on: ubuntu-latest
+    # Everything the build needs is in the image (see the Image job)
+    container:
+      image: ${{ needs.Image.outputs.image }}
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     permissions:
       contents: write
+      packages: read
     outputs:
       # The branch built: dev for a schedule, the pushed branch otherwise
       branch: ${{ steps.branch.outputs.branch }}
 
     steps:
-      # git-lfs is not in the image, and the checkout below needs it
-      - name: Install git-lfs
-        run: |
-          apt-get update
-          apt-get install -y --no-install-recommends git-lfs
-
       # https://github.com/marketplace/actions/checkout
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -78,25 +143,39 @@ jobs:
       - name: Trust the workspace for git
         run: git config --global --add safe.directory '*'
 
-      # The branch built, computed once: GITHUB_REF is main on a schedule
+      # The branch built, computed once: GITHUB_REF is main on a schedule.
+      # And the firmware it documents: dev for dev and for the branches based
+      # on dev (they share commits with dev that main does not have), or the
+      # base branch of a fork PR; the pinned submodules (main) otherwise.
       - name: Get the branch built
         id: branch
         env:
           EVENT_NAME: ${{ github.event_name }}
           REF: ${{ github.ref }}
+          BASE_REF: ${{ github.base_ref }}
         run: |
           if [ "$EVENT_NAME" = "schedule" ]; then
             brname=dev
           else
             brname="${REF##refs/heads/}"
           fi
+          firmware=pinned
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            [ "$BASE_REF" = "dev" ] && firmware=dev
+          elif [ "$brname" = "dev" ]; then
+            firmware=dev
+          elif [ "$brname" != "main" ] && [ "$brname" != "legacy" ]               && git rev-parse -q --verify origin/dev > /dev/null; then
+            base=$(git merge-base HEAD origin/dev)
+            git merge-base --is-ancestor "$base" origin/main || firmware=dev
+          fi
           echo "branch=$brname" >> $GITHUB_OUTPUT
-          echo "Branch built: $brname"
+          echo "firmware=$firmware" >> $GITHUB_OUTPUT
+          echo "Branch built: $brname, firmware: $firmware"
 
       # The dev documentation describes the dev firmware, not the one pinned by
       # the submodules (the checkout above gives the commits recorded in them)
       - name: Pull the firmware dev
-        if: ${{ steps.branch.outputs.branch == 'dev' }}
+        if: ${{ steps.branch.outputs.firmware == 'dev' }}
         run: |
           for sub in 1-phase 3-phase; do
             git -C $sub fetch origin dev
@@ -104,54 +183,10 @@ jobs:
             git -C $sub log --oneline -1
           done
 
-      - name: Get drawio latest release version
-        id: drawio-version
-        run: |
-          VERSION=$(curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep '"tag_name"' | cut -d '"' -f 4)
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "DrawIO version: $VERSION"
-
-      - name: Cache drawio deb package
-        id: cache-drawio
-        uses: actions/cache@v6
-        with:
-          path: ~/drawio-cache
-          key: trixie-drawio-${{ steps.drawio-version.outputs.version }}-${{ runner.arch }}
-          restore-keys: |
-            trixie-drawio-
-
-      - name: Download drawio
-        if: steps.cache-drawio.outputs.cache-hit != 'true'
-        run: |
-          mkdir -p ~/drawio-cache
-          cd ~/drawio-cache
-          curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep `dpkg --print-architecture` | grep '\.deb' | cut -d '"' -f 4 | wget -i -
-
-      # Same packages as .devcontainer/Dockerfile: graphviz, xvfb (headless
-      # drawio), the Pango/HarfBuzz libraries of weasyprint and its fonts
-      - name: Install drawio, graphviz and the PDF libraries
-        run: |
-          apt-get install -y --no-install-recommends graphviz xvfb libasound2t64 \
-            libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0 \
-            fonts-dejavu-core fonts-noto-color-emoji fonts-symbola
-          apt-get -f install -y ~/drawio-cache/drawio-amd64-*.deb
-
-      # https://docs.github.com/en/actions/guides/building-and-testing-python#caching-dependencies
-      # ^-- How to set up caching for pip on Ubuntu
-      - name: Cache pip
-        uses: actions/cache@v6
-        with:
-          path: ~/.cache/pip
-          key: trixie-py3.14-pip-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            trixie-py3.14-pip-
-
-      # https://docs.github.com/en/actions/guides/building-and-testing-python#installing-dependencies
-      # ^-- This gives info on installing dependencies with pip
+      # The image has requirements.txt installed: this only adds what a change
+      # of it brings, before the image is rebuilt (a fork PR, for instance)
       - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -U -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Debugging information
         run: |
