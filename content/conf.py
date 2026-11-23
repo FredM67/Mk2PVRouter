@@ -243,6 +243,7 @@ simplepdf_weasyprint_filter = [
     r'WARNING: Ignored `',
     r'WARNING: Unknown (empty )?rule ',
     r'WARNING: (Expected a|Invalid) media type',
+    r'WARNING: Invalid or unsupported selector',
 ]
 
 # sphinxcontrib-drawio and myst-nb copy their stylesheet (drawio.css, mystnb.<hash>.css) at
@@ -297,7 +298,8 @@ configurators = [
 
 
 def copy_configurator(app, exception):
-    if exception or app.builder.format != 'html':
+    # the HTML site only: the PDF (simplepdf, an HTML builder too) has no use for them
+    if exception or app.builder.format != 'html' or app.builder.name == 'simplepdf':
         return
     for source, folder in configurators:
         if not os.path.isfile(os.path.join(source, 'index.html')):
