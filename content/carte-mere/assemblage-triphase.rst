@@ -17,7 +17,7 @@ Assemblage — Composants triphasé
 En configuration triphasée (avec neutre, ou 3 × 230 V sans neutre), soudez les composants suivants en plus des composants communs.
 
 .. hint::
-   Les composants sont listés du plus bas au plus haut dans chaque groupe. En soudant dans cet ordre, les composants déjà soudés ne gênent pas le retournement du :term:`PCB`.
+   Soudez de préférence les composants les plus bas en premier : les composants déjà soudés gênent ainsi moins le retournement du :term:`PCB`.
 
 Composants basse tension
 --------------------------
