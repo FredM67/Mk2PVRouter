@@ -3,7 +3,7 @@ Pré-requis
 
 Pour cette étape, il vous faudra :
 
-* Un ordinateur (PC ou équivalent) avec un port USB libre. Cet ordinateur peut fonctionner sous Windows, MacOS ou Linux.
+* Un ordinateur (PC ou équivalent) avec un port USB libre. Cet ordinateur peut fonctionner sous Windows, macOS ou Linux.
 * Un programmateur USB vers UART (par exemple, un programmateur :term:`FTDI`).
 * Un câble USB approprié pour connecter le programmateur à l’ordinateur de programmation.
 * Un câble d’alimentation électrique pour le routeur.
@@ -14,7 +14,7 @@ Carte USB vers UART
 | Un programmateur USB vers UART est nécessaire pour télécharger le croquis (programme) sur le processeur.
 | Ce programmateur est également utilisé pour surveiller les messages de débogage envoyés par le processeur.
 
-| Selon le système d’exploitation (Windows, MacOS ou Linux) de l’ordinateur de programmation, il peut être nécessaire d’installer un pilote pour le programmateur.
+| Selon le système d’exploitation (Windows, macOS ou Linux) de l’ordinateur de programmation, il peut être nécessaire d’installer un pilote pour le programmateur.
 | Les pilotes pour le programmateur :term:`FTDI` sont disponibles sur le site Web du fabricant.
 
 | Les pilotes disponibles sur le site `FTDI <https://www.ftdichip.com/>`_ devraient convenir à la plupart des cas d’utilisation.
@@ -46,17 +46,14 @@ Mise en place
    :class: tip
 
    La carte :term:`FTDI` dispose d’un commutateur ou d’un cavalier pour choisir entre **3,3 V** et **5 V**.
-   Assurez-vous que le cavalier est correctement positionné pour la tension de fonctionnement de la carte-mère.
+   Sa tension doit être celle de l’ATmega328P : sur la carte universelle, **3,3 V** (position d’usine du cavalier **V sel.**, voir :ref:`cavaliers`) ; **5 V** seulement si ce cavalier a été passé en 5 V.
 
-| Un programmateur USB vers UART doit être connecté au connecteur :term:`FTDI` du :term:`PCB` comme indiqué ci-dessous.
+| Un programmateur USB vers UART doit être connecté au connecteur :term:`FTDI` (J0) du :term:`PCB`.
 | L’autre extrémité du programmateur doit être connectée à l’ordinateur de programmation (PC ou équivalent) via un câble USB approprié.
 
-La broche à une extrémité du connecteur à 6 voies du programmateur sera étiquetée **Gnd**. Cette broche doit correspondre au marquage **0 V** sur le :term:`PCB`.
+La broche à une extrémité du connecteur à 6 voies du programmateur est étiquetée **GND**. Elle va sur la broche 1 (GND) du connecteur J0, marquée « GND> » sur la sérigraphie du :term:`PCB` : repérez les deux et alignez-les.
 
-| Ici, nous utilisons le programmateur :term:`FTDI`. Notez qu’il doit être monté dans le sens inverse.
-| La broche **Gnd** doit toujours être la plus proche du bord de la carte.
-
-| Pour éviter de tordre le connecteur du programmateur, vous pouvez fabriquer un simple câble d’extension comme indiqué ici.
+| Pour éviter de tordre le connecteur du programmateur, vous pouvez fabriquer un simple câble d’extension.
 | Seules quatre des lignes sont réellement utilisées (données **Tx** & **Rx**, masse et réinitialisation).
 | Aucune des lignes d’alimentation électrique n’est utilisée par cette carte.
 
