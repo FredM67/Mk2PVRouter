@@ -21,7 +21,9 @@ Installation et tests — Triphasé
 Installation du Firmware
 -------------------------
 
-Firmware : ``Mk2_3phase_RFdatalog_temp`` — `PVRouter-3-phase <https://github.com/FredM67/PVRouter-3-phase>`_
+Firmware : ``Mk2_3phase_RFdatalog_temp`` — `PVRouter-3-phase <https://github.com/FredM67/PVRouter-3-phase>`_
+
+Documentation du code : `Doxygen <https://fredm67.github.io/PVRouter-3-phase/doc/>`_ (en anglais), pour qui veut lire ou modifier le firmware.
 
 **Étapes communes à toutes les versions** : :ref:`installation-logiciel`
 
