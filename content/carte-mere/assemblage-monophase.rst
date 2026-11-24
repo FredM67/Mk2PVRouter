@@ -17,7 +17,7 @@ Assemblage — Composants monophasé
 En configuration monophasée, soudez les composants suivants en plus des composants communs.
 
 .. hint::
-   Les composants sont listés du plus bas au plus haut dans chaque groupe. En soudant dans cet ordre, les composants déjà soudés ne gênent pas le retournement du :term:`PCB`.
+   Soudez de préférence les composants les plus bas en premier : les composants déjà soudés gênent ainsi moins le retournement du :term:`PCB`.
 
 Composants basse tension
 --------------------------
@@ -45,7 +45,7 @@ Résistances de burden (dépannage, CT à sortie courant uniquement)
    Un burden mal choisi, ou absent, peut détruire l’entrée :term:`ADC` : lisez d’abord les règles de la section :ref:`types-de-capteurs-de-courant-supportes` (CT à sortie courant).
 
 #. Calculez la valeur de la résistance pour votre CT (voir :ref:`types-de-capteurs-de-courant-supportes`, CT à sortie courant)
-#. Soudez une résistance axiale (pas de 12,7 mm) sur l’emplacement **R18** (CT1), et **R28** si le connecteur CT2 est utilisé, **par-dessus** la diode :term:`TVS` :term:`CMS` déjà soudée en usine sur les mêmes pastilles
+#. Soudez une résistance axiale (pas de 12,7 mm) sur l’emplacement sérigraphié **D13** (R18 sur le schéma) pour CT1, et **D23** (R28) si le connecteur CT2 est utilisé, **par-dessus** la diode :term:`TVS` :term:`CMS` déjà soudée en usine sur les mêmes pastilles
 
 Composants haute tension
 --------------------------
@@ -56,7 +56,9 @@ Composants haute tension
 Éclateurs à gaz GDT0, GDT1 (optionnel, CMS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Si fournis dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
+Chaque éclateur GDTx est monté **en série** avec la varistance RVx de même numéro, entre un conducteur et la terre (GDT0 avec RV0 sur le neutre, GDT1 avec RV1 sur L1). Montez-les **toujours par paire GDTx + RVx**, ou pas du tout : l’un sans l’autre ne protège rien.
+
+Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
 
 #. Soudez **GDT0** et **GDT1**
 
@@ -65,12 +67,12 @@ Si fournis dans votre kit, soudez les éclateurs à gaz **avant** les autres com
 Fusibles FS0, FS1
 ~~~~~~~~~~~~~~~~~~~
 
-Les porte-fusibles pour la protection de la phase et du neutre (1 A × 250 V).
+Les fusibles de protection de la phase et du neutre (1 A × 250 V).
 
-#. Soudez le porte-fusible **FS0** (neutre)
-#. Soudez le porte-fusible **FS1** (phase L1)
+#. Soudez le fusible **FS0** (neutre)
+#. Soudez le fusible **FS1** (phase L1)
 
-.. todo:: Photo à fournir — porte-fusibles FS0 et FS1 soudés.
+.. todo:: Photo à fournir — fusibles FS0 et FS1 soudés.
 
 .. warning::
    Les fusibles réagissent à la chaleur — c’est leur principe de fonctionnement. Ne chauffez pas les broches plus de **2–3 secondes** par point de soudure pour éviter de les endommager.
@@ -94,7 +96,7 @@ La varistance combinée :term:`GDT`\+\ :term:`MOV` pour la protection de la pha
 
 #. Soudez le composant **GM1** sur son emplacement (vérifiez la sérigraphie)
 
-Si fournies dans votre kit, soudez les varistances optionnelles :
+Si vous montez les paires optionnelles GDTx + RVx (voir ci-dessus), soudez leurs varistances :
 
 #. Soudez les varistances **RV0** et **RV1** (radial, 300 V) sur leurs emplacements respectifs
 
@@ -150,11 +152,11 @@ La self de mode commun (Schaffner) filtre les perturbations électromagnétiques
 
    **Haute tension :**
 
-   | ☐ GDT0, GDT1 soudés (si fournis)
+   | ☐ GDT0, GDT1 soudés (si les paires GDTx + RVx sont montées)
    | ☐ Fusibles FS0, FS1 soudés
    | ☐ Connecteur secteur (3 voies) soudé
    | ☐ GM1 soudé
-   | ☐ Varistances RV0, RV1 soudées (si fournies)
+   | ☐ Varistances RV0, RV1 soudées (avec GDT0, GDT1, par paire)
    | ☐ Transformateur TR1 soudé
    | ☐ Condensateur film C1 soudé
    | ☐ Module d’alimentation PS1 soudé et orienté correctement

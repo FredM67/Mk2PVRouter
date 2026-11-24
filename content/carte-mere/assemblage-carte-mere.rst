@@ -18,18 +18,18 @@ Assemblage de la carte-mère universelle
    | ☐ Configuration choisie (voir :ref:`choix-configuration`)
    | ☐ Chapitre :ref:`carte-mere-presentation` lu
    | ☐ Fer à souder et consommables prêts
-   | ☐ Temps disponible (1,5–2 heures pour débutant)
+   | ☐ Temps disponible (voir l’estimation ci-dessus)
    | ☐ Espace de travail propre et organisé
 
 Introduction
 ------------
 
-La carte universelle 3phaseDiverter est livrée avec tous les composants :term:`CMS` (montés en surface) déjà soudés en usine. Vous n’avez qu’à souder les composants **traversants** (through-hole).
+La carte universelle 3phaseDiverter est livrée avec tous les composants :term:`CMS` (montés en surface) déjà soudés en usine, sauf les éclateurs GDT optionnels (voir l’assemblage propre à votre configuration). Vous n’avez qu’à souder les composants **traversants** (through-hole).
 
 Le nombre de composants à souder dépend de votre configuration (monophasé, triphasé, etc.). Consultez le tableau dans le chapitre :ref:`choix-configuration` pour la liste complète.
 
 .. tip::
-   Avant de commencer, lisez la section :ref:`introduction` pour les recommandations générales de soudure et l’identification des composants polarisés.
+   Avant de commencer, lisez la section :ref:`introduction:Recommandations pour les étapes de soudure` pour les recommandations générales de soudure et l’identification des composants polarisés.
 
 .. include:: ../common/qualite-soudures.inc.rst
 
@@ -131,7 +131,7 @@ Connecteurs signaux
 Soudez les connecteurs suivants :
 
 #. **FTDI** (Molex SL 1×06) — Connecteur programmation/débogage
-#. **OLED** (Molex SL 1×04) — Connecteur écran I2C
+#. **OLED** (Molex SL 1×04) — Connecteur écran I2C, en monophasé uniquement et si vous utilisez un écran
 #. **TRIG_EXT** (barrette mâle 1×06) — Connecteur déclenchement/GPIO
 #. **UART_EXT** (barrette mâle 1×06) — Connecteur UART + DS18B20
 #. **DS18B20** (2 × Molex SL 1×03 : GND, données, +5 V) — Sondes de température, si vous en utilisez
@@ -147,8 +147,8 @@ Soudez les connecteurs suivants :
    - Corrigez si nécessaire en chauffant la soudure
    - Soudez les broches restantes
 
-Connecteurs sorties numériques (D2–D13)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connecteurs des sorties numériques (D2–D13)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Chaque sortie numérique dispose de deux emplacements Molex SL : un 2 broches (GND, I/O) et un 3 broches (GND, I/O, +5 V). Soudez uniquement les connecteurs correspondant aux sorties utilisées dans votre configuration.
 
@@ -177,7 +177,7 @@ Configurez les cavaliers selon votre configuration. Consultez le chapitre :ref:
    | ☐ Connecteur SMA soudé solidement (si module RF utilisé)
    | ☐ Module RFM69CW soudé et V sel. en 3,3 V (si module RF utilisé)
    | ☐ GND_LINK configuré (ouvert ou fermé selon votre installation)
-   | ☐ Tous les connecteurs signaux soudés et perpendiculaires (FTDI, OLED, TRIG_EXT, UART_EXT, RESET, DS18B20 si utilisés)
+   | ☐ Tous les connecteurs signaux soudés et perpendiculaires (FTDI, TRIG_EXT, UART_EXT, RESET ; OLED et DS18B20 si utilisés)
    | ☐ Cavaliers configurés selon votre configuration (voir :ref:`cavaliers`)
    | ☐ Toutes les soudures propres et brillantes
    | ☐ Pas de pont de soudure

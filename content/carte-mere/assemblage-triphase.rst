@@ -17,7 +17,7 @@ Assemblage — Composants triphasé
 En configuration triphasée (avec neutre, ou 3 × 230 V sans neutre), soudez les composants suivants en plus des composants communs.
 
 .. hint::
-   Les composants sont listés du plus bas au plus haut dans chaque groupe. En soudant dans cet ordre, les composants déjà soudés ne gênent pas le retournement du :term:`PCB`.
+   Soudez de préférence les composants les plus bas en premier : les composants déjà soudés gênent ainsi moins le retournement du :term:`PCB`.
 
 Composants basse tension
 --------------------------
@@ -44,34 +44,39 @@ Résistances de burden (dépannage, CT à sortie courant uniquement)
    Un burden mal choisi, ou absent, peut détruire l’entrée :term:`ADC` : lisez d’abord les règles de la section :ref:`types-de-capteurs-de-courant-supportes` (CT à sortie courant).
 
 #. Calculez la valeur de la résistance pour votre CT (voir :ref:`types-de-capteurs-de-courant-supportes`, CT à sortie courant)
-#. Soudez une résistance axiale (pas de 12,7 mm) sur l’emplacement **R18** (CT1), **R28** (CT2) et **R38** (CT3, triphasé avec neutre), **par-dessus** la diode :term:`TVS` :term:`CMS` déjà soudée en usine sur les mêmes pastilles
+#. Soudez une résistance axiale (pas de 12,7 mm) sur les emplacements sérigraphiés **D13** (R18 sur le schéma) pour CT1, **D23** (R28) pour CT2 et **D33** (R38) pour CT3 (triphasé avec neutre), **par-dessus** la diode :term:`TVS` :term:`CMS` déjà soudée en usine sur les mêmes pastilles
 
 .. note::
-   En configuration **3 × 230 V sans neutre**, seuls les CT1 et CT2 sont utilisés : l’une des phases sert de référence et n’a pas besoin de capteur (:term:`théorème de Blondel <Théorème de Blondel>`, voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`).
+   En configuration **3 × 230 V sans neutre**, la borne L3 n’est pas raccordée : FS3, GM3, RV3, GDT3, TR3 et CT3 ne servent pas.
+
+   Seuls les CT1 et CT2 sont utilisés : l’une des phases sert de référence et n’a pas besoin de capteur (:term:`théorème de Blondel <Théorème de Blondel>`, voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`).
 
 Composants haute tension
 --------------------------
 
 .. danger::
-   Les composants de cette section sont connectés au **secteur 230 V**. Vérifiez soigneusement chaque soudure.
+   Les composants de cette section sont connectés au **secteur** : 230 V entre phase et neutre, 400 V entre phases en triphasé avec neutre. Vérifiez soigneusement chaque soudure.
 
 Éclateurs à gaz GDT0–GDT3 (optionnel, CMS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Si fournis dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
+Chaque éclateur GDTx est monté **en série** avec la varistance RVx de même numéro, entre un conducteur et la terre (GDT0 avec RV0 sur le neutre, GDT1 avec RV1 sur L1, GDT2 avec RV2 sur L2, GDT3 avec RV3 sur L3). Montez-les **toujours par paire GDTx + RVx**, ou pas du tout : l’un sans l’autre ne protège rien.
 
-#. Soudez **GDT0**, **GDT1**, **GDT2**, **GDT3**
+Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
+
+#. Soudez **GDT0**, **GDT1**, **GDT2**, et **GDT3** en triphasé avec neutre uniquement
 
 .. todo:: Photo à fournir — GDT0–GDT3 soudés (composants CMS).
 
 Fusibles FS0–FS3
 ~~~~~~~~~~~~~~~~~~
 
-Les porte-fusibles pour la protection de toutes les phases et du neutre (1 A × 250 V).
+Les fusibles de protection de chaque conducteur (1 A × 250 V).
 
-#. Soudez les porte-fusibles **FS0** (neutre), **FS1** (L1), **FS2** (L2), **FS3** (L3)
+#. Soudez les fusibles **FS0** (borne N), **FS1** (L1), **FS2** (L2)
+#. Soudez **FS3** (L3) — **triphasé avec neutre uniquement**
 
-.. todo:: Photo à fournir — porte-fusibles FS0–FS3 soudés.
+.. todo:: Photo à fournir — fusibles FS0–FS3 soudés.
 
 .. warning::
    Les fusibles réagissent à la chaleur — c’est leur principe de fonctionnement. Ne chauffez pas les broches plus de **2–3 secondes** par point de soudure pour éviter de les endommager.
@@ -93,11 +98,12 @@ Protection GM1–GM3 et varistances RV0–RV3 (optionnelles)
 
 Les varistances combinées :term:`GDT`\+\ :term:`MOV` pour la protection de chaque phase.
 
-#. Soudez les composants **GM1**, **GM2**, **GM3** sur leurs emplacements respectifs (vérifiez la sérigraphie)
+#. Soudez les composants **GM1**, **GM2** sur leurs emplacements respectifs (vérifiez la sérigraphie)
+#. Soudez **GM3** — **triphasé avec neutre uniquement**
 
-Si fournies dans votre kit, soudez les varistances optionnelles :
+Si vous montez les paires optionnelles GDTx + RVx (voir ci-dessus), soudez leurs varistances :
 
-#. Soudez les varistances **RV0**, **RV1**, **RV2**, **RV3** (radial, 300 V) sur leurs emplacements respectifs
+#. Soudez les varistances **RV0**, **RV1**, **RV2** (radial, 300 V) sur leurs emplacements respectifs, et **RV3** en triphasé avec neutre uniquement
 
 .. todo:: Photo à fournir — GM1–GM3 et varistances RV0–RV3 soudés (montrer la différence entre GM et RV).
 
@@ -154,11 +160,11 @@ La self de mode commun (Schaffner) filtre les perturbations électromagnétiques
 
    **Haute tension :**
 
-   | ☐ GDT0–GDT3 soudés (si fournis)
-   | ☐ Fusibles FS0–FS3 soudés
+   | ☐ GDT0–GDT2 soudés, + GDT3 si triphasé avec neutre (si les paires GDTx + RVx sont montées)
+   | ☐ Fusibles FS0–FS2 soudés (+ FS3 si triphasé avec neutre)
    | ☐ Connecteur secteur (5 voies) soudé
-   | ☐ GM1–GM3 soudés
-   | ☐ Varistances RV0–RV3 soudées (si fournies)
+   | ☐ GM1–GM2 soudés (+ GM3 si triphasé avec neutre)
+   | ☐ Varistances RV0–RV2 (+ RV3 si triphasé avec neutre) soudées, avec leur GDT, par paire
    | ☐ Transformateurs TR1–TR2 soudés (+ TR3 si triphasé avec neutre)
    | ☐ Condensateur film C1 soudé
    | ☐ Module d’alimentation PS1 soudé et orienté correctement

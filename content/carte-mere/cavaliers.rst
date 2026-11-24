@@ -14,9 +14,9 @@ Configuration des cavaliers
 
    | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Configuration choisie (voir :ref:`choix-configuration`)
-   | ☐ Assemblage de la carte terminé (voir :ref:`assemblage-carte-mere`)
+   | ☐ Assemblage de la carte en cours : étape « Cavaliers de soudure » de :ref:`assemblage-carte-mere`
 
-Les :term:`cavaliers de soudure <Cavalier de soudure>` permettent de configurer le comportement de la carte universelle. Ils sont configurés en déposant une goutte de soudure entre deux pastilles adjacentes.
+Les :term:`cavaliers de soudure <Cavalier de soudure>` permettent de configurer le comportement de la carte universelle. Ils sont configurés en déposant une goutte de soudure entre deux pastilles adjacentes. Seule exception : **V sel.**, déjà fermé d’usine par une piste de cuivre (voir ci-dessous).
 
 .. warning::
    La configuration des cavaliers doit être effectuée **avant** le premier test électrique. Une mauvaise configuration peut entraîner des mesures erronées ou un dysfonctionnement.
@@ -155,7 +155,7 @@ Procédure de soudure des cavaliers
 .. warning::
    Travaillez **hors tension**. L’opération est réversible (à l’aide d’une tresse à dessouder), mais des modifications répétées risquent d’altérer les pistes en cuivre.
 
-#. **Identifiez le cavalier** sur la carte à l’aide des repères sérigraphiés (V sel., SDA, SCL, IRQ, NSS, TEMP)
+#. **Identifiez le cavalier** sur la carte à l’aide des repères sérigraphiés (SDA, SCL, IRQ, NSS, TEMP, +5V Rail)
 
 #. **Pour les cavaliers 3 pôles** (SDA, SCL, TEMP ; V sel. est déjà fermé d’usine, voir ci-dessus) : Déposez une goutte de soudure entre la pastille centrale et la pastille correspondant à la position souhaitée
 
