@@ -11,7 +11,6 @@ Présentation de la carte universelle
    Avant de commencer ce chapitre :
 
    | ☐ Chapitre :ref:`safety-overview` lu et compris
-   | ☐ Choix de la configuration effectué (voir :ref:`choix-configuration`)
 
 Vue d’ensemble
 --------------
@@ -22,14 +21,14 @@ La carte **3phaseDiverter** (rév. 6.0) est la carte principale universelle du M
 - **Triphasé avec neutre** : trois phases + neutre (400 V / 230 V)
 - **Triphasé 3 × 230 V sans neutre** : trois phases sans neutre, 230 V entre phases (voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`)
 
-La sélection de la configuration se fait uniquement par les :term:`cavaliers de soudure <Cavalier de soudure>` et le choix des connecteurs — tous les composants CMS sont identiques quelle que soit la configuration.
+La sélection de la configuration se fait par les :term:`cavaliers de soudure <Cavalier de soudure>`, le choix des connecteurs et celui des composants traversants montés (voir :ref:`choix-configuration`) — tous les composants CMS sont identiques quelle que soit la configuration.
 
 Caractéristiques principales
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Microcontrôleur **ATmega328P** (16 MHz, DIP-28)
 - Jusqu’à 3 capteurs de tension (:term:`ZMPT101K`, rapport 1000:1000)
-- Jusqu’à 3 connecteurs de transformateur de courant (:term:`CT` 1–CT3)
+- Jusqu’à 3 connecteurs de transformateur de courant :term:`CT` (CT1–CT3)
 - Module radio **RFM69CW** (bande ISM 433/868 MHz) avec connecteur :term:`SMA`
 - Alimentation AC-DC intégrée (**MPC10-5**, 5 V / 10 W)
 - Régulateur :term:`LDO` **AP7361C-33E** (5 V → 3,3 V, 1 A)
@@ -102,7 +101,7 @@ Connecteurs
      - Entrée :term:`CT` L1
    * - CT2
      - Molex SL 1×02 (pas 2,54 mm)
-     - Entrée :term:`CT` L2 (triphasé uniquement)
+     - Entrée :term:`CT` L2 en triphasé ; CT de diversion (optionnel) en monophasé
    * - CT3
      - Molex SL 1×02 (pas 2,54 mm)
      - Entrée :term:`CT` L3 (triphasé uniquement)
@@ -241,7 +240,7 @@ CT1 / CT2 / CT3 — Transformateurs de courant (1×2 Molex SL)
    * - 2
      - AGND
 
-CT1 est utilisé en monophasé et en triphasé. CT2 et CT3 sont utilisés uniquement en triphasé.
+CT1 est utilisé en monophasé et en triphasé. CT2 mesure L2 en triphasé ; en monophasé, il peut mesurer la puissance routée (optionnel). CT3 n’est utilisé qu’en triphasé avec neutre.
 
 .. _sorties-numeriques:
 
@@ -283,15 +282,15 @@ Les sorties marquées d’un **astérisque (\*)** sur la sérigraphie sont rése
 .. _types-de-capteurs-de-courant-supportes:
 
 Types de capteurs de courant supportés
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------
 
 La carte universelle est conçue pour fonctionner avec deux types de capteurs de courant :
 
 .. note::
-   Quel que soit le type de CT, le boîtier porte généralement une **flèche** indiquant le sens du courant primaire, ainsi que des repères **K** et **L** sur les bornes ou fils du secondaire :
+   Quel que soit le type de CT, le boîtier porte généralement une **flèche** indiquant le sens du courant primaire. Les repères habituels sont :
 
-   - **K** (ou P1 / S1) : borne positive quand le courant primaire circule dans le sens de la flèche
-   - **L** (ou P2 / S2) : borne complémentaire
+   - côté primaire (le câble mesuré) : **P1** / **P2** (ou **K** / **L**), la flèche allant de P1 vers P2 ;
+   - côté secondaire (les fils vers la carte) : **S1** / **S2** (ou **k** / **l**). S1 est la borne positive quand le courant primaire entre par P1.
 
    Ces marquages sont importants lors du raccordement aux connecteurs CT de la carte (voir :ref:`installation-finale`).
 
@@ -436,7 +435,7 @@ Chaque phase est protégée par un module combiné :term:`GDT`\+\ :term:`MOV`. 
 
 **Niveau 2 — Fusibles FS0–FS3** (obligatoire)
 
-Les fusibles protègent les circuits de mesure contre les surintensités. Ils sont dimensionnés pour couper en cas de court-circuit ou de défaut sur un transformateur :term:`ZMPT101K`.
+Les fusibles protègent l’installation contre les surintensités. Ils sont dimensionnés pour couper en cas de court-circuit sur la carte, par exemple une varistance en fin de vie ou un défaut du module d’alimentation PS1 ou du condensateur C1.
 
 **Niveau 3 — Varistances RV0–RV3 et éclateurs GDT0–GDT3** (optionnel)
 
@@ -457,13 +456,16 @@ Rails d’alimentation
      - Usage
    * - +5 V
      - 5 V
-     - Connecteurs UART_EXT, FTDI et broche VCC des sorties numériques (via cavalier « +5V Rail »)
+     - Entrée du régulateur U1, connecteur UART_EXT (broche 3), connecteurs DS18B20 et broche +5 V des sorties numériques (via cavalier « +5V Rail »). La broche VCC du connecteur FTDI n’est pas reliée.
    * - +3,3 V
      - 3,3 V
      - ATmega328P, module RFM69CW
    * - AVCC
      - 3,3 V (filtré)
-     - Référence analogique ATmega328P, connecteur OLED
+     - Alimentation analogique de l’ATmega328P (ADC), de l’amplificateur LMV321A et du connecteur OLED
+   * - VREF
+     - 1,1 V
+     - Référence interne (AREF) de l’ATmega328P, tamponnée par le LMV321A (point de test VREF)
    * - GND
      - 0 V
      - Masse numérique
@@ -497,7 +499,7 @@ La carte principale est conçue pour accueillir le module d’extension :term:`
 
 Signaux échangés :
 
-- L’une des deux cartes utilise des **barrettes mâles**, l’autre des **barrettes femelles** (au choix de l’utilisateur)
+- La carte principale utilise des **barrettes mâles**, le module mk2Wifi des **barrettes femelles**
 - L’alimentation +5 V est fournie par la carte principale via UART_EXT broche 3
 - L’UART (TX/RX) assure la communication série avec le module d’extension
 - Le signal DS18B20 est acheminé via UART_EXT broche 2 pour la mesure de température 1-Wire
