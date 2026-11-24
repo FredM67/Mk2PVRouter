@@ -12,7 +12,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 - La gestion des surplus d’énergie vers les équipements raccordés.
 
 | Le routeur surveille en permanence la production d’énergie de votre système en autoconsommation et redirige tout excédent d’électricité vers les charges branchées.
-| Grâce aux modules sortie-relais, il peut aussi gérer des installations de chauffage ou toutes sortes d’appareils avec ses fonctions de programmateurs horaire, temporisations, thermostats, préparation ECS, chauffage… toutes configurables librement.
+| Grâce aux sorties relais, il peut aussi commander d’autres appareils selon le surplus ou l’import. Avec un tarif heures creuses, il peut forcer la marche des charges pendant les heures creuses, éventuellement limitée par une sonde de température (voir la configuration du firmware).
 |
 | Le routeur est basé sur la carte universelle **3phaseDiverter** qui supporte 3 configurations : monophasé, triphasé avec neutre et triphasé 3 × 230 V sans neutre.
 | Seul le type de raccordement au réseau électrique (Enedis ou régie locale) est important, peu importe que la production d’électricité soit en monophasé ou que l’on n’utilise que des appareils monophasés.
@@ -52,16 +52,16 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
    Pour commencer avec le Mk2PVRouter, suivez ces étapes :
 
-   #. Choisissez votre configuration (voir :ref:`choix-configuration`).
-   #. Assemblez le routeur en suivant les instructions de montage du kit.
-   #. Effectuez l’étalonnage : obligatoire en triphasé (voir :ref:`etalonnage-triphase`), recommandé en monophasé (voir :ref:`etalonnage-monophase`).
-   #. Configurez les paramètres de votre routeur et téléchargez le firmware.
-   #. Connectez le routeur à votre réseau électrique.
+   #. Choisissez votre configuration (voir :ref:`choix-configuration`).
+   #. Assemblez le routeur en suivant les instructions de montage du kit, avec ses tests électriques (voir :ref:`tests-electriques`).
+   #. Configurez les paramètres de votre routeur et téléversez le firmware.
+   #. Installez le routeur et ses capteurs de courant (voir :ref:`installation-finale`).
+   #. Effectuez l’étalonnage, qui se fait avec les capteurs de courant en place : obligatoire en triphasé (voir :ref:`etalonnage-triphase`), recommandé en monophasé (voir :ref:`etalonnage-monophase`).
    #. Vérifiez le bon fonctionnement du routeur.
    #. Profitez de votre autoconsommation optimisée !
 
 | Vous trouverez dans cette documentation toutes les informations nécessaires pour assembler, configurer et utiliser le Mk2PVRouter.
-| Si vous avez des questions ou des suggestions, n’hésitez pas à nous contacter.
+| Si vous avez des questions ou des suggestions, n’hésitez pas à nous contacter sur `GitHub Discussions <https://github.com/FredM67/PVRouter-3-phase/discussions>`_ ou à ouvrir un ticket (`GitHub Issues <https://github.com/FredM67/Mk2PVRouter/issues>`_).
 
 .. toctree::
    :caption: ⚠️ Sécurité (À LIRE EN PREMIER!)
