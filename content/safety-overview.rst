@@ -105,9 +105,9 @@ Plusieurs sources de risque d’incendie :
 .. danger::
    **Équipement OBLIGATOIRE pour toute manipulation haute tension**
 
-- **Testeur de tension** sans contact (détecteur VAT)
-- **Multimètre** avec protection CAT II 300 V minimum
-- **Gants isolants** (classe 0 minimum, 1 000 V)
+- **VAT** bipolaire (vérificateur d’absence de tension, à contact, NF EN 61243-3) ; un détecteur sans contact ne prouve pas l’absence de tension
+- **Multimètre** CAT III 600 V minimum
+- **Gants isolants** classe 0 (1 000 V)
 - **Tapis isolant** ou chaussures isolantes
 - **Outils isolés** (tournevis, pinces avec poignées isolées)
 
@@ -131,13 +131,13 @@ Avant de Commencer
 
 .. admonition:: Checklist Pré-Soudure
 
-   - [ ] Espace de travail dégagé (pas de papiers, tissus, produits inflammables)
-   - [ ] Surface de travail ininflammable
-   - [ ] Ventilation suffisante (fenêtre ouverte ou extracteur)
-   - [ ] Lunettes de protection portées
-   - [ ] Support fer à souder à portée de main
-   - [ ] Extincteur accessible (< 3 mètres)
-   - [ ] Quelqu’un informé que vous soudez (en cas d’urgence)
+   - ☐ Espace de travail dégagé (pas de papiers, tissus, produits inflammables)
+   - ☐ Surface de travail ininflammable
+   - ☐ Ventilation suffisante (fenêtre ouverte ou extracteur)
+   - ☐ Lunettes de protection portées
+   - ☐ Support fer à souder à portée de main
+   - ☐ Extincteur accessible (< 3 mètres)
+   - ☐ Quelqu’un informé que vous soudez (en cas d’urgence)
 
 Pendant la Soudure
 ------------------
@@ -161,7 +161,7 @@ Pendant la Soudure
 En Cas de Brûlure au Fer à Souder
 ---------------------------------
 
-1. **Refroidir immédiatement** : Eau froide courante 10–15 minutes
+1. **Refroidir immédiatement** : Eau froide courante 15–20 minutes
 2. **Ne pas percer les cloques**
 3. **Couvrir avec compresse stérile**
 4. **Si brûlure >5 cm ou profonde** : Consulter médecin/urgences
@@ -197,18 +197,20 @@ Règles d’Or (230 V AC)
 
    Ces règles DOIVENT être respectées pour toute intervention sur installation électrique :
 
-   1. **CONSIGNER** : Couper l’alimentation au disjoncteur
+   1. **SÉPARER** : Couper l’alimentation au disjoncteur
    2. **CONDAMNER** : Verrouiller le disjoncteur (cadenas si possible)
    3. **IDENTIFIER** : Vérifier que c’est bien le bon circuit
-   4. **VÉRIFIER l’ABSENCE DE TENSION** : Avec testeur adapté
-   5. **METTRE À LA TERRE** : Connecter la terre avant toute manipulation
+   4. **VÉRIFIER l’ABSENCE DE TENSION** : Avec un VAT bipolaire, EPI portés
+   5. **METTRE À LA TERRE ET EN COURT-CIRCUIT** les conducteurs, si nécessaire (rarement le cas sur une installation domestique)
+
+   L’ensemble de ces étapes s’appelle la **consignation**.
 
 Vérification Absence de Tension
 -------------------------------
 
 **TOUJOURS** vérifier l’absence de tension avant de toucher des conducteurs :
 
-1. Utiliser un testeur de tension **adapté** (VAT)
+1. Porter les EPI (gants isolants, lunettes) et utiliser un **VAT bipolaire** (vérificateur d’absence de tension, à contact)
 2. **Tester le testeur** sur une prise sous tension connue AVANT (vérifier qu’il fonctionne)
 3. Tester sur les conducteurs à manipuler
 4. Si le testeur indique présence tension → **NE PAS TOUCHER**
@@ -229,11 +231,20 @@ Avant toute intervention sur câblage domestique :
 4. **Tester l’absence de tension** avec VAT (voir procédure ci-dessus)
 5. **SEULEMENT ENSUITE** : Manipuler les conducteurs
 
+.. warning::
+   **Disjoncteur général coupé, tout n’est pas hors tension :**
+
+   - les câbles en amont, du compteur jusqu’au disjoncteur de branchement, restent sous tension ;
+   - le côté continu des panneaux photovoltaïques reste sous tension tant qu’il y a de la lumière ;
+   - un onduleur hybride ou à batterie peut réalimenter des circuits : arrêtez-le selon sa notice.
+
 .. danger::
    **JAMAIS DE TRAVAUX SOUS TENSION pour ce projet !**
 
-   Ce projet ne nécessite AUCUNE intervention sous tension. Si vous pensez devoir
-   travailler sous tension, vous faites quelque chose de travers. STOP et demandez conseil.
+   Ce projet ne nécessite aucun **travail** sous tension : seuls quelques mesures et essais
+   se font sous tension, boîtier fermé ou avec des sondes de mesure, EPI portés et avec un
+   appareil CAT III. Si vous pensez devoir travailler sous tension, vous faites quelque chose
+   de travers. STOP et demandez conseil.
 
 Protection Différentielle
 -------------------------
@@ -256,7 +267,7 @@ Lors de tests sous tension :
 
 - **Garder une main dans le dos** (évite le courant traversant le cœur)
 - **Ne jamais toucher deux points** du circuit simultanément
-- **Rester à distance** : Utiliser sondes de test, pas les doigts
+- **Rester à distance** : Utiliser des sondes de test, pas les doigts
 - **Porter chaussures isolantes** ou être sur tapis isolant
 - **Travailler à sec** : Mains sèches, pas de flaques d’eau
 
@@ -279,13 +290,13 @@ Règles Obligatoires
 
 .. admonition:: Checklist Perçage
 
-   - [ ] **Lunettes de protection** portées (OBLIGATOIRE !)
-   - [ ] **Cheveux attachés** si longs
-   - [ ] **PAS de gants** (risque entraînement)
-   - [ ] **Vêtements près du corps** (pas de manches larges)
-   - [ ] **Pièce FIXÉE** (étau, serre-joints) — JAMAIS tenue à la main
-   - [ ] **Vitesse adaptée** au matériau (aluminium : lent, plastique : moyen)
-   - [ ] **Zone dégagée** autour de la perceuse
+   - ☐ **Lunettes de protection** portées (OBLIGATOIRE !)
+   - ☐ **Cheveux attachés** si longs
+   - ☐ **PAS de gants** (risque entraînement)
+   - ☐ **Vêtements près du corps** (pas de manches larges)
+   - ☐ **Pièce FIXÉE** (étau, serre-joints) — JAMAIS tenue à la main
+   - ☐ **Vitesse adaptée** au matériau (aluminium : lent, plastique : moyen)
+   - ☐ **Zone dégagée** autour de la perceuse
 
 Technique Sûre
 --------------
@@ -364,8 +375,8 @@ Intervention Incendie
 
    **Sinon : ÉVACUEZ et appelez les pompiers (18)**
 
-Utilisation Extincteur
-----------------------
+Utilisation de l’Extincteur
+---------------------------
 
 #. **Retirer la goupille** de sécurité
 #. **Viser la base** des flammes avec la lance
@@ -423,8 +434,8 @@ Le tableau suivant indique le niveau de compétence requis et les risques associ
    Les étapes marquées « MORTEL » nécessitent une **formation en électricité** ou
    la **supervision d’un électricien qualifié**.
 
-   **En France, l’installation finale DOIT être réalisée par un électricien certifié**
-   pour la conformité NF C 15-100 et la couverture d’assurance.
+   **Pour l’installation finale, l’intervention d’un électricien qualifié est fortement recommandée**,
+   pour la conformité NF C 15-100 et la couverture d’assurance.
 
 ====================
 Procédures d’Urgence
@@ -516,25 +527,25 @@ Numéros d’Urgence (France)
 
    Soudure :
    
-   - [ ] J’ai déjà soudé des composants électroniques (au moins 10 fois)
-   - [ ] Je sais reconnaître une bonne soudure d’une mauvaise
-   - [ ] Je sais comment dessouder un composant
+   - ☐ J’ai déjà soudé des composants électroniques (au moins 10 fois)
+   - ☐ Je sais reconnaître une bonne soudure d’une mauvaise
+   - ☐ Je sais comment dessouder un composant
 
    Électricité :
    
-   - [ ] Je comprends la différence entre AC et DC
-   - [ ] Je sais utiliser un multimètre (mesurer tension, continuité)
-   - [ ] Je connais les dangers du 230 V AC
-   - [ ] Je sais comment couper l’alimentation au tableau électrique
-   - [ ] J’ai déjà câblé un circuit domestique OU je serai supervisé par un électricien
+   - ☐ Je comprends la différence entre AC et DC
+   - ☐ Je sais utiliser un multimètre (mesurer tension, continuité)
+   - ☐ Je connais les dangers du 230 V AC
+   - ☐ Je sais comment couper l’alimentation au tableau électrique
+   - ☐ J’ai déjà câblé un circuit domestique OU je serai supervisé par un électricien
 
    Mécanique :
    
-   - [ ] J’ai déjà utilisé une perceuse
-   - [ ] Je sais comment sécuriser une pièce pour perçage
-   - [ ] Je possède ou ai accès aux outils nécessaires
+   - ☐ J’ai déjà utilisé une perceuse
+   - ☐ Je sais comment sécuriser une pièce pour perçage
+   - ☐ Je possède ou ai accès aux outils nécessaires
 
-   **Si vous avez coché NON à plus de 2 questions :**
+   **Si plus de 2 cases restent non cochées :**
 
    - → Formez-vous AVANT de commencer ce projet
    - → Ou faites-vous aider par quelqu’un d’expérimenté
@@ -571,33 +582,33 @@ Checklist Avant Assemblage
 
    Lecture :
    
-   - [ ] J’ai lu et compris ce chapitre sécurité ENTIÈREMENT
-   - [ ] J’ai lu la documentation technique pertinente
-   - [ ] Je comprends les étapes du projet
+   - ☐ J’ai lu et compris ce chapitre sécurité ENTIÈREMENT
+   - ☐ J’ai lu la documentation technique pertinente
+   - ☐ Je comprends les étapes du projet
 
    Équipement de sécurité :
    
-   - [ ] Lunettes de protection
-   - [ ] Extincteur ABC (2 kg min, vérifié)
-   - [ ] Détecteur de fumée fonctionnel
-   - [ ] Trousse premiers secours
-   - [ ] Testeur de tension (pour étapes 230 V)
-   - [ ] Gants isolants (pour étapes 230 V)
+   - ☐ Lunettes de protection
+   - ☐ Extincteur ABC (2 kg min, vérifié)
+   - ☐ Détecteur de fumée fonctionnel
+   - ☐ Trousse premiers secours
+   - ☐ VAT bipolaire (pour étapes 230 V)
+   - ☐ Gants isolants (pour étapes 230 V)
 
    Environnement :
    
-   - [ ] Espace de travail dégagé et bien éclairé
-   - [ ] Surface de travail ininflammable
-   - [ ] Ventilation suffisante
-   - [ ] Quelqu’un informé de mon activité (en cas d’urgence)
-   - [ ] Téléphone à portée pour appel secours
+   - ☐ Espace de travail dégagé et bien éclairé
+   - ☐ Surface de travail ininflammable
+   - ☐ Ventilation suffisante
+   - ☐ Quelqu’un informé de mon activité (en cas d’urgence)
+   - ☐ Téléphone à portée pour appel secours
 
    Compétences :
 
-   - [ ] Je possède les compétences requises OU j’ai supervision adaptée
-   - [ ] J’ai pratiqué la soudure sur kit d’entraînement
-   - [ ] Je connais l’emplacement du disjoncteur principal
-   - [ ] Je connais les gestes premiers secours de base
+   - ☐ Je possède les compétences requises OU j’ai supervision adaptée
+   - ☐ J’ai pratiqué la soudure sur kit d’entraînement
+   - ☐ Je connais l’emplacement du disjoncteur principal
+   - ☐ Je connais les gestes premiers secours de base
 
 Reconnaissance de Risques
 =========================
