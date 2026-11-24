@@ -9,7 +9,7 @@ Pour les Utilisateurs Avancés
 Avantages
 ~~~~~~~~~
 
-- Gestion automatique des bibliothèques (ArduinoJson, OneWire, U8g2...)
+- Gestion automatique des bibliothèques (OneWire, RFM69, et U8g2 pour le monophasé)
 - Support C++17 natif (pas besoin de modifier `platform.txt`)
 - Compilations plus rapides
 - Meilleure intégration avec Git
@@ -117,7 +117,7 @@ Ouverture du Projet
 #. Naviguer vers le dossier du firmware :
 
    - Mono : `PVRouter-1-phase-dev/Mk2_1phase_RFdatalog_temp/`
-   - Tri : `PVRouter-3-phase-main/Mk2_3phase_RFdatalog_temp/`
+   - Tri : `PVRouter-3-phase-dev/Mk2_3phase_RFdatalog_temp/`
 
 #. PlatformIO détecte automatiquement le fichier `platformio.ini`
 #. Le projet s’ouvre avec tous les fichiers visibles dans l’explorateur
@@ -128,7 +128,7 @@ Configuration du Projet
 PlatformIO télécharge **automatiquement** :
 
 - Le compilateur AVR-GCC avec support C++17
-- Les bibliothèques nécessaires (ArduinoJson 6.x, OneWire, U8g2...)
+- Les bibliothèques nécessaires (OneWire, RFM69, et U8g2 pour le monophasé)
 - Les outils de programmation
 
 .. note::
@@ -146,11 +146,13 @@ Compilation et Téléversement
 Sélection de la Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le firmware contient plusieurs environnements préconfigurés :
+Les deux firmwares contiennent les mêmes environnements préconfigurés :
 
-- `env:release` : Version normale
-- `env:temperature` : Version avec support sondes de température
-- `env:debug` : Version avec messages de débogage supplémentaires
+- `env:basic` : le firmware du routeur, **environnement par défaut** : c’est celui à utiliser
+- `env:basic_debug` : le même firmware compilé en mode débogage, pour les développeurs
+- `env:native`, `env:uno_sim` : tests unitaires et simulateur, réservés au développement
+
+Les options (sondes de température, module RF, relais…) ne dépendent pas de l’environnement : elles se règlent dans `config.h`.
 
 Pour changer d’environnement :
 

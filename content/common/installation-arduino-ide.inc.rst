@@ -193,36 +193,22 @@ Ouvrir le Gestionnaire de bibliothèques
 #. Menu : **Outils → Gérer les bibliothèques...**
 #. Une fenêtre « Gestionnaire de bibliothèques » s’ouvre
 
-Installation de ArduinoJson
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installation des bibliothèques du firmware triphasé
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Dans le champ de recherche, taper : `ArduinoJson`
-#. Trouver la bibliothèque **« ArduinoJson »** par Benoit Blanchon
-#. ⚠️ **IMPORTANT** : Installer la version **6.x** (PAS la version 7 !)
+Pour chacune des bibliothèques ci-dessous, taper son nom dans le champ de recherche, choisir la bonne (auteur indiqué) puis cliquer sur **« Installer »** :
 
-   - Version 6.21.5 recommandée
-   - La version 7 est **incompatible** avec l’ATmega328P
+- **OneWire** par Jim Studt et al. (version 2.3.7 ou supérieure) : sondes de température DS18B20
+- **RFM69** par Felix Rusu, LowPowerLab (version 1.5.3 ou supérieure) : module radio RFM69CW
+- **SPI** : incluse avec l’Arduino IDE, rien à installer
 
-#. Cliquer sur **« Installer »**
-
-.. warning::
-   Ne pas installer ArduinoJson version 7.x — elle ne fonctionnera pas sur l’ATmega328P !
-
-Installation de OneWire
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Cette bibliothèque gère les sondes de température (optionnelles).
-
-#. Dans le champ de recherche, taper : `OneWire`
-#. Trouver **« OneWire »** par Paul Stoffregen
-#. ⚠️ Installer la version **2.3.7 ou supérieure**
-#. Cliquer sur **« Installer »**
+Elles sont toutes nécessaires, même sans sonde de température ni module RF : le firmware les inclut toujours, et le code inutilisé est éliminé à la compilation. Sans l’une d’elles, la compilation échoue. Voir le `Readme du firmware <https://github.com/FredM67/PVRouter-3-phase/blob/dev/Mk2_3phase_RFdatalog_temp/Readme.md#bibliothèques-requises-pour-larduino-ide>`_.
 
 Vérification
 ~~~~~~~~~~~~
 
 #. Menu : **Croquis → Inclure une bibliothèque**
-#. Vérifier la présence de : **ArduinoJson**, **OneWire**
+#. Vérifier la présence de : **OneWire**, **RFM69**
 
 .. tip::
    Si les bibliothèques n’apparaissent pas, redémarrer Arduino IDE.
