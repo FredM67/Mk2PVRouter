@@ -91,6 +91,9 @@ Options disponibles :
 - `IoT` : Format compact pour le module mk2Wifi et Home Assistant (9600 bauds, 7E1)
 - `JSON` : Format JSON pour intégration domotique
 
+.. important::
+   Avec le module mk2Wifi, **repassez en mode** `IoT` après les premiers tests, puis recompilez et téléversez : le module ne comprend que ce mode.
+
 .. note::
    Dans tous les modes, le routeur affiche sa configuration au démarrage, pour vérifier avec quels réglages il tourne. En mode `IoT`, il le fait à 9600 bauds 8N1 (le réglage par défaut du moniteur série), puis passe en 7E1 : les caractères illisibles qui suivent dans le moniteur série sont normaux. En mode `JSON`, ces lignes précèdent la première ligne JSON. Les messages d’état en cours de fonctionnement (relais, rotation des priorités, heures creuses…) ne s’affichent qu’en mode `HumanReadable`.
 

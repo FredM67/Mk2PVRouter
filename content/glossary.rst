@@ -150,7 +150,7 @@ Termes de Base pour Débutants
 
    Électrocution
      | **Décès causé** par un choc électrique.
-     | Le danger dépend de la tension, de l’humidité du milieu et du trajet du courant dans le corps : une tension bien inférieure à 230 V peut déjà être dangereuse.
+     | Le danger dépend de la tension, de l’humidité du milieu et du trajet du courant dans le corps. La NF C 15-100 fixe la tension limite de sécurité à **50 V en alternatif** (120 V en continu) en milieu sec, et à **25 V en alternatif** (60 V en continu) en milieu humide : au-delà, le contact est dangereux.
      | ⚠️ **DANGER DE MORT** : Le 230 V domestique peut tuer instantanément.
 
    Firmware
@@ -238,7 +238,7 @@ Termes Techniques Avancés
    GDT
      | *Gas Discharge Tube* ou éclateur à gaz.
      | Composant de protection contre les surtensions qui s’amorce lorsqu’une tension transitoire dépasse son seuil.
-     | Les GDT0–GDT3 sur la carte universelle forment la première ligne de défense parafoudre.
+     | Sur la carte universelle, chaque éclateur GDT0–GDT3 est monté en série avec la varistance de même numéro (RV0–RV3), après les fusibles, entre un conducteur et la terre : ils se montent toujours par paire.
 
    MOV
      | *Metal Oxide Varistor* ou varistance à oxyde métallique.

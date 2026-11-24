@@ -37,7 +37,7 @@ Contenu du kit
 
 Dans le kit, vous trouverez :
 
-* le circuit imprimé (:term:`PCB`) de la carte-mère universelle (composants :term:`CMS` déjà soudés en usine)
+* le circuit imprimé (:term:`PCB`) de la carte-mère universelle (composants :term:`CMS` déjà soudés en usine, sauf les éclateurs GDT optionnels)
 * les composants traversants à souder (le nombre dépend de votre configuration, voir :ref:`choix-configuration`)
 * un circuit imprimé par sortie :term:`triac <Triac>`
 * une carte indicateur LED par étage de sortie (voir :ref:`carte-indicateur`)
@@ -91,7 +91,7 @@ L’assemblage complet va nécessiter plusieurs étapes :
 Recommandations pour les étapes de soudure
 ------------------------------------------
 
-La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Vous n’avez qu’à souder les composants **traversants** (through-hole). Certains composants (microcontrôleur, optocoupleur) sont sensibles à l’électricité statique — manipulez-les avec soin et, si possible, mettez-vous à la terre pour éviter toute décharge électrostatique.
+La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine, sauf les éclateurs GDT optionnels. Vous n’avez qu’à souder les composants **traversants** (through-hole) et, si vous les montez, ces éclateurs. Certains composants (microcontrôleur, optocoupleur) sont sensibles à l’électricité statique — manipulez-les avec soin et, si possible, mettez-vous à la terre pour éviter toute décharge électrostatique.
 
 Composants polarisés
 ~~~~~~~~~~~~~~~~~~~~

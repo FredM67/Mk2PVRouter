@@ -109,6 +109,9 @@ Options disponibles :
 - `IoT` : Format compact pour le module mk2Wifi et Home Assistant (9600 bauds, 7E1)
 - `JSON` : Format JSON pour intégration domotique
 
+.. important::
+   Avec le module mk2Wifi, **repassez en mode** `IoT` après les premiers tests, puis recompilez et téléversez : le module ne comprend que ce mode.
+
 Sonde 2 (CT2) et Afficheur
 ##########################
 

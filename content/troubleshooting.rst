@@ -81,8 +81,8 @@ Effectuez ces vérifications dans l’ordre :
 
     - Mono : FS0, FS1
     - Tri : FS0, FS1, FS2, FS3
-    - Vérifier avec multimètre en mode continuité
-    - Un fusible grillé indique un court-circuit
+    - Vérifier avec multimètre en mode continuité, **routeur hors tension** : un fusible intact laisse passer le courant (le multimètre bipe, environ 0 Ω) ; un fusible fondu est ouvert (pas de bip)
+    - Un fusible fondu a coupé une surintensité : cherchez-en la cause avant de le remplacer (voir :ref:`fusible-grille`)
 
  #. ☐ Tension au point Test VCC = 3,3 V ou 5 V ?
 
@@ -107,7 +107,7 @@ Vérifier les composants d’alimentation :
 
  #. ☐ **Chaîne d’alimentation bien soudée ?**
 
-    - Connecteur PWR1, fusibles (Mono : FS0, FS1 ; Tri : FS0 à FS3), module PS1, diode D1 (SMBJ7.0A), régulateur U1
+    - Composants traversants que vous avez soudés : connecteur secteur PWR1, fusibles (Mono : FS0, FS1 ; Tri : FS0 à FS3), module PS1 (les composants CMS, comme le régulateur U1, sont soudés en usine)
     - Soudures brillantes et lisses (pas ternes) ?
 
 .. include:: common/qualite-soudures.inc.rst
@@ -170,8 +170,8 @@ Causes Fréquentes — Résumé
    - Cause Probable
    - Solution
  * - Aucune tension VCC
-   - Fusible grillé
-   - Trouver le court-circuit, remplacer le fusible
+   - Fusible fondu
+   - Trouver le défaut qui l’a fait fondre (voir :ref:`fusible-grille`), puis remplacer le fusible par un fusible de même calibre
  * - Tension VCC faible (<3 V)
    - Régulateur U1 ou module PS1 défectueux
    - Vérifier l’orientation, remplacer
@@ -203,11 +203,10 @@ Vérifications de la Connexion FTDI
 
  #. ☐ **Câblage FTDI correct ?**
 
-    - **GND** (fil noir du câble FTDI) → broche 1 (**GND**, repère « GND> ») du connecteur FTDI (J0)
-    - **TX** de l’adaptateur (fil orange) → broche 4 (**RX** de l’ATmega328P)
-    - **RX** de l’adaptateur (fil jaune) → broche 5 (**TX** de l’ATmega328P)
-    - **DTR** (fil vert, RTS, sur le câble FTDI) → broche 6 (**DTR**) : reset automatique, indispensable
-    - VCC (fil rouge) : non utilisé, le laisser libre (la broche 3 n’est reliée à rien sur la carte)
+    - Adaptateur FTDI branché broche à broche sur le connecteur FTDI (J0), **GND** de l’adaptateur sur la broche 1 (repère « GND> »)
+    - **TX** de l’adaptateur → broche 4 (**RX** de l’ATmega328P), **RX** de l’adaptateur → broche 5 (**TX** de l’ATmega328P)
+    - **DTR** → broche 6 (**DTR**) : reset automatique, indispensable
+    - VCC : non utilisé (la broche 3 n’est reliée à rien sur la carte)
 
  #. ☐ **ATmega328P bien inséré ?**
 
@@ -299,7 +298,7 @@ Vérification via Moniteur Série
    - **Baud rate :** 9 600
    - **Fin de ligne :** sans importance (le routeur ne lit rien sur le port série)
 
-#. **Redémarrer le routeur** : l’ouverture du moniteur série le redémarre (signal DTR). Sinon, fermer puis rouvrir le moniteur série, ou couper puis remettre l’alimentation. La carte elle-même n’a pas de bouton reset ; un bouton externe peut se brancher sur son connecteur J1 « RESET ».
+#. **Redémarrer le routeur** : l’ouverture du moniteur série le redémarre (signal DTR). Sinon, fermer puis rouvrir le moniteur série, ou couper puis remettre l’alimentation. Le kit triphasé comprend un bouton reset monté en façade, relié au connecteur J1 « RESET » de la carte-mère : un appui redémarre le routeur.
 
 #. **Vous devriez voir**, après 3 secondes, la configuration du routeur, terminée par ``----``, puis une ligne de mesures toutes les 5 secondes (par défaut). Extrait d’une capture réelle, en triphasé avec la sortie ``HumanReadable`` :
 

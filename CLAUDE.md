@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **Sphinx documentation repository** for the **Mk2PVRouter** project - a DIY solar PV router for optimizing self-consumption of solar energy. The documentation is written entirely in **French** and covers assembly, installation, calibration, and troubleshooting of the universal **3phaseDiverter** board, which supports 4 configurations: single-phase (monophasé), 3-phase with neutral, 3-phase without neutral, and split-phase.
+This is a **Sphinx documentation repository** for the **Mk2PVRouter** project - a DIY solar PV router for optimizing self-consumption of solar energy. The documentation is written entirely in **French** and covers assembly, installation, calibration, and troubleshooting of the universal **3phaseDiverter** board, which supports 3 configurations: single-phase (monophasé), 3-phase with neutral, and 3 × 230 V without neutral.
 
 The actual firmware code and hardware designs are maintained in separate repositories linked as git submodules:
 - `1-phase/`: https://github.com/FredM67/PVRouter-1-phase

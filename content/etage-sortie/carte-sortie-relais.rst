@@ -27,11 +27,11 @@ Avantages pour les Appareils Électroniques
 Considérations Techniques
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les cartes-relais que nous utilisons ne sont pas conçues pour commuter des charges de grande puissance.
+Les cartes-relais que nous utilisons sont des cartes-relais standard, commandées à travers un optocoupleur. Elles ne sont pas conçues pour commuter des charges de grande puissance.
 En effet, chaque action de commutation (passage de **fermé** à **ouvert**, ou d’**ouvert** à **fermé**) peut potentiellement créer un arc électrique entre les contacts du relais.
 Cet arc peut, à terme, user les contacts. Il se peut qu’un jour, ces contacts restent collés (l’arc aurait en quelque sorte soudé les contacts ensemble) ou soient carbonisés, auquel cas ils ne pourraient plus conduire l’électricité.
 
-C’est pourquoi ces cartes-relais doivent être utilisées **uniquement** pour commander un relais de puissance réel, similaire aux contacteurs Heures Creuses/Heures Pleines que l’on trouve dans un tableau électrique.
+C’est pourquoi ces cartes-relais doivent être utilisées **uniquement** pour commander un relais de puissance réel : un contacteur modulaire de forte puissance (par exemple un Hager ETC225), similaire aux contacteurs Heures Creuses/Heures Pleines que l’on trouve dans un tableau électrique.
 
 .. note::
    **À retenir**

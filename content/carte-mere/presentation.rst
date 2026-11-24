@@ -252,7 +252,7 @@ Chaque sortie numérique (D2 à D13) dispose de **deux connecteurs Molex SL** su
 - **1×02** (2 broches) : GND, I/O
 - **1×03** (3 broches) : GND, I/O, +5 V
 
-Le connecteur **1×03** (GND, I/O, +5 V) sert à raccorder l’étage de sortie (:term:`triac <Triac>` ou relais), qui a besoin de l’alimentation. La broche +5 V de ces connecteurs est reliée au **rail +5 V**, activé par le cavalier **+5V Rail** (voir ci-dessous). Le connecteur **1×02** (GND, I/O) sert à raccorder la carte indicateur LED (voir :ref:`carte-indicateur`), qui n’a besoin que du signal de commande.
+Le connecteur **1×03** (GND, I/O, +5 V) sert aux **cartes de sortie relais**, qui ont besoin du +5 V pour leur bobine. La broche +5 V de ces connecteurs est reliée au **rail +5 V**, activé par le cavalier **+5V Rail** (voir ci-dessous). Le connecteur **1×02** (GND, I/O) sert à l’**étage de sortie** :term:`triac <Triac>`, qui n’a besoin que du signal de commande : ses deux connecteurs 2 broches sont en parallèle, la carte indicateur LED se branche sur le second (voir :ref:`carte-indicateur`). Avec une carte relais sur le 1×03, la carte indicateur peut se brancher sur le 1×02.
 
 .. list-table:: Disponibilité des sorties numériques
    :header-rows: 1
@@ -267,7 +267,7 @@ Le connecteur **1×03** (GND, I/O, +5 V) sert à raccorder l’étage de sortie
    * - D4
      - Libre
    * - D5#–D9#
-     - Sorties de déclenchement (TRIG_EXT). Marquées d’un **dièse (#)** sur la sérigraphie pour indiquer qu’elles sont partagées avec le module :term:`mk2Wifi`. Utilisées par le mk2Wifi si celui-ci est présent et que le cavalier correspondant est fermé (voir ci-dessous). Libres sinon.
+     - Broches du routeur reliées au connecteur TRIG_EXT, marquées d’un **dièse (#)** sur la sérigraphie car partagées avec le module :term:`mk2Wifi`. Par défaut, les charges sont sur D5–D7 en triphasé (D5 en monophasé) ; le mk2Wifi peut piloter les autres comme entrées du routeur (marche forcée, arrêt du routage…), voir :ref:`presentation-mk2wifi`. Utilisées par le mk2Wifi si celui-ci est présent et que le cavalier correspondant est fermé (voir ci-dessous). Libres sinon.
    * - D10\*
      - SPI SS — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
    * - D11\*
@@ -302,9 +302,9 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
 **CT à sortie courant** — solution de dépannage, avec burden THT
    La carte est conçue pour des CT à sortie tension 333 mV. Un CT à sortie courant avec sa résistance de :term:`burden <Burden>` n’est qu’une solution de dépannage, par exemple en attendant des CT 333 mV.
 
-   Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden <Burden>` soudée sur la carte, aux emplacements sérigraphiés **D13** / **D23** / **D33** (R18 / R28 / R38 sur le schéma), un par connecteur CT1 / CT2 / CT3.
+   Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden <Burden>` soudée sur la carte, une par connecteur CT1 / CT2 / CT3 (R18 / R28 / R38 sur le schéma).
 
-   Ces emplacements sont des **empreintes doubles**, repérées sur le circuit imprimé par le nom de la diode : une diode :term:`TVS` de protection (D13 / D23 / D33) est déjà soudée en usine (côté :term:`CMS`). Elle protège l’entrée de l’:term:`ADC` dans le cas où un CT à sortie courant serait branché sans burden. La résistance de burden THT se soude **par-dessus** la TVS, sur les mêmes pastilles.
+   Elle n’a pas d’empreinte propre : elle partage celle de la diode :term:`TVS` :term:`CMS` de protection **D13** / **D23** / **D33**, déjà soudée en usine, qui protège l’entrée de l’:term:`ADC` si un CT à sortie courant est branché sans burden. Cette empreinte double comporte, en plus des pastilles CMS de la diode, **deux trous traversants** au pas de 12,7 mm reliés aux mêmes signaux : la résistance s’y soude, **par-dessus** la diode, qui reste en place.
 
    La valeur du burden doit être calculée pour que la tension crête ne dépasse pas **0,55 V** (soit la moitié de la plage :term:`ADC` avec VREF = 1,1 V) :
 
