@@ -81,8 +81,8 @@ Effectuez ces vérifications dans l’ordre :
 
     - Mono : FS0, FS1
     - Tri : FS0, FS1, FS2, FS3
-    - Vérifier avec multimètre en mode continuité
-    - Un fusible grillé indique un court-circuit
+    - Vérifier avec multimètre en mode continuité, **routeur hors tension** : un fusible intact laisse passer le courant (le multimètre bipe, environ 0 Ω) ; un fusible fondu est ouvert (pas de bip)
+    - Un fusible fondu a coupé une surintensité : cherchez-en la cause avant de le remplacer (voir :ref:`fusible-grille`)
 
  #. ☐ Tension au point Test VCC = 3,3 V ou 5 V ?
 
@@ -170,8 +170,8 @@ Causes Fréquentes — Résumé
    - Cause Probable
    - Solution
  * - Aucune tension VCC
-   - Fusible grillé
-   - Trouver le court-circuit, remplacer le fusible
+   - Fusible fondu
+   - Trouver le défaut qui l’a fait fondre (voir :ref:`fusible-grille`), puis remplacer le fusible par un fusible de même calibre
  * - Tension VCC faible (<3 V)
    - Régulateur U1 ou module PS1 défectueux
    - Vérifier l’orientation, remplacer

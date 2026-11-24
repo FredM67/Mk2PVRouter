@@ -7,16 +7,15 @@
 Problèmes d’Alimentation et Tensions
 ====================================
 
+.. _fusible-grille:
+
 Fusible Saute Immédiatement
 ---------------------------
 
 .. danger::
- **DANGER — COURT-CIRCUIT PRÉSENT !**
+ **Un fusible qui fond a fait son travail** : il a coupé une surintensité causée par un défaut (court-circuit, varistance qui conduit, erreur de câblage).
 
- **NE PAS** remplacer le fusible sans trouver la cause !
-
- Un fusible qui saute protège contre incendie/destruction.
- Remplacer sans diagnostic = risque d’incendie.
+ **NE PAS** remplacer le fusible sans avoir trouvé et corrigé ce défaut : le nouveau fusible fondrait à son tour, et un fusible remplacé par un calibre plus fort ou ponté expose à un incendie.
 
 **Symptôme :** Fusible·s grille(nt) à la mise sous tension
 

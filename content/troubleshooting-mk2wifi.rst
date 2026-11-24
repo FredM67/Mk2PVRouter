@@ -149,7 +149,7 @@ La mise à jour OTA échoue
 
 **Si le module ne répond plus après un OTA raté :**
 
-- Revenir à la programmation par **USB-C** (voir procédure initiale dans :ref:`installation-mk2wifi`)
+- Revenir à la programmation par **USB-C**, routeur hors tension et **module débranché de la carte principale** (voir procédure initiale dans :ref:`installation-mk2wifi`) : ne jamais brancher le câble USB-C sur le module tant qu’il est enfiché sur la carte principale
 - Maintenir le bouton **Boot** (SW1) enfoncé pour entrer en mode téléchargement
 
 Écran OLED vide ou incorrect
