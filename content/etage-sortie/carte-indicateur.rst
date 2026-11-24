@@ -27,7 +27,7 @@ La carte indicateur est un petit :term:`PCB` dédié qui porte une LED témoin.
 - **LED éteinte** : la sortie est inactive (courant coupé)
 - **LED clignotante** : régulation en cours (voir :ref:`principe-fonctionnement:Fonctionnement des LED`)
 
-Il faut **une carte indicateur par étage de sortie** (triac ou relais). Chaque carte se connecte au signal de commande de l’étage de sortie correspondant via un câble Molex 2 broches.
+Il faut **une carte indicateur par étage de sortie** (triac ou relais). Chaque carte se connecte au signal de commande de l’étage de sortie correspondant via un câble Molex 2 broches : broche 1 = masse, broche 2 = signal (+), comme sur la carte-mère et l’étage de sortie (câble droit, broche 1 ↔ broche 1).
 
 Images de la carte
 ------------------
@@ -74,9 +74,9 @@ La carte ne comporte que 3 composants :
    * - Résistance 1 kΩ
      - Limitation du courant dans la LED (marquée **R1** sur la sérigraphie avant)
    * - Connecteur Molex 2 broches
-     - Signal de commande depuis l’étage de sortie ou la seconde rangée de connecteurs Molex de la carte-mère
+     - Signal de commande depuis le second connecteur Molex de l’étage de sortie (câblé en parallèle sur son entrée) ou la seconde rangée de connecteurs Molex de la carte-mère
    * - LED
-     - Témoin visuel (couleur au choix)
+     - Témoin visuel de 5 mm. Préférez le rouge ou le jaune : avec une carte-mère en 3,3 V et R1 = 1 kΩ, une LED bleue ou blanche n’éclaire presque pas
 
 Assemblage
 ----------
@@ -112,12 +112,12 @@ Ordre de soudure
 Montage dans le boîtier
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-La LED dépasse à travers un trou dans le couvercle du boîtier (perçage de 3 mm, voir :ref:`percages`). La carte est fixée sur la face intérieure du couvercle.
+La LED dépasse à travers un trou dans le couvercle du boîtier (perçage de 5 mm pour une LED de 5 mm, voir :ref:`percages`). La carte se place contre la face intérieure du couvercle ; son circuit imprimé ne comporte aucun trou de fixation.
 
 Connexion
 ~~~~~~~~~
 
-Le connecteur Molex se raccorde au signal de commande, via un câble Molex 2 fils. Le signal peut provenir soit de l’étage de sortie, soit de la seconde rangée de connecteurs Molex sur la carte-mère. Consultez :ref:`confection-cables` pour les longueurs recommandées.
+Le connecteur Molex se raccorde au signal de commande, via un câble Molex 2 fils. Le signal peut provenir soit du second connecteur Molex de l’étage de sortie, soit de la seconde rangée de connecteurs Molex sur la carte-mère. Consultez :ref:`confection-cables` pour les longueurs recommandées.
 
 .. admonition:: ✅ Point de Contrôle — Carte Indicateur
 
