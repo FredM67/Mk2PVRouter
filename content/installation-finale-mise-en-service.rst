@@ -27,7 +27,7 @@ Liste de Vérification Finale
 
    ☐ Aucun outil ne reste dans le tableau
 
-   ☐ Extincteur à portée de main
+   ☐ Extincteur CO₂ ou à poudre ABC à portée de main (jamais d’eau sur un feu électrique)
 
    ☐ Personne présente pour surveiller
 
@@ -55,8 +55,8 @@ Procédure de Mise Sous Tension
 
 #. **Vérifier le fonctionnement du Mk2PVRouter** :
 
-   - LED d'alimentation allumée
-   - Écran affiche des données (si présent)
+   - LED « ON » de la carte-mère allumée (alimentation 3,3 V présente)
+   - Au moniteur série (9600 bauds), le routeur affiche sa configuration au démarrage ; il attend quelques secondes avant de commencer à router, charges éteintes
    - Pas de bruit anormal
 
 #. **Enclencher les disjoncteurs des charges** un par un, en vérifiant après chaque enclenchement l'absence d'anomalie (odeur, grésillement, disjoncteur qui saute)
@@ -101,7 +101,7 @@ Test de Détection de Production
 #. **Simuler une production** (si possible, ou attendre production solaire)
 
    - Si injection réseau détectée → Le routeur doit activer la charge
-   - Puissance doit être affichée en négatif (injection)
+   - Tant que la charge absorbe tout le surplus, la puissance réseau reste proche de 0 W ; elle n’est négative (injection) que si le surplus dépasse la puissance des charges
 
 Test de Sécurité :term:`triac <Triac>`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -118,7 +118,7 @@ Test de Sécurité :term:`triac <Triac>`
 
    - La puissance routée doit diminuer en proportion
    - Dès que la consommation dépasse la production, la charge doit se désactiver complètement
-   - Aucune injection réseau ne doit subsister
+   - Aucune injection réseau ne doit subsister, sauf si le surplus dépasse la puissance des charges ou si un export volontaire est réglé (``REQUIRED_EXPORT_IN_WATTS``)
 
 Test de Coupure d'Urgence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -147,7 +147,7 @@ Le routeur ne s'allume pas
 
 ☐ Connexion d'alimentation desserrée
 
-☐ Transformateur d'alimentation défectueux
+☐ Module d’alimentation PS1 (MPC10-5) défectueux
 
 ☐ Court-circuit sur l'alimentation
 
@@ -168,7 +168,7 @@ Le routeur fonctionne à l'envers
 **Solution :**
 
 #. Couper le disjoncteur général
-#. Retourner le :term:`CT` (inverser le sens de la flèche), ou inverser les fils K ↔ L sur le connecteur jack
+#. Retourner le :term:`CT` (inverser le sens de la flèche), ou inverser les deux fils du câble jack côté connecteur Molex
 #. Remettre sous tension et retester
 
 La charge ne s'active jamais
@@ -184,6 +184,16 @@ La charge ne s'active jamais
 
 ☐ Problème logiciel (seuil de déclenchement trop élevé)
 
+☐ Eau déjà chaude : le thermostat du chauffe-eau est ouvert
+
+☐ Contacteur heures creuses ouvert en amont de l’étage de sortie
+
+☐ Étage de sortie relié à une autre broche que celle déclarée pour cette charge dans ``config.h``
+
+☐ Mode étalonnage resté actif (``CALIBRATION_MODE`` à ``true``) : aucune charge n’est commutée ; le moniteur série l’indique au démarrage par ``*** CALIBRATION MODE: no load will ever be switched ***``
+
+☐ Entrée d’arrêt du routage ou d’arrêt du routeur active (par exemple depuis Home Assistant avec le module mk2Wifi)
+
 **Actions :**
 
 #. Vérifier les logs du routeur (seuil, puissance mesurée)
@@ -196,20 +206,24 @@ Le disjoncteur saute
 
 **Causes possibles :**
 
+**Disjoncteur (magnéto-thermique)** – causes possibles :
+
 ☐ Court-circuit dans le routeur ou la charge
 
 ☐ Surcharge (charge trop puissante pour le calibre du disjoncteur)
 
-☐ Défaut d'isolation (fuite à la terre)
-
 ☐ Disjoncteur défectueux ou sous-dimensionné
+
+**Différentiel (30 mA)** – cause possible :
+
+☐ Défaut d’isolation (fuite à la terre) dans le routeur, l’étage de sortie ou la charge
 
 **Actions :**
 
 #. **NE PAS réenclencher immédiatement**
-#. Débrancher la charge du routeur
-#. Réenclencher le disjoncteur → Si le disjoncteur tient : Le problème vient de la charge
-#. Si le disjoncteur saute toujours : Le problème vient du routeur → Faire vérifier par un électricien
+#. Repérer l’appareil qui a déclenché (disjoncteur du routeur, disjoncteur de la charge ou différentiel)
+#. Disjoncteurs coupés, débrancher la charge de l’étage de sortie
+#. Réenclencher → si plus rien ne saute, le problème vient de la charge ; s’il saute encore, le problème vient du routeur ou de l’étage de sortie → Faire vérifier par un électricien
 
 Odeur de brûlé
 ^^^^^^^^^^^^^^
@@ -305,7 +319,7 @@ En cas de problème grave :
    #. **NE PAS toucher la victime** si encore sous tension
    #. **Couper le disjoncteur général IMMÉDIATEMENT**
    #. **Appeler le 15** (SAMU)
-   #. Pratiquer massage cardiaque si formation aux premiers secours
+   #. Pratiquer massage cardiaque si formation aux premiers secours, et utiliser un défibrillateur (DAE) s’il y en a un à proximité
    #. Ne pas déplacer la victime sauf danger immédiat
 
 Ressources Complémentaires
@@ -313,7 +327,7 @@ Ressources Complémentaires
 
 .. admonition:: 📚 Documentation Technique
 
-   - **Norme NF C 15-100** : https://www.promotelec.com/
+   - **Norme NF C 15-100** : publiée par l’AFNOR ; guides pratiques : https://www.promotelec.com/
    - **Guide Consuel** : https://www.consuel.com/
    - **Formation habilitation électrique** : Rechercher « formation habilitation électrique » + votre ville
 

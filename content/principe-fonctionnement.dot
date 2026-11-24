@@ -8,7 +8,7 @@ digraph Mk2PVRouter {
     // Étapes principales
     measure [label="Mesure du courant et de la tension\nau point de raccordement"];
     calculate [label="Calcul du bilan énergétique"];
-    decision [shape=diamond, label="Le bilan énergétique est-il :\nPositif, Nul ou Négatif ?"];
+    decision [shape=diamond, label="Niveau du réservoir d’énergie\n(bilan intégré à chaque cycle secteur) :\nau-dessus, entre ou au-dessous des seuils ?"];
     redirect [label="Triac passant"];
     no_action [label="Pas d’action"];
     disable [label="Triac ouvert"];
@@ -20,9 +20,9 @@ digraph Mk2PVRouter {
     calculate -> decision;
 
     // Cas du bilan énergétique
-    decision -> redirect [label="Positif"];
-    decision -> no_action [label="Nul"];
-    decision -> disable [label="Négatif"];
+    decision -> redirect [label="Au-dessus"];
+    decision -> no_action [label="Entre"];
+    decision -> disable [label="Au-dessous"];
 
     // Suite des actions
     redirect -> end;

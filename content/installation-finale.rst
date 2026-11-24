@@ -15,7 +15,7 @@ Cette section décrit la connexion du Mk2PVRouter au réseau électrique de votr
    Le contact avec des conducteurs sous tension peut provoquer :
 
    - **Décès par électrocution** (arrêt cardiaque, brûlures internes)
-   - **Brûlures graves** (arc électrique jusqu'à 3 000 °C)
+   - **Brûlures graves** (arc électrique : plusieurs milliers de °C)
    - **Incendie** (court-circuit, mauvaise connexion)
    - **Explosion** (défaut d'isolation)
 
@@ -24,36 +24,24 @@ Cette section décrit la connexion du Mk2PVRouter au réseau électrique de votr
 Exigences Légales en France
 ----------------------------
 
-Conformité Réglementaire Obligatoire
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Conformité Réglementaire
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-Selon la **norme NF C 15-100** (installations électriques basse tension en France) :
-
-☐ Installation par **électricien qualifié OBLIGATOIRE**
-
-   Seul un professionnel certifié peut légalement modifier une installation électrique
-
-☐ Conformité installation vérifiée par **Consuel**
-
-   Organisme de contrôle des installations électriques
-
-☐ Assurance habitation **DOIT être informée** de la modification
-
-   Toute modification non déclarée peut entraîner refus d'indemnisation
+La **norme NF C 15-100** fixe les règles techniques des installations électriques basse tension en France. Toute modification de votre installation doit les respecter, que vous la réalisiez vous-même ou que vous la confiiez à un électricien.
 
 ☐ Respect des normes électriques en vigueur
 
    NF C 15-100 + réglementations locales
 
+☐ Assurance habitation informée de la modification
+
+   Une modification non déclarée peut entraîner un refus d’indemnisation
+
 .. warning::
-   ⚠️ **CONSÉQUENCES LÉGALES**
+   ⚠️ **RISQUES EN CAS DE NON-CONFORMITÉ**
 
-   En cas de non-conformité :
-
-   - **Assurance habitation** : Refus d'indemnisation en cas de sinistre (incendie, dégât des eaux causé par installation défectueuse)
-   - **Vente immobilière** : Diagnostic électrique obligatoire, non-conformité bloque la vente
-   - **Responsabilité pénale** : En cas d'accident causé par installation non conforme
-   - **Amendes** : Jusqu'à 3 000 € pour installation non déclarée
+   - **Assurance habitation** : Refus d’indemnisation possible en cas de sinistre (incendie, dégât des eaux causé par une installation défectueuse)
+   - **Responsabilité** : Vous pouvez être tenu pour responsable d’un accident causé par une installation non conforme
 
 Recommandation Forte
 ^^^^^^^^^^^^^^^^^^^^^
@@ -82,27 +70,30 @@ Prérequis Avant Installation
 
    ☐ **Mk2PVRouter complètement assemblé et testé**
 
-      - Tous les tests logiciels effectués avec succès
-      - Étalonnage (calibration) terminé
+      - Tous les tests électriques et logiciels effectués avec succès
       - Aucun défaut détecté
+      - L’étalonnage se fait **après** l’installation, une fois les capteurs de courant en place (voir :ref:`etalonnage-monophase` ou :ref:`etalonnage-triphase`)
 
    ☐ **Disjoncteur général coupé et verrouillé**
 
       - Placer un cadenas si possible
-      - Afficher panneau « TRAVAUX EN COURS - NE PAS RÉENCLENCHER »
+      - Afficher panneau « TRAVAUX EN COURS - NE PAS RÉENCLENCHER »
+      - ⚠️ Disjoncteur général coupé, les câbles en amont (du compteur au disjoncteur de branchement) **restent sous tension**
+      - ⚠️ Un onduleur photovoltaïque ou un onduleur hybride à batterie peut réalimenter des circuits : arrêtez-le selon sa notice
 
-   ☐ **Absence de tension vérifiée avec multimètre**
+   ☐ **Équipements de protection individuelle portés** (voir ci-dessous) **avant** la vérification d’absence de tension
 
-      - Mesurer entre phase et neutre : 0 V
-      - Mesurer entre phase et terre : 0 V
-      - Refaire la mesure 3 fois pour être certain
+   ☐ **Absence de tension vérifiée avec un VAT** (vérificateur d’absence de tension bipolaire)
+
+      - Tester le VAT sur une source sous tension connue **avant** et **après** la vérification
+      - Vérifier entre tous les conducteurs : phase–neutre, phase–terre, neutre–terre, et entre phases en triphasé
 
    ☐ **Personne qualifiée présente** (si vous n'êtes pas électricien)
 
       - En cas d'accident, quelqu'un doit pouvoir intervenir
       - Connaissance des gestes de premiers secours recommandée
 
-   ☐ **Téléphone à portée de main** pour appeler les secours (15 ou 18)
+   ☐ **Téléphone à portée de main** pour appeler les secours (15, 18 ou 112)
 
 Matériel de Sécurité Requis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -110,7 +101,7 @@ Matériel de Sécurité Requis
 Équipement de Protection Individuelle (EPI)
 """"""""""""""""""""""""""""""""""""""""""""
 
-☐ **Gants isolants classe 00** (minimum 500 V :term:`AC`)
+☐ **Gants isolants classe 0** (1 000 V :term:`AC`)
 
 ☐ **Chaussures de sécurité isolantes** (semelle isolée)
 
@@ -123,9 +114,9 @@ Matériel de Sécurité Requis
 Équipement de Mesure et Outils
 """""""""""""""""""""""""""""""
 
-☐ **Multimètre numérique** CAT III ou CAT IV (600 V minimum)
+☐ **Multimètre numérique** CAT III 600 V minimum
 
-☐ **Testeur de tension sans contact** (VAT — Voltage Alert Tester)
+☐ **VAT** (vérificateur d’absence de tension) bipolaire, à contact, conforme NF EN 61243-3. Un détecteur de tension sans contact peut compléter le VAT, jamais le remplacer : il ne prouve pas l’absence de tension.
 
 ☐ **Tournevis isolés** 1 000 V
 
