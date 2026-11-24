@@ -216,7 +216,7 @@ Une fois les agrafes de cuivre mises en place, il est temps d’installer les co
 
 Selon le plan du circuit :
 
-* La résistance **R1** doit être de **120 Ω** si le circuit est alimenté en **3,3 V**, ou de **180 Ω** pour une alimentation en **5 V**.
+* La résistance **R1** doit être de **220 Ω** si le circuit est alimenté en **3,3 V**, ou de **390 Ω** pour une alimentation en **5 V**.
 * La résistance **R2** doit avoir une valeur de **330 Ω**.
 * La résistance **R3** doit être de **360 Ω**.
 
