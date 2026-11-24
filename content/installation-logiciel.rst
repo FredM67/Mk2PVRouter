@@ -6,6 +6,8 @@ Installation des Logiciels
 
 Ce chapitre détaille l’installation de l’environnement de développement nécessaire pour programmer le Mk2PVRouter. Pour le téléchargement et la configuration du firmware, voir :ref:`logiciel-monophase` (monophasé) ou :ref:`logiciel-triphase` (triphasé).
 
+Chaque firmware a aussi son site (en anglais), avec la documentation du code : `PVRouter-1-phase <https://fredm67.github.io/PVRouter-1-phase/>`_ (monophasé) et `PVRouter-3-phase <https://fredm67.github.io/PVRouter-3-phase/>`_ (triphasé).
+
 ⏱️ **Temps estimé :**
 
 - Débutant : 2–3 heures
