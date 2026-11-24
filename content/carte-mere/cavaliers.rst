@@ -33,7 +33,7 @@ Vue d’ensemble
      - Fonction
    * - V sel.
      - 3
-     - Alimentation ATmega328P : 3–centre = 3,3 V (défaut), 1–centre = 5 V
+     - Alimentation ATmega328P : 1–centre = 3,3 V (défaut, pont de cuivre d’usine), 3–centre = 5 V
    * - SDA
      - 3
      - Mesure tension L3 / I2C : 1–centre = tension L3, 3–centre = I2C SDA (OLED)
@@ -64,14 +64,16 @@ V sel. — Alimentation ATmega328P
 
 Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélectionne la tension d’alimentation du microcontrôleur.
 
-- **Position 3–centre** (défaut) : L’ATmega328P est alimenté en 3,3 V via le régulateur :term:`LDO` U1 (AP7361C-33E)
-- **Position 1–centre** : L’ATmega328P est alimenté directement en 5 V depuis le module PS1 (MPC10-5)
+- **Position 1–centre** (défaut) : L’ATmega328P, le module RF et le module :term:`mk2Wifi` sont alimentés en 3,3 V par le régulateur :term:`LDO` U1 (AP7361C-33E). La pastille 1 est celle située du côté de la sérigraphie « 3V3 Reg. ».
+- **Position 3–centre** : L’ATmega328P est alimenté directement en 5 V depuis le module PS1 (MPC10-5)
+
+La position 1–centre est **déjà fermée d’usine** par une fine piste de cuivre entre la pastille 1 et la pastille centrale : il n’y a **rien à souder** pour un fonctionnement en 3,3 V. Pour passer en 5 V, il faut d’abord couper cette piste au cutter, vérifier au multimètre qu’elle est bien ouverte, puis souder le pont 3–centre.
 
 .. warning::
-   Si le module RF (RFM69CW) et/ou le module :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** être en position **3–centre (3,3 V)**. Le module RF fonctionne en 3,3 V et les broches GPIO de l’ESP32-C6 ne tolèrent que 3,3 V — une tension de 5 V sur ces lignes les **endommagerait irrémédiablement**.
+   Si le module RF (RFM69CW) et/ou le module :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** rester en position **1–centre (3,3 V)**. Le module RF fonctionne en 3,3 V et les broches GPIO de l’ESP32-C6 ne tolèrent que 3,3 V — une tension de 5 V sur ces lignes les **endommagerait irrémédiablement**.
 
 .. important::
-   Après avoir soudé le cavalier en position **3–centre (3,3 V)**, vérifiez au multimètre (mode continuité) qu’il n’y a **pas de court-circuit** entre la pastille centrale et la pastille **1 (5 V)**. Un pont de soudure accidentel entre les deux côtés relierait le 5 V directement au 3,3 V, ce qui **détruirait le régulateur LDO, le module RF et/ou le module mk2Wifi**.
+   Ne déposez **jamais** de soudure entre la pastille centrale et la pastille **3 (5 V)** tant que le pont d’usine 1–centre est en place : cela relierait le 5 V directement à la sortie du régulateur 3,3 V, ce qui **détruirait le régulateur LDO, le module RF et/ou le module mk2Wifi**. Vérifiez au multimètre (mode continuité) qu’il n’y a **pas de continuité** entre la pastille centrale et la pastille 3.
 
 SDA — Mesure tension L3 / I2C SDA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -155,7 +157,7 @@ Procédure de soudure des cavaliers
 
 #. **Identifiez le cavalier** sur la carte à l’aide des repères sérigraphiés (V sel., SDA, SCL, IRQ, NSS, TEMP)
 
-#. **Pour les cavaliers 3 pôles** (V sel., SDA, SCL, TEMP) : Déposez une goutte de soudure entre la pastille centrale et la pastille correspondant à la position souhaitée
+#. **Pour les cavaliers 3 pôles** (SDA, SCL, TEMP ; V sel. est déjà fermé d’usine, voir ci-dessus) : Déposez une goutte de soudure entre la pastille centrale et la pastille correspondant à la position souhaitée
 
 #. **Pour les cavaliers 2 pôles** (IRQ, NSS, +5V Rail) : Déposez une goutte de soudure entre les deux pastilles
 
@@ -165,7 +167,7 @@ Procédure de soudure des cavaliers
 
    Avant de continuer, vérifiez :
 
-   | ☐ V sel. configuré en position 3,3 V (sauf cas particulier)
+   | ☐ V sel. laissé dans sa position d’usine 1–centre (3,3 V), sans soudure côté pastille 3
    | ☐ SDA configuré selon votre configuration (tension L3 ou I2C SDA)
    | ☐ SCL configuré selon votre configuration (courant L3 ou I2C SCL)
    | ☐ TEMP configuré selon votre choix (non soudé, routeur ou mk2Wifi)

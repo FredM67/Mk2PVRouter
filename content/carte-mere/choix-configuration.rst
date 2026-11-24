@@ -234,10 +234,10 @@ Résumé rapide :
      - Tri-N
      - Split
    * - V sel.
-     - 3–centre (3,3 V)
-     - 3–centre (3,3 V)
-     - 3–centre (3,3 V)
-     - 3–centre (3,3 V)
+     - 1–centre (3,3 V, d’usine)
+     - 1–centre (3,3 V, d’usine)
+     - 1–centre (3,3 V, d’usine)
+     - 1–centre (3,3 V, d’usine)
    * - SDA
      - 3–centre (I2C SDA)
      - 1–centre (tension L3)

@@ -34,11 +34,11 @@ Avant toute mise sous tension, effectuez les vérifications suivantes au multim�
 
    ☐ +3,3 V ↔ GND : doit être **circuit ouvert** (pas de continuité)
 
-#. **Vérifiez le cavalier V sel.** (si soudé en position 3,3 V) :
+#. **Vérifiez le cavalier V sel.** (position d’usine 3,3 V) :
 
-   ☐ Continuité entre la pastille **centre** et la pastille **3 (3,3 V)**
+   ☐ Continuité entre la pastille **centre** et la pastille **1 (3,3 V, côté « 3V3 Reg. »)**
 
-   ☐ **Pas de continuité** entre la pastille **centre** et la pastille **1 (5 V)** — un court-circuit ici détruirait le régulateur LDO, le module RF et/ou le module mk2Wifi
+   ☐ **Pas de continuité** entre la pastille **centre** et la pastille **3 (5 V)** — un court-circuit ici détruirait le régulateur LDO, le module RF et/ou le module mk2Wifi
 
 #. **Vérifiez les fusibles** (si soudés) :
 
