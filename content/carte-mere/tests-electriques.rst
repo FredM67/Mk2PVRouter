@@ -30,9 +30,11 @@ Avant toute mise sous tension, effectuez les vérifications suivantes au multim�
 
 #. **Vérifiez l’absence de court-circuit** entre les rails d’alimentation :
 
-   ☐ +5 V ↔ GND : doit être **circuit ouvert** (pas de continuité)
+   ☐ +5 V ↔ GND (points de test **+5V** et **GND**) : doit être **circuit ouvert** (pas de continuité)
 
-   ☐ +3,3 V ↔ GND : doit être **circuit ouvert** (pas de continuité)
+   ☐ +3,3 V ↔ GND (points de test **+3.3V** et **GND**) : doit être **circuit ouvert** (pas de continuité)
+
+   Un bip bref au moment du contact est normal : les condensateurs de filtrage (dont C3, 220 µF, sur le +5 V) se chargent. Un bip continu indique un court-circuit.
 
 #. **Vérifiez le cavalier V sel.** (position d’usine 3,3 V) :
 
@@ -52,8 +54,9 @@ Premier test sous tension
 
    Ce test nécessite la connexion au secteur. Prenez toutes les précautions nécessaires :
 
-   - Disjoncteur facilement accessible
-   - Aucun contact avec la carte sous tension
+   - Disjoncteur facilement accessible, circuit protégé par un différentiel 30 mA
+   - Carte posée sur une surface isolante et sèche
+   - Aucun contact avec la carte sous tension : tenez les pointes de touche par leur partie isolée, d’une seule main si possible, et ne touchez jamais les pastilles côté secteur
 
 .. warning::
    Le support IC1 doit être **VIDE** (pas d’ATmega328P) pendant ce test. L’insertion du microcontrôleur se fait après validation de l’alimentation.
@@ -85,12 +88,18 @@ Test du rail +3,3 V
 
    ❌ Si la tension est absente, vérifiez le rail +5 V d’abord
 
-#. **Vérifiez la LED « ON »** (en haut à gauche de la carte) : elle doit être allumée, confirmant que le rail +3,3 V est actif
+#. Mesurez aussi entre le point de test **VCC** (alimentation de l’ATmega328P, après le cavalier V sel.) et **GND** : **3,3 V**. Si vous lisez 5 V, coupez immédiatement : V sel. est mal ponté (voir :ref:`cavaliers`).
+
+#. **Vérifiez la LED « ON »** (en haut à gauche de la carte) : elle doit être allumée, confirmant que le rail +3,3 V est actif
+
+#. **Laissez la carte sous tension** environ 1 minute, sans la toucher
 
 #. **Coupez l’alimentation secteur** et attendez 1 minute avant toute manipulation
 
+#. **Vérifiez du bout du doigt**, hors tension, qu’aucun composant n’est chaud
+
 .. note::
-   La tension de référence VREF (1,1 V, bufferisée par l’amplificateur opérationnel LMV321A) ne peut être vérifiée qu’après insertion de l’ATmega328P **et** exécution du firmware. C’est le firmware qui active la référence interne 1,1 V du microcontrôleur. Ce test sera effectué lors de la phase :ref:`logiciel-monophase` ou :ref:`logiciel-triphase`.
+   La tension de référence VREF (1,1 V, tamponnée par l’amplificateur opérationnel LMV321A, point de test **VREF**) ne peut être vérifiée qu’après insertion de l’ATmega328P **et** exécution du firmware. C’est le firmware qui active la référence interne 1,1 V du microcontrôleur. Ce test sera effectué lors de la phase :ref:`logiciel-monophase` ou :ref:`logiciel-triphase`.
 
 Insertion de l’ATmega328P
 --------------------------
@@ -112,6 +121,7 @@ Insertion de l’ATmega328P
 
    | ☐ **Rail +5 V** : 5,0 V ± 0,2 V ✅
    | ☐ **Rail +3,3 V** : 3,3 V ± 0,1 V ✅
+   | ☐ **VCC** : 3,3 V (et non 5 V) ✅
    | ☐ **Pas de composant chaud** après 1 minute de fonctionnement
    | ☐ **ATmega328P inséré** correctement (encoche alignée)
    | ☐ **Aucune broche pliée** sous le microcontrôleur
