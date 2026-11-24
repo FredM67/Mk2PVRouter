@@ -23,6 +23,8 @@ Installation du Firmware
 
 Firmware : ``Mk2_1phase_RFdatalog_temp`` — `PVRouter-1-phase <https://github.com/FredM67/PVRouter-1-phase>`_
 
+Documentation du code : `Doxygen <https://fredm67.github.io/PVRouter-1-phase/doc/>`_ (en anglais), pour qui veut lire ou modifier le firmware.
+
 .. include:: ../common/ancien-firmware-monophase.inc.rst
 
 **Étapes communes à toutes les versions** : :ref:`installation-logiciel`
