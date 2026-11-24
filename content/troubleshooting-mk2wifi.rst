@@ -340,7 +340,7 @@ Oscilloscope (Optionnel)
 
 **Pour diagnostics avancés :**
 
-- Visualiser signal gate triac
+- Visualiser le signal de commande des étages de sortie, **côté basse tension uniquement** (connecteur Molex de la carte-mère) ; jamais sur la gâchette du triac ni côté puissance : la masse de l’oscilloscope est reliée à la terre
 - Vérifier oscillateur ATmega328P
 - Analyser formes d’ondes ADC
 

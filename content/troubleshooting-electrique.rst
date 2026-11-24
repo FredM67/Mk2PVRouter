@@ -115,9 +115,6 @@ Valeurs de Référence
  * - Entrées ADC A0–A5 (repos, firmware lancé)
    - 0,55 V (VREF/2)
    - ±0,05 V (0,50–0,60 V)
- * - Gate triac (actif)
-   - ~2–5 V (pulsé)
-   - Variable
 
 Diagnostic par Tension
 ----------------------
@@ -411,9 +408,11 @@ Vérifications Triac
 
  #. ☐ **Câblage haute puissance correct ?**
 
-    - **Phase** sur borne **L**
-    - **Neutre** sur borne **N**
+    - **Phase** sur les deux broches **extérieures** du connecteur de puissance : entrée depuis le disjoncteur de la charge, sortie vers la charge
+    - Broche **centrale** inutilisée
+    - **Neutre** relié directement à la charge : il ne passe **jamais** par l’étage de sortie (un neutre sur ce connecteur met le triac en court-circuit entre phase et neutre)
     - Vis bornier bien serrées
+    - Voir :ref:`raccordement-etages-sortie`
 
 Test du Triac
 -------------
@@ -441,14 +440,19 @@ Test du Triac
    - Si toujours 0 V → Triac ne conduit pas
    - Si toujours 230 V → Triac bloqué ON (défectueux)
 
-**Mesure signal gate :**
+**Signal de commande (côté basse tension uniquement) :**
 
-#. Oscilloscope ou multimètre AC sur gate triac
+.. danger::
+   Ne mesurez **jamais** sur la gâchette (gate) du :term:`triac <Triac>` ni sur aucun point du côté puissance de l’étage de sortie : ils sont au potentiel du secteur. La masse d’un oscilloscope est reliée à la terre ; la brancher à cet endroit provoque un court-circuit, et la sonde devient dangereuse au toucher.
+
+#. Multimètre en mode tension continue (V⎓) sur le connecteur Molex de commande, **côté carte-mère** : pointe noire sur la broche 1 (GND), pointe rouge sur la broche 2 (signal)
 #. En fonctionnement :
 
-   - Doit montrer impulsions 2–5 V
-   - Fréquence 50/100 Hz (burst fire)
-   - Si pas d’impulsions → Problème opto-coupleur ou routage signal
+   - ~0 V quand la charge doit être coupée
+   - ~3,3 V quand la charge doit être alimentée à pleine puissance
+   - Valeur intermédiaire et fluctuante en régime partiel (le multimètre affiche la moyenne des commutations)
+   - Signal présent mais charge jamais alimentée → étage de sortie (optocoupleur, triac) ou câblage de puissance
+   - Jamais de signal → sortie de la carte-mère, configuration du firmware (broche) ou câble Molex
 
 Vérifications Charge
 --------------------
