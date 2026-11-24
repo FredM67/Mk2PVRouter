@@ -46,7 +46,7 @@ Causes Possibles
 
    #. ☐ **Varistance claquée**
 
-      - RV0–RV3 (traversantes) ou GM1–GM3 (CMS), souvent après une surtension ou une erreur de câblage
+      - RV0–RV3 ou GM1–GM3 (tous traversants), souvent après une surtension ou une erreur de câblage
 
    Les transformateurs :term:`ZMPT101K` (TR1, TR2, TR3) ne sont pas en cause : chacun est alimenté à travers 6 résistances de 20 kΩ en série (environ 2 mA). Même en court-circuit, ils ne peuvent pas faire fondre un fusible de 1 A.
 
@@ -82,7 +82,7 @@ Procédure de Diagnostic
 
 #. **Test par élimination**
 
-    - Dessouder un côté des composants traversants de la chaîne secteur (PS1, C1, varistances RV0–RV3), un à la fois
+    - Dessouder un côté des composants traversants de la chaîne secteur (PS1, C1, GM1–GM3, varistances RV0–RV3), un à la fois
     - Remesurer la résistance après chacun
     - Si le court-circuit disparaît → le dernier composant dessoudé est défectueux
     - Si le court-circuit persiste → problème sur le PCB
@@ -148,7 +148,7 @@ Diagnostic par Tension
 
 - Pont de soudure dans la zone analogique
 - CT branché qui n’est pas à sortie tension 333 mV (un CT à sortie courant sans résistance de :term:`burden <Burden>`)
-- Résistance de burden (emplacements sérigraphiés D13 / D23 / D33, R18 / R28 / R38 sur le schéma) de mauvaise valeur (solution de dépannage avec un CT à sortie courant, voir :ref:`types-de-capteurs-de-courant-supportes`)
+- Résistance de burden (soudée dans les trous traversants des empreintes des diodes CMS D13 / D23 / D33 ; R18 / R28 / R38 sur le schéma) de mauvaise valeur (solution de dépannage avec un CT à sortie courant, voir :ref:`types-de-capteurs-de-courant-supportes`)
 
 Problèmes d’Étalonnage et Mesures
 =================================
@@ -197,7 +197,7 @@ Vérifications Électroniques
 
  #. ☐ **Résistances de burden correctes ?** (uniquement en dépannage, CT à sortie courant)
 
-    - Emplacements sérigraphiés D13 / D23 / D33 (R18 / R28 / R38 sur le schéma), un par CT
+    - Trous traversants des empreintes des diodes CMS D13 / D23 / D33 (R18 / R28 / R38 sur le schéma), un par CT
     - Uniquement nécessaires avec des CT à sortie courant (ex. : SCT-013-000)
     - Pas nécessaires avec des CT à sortie tension (burden intégré)
     - Valeur calculée selon le CT — voir :ref:`carte-mere-presentation`
