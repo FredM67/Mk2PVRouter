@@ -9,7 +9,11 @@ Problème 1 : Lampe Ne S’Allume Jamais
 
 **Causes possibles :**
 
-☐ :term:`Optocoupleur` mal inséré (sens inversé)
+☐ Câble de commande inversé
+
+   **Test** : la broche 2 du connecteur Molex doit porter le signal (+), la broche 1 la masse ; inversé, la LED de l’optocoupleur n’est jamais alimentée
+
+☐ :term:`Optocoupleur` mal inséré (sens inversé)
 
    **Test** : Retirer optocoupleur, vérifier repère alignement, réinsérer
 
@@ -23,7 +27,7 @@ Problème 1 : Lampe Ne S’Allume Jamais
 
 ☐ :term:`Triac` défectueux (circuit ouvert)
 
-   **Test** : Mesurer résistance bornes triac (devrait être quelques Ω dans un sens)
+   **Test** : un triac ouvert ne se distingue pas d’un triac sain à l’ohmmètre : hors tension, les deux bornes extérieures du connecteur de puissance donnent quelques MΩ ou OL dans les deux sens dans les deux cas. Si toutes les autres causes sont écartées, remplacer le triac
 
 ☐ Soudure froide sur patte :term:`triac <Triac>`
 
@@ -36,6 +40,8 @@ Problème 2 : Lampe Reste Allumée en Permanence
 
 ☐ :term:`Triac` en court-circuit (détruit)
 
+   **Test** : hors tension, une résistance de quelques ohms entre les deux bornes extérieures du connecteur de puissance confirme le court-circuit
+
    **Cause probable** : Surchauffe lors soudure, décharge électrostatique
 
    **Action** : Remplacer triac (attention ESD lors manipulation)
@@ -46,9 +52,9 @@ Problème 2 : Lampe Reste Allumée en Permanence
 
    **Action** : Retirer excédent soudure avec tresse
 
-☐ Condensateur parasite (rare)
+☐ :term:`Optocoupleur` défectueux (sortie en court-circuit)
 
-   **Action** : Vérifier pistes :term:`PCB` pas de court-circuit
+   **Action** : Remplacer l’optocoupleur
 
 Problème 3 : Grésillement ou Arc Électrique
 -------------------------------------------
@@ -63,11 +69,7 @@ Problème 3 : Grésillement ou Arc Électrique
 
 ☐ Écart entre :term:`triac <Triac>` et :term:`PCB` (mauvais contact)
 
-   **Action** : Dessouder triac, aplatir pattes, ressouder avec triac bien plaqué
-
-☐ Condensateur de snubber manquant (si prévu sur schéma)
-
-   **Action** : Ajouter condensateur + résistance snubber selon schéma
+   **Action** : Dessouder le triac, aplatir les pattes, ressouder avec triac bien plaqué
 
 Problème 4 : Carte Chauffe Excessivement
 ----------------------------------------
@@ -76,13 +78,13 @@ Problème 4 : Carte Chauffe Excessivement
 
 ☐ Résistance de contact trop élevée
 
-   **Diagnostic** : Mesurer tension chute entre agrafe et piste (< 0,1 V attendu)
+   **Diagnostic** : hors tension, contrôle visuel et mécanique des soudures d’agrafes ; après un test en charge (secteur coupé et fiche débranchée), une agrafe nettement plus chaude que l’autre signale une mauvaise soudure
 
    **Action** : Refaire soudures avec fer 450 °C + soudure abondante
 
 ☐ Section agrafes cuivre insuffisante
 
-   **Action** : Remplacer par cuivre 2,5 mm² au lieu de 1,5 mm²
+   **Action** : Refaire les agrafes en cuivre massif 1,5 mm² (les trous de 1,5 mm n’acceptent pas de fil plus gros) et les souder généreusement
 
 ☐ Charge trop importante pour le dissipateur (> 3 000 W ~ 13 A)
 
@@ -92,7 +94,7 @@ Validation Finale de la Carte
 ------------------------------
 
 Checklist Avant Installation
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: ✅ Validation Complète — Carte de Sortie
 
@@ -100,9 +102,9 @@ Checklist Avant Installation
 
    ☐ **Test fonctionnel réussi** : Lampe s’allume/s’éteint correctement
 
-   ☐ **Test charge 100 W réussi** : 5 minutes sans problème
+   ☐ **Tests réussis** : lampe (2 minutes) et, si effectué, test en charge (5 minutes) sans problème
 
-   ☐ **Température acceptable** : Carte et :term:`triac <Triac>` < 60 °C
+   ☐ **Température acceptable** : dissipateur < 60 °C, vérifiée secteur coupé et fiche débranchée
 
    ☐ **Aucune odeur ou fumée** durant tous les tests
 
@@ -135,27 +137,27 @@ Prochaines Étapes
 -----------------
 
 Après Validation de TOUTES les Cartes
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Une fois que vous avez assemblé et testé avec succès :
 
-✅ **Carte-mère** (monophasée ou triphasée) — testée électriquement
+✅ **Carte-mère** — testée électriquement
 
 ✅ **Toutes les cartes de sortie** (autant que de sorties souhaitées) — testées individuellement
 
 **Vous pouvez passer aux chapitres suivants :**
 
-#. **Perçages du boîtier** — :ref:`percage-carte-mere`
+#. **Perçages du boîtier** — :ref:`percages`
 
    Préparer le boîtier pour accueillir les cartes et les dissipateurs
 
-#. **Câblage interne**
+#. **Confection des câbles** — :ref:`confection-cables`
 
-   Connexion carte-mère ↔ cartes de sortie ↔ secteur
+   Câbles de commande, de témoin LED, de prise jack et de terre
 
-#. **Montage des dissipateurs**
+#. **Assemblage** — :ref:`assemblage-boitier`
 
-   Fixation des triacs sur dissipateurs thermiques en façade
+   Fixation des dissipateurs sur les côtés du boîtier, des triacs sur les dissipateurs, puis des cartes
 
 #. **Installation du logiciel**
 
@@ -178,7 +180,7 @@ Ressources Complémentaires
 ---------------------------
 
 Documentation Technique
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Datasheet** :term:`triac <Triac>` BTA41 : Caractéristiques électriques, courbes thermiques
 - **Datasheet** :term:`optocoupleur <Optocoupleur>` MOC3043 : Schéma interne, caractéristiques LED
@@ -188,7 +190,7 @@ Documentation Technique
 
    **Vous avez maintenant assemblé une carte de sortie triac fonctionnelle !**
 
-   Cette carte utilise un :term:`triac <Triac>` BTA41 (40 A nominaux) mais, en raison de la taille du dissipateur, la charge est limitée à **3 000 W** (~13 A à 230 V) pour un fonctionnement sûr et fiable.
+   Cette carte utilise un :term:`triac <Triac>` BTA41 (41 A nominaux) mais, en raison de la taille du dissipateur, la charge est limitée à **3 000 W** (~13 A à 230 V) pour un fonctionnement sûr et fiable.
 
    **Points clés à retenir :**
 
@@ -198,8 +200,3 @@ Documentation Technique
    - Commutation silencieuse = avantage majeur vs relais mécanique
 
    **Félicitations pour votre travail minutieux ! 🎉**
-
-.. |br| raw:: html
-
-  <br/>
-
