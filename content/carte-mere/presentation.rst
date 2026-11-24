@@ -16,12 +16,11 @@ Présentation de la carte universelle
 Vue d’ensemble
 --------------
 
-La carte **3phaseDiverter** (rév. 6.0) est la carte principale universelle du Mk2 PV Router. Elle remplace les anciennes cartes monophasée et triphasée séparées par une carte unique capable de gérer les quatre configurations supportées :
+La carte **3phaseDiverter** (rév. 6.0) est la carte principale universelle du Mk2 PV Router. Elle remplace les anciennes cartes monophasée et triphasée séparées par une carte unique capable de gérer les trois configurations supportées :
 
 - **Monophasé** : une phase, un neutre (230 V)
 - **Triphasé avec neutre** : trois phases + neutre (400 V / 230 V)
-- **Triphasé sans neutre** : trois phases sans neutre (400 V)
-- **Split-phase** : deux phases à 180° (120 V / 240 V, réseau nord-américain)
+- **Triphasé 3 × 230 V sans neutre** : trois phases sans neutre, 230 V entre phases (voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`)
 
 La sélection de la configuration se fait uniquement par les :term:`cavaliers de soudure <Cavalier de soudure>` et le choix des connecteurs — tous les composants CMS sont identiques quelle que soit la configuration.
 

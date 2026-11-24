@@ -224,7 +224,7 @@ Termes Techniques Avancés
    Théorème de Blondel
      | Théorème fondamental de la mesure de puissance en régime polyphasé, énoncé par André Blondel en 1893.
      | Il stipule que pour mesurer la puissance totale d’un système à **N conducteurs**, il suffit de **N−1 wattmètres** (ou capteurs de courant).
-     | Application au Mk2PVRouter : en triphasé sans neutre (3 fils), 2 CT suffisent (CT1 et CT2) — la puissance sur L3 est déduite mathématiquement.
+     | Application au Mk2PVRouter : en triphasé 3 × 230 V sans neutre (3 fils), l’une des phases sert de référence (raccordée sur la borne N du routeur) ; 2 CT suffisent, sur les deux autres phases. Seule la **somme** des deux puissances mesurées est la puissance réelle : prise séparément, chacune n’a pas de signification physique.
      | Voir `l’article Wikipédia (en anglais) <https://en.wikipedia.org/wiki/Blondel%27s_theorem>`__.
 
    CMS
@@ -270,10 +270,6 @@ Termes Techniques Avancés
      | Microcontrôleur RISC-V simple cœur de la société Espressif, intégrant WiFi 6 (802.11ax), Bluetooth LE 5, Zigbee et Thread (802.15.4).
      | Le module **mk2Wifi** utilise un ESP32-C6-MINI-1 pour ajouter la connectivité sans fil au Mk2PVRouter.
 
-   Split-phase
-     | Système électrique nord-américain composé de deux phases à 180° fournissant 120 V entre chaque phase et le neutre, et 240 V entre les deux phases.
-     | La carte universelle 3phaseDiverter supporte cette configuration.
-
    mk2Wifi
      | Module d’extension WiFi/BLE pour le Mk2PVRouter, basé sur un :term:`ESP32-C6`.
      | Se branche sur les connecteurs TRIG_EXT et UART_EXT de la carte principale.
@@ -281,7 +277,7 @@ Termes Techniques Avancés
 
    Carte universelle
      | Carte principale **3phaseDiverter** (rév. 6.0) qui remplace les anciennes cartes monophasée et triphasée séparées.
-     | Supporte 4 configurations : monophasé, triphasé avec neutre, triphasé sans neutre et split-phase.
+     | Supporte 3 configurations : monophasé, triphasé avec neutre et triphasé 3 × 230 V sans neutre.
 
    ZMPT101K
      | Transformateur de tension miniature (rapport 1000:1000) utilisé pour mesurer la tension secteur.

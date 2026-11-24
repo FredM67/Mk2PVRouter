@@ -187,8 +187,8 @@ Configurez les cavaliers selon votre configuration. Consultez le chapitre :ref:
 
 Poursuivez avec les composants spécifiques à votre configuration :
 
-- **Monophasé ou split-phase** → :ref:`assemblage-monophase`
-- **Triphasé** (avec ou sans neutre) → :ref:`assemblage-triphase`
+- **Monophasé** → :ref:`assemblage-monophase`
+- **Triphasé** (avec neutre, ou 3 × 230 V sans neutre) → :ref:`assemblage-triphase`
 
 .. |br| raw:: html
 

@@ -17,7 +17,7 @@ Les :term:`CT` Grille sont des capteurs à clip installés sur les câbles de **
 
 - **Monophasé** : 1 :term:`CT` à clip sur la phase unique (CT1)
 - **Triphasé avec neutre** : 3 :term:`CT` à clip sur les 3 phases (CT1, CT2, CT3)
-- **Triphasé sans neutre** : 2 :term:`CT` suffisent (CT1, CT2) — :term:`théorème de Blondel <Théorème de Blondel>`
+- **Triphasé 3 × 230 V sans neutre** : 2 :term:`CT` suffisent (CT1, CT2), sur les deux phases qui ne servent pas de référence (voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`)
 
 **CT Diversion — Mesure de la puissance routée** (optionnel)
 
@@ -140,7 +140,7 @@ Schéma d'installation — Triphasé
    **Chaque CT doit correspondre à la phase connectée sur le connecteur secteur du routeur.** La phase qui passe dans CT1 doit être raccordée sur **L1**, celle qui passe dans CT2 sur **L2**, et celle qui passe dans CT3 sur **L3**. Un décalage entre les CT et les phases provoquera des mesures de puissance incorrectes.
 
 .. note::
-   Les flèches (→) sur les :term:`CT` indiquent le sens d'installation : **vers la maison** (depuis le compteur). En triphasé sans neutre, CT3 n'est pas nécessaire (:term:`théorème de Blondel <Théorème de Blondel>`).
+   Les flèches (→) sur les :term:`CT` indiquent le sens d'installation : **vers la maison** (depuis le compteur). En triphasé 3 × 230 V sans neutre, CT3 n'est pas utilisé (voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`).
 
 Sens d'Installation des :term:`CT`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -326,11 +326,36 @@ Connexions entre le tableau électrique et le MK2PVRouter :
 
 - **L1 (Phase 1)** : du disjoncteur dédié tétrapolaire (2 A ou 6 A) → entrée L1 du routeur
 - **L2 (Phase 2)** : du disjoncteur → entrée L2 du routeur
-- **L3 (Phase 3)** : du disjoncteur → entrée L3 du routeur
-- **N (Neutre)** : du disjoncteur → entrée N du routeur
-- **⏚ (Terre)** : du disjoncteur → entrée PE du routeur
+- **L3 (Phase 3)** : du disjoncteur → entrée L3 du routeur
+- **N (Neutre)** : du disjoncteur → entrée N du routeur
+- **⏚ (Terre)** : du disjoncteur → entrée PE du routeur
 
 Le raccordement des charges aux étages de sortie est détaillé dans la section suivante.
+
+.. _raccordement-3x230:
+
+**Triphasé 3 × 230 V sans neutre :**
+
+Ce réseau n’a pas de neutre et présente 230 V entre chaque paire de phases. Appelons ses trois phases A, B et C. L’une d’elles, A, sert de **référence** et prend la place du neutre :
+
+- **Phase A** : du disjoncteur dédié tripolaire (2 A ou 6 A) → entrée **N** du routeur
+- **Phase B** : du disjoncteur → entrée **L1** du routeur
+- **Phase C** : du disjoncteur → entrée **L2** du routeur
+- **L3** : non raccordée
+- **⏚ (Terre)** : du disjoncteur → entrée PE du routeur
+
+Les :term:`CT` Grille vont sur les deux phases raccordées sur L1 et L2 :
+
+- **CT1** sur la phase **B** (celle de L1), **CT2** sur la phase **C** (celle de L2), flèches dans le même sens que pour les autres configurations
+- **Aucun CT** sur la phase A, et pas de CT3
+
+Le routeur mesure ainsi la tension de B et de C par rapport à A, et le courant de B et de C : c’est la méthode des deux wattmètres (:term:`théorème de Blondel <Théorème de Blondel>`), qui donne la puissance totale échangée avec le réseau.
+
+.. important::
+   Seule la **somme** des puissances mesurées est significative. Prise séparément, la puissance affichée pour L1 ou L2 n’a pas de signification physique (l’une peut même être négative alors que le foyer consomme). La « phase 3 » affiche une puissance et une tension proches de zéro. Le routage, lui, n’utilise que la somme et fonctionne normalement.
+
+.. warning::
+   Sur ce réseau, une charge monophasée (chauffe-eau…) se raccorde **entre deux phases** : ses deux conducteurs sont sous tension. L’étage de sortie ne coupe que l’un des deux ; pour intervenir sur la charge, coupez son disjoncteur bipolaire.
 
 .. _raccordement-etages-sortie:
 

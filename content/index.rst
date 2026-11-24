@@ -14,7 +14,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 | Le routeur surveille en permanence la production d’énergie de votre système en autoconsommation et redirige tout excédent d’électricité vers les charges branchées.
 | Grâce aux modules sortie-relais, il peut aussi gérer des installations de chauffage ou toutes sortes d’appareils avec ses fonctions de programmateurs horaire, temporisations, thermostats, préparation ECS, chauffage… toutes configurables librement.
 |
-| Le routeur est basé sur la carte universelle **3phaseDiverter** qui supporte 4 configurations : monophasé, triphasé avec neutre, triphasé sans neutre et split-phase.
+| Le routeur est basé sur la carte universelle **3phaseDiverter** qui supporte 3 configurations : monophasé, triphasé avec neutre et triphasé 3 × 230 V sans neutre.
 | Seul le type de raccordement au réseau électrique (Enedis ou régie locale) est important, peu importe que la production d’électricité soit en monophasé ou que l’on n’utilise que des appareils monophasés.
 
 .. admonition:: À retenir
