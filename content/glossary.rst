@@ -238,7 +238,7 @@ Termes Techniques Avancés
    GDT
      | *Gas Discharge Tube* ou éclateur à gaz.
      | Composant de protection contre les surtensions qui s’amorce lorsqu’une tension transitoire dépasse son seuil.
-     | Les GDT0–GDT3 sur la carte universelle forment la première ligne de défense parafoudre.
+     | Sur la carte universelle, chaque éclateur GDT0–GDT3 est monté en série avec la varistance de même numéro (RV0–RV3), après les fusibles, entre un conducteur et la terre : ils se montent toujours par paire.
 
    MOV
      | *Metal Oxide Varistor* ou varistance à oxyde métallique.

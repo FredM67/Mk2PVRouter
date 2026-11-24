@@ -37,7 +37,7 @@ Ce qu’il vous faut
 .. danger::
    **ALERTE SÉCURITÉ**
 
-   Tout travail sur le câblage (passer le câble d’une charge à travers CT2, intervenir dans le tableau ou sur une installation fixe) se fait **disjoncteur coupé au tableau**, après avoir vérifié l’absence de tension avec un testeur. Dans le doute, coupez le disjoncteur principal.
+   Tout travail sur le câblage (passer le câble d’une charge à travers CT2, intervenir dans le tableau ou sur une installation fixe) se fait **disjoncteur coupé au tableau**, après avoir vérifié l’absence de tension avec un VAT bipolaire (voir :ref:`installation-finale`). Dans le doute, coupez le disjoncteur principal.
 
 * **Une lecture de référence au point de raccordement**, prise en même temps que celle du routeur : une pince wattmétrique autour du même câble que CT1, ou l’affichage du Linky (sa puissance instantanée). Le Linky affiche une puissance apparente (en VA), avec un rafraîchissement lent : avec une charge purement résistive, VA et W sont égaux, à condition d’éteindre toutes les autres consommations de la maison (il donne la puissance totale).
 * **Une forte charge résistive** (bouilloire, radiateur, chauffe-eau) : au moins 300 W, car en dessous la correction est imprécise. Un appareil purement résistif, sans ventilateur ni électronique, simplifie grandement l’étalonnage. **Elle doit fonctionner sans passer par le routeur** : le mode étalonnage ne commute rien, donc une charge reliée à la sortie triac du routeur reste éteinte. Branchez une bouilloire ou un radiateur sur une prise, ou faites marcher le chauffe-eau par son propre contacteur, en position forcée.

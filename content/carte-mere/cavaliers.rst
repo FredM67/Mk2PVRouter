@@ -136,8 +136,10 @@ Lorsque GND_LINK est **ouvert**, le circuit basse tension est entièrement isol�
 .. note::
    La configuration recommandée dépend de votre installation. En cas de doute, laissez le cavalier **ouvert** — il pourra toujours être soudé ultérieurement.
 
-« +5V Rail » — Rail +5 V sorties
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _cavalier-5v-rail:
+
+« +5V Rail » (JP40) — Rail +5 V sorties
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cavalier à 2 pôles situé en **haut à droite** de la carte. Il active le **rail +5 V** qui alimente la broche VCC des connecteurs 1×03 des sorties numériques (D2–D13).
 

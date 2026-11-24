@@ -36,7 +36,7 @@ Ce qu’il vous faut
 .. danger::
    **ALERTE SÉCURITÉ**
 
-   Installer les pinces et l’appareil de référence demande de modifier le câblage électrique. Avant toute manipulation, coupez l’alimentation au tableau et vérifiez l’absence effective de tension avec un testeur. Dans le doute, coupez le disjoncteur principal.
+   Installer les pinces et l’appareil de référence demande de modifier le câblage électrique. Avant toute manipulation, coupez l’alimentation au tableau et vérifiez l’absence effective de tension avec un VAT bipolaire (voir :ref:`installation-finale`). Dans le doute, coupez le disjoncteur principal.
 
 * **Une lecture de référence par phase**, prise en même temps que celle du routeur : un wattmètre enfichable ou une pince wattmétrique sur le câble de la phase.
 * **L’affichage du Linky**, si vous n’avez rien d’autre : il donne la puissance **totale**, des trois phases, en puissance apparente (VA), avec un rafraîchissement lent ; VA et W ne sont égaux qu’avec une charge purement résistive. Il ne sert donc de référence qu’avec **une seule charge, sur une seule phase**, et toutes les autres consommations de la maison éteintes. Dès qu’il y a une autre consommation, prenez un appareil qui mesure une phase à la fois.

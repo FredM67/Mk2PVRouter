@@ -252,7 +252,7 @@ Chaque sortie numérique (D2 à D13) dispose de **deux connecteurs Molex SL** su
 - **1×02** (2 broches) : GND, I/O
 - **1×03** (3 broches) : GND, I/O, +5 V
 
-Le connecteur **1×03** (GND, I/O, +5 V) sert à raccorder l’étage de sortie (:term:`triac <Triac>` ou relais), qui a besoin de l’alimentation. La broche +5 V de ces connecteurs est reliée au **rail +5 V**, activé par le cavalier **+5V Rail** (voir ci-dessous). Le connecteur **1×02** (GND, I/O) sert à raccorder la carte indicateur LED (voir :ref:`carte-indicateur`), qui n’a besoin que du signal de commande.
+Le connecteur **1×03** (GND, I/O, +5 V) sert aux **cartes de sortie relais**, qui ont besoin du +5 V pour leur bobine. La broche +5 V de ces connecteurs est reliée au **rail +5 V**, activé par le cavalier **+5V Rail** (voir ci-dessous). Le connecteur **1×02** (GND, I/O) sert à l’**étage de sortie** :term:`triac <Triac>`, qui n’a besoin que du signal de commande : ses deux connecteurs 2 broches sont en parallèle, la carte indicateur LED se branche sur le second (voir :ref:`carte-indicateur`). Avec une carte relais sur le 1×03, la carte indicateur peut se brancher sur le 1×02.
 
 .. list-table:: Disponibilité des sorties numériques
    :header-rows: 1
@@ -267,7 +267,7 @@ Le connecteur **1×03** (GND, I/O, +5 V) sert à raccorder l’étage de sortie
    * - D4
      - Libre
    * - D5#–D9#
-     - Sorties de déclenchement (TRIG_EXT). Marquées d’un **dièse (#)** sur la sérigraphie pour indiquer qu’elles sont partagées avec le module :term:`mk2Wifi`. Utilisées par le mk2Wifi si celui-ci est présent et que le cavalier correspondant est fermé (voir ci-dessous). Libres sinon.
+     - Broches du routeur reliées au connecteur TRIG_EXT, marquées d’un **dièse (#)** sur la sérigraphie car partagées avec le module :term:`mk2Wifi`. Par défaut, les charges sont sur D5–D7 en triphasé (D5 en monophasé) ; le mk2Wifi peut piloter les autres comme entrées du routeur (marche forcée, arrêt du routage…), voir :ref:`presentation-mk2wifi`. Utilisées par le mk2Wifi si celui-ci est présent et que le cavalier correspondant est fermé (voir ci-dessous). Libres sinon.
    * - D10\*
      - SPI SS — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
    * - D11\*
