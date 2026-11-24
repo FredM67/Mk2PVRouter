@@ -21,7 +21,7 @@ Voici les étapes principales du fonctionnement du Mk2PVRouter :
 #. **Gestion des charges** :
 
    - Le Mk2PVRouter redirige l’énergie excédentaire vers des appareils résistifs tels que des chauffe-eaux, radiateurs ou planchers chauffants.
-   - Grâce à ses modules de sortie-relais, il peut également activer ou désactiver des appareils en fonction de plages horaires, de températures ou d’autres paramètres configurables.
+   - Grâce à ses modules de sortie-relais, il peut également activer ou désactiver des appareils selon des seuils de surplus et d’import configurables.
 
 #. **Étalonnage et précision** :
 
@@ -54,13 +54,12 @@ Fonctionnement des LED
 Le Mk2PVRouter est équipé de LED pour indiquer l’état des sorties triac. Chaque LED est montée sur une petite carte dédiée, la **carte indicateur** (voir :ref:`carte-indicateur`), raccordée au signal de commande de l’étage de sortie. Ces LED fournissent des informations visuelles sur la quantité d’énergie routée :
 
 - **Allumage de la LED** :
-  
-  - Lorsque la LED associée à une sortie triac est allumée, cela signifie que le courant passe à travers cette sortie.
-  
+
+  - La LED suit la commande du triac, cycle secteur par cycle secteur : allumée, la sortie est commandée. Cela ne garantit pas que la charge consomme (son thermostat peut être ouvert).
+
 - **Clignotement de la LED** :
-  
-  - Plus la LED clignote rapidement, plus la quantité d’énergie routée est importante.
-  - Un clignotement lent indique une faible quantité d’énergie routée, tandis qu’un clignotement rapide indique une forte quantité d’énergie.
+
+  - Plus la LED reste allumée longtemps, plus la puissance routée est élevée. Ce n’est pas la vitesse du clignotement qui compte, mais la part du temps où elle est allumée.
   
 - **LED fixe** :
   
@@ -84,7 +83,7 @@ Avantages du *burst fire control*
 
 - **Réduction des harmoniques** :
 
-  - Contrairement à d’autres modes de régulation (comme le contrôle en phase), le burst fire control ne génère pas d’harmoniques dans le réseau électrique. Cela permet de préserver la qualité du signal électrique et d’éviter les perturbations pour les autres appareils connectés.  
+  - Contrairement à d’autres modes de régulation (comme le contrôle en phase), le burst fire control ne génère pas les harmoniques du découpage de phase. En revanche, il allume et éteint la charge par cycles entiers, ce qui peut provoquer un papillotement de l’éclairage (*flicker*) avec les grosses charges ; le firmware propose pour cela un mode « anti-flicker ».  
 
 - **Efficacité énergétique** :
 
@@ -94,7 +93,7 @@ Avantages du *burst fire control*
 
   - Ce mode est particulièrement adapté aux charges purement résistives, comme les chauffe-eaux ou les radiateurs, qui n’ont pas besoin d’une régulation fine de la puissance.
 
-Ce mode de régulation garantit un fonctionnement stable et respectueux des normes électriques tout en optimisant l’utilisation de l’énergie excédentaire.
+Ce mode de régulation permet d’utiliser l’énergie excédentaire sans les perturbations du découpage de phase.
 
 Pour plus d’informations sur le *burst fire control*, consultez la section :ref:`burst-fire-control`.
 
@@ -105,11 +104,11 @@ Le Mk2PVRouter offre également des fonctionnalités avancées :
 
 - **Programmation horaire** :
   
-  - Permet de définir des plages horaires pour activer ou désactiver certaines charges.
+  - Avec un tarif heures creuses, permet de forcer la marche de certaines charges pendant les heures creuses (le firmware n’a pas d’horloge : ces marches forcées sont comptées depuis le début des heures creuses).
 
 - **Gestion multi-phases** :
 
-  - La configuration triphasée peut gérer les surplus sur plusieurs phases indépendamment.
+  - En triphasé, le routeur équilibre la **somme** des trois phases (un bilan global, comme le compteur) ; ses charges peuvent être réparties sur n’importe quelle phase.
 
 - **Surveillance et journalisation** :
 
