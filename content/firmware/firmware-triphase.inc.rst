@@ -27,10 +27,12 @@ Après extraction, vous devriez avoir :
    └── ... (autres fichiers)
 
 .. important::
-   Seuls deux fichiers doivent être modifiés par l’utilisateur :
+   Les réglages courants sont dans deux fichiers :
 
-   - **config.h** — Configuration générale (pins, type d’affichage, sorties)
+   - **config.h** — Configuration générale (carte-mère, sorties, entrées de commande, options)
    - **calibration.h** — Paramètres d’étalonnage (à remplir après l’étalonnage)
+
+   `config_system.h` (fréquence du réseau, export requis, période d’envoi des données, 30 s au plus) et `config_rf.h` (liaison radio) ne changent que dans des cas particuliers. Le :ref:`configurateur <configurateur-triphase>` écrit les trois fichiers `config.h`, `config_system.h` et `config_rf.h`.
 
 
 Étape 2 : Configuration du Firmware
@@ -109,7 +111,7 @@ Définir le nombre de sorties et la broche de chacune :
    };
 
 .. note::
-   Une charge pilotée par radio par une unité distante s’écrit `Load::remote(1)` (unité 1, de 1 à 3) au lieu de `Load::local(…)`.
+   Le `config.h` fourni a trois sorties (D5, D6, D7) et une entrée de marche forcée sur D4. Pour changer le nombre de sorties, modifier ensemble `NO_OF_DUMPLOADS`, `physicalLoadPin` et `loadPrioritiesAtStartup`. Une charge pilotée par radio par une unité distante s’écrit `Load::remote(1)` (unité 1, de 1 à 3) au lieu de `Load::local(…)`.
 
 Ordre de Démarrage
 ##################
@@ -120,7 +122,7 @@ Définir la priorité des charges :
 
    inline constexpr uint8_t loadPrioritiesAtStartup[NO_OF_DUMPLOADS]{ 0, 1 };
 
-Signification : Démarrer d’abord la sortie 0, puis la sortie 1.
+Signification : les priorités désignent les sorties par leur rang dans `physicalLoadPin`, à partir de 0 : `{ 0, 1 }` démarre d’abord la sortie 1 (D5), puis la sortie 2 (D6).
 
 Sondes de Température (Optionnel)
 #################################
@@ -131,7 +133,7 @@ Si vous utilisez des sondes DS18B20, activer la mesure :
 
    inline constexpr bool TEMP_SENSOR_PRESENT{ true };
 
-Puis indiquer la broche du bus *OneWire* (D3 par défaut, qui a déjà sa résistance de *pull-up*) et les adresses des sondes :
+Puis indiquer la broche du bus *OneWire* et les adresses des sondes. Le `config.h` fourni a `unused_pin` comme broche, et la compilation refuse `TEMP_SENSOR_PRESENT` sans broche. Sur la carte universelle, c’est D3, déjà câblée avec sa résistance de *pull-up* (avec le module mk2Wifi, cavalier **TEMP** en position routeur) ; sur l’ancienne carte, une broche libre, avec une résistance de 4,7 kΩ entre la ligne de données et le +5 V :
 
 .. code-block:: cpp
 
