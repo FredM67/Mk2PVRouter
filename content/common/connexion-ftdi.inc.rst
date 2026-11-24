@@ -25,7 +25,7 @@ Si vous utilisez des fils individuels, suivez les instructions ci-dessous.
    +------------------------+-----------------------------------+----------------------------+
 
    .. warning::
-      ⚠️ **Câblage avec des fils séparés** : le fil **DTR** est indispensable. La carte n’a pas de bouton reset : sans DTR, l’ATmega328P n’est pas redémarré pour le téléversement, qui échoue (« not in sync »).
+      ⚠️ **Câblage avec des fils séparés** : le fil **DTR** est indispensable. Sans DTR, l’ATmega328P n’est pas redémarré automatiquement pour le téléversement, qui échoue (« not in sync »).
 
       Le fil VCC (rouge) de l’adaptateur reste libre : la broche 3 du connecteur n’est reliée à rien sur la carte, et le routeur ne doit jamais être alimenté par l’adaptateur. Ne le reliez à aucune autre broche.
 

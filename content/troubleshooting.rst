@@ -206,7 +206,7 @@ Vérifications de la Connexion FTDI
     - **GND** (fil noir du câble FTDI) → broche 1 (**GND**, repère « GND> ») du connecteur FTDI (J0)
     - **TX** de l’adaptateur (fil orange) → broche 4 (**RX** de l’ATmega328P)
     - **RX** de l’adaptateur (fil jaune) → broche 5 (**TX** de l’ATmega328P)
-    - **DTR** (fil vert, RTS, sur le câble FTDI) → broche 6 (**DTR**) : reset automatique, indispensable, la carte n’a pas de bouton reset
+    - **DTR** (fil vert, RTS, sur le câble FTDI) → broche 6 (**DTR**) : reset automatique, indispensable
     - VCC (fil rouge) : non utilisé, le laisser libre (la broche 3 n’est reliée à rien sur la carte)
 
  #. ☐ **ATmega328P bien inséré ?**
@@ -299,7 +299,7 @@ Vérification via Moniteur Série
    - **Baud rate :** 9 600
    - **Fin de ligne :** sans importance (le routeur ne lit rien sur le port série)
 
-#. **Redémarrer le routeur** : l’ouverture du moniteur série le redémarre (signal DTR). Sinon, fermer puis rouvrir le moniteur série, ou couper puis remettre l’alimentation. La carte n’a pas de bouton reset.
+#. **Redémarrer le routeur** : l’ouverture du moniteur série le redémarre (signal DTR). Sinon, fermer puis rouvrir le moniteur série, ou couper puis remettre l’alimentation. La carte elle-même n’a pas de bouton reset ; un bouton externe peut se brancher sur son connecteur J1 « RESET ».
 
 #. **Vous devriez voir**, après 3 secondes, la configuration du routeur, terminée par ``----``, puis une ligne de mesures toutes les 5 secondes (par défaut). Extrait d’une capture réelle, en triphasé avec la sortie ``HumanReadable`` :
 
