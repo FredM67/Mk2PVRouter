@@ -417,9 +417,11 @@ Le secteur entre par le connecteur d’entrée secteur (**PE / N / L1 / L2 / L3*
 
 .. code-block:: text
 
-   Secteur → GDT (éclateurs) → Fusibles (FS0–FS3) → Varistances (RV0–RV3, GM1–GM3)
-          → Self de mode commun (FL1) → Condensateur film (C1)
-          → PS1 (MPC10-5) : 230 VAC → 5 VDC, 10 W
+   Secteur → Fusibles (FS0–FS3)
+          → GM1–GM3 : entre chaque phase et le neutre
+          → RVx en série avec GDTx : entre chaque conducteur et la terre (optionnels, par paire)
+          → L1 et N : condensateur film (C1) → self de mode commun (FL1)
+          → PS1 (MPC10-5) : 230 VAC → 5 VDC, 10 W
           → D1 (SMBJ7.0A) : protection TVS côté 5 V
           → U1 (AP7361C-33E) : 5 V → 3,3 V, 1 A
 
@@ -438,10 +440,10 @@ Les fusibles protègent les circuits de mesure contre les surintensités. Ils so
 
 **Niveau 3 — Varistances RV0–RV3 et éclateurs GDT0–GDT3** (optionnel)
 
-Ce niveau de protection supplémentaire est recommandé pour les installations exposées aux surtensions (zones rurales, lignes aériennes, régions à forte activité orageuse). Les éclateurs :term:`GDT` constituent la première ligne de défense et dévient les surtensions les plus violentes. Les varistances :term:`MOV` écrêtent les surtensions résiduelles.
+Ce niveau de protection supplémentaire est recommandé pour les installations exposées aux surtensions (zones rurales, lignes aériennes, régions à forte activité orageuse). Chaque varistance :term:`MOV` RVx est montée **en série** avec l’éclateur :term:`GDT` de même numéro (GDTx), après les fusibles, entre un conducteur et la terre : RV0 + GDT0 sur le neutre, RV1 + GDT1 sur L1, RV2 + GDT2 sur L2, RV3 + GDT3 sur L3. Alors que GM1–GM3 protègent entre phase et neutre, ces paires protègent entre les conducteurs et la terre.
 
 .. note::
-   Les composants optionnels (RV0–RV3, GDT0–GDT3) ne sont pas fournis dans le kit de base. Ils peuvent être ajoutés ultérieurement sans modifier le reste du circuit.
+   Les composants optionnels (RV0–RV3, GDT0–GDT3) ne sont pas fournis dans le kit de base. Ils peuvent être ajoutés ultérieurement sans modifier le reste du circuit, mais **toujours par paire RVx + GDTx** : montés en série, l’un sans l’autre n’a aucun effet.
 
 Rails d’alimentation
 ~~~~~~~~~~~~~~~~~~~~~

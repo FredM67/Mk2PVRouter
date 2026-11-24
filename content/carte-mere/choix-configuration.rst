@@ -167,22 +167,18 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      -
      - ✔
      -
-   * - Varistances RV0, RV1 (protection optionnelle)
+   * - Paires varistance + éclateur RV0 + GDT0, RV1 + GDT1 (protection optionnelle, toujours **par paire**)
      - (opt.)
      - (opt.)
      - (opt.)
-   * - Varistances RV2, RV3 (protection optionnelle)
+   * - Paire RV2 + GDT2 (protection optionnelle, toujours **par paire**)
      -
      - (opt.)
      - (opt.)
-   * - Éclateurs GDT0, GDT1 (protection optionnelle)
-     - (opt.)
-     - (opt.)
-     - (opt.)
-   * - Éclateurs GDT2, GDT3 (protection optionnelle)
+   * - Paire RV3 + GDT3 (protection optionnelle, toujours **par paire**)
      -
      - (opt.)
-     - (opt.)
+     -
    * - Connecteur secteur
      - 3 voies
      - 5 voies

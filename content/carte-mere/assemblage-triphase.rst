@@ -58,7 +58,9 @@ Composants haute tension
 Éclateurs à gaz GDT0–GDT3 (optionnel, CMS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Si fournis dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
+Chaque éclateur GDTx est monté **en série** avec la varistance RVx de même numéro, entre un conducteur et la terre (GDT0 avec RV0 sur le neutre, GDT1 avec RV1 sur L1, GDT2 avec RV2 sur L2, GDT3 avec RV3 sur L3). Montez-les **toujours par paire GDTx + RVx**, ou pas du tout : l’un sans l’autre ne protège rien.
+
+Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
 
 #. Soudez **GDT0**, **GDT1**, **GDT2**, **GDT3**
 
@@ -95,7 +97,7 @@ Les varistances combinées :term:`GDT`\+\ :term:`MOV` pour la protection de cha
 
 #. Soudez les composants **GM1**, **GM2**, **GM3** sur leurs emplacements respectifs (vérifiez la sérigraphie)
 
-Si fournies dans votre kit, soudez les varistances optionnelles :
+Si vous montez les paires optionnelles GDTx + RVx (voir ci-dessus), soudez leurs varistances :
 
 #. Soudez les varistances **RV0**, **RV1**, **RV2**, **RV3** (radial, 300 V) sur leurs emplacements respectifs
 
@@ -154,11 +156,11 @@ La self de mode commun (Schaffner) filtre les perturbations électromagnétiques
 
    **Haute tension :**
 
-   | ☐ GDT0–GDT3 soudés (si fournis)
+   | ☐ GDT0–GDT3 soudés (si les paires GDTx + RVx sont montées)
    | ☐ Fusibles FS0–FS3 soudés
    | ☐ Connecteur secteur (5 voies) soudé
    | ☐ GM1–GM3 soudés
-   | ☐ Varistances RV0–RV3 soudées (si fournies)
+   | ☐ Varistances RV0–RV3 soudées (avec GDT0–GDT3, par paire)
    | ☐ Transformateurs TR1–TR2 soudés (+ TR3 si triphasé avec neutre)
    | ☐ Condensateur film C1 soudé
    | ☐ Module d’alimentation PS1 soudé et orienté correctement
