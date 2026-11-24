@@ -42,7 +42,7 @@ Avant toute mise sous tension, effectuez les vérifications suivantes au multim�
 
 #. **Vérifiez les fusibles** (si soudés) :
 
-   ☐ Continuité à travers chaque porte-fusible (FS0, FS1, et FS2, FS3 en triphasé)
+   ☐ Continuité à travers chaque fusible (FS0, FS1, FS2 en triphasé, FS3 en triphasé avec neutre)
 
 Premier test sous tension
 --------------------------

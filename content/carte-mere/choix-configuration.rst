@@ -13,7 +13,7 @@ Choix de la configuration
    | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Connaissance de votre type de raccordement électrique (monophasé ou triphasé)
 
-La carte universelle 3phaseDiverter supporte quatre configurations. Cette page vous aide à déterminer celle qui correspond à votre installation.
+La carte universelle 3phaseDiverter supporte trois configurations. Cette page vous aide à déterminer celle qui correspond à votre installation.
 
 Quel est votre type de raccordement ?
 --------------------------------------
@@ -42,7 +42,7 @@ Guide de décision
    * - **Triphasé avec neutre**
      - 3 phases + neutre
      - Oui
-     - Foyers avec abonnement triphasé, typiquement > 12 kVA (400 V / 230 V)
+     - Foyers avec abonnement triphasé, souvent au-delà de 12 kVA (400 V / 230 V)
    * - **Triphasé 3 × 230 V sans neutre**
      - 3 phases, 230 V entre phases
      - Non
@@ -81,7 +81,7 @@ Différences par configuration
 Composants traversants à souder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine. Seuls les composants traversants (through-hole) doivent être soudés par l’utilisateur. Les composants à souder varient selon la configuration choisie :
+La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine, sauf les éclateurs GDT optionnels. Seuls les composants traversants (through-hole) et, si vous les montez, ces éclateurs doivent être soudés par l’utilisateur. Les composants à souder varient selon la configuration choisie :
 
 .. list-table::
    :header-rows: 1
@@ -119,10 +119,18 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - (opt.)
      - (opt.)
      - (opt.)
-   * - Connecteurs signaux (FTDI, OLED, TRIG_EXT, UART_EXT, RESET)
+   * - Connecteurs signaux (FTDI, TRIG_EXT, UART_EXT, RESET)
      - ✔
      - ✔
      - ✔
+   * - Connecteur OLED (écran, optionnel)
+     - (opt.)
+     - –
+     - –
+   * - Connecteurs des sorties numériques D2–D13
+     - selon les sorties utilisées
+     - selon les sorties utilisées
+     - selon les sorties utilisées
    * - Connecteurs DS18B20 (sondes de température, optionnel)
      - (opt.)
      - (opt.)
@@ -131,18 +139,26 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - ✔
      - ✔
      - ✔
-   * - Fusibles FS2, FS3
+   * - Fusible FS2
      -
      - ✔
      - ✔
+   * - Fusible FS3
+     -
+     - ✔
+     -
    * - Module protection GM1
      - ✔
      - ✔
      - ✔
-   * - Modules protection GM2, GM3
+   * - Module protection GM2
      -
      - ✔
      - ✔
+   * - Module protection GM3
+     -
+     - ✔
+     -
    * - Transformateur :term:`ZMPT101K` TR1
      - ✔
      - ✔
@@ -167,6 +183,10 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      -
      - ✔
      -
+   * - Résistances de :term:`burden <Burden>` (CT à sortie courant, dépannage)
+     - (opt.) D13, D23
+     - (opt.) D13, D23, D33
+     - (opt.) D13, D23
    * - Paires varistance + éclateur RV0 + GDT0, RV1 + GDT1 (protection optionnelle, toujours **par paire**)
      - (opt.)
      - (opt.)
@@ -187,7 +207,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
 Configuration des cavaliers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les cavaliers de soudure (V sel., SDA, SCL, IRQ, NSS, TEMP) et le cavalier fil GND_LINK doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
+Les cavaliers de soudure (V sel., SDA, SCL, IRQ, NSS, TEMP, +5V Rail) et le cavalier fil GND_LINK doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
 
 Résumé rapide :
 
@@ -211,14 +231,22 @@ Résumé rapide :
      - 3–centre (I2C SCL)
      - 1–centre (courant L3)
      - 1–centre (courant L3)
+   * - IRQ, NSS
+     - Fermés si module RF
+     - Fermés si module RF
+     - Fermés si module RF
    * - TEMP
      - Voir :ref:`cavaliers`
      - Voir :ref:`cavaliers`
      - Voir :ref:`cavaliers`
+   * - +5V Rail
+     - Fermé si cartes relais
+     - Fermé si cartes relais
+     - Fermé si cartes relais
    * - GND_LINK
-     - Voir note
-     - Voir note
-     - Voir note
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
    * - OLED disponible
      - Oui
      - Non

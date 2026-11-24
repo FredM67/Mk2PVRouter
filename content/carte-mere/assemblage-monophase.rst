@@ -67,12 +67,12 @@ Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant
 Fusibles FS0, FS1
 ~~~~~~~~~~~~~~~~~~~
 
-Les porte-fusibles pour la protection de la phase et du neutre (1 A × 250 V).
+Les fusibles de protection de la phase et du neutre (1 A × 250 V).
 
-#. Soudez le porte-fusible **FS0** (neutre)
-#. Soudez le porte-fusible **FS1** (phase L1)
+#. Soudez le fusible **FS0** (neutre)
+#. Soudez le fusible **FS1** (phase L1)
 
-.. todo:: Photo à fournir — porte-fusibles FS0 et FS1 soudés.
+.. todo:: Photo à fournir — fusibles FS0 et FS1 soudés.
 
 .. warning::
    Les fusibles réagissent à la chaleur — c’est leur principe de fonctionnement. Ne chauffez pas les broches plus de **2–3 secondes** par point de soudure pour éviter de les endommager.
