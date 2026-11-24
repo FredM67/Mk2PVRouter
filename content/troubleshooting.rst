@@ -40,11 +40,11 @@ Ce guide couvre la carte universelle **3phaseDiverter** du Mk2PVRouter.
  * - Modules de protection
    - GM1
    - GM1, GM2, GM3
- * - Régulateur 3,3 V/5 V
-   - PS1 (MPC10-5)
-   - PS1 (MPC10-5, commun)
+ * - Alimentation 5 V, régulateur 3,3 V
+   - PS1 (MPC10-5), U1 (AP7361C-33E)
+   - PS1 (MPC10-5, commun), U1 (AP7361C-33E)
  * - Capteurs de courant (CT)
-   - 1 CT (phase principale)
+   - 1 CT (réseau) + 1 CT facultatif (énergie routée, CT2)
    - 3 CT (un par phase)
  * - Sorties triac
    - 1 ou plusieurs (selon modèle)
@@ -105,10 +105,9 @@ Vérifier les composants d’alimentation :
     - Vérifier l’orientation selon le schéma
     - Vérifier que le point ou l’encoche du module correspond au repère sur le PCB
 
- #. ☐ **Transformateur·s bien soudé·s ?**
+ #. ☐ **Chaîne d’alimentation bien soudée ?**
 
-    - Mono : TR1
-    - Tri : TR1, TR2, TR3
+    - Connecteur PWR1, fusibles (Mono : FS0, FS1 ; Tri : FS0 à FS3), module PS1, diode D1 (SMBJ7.0A), régulateur U1
     - Soudures brillantes et lisses (pas ternes) ?
 
 .. include:: common/qualite-soudures.inc.rst
@@ -174,7 +173,7 @@ Causes Fréquentes — Résumé
    - Fusible grillé
    - Trouver le court-circuit, remplacer le fusible
  * - Tension VCC faible (<3 V)
-   - Régulateur défectueux
+   - Régulateur U1 ou module PS1 défectueux
    - Vérifier l’orientation, remplacer
  * - Tension OK, rien ne fonctionne
    - ATmega328P mal inséré/inversé
@@ -204,10 +203,11 @@ Vérifications de la Connexion FTDI
 
  #. ☐ **Câblage FTDI correct ?**
 
-    - **GND (noir)** → **GND** sur PCB
-    - **TX (vert)** → **RX** sur PCB
-    - **RX (blanc)** → **TX** sur PCB
-    - ⚠️ **NE PAS** connecter VCC si routeur alimenté !
+    - **GND** (fil noir du câble FTDI) → broche 1 (**GND**, repère « GND> ») du connecteur FTDI (J0)
+    - **TX** de l’adaptateur (fil orange) → broche 4 (**RX** de l’ATmega328P)
+    - **RX** de l’adaptateur (fil jaune) → broche 5 (**TX** de l’ATmega328P)
+    - **DTR** (fil vert, RTS, sur le câble FTDI) → broche 6 (**DTR**) : reset automatique, indispensable, la carte n’a pas de bouton reset
+    - VCC (fil rouge) : non utilisé, le laisser libre (la broche 3 n’est reliée à rien sur la carte)
 
  #. ☐ **ATmega328P bien inséré ?**
 
@@ -244,7 +244,7 @@ Problèmes Port USB Windows
    - Doit afficher : « USB Serial Port (COMx) »
    - Si point d’exclamation jaune → Pilote problématique
 
-#. **Réinstaller pilotes FTDI**
+#. **Réinstaller les pilotes FTDI**
 
    - Désinstaller pilote actuel (clic droit → Désinstaller)
    - Débrancher FTDI
@@ -271,9 +271,9 @@ Problèmes Arduino IDE
 
     - ATmega328P
 
- #. ☐ **Vitesse correcte ?**
+ #. ☐ **Port libre ?**
 
-    - 9 600 bauds pour Moniteur Série
+    - Aucun autre programme (terminal, moniteur série d’un autre logiciel) ne doit occuper le port pendant le téléversement
 
 **Solutions supplémentaires :**
 
@@ -294,22 +294,27 @@ Vérification via Moniteur Série
    - Menu : Outils → Moniteur série
    - Ou raccourci : Ctrl+Maj+M
 
-#. **Régler paramètres en bas à droite :**
+#. **Régler les paramètres en bas à droite :**
 
    - **Baud rate :** 9 600
-   - **Fin de ligne :** « Les deux, CR+LF »
+   - **Fin de ligne :** sans importance (le routeur ne lit rien sur le port série)
 
-#. **Appuyer sur bouton Reset du routeur**
+#. **Redémarrer le routeur** : l’ouverture du moniteur série le redémarre (signal DTR). Sinon, fermer puis rouvrir le moniteur série, ou couper puis remettre l’alimentation. La carte n’a pas de bouton reset.
 
-#. **Vous devriez voir :**
+#. **Vous devriez voir**, après 3 secondes, la configuration du routeur, terminée par ``----``, puis une ligne de mesures toutes les 5 secondes (par défaut). Extrait d’une capture réelle, en triphasé avec la sortie ``HumanReadable`` :
 
    .. code-block:: text
 
-      Mk2PVRouter v3.1 — Mono
-      Initialisation...
-      CT1: 0 W
-      CT2: 0 W
-      Sortie 1: OFF
+      ----------------------------------
+      Sketch ID: Mk2_3phase_RFdatalog_temp
+      From branch 'dev', commit 0d88595e
+      ...
+      Datalogging capability in Human-readable format
+      ...
+      ----
+      308.52, P:-2, P1:0, P2:-1, P3:-1, V1:232.86, V2:232.88, V3:233.12, (minSampleSets/MC 32, #ofSampleSets 8011)
+
+   En monophasé, la ligne de mesures donne ``P:``, ``V:`` et, avec la sonde CT2, ``diverted <W> W, <Wh> Wh``. Voir aussi *Messages Attendus* dans :ref:`logiciel-monophase` ou :ref:`logiciel-triphase`.
 
 **Si pas de messages :**
 
@@ -322,10 +327,15 @@ Vérification via Moniteur Série
     - Composant à 2 pattes près de l’ATmega328P
     - Soudures correctes ?
 
-**Si messages bizarres/illisibles :**
+**Si la configuration est lisible, mais la suite illisible :**
 
-- Vérifier que le baud rate = 9 600
-- Si toujours illisible → Problème oscillateur (fréquence incorrecte)
+- C’est normal avec le ``config.h`` fourni : ``SERIAL_OUTPUT_TYPE`` y est en ``IoT``. Le routeur affiche sa configuration à 9600 bauds 8N1, puis passe en 7E1 pour le module mk2Wifi.
+- Pour lire les mesures au moniteur série, passer ``SERIAL_OUTPUT_TYPE`` à ``SerialOutputType::HumanReadable`` dans ``config.h`` et téléverser à nouveau.
+
+**Si rien n’est lisible :**
+
+- Vérifier que le baud rate = 9 600
+- Si toujours illisible → Problème oscillateur (fréquence incorrecte : quartz X1 16 MHz, condensateurs C7/C8)
 
 Erreur « Out of Memory » lors de la Compilation
 ===============================================
@@ -341,14 +351,14 @@ Erreur « Out of Memory » lors de la Compilation
 **Solution :**
 
 #. Ouvrir onglet ``config.h`` dans Arduino IDE
-#. Désactiver fonctionnalités non nécessaires :
+#. Désactiver les fonctionnalités non nécessaires : mettre à ``false`` celles qui ne servent pas, parmi ``ENABLE_DEBUG``, ``RF_LOGGING_PRESENT``, ``RELAY_DIVERSION``, ``TEMP_SENSOR_PRESENT`` et ``DUAL_TARIFF``. Par exemple :
 
    .. code-block:: cpp
 
-      // Commenter les lignes avec //
-      // #define ENABLE_DEBUG // Désactive messages debug
-      // #define ENABLE_RF_MODULE // Désactive module RF
-      // #define ENABLE_RELAY_OUTPUT // Si que sorties triac
+      inline constexpr bool ENABLE_DEBUG{ false };
+      inline constexpr bool RF_LOGGING_PRESENT{ false };
+
+   Ne pas mettre ces lignes en commentaire : le firmware ne compilerait plus. Une fonction désactivée doit aussi avoir sa broche à ``unused_pin`` (par exemple ``dualTariffPin``, ou la broche de ``temperatureSensing``), sinon la compilation le signale. Le configurateur (:ref:`monophasé <configurateur-monophase>`, :ref:`triphasé <configurateur-triphase>`) fait ces changements de façon cohérente.
 
 #. Recompiler et téléverser
 
