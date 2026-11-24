@@ -19,7 +19,7 @@ Problème 1 : Lampe Ne S’Allume Jamais
 
 ☐ Résistance R1 mal soudée ou mauvaise valeur
 
-   **Test** : Vérifier continuité, mesurer résistance (120 Ω pour 3,3 V, 180 Ω pour 5 V)
+   **Test** : Vérifier continuité, mesurer résistance (220 Ω pour 3,3 V, 390 Ω pour 5 V)
 
 ☐ :term:`Triac` défectueux (circuit ouvert)
 
@@ -123,7 +123,7 @@ Il est recommandé de noter sur un papier (à conserver avec la carte) :
 
 - **Date du test** : ___/___/______
 - **Tension système** : ☐ 3,3 V  ☐ 5 V
-- **Valeur R1** : _____ Ω (120 Ω pour 3,3 V, 180 Ω pour 5 V)
+- **Valeur R1** : _____ Ω (220 Ω pour 3,3 V, 390 Ω pour 5 V)
 - **Valeur R2** : _____ Ω (330 Ω)
 - **Valeur R3** : _____ Ω (360 Ω)
 - **Référence :term:`triac <Triac>`** : __________ (ex :  BTA41-600B)

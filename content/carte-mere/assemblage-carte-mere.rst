@@ -95,7 +95,7 @@ Le module radio RFM69CW permet la communication sans fil (bande ISM 433/868 MHz)
    - Travaillez de préférence sur un tapis antistatique
 
 .. warning::
-   Avant de souder le module, vérifiez que le cavalier **V sel.** est en position **3–centre (3,3 V)**. Le module RFM69CW fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement**.
+   Avant de souder le module, vérifiez que le cavalier **V sel.** est dans sa position d’usine **1–centre (3,3 V)** et qu’aucune soudure ne relie la pastille centrale à la pastille 3 (5 V). Le module RFM69CW fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement**.
 
 #. Positionnez le module RFM69CW sur son emplacement
 #. **Vérifiez l’alignement** : chaque broche du module doit correspondre exactement à sa pastille sur le :term:`PCB`. Reportez-vous à la sérigraphie pour l’orientation correcte.

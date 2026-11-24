@@ -261,12 +261,17 @@ Procédure de Test Complète
 
 Si le test précédent a réussi, vous pouvez tester avec une charge plus importante.
 
-#. **Remplacer la lampe par une charge plus importante** (100 W ou radiateur 500–1 000 W)
+.. warning::
+   Au-delà d’une lampe de 100 W, le :term:`triac <Triac>` **doit être monté sur son dissipateur**, avec l’isolant, exactement comme dans le boîtier. Sans dissipateur, un triac traversé par quelques ampères chauffe en quelques minutes bien au-delà de sa température maximale et se détruit. Sans dissipateur, limitez-vous à la lampe de l’étape 3.
 
-#. **Répéter test pendant 5 minutes**
+#. **Couper l’alimentation secteur**, puis remplacer la lampe par une charge plus importante (radiateur 500–1 000 W), triac monté sur son dissipateur
 
-   - Surveiller température :term:`triac <Triac>` (devrait rester < 60 °C au toucher)
-   - Vérifier commutation toujours fonctionnelle
+#. **Remettre sous tension et répéter le test pendant 5 minutes**, sans aucun contact avec la carte ni le dissipateur
+
+   - Vérifier que la commutation fonctionne toujours
+   - Surveiller l’absence d’odeur, de fumée ou de grésillement
+
+#. **Couper l’alimentation secteur et débrancher** le montage, puis vérifier la température du dissipateur (thermomètre infrarouge, ou toucher bref **une fois débranché**) : il doit rester tiède, nettement en dessous de 60 °C
 
 
 Résultats Attendus du Test
@@ -283,7 +288,7 @@ Carte Fonctionnelle
 
 ☑ Aucune odeur ou fumée pendant 5 minutes de fonctionnement
 
-☑ Température carte reste raisonnable (< 60 °C)
+☑ Température du dissipateur raisonnable (< 60 °C, vérifiée hors tension et débranché)
 
 
 ☑ Pas de grésillement ni arc électrique

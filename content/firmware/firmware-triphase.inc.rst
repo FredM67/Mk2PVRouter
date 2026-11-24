@@ -2,10 +2,11 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ouvrir le navigateur : https://github.com/FredM67/PVRouter-3-phase
-#. Cliquer sur le bouton vert **« Code »** → **« Download ZIP »**
-#. Enregistrer le fichier `PVRouter-3-phase-main.zip`
+#. Choisir la branche `dev` dans le menu des branches, au-dessus de la liste des fichiers
+#. Cliquer sur le bouton vert **« Code »** → **« Download ZIP »**
+#. Enregistrer le fichier `PVRouter-3-phase-dev.zip`
 #. Extraire le contenu dans un dossier de votre choix (exemple : `Documents/Arduino/`)
-#. Le firmware se trouve dans : `PVRouter-3-phase-main/Mk2_3phase_RFdatalog_temp/`
+#. Le firmware se trouve dans : `PVRouter-3-phase-dev/Mk2_3phase_RFdatalog_temp/`
 
 Structure du Firmware
 """""""""""""""""""""
