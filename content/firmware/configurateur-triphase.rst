@@ -22,7 +22,8 @@ Vous décrivez votre installation :
 
 - les **charges** (triacs), pilotées par le routeur ou par une unité distante par radio, et leurs priorités ;
 - les **relais** ;
-- les **entrées de commande** : arrêt du routage, arrêt du routeur, marche forcée, rotation des priorités ;
+- les **entrées de commande** : arrêt du routage, arrêt du routeur, marche forcée, rotation des priorités ;
+- la **LED de vie** ;
 - le **double tarif**, les **sondes de température** ;
 - le **module mk2Wifi** ;
 - la **radio** (RFM69) et les **unités distantes**, plus rarement utilisées.

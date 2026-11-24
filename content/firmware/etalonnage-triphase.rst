@@ -69,7 +69,7 @@ Le fichier ``calibration.h`` contient un jeu de valeurs par carte-mère, et le r
      - ``f_powerCalPerAmp``, multipliée par ``f_ctRating``
      - ``f_voltageCalNewBoard``
 
-Seule la puissance compte pour le routage : la tension (``V1``, ``V2``, ``V3``) n’est qu’affichée.
+Seule la puissance compte pour le routage : la tension (``V1``, ``V2``, ``V3``) n’est qu’affichée. ``f_phaseCal``, commune aux deux cartes (correction de phase entre tension et courant, affichée au démarrage), reste à 1 : l’étalonnage ne la modifie pas.
 
 **Carte universelle** : le facteur de puissance est donné par ampère de calibre de sonde, ``f_powerCal`` = ``f_powerCalPerAmp`` × ``f_ctRating``. Les valeurs par défaut découlent de la conception de la carte, corrigée par l’étalonnage d’une première carte : le routeur est en général précis à quelques pour cent avant étalonnage, ce qui ne dispense pas de le faire.
 
@@ -84,7 +84,7 @@ Pas à pas
 #. Chargez votre ``calibration.h`` avec **« Charger mon calibration.h »**, ou saisissez les valeurs de puissance (et de tension) avec lesquelles tourne le routeur. Le fichier doit venir de la même version du firmware : un ``calibration.h`` plus ancien, avec un seul ``f_powerCal``, est refusé.
 #. **Carte universelle seulement** : vérifiez le **calibre de la sonde** de chaque phase (``f_ctRating``), en ampères : 50 pour une sonde 50 A / 333 mV. Avec une sonde à sortie courant et une résistance de charge R, comme la YHDC SCT-013-000 (2000:1), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Un calibre se change dans ``calibration.h`` : voir le téléversement ci-dessous.
 #. Dans le dossier du firmware, remplacez ``config.h`` par celui que génère le configurateur : il met le routeur en mode étalonnage, avec la sortie série lisible. Si vous avez changé un calibre, remplacez aussi ``calibration.h`` par le fichier du configurateur (après avoir chargé le vôtre), ou copiez la ligne ``f_ctRating`` qu’il donne dans le vôtre. Téléversez ensuite le firmware (le dossier du sketch) sur le routeur, avant les relevés.
-#. Branchez la charge résistive sur une phase, par exemple **L1**, sans passer par le routeur, et ouvrez le moniteur série. Il affiche, toutes les 5 secondes, ``P1``, ``P2``, ``P3`` (la puissance de chaque phase) et ``P`` (le total) ; voir l’exemple plus bas, dans :ref:`Pour aller plus loin <etalonnage-triphase-aller-plus-loin>`.
+#. Branchez la charge résistive sur une phase, par exemple **L1**, sans passer par le routeur, et ouvrez le moniteur série. Il affiche, toutes les 5 secondes (valeur par défaut de ``DATALOG_PERIOD_IN_SECONDS``, dans ``config_system.h``, 30 s au plus), ``P1``, ``P2``, ``P3`` (la puissance de chaque phase) et ``P`` (le total) ; voir l’exemple plus bas, dans :ref:`Pour aller plus loin <etalonnage-triphase-aller-plus-loin>`.
 #. Relevez **au même moment** la puissance du routeur (``P1`` pour la phase **L1**) et celle de l’appareil de référence, et saisissez les deux dans la ligne de cette phase. La tension (``V1``…) se corrige de la même façon, mais elle ne sert qu’à l’affichage.
 #. Le configurateur calcule la nouvelle valeur (valeur actuelle × appareil / routeur) et signale ce qui est douteux : puissance négative (sonde à l’envers), charge trop faible, écart trop grand. Si l’un de ces signalements apparaît, corrigez la cause avant de continuer.
 #. Copiez les lignes données, ou enregistrez les fichiers : votre ``calibration.h`` est réécrit avec les nouvelles valeurs, le reste du fichier intact. Remplacez-le dans le dossier du firmware et téléversez.
@@ -153,7 +153,7 @@ L'affichage dans le Moniteur Série se présente comme ceci : ::
     1780.56, P:-18, P1:374, P2:-116, P3:-276, V1:233.09, V2:233.53, V3:233.67, (minSampleSets/MC 32, #ofSampleSets 8014)
     1804.21, P:-24, P1:371, P2:-118, P3:-277, V1:233.04, V2:233.48, V3:233.55, (minSampleSets/MC 32, #ofSampleSets 8015)
 
-``P1``, ``P2``, ``P3`` représentent les puissances moyennées sur 5 secondes sur chaque phase. ``P`` est la puissance totale moyennée sur 5 secondes.
+``P1``, ``P2``, ``P3`` représentent les puissances moyennées sur la période d’envoi (5 secondes par défaut) sur chaque phase. ``P`` est la puissance totale moyennée sur la même période.
 Si vous étalonnez la phase **L1**, alors **P1** devra afficher la même valeur que celle affichée par la référence pour cette même phase.
 
 Avec le compteur de distribution
@@ -161,60 +161,12 @@ Avec le compteur de distribution
 
 Cette méthode ne nécessite aucun appareil de mesure, mais n'est pas la plus rapide à réaliser.
 
-À l'aide des flash du compteur (1 flash = 1 Wh consommé)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-La plupart des compteurs d'électricité génèrent un flux d'impulsions optiques pour indiquer le taux de consommation d'énergie. En installant un :term:`CT` autour de l'un des câbles d'alimentation entrants et en exécutant le logiciel approprié sur le routeur, un flux similaire d'impulsions optiques peut être généré.
-
-Le débit du flux d'impulsions pour le routeur peut être ajusté en modifiant la valeur ``f_powerCal`` correspondante. Lorsque les deux flux d'impulsions sont synchronisés, un étalonnage correct a été réalisé.
-
-Il faudra aller par tâtonnement. Si le flash du routeur est plus rapide que celui du compteur, il faut diminuer ``f_powerCal`` sinon l'augmenter.
-
-À l'aide de l'affichage du compteur (plus simple et plus rapide)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+À l'aide de l'affichage du compteur
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Il est possible également de relever la consommation affichée par le compteur sur la phase en cours d'étalonnage.
 Il faudra alors faire correspondre la puissance affichée par le routeur dans le moniteur série avec celle affichée par le compteur.
 D'où l'intérêt de ne pas avoir d'appareils qui vont se mettre en route sporadiquement (réfrigérateur…).
-
-Comment trouver le bon ``f_powerCal`` du premier coup
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Avant de téléverser le firmware, partez de valeurs connues dans ``calibration.h``.
-
-Ancienne carte :
-
-.. code-block:: cpp
-
-   inline constexpr float f_powerCalOldBoard[NO_OF_PHASES]{ 0.05000F, 0.05000F, 0.05000F };
-
-Carte universelle, avec les valeurs par défaut et le calibre de vos sondes :
-
-.. code-block:: cpp
-
-   inline constexpr float f_ctRating[NO_OF_PHASES]{ 50.0F, 50.0F, 50.0F };
-   inline constexpr float f_powerCalPerAmp[NO_OF_PHASES]{ 0.00286405F, 0.00286405F, 0.00286405F };
-
-L'exemple ci-dessous part de l'ancienne carte (0,05) ; avec la carte universelle, le calcul est le même à partir de ``f_powerCalPerAmp``.
-
-| Supposons que le compteur affiche **2250**, et que le log du routeur affiche **2000**.
-| On aura alors :
-
-.. math::
-
-   f_{powerCal} = 0.05000 * {2250 \over 2000} = 0.05625
-
-.. note::
-   La valeur ``0.05000`` dans la formule correspond à la valeur inscrite dans le sketch téléversé.
-   Si le sketch contient une autre valeur, il conviendra alors d'adapter la formule en conséquence.
-
-.. hint::
-   Après avoir calculé le ``f_powerCal`` de la phase en cours d'étalonnage et saisi sa valeur dans le sketch, il peut être judicieux de téléverser à nouveau sur le routeur et de s'assurer que la valeur affichée dans le log correspond bien à celle du compteur.
-
-En triphasé, il faudra répéter l'opération sur chacune des phases.
-
-.. important::
-   Chaque pince devra alors être marquée pour savoir à quelle ligne elle correspond.
 
 .. admonition:: ✅ Point de Contrôle — Étalonnage Méthode Compteur
 
@@ -281,7 +233,7 @@ Appareils de mesure possibles
    - Répétez l'opération pour chaque phase (**L1**, **L2**, **L3**).
 
 .. attention::
-   La phase doit correspondre. Si vous étalonnez la phase **L1**, le chauffe-eau DOIT être branché sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**.
+   La phase doit correspondre. Si vous étalonnez la phase **L1**, la charge DOIT être branchée sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**.
 
 Chauffe-eau triphasé
 ^^^^^^^^^^^^^^^^^^^^
@@ -303,6 +255,45 @@ Si vous utilisez un chauffe-eau triphasé comme appareil d'étalonnage, suivez c
 
 .. important::
    Chaque pince devra être marquée pour savoir à quelle ligne elle correspond.
+
+Comment trouver le bon ``f_powerCal`` du premier coup
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Avant de téléverser le firmware, partez de valeurs connues dans ``calibration.h``.
+
+Ancienne carte :
+
+.. code-block:: cpp
+
+   inline constexpr float f_powerCalOldBoard[NO_OF_PHASES]{ 0.05000F, 0.05000F, 0.05000F };
+
+Carte universelle, avec les valeurs par défaut et le calibre de vos sondes :
+
+.. code-block:: cpp
+
+   inline constexpr float f_ctRating[NO_OF_PHASES]{ 50.0F, 50.0F, 50.0F };
+   inline constexpr float f_powerCalPerAmp[NO_OF_PHASES]{ 0.00286405F, 0.00286405F, 0.00286405F };
+
+L'exemple ci-dessous part de l'ancienne carte (0,05) ; avec la carte universelle, le calcul est le même à partir de ``f_powerCalPerAmp``.
+
+| Supposons que le compteur affiche **2250**, et que le log du routeur affiche **2000**.
+| On aura alors :
+
+.. math::
+
+   f_{powerCal} = 0.05000 * {2250 \over 2000} = 0.05625
+
+.. note::
+   La valeur ``0.05000`` dans la formule correspond à la valeur inscrite dans le sketch téléversé.
+   Si le sketch contient une autre valeur, il conviendra alors d'adapter la formule en conséquence.
+
+.. hint::
+   Après avoir calculé le ``f_powerCal`` de la phase en cours d'étalonnage et saisi sa valeur dans le sketch, il peut être judicieux de téléverser à nouveau sur le routeur et de s'assurer que la valeur affichée dans le log correspond bien à celle du compteur.
+
+En triphasé, il faudra répéter l'opération sur chacune des phases.
+
+.. important::
+   Chaque pince devra alors être marquée pour savoir à quelle ligne elle correspond.
 
 .. |br| raw:: html
 
