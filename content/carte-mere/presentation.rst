@@ -437,7 +437,7 @@ Chaque phase est protégée par un module combiné :term:`GDT`\+\ :term:`MOV`. C
 
 Les fusibles protègent l’installation contre les surintensités. Ils sont dimensionnés pour couper en cas de court-circuit sur la carte, par exemple une varistance en fin de vie ou un défaut du module d’alimentation PS1 ou du condensateur C1.
 
-**Niveau 3 — Varistances RV0–RV3 et éclateurs GDT0–GDT3** (optionnel)
+**Niveau 3 — Varistances RV0–RV3 et éclateurs GDT0–GDT3** (optionnel, pour une protection complète contre la foudre)
 
 Ce niveau de protection supplémentaire est recommandé pour les installations exposées aux surtensions (zones rurales, lignes aériennes, régions à forte activité orageuse). Chaque varistance :term:`MOV` RVx est montée **en série** avec l’éclateur :term:`GDT` de même numéro (GDTx), après les fusibles, entre un conducteur et la terre : RV0 + GDT0 sur le neutre, RV1 + GDT1 sur L1, RV2 + GDT2 sur L2, RV3 + GDT3 sur L3. Alors que GM1–GM3 protègent entre phase et neutre, ces paires protègent entre les conducteurs et la terre.
 

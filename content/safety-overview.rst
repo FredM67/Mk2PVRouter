@@ -1,8 +1,7 @@
 .. _safety-overview:
 
-**************************************************
 ⚠️ Sécurité — À Lire Absolument Avant de Commencer
-**************************************************
+==================================================
 
 .. danger::
    ⚡ **AVERTISSEMENT IMPORTANT**
@@ -17,17 +16,16 @@
    :local:
    :depth: 2
 
-==============
 Vue d’Ensemble
-==============
+--------------
 
 Ce chapitre couvre tous les aspects de sécurité liés à l’assemblage, aux tests et à l’installation du Mk2PVRouter. Il est **OBLIGATOIRE** de lire et comprendre ce chapitre avant de commencer.
 
 Dangers Principaux
-==================
+~~~~~~~~~~~~~~~~~~
 
 1. **Électrisation (230 V AC)** — PEUT ÊTRE MORTELLE
-----------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Le courant alternatif 230 V présent dans les installations domestiques peut provoquer :
 
@@ -42,7 +40,7 @@ Le courant alternatif 230 V présent dans les installations domestiques peut pr
    Le 230 V domestique peut fournir plusieurs ampères — largement suffisant pour tuer.
 
 Situations à Risque Électrique dans ce Projet
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"""""""""""""""""""""""""""""""""""""""""""""
 
 - Tests de la carte-mère avec alimentation secteur
 - Soudure des connecteurs haute tension
@@ -51,7 +49,7 @@ Situations à Risque Électrique dans ce Projet
 - Installation finale dans le tableau électrique
 
 2. **Brûlures (Fer à Souder 200–450 °C)**
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Un fer à souder peut causer :
 
@@ -60,7 +58,7 @@ Un fer à souder peut causer :
 - Inhalation de fumées toxiques (flux de soudure)
 
 3. 🔥 **Incendie**
-------------------
+^^^^^^^^^^^^^^^^^^
 
 Plusieurs sources de risque d’incendie :
 
@@ -70,18 +68,17 @@ Plusieurs sources de risque d’incendie :
 - **Surcharge électrique** lors des tests → Composants en feu
 
 4. 🔧 **Blessures Mécaniques**
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - **Perceuse/à colonne** : Entraînement de pièces, projections
 - **Outils coupants** : Coupures, entailles
 - **Projections métalliques** : Blessures aux yeux
 
-========================================
 🛡️ Équipement de Protection Obligatoire
-========================================
+----------------------------------------
 
 Équipement de Base (Toutes Étapes)
-==================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Équipement Minimum Requis
 
@@ -91,7 +88,7 @@ Plusieurs sources de risque d’incendie :
    - **Cheveux attachés** : Si cheveux longs (risque entraînement outils rotatifs)
 
 Équipement pour Soudure
-=======================
+~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Lunettes de protection** (obligatoire)
 - **Support fer à souder** incombustible
@@ -100,7 +97,7 @@ Plusieurs sources de risque d’incendie :
 - **Éponge ou laine de laiton** pour nettoyer panne
 
 Équipement pour Manipulation 230 V
-==================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. danger::
    **Équipement OBLIGATOIRE pour toute manipulation haute tension**
@@ -112,22 +109,21 @@ Plusieurs sources de risque d’incendie :
 - **Outils isolés** (tournevis, pinces avec poignées isolées)
 
 Équipement de Sécurité Général
-==============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Extincteur** : Type ABC, 2 kg minimum, vérifié annuellement
 - **Détecteur de fumée** : Fonctionnel et testé
 - **Téléphone** : À portée pour appel urgence
 - **Trousse premiers secours** : Compresses stériles, pansements brûlures
 
-=======================================
 Règles de Sécurité par Type d’Opération
-=======================================
+---------------------------------------
 
 Sécurité Soudure
-================
+~~~~~~~~~~~~~~~~
 
 Avant de Commencer
-------------------
+^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Checklist Pré-Soudure
 
@@ -140,7 +136,7 @@ Avant de Commencer
    - ☐ Quelqu’un informé que vous soudez (en cas d’urgence)
 
 Pendant la Soudure
-------------------
+^^^^^^^^^^^^^^^^^^
 
 **À FAIRE :**
 
@@ -159,7 +155,7 @@ Pendant la Soudure
 - ❌ Poser le fer sur des surfaces combustibles
 
 En Cas de Brûlure au Fer à Souder
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. **Refroidir immédiatement** : Eau froide courante 15–20 minutes
 2. **Ne pas percer les cloques**
@@ -171,7 +167,7 @@ En Cas de Brûlure au Fer à Souder
    Le métal chaud pénètre profondément dans les tissus.
 
 Fumées de Soudure
------------------
+^^^^^^^^^^^^^^^^^
 
 Les fumées de soudure contiennent :
 
@@ -187,10 +183,10 @@ Les fumées de soudure contiennent :
 - Faire des pauses à l’air frais
 
 Sécurité Électrique
-===================
+~~~~~~~~~~~~~~~~~~~
 
 Règles d’Or (230 V AC)
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. danger::
    **LES 5 RÈGLES d’OR DE LA SÉCURITÉ ÉLECTRIQUE**
@@ -206,7 +202,7 @@ Règles d’Or (230 V AC)
    L’ensemble de ces étapes s’appelle la **consignation**.
 
 Vérification Absence de Tension
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **TOUJOURS** vérifier l’absence de tension avant de toucher des conducteurs :
 
@@ -221,7 +217,7 @@ Vérification Absence de Tension
    C’est pourquoi il faut le tester avant ET après.
 
 Procédure de Consignation
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Avant toute intervention sur câblage domestique :
 
@@ -247,7 +243,7 @@ Avant toute intervention sur câblage domestique :
    de travers. STOP et demandez conseil.
 
 Protection Différentielle
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Votre installation DOIT être protégée par :
 
@@ -261,7 +257,7 @@ Votre installation DOIT être protégée par :
    Testez votre différentiel mensuellement (bouton « Test »).
 
 Distance de Sécurité
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 Lors de tests sous tension :
 
@@ -272,10 +268,10 @@ Lors de tests sous tension :
 - **Travailler à sec** : Mains sèches, pas de flaques d’eau
 
 Sécurité Perçage/Usinage
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Perceuse à Colonne / Perceuse Manuelle
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. danger::
    **RISQUES MAJEURS**
@@ -286,7 +282,7 @@ Perceuse à Colonne / Perceuse Manuelle
    - **Électrocution** si câblage défectueux
 
 Règles Obligatoires
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Checklist Perçage
 
@@ -299,7 +295,7 @@ Règles Obligatoires
    - ☐ **Zone dégagée** autour de la perceuse
 
 Technique Sûre
---------------
+^^^^^^^^^^^^^^
 
 1. **Fixer la pièce fermement** : Utiliser étau ou serre-joints
 
@@ -316,17 +312,17 @@ Technique Sûre
 5. **Arrêter complètement** avant de retirer la pièce
 
 Matériaux Spécifiques
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 - **Aluminium (dissipateur)** : Vitesse lente, huile de coupe, forets HSS
 - **Plastique ABS (boîtier)** : Vitesse moyenne, PAS d’huile, forets bois/métal
 - **Attention** : Plastique peut fondre si vitesse trop élevée
 
 Sécurité Incendie
-=================
+~~~~~~~~~~~~~~~~~
 
 Prévention
-----------
+^^^^^^^^^^
 
 **Pendant la Soudure :**
 
@@ -344,7 +340,7 @@ Prévention
 - Écoutez grésillements/crépitements anormaux
 
 Signes Avant-Coureurs
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 **Arrêter IMMÉDIATEMENT si :**
 
@@ -355,7 +351,7 @@ Signes Avant-Coureurs
 - Étincelles visibles
 
 Intervention Incendie
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 **En cas de fumée ou flammes :**
 
@@ -376,7 +372,7 @@ Intervention Incendie
    **Sinon : ÉVACUEZ et appelez les pompiers (18)**
 
 Utilisation de l’Extincteur
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. **Retirer la goupille** de sécurité
 #. **Viser la base** des flammes avec la lance
@@ -387,9 +383,8 @@ Utilisation de l’Extincteur
    Familiarisez-vous avec votre extincteur AVANT l’urgence !
    Lisez le mode d’emploi, localisez la gâchette/percuteur.
 
-==============================
 Compétences Requises par Étape
-==============================
+------------------------------
 
 Le tableau suivant indique le niveau de compétence requis et les risques associés à chaque étape :
 
@@ -437,12 +432,11 @@ Le tableau suivant indique le niveau de compétence requis et les risques associ
    **Pour l’installation finale, l’intervention d’un électricien qualifié est fortement recommandée**,
    pour la conformité NF C 15-100 et la couverture d’assurance.
 
-====================
 Procédures d’Urgence
-====================
+--------------------
 
 En Cas d’Électrisation
-======================
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. danger::
    **VITALE : Chaque seconde compte !**
@@ -456,7 +450,7 @@ Si quelqu’un est électrocuté :
 5. **Position latérale de sécurité** si inconscient mais respire
 
 Signes d’Électrisation
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 - Perte de conscience
 - Arrêt respiratoire
@@ -472,10 +466,10 @@ Signes d’Électrisation
    Le courant électrique peut provoquer des troubles du rythme cardiaque différés.
 
 En Cas de Brûlure
-=================
+~~~~~~~~~~~~~~~~~
 
 Brûlures Mineures (< 5 cm, superficielles)
-------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Refroidir immédiatement à l’eau froide courante (15–20 minutes)
 2. Retirer bijoux/vêtements avant gonflement
@@ -484,7 +478,7 @@ Brûlures Mineures (< 5 cm, superficielles)
 5. Surveiller infection (rougeur croissante, pus)
 
 Brûlures Graves (> 5 cm, profondes, électriques)
-------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Appeler SAMU (15) immédiatement
 2. Refroidir à l’eau froide
@@ -499,7 +493,7 @@ Brûlures Graves (> 5 cm, profondes, électriques)
    Le courant provoque des dégâts internes invisibles (muscles, nerfs, vaisseaux).
 
 Numéros d’Urgence (France)
-==========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **SAMU** : 15
 - **Pompiers** : 18
@@ -514,12 +508,11 @@ Numéros d’Urgence (France)
 - État de la victime (conscient ? respire ?)
 - Votre numéro de téléphone
 
-========================================
 ✅ Liste de Contrôle Avant de Commencer
-========================================
+----------------------------------------
 
 Évaluation Personnelle
-======================
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Auto-Évaluation des Compétences
 
@@ -551,7 +544,7 @@ Numéros d’Urgence (France)
    - → Ou faites-vous aider par quelqu’un d’expérimenté
 
 Ressources de Formation
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Si vous manquez de compétences, formez-vous d’abord :
 
@@ -574,7 +567,7 @@ Si vous manquez de compétences, formez-vous d’abord :
 - Cours bricolage magasins bricolage (Leroy Merlin, Castorama)
 
 Checklist Avant Assemblage
-==========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Vérifications Obligatoires
 
@@ -611,7 +604,7 @@ Checklist Avant Assemblage
    - ☐ Je connais les gestes premiers secours de base
 
 Reconnaissance de Risques
-=========================
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Déclaration de Compréhension des Risques
 
@@ -629,7 +622,7 @@ Reconnaissance de Risques
    **Si vous n’êtes pas d’accord avec ces points, NE POURSUIVEZ PAS ce projet.**
 
 Cas d’Exclusion
-===============
+~~~~~~~~~~~~~~~
 
 **Vous NE DEVEZ PAS poursuivre ce projet si :**
 
@@ -647,9 +640,8 @@ Cas d’Exclusion
    Reconnaître ses limites et demander de l’aide est une FORCE.
    Il vaut mieux abandonner le projet que de se retrouver à l’hôpital… ou pire.
 
-=============
 En Conclusion
-=============
+-------------
 
 Ce projet est **techniquement accessible** à un amateur motivé et prudent.
 
@@ -673,9 +665,8 @@ Cependant, il comporte des **risques réels et sérieux** qui ne doivent pas êt
 
    **Votre vie et celle de votre famille valent infiniment plus que le coût d’un professionnel.**
 
-==================
 Prêt à Continuer ?
-==================
+------------------
 
 Si vous avez lu et compris ce chapitre, que vous possédez l’équipement de sécurité requis,
 et que vous vous sentez capable de procéder en toute sécurité, vous pouvez passer au chapitre suivant :

@@ -9,7 +9,7 @@ Installation des Capteurs de Courant (:term:`CT`)
 Les capteurs de courant (Current Transformers) se placent sur les câbles d’alimentation principale.
 
 Emplacement des :term:`CT`
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **CT réseau — Mesure de la consommation/injection réseau**
 
@@ -26,7 +26,7 @@ Le :term:`CT` Diversion (entrée CT2 du firmware monophasé) est installé sur l
 ⚠️ Ce :term:`CT` est un **tore** (anneau fermé) à travers lequel passe le câble de phase — contrairement aux :term:`CT` réseau qui sont des capteurs à clip ouvrant. Il est monté **à l’intérieur du boîtier** du Mk2PVRouter.
 
 Schéma d’installation — Monophasé
-""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. graphviz::
    :caption: Emplacement des CT — Installation monophasée
@@ -77,7 +77,7 @@ Schéma d’installation — Monophasé
    }
 
 Schéma d’installation — Triphasé
-"""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. graphviz::
    :caption: Emplacement des CT — Installation triphasée
@@ -143,7 +143,7 @@ Schéma d’installation — Triphasé
    Les flèches (→) sur les :term:`CT` indiquent le sens d’installation : **vers la maison** (depuis le compteur). En triphasé 3 × 230 V sans neutre, CT3 n’est pas utilisé (voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`).
 
 Sens d’Installation des :term:`CT`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. danger::
    ⚠️ **LE SENS DES CT EST CRUCIAL**
@@ -174,7 +174,7 @@ Le contrôle qui fait foi est le signe de la puissance mesurée (voir la vérifi
 - Inverser les deux fils du secondaire revient au même que retourner le CT de 180°.
 
 Procédure d’Installation des :term:`CT`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
    ⚠️ **DISJONCTEUR GÉNÉRAL COUPÉ OBLIGATOIRE**
@@ -217,7 +217,7 @@ Procédure d’Installation des :term:`CT`
 #. **Fixer le câble du CT** pour éviter qu’il se débranche par traction
 
 Vérification du Sens des :term:`CT` (Après Installation)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Une fois le routeur sous tension (après toutes les connexions) :
 
@@ -245,7 +245,7 @@ Connexions Électriques au Tableau
    Faites appel à un professionnel certifié.
 
 Protection Électrique du Système
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
    **Architecture du système :**
@@ -280,7 +280,7 @@ Le Mk2PVRouter **électronique** nécessite un disjoncteur dédié pour son alim
    - Le routeur **pilote** les triacs, mais ne **protège pas** les charges
 
 Câblage d’alimentation du Mk2PVRouter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le routeur lui-même consomme moins de 5 W (alimentation électronique uniquement). Son câble d’alimentation relie le disjoncteur dédié (voir ci-dessus) au connecteur secteur de la carte-mère (PE, N, L1 et éventuellement L2, L3) :
 
@@ -288,7 +288,7 @@ Le routeur lui-même consomme moins de 5 W (alimentation électronique uniqueme
 - **Nombre de conducteurs** : 3 fils en monophasé (PE + N + L), 5 fils en triphasé (PE + N + L1 + L2 + L3)
 
 Sections de câbles des charges
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Les charges (chauffe-eau, radiateur…) sont raccordées aux étages de sortie, **pas à la carte-mère**. L’étage de sortie (:term:`triac <Triac>` ou relais) s’insère dans le circuit de phase existant de la charge. En général, les câbles entre le disjoncteur de la charge et la charge elle-même sont **déjà en place** et n’ont pas besoin d’être remplacés.
 
@@ -317,7 +317,7 @@ Les charges (chauffe-eau, radiateur…) sont raccordées aux étages de sortie, 
 Pour un **chauffe-eau classique 2 000–3 000 W**, les câbles existants sont normalement en **2,5 mm²** avec disjoncteur **16 A** ou **20 A**.
 
 Schéma de Raccordement
-^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 
 **Monophasé (230 V) :**
 
@@ -369,7 +369,7 @@ Le routeur mesure ainsi la tension de B et de C par rapport à A, et le courant 
 .. _raccordement-etages-sortie:
 
 Raccordement des étages de sortie
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Chaque étage de sortie (carte :term:`triac <Triac>` ou relais) se raccorde à la fois à la carte-mère (signal de commande) et au circuit de puissance de la charge.
 
@@ -396,6 +396,8 @@ Le connecteur de puissance de l’étage de sortie a 3 broches : la broche cent
 .. note::
    Beaucoup de chauffe-eau sont commandés par un contacteur heures creuses. Si l’étage de sortie est placé après ce contacteur, la charge n’est alimentée que lorsque le contacteur est fermé (heures creuses ou marche forcée) : le routage ne fonctionne pas en journée.
 
+   Si la marche forcée en heures creuses n’est pas commandée par le routeur, câblez le contacteur heures creuses (typiquement un Hager ETC225) **en parallèle** de l’étage de sortie : en heures creuses, le contacteur alimente la charge directement ; le reste du temps, le triac route le surplus. Le thermostat reste en série avec l’ensemble.
+
 .. important::
    Chaque charge pilotée doit être protégée par son **propre disjoncteur**, distinct du disjoncteur d’alimentation du routeur.
 
@@ -409,7 +411,7 @@ Chaque étage de sortie constitue un **circuit de puissance indépendant**. Le n
    Pour une charge triphasée, tous les étages de sortie associés doivent être protégés par un **seul disjoncteur multipolaire**. L’utilisation de disjoncteurs unipolaires séparés est dangereuse : en cas de coupure d’une seule phase, la charge triphasée peut être endommagée ou provoquer un déséquilibre.
 
 Procédure de Connexion (Électricien Qualifié)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. **Porter les EPI** (gants isolants, chaussures de sécurité, lunettes)
 

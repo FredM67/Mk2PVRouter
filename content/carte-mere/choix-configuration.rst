@@ -119,7 +119,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà sou
      - (opt.)
      - (opt.)
      - (opt.)
-   * - Connecteurs signaux (FTDI, TRIG_EXT, UART_EXT, RESET)
+   * - Connecteurs signaux (FTDI, RESET ; TRIG_EXT et UART_EXT pour le mk2Wifi, recommandés dans tous les cas)
      - ✔
      - ✔
      - ✔

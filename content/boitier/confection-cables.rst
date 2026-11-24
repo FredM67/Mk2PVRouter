@@ -48,7 +48,7 @@ Il conviendra donc d’y apporter le plus grand soin, afin de minimiser l’appa
 
 .. admonition:: Longueurs conseillées
 
-   **Monophasé** : 1 câble jack pour CT1
+   **Monophasé** : 1 câble jack pour CT1, de même longueur que CT1 en triphasé (la carte-mère est la même) : **255 mm** (boîtier 1 ou 2 sorties) ou **315 mm** (boîtier 3 ou 4 sorties)
 
    **Triphasé** :
 

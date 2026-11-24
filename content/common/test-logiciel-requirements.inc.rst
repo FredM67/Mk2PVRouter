@@ -11,7 +11,7 @@ Pour cette étape, il vous faudra :
 Carte USB vers UART
 ^^^^^^^^^^^^^^^^^^^
 
-| Un programmateur USB vers UART est nécessaire pour télécharger le croquis (programme) sur le processeur.
+| Un programmateur USB vers UART est nécessaire pour téléverser le croquis (programme) sur le processeur.
 | Ce programmateur est également utilisé pour surveiller les messages de débogage envoyés par le processeur.
 
 | Selon le système d’exploitation (Windows, macOS ou Linux) de l’ordinateur de programmation, il peut être nécessaire d’installer un pilote pour le programmateur.
@@ -25,11 +25,8 @@ Logiciel de programmation
 
 Pour programmer l’Arduino, vous aurez besoin d’un logiciel de programmation.
 
-| Le logiciel le plus convivial et le plus simple pour accomplir cette tâche est l’Arduino IDE.
-| Il est facile à installer et à utiliser, et il est spécialement conçu pour programmer des cartes Arduino.
-
-| Cependant, vous pouvez également utiliser Visual Studio Code avec l’extension PlatformIO.
-| Cette combinaison offre un environnement de développement plus avancé et de nombreuses fonctionnalités supplémentaires pour les utilisateurs expérimentés.
+| La méthode recommandée est Visual Studio Code avec l’extension PlatformIO : elle gère seule le standard C++17 et les bibliothèques du firmware.
+| L’Arduino IDE reste la méthode la plus simple à prendre en main, au prix de quelques réglages manuels.
 
 Assurez-vous d’installer l’un de ces logiciels avant de continuer avec la programmation de votre carte.
 

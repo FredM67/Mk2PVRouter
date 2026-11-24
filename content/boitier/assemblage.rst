@@ -30,7 +30,7 @@ Il est possible de réaliser l’assemblage dans n’importe quel ordre, cependa
 
 #. **Fixation du ou des étages de sortie sur chaque dissipateur** (visser le triac)
 
-   - Placer l’isolant fourni avec le kit (isolation électrique et conduction thermique) entre la patte métallique du triac et le dissipateur
+   - Placer l’isolant fourni avec le kit entre la semelle métallique du triac et le dissipateur. Un pad silicone ou une feuille de mica conviennent tous les deux : la semelle du triac BTA41 est isolée de ses broches, l’isolant assure surtout le contact thermique
    - Visser fermement pour assurer un bon contact thermique, sans serrer excessivement
 
 #. **Fixation du ou des étages de sortie dans le boîtier** (visser le :term:`PCB`)

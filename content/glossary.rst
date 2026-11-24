@@ -398,3 +398,35 @@ Termes Techniques Avancés
    Baud rate
       | Vitesse de communication série, mesurée en bits par seconde.
       | Le Mk2PVRouter communique toujours à **9600 bauds** : 8N1 pour le texte de démarrage et les sorties lisible et JSON, 7E1 pour les trames de la sortie IoT.
+
+   UART
+      | *Universal Asynchronous Receiver-Transmitter*.
+      | Liaison série asynchrone sur deux fils de données (émission Tx, réception Rx) et une masse commune.
+      | L’ATmega328P l’utilise pour la programmation via l’adaptateur :term:`FTDI` et pour ses sorties série ; le connecteur UART_EXT la transmet au module :term:`mk2Wifi`.
+
+   I2C
+      | *Inter-Integrated Circuit*.
+      | Bus série à deux fils (SDA pour les données, SCL pour l’horloge) reliant un microcontrôleur à des composants comme un écran.
+      | Sur la carte universelle, il sert à l’écran :term:`OLED`, en monophasé uniquement : en triphasé, les broches A4 et A5 mesurent L3.
+
+   OLED
+      | *Organic Light-Emitting Diode*.
+      | Petit écran à diodes organiques, lisible sans rétroéclairage.
+      | Le routeur monophasé peut afficher ses mesures sur un écran OLED :term:`I2C` (connecteur OLED de la carte-mère) ; le module :term:`mk2Wifi` peut aussi en piloter un.
+
+   1-Wire
+      | Bus série qui n’utilise qu’un seul fil de données en plus de la masse.
+      | Plusieurs capteurs peuvent partager le même fil, chacun étant identifié par une adresse unique. Les sondes :term:`DS18B20` l’utilisent.
+
+   DS18B20
+      | Sonde de température numérique qui communique par le bus :term:`1-Wire`.
+      | Le routeur peut lire des sondes DS18B20 raccordées aux connecteurs DS18B20 de la carte-mère (GND, données, +5 V).
+
+   YAML
+      | *YAML Ain’t Markup Language*.
+      | Format de fichier texte lisible, structuré par l’indentation.
+      | Les configurations :term:`ESPHome`, dont celle du module :term:`mk2Wifi`, sont écrites en YAML.
+
+   Home Assistant
+      | Plateforme domotique open source, installée chez soi (mini-PC, Raspberry Pi…).
+      | Elle reçoit les mesures du routeur par le module :term:`mk2Wifi` (via :term:`ESPHome`) et peut piloter certaines de ses entrées.
