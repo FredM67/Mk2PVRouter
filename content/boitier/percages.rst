@@ -70,10 +70,14 @@ Cependant, ce guide décrira l’implantation la plus classique.
    - 4 trous de **3 mm** par carte (voir :ref:`carte-sortie-relais`)
 
 **Témoins LED** (cartes indicateur, voir :ref:`carte-indicateur`)
-   - 1 trou de **5 mm** par carte indicateur, dans le couvercle
+   - 1 trou de **8 mm** par carte indicateur, dans le couvercle, pour le support de LED vissé
 
 **Bouton reset** (fourni avec le kit triphasé, connecteur RESET de la carte-mère)
    - 1 trou de **13 mm**
+
+**Écran OLED** (monophasé, si utilisé)
+   - Une découpe à la taille de l’écran choisi, dans le couvercle
+   - Certains utilisateurs déportent l’écran hors du boîtier : c’est au choix
 
 Outils nécessaires
 ~~~~~~~~~~~~~~~~~~~

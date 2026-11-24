@@ -125,10 +125,11 @@ Vous avez deux options pour programmer le Mk2PVRouter :
 
 **Option A : Arduino IDE**
 
+- La plus simple à prendre en main
 - Configuration manuelle nécessaire (C++17, bibliothèques)
 - Suivre les sous-sections de l’**Option A** ci-dessous
 
-**Option B : PlatformIO** (recommandé par les Readme des deux firmwares)
+**Option B : PlatformIO** (recommandé)
 
 - Support C++17 et bibliothèques sans configuration manuelle
 - Suivre les sous-sections de l’**Option B** ci-dessous

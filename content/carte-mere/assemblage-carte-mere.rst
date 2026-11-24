@@ -137,6 +137,9 @@ Soudez les connecteurs suivants :
 #. **DS18B20** (2 × Molex SL 1×03 : GND, données, +5 V) — Sondes de température, si vous en utilisez
 #. **RESET** (Molex SL 1×02) — Connecteur bouton de réinitialisation
 
+.. tip::
+   TRIG_EXT et UART_EXT ne servent qu’au module :term:`mk2Wifi`. Soudez-les quand même : vous pourrez ajouter un mk2Wifi plus tard sans sortir la carte-mère du boîtier.
+
 .. todo:: Photo à fournir — connecteurs signaux soudés et perpendiculaires au PCB.
 
 .. hint::

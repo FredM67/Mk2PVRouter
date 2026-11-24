@@ -25,7 +25,7 @@ Exigences Légales en France
 ----------------------------
 
 Conformité Réglementaire
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 La **norme NF C 15-100** fixe les règles techniques des installations électriques basse tension en France. Toute modification de votre installation doit les respecter, que vous la réalisiez vous-même ou que vous la confiiez à un électricien.
 
@@ -44,7 +44,7 @@ La **norme NF C 15-100** fixe les règles techniques des installations électriq
    - **Responsabilité** : Vous pouvez être tenu pour responsable d’un accident causé par une installation non conforme
 
 Recommandation Forte
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 .. important::
    🔴 **NOUS RECOMMANDONS VIVEMENT de faire appel à un électricien certifié**
@@ -96,10 +96,10 @@ Prérequis Avant Installation
    ☐ **Téléphone à portée de main** pour appeler les secours (15, 18 ou 112)
 
 Matériel de Sécurité Requis
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Équipement de Protection Individuelle (EPI)
-""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ☐ **Gants isolants classe 0** (1 000 V :term:`AC`)
 
@@ -112,7 +112,7 @@ Matériel de Sécurité Requis
 ☐ **Vêtements en coton** (PAS de synthétique qui fond)
 
 Équipement de Mesure et Outils
-"""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ☐ **Multimètre numérique** CAT III 600 V minimum
 

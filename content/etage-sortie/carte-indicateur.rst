@@ -112,7 +112,7 @@ Ordre de soudure
 Montage dans le boîtier
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-La LED dépasse à travers un trou dans le couvercle du boîtier (perçage de 5 mm pour une LED de 5 mm, voir :ref:`percages`). La carte se place contre la face intérieure du couvercle ; son circuit imprimé ne comporte aucun trou de fixation.
+La LED se loge dans un support de LED vissé sur le couvercle du boîtier (perçage de 8 mm, voir :ref:`percages`). La carte reste derrière, côté intérieur ; son circuit imprimé ne comporte aucun trou de fixation.
 
 Connexion
 ~~~~~~~~~
