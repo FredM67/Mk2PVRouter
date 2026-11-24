@@ -71,7 +71,7 @@ Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant
 Fusibles FS0–FS3
 ~~~~~~~~~~~~~~~~~~
 
-Les fusibles de protection de chaque conducteur (1 A × 250 V).
+Les fusibles de protection de chaque conducteur (SET T1,25 A 250 V, temporisés).
 
 #. Soudez les fusibles **FS0** (borne N), **FS1** (L1), **FS2** (L2)
 #. Soudez **FS3** (L3) — **triphasé avec neutre uniquement**
