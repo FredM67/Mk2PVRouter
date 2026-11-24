@@ -1,11 +1,14 @@
 .. _troubleshooting-electrique:
 
-=========================================
+*****************************************
 ⚡ Problèmes Électriques — Tests et Usage
-=========================================
+*****************************************
+
+Problèmes d’Alimentation et Tensions
+====================================
 
 Fusible Saute Immédiatement
-===========================
+---------------------------
 
 .. danger::
  **DANGER — COURT-CIRCUIT PRÉSENT !**
@@ -18,52 +21,55 @@ Fusible Saute Immédiatement
 **Symptôme :** Fusible·s grille(nt) à la mise sous tension
 
 Causes Possibles
-----------------
+~~~~~~~~~~~~~~~~
 
 .. admonition:: Diagnostics court-circuit
 
- #. ☐ **Court-circuit dans transformateur·s**
+   #. ☐ **Erreur de câblage**
 
-    - Mono : TR1
-    - Tri : TR1, TR2, TR3
+      - Phase raccordée sur la borne N du routeur, ou 400 V entre une phase et N (neutre et phase intervertis en triphasé)
+      - Les varistances (RV0–RV3 : 300 V ; GM1–GM3 : 320 V) conduisent alors et font fondre les fusibles
 
- - Mesurer la résistance des enroulements (doit être ~1–10 kΩ)
- - Si <10 Ω → Transformateur défectueux
+   #. ☐ **Pont de soudure sur pistes haute tension**
 
- #. ☐ **Pont de soudure sur pistes haute tension**
+      - Inspecter visuellement avec une loupe
+      - Zone 230 V particulièrement critique
 
- - Inspecter visuellement avec une loupe
- - Zone 230 V particulièrement critique
+   #. ☐ **Condensateur en court-circuit**
 
- #. ☐ **Condensateur en court-circuit**
+      - C1 (condensateur film secteur, entre L1 et N) défectueux
+      - Rare mais possible
 
- - C1 (condensateur film secteur) défectueux
- - Rare mais possible
+   #. ☐ **Module PS1 (MPC10-5) défectueux**
 
- #. ☐ **Module PS1 (MPC10-5) défectueux**
+      - Peut être en court-circuit si défaut fabrication
+      - Ou endommagé par soudure trop chaude
 
- - Peut être en court-circuit si défaut fabrication
- - Ou endommagé par soudure trop chaude
+   #. ☐ **Varistance claquée**
+
+      - RV0–RV3 (traversantes) ou GM1–GM3 (CMS), souvent après une surtension ou une erreur de câblage
+
+   Les transformateurs :term:`ZMPT101K` (TR1, TR2, TR3) ne sont pas en cause : chacun est alimenté à travers 6 résistances de 20 kΩ en série (environ 2 mA). Même en court-circuit, ils ne peuvent pas faire fondre un fusible de 1 A.
 
 .. note::
    Seuls les composants traversants que vous avez soudés se vérifient et se remplacent. Un composant :term:`CMS` défectueux n’est pas réparable par l’utilisateur : la carte est à remplacer.
 
 Procédure de Diagnostic
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
  Débrancher l’alimentation et attendre 5 minutes avant ces tests !
 
  Les condensateurs peuvent rester chargés.
 
-#. **Retirer le fusible**
-
-#. **Mesurer la résistance entre phase et neutre**
+#. **Mesurer la résistance entre phase et neutre**, routeur débranché du secteur, fusibles en place
 
     - Multimètre en mode Ohm (Ω)
-    - Mesurer à l’entrée du transformateur
+    - Mesurer entre les bornes **N** et **L1** du connecteur secteur PWR1 (et entre N et L2, N et L3 en triphasé)
     - Valeur attendue : **> 1 kΩ**
     - Si **< 100 Ω** → Court-circuit présent
+
+#. **Vérifier chaque fusible** (continuité) : FS0 sur le neutre, FS1 à FS3 sur L1 à L3
 
 #. **Inspection visuelle minutieuse**
 
@@ -77,24 +83,24 @@ Procédure de Diagnostic
 
 #. **Test par élimination**
 
-    - Dessouder un côté du/des transformateur·s (TR1 pour mono, ou TR1/TR2/TR3 pour tri)
-    - Remesurer résistance
-    - Si court-circuit persiste → Problème sur PCB
-    - Si disparaît → Transformateur défectueux
+    - Dessouder un côté des composants traversants de la chaîne secteur (PS1, C1, varistances RV0–RV3), un à la fois
+    - Remesurer la résistance après chacun
+    - Si le court-circuit disparaît → le dernier composant dessoudé est défectueux
+    - Si le court-circuit persiste → problème sur le PCB
 
 #. **Remplacement fusible**
 
-    - Utiliser **même valeur** que fusible d’origine
+    - Utiliser **même valeur** que fusible d’origine : 1 A, 250 V (FS0–FS3)
     - Type : temporisé (slow-blow) recommandé
     - ⚠️ Jamais de fusible plus fort !
 
 Tensions Incorrectes aux Points de Test
-=======================================
+---------------------------------------
 
 **Symptôme :** Tensions mesurées différentes des valeurs attendues
 
 Valeurs de Référence
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 .. list-table:: Tensions normales
  :widths: 30 35 35
@@ -103,32 +109,37 @@ Valeurs de Référence
  * - Point de Test
    - Valeur Attendue
    - Tolérance
- * - VCC (3,3 V)
+ * - TP3 « VCC » (+3,3 V)
    - 3,3 V
    - ±0,2 V (3,1–3,5 V)
- * - VCC (5 V)
+ * - TP4 « +5V »
    - 5,0 V
    - ±0,3 V (4,7–5,3 V)
  * - VREF (point de test V_REF, firmware lancé)
    - 1,1 V
    - ±0,1 V (1,0–1,2 V)
- * - Entrées ADC A0–A5 (repos, firmware lancé)
+ * - Entrées ADC A0–A3, et A4–A5 en triphasé (repos, firmware lancé)
    - 0,55 V (VREF/2)
    - ±0,05 V (0,50–0,60 V)
 
 Diagnostic par Tension
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
-**VCC trop faible (<3 V pour système 3,3 V) :**
+**+3,3 V (TP3) trop faible (< 3,1 V) :**
 
 - Module PS1 (MPC10-5) défectueux, mal orienté ou mal soudé
 - Court-circuit partiel consommant trop de courant
 
-**VCC trop élevée (>5,5 V) :**
+**+3,3 V (TP3) trop élevée (> 3,5 V) :**
 
-- ⚠️ **DANGER** pour ATmega328P (max absolu = 6 V)
-- Régulateur absent ou court-circuité
+- ⚠️ **DANGER** pour le module RFM69CW et l’ATmega328P, alimentés par ce rail (cavalier V sel. dans sa position d’usine)
+- Régulateur U1 défectueux ou court-circuité
 - **COUPER L’ALIMENTATION IMMÉDIATEMENT**
+
+**+5 V (TP4) trop élevée (> 5,3 V) :**
+
+- Module PS1 (MPC10-5) défectueux
+- **COUPER L’ALIMENTATION**
 
 **VREF ou entrées ADC à 0 V :**
 
@@ -140,24 +151,23 @@ Diagnostic par Tension
 - CT branché qui n’est pas à sortie tension 333 mV (un CT à sortie courant sans résistance de :term:`burden <Burden>`)
 - Résistance de burden R18/R28/R38 de mauvaise valeur (solution de dépannage avec un CT à sortie courant, voir :ref:`types-de-capteurs-de-courant-supportes`)
 
-=================================
 Problèmes d’Étalonnage et Mesures
 =================================
 
 Mesures de Puissance Incohérentes
-=================================
+---------------------------------
 
 **Symptôme :** Le routeur affiche des valeurs fantaisistes (très éloignées réalité)
 
 Vérifications CT (Current Transformer)
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Liste de contrôle — CT
 
  #. ☐ **CT dans le bon sens ?**
 
-    - Flèche sur CT doit pointer vers **source** (compteur/disjoncteur)
-    - Pas vers la charge
+    - Flèche sur CT pointant **vers la maison** (depuis le compteur), comme dans :ref:`installation-finale-connexions`
+    - Le contrôle qui fait foi : puissance **positive** quand la maison consomme (import), négative quand elle injecte
     - ⚠️ Si inversé : valeurs négatives ou erronées
 
  #. ☐ **CT sur la bonne phase ?**
@@ -182,7 +192,7 @@ Vérifications CT (Current Transformer)
     - Pas de faux contact
 
 Vérifications Électroniques
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Composants de mesure
 
@@ -199,7 +209,7 @@ Vérifications Électroniques
     - Vérifier à la loupe
 
 Valeurs de Référence
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 **Test de cohérence :**
 
@@ -216,8 +226,8 @@ Valeurs de Référence
  * - Avec charge 2 000 W
    - 1 900–2100 W
    - ±5% après étalonnage
- * - Production 3 000 W
-   - 2 850–3150 W
+ * - Injection 3 000 W
+   - −2 850 à −3 150 W
    - ±5%
  * - Écart >20%
    - Problème matériel
@@ -231,7 +241,7 @@ Valeurs de Référence
 - Interférences électromagnétiques (câble CT trop long/près moteur)
 
 Étalonnage ne Converge Pas
-==========================
+--------------------------
 
 **Symptôme :** Impossible d’obtenir valeurs correctes malgré ajustements
 
@@ -264,17 +274,16 @@ Valeurs de Référence
 #. Ajuster calibration
 #. Vérifier avec une autre charge différente
 
-==============================
 Problèmes LED et Signalisation
 ==============================
 
 LED ne s’Allume Jamais
-======================
+----------------------
 
 **Symptôme :** LED témoin ne s’allume pas malgré routage actif
 
 Vérifications de Base
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Diagnostic LED
 
@@ -292,7 +301,7 @@ Vérifications de Base
 
  #. ☐ **Résistance série LED présente ?**
 
-    - Typiquement 220 Ω ou 470 Ω
+    - 1 kΩ (R1 de la carte indicateur)
     - Protège la LED
     - Si absente : LED peut griller
 
@@ -303,14 +312,14 @@ Vérifications de Base
     - Si charge pas activée → Problème triac (voir section suivante)
 
 Test de la LED
---------------
+~~~~~~~~~~~~~~
 
-**Test avec pile 3 V (2× AA/AAA) :**
+**Test avec pile 9 V et résistance 1 kΩ** (une pile de 3 V n’allume pas une LED bleue ou blanche) :
 
 #. Dessouder LED du PCB
 #. Connecter :
 
-   - **+** pile → **Résistance 220 Ω** → **Anode LED** (patte longue)
+   - **+** pile → **Résistance 1 kΩ** → **Anode LED** (patte longue)
    - **-** pile → **Cathode LED** (patte courte)
 
 #. LED doit s’allumer
@@ -319,7 +328,7 @@ Test de la LED
    - Si non : LED grillée, remplacer
 
 LED Toujours Allumée
-====================
+--------------------
 
 **Symptôme :** LED reste allumée en permanence même sans excédent
 
@@ -330,19 +339,18 @@ LED Toujours Allumée
    - Triac défectueux ou détruit
    - Mesurer la résistance MT1-MT2 (doit être >1 MΩ à froid)
 
-#. **Opto-coupleur défectueux**
+#. **Optocoupleur défectueux**
 
    - MOC3041/MOC3043 en court-circuit
    - Remplacer le composant
 
 #. **Problème firmware**
 
-   - Sortie forcée ON dans configuration
-   - Vérifier le Moniteur Série Arduino IDE
-   - Commandes de test actives ?
+   - Entrée de marche forcée active (``OVERRIDE_PIN_PRESENT``), marche forcée programmée en heures creuses (``DUAL_TARIFF``) ou commande depuis Home Assistant via le module mk2Wifi
+   - Au démarrage, le moniteur série indique les fonctions présentes : lignes « Override feature is present », « Dual-tariff capability is present »
 
 LED Clignote Bizarrement
-========================
+------------------------
 
 **Symptôme :** Comportement LED inattendu
 
@@ -359,36 +367,35 @@ LED Clignote Bizarrement
  * - Toutes allumées permanent
    - Excédent max OU charge saturée
    - Normal si chauffe-eau à température
- * - Clignotement très rapide (<0.5s)
-   - Beaucoup d’excédent (80–100%)
+ * - Allumée la plupart du temps
+   - Beaucoup d’excédent routé
    - Normal en pleine production
- * - Clignotement lent (>2s)
-   - Peu d’excédent (10–30%)
+ * - Allumée une petite partie du temps
+   - Peu d’excédent routé
    - Normal début/fin journée
  * - Clignotement erratique
    - Mesures instables
    - Vérifier le CT et l’étalonnage
 
-===============================================
 🔥 Problèmes de Routage — Charge ne Chauffe Pas
 ===============================================
 
 Routeur Fonctionne mais Charge Pas Alimentée
-============================================
+--------------------------------------------
 
 **Symptôme :** LEDs actives, routeur semble fonctionner, mais charge froide
 
 Vérifications Triac
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 .. danger::
  Manipulation haute tension ! Couper le disjoncteur avant intervention.
 
 .. admonition:: Diagnostic étage de puissance
 
- #. ☐ **Triac bien soudé sur dissipateur ?**
+ #. ☐ **Triac bien vissé sur le dissipateur ?**
 
-    - Contact thermique ET électrique
+    - Bon contact thermique (isolant, pâte), **sans** contact électrique
     - Pas de jeu mécanique
 
  #. ☐ **Isolant électrique présent ?**
@@ -415,7 +422,7 @@ Vérifications Triac
     - Voir :ref:`raccordement-etages-sortie`
 
 Test du Triac
--------------
+~~~~~~~~~~~~~
 
 **Mesure à froid (hors tension) :**
 
@@ -455,7 +462,7 @@ Test du Triac
    - Jamais de signal → sortie de la carte-mère, configuration du firmware (broche) ou câble Molex
 
 Vérifications Charge
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 **Chauffe-eau :**
 
@@ -463,8 +470,8 @@ Vérifications Charge
 - ☐ Thermostat pas coupé manuellement ?
 - ☐ Résistance chauffe-eau fonctionnelle ?
 
- - Tester résistance : doit être ~25–30 Ω pour 2 000 W
- - Si infinie → Résistance coupée/brûlée
+  - Tester résistance : doit être ~25–30 Ω pour 2 000 W
+  - Si infinie → Résistance coupée/brûlée
 
 **Radiateur électrique :**
 
@@ -473,13 +480,13 @@ Vérifications Charge
 
 **Test charge indépendamment :**
 
-#. Déconnecter charge du routeur
-#. Brancher directement sur prise secteur
-#. Vérifier le fonctionnement
-#. Si charge ne chauffe pas → Problème charge, pas routeur
+#. Couper le disjoncteur de la charge
+#. Déconnecter la charge de l’étage de sortie
+#. Mesurer sa résistance (voir ci-dessus) ; ne branchez pas un chauffe-eau sur une prise improvisée
+#. Si la résistance est infinie → Problème charge, pas routeur
 
 Triac Surchauffe
-================
+----------------
 
 **Symptôme :** Dissipateur très chaud (>60 °C au toucher)
 
@@ -520,15 +527,14 @@ Triac Surchauffe
 - Vérifier que la charge ≤ 3 kW (mesurer avec pince ampèremétrique)
 - **S’assurer que le dissipateur est vertical**
 - Améliorer le contact thermique (pâte, serrage correct)
-- Si charge >3 kW : répartir la puissance sur plusieurs étages de sortie ou réduire la puissance de la charge
+- Si charge >3 kW : répartir la puissance sur plusieurs étages de sortie, uniquement si la charge a plusieurs résistances, chacune sur son propre étage (jamais deux triacs en parallèle sur une même résistance), ou réduire la puissance de la charge
 
 
-================================
 💻 Problèmes de Communication RF
 ================================
 
 Module RF ne Répond Pas
-=======================
+-----------------------
 
 **Symptôme :** Pas de communication radio (si module RF installé)
 
@@ -536,7 +542,7 @@ Module RF ne Répond Pas
  Cette section concerne uniquement les kits avec module RF optionnel.
 
 Vérifications Matérielles
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Diagnostic module RF
 
@@ -547,31 +553,24 @@ Vérifications Matérielles
 
  #. ☐ **Antenne connectée ?**
 
-    - Module 433 MHz : antenne filaire 17 cm
-    - Module 868 MHz : antenne filaire 8.6 cm
+    - Antenne 433 ou 868 MHz (selon le module) vissée sur le connecteur SMA **CN1** de la carte-mère
 
  #. ☐ **Firmware compilé avec RF activé ?**
 
-    - Dans ``config.h`` : ``#define ENABLE_RF_MODULE``
+    - Le module radio est utilisé si ``RF_LOGGING_PRESENT`` vaut ``true`` dans ``config.h``, ou si des charges distantes sont déclarées (``Load::remote()``)
+    - La fréquence (``FREQUENCY`` dans ``config_rf.h``) doit correspondre au module, et ``NETWORK_ID`` être le même sur tous les appareils
     - Recompiler et téléverser si nécessaire
 
  #. ☐ **Messages RF dans Moniteur Série ?**
 
-    - Doit afficher : « RF initialized » au démarrage
-    - Si « RF init failed » → Problème communication
+    - Au démarrage : « RF capability IS present, Freq = 868 MHz » (ou 433 MHz), puis « RF module initialized »
+    - Si « RF module initialization FAILED » → module absent, non alimenté ou mal soudé ; le firmware retente l’initialisation à chaque période de datalog
 
 Dépannage Communication
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
-**Test émetteur :**
+**Problèmes fréquents :**
 
-#. Ouvrir Moniteur Série (9 600 bauds)
-#. Forcer émission commande test
-#. Observer messages debug
-
-**Problèmes fréquents :**
-
-- Mauvaise broche SPI (vérifier schéma)
-- Module 3,3 V alimenté en 5 V (destruction possible)
+- Cavalier V sel. passé en position 5 V : l’ATmega328P pilote alors le module radio, alimenté en 3,3 V, avec des signaux 5 V (destruction possible) ; laissez V sel. dans sa position d’usine (3,3 V)
 - Interférences (éloigner de charges puissance)
 
