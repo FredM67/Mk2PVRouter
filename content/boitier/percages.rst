@@ -66,13 +66,13 @@ Cependant, ce guide décrira l’implantation la plus classique.
    - Trous de **8 mm**
    - 1 prise pour monophasé, 3 prises pour triphasé
 
-**Témoins LED et afficheur 4 Digits** (*Monophasé uniquement*)
-   - Trous de **8 mm**
+**Cartes-relais** (si utilisées)
+   - 4 trous de **3 mm** par carte (voir :ref:`carte-sortie-relais`)
 
-**Bouton marche/arrêt** (*Monophasé uniquement*)
-   - 1 trou de **20 mm**
+**Témoins LED** (cartes indicateur, voir :ref:`carte-indicateur`)
+   - 1 trou de **5 mm** par carte indicateur, dans le couvercle
 
-**Bouton reset** (*Triphasé uniquement*)
+**Bouton reset** (option, connecteur RESET de la carte-mère)
    - 1 trou de **13 mm**
 
 Outils nécessaires
@@ -196,7 +196,7 @@ L’utilisation d’une perceuse à colonne est recommandée.
 Perçage pour chaque étage de sortie :term:`triac <Triac>`
 ------------------------------------------------------------
 
-Le :term:`triac <Triac>` de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur en façade du boîtier.
+Le :term:`triac <Triac>` de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur monté sur le côté du boîtier.
 L’étage de sortie doit aussi être fixé au fond du boîtier à la bonne hauteur pour être en accord avec le point de fixation du triac.
 
 Pour ce faire :
@@ -237,7 +237,7 @@ Pour ajuster la hauteur de la carte de sortie, un plot en plastique de **10 mm*
    Avant de continuer, vérifiez :
 
    | ☐ **Dissipateurs fixés solidement** sur les côtés verticaux du boîtier
-   | ☐ **Triacs montés** sur les dissipateurs avec pâte thermique
+   | ☐ **Triacs montés** sur les dissipateurs avec l’isolant fourni
    | ☐ **Tous les trous de montage percés à 3 mm** de diamètre
    | ☐ **Plots 10 mm installés** avec vis M3 plastique
    | ☐ **Hauteur des cartes de sortie correcte** (alignement avec dissipateur)
@@ -253,13 +253,13 @@ Une fois les étages de sortie correctement positionnés, vous pouvez placer la 
 En utilisant la même méthode, vous pouvez marquer et percer le boîtier aux dimensions appropriées.
 
 .. figure:: ../img/Implantation-Mono.png
-   :alt: Pointage carte mère
+   :alt: Pointage carte-mère
    :align: center
    :scale: 25%
 
-   Pointage carte mère
+   Pointage carte-mère
 
-Pour éviter qu’elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de **10 mm** de hauteur est installé à l’aide d’une vis **M3** sur tous les trous de montage percés, de la même manière que pour l’étage de sortie.
+Pour éviter qu’elle ne repose sur les points de fixation au fond du boîtier, un plot en plastique de **10 mm** de hauteur est installé à l’aide d’une vis **M3** en plastique sur tous les trous de montage percés, de la même manière que pour l’étage de sortie.
 
 .. admonition:: ✅ Point de Contrôle — Perçage Carte-Mère
 
@@ -270,7 +270,3 @@ Pour éviter qu’elle ne repose sur les points de fixation au fond du boîtier,
    | ☐ Carte-mère positionnée sans entraver les branchements
    | ☐ Carte-mère ne touche pas les points de fixation du boîtier
    | ☐ Espace suffisant pour le câblage autour de la carte-mère
-
-.. |br| raw:: html
-
-  <br/>

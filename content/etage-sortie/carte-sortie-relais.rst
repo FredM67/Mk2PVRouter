@@ -20,7 +20,7 @@ Une sortie relais *tout-ou-rien* est composée d’une bobine qui, lorsqu’elle
 Avantages pour les Appareils Électroniques
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Isolation Galvanique** : La commande par relais *tout-ou-rien* offre une isolation galvanique entre le circuit de commande (la bobine) et le circuit de puissance (les contacts). Cette séparation est essentielle pour protéger les composants électroniques sensibles des hautes tensions et des interférences potentielles.
+* **Contact sec** : le contact du relais est un simple interrupteur mécanique. Ouvert, il ne laisse passer aucun courant de fuite. (L’étage de sortie :term:`triac <Triac>` est lui aussi isolé de la carte-mère, par son optocoupleur.)
 * **Compatibilité avec Diverses Charges** : Contrairement aux sorties triac, qui sont optimales pour les charges résistives et peuvent présenter des problèmes avec des charges inductives ou capacitives, les relais peuvent commuter de manière fiable des appareils électroniques qui possèdent des alimentations à découpage, des moteurs, ou des composants inductifs sans risque de dysfonctionnement.
 * **Pas de Semi-Conduction** : Les sorties triac sont des dispositifs semi-conducteurs qui peuvent conduire partiellement, créant des situations où un appareil électronique pourrait recevoir une tension insuffisante ou erratique. Les relais, en revanche, offrent une commutation nette et complète, ce qui est préférable pour les appareils électroniques nécessitant une alimentation stable.
 
@@ -54,9 +54,9 @@ Matériel nécessaire
 
 ☐ Carte-relais à tester
 
-☐ Carte-mère assemblée et fonctionnelle (ou Arduino avec alimentation 5 V)
+☐ Arduino alimenté par son port USB, ou carte-mère assemblée et fonctionnelle (alimentée par le secteur, voir l’étape 3)
 
-☐ Câble Molex 3 fils (GND, I/O, VCC) — le relais a besoin de l’alimentation VCC
+☐ Câble Molex 3 fils (GND, I/O, VCC) — le relais a besoin de l’alimentation VCC. Sur la carte-mère, la broche VCC (broche 3) des connecteurs 1×03 n’est alimentée que si le cavalier « +5V Rail » est fermé (voir :ref:`cavaliers`)
 
 ☐ Multimètre (fonction continuité / résistance)
 
@@ -73,39 +73,38 @@ Procédure de test
 
 **Étape 2 : Test de continuité (hors tension)**
 
-#. Mesurer la résistance entre les bornes du connecteur de puissance : **circuit ouvert** (∞ Ω) attendu
-#. Mesurer la résistance de la bobine du relais (entre les broches de commande) : **quelques centaines d’ohms** attendus
+#. Mesurer la résistance entre les bornes COM et NO (contact « travail ») du relais : **circuit ouvert** (∞ Ω) attendu
 
-**Étape 3 : Test fonctionnel (basse tension uniquement)**
+**Étape 3 : Test fonctionnel**
 
 .. warning::
    Le câblage du connecteur Molex 3 broches doit correspondre entre la carte-relais et la carte-mère : **GND↔GND**, **I/O↔I/O**, **VCC↔VCC**. Un câblage inversé peut endommager la carte-relais ou la carte-mère.
 
 #. Connecter le câble Molex 3 fils entre la carte-relais et une sortie numérique de la carte-mère (D2–D13, connecteur 1×03)
-#. Alimenter la carte-mère (ou l’Arduino) en 5 V via le connecteur :term:`FTDI` ou USB
+#. Avec la carte-mère : vérifier que le cavalier « +5V Rail » est fermé (voir :ref:`cavaliers`) ; sans lui, la broche VCC reste hors tension et le relais ne colle jamais
+#. Alimenter l’Arduino par son port USB. La carte-mère n’a pas de port USB et ne s’alimente pas par le connecteur :term:`FTDI` (sa broche VCC n’est pas reliée) : elle n’est alimentée que par son module secteur intégré. Pour ce test avec la carte-mère, raccordez-la au secteur dans son boîtier fermé, en respectant les consignes de :ref:`safety-overview`
 #. Activer la sortie numérique correspondante (HIGH) :
 
    - Un **clic audible** du relais doit se produire
    - La LED de la carte-relais doit s’allumer (si présente)
-   - Mesurer la continuité entre les bornes de puissance : **court-circuit** (0 Ω) attendu
+   - Mesurer la continuité entre les bornes COM et NO : **court-circuit** (0 Ω) attendu
 
 #. Désactiver la sortie (LOW) :
 
    - Un second **clic** doit se produire (relâchement)
    - La LED doit s’éteindre
-   - Mesurer la continuité entre les bornes de puissance : **circuit ouvert** (∞ Ω) attendu
+   - Mesurer la continuité entre les bornes COM et NO : **circuit ouvert** (∞ Ω) attendu
 
 #. Répéter 2–3 fois pour confirmer un fonctionnement fiable
 
 .. warning::
-   Ne **jamais** raccorder la tension secteur (230 V) directement sur les contacts du relais pour ce test. Le test fonctionnel se fait entièrement en **basse tension**.
+   Ne **jamais** raccorder la tension secteur (230 V) directement sur les contacts du relais pour ce test. Les contacts du relais se vérifient uniquement au multimètre.
 
 .. admonition:: ✅ Point de Contrôle — Carte-Relais
 
    Avant d’intégrer la carte-relais dans le boîtier :
 
    | ☐ Inspection visuelle : aucun défaut apparent
-   | ☐ Bobine : résistance mesurée cohérente (quelques centaines d’Ω)
    | ☐ Activation : clic audible, contacts fermés (0 Ω)
    | ☐ Désactivation : clic audible, contacts ouverts (∞ Ω)
 

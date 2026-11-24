@@ -1,9 +1,10 @@
 .. _burst-fire-control:
 
+==================
 Burst Fire Control
 ==================
 
-Le burst fire control est une méthode de régulation utilisée pour piloter des charges électriques, en particulier des charges résistives comme les chauffe-eaux ou les radiateurs. Cette méthode est souvent utilisée dans des systèmes comme le Mk2PVRouter pour optimiser l’utilisation de l’énergie excédentaire tout en minimisant les perturbations sur le réseau électrique.
+Le burst fire control est une méthode de régulation utilisée pour piloter des charges électriques, en particulier des charges résistives comme les chauffe-eau ou les radiateurs. Cette méthode est souvent utilisée dans des systèmes comme le Mk2PVRouter pour optimiser l’utilisation de l’énergie excédentaire tout en minimisant les perturbations sur le réseau électrique.
 
 Fonctionnement du Burst Fire Control
 ------------------------------------
@@ -26,22 +27,24 @@ Le principe du burst fire control repose sur l’envoi de **trains complets d’
     - Si le triac est activé pendant 5 cycles et désactivé pendant 5 cycles, la puissance moyenne est de 50 %.
     - Si le triac est activé pendant 8 cycles et désactivé pendant 2 cycles, la puissance moyenne est de 80 %.
 
+  - Ces rapports sont des moyennes : le Mk2PVRouter n’utilise pas de fenêtre fixe de N cycles (voir l’exemple ci-dessous).
+
 Avantages du Burst Fire Control
 -------------------------------
 
 - **Réduction des harmoniques** :
 
-  - Contrairement au contrôle en phase, le burst fire control ne génère pas d’harmoniques dans le réseau électrique. Les harmoniques sont des perturbations qui peuvent affecter la qualité du signal électrique et perturber d’autres appareils connectés au réseau.
-  - En utilisant des cycles complets, le signal reste propre et conforme aux normes électriques.
+  - Contrairement au contrôle en phase, le burst fire control ne génère pas d’harmoniques (multiples de 50 Hz) dans le réseau électrique. Les harmoniques sont des perturbations qui peuvent affecter la qualité du signal électrique et perturber d’autres appareils connectés au réseau.
+  - Il n’est pas pour autant sans effet : avec de fortes charges, les mises en marche et arrêts successifs peuvent provoquer un léger papillotement (*flicker*) de l’éclairage.
 
 - **Compatibilité avec les charges résistives** :
 
-  - Ce mode est particulièrement adapté aux charges résistives (chauffe-eaux, radiateurs, etc.), qui n’ont pas besoin d’une régulation fine de la puissance.
+  - Ce mode est particulièrement adapté aux charges résistives (chauffe-eau, radiateurs, etc.), qui n’ont pas besoin d’une régulation fine de la puissance.
   - Les charges résistives tolèrent bien les interruptions périodiques de l’alimentation.
 
-- **Efficacité énergétique** :
+- **Faibles perturbations radio** :
 
-  - En minimisant les pertes liées à la commutation (activation et désactivation du triac), le burst fire control améliore l’efficacité globale du système.
+  - Le triac ne commute qu’au passage par zéro de la tension, ce qui évite les parasites radio (CEM) que produit le contrôle en phase.
 
 - **Simplicité de mise en œuvre** :
 
@@ -55,20 +58,22 @@ Dans le Mk2PVRouter, le burst fire control est utilisé pour rediriger l’éner
 - Si un surplus d’énergie est détecté, le routeur active le triac pour un certain nombre de cycles complets, permettant à l’énergie excédentaire d’être consommée par un chauffe-eau.
 - Lorsque le surplus diminue, le routeur réduit le nombre de cycles activés, ajustant ainsi la puissance délivrée à la charge.
 
+Concrètement, la décision est prise une fois par période secteur (toutes les 20 ms à 50 Hz) : le routeur compare l’énergie excédentaire accumulée dans un « réservoir d’énergie » à des seuils, et peut alors mettre une charge en marche ou l’arrêter. L’optocoupleur à passage par zéro de l’étage de sortie (MOC3043M) fait que le triac ne commute qu’au passage par zéro de la tension.
+
 Comparaison avec le Contrôle en Phase
 -------------------------------------
 
 +---------------------------+-----------------------------+-----------------------------+
 | **Caractéristique**       | **Burst Fire Control**      | **Contrôle en Phase**       |
 +===========================+=============================+=============================+
-| **Harmoniques**           | Aucune génération           | Génère des harmoniques      |
+| **Harmoniques**           | Pas d’harmoniques           | Génère des harmoniques      |
 +---------------------------+-----------------------------+-----------------------------+
 | **Compatibilité**         | Idéal pour les charges      | Peut être utilisé pour des  |
 |                           | résistives                  | charges variées             |
 +---------------------------+-----------------------------+-----------------------------+
 | **Complexité**            | Simple à implémenter        | Plus complexe               |
 +---------------------------+-----------------------------+-----------------------------+
-| **Efficacité énergétique**| Très efficace               | Moins efficace              |
+| **Perturbations radio**   | Faibles (zéro de tension)   | Plus élevées                |
 +---------------------------+-----------------------------+-----------------------------+
 
 Conclusion

@@ -9,22 +9,24 @@ Il convient d’apporter un soin tout particulier pour la confection des multipl
 Voici la liste des câbles dont nous aurons besoin :
 
 * câble relié à la prise jack (1 pour monophasé, 3 pour triphasé)
-* câble de contrôle (un par étage de sortie)
+* câble de contrôle (un par étage de sortie : 2 fils pour un étage triac, 3 fils pour une carte-relais)
 * câble de témoin LED (un par étage de sortie et/ou sortie relais).
-* fil de mise à la terre (un par dissipateur)
+* fil de mise à la terre vert/jaune (un par dissipateur)
 
 .. note::
    Toutes les longueurs préconisées sont basées sur les implantations de la carte-mère décrites :ref:`ici <percage-carte-mere>`.
 
 .. admonition:: Conseil
 
-   Les câbles très basse tension sont composés de 2 fils tressés.
+   Les câbles très basse tension sont composés de 2 fils torsadés (3 pour une carte-relais).
    Il est **fortement** recommandé de se fixer une convention de couleur, selon le contenu du kit et/ou les câbles que l’on utilisera de son propre stock.
 
    Par exemple :
 
    * **rouge** pour le **+**, **bleu** pour la *masse*
    * ou si on prend du câble réseau, *couleur* pour le **+**, *couleur/blanc* pour la **masse**.
+
+   Quel que soit le code couleur, le brochage est le même sur la carte-mère, l’étage de sortie et la carte indicateur : broche 1 = masse, broche 2 = signal (+). Les câbles sont donc droits, broche 1 ↔ broche 1. Sur les connecteurs 1×03 de la carte-mère, la broche 3 porte le +5 V (VCC) des cartes-relais ; vérifiez le brochage de la carte-relais avant de sertir (voir :ref:`carte-sortie-relais`).
 
 Fil de mise à la terre
 ----------------------
@@ -95,7 +97,3 @@ Bien sûr, il est possible de faire des câbles plus courts, ou plus longs !
      * étage de sortie **haut droit** => **510 mm**
      * étage de sortie **bas gauche** => **580 mm**
      * étage de sortie **bas droit** => **650 mm**
-
-.. |br| raw:: html
-
-  <br/>
