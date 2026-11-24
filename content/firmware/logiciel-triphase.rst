@@ -40,18 +40,13 @@ Cela peut être vérifié en exécutant un programme (croquis) qui affiche les m
 
 Le programme est *RawSamplesTool_6chan.ino* : il se trouve dans le dossier ``dev/RawSamplesTool_6chan/`` du dépôt `PVRouter-3-phase <https://github.com/FredM67/PVRouter-3-phase>`_ et se téléverse seul, sans le firmware du routeur.
 
-Après avoir téléchargé ce croquis sur le processeur via l'Arduino IDE, la fenêtre série (icône en forme de loupe) doit être ouverte.
+Après avoir téléversé ce croquis sur le processeur via l'Arduino IDE, la fenêtre série (icône en forme de loupe) doit être ouverte.
 Après avoir terminé chaque exécution, le programme peut être redémarré à partir du clavier en saisissant le caractère « **g** », suivi de *Entrée*.
 
 Le programme *RawSamplesTool_6chan* affiche les échantillons des trois tensions alternatives et de courant pour un ou plusieurs cycles secteur complets.
 Si un courant important est mesuré ainsi que la tension, les résultats affichés sembleront plus intéressants.
 
-Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le :term:`CT` branché sur **CT2**.
-Lorsque le :term:`CT` a été déplacé vers le port **CT1**, la sortie résultante semblait presque identique, mais avec les caractères « **1** » et « **2** » inversés.
-
-``RSResults_V_and_I2.txt``
-
-Si aucun signal n'est disponible sur les ports **CT1-CT3**, les formes d'onde de ces canaux seront toutes deux des lignes droites.
+Si aucun signal n'est disponible sur les ports **CT1-CT3**, les formes d'onde de ces canaux seront toutes des lignes droites.
 Seuls les signaux de tension afficheront un aspect sinusoïdal.
 Pour vérifier le fonctionnement des ports **CT1-CT3** pendant que le :term:`PCB` est testé sur le banc, un câblage adapté sera nécessaire.
 
@@ -68,7 +63,7 @@ Prochaines Étapes
 
 #. **Installation finale** : Connexion au réseau électrique (faire appel à un électricien qualifié)
 
-#. **Configuration avancée** : Relais, sondes de température, double tarif, etc.
+#. **Configuration avancée** : Relais, sondes de température, double tarif, etc., avec le :ref:`configurateur <configurateur-triphase>`
 
 .. warning::
    Ne pas connecter le routeur au réseau électrique domestique avant d’avoir :
@@ -78,7 +73,7 @@ Prochaines Étapes
    - [ ] Fait appel à un électricien qualifié (fortement recommandé)
 
 .. important::
-   **FONCTIONNALITÉ** : L’étalonnage doit être effectué après l’installation électrique pour que le routeur mesure correctement et fonctionne de manière optimale. Le routeur peut être connecté sans étalonnage (pas de danger), mais ne fonctionnera pas correctement.
+   **FONCTIONNALITÉ** : L’étalonnage doit être effectué après l’installation électrique pour que le routeur mesure correctement et fonctionne de manière optimale. Le routeur peut être connecté sans étalonnage (pas de danger), mais ses mesures seront approximatives : à quelques pour cent près en général avec la carte universelle ; avec l’ancienne carte, les valeurs par défaut ne sont qu’un point de départ.
 
 .. |br| raw:: html
 

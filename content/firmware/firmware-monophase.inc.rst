@@ -42,10 +42,12 @@ Après extraction, vous devriez avoir :
    └── ... (autres fichiers)
 
 .. important::
-   Seuls deux fichiers doivent être modifiés par l’utilisateur :
+   Les réglages courants sont dans deux fichiers :
 
    - **config.h** — Configuration générale (carte-mère, afficheur, sorties, relais, sondes…)
    - **calibration.h** — Paramètres d’étalonnage (à remplir après l’étalonnage)
+
+   `config_system.h` (fréquence du réseau, export requis, période d’envoi des données, 30 s au plus) et `config_rf.h` (liaison radio) ne changent que dans des cas particuliers. Le :ref:`configurateur <configurateur-monophase>` écrit les trois fichiers `config.h`, `config_system.h` et `config_rf.h`.
 
 
 Étape 2 : Configuration du Firmware
@@ -150,7 +152,7 @@ Définir la priorité des charges :
 
    inline constexpr uint8_t loadPrioritiesAtStartup[NO_OF_DUMPLOADS]{ 0, 1 };
 
-Signification : Démarrer d’abord la sortie 0, puis la sortie 1.
+Signification : les priorités désignent les sorties par leur rang dans `physicalLoadPin`, à partir de 0 : `{ 0, 1 }` démarre d’abord la sortie 1 (D5), puis la sortie 2 (D6).
 
 Relais, Sondes de Température, Double Tarif, Radio (Optionnel)
 ##############################################################
@@ -179,7 +181,7 @@ Ce fichier contient les paramètres d’étalonnage, avec un jeu de valeurs par 
    inline constexpr float f_powerCalPerAmp{ 0.00286405F };
    inline constexpr float f_voltageCalNewBoard{ 0.888065256F };
 
-**Carte universelle** : `f_ctRating` et `f_ctRatingDiverted` sont les calibres (courant nominal) des sondes CT1 et CT2, en ampères. Si vos sondes ne sont pas des 50 A, indiquez dès maintenant leur calibre.
+**Carte universelle** : `f_ctRating` et `f_ctRatingDiverted` sont les calibres (courant nominal) des sondes CT1 et CT2, en ampères. Si vos sondes ne sont pas des 50 A / 333 mV, indiquez dès maintenant leur calibre : avec une sonde à sortie courant et une résistance de charge R (par exemple YHDC SCT-013-000), le calibre vaut 666 / R, soit 30,3 avec 22 Ω.
 
 .. warning::
    Ne modifiez **PAS** les autres valeurs maintenant — elles seront déterminées lors de l’étalonnage

@@ -9,12 +9,12 @@ L’Arduino IDE est le logiciel qui permet de programmer le routeur.
 .. _arduino-ide-windows:
 
 🪟 Windows
-~~~~~~~~~~
+^^^^^^^^^^
 
 .. _arduino-ide-windows-telechargement:
 
 Téléchargement
-^^^^^^^^^^^^^^
+""""""""""""""
 
 #. Ouvrir le navigateur web : https://www.arduino.cc/en/software
 #. Cliquer sur **« Windows Win 10 and newer »** (fichier `.exe` ou `.zip`)
@@ -24,15 +24,14 @@ Téléchargement
 .. _arduino-ide-windows-installation:
 
 Installation
-^^^^^^^^^^^^
+""""""""""""
 
 #. Double-cliquer sur le fichier téléchargé (`arduino-ide-xxxx.exe`)
 #. Accepter la licence
-#. **IMPORTANT :** Cocher **« Install USB drivers »** et tous les composants
-#. Choisir le répertoire d’installation (laisser par défaut : `C:\\Program Files\\Arduino`)
+#. Laisser les options et le répertoire d’installation proposés par défaut
 #. Cliquer sur **« Install »**
 #. Attendre la fin de l’installation (5–10 minutes)
-#. Laisser l’installateur créer les raccourcis sur le bureau
+#. Si l’installateur, ou l’Arduino IDE à son premier lancement, propose d’installer des pilotes USB, accepter
 
 .. note::
    Si Windows affiche un avertissement de sécurité, cliquer sur **« Exécuter quand même »**.
@@ -41,12 +40,12 @@ Installation
 .. _arduino-ide-macos:
 
 🍎 macOS
-~~~~~~~~
+^^^^^^^^
 
 .. _arduino-ide-macos-telechargement:
 
 Téléchargement
-^^^^^^^^^^^^^^
+""""""""""""""
 
 #. Ouvrir le navigateur web : https://www.arduino.cc/en/software
 #. Cliquer sur **« macOS »** (fichier `.dmg`)
@@ -55,7 +54,7 @@ Téléchargement
 .. _arduino-ide-macos-installation:
 
 Installation
-^^^^^^^^^^^^
+""""""""""""
 
 #. Ouvrir le fichier `.dmg` téléchargé
 #. Glisser l’icône Arduino dans le dossier **Applications**
@@ -69,10 +68,10 @@ Installation
 .. _arduino-ide-linux:
 
 Linux (Ubuntu/Debian)
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 Méthode recommandée : AppImage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""
 
 #. Ouvrir le navigateur web : https://www.arduino.cc/en/software
 #. Télécharger la version **« Linux AppImage »**
@@ -86,7 +85,7 @@ Méthode recommandée : AppImage
       ./arduino-ide-*-linux-x64.AppImage
 
 Alternative : Installation via le gestionnaire de paquets
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 .. code-block:: bash
 
@@ -94,7 +93,7 @@ Alternative : Installation via le gestionnaire de paquets
    sudo apt install arduino
 
 .. warning::
-   La version des dépôts peut être ancienne. Privilégier l’AppImage pour avoir la dernière version.
+   La version des dépôts est souvent l’ancienne série 1.8 de l’Arduino IDE : son fichier `platform.txt` n’est pas aux emplacements donnés plus bas (la commande de recherche de la section suivante le retrouve). Privilégier l’AppImage, qui installe la version actuelle.
 
 .. _arduino-cpp17-config:
 
@@ -109,22 +108,26 @@ Configuration Arduino IDE pour C++17
 Le firmware du Mk2PVRouter utilise des fonctionnalités modernes du C++ (C++17) qui ne sont pas activées par défaut dans Arduino IDE.
 
 Localisation du fichier `platform.txt`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Le fichier à modifier se trouve à différents emplacements selon le système d’exploitation :
 
 Windows
-^^^^^^^
+"""""""
 
-Deux emplacements possibles :
+Avec l’Arduino IDE 2 (la version actuelle) :
 
-#. `C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\platform.txt`
-#. `%LOCALAPPDATA%\\Arduino15\\packages\\arduino\\hardware\\avr\\x.y.z\\platform.txt`
+`%LOCALAPPDATA%\\Arduino15\\packages\\arduino\\hardware\\avr\\x.y.z\\platform.txt`
 
-   (remplacer `x.y.z` par la version installée, exemple : `1.8.6`)
+(remplacer `x.y.z` par la version installée du paquet *Arduino AVR Boards*, exemple : `1.8.6`)
+
+Avec l’ancienne version 1.8 de l’Arduino IDE, installée dans `Program Files (x86)` : `C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\platform.txt`
+
+.. note::
+   Une mise à jour du paquet *Arduino AVR Boards* crée un nouveau dossier `x.y.z` : il faut alors refaire la modification dans le nouveau `platform.txt`.
 
 macOS
-^^^^^
+"""""
 
 `/Users/[nom_utilisateur]/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/platform.txt`
 
@@ -142,12 +145,12 @@ macOS
 .. _cpp17-linux:
 
 Linux
-^^^^^
+"""""
 
 `~/.arduino15/packages/arduino/hardware/avr/1.8.6/platform.txt`
 
 Modification du fichier
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Faire une **copie de sauvegarde** du fichier `platform.txt` (exemple : `platform.txt.bak`)
 
@@ -162,22 +165,25 @@ Modification du fichier
 
    .. code-block:: text
 
-      "-std=gnu++11"
+      -std=gnu++11
 
 #. Remplacer par :
 
    .. code-block:: text
 
-      "-std=gnu++17"
+      -std=gnu++17
+
+#. Facultatif : sur la même ligne, supprimer aussi `-fpermissive`. Ce réglage, ajouté par l’Arduino IDE, fait de certaines erreurs de configuration (un dépassement dans une expression constante, par exemple) de simples avertissements ; PlatformIO le retire pour cette raison.
 
 #. **Sauvegarder** le fichier
 
 #. **Redémarrer Arduino IDE** pour que le changement soit pris en compte
 
 .. tip::
-   Si vous ne trouvez pas le fichier, ouvrez Arduino IDE, allez dans **Fichier → Préférences**,
-   et regardez l’emplacement du **« Dossier de Sketchbook »**. Le fichier `platform.txt` est
-   généralement dans un sous-dossier relatif à cet emplacement.
+   Si vous ne trouvez pas le fichier, cherchez-le. Sous Windows, dans PowerShell :
+   ``Get-ChildItem -Path C:\ -Include platform.txt -Recurse -ErrorAction SilentlyContinue``.
+   Sous Linux ou macOS, dans un terminal : ``find / -name platform.txt 2>/dev/null``.
+   La recherche peut prendre quelques minutes.
 
 Installation des Bibliothèques
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -187,14 +193,14 @@ Le firmware nécessite plusieurs bibliothèques externes.
 Cette liste est celle du firmware triphasé : le firmware monophasé a la sienne, à la section :ref:`bibliotheques-monophase`.
 
 Ouvrir le Gestionnaire de bibliothèques
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Lancer Arduino IDE
 #. Menu : **Outils → Gérer les bibliothèques...**
 #. Une fenêtre « Gestionnaire de bibliothèques » s’ouvre
 
 Installation des bibliothèques du firmware triphasé
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Pour chacune des bibliothèques ci-dessous, taper son nom dans le champ de recherche, choisir la bonne (auteur indiqué) puis cliquer sur **« Installer »** :
 
@@ -205,7 +211,7 @@ Pour chacune des bibliothèques ci-dessous, taper son nom dans le champ de reche
 Elles sont toutes nécessaires, même sans sonde de température ni module RF : le firmware les inclut toujours, et le code inutilisé est éliminé à la compilation. Sans l’une d’elles, la compilation échoue. Voir le `Readme du firmware <https://github.com/FredM67/PVRouter-3-phase/blob/dev/Mk2_3phase_RFdatalog_temp/Readme.md#bibliothèques-requises-pour-larduino-ide>`_.
 
 Vérification
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 #. Menu : **Croquis → Inclure une bibliothèque**
 #. Vérifier la présence de : **OneWire**, **RFM69**

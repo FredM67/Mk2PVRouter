@@ -42,16 +42,11 @@ Le programme est *RawSamplesTool_2chan.ino* : il se trouve dans le dossier ``de
 .. note::
    Le programme lit la tension sur A3, **CT1** sur A5 et **CT2** sur A4, les entrées de la carte Mk2 de Robin Emley (`OLD_SEG`). Sur les autres cartes (tension A0, **CT1** A1, **CT2** A3), changer les trois numéros de broche en tête du programme.
 
-| Après avoir téléchargé ce croquis sur le processeur via l'Arduino IDE, la fenêtre série (icône en forme de loupe) doit être ouverte.
+| Après avoir téléversé ce croquis sur le processeur via l'Arduino IDE, la fenêtre série (icône en forme de loupe) doit être ouverte.
 | Après avoir terminé chaque exécution, le programme peut être redémarré à partir du clavier en saisissant le caractère « **g** », suivi de *Entrée*.
 
 | Le programme *RawSamplesTool_2chan* affiche les échantillons de tension alternative et de courant pour un ou plusieurs cycles secteur complets.
 | Si un courant important est mesuré ainsi que la tension, les résultats affichés sembleront plus intéressants.
-
-| Voici quelques résultats capturés lors de la mesure du courant consommé par une charge de 3 kW avec le :term:`CT` branché sur **CT2**.
-| Lorsque le :term:`CT` a été déplacé vers le port :term:`CT`\1, la sortie résultante semblait presque identique, mais avec les caractères « **1** » et « **2** » inversés.
-
-``RSResults_V_and_I2.txt``
 
 | Si aucun signal n'est disponible sur les ports **CT1** et **CT2**, les formes d'onde de ces canaux seront toutes deux des lignes droites.
 | Seul le signal de tension affichera un aspect sinusoïdal.
