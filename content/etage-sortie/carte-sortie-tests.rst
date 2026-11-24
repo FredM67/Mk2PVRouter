@@ -15,14 +15,12 @@ Les conseils suivants sont destinés aux situations où un étage de sortie doit
 
    Faites preuve de la plus grande prudence et n’entamez cette étape que si vous avez les compétences nécessaires pour le faire en toute sécurité.
 
-Voici une plate-forme construite qui permet de tester les cartes de sortie avec ou sans le :term:`triac <Triac>` soudé en place.
-
 Lors du test d’une carte de sortie, il est important que le :term:`triac <Triac>` fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit :term:`optocoupleur <Optocoupleur>` et un ou plusieurs composants seront alors détruits immédiatement.
 
 En tenant dûment compte de l’avertissement de sécurité ci-dessus, l’approche simple illustrée ci-dessous devrait convenir pour tester des cartes individuelles.
 
 Configuration du Banc de Test
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 **Matériel nécessaire pour le test :**
 
@@ -38,10 +36,12 @@ Configuration du Banc de Test
 
 ☐ **Extincteur** à portée de main
 
-☐ **Surface isolante et ininflammable** (céramique, bois sec — PAS métal)
+☐ **Prise protégée par un différentiel 30 mA** (testé avec son bouton « T »), de préférence via une multiprise à interrupteur
+
+☐ **Surface isolante et ininflammable** (céramique ou carrelage — PAS métal)
 
 Schéma de Montage du Test
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. graphviz::
    :caption: Configuration du banc de test pour carte de sortie triac (cliquer pour agrandir)
@@ -122,12 +122,13 @@ Schéma de Montage du Test
 
        // Secteur et lampe en bas (zone haute tension)
        secteur [label="⚠️ 230 V ⚠️\nSecteur", fillcolor="#D32F2F", fontcolor=white, color="#B71C1C", penwidth=2, width=2];
-       lampe [label="Lampe\nIncandescence\n100 W", shape=ellipse, fillcolor="#FFF59D", color="#F9A825", width=1.8];
+       lampe [label="Lampe\nIncandescence\n40–100 W", shape=ellipse, fillcolor="#FFF59D", color="#F9A825", width=1.8];
 
        // Connexions externes verticales
-       arduino -> molex [label="  Câble dupont (3.3V-5V)  ", color="#2196F3", fontcolor="#1565C0", fontsize=9];
-       power_conn -> secteur [label="  Entrée 230V AC  ", color="#D32F2F", fontcolor="#B71C1C", penwidth=2, fontsize=9, dir=back];
-       secteur -> lampe [label="  Charge 100W  ", color="#FF5722", fontcolor="#BF360C", penwidth=1.5, fontsize=9];
+       arduino -> molex [label="  Pin 9 → broche 2 (+), GND → broche 1  ", color="#2196F3", fontcolor="#1565C0", fontsize=9];
+       power_conn -> secteur [label="  Phase → borne extérieure  ", color="#D32F2F", fontcolor="#B71C1C", penwidth=2, fontsize=9, dir=back];
+       power_conn -> lampe [label="  Autre borne extérieure → lampe (en série)  ", color="#FF5722", fontcolor="#BF360C", penwidth=1.5, fontsize=9];
+       lampe -> secteur [label="  Neutre  ", color="#1565C0", fontcolor="#1565C0", penwidth=1.5, fontsize=9];
 
        // Positionner la légende à gauche, secteur au centre, lampe à droite
        // Utiliser des arêtes invisibles pour forcer l’ordre gauche-droite
@@ -138,19 +139,20 @@ Schéma de Montage du Test
    }
 
 Procédure de Test Complète
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 .. danger::
    ⚠️ **RAPPEL SÉCURITÉ — 230 V SECTEUR**
 
    - Extincteur à portée de main
+   - Montage alimenté par une prise protégée par un différentiel 30 mA
    - Aucun contact avec les parties sous tension
    - Disjoncteur facilement accessible
    - Personne présente pour surveiller
    - Premier test : durée maximale 2 minutes
 
 Étape 1 : Vérifications Préalables (HORS TENSION)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. **Inspection visuelle complète de la carte**
 
@@ -166,20 +168,20 @@ Procédure de Test Complète
 
    ☐ Mesurer résistance entre bornes connecteur puissance : **doit être ∞ Ω** (circuit ouvert)
 
-   ☐ Mesurer résistance :term:`optocoupleur <Optocoupleur>` côté commande : **quelques kΩ** (LED interne)
+   ☐ Multimètre en mode diode, pointe rouge sur la broche 2 (signal, +) et pointe noire sur la broche 1 (masse) du connecteur Molex : une tension de seuil s’affiche (LED de l’:term:`optocoupleur <Optocoupleur>` en série avec R1) ; pointes inversées : **OL** (circuit ouvert)
 
    ☐ Vérifier absence de court-circuit entre pistes basse/haute tension
 
 #. **Montage du banc de test**
 
-   ☐ Connecter lampe au connecteur de puissance de la carte
+   ☐ Câbler la lampe **en série** avec le :term:`triac <Triac>` : phase → une borne extérieure du connecteur de puissance ; l’autre borne extérieure → lampe → neutre. La borne centrale n’est pas utilisée. Ne jamais brancher la lampe en parallèle sur le connecteur de puissance.
 
-   ☐ Connecter Arduino pin 9 → Molex IN (signal commande)
+   ☐ Connecter Arduino pin 9 → broche 2 du connecteur Molex (signal, +, repérée « + » sur la sérigraphie)
 
-   ☐ Connecter Arduino GND → Molex GND
+   ☐ Connecter Arduino GND → broche 1 du connecteur Molex (masse)
 
 Étape 2 : Test Sans Tension Secteur
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. **Programmer Arduino avec signal test**
 
@@ -198,17 +200,22 @@ Procédure de Test Complète
 
 #. **Alimenter Arduino uniquement (PAS de secteur 230 V)**
 
-#. **Mesurer tension aux bornes du :term:`triac <Triac>`** avec multimètre
+#. **Mesurer la tension aux bornes de la résistance R1** (côté basse tension) avec le multimètre
 
-   - **Signal HIGH** : Devrait y avoir quelques volts (LED :term:`optocoupleur <Optocoupleur>` allumée)
-   - **Signal LOW** : 0 V (LED optocoupleur éteinte)
+   - **Signal HIGH** : quelques volts (le courant traverse la LED de l’:term:`optocoupleur <Optocoupleur>`)
+   - **Signal LOW** : 0 V
 
-   ✅ Si OK : L’:term:`optocoupleur <Optocoupleur>` fonctionne correctement
+   ✅ Si OK : la LED de l’optocoupleur est bien commandée
 
-   ❌ Si pas de variation : Vérifier soudures, orientation optocoupleur, résistances R1-R3
+   ❌ Si 0 V en permanence : vérifier le câble (broche 2 = signal), les soudures, l’orientation de l’optocoupleur et R1
+
+   Si vous disposez d’une carte indicateur LED (voir :ref:`carte-indicateur`), branchez-la sur le second connecteur Molex : elle doit s’allumer au rythme du programme. Cela vérifie le signal, pas l’optocoupleur.
+
+   .. note::
+      Sans secteur, le côté haute tension (sortie de l’optocoupleur, R2, R3, :term:`triac <Triac>`) ne peut pas être testé : l’optocoupleur MOC3043M ne déclenche le triac qu’au passage par zéro de la tension secteur, et la tension aux bornes du triac reste nulle. Ce côté est testé à l’étape 3.
 
 Étape 3 : Premier Test Sous Tension 230 V
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. danger::
    ⚠️⚠️⚠️ **DANGER — TENSION MORTELLE 230 V** ⚠️⚠️⚠️
@@ -227,7 +234,7 @@ Procédure de Test Complète
 
    ☐ Disjoncteur accessible
 
-#. **Brancher la lampe sur secteur 230 V**
+#. **Brancher le montage sur le secteur 230 V** (prise protégée par un différentiel 30 mA)
 
 #. **Observer pendant 30 secondes**
 
@@ -254,10 +261,10 @@ Procédure de Test Complète
 
 #. **Couper alimentation secteur**
 
-#. **Attendre 1 minute** (décharge condensateurs éventuels)
+#. **Débrancher la fiche secteur** avant toute manipulation
 
 Étape 4 : Test de Charge Progressive
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Si le test précédent a réussi, vous pouvez tester avec une charge plus importante.
 
@@ -275,10 +282,10 @@ Si le test précédent a réussi, vous pouvez tester avec une charge plus import
 
 
 Résultats Attendus du Test
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 Carte Fonctionnelle
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 
 **✅ SUCCÈS — La carte fonctionne correctement si :**
 
@@ -296,7 +303,7 @@ Carte Fonctionnelle
 **➜ La carte est prête pour l’installation dans le boîtier**
 
 Carte Défectueuse
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 **❌ ÉCHEC — La carte a un problème si :**
 
