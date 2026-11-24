@@ -303,9 +303,9 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
 **CT à sortie courant** — solution de dépannage, avec burden THT
    La carte est conçue pour des CT à sortie tension 333 mV. Un CT à sortie courant avec sa résistance de :term:`burden <Burden>` n’est qu’une solution de dépannage, par exemple en attendant des CT 333 mV.
 
-   Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden <Burden>` soudée sur la carte (emplacements **R18** / **R28** / **R38**).
+   Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden <Burden>` soudée sur la carte, aux emplacements sérigraphiés **D13** / **D23** / **D33** (R18 / R28 / R38 sur le schéma), un par connecteur CT1 / CT2 / CT3.
 
-   Les emplacements R18 / R28 / R38 sont des **empreintes doubles** : une diode :term:`TVS` de protection est déjà soudée en usine (côté :term:`CMS`). Elle protège l’entrée de l’:term:`ADC` dans le cas où un CT à sortie courant serait branché sans burden. La résistance de burden THT se soude **par-dessus** la TVS, sur les mêmes pastilles.
+   Ces emplacements sont des **empreintes doubles**, repérées sur le circuit imprimé par le nom de la diode : une diode :term:`TVS` de protection (D13 / D23 / D33) est déjà soudée en usine (côté :term:`CMS`). Elle protège l’entrée de l’:term:`ADC` dans le cas où un CT à sortie courant serait branché sans burden. La résistance de burden THT se soude **par-dessus** la TVS, sur les mêmes pastilles.
 
    La valeur du burden doit être calculée pour que la tension crête ne dépasse pas **0,55 V** (soit la moitié de la plage :term:`ADC` avec VREF = 1,1 V) :
 
