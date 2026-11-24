@@ -14,7 +14,7 @@ Assemblage — Composants monophasé
 
    | ☐ Composants communs soudés et vérifiés (voir :ref:`assemblage-carte-mere`)
 
-En configuration monophasée ou split-phase, soudez les composants suivants en plus des composants communs.
+En configuration monophasée, soudez les composants suivants en plus des composants communs.
 
 .. hint::
    Les composants sont listés du plus bas au plus haut dans chaque groupe. En soudant dans cet ordre, les composants déjà soudés ne gênent pas le retournement du :term:`PCB`.

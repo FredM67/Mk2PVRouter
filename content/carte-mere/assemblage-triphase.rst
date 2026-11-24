@@ -14,7 +14,7 @@ Assemblage — Composants triphasé
 
    | ☐ Composants communs soudés et vérifiés (voir :ref:`assemblage-carte-mere`)
 
-En configuration triphasée (avec ou sans neutre), soudez les composants suivants en plus des composants communs.
+En configuration triphasée (avec neutre, ou 3 × 230 V sans neutre), soudez les composants suivants en plus des composants communs.
 
 .. hint::
    Les composants sont listés du plus bas au plus haut dans chaque groupe. En soudant dans cet ordre, les composants déjà soudés ne gênent pas le retournement du :term:`PCB`.
@@ -47,7 +47,7 @@ Résistances de burden (dépannage, CT à sortie courant uniquement)
 #. Soudez une résistance axiale (pas de 12,7 mm) sur l’emplacement **R18** (CT1), **R28** (CT2) et **R38** (CT3, triphasé avec neutre), **par-dessus** la diode :term:`TVS` :term:`CMS` déjà soudée en usine sur les mêmes pastilles
 
 .. note::
-   En configuration **sans neutre**, le courant L3 est déduit des mesures de L1 et L2 (:term:`théorème de Blondel <Théorème de Blondel>` : N−1 capteurs suffisent pour N conducteurs).
+   En configuration **3 × 230 V sans neutre**, seuls les CT1 et CT2 sont utilisés : l’une des phases sert de référence et n’a pas besoin de capteur (:term:`théorème de Blondel <Théorème de Blondel>`, voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`).
 
 Composants haute tension
 --------------------------
@@ -112,7 +112,7 @@ Les transformateurs :term:`ZMPT101K` pour la mesure de tension de chaque phase.
 .. todo:: Photo à fournir — transformateurs TR1–TR3 soudés.
 
 .. note::
-   En configuration **sans neutre** (3 fils), le :term:`théorème de Blondel <Théorème de Blondel>` permet de déduire la tension L3 à partir de L1 et L2. Seuls TR1 et TR2 sont donc nécessaires.
+   En configuration **3 × 230 V sans neutre** (3 fils), l’une des phases est raccordée sur la borne N du routeur et sert de référence : TR1 et TR2 mesurent la tension des deux autres phases par rapport à elle. Seuls TR1 et TR2 sont donc nécessaires (voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`).
 
 Condensateur film C1
 ~~~~~~~~~~~~~~~~~~~~~

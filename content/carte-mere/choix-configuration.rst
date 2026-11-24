@@ -43,14 +43,10 @@ Guide de décision
      - 3 phases + neutre
      - Oui
      - Foyers avec abonnement triphasé, typiquement > 12 kVA (400 V / 230 V)
-   * - **Triphasé sans neutre**
-     - 3 phases (triangle)
+   * - **Triphasé 3 × 230 V sans neutre**
+     - 3 phases, 230 V entre phases
      - Non
-     - Certains foyers en Belgique et anciennes installations rurales
-   * - **Split-phase**
-     - 2 phases à 180°
-     - Oui
-     - Foyers en Amérique du Nord (120 V / 240 V)
+     - Certains foyers en Belgique et en Norvège, anciennes installations rurales
 
 Comment identifier votre raccordement ?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,7 +67,7 @@ Comment identifier votre raccordement ?
      - Triphasé avec neutre
      - **4 fils** passant dans le compteur (3 phases + neutre)
    * - ``3~`` ou ``3P``
-     - Triphasé sans neutre
+     - Triphasé 3 × 230 V sans neutre
      - **3 fils** passant dans le compteur (3 phases, pas de neutre)
 
 .. tip::
@@ -89,15 +85,13 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
 
 .. list-table::
    :header-rows: 1
-   :widths: 40 15 15 15 15
+   :widths: 40 20 20 20
 
    * - Composant
      - Mono
      - Tri+N
      - Tri-N
-     - Split
    * - Support IC1 (ATmega328P DIP-28)
-     - ✔
      - ✔
      - ✔
      - ✔
@@ -105,9 +99,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - ✔
      - ✔
      - ✔
-     - ✔
    * - Condensateur film C1 (1 µF 310 VAC)
-     - ✔
      - ✔
      - ✔
      - ✔
@@ -115,9 +107,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - ✔
      - ✔
      - ✔
-     - ✔
    * - Module d’alimentation PS1 (MPC10-5)
-     - ✔
      - ✔
      - ✔
      - ✔
@@ -125,9 +115,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - (opt.)
      - (opt.)
      - (opt.)
-     - (opt.)
    * - Module RF (RFM69CW, optionnel)
-     - (opt.)
      - (opt.)
      - (opt.)
      - (opt.)
@@ -135,9 +123,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - ✔
      - ✔
      - ✔
-     - ✔
    * - Connecteurs DS18B20 (sondes de température, optionnel)
-     - (opt.)
      - (opt.)
      - (opt.)
      - (opt.)
@@ -145,14 +131,11 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - ✔
      - ✔
      - ✔
-     - ✔
    * - Fusibles FS2, FS3
      -
      - ✔
      - ✔
-     - ✔
    * - Module protection GM1
-     - ✔
      - ✔
      - ✔
      - ✔
@@ -160,9 +143,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      -
      - ✔
      - ✔
-     - ✔
    * - Transformateur :term:`ZMPT101K` TR1
-     - ✔
      - ✔
      - ✔
      - ✔
@@ -170,14 +151,11 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      -
      - ✔
      - ✔
-     - ✔
    * - Transformateur :term:`ZMPT101K` TR3
      -
      - ✔
      -
-     -
    * - Connecteur :term:`CT` CT1
-     - ✔
      - ✔
      - ✔
      - ✔
@@ -185,14 +163,11 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - (opt.)
      - ✔
      - ✔
-     - ✔
    * - Connecteur :term:`CT` CT3
      -
      - ✔
      -
-     -
    * - Varistances RV0, RV1 (protection optionnelle)
-     - (opt.)
      - (opt.)
      - (opt.)
      - (opt.)
@@ -200,9 +175,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      -
      - (opt.)
      - (opt.)
-     - (opt.)
    * - Éclateurs GDT0, GDT1 (protection optionnelle)
-     - (opt.)
      - (opt.)
      - (opt.)
      - (opt.)
@@ -210,10 +183,8 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      -
      - (opt.)
      - (opt.)
-     - (opt.)
    * - Connecteur secteur
      - 3 voies
-     - 5 voies
      - 5 voies
      - 5 voies
 
@@ -226,15 +197,13 @@ Résumé rapide :
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 20 20 20 20
+   :widths: 25 25 25 25
 
    * - Cavalier
      - Mono
      - Tri+N
      - Tri-N
-     - Split
    * - V sel.
-     - 1–centre (3,3 V, d’usine)
      - 1–centre (3,3 V, d’usine)
      - 1–centre (3,3 V, d’usine)
      - 1–centre (3,3 V, d’usine)
@@ -242,14 +211,11 @@ Résumé rapide :
      - 3–centre (I2C SDA)
      - 1–centre (tension L3)
      - 1–centre (tension L3)
-     - 3–centre (I2C SDA)
    * - SCL
      - 3–centre (I2C SCL)
      - 1–centre (courant L3)
      - 1–centre (courant L3)
-     - 3–centre (I2C SCL)
    * - TEMP
-     - Voir :ref:`cavaliers`
      - Voir :ref:`cavaliers`
      - Voir :ref:`cavaliers`
      - Voir :ref:`cavaliers`
@@ -257,12 +223,10 @@ Résumé rapide :
      - Voir note
      - Voir note
      - Voir note
-     - Voir note
    * - OLED disponible
      - Oui
      - Non
      - Non
-     - Oui
 
 Firmware
 ~~~~~~~~
@@ -282,12 +246,9 @@ Le firmware à utiliser dépend de la configuration :
    * - Triphasé avec neutre
      - PVRouter-3-phase
      - ``Mk2_3phase_RFdatalog_temp``
-   * - Triphasé sans neutre
+   * - Triphasé 3 × 230 V sans neutre
      - PVRouter-3-phase
      - ``Mk2_3phase_RFdatalog_temp``
-   * - Split-phase
-     - PVRouter-1-phase
-     - ``Mk2_1phase_RFdatalog_temp``
 
 .. |br| raw:: html
 

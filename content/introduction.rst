@@ -4,7 +4,7 @@ Introduction
 ============
 
 | Cette documentation couvre le Mk2PVRouter basé sur la carte universelle **3phaseDiverter**.
-| Une seule carte-mère supporte toutes les configurations : monophasé, triphasé avec neutre, triphasé sans neutre et split-phase.
+| Une seule carte-mère supporte toutes les configurations : monophasé, triphasé avec neutre et triphasé 3 × 230 V sans neutre.
 | La configuration se fait par le choix des composants à souder et la position des cavaliers (voir :ref:`choix-configuration`).
 
 .. danger::

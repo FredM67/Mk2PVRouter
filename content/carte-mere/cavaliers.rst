@@ -95,7 +95,7 @@ Cavalier à 3 pôles qui sélectionne entre la mesure de courant de la phase L3 
    SDA et SCL fonctionnent en paire :
 
    - **Triphasé** : les deux en position **1–centre** (mesure L3)
-   - **Monophasé ou split-phase** : les deux en position **3–centre** (I2C pour écran OLED)
+   - **Monophasé** : les deux en position **3–centre** (I2C pour écran OLED)
 
 Cavaliers module RF — IRQ et NSS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
