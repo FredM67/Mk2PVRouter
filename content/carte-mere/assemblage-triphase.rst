@@ -44,7 +44,7 @@ Résistances de burden (dépannage, CT à sortie courant uniquement)
    Un burden mal choisi, ou absent, peut détruire l’entrée :term:`ADC` : lisez d’abord les règles de la section :ref:`types-de-capteurs-de-courant-supportes` (CT à sortie courant).
 
 #. Calculez la valeur de la résistance pour votre CT (voir :ref:`types-de-capteurs-de-courant-supportes`, CT à sortie courant)
-#. Soudez une résistance axiale (pas de 12,7 mm) sur les emplacements sérigraphiés **D13** (R18 sur le schéma) pour CT1, **D23** (R28) pour CT2 et **D33** (R38) pour CT3 (triphasé avec neutre), **par-dessus** la diode :term:`TVS` :term:`CMS` déjà soudée en usine sur les mêmes pastilles
+#. Soudez une résistance axiale (pas de 12,7 mm) dans les **deux trous traversants** de l’empreinte de la diode :term:`TVS` :term:`CMS` **D13** pour CT1, de **D23** pour CT2 et de **D33** pour CT3 (triphasé avec neutre). Ces diodes sont déjà soudées en usine et restent en place : la résistance passe **par-dessus** (R18, R28 et R38 sur le schéma)
 
 .. note::
    En configuration **3 × 230 V sans neutre**, la borne L3 n’est pas raccordée : FS3, GM3, RV3, GDT3, TR3 et CT3 ne servent pas.

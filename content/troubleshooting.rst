@@ -107,7 +107,7 @@ Vérifier les composants d’alimentation :
 
  #. ☐ **Chaîne d’alimentation bien soudée ?**
 
-    - Connecteur PWR1, fusibles (Mono : FS0, FS1 ; Tri : FS0 à FS3), module PS1, diode D1 (SMBJ7.0A), régulateur U1
+    - Composants traversants que vous avez soudés : connecteur secteur PWR1, fusibles (Mono : FS0, FS1 ; Tri : FS0 à FS3), module PS1 (les composants CMS, comme le régulateur U1, sont soudés en usine)
     - Soudures brillantes et lisses (pas ternes) ?
 
 .. include:: common/qualite-soudures.inc.rst
