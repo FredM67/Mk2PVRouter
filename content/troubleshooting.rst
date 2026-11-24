@@ -361,3 +361,204 @@ Erreur « Out of Memory » lors de la Compilation
 
 #. Recompiler et téléverser
 
+.. _obtenir-aide:
+
+=================
+Obtenir de l’aide
+=================
+
+Si aucune solution ne fonctionne
+================================
+
+Ressources communautaires
+-------------------------
+
+#. **Communauté Facebook :** https://www.facebook.com/groups/3571488193062570
+
+   - Moteur de recherche (problème déjà résolu ?)
+   - Poster nouveau sujet avec détails
+
+#. **Email support :** mk2pvrouter.france@gmail.com
+
+   - Temps réponse : 2–5 jours ouvrés
+
+#. **GitHub Issues :**
+
+   - Bugs du firmware : https://github.com/FredM67/PVRouter-3-phase/issues (triphasé) ou https://github.com/FredM67/PVRouter-1-phase/issues (monophasé)
+   - Erreurs ou suggestions pour la documentation : https://github.com/FredM67/Mk2PVRouter/issues
+
+Informations à fournir
+----------------------
+
+.. important::
+ **📞 Pour obtenir une aide efficace, inclure :**
+
+ ☐ **Description détaillée problème**
+
+ - Symptômes observés
+ - Quand ça se produit
+ - Qu’avez-vous déjà essayé ?
+
+ ☐ **Photos haute résolution**
+
+ - Dessus carte (composants)
+ - Dessous carte (soudures)
+ - Zones suspectes en gros plan
+
+ ☐ **Mesures électriques**
+
+ - Tensions aux points de test
+ - Résistances composants suspects
+
+ ☐ **Messages d’erreur complets**
+
+ - Copier-coller depuis Moniteur Série Arduino IDE
+ - Ou capture d’écran
+
+ ☐ **Informations configuration**
+
+ - Version firmware (voir Moniteur Série au démarrage)
+ - Configuration (mono/tri, nombre sorties)
+ - Système 3,3 V ou 5 V ?
+
+📸 Photos utiles — exemples
+---------------------------
+
+**Photo dessus (composants) :**
+
+- Vue d’ensemble carte complète
+- Netteté suffisante pour lire références composants
+- Éclairage uniforme sans reflets
+
+**Photo dessous (soudures) :**
+
+- Macro sur soudures suspectes
+- Toutes soudures visibles (pas de zones d’ombre)
+- Angle permettant voir qualité (brillant/terne)
+
+**Photos contexte :**
+
+- Installation dans boîtier
+- Câblage complet
+- Connexions CT
+- Étiquettes équipements
+
+Avant de poster
+---------------
+
+**Checklist pré-demande :**
+
+- ☐ J’ai lu toute la section pertinente du guide dépannage
+- ☐ J’ai vérifié tous les points de la liste de contrôle
+- ☐ J’ai cherché le problème sur forum (peut-être déjà résolu)
+- ☐ J’ai préparé photos/mesures/infos nécessaires
+- ☐ J’ai relu pour clarté et complétude
+
+.. tip::
+ Plus votre demande est précise et documentée, plus rapide sera la résolution !
+
+============================================
+🛠️ Annexe — Outils de diagnostic essentiels
+============================================
+
+Multimètre — utilisation de base
+================================
+
+**Mode Tension Continue (V⎓ ou VDC) :**
+
+- Mesurer VCC et les tensions d’alimentation
+- Sonde noire sur GND, rouge sur point à mesurer
+- Calibres : 20 V pour 3,3 V/5 V, 200 V pour >12 V
+
+**Mode Tension Alternative (V~ ou VAC) :**
+
+- Mesurer 230 V secteur
+- ⚠️ Danger haute tension !
+- Calibre minimum : 750 V
+
+**Mode Résistance (Ω) :**
+
+- Mesurer les résistances, tester la continuité
+- ⚠️ Toujours hors tension !
+- Calibres : 200 Ω, 2 kΩ, 20 kΩ, 200 kΩ
+
+**Mode Continuité (♪) :**
+
+- Tester connexions, détecter court-circuits
+- Bip si résistance <50 Ω
+- Idéal pour vérifier soudures, tracer pistes
+
+Loupe ou microscope USB
+=======================
+
+**Utilité :**
+
+- Inspecter qualité soudures
+- Détecter ponts microscopiques
+- Vérifier l’orientation des composants CMS
+
+**Recommandation :**
+
+- Loupe ×5 à ×10 minimum
+- Microscope USB 200× pour inspection détaillée
+- Éclairage LED intégré essentiel
+
+Oscilloscope (optionnel)
+========================
+
+**Pour diagnostics avancés :**
+
+- Visualiser le signal de commande des étages de sortie, **côté basse tension uniquement** (connecteur Molex de la carte-mère) ; jamais sur la gâchette du triac ni côté puissance : la masse de l’oscilloscope est reliée à la terre
+- Vérifier oscillateur ATmega328P
+- Analyser les formes d’onde de l’ADC
+
+**Alternative économique :**
+
+- Oscilloscope USB 20 MHz (50–100€)
+- Suffisant pour diagnostics DIY
+
+Pince ampèremétrique
+====================
+
+**Utilité :**
+
+- Mesurer courant sans couper câble
+- Vérifier puissance réelle charge
+- Indispensable pour étalonnage
+
+**Spécifications minimum :**
+
+- Plage : 0–20 A AC
+- Précision : ±3 %
+- Lecture True RMS recommandée
+
+==========
+Conclusion
+==========
+
+Ce guide de dépannage couvre les problèmes les plus fréquents rencontrés lors de l’assemblage et de l’utilisation du Mk2PVRouter.
+
+.. important::
+ **Règles d’or du dépannage :**
+
+ #. Toujours couper l’alimentation avant intervention
+ #. Procéder méthodiquement (listes de contrôle)
+ #. Prendre photos AVANT toute modification
+ #. Au moindre doute : demander de l’aide plutôt que forcer
+ #. Un composant coûte moins cher qu’un routeur détruit !
+
+**En cas de doute sérieux :**
+
+- Ne pas prendre de risques avec 230 V
+- Faire appel à un électricien qualifié
+- Votre sécurité prime sur tout le reste
+
+.. tip::
+ 💡 **Prévention > Réparation**
+
+ - Vérifier 3 fois avant de souder
+ - Tester progressivement (pas tout d’un coup)
+ - Noter les modifications (traçabilité)
+ - Prendre des pauses (fatigue = erreurs)
+
+Bon courage dans votre dépannage ! 🔧
