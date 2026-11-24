@@ -14,7 +14,7 @@ Voici la liste des câbles dont nous aurons besoin :
 * fil de mise à la terre vert/jaune (un par dissipateur)
 
 .. note::
-   Toutes les longueurs préconisées sont basées sur les implantations de la carte-mère décrites :ref:`ici <percage-carte-mere>`.
+   Toutes les longueurs préconisées sont basées sur les implantations de la carte-mère décrites :ref:`ici <percage-carte-mere>`.
 
 .. admonition:: Conseil
 
@@ -26,7 +26,7 @@ Voici la liste des câbles dont nous aurons besoin :
    * **rouge** pour le **+**, **bleu** pour la *masse*
    * ou si on prend du câble réseau, *couleur* pour le **+**, *couleur/blanc* pour la **masse**.
 
-   Quel que soit le code couleur, le brochage est le même sur la carte-mère, l’étage de sortie et la carte indicateur : broche 1 = masse, broche 2 = signal (+). Les câbles sont donc droits, broche 1 ↔ broche 1. Sur les connecteurs 1×03 de la carte-mère, la broche 3 porte le +5 V (VCC) des cartes-relais ; vérifiez le brochage de la carte-relais avant de sertir (voir :ref:`carte-sortie-relais`).
+   Quel que soit le code couleur, le brochage est le même sur la carte-mère, l’étage de sortie et la carte indicateur : broche 1 = masse, broche 2 = signal (+). Les câbles sont donc droits, broche 1 ↔ broche 1. Sur les connecteurs 1×03 de la carte-mère, la broche 3 porte le +5 V (VCC) des cartes-relais ; vérifiez le brochage de la carte-relais avant de sertir (voir :ref:`carte-sortie-relais`).
 
 Fil de mise à la terre
 ----------------------
@@ -77,7 +77,7 @@ Ce sont des fils *actifs* qui permettront d’envoyer les commandes d’ouvertur
 Câble·s de témoin·s LED
 -----------------------
 
-Ces câbles relient la carte indicateur LED (voir :ref:`carte-indicateur`) à l’étage de sortie correspondant. Ce sont des fils *actifs* qui sont repiqués sur la commande de l’étage de sortie et permettent de visualiser l’état de chaque sortie :
+Ces câbles relient la carte indicateur LED (voir :ref:`carte-indicateur`) à l’étage de sortie correspondant. Ce sont des fils *actifs* qui sont repiqués sur la commande de l’étage de sortie et permettent de visualiser l’état de chaque sortie :
 
 * **allumé** => le courant passe (triac **fermé**)
 * **éteint** => le courant ne passe pas (triac **ouvert**).

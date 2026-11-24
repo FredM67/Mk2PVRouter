@@ -115,39 +115,39 @@ Valeurs de Référence
    - 5,0 V
    - ±0,3 V (4,7–5,3 V)
  * - VREF (point de test V_REF, firmware lancé)
-   - 1,1 V
-   - ±0,1 V (1,0–1,2 V)
+   - 1,1 V
+   - ±0,1 V (1,0–1,2 V)
  * - Entrées ADC A0–A3, et A4–A5 en triphasé (repos, firmware lancé)
-   - 0,55 V (VREF/2)
-   - ±0,05 V (0,50–0,60 V)
+   - 0,55 V (VREF/2)
+   - ±0,05 V (0,50–0,60 V)
 
 Diagnostic par Tension
 ~~~~~~~~~~~~~~~~~~~~~~
 
-**+3,3 V (TP3) trop faible (< 3,1 V) :**
+**+3,3 V (TP3) trop faible (< 3,1 V) :**
 
 - Module PS1 (MPC10-5) défectueux, mal orienté ou mal soudé
 - Court-circuit partiel consommant trop de courant
 
-**+3,3 V (TP3) trop élevée (> 3,5 V) :**
+**+3,3 V (TP3) trop élevée (> 3,5 V) :**
 
 - ⚠️ **DANGER** pour le module RFM69CW et l’ATmega328P, alimentés par ce rail (cavalier V sel. dans sa position d’usine)
 - Régulateur U1 défectueux ou court-circuité
 - **COUPER L’ALIMENTATION IMMÉDIATEMENT**
 
-**+5 V (TP4) trop élevée (> 5,3 V) :**
+**+5 V (TP4) trop élevée (> 5,3 V) :**
 
 - Module PS1 (MPC10-5) défectueux
 - **COUPER L’ALIMENTATION**
 
-**VREF ou entrées ADC à 0 V :**
+**VREF ou entrées ADC à 0 V :**
 
-- Normal tant que le firmware ne tourne pas : c’est lui qui active la référence interne 1,1 V de l’ATmega328P (AREF), que l’amplificateur LMV321A recopie sur VREF. Mesurez VREF et les entrées :term:`ADC` seulement après avoir inséré l’ATmega328P **et** téléversé le firmware.
+- Normal tant que le firmware ne tourne pas : c’est lui qui active la référence interne 1,1 V de l’ATmega328P (AREF), que l’amplificateur LMV321A recopie sur VREF. Mesurez VREF et les entrées :term:`ADC` seulement après avoir inséré l’ATmega328P **et** téléversé le firmware.
 
-**Entrées ADC loin de 0,55 V (firmware lancé, VREF correcte) :**
+**Entrées ADC loin de 0,55 V (firmware lancé, VREF correcte) :**
 
 - Pont de soudure dans la zone analogique
-- CT branché qui n’est pas à sortie tension 333 mV (un CT à sortie courant sans résistance de :term:`burden <Burden>`)
+- CT branché qui n’est pas à sortie tension 333 mV (un CT à sortie courant sans résistance de :term:`burden <Burden>`)
 - Résistance de burden (emplacements sérigraphiés D13 / D23 / D33, R18 / R28 / R38 sur le schéma) de mauvaise valeur (solution de dépannage avec un CT à sortie courant, voir :ref:`types-de-capteurs-de-courant-supportes`)
 
 Problèmes d’Étalonnage et Mesures
@@ -200,7 +200,7 @@ Vérifications Électroniques
     - Emplacements sérigraphiés D13 / D23 / D33 (R18 / R28 / R38 sur le schéma), un par CT
     - Uniquement nécessaires avec des CT à sortie courant (ex. : SCT-013-000)
     - Pas nécessaires avec des CT à sortie tension (burden intégré)
-    - Valeur calculée selon le CT — voir :ref:`carte-mere-presentation`
+    - Valeur calculée selon le CT — voir :ref:`carte-mere-presentation`
 
  #. ☐ **Pas de pont de soudure autour ADC ?**
 
@@ -392,7 +392,7 @@ Vérifications Triac
 
 .. admonition:: Diagnostic étage de puissance
 
- #. ☐ **Triac bien vissé sur le dissipateur ?**
+ #. ☐ **Triac bien vissé sur le dissipateur ?**
 
     - Bon contact thermique (isolant, pâte), **sans** contact électrique
     - Pas de jeu mécanique
@@ -418,7 +418,7 @@ Vérifications Triac
     - Broche **centrale** inutilisée
     - **Neutre** relié directement à la charge : il ne passe **jamais** par l’étage de sortie (un neutre sur ce connecteur met le triac en court-circuit entre phase et neutre)
     - Vis bornier bien serrées
-    - Voir :ref:`raccordement-etages-sortie`
+    - Voir :ref:`raccordement-etages-sortie`
 
 Test du Triac
 ~~~~~~~~~~~~~
@@ -449,7 +449,7 @@ Test du Triac
 **Signal de commande (côté basse tension uniquement) :**
 
 .. danger::
-   Ne mesurez **jamais** sur la gâchette (gate) du :term:`triac <Triac>` ni sur aucun point du côté puissance de l’étage de sortie : ils sont au potentiel du secteur. La masse d’un oscilloscope est reliée à la terre ; la brancher à cet endroit provoque un court-circuit, et la sonde devient dangereuse au toucher.
+   Ne mesurez **jamais** sur la gâchette (gate) du :term:`triac <Triac>` ni sur aucun point du côté puissance de l’étage de sortie : ils sont au potentiel du secteur. La masse d’un oscilloscope est reliée à la terre ; la brancher à cet endroit provoque un court-circuit, et la sonde devient dangereuse au toucher.
 
 #. Multimètre en mode tension continue (V⎓) sur le connecteur Molex de commande, **côté carte-mère** : pointe noire sur la broche 1 (GND), pointe rouge sur la broche 2 (signal)
 #. En fonctionnement :
@@ -568,7 +568,7 @@ Vérifications Matérielles
 Dépannage Communication
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-**Problèmes fréquents :**
+**Problèmes fréquents :**
 
 - Cavalier V sel. passé en position 5 V : l’ATmega328P pilote alors le module radio, alimenté en 3,3 V, avec des signaux 5 V (destruction possible) ; laissez V sel. dans sa position d’usine (3,3 V)
 - Interférences (éloigner de charges puissance)

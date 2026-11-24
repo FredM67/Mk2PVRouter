@@ -232,7 +232,7 @@ Avant toute intervention sur câblage domestique :
 5. **SEULEMENT ENSUITE** : Manipuler les conducteurs
 
 .. warning::
-   **Disjoncteur général coupé, tout n’est pas hors tension :**
+   **Disjoncteur général coupé, tout n’est pas hors tension :**
 
    - les câbles en amont, du compteur jusqu’au disjoncteur de branchement, restent sous tension ;
    - le côté continu des panneaux photovoltaïques reste sous tension tant qu’il y a de la lumière ;
@@ -251,11 +251,11 @@ Protection Différentielle
 
 Votre installation DOIT être protégée par :
 
-- **Disjoncteur différentiel 30mA** (obligatoire en France)
-- **Disjoncteur magnéto-thermique** adapté au circuit (généralement 16A pour prises)
+- **Disjoncteur différentiel 30 mA** (obligatoire en France)
+- **Disjoncteur magnéto-thermique** adapté au circuit (généralement 16 A pour prises)
 
 .. note::
-   Le différentiel 30mA détecte les fuites de courant et coupe l’alimentation
+   Le différentiel 30 mA détecte les fuites de courant et coupe l’alimentation
    en quelques millisecondes. Il peut vous sauver la vie !
 
    Testez votre différentiel mensuellement (bouton « Test »).
@@ -307,7 +307,7 @@ Technique Sûre
       JAMAIS tenir une pièce à la main pendant le perçage !
       Si le foret accroche, la pièce peut tourner violemment et vous blesser.
 
-2. **Commencer avec foret pilote** : Percer petit (2–3mm) puis agrandir
+2. **Commencer avec foret pilote** : Percer petit (2–3 mm) puis agrandir
 
 3. **Avancer progressivement** : Ne pas forcer, laisser l’outil travailler
 
@@ -332,7 +332,7 @@ Prévention
 
 - Extincteur ABC à portée de main (< 3 mètres)
 - Surface de travail ininflammable
-- Pas de matériaux combustibles à proximité (<50cm)
+- Pas de matériaux combustibles à proximité (<50 cm)
 - Détecteur de fumée fonctionnel
 - Ne jamais laisser fer allumé sans surveillance
 
@@ -545,7 +545,7 @@ Numéros d’Urgence (France)
    - ☐ Je sais comment sécuriser une pièce pour perçage
    - ☐ Je possède ou ai accès aux outils nécessaires
 
-   **Si plus de 2 cases restent non cochées :**
+   **Si plus de 2 cases restent non cochées :**
 
    - → Formez-vous AVANT de commencer ce projet
    - → Ou faites-vous aider par quelqu’un d’expérimenté
@@ -642,7 +642,7 @@ Cas d’Exclusion
 - Vous pensez « ça n’arrive qu’aux autres »
 
 .. warning::
-   **La prudence n’est PAS de la lâcheté!**
+   **La prudence n’est PAS de la lâcheté !**
 
    Reconnaître ses limites et demander de l’aide est une FORCE.
    Il vaut mieux abandonner le projet que de se retrouver à l’hôpital… ou pire.

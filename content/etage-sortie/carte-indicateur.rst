@@ -14,18 +14,18 @@ Carte indicateur LED
 
    Avant de commencer ce chapitre :
 
-   | ☐ Chapitre :ref:`safety-overview` lu et compris
+   | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Fer à souder et fil de soudure à disposition
-   | ☐ Carte de sortie correspondante assemblée — triac (voir :ref:`carte-sortie`) ou relais (voir :ref:`carte-sortie-relais`)
+   | ☐ Carte de sortie correspondante assemblée — triac (voir :ref:`carte-sortie`) ou relais (voir :ref:`carte-sortie-relais`)
 
 Vue d’ensemble
 --------------
 
-La carte indicateur est un petit :term:`PCB` dédié qui porte une LED témoin. Elle permet de visualiser l’état de chaque sortie, qu’il s’agisse d’une sortie :term:`triac <Triac>` (voir :ref:`carte-sortie`) ou d’une sortie relais (voir :ref:`carte-sortie-relais`) :
+La carte indicateur est un petit :term:`PCB` dédié qui porte une LED témoin. Elle permet de visualiser l’état de chaque sortie, qu’il s’agisse d’une sortie :term:`triac <Triac>` (voir :ref:`carte-sortie`) ou d’une sortie relais (voir :ref:`carte-sortie-relais`) :
 
 - **LED allumée** : la sortie est active (courant passe)
 - **LED éteinte** : la sortie est inactive (courant coupé)
-- **LED clignotante** : régulation en cours (voir :ref:`principe-fonctionnement:Fonctionnement des LED`)
+- **LED clignotante** : régulation en cours (voir :ref:`principe-fonctionnement:Fonctionnement des LED`)
 
 Il faut **une carte indicateur par étage de sortie** (triac ou relais). Chaque carte se connecte au signal de commande de l’étage de sortie correspondant via un câble Molex 2 broches : broche 1 = masse, broche 2 = signal (+), comme sur la carte-mère et l’étage de sortie (câble droit, broche 1 ↔ broche 1).
 
@@ -82,7 +82,7 @@ Assemblage
 ----------
 
 .. important::
-   Cette carte est à **double face** : la résistance et le connecteur se soudent sur la face **avant**, tandis que la LED se soude sur la face **arrière**. Consultez les images du :term:`PCB` nu ci-dessus pour repérer les emplacements.
+   Cette carte est à **double face** : la résistance et le connecteur se soudent sur la face **avant**, tandis que la LED se soude sur la face **arrière**. Consultez les images du :term:`PCB` nu ci-dessus pour repérer les emplacements.
 
 La sérigraphie de la face avant montre l’empreinte de la LED avec des **points** : il s’agit d’un simple rappel visuel. Les pastilles réelles de la LED, avec les marquages ``+`` et ``-``, se trouvent sur la sérigraphie de la face **arrière**.
 
@@ -112,12 +112,12 @@ Ordre de soudure
 Montage dans le boîtier
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-La LED dépasse à travers un trou dans le couvercle du boîtier (perçage de 5 mm pour une LED de 5 mm, voir :ref:`percages`). La carte se place contre la face intérieure du couvercle ; son circuit imprimé ne comporte aucun trou de fixation.
+La LED dépasse à travers un trou dans le couvercle du boîtier (perçage de 5 mm pour une LED de 5 mm, voir :ref:`percages`). La carte se place contre la face intérieure du couvercle ; son circuit imprimé ne comporte aucun trou de fixation.
 
 Connexion
 ~~~~~~~~~
 
-Le connecteur Molex se raccorde au signal de commande, via un câble Molex 2 fils. Le signal peut provenir soit du second connecteur Molex de l’étage de sortie, soit de la seconde rangée de connecteurs Molex sur la carte-mère. Consultez :ref:`confection-cables` pour les longueurs recommandées.
+Le connecteur Molex se raccorde au signal de commande, via un câble Molex 2 fils. Le signal peut provenir soit du second connecteur Molex de l’étage de sortie, soit de la seconde rangée de connecteurs Molex sur la carte-mère. Consultez :ref:`confection-cables` pour les longueurs recommandées.
 
 .. admonition:: ✅ Point de Contrôle — Carte Indicateur
 

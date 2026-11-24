@@ -23,7 +23,7 @@ Qualité des Soudures
 
 **Solution :** Refaire les soudures suspectes :
 
-#. Chauffer à nouveau avec fer à souder (350 °C)
+#. Chauffer à nouveau avec fer à souder (350 °C)
 #. Ajouter un peu de flux si disponible
 #. Ajouter un peu de soudure fraîche
 #. Laisser refroidir sans bouger

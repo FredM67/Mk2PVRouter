@@ -4,7 +4,7 @@ Pré-requis
 Pour cette étape, il vous faudra :
 
 * Un ordinateur (PC ou équivalent) avec un port USB libre. Cet ordinateur peut fonctionner sous Windows, macOS ou Linux.
-* Un programmateur USB vers UART (par exemple, un programmateur :term:`FTDI`).
+* Un programmateur USB vers UART (par exemple, un programmateur :term:`FTDI`).
 * Un câble USB approprié pour connecter le programmateur à l’ordinateur de programmation.
 * Un câble d’alimentation électrique pour le routeur.
 
@@ -15,7 +15,7 @@ Carte USB vers UART
 | Ce programmateur est également utilisé pour surveiller les messages de débogage envoyés par le processeur.
 
 | Selon le système d’exploitation (Windows, macOS ou Linux) de l’ordinateur de programmation, il peut être nécessaire d’installer un pilote pour le programmateur.
-| Les pilotes pour le programmateur :term:`FTDI` sont disponibles sur le site Web du fabricant.
+| Les pilotes pour le programmateur :term:`FTDI` sont disponibles sur le site Web du fabricant.
 
 | Les pilotes disponibles sur le site `FTDI <https://www.ftdichip.com/>`_ devraient convenir à la plupart des cas d’utilisation.
 | Il conviendra de choisir les pilotes de type **VCP** (Virtual COM Port).
@@ -34,7 +34,7 @@ Pour programmer l’Arduino, vous aurez besoin d’un logiciel de programmation.
 Assurez-vous d’installer l’un de ces logiciels avant de continuer avec la programmation de votre carte.
 
 | L’**Arduino IDE** peut être téléchargé à partir du site `Arduino <https://www.arduino.cc/en/software>`_.
-| Pour Windows, veillez à choisir la version **Windows** et non :strike:`Windows App`.
+| Pour Windows, veillez à choisir la version **Windows** et non :strike:`Windows App`.
 
 | Si vous êtes totalement débutant dans le domaine de l’Arduino, nous vous recommandons de consulter le tutoriel `Découverte de l’Arduino <https://zestedesavoir.com/tutoriels/686/arduino-premiers-pas-en-informatique-embarquee/742_decouverte-de-larduino/>`_ par exemple.
 | Il y en a beaucoup d’autres disponibles sur Internet.
@@ -45,13 +45,13 @@ Mise en place
 .. admonition:: Remarque
    :class: tip
 
-   La carte :term:`FTDI` dispose d’un commutateur ou d’un cavalier pour choisir entre **3,3 V** et **5 V**.
-   Sa tension doit être celle de l’ATmega328P : sur la carte universelle, **3,3 V** (position d’usine du cavalier **V sel.**, voir :ref:`cavaliers`) ; **5 V** seulement si ce cavalier a été passé en 5 V.
+   La carte :term:`FTDI` dispose d’un commutateur ou d’un cavalier pour choisir entre **3,3 V** et **5 V**.
+   Sa tension doit être celle de l’ATmega328P : sur la carte universelle, **3,3 V** (position d’usine du cavalier **V sel.**, voir :ref:`cavaliers`) ; **5 V** seulement si ce cavalier a été passé en 5 V.
 
-| Un programmateur USB vers UART doit être connecté au connecteur :term:`FTDI` (J0) du :term:`PCB`.
+| Un programmateur USB vers UART doit être connecté au connecteur :term:`FTDI` (J0) du :term:`PCB`.
 | L’autre extrémité du programmateur doit être connectée à l’ordinateur de programmation (PC ou équivalent) via un câble USB approprié.
 
-La broche à une extrémité du connecteur à 6 voies du programmateur est étiquetée **GND**. Elle va sur la broche 1 (GND) du connecteur J0, marquée « GND> » sur la sérigraphie du :term:`PCB` : repérez les deux et alignez-les.
+La broche à une extrémité du connecteur à 6 voies du programmateur est étiquetée **GND**. Elle va sur la broche 1 (GND) du connecteur J0, marquée « GND> » sur la sérigraphie du :term:`PCB` : repérez les deux et alignez-les.
 
 | Pour éviter de tordre le connecteur du programmateur, vous pouvez fabriquer un simple câble d’extension.
 | Seules quatre des lignes sont réellement utilisées (données **Tx** & **Rx**, masse et réinitialisation).
@@ -60,6 +60,6 @@ La broche à une extrémité du connecteur à 6 voies du programmateur est étiq
 Le fil noir est destiné à la connexion **GND** (ou **0 V**).
 
 .. note::
-   La carte :term:`FTDI` ne peut pas alimenter la carte-mère.
+   La carte :term:`FTDI` ne peut pas alimenter la carte-mère.
 
    Le routeur doit toujours être alimenté par sa propre source d’alimentation.

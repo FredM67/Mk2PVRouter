@@ -105,7 +105,7 @@ Vérifier les composants d’alimentation :
     - Vérifier l’orientation selon le schéma
     - Vérifier que le point ou l’encoche du module correspond au repère sur le PCB
 
- #. ☐ **Chaîne d’alimentation bien soudée ?**
+ #. ☐ **Chaîne d’alimentation bien soudée ?**
 
     - Connecteur PWR1, fusibles (Mono : FS0, FS1 ; Tri : FS0 à FS3), module PS1, diode D1 (SMBJ7.0A), régulateur U1
     - Soudures brillantes et lisses (pas ternes) ?
@@ -156,7 +156,7 @@ Si Tension Correcte mais Pas de Fonctionnement
 
  #. ☐ **Firmware programmé ?**
 
-    - Voir la section :ref:`logiciel-monophase` ou :ref:`logiciel-triphase`
+    - Voir la section :ref:`logiciel-monophase` ou :ref:`logiciel-triphase`
     - ATmega328P vierge ne fait rien
 
 Causes Fréquentes — Résumé
@@ -203,7 +203,7 @@ Vérifications de la Connexion FTDI
 
  #. ☐ **Câblage FTDI correct ?**
 
-    - Adaptateur FTDI branché broche à broche sur le connecteur FTDI (J0), **GND** de l’adaptateur sur la broche 1 (repère « GND> »)
+    - Adaptateur FTDI branché broche à broche sur le connecteur FTDI (J0), **GND** de l’adaptateur sur la broche 1 (repère « GND> »)
     - **TX** de l’adaptateur → broche 4 (**RX** de l’ATmega328P), **RX** de l’adaptateur → broche 5 (**TX** de l’ATmega328P)
     - **DTR** → broche 6 (**DTR**) : reset automatique, indispensable
     - VCC : non utilisé (la broche 3 n’est reliée à rien sur la carte)
@@ -270,7 +270,7 @@ Problèmes Arduino IDE
 
     - ATmega328P
 
- #. ☐ **Port libre ?**
+ #. ☐ **Port libre ?**
 
     - Aucun autre programme (terminal, moniteur série d’un autre logiciel) ne doit occuper le port pendant le téléversement
 
@@ -293,12 +293,12 @@ Vérification via Moniteur Série
    - Menu : Outils → Moniteur série
    - Ou raccourci : Ctrl+Maj+M
 
-#. **Régler les paramètres en bas à droite :**
+#. **Régler les paramètres en bas à droite :**
 
    - **Baud rate :** 9 600
-   - **Fin de ligne :** sans importance (le routeur ne lit rien sur le port série)
+   - **Fin de ligne :** sans importance (le routeur ne lit rien sur le port série)
 
-#. **Redémarrer le routeur** : l’ouverture du moniteur série le redémarre (signal DTR). Sinon, fermer puis rouvrir le moniteur série, ou couper puis remettre l’alimentation. Le kit triphasé comprend un bouton reset monté en façade, relié au connecteur J1 « RESET » de la carte-mère : un appui redémarre le routeur.
+#. **Redémarrer le routeur** : l’ouverture du moniteur série le redémarre (signal DTR). Sinon, fermer puis rouvrir le moniteur série, ou couper puis remettre l’alimentation. Le kit triphasé comprend un bouton reset monté en façade, relié au connecteur J1 « RESET » de la carte-mère : un appui redémarre le routeur.
 
 #. **Vous devriez voir**, après 3 secondes, la configuration du routeur, terminée par ``----``, puis une ligne de mesures toutes les 5 secondes (par défaut). Extrait d’une capture réelle, en triphasé avec la sortie ``HumanReadable`` :
 
@@ -326,12 +326,12 @@ Vérification via Moniteur Série
     - Composant à 2 pattes près de l’ATmega328P
     - Soudures correctes ?
 
-**Si la configuration est lisible, mais la suite illisible :**
+**Si la configuration est lisible, mais la suite illisible :**
 
 - C’est normal avec le ``config.h`` fourni : ``SERIAL_OUTPUT_TYPE`` y est en ``IoT``. Le routeur affiche sa configuration à 9600 bauds 8N1, puis passe en 7E1 pour le module mk2Wifi.
 - Pour lire les mesures au moniteur série, passer ``SERIAL_OUTPUT_TYPE`` à ``SerialOutputType::HumanReadable`` dans ``config.h`` et téléverser à nouveau.
 
-**Si rien n’est lisible :**
+**Si rien n’est lisible :**
 
 - Vérifier que le baud rate = 9 600
 - Si toujours illisible → Problème oscillateur (fréquence incorrecte : quartz X1 16 MHz, condensateurs C7/C8)

@@ -106,7 +106,7 @@ Matériel Nécessaire
    - **Fer sans thermostat** : Température incontrôlée, composants détruits
    - **Chauffe irrégulière** : Soudures froides ou surchauffe aléatoire
    - **Panne qui s’oxyde immédiatement** : Impossible de souder proprement
-   - **Soudure sans flux** : Ne coule pas, ne « mouille » pas les pistes
+   - **Soudure sans flux** : Ne coule pas, ne « mouille » pas les pistes
    - **Soudure contaminée** : Crache, fait des bulles, joints granuleux
 
    **Résultat** : Vous penserez que c’est de votre faute, alors que c’est le matériel !
@@ -116,7 +116,7 @@ Matériel Nécessaire
 
 **1. Station de soudure** (40–80 €)
 
-   - **Température réglable** : 300–450 °C
+   - **Température réglable** : 300–450 °C
    - **Panne biseautée** (« tournevis ») : convient à la plupart des joints traversants ; une panne conique fine transmet mal la chaleur aux grosses pastilles
    - **Support avec éponge** : Pour nettoyer la panne
    - **Marques recommandées** : Weller, Hakko, JBC (pro), ou entrée de gamme : Yihua, Aoyue
@@ -278,8 +278,8 @@ Préparation du Fer
 
 **1. Allumer le fer et régler la température**
 
-   - **Soudure plombée (Sn60/Pb40)** : Régler à **320–350 °C**
-   - **Sans plomb (Sn99)** : Régler à **350–380 °C**
+   - **Soudure plombée (Sn60/Pb40)** : Régler à **320–350 °C**
+   - **Sans plomb (Sn99)** : Régler à **350–380 °C**
    - **Attendre 2–3 minutes** pour que le fer atteigne la température
 
 **2. Étamer la panne** (première utilisation ou panne oxydée)
@@ -315,12 +315,12 @@ Les 5 Étapes d’une Bonne Soudure
 
    **La soudure coule vers la chaleur**
 
-   Il faut chauffer **à la fois** la piste :term:`PCB` **et** la patte du composant. Si un seul élément est chaud, la soudure ne s’étalera pas correctement.
+   Il faut chauffer **à la fois** la piste :term:`PCB` **et** la patte du composant. Si un seul élément est chaud, la soudure ne s’étalera pas correctement.
 
 **Étape 1 : Insérer le composant**
 
 - Plier les pattes si nécessaire (angle 90°)
-- Insérer dans les trous du :term:`PCB`
+- Insérer dans les trous du :term:`PCB`
 - Composant bien plaqué contre le PCB (pas d’espace)
 - Retourner le PCB (soudure côté opposé aux composants)
 
@@ -505,7 +505,7 @@ Soudures Défectueuses — Comment les Reconnaître
 
 **Apparence** :
 
-- Piste :term:`PCB` **décolle** ou se soulève
+- Piste :term:`PCB` **décolle** ou se soulève
 - Couleur brunie autour du joint
 - Composant fondu/déformé
 
@@ -588,10 +588,10 @@ Soudures de Forte Section (Bornier, Agrafes du Triac)
 
 Le connecteur haute puissance et les agrafes du triac de l’étage de sortie sont de grosses masses de cuivre : elles absorbent beaucoup de chaleur, et les règles de temps et de température ci-dessus, écrites pour les petits joints, ne suffisent pas.
 
-- Utiliser une **panne large** et un fer assez puissant, réglé plus chaud (l’étage de sortie demande 450 °C si possible, voir :ref:`carte-sortie`)
+- Utiliser une **panne large** et un fer assez puissant, réglé plus chaud (l’étage de sortie demande 450 °C si possible, voir :ref:`carte-sortie`)
 - Laisser la pastille et la patte chauffer jusqu’à ce que la soudure coule franchement : un joint de forte section prend plus de temps qu’un petit joint
 - Apporter **généreusement** de la soudure et vérifier qu’elle est **remontée** de l’autre côté du circuit
-- Protéger le triac de la chaleur en le plaquant contre un dissipateur pendant la soudure (voir :ref:`carte-sortie`)
+- Protéger le triac de la chaleur en le plaquant contre un dissipateur pendant la soudure (voir :ref:`carte-sortie`)
 - Une soudure terne ou granuleuse sur ces joints est à refaire : elle chaufferait sous la charge
 
 .. danger::
@@ -600,7 +600,7 @@ Le connecteur haute puissance et les agrafes du triac de l’étage de sortie so
 Cavaliers de Soudure (Pastilles CMS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La carte principale et le module mk2Wifi se configurent par des cavaliers de soudure : deux ou trois pastilles voisines à relier par une goutte de soudure (voir :ref:`cavaliers`).
+La carte principale et le module mk2Wifi se configurent par des cavaliers de soudure : deux ou trois pastilles voisines à relier par une goutte de soudure (voir :ref:`cavaliers`).
 
 - **Fermer** : ajouter un peu de flux, chauffer les deux pastilles ensemble et apporter une petite quantité de soudure, qui forme un pont entre elles
 - **Vérifier** au multimètre (continuité) que les pastilles voulues sont reliées, et seulement elles
@@ -621,7 +621,7 @@ Le flux est un produit chimique qui :
 
 **Quand ajouter du flux ?**
 
-- Piste :term:`PCB` oxydée (terne, pas brillante)
+- Piste :term:`PCB` oxydée (terne, pas brillante)
 - Soudure qui ne « mouille » pas correctement
 - Composant ancien (pattes oxydées)
 - Dessoudage difficile
@@ -699,12 +699,12 @@ Exercice 1 : Souder 10 Résistances
 - Observer la qualité de chaque soudure
 - **Critère de réussite** : 8/10 soudures brillantes et lisses
 
-Exercice 2 : Souder des Composants :term:`DIL`
+Exercice 2 : Souder des Composants :term:`DIL`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Objectif** : Souder plusieurs broches proches sans faire de ponts
 
-**Matériel** : Support :term:`DIL` 8 ou 16 broches
+**Matériel** : Support :term:`DIL` 8 ou 16 broches
 
 **Consigne** :
 
@@ -722,7 +722,7 @@ Exercice 3 : Dessouder et Ressouder
 **Consigne** :
 
 - Dessouder un composant (pompe ou tresse)
-- Nettoyer les trous du :term:`PCB`
+- Nettoyer les trous du :term:`PCB`
 - Ressouder le composant proprement
 
 Où Trouver des Kits de Pratique ?
@@ -767,7 +767,7 @@ Problème : La Soudure Ne Coule Pas
 
 ☐ Mauvais fil de soudure (vérifier flux intégré)
 
-Problème : Composants Tombent Quand Je Retourne le :term:`PCB`
+Problème : Composants Tombent Quand Je Retourne le :term:`PCB`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Solutions** :
@@ -806,7 +806,7 @@ Vidéos Tutoriels (Recommandées)
    - « Apprendre à souder électronique débutant »
    - « How to solder for beginners » (Anglais)
    - « EEVblog soldering tutorial » (Référence, anglais)
-   - « Collin’s Lab: Soldering » (Adafruit, anglais, excellent)
+   - « Collin’s Lab : Soldering » (Adafruit, anglais, excellent)
 
 Sites Web et Forums
 ~~~~~~~~~~~~~~~~~~~
@@ -841,7 +841,7 @@ Checklist Finale — Prêt à Souder Votre Mk2PVRouter ?
 
    ☐ Je connais les règles de sécurité (ne pas toucher panne, ventiler)
 
-   ☐ J’ai lu le chapitre :ref:`safety-overview` (sécurité générale)
+   ☐ J’ai lu le chapitre :ref:`safety-overview` (sécurité générale)
 
    ☐ Je suis prêt à prendre mon temps (pas de précipitation)
 
@@ -852,7 +852,7 @@ Prochaines Étapes
 
 Maintenant que vous maîtrisez les bases de la soudure, passez aux chapitres d’assemblage :
 
-- :ref:`assemblage-carte-mere` puis :ref:`carte-sortie`
+- :ref:`assemblage-carte-mere` puis :ref:`carte-sortie`
 
 .. tip::
    💡 **Conseil Final**

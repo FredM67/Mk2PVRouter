@@ -22,5 +22,5 @@ Compilation et Téléversement
 
 .. tip::
    Si la compilation échoue avec le message ``Please define 'gnu++17' in 'platform.txt'``,
-   c’est que le fichier `platform.txt` n’a pas été correctement modifié (voir :ref:`arduino-cpp17-config`).
+   c’est que le fichier `platform.txt` n’a pas été correctement modifié (voir :ref:`arduino-cpp17-config`).
 

@@ -10,7 +10,7 @@ Choix de la configuration
 
    Avant de commencer ce chapitre :
 
-   | ☐ Chapitre :ref:`safety-overview` lu et compris
+   | ☐ Chapitre :ref:`safety-overview` lu et compris
    | ☐ Connaissance de votre type de raccordement électrique (monophasé ou triphasé)
 
 La carte universelle 3phaseDiverter supporte trois configurations. Cette page vous aide à déterminer celle qui correspond à votre installation.
@@ -42,7 +42,7 @@ Guide de décision
    * - **Triphasé avec neutre**
      - 3 phases + neutre
      - Oui
-     - Foyers avec abonnement triphasé, souvent au-delà de 12 kVA (400 V / 230 V)
+     - Foyers avec abonnement triphasé, souvent au-delà de 12 kVA (400 V / 230 V)
    * - **Triphasé 3 × 230 V sans neutre**
      - 3 phases, 230 V entre phases
      - Non
@@ -71,7 +71,7 @@ Comment identifier votre raccordement ?
      - **3 fils** passant dans le compteur (3 phases, pas de neutre)
 
 .. tip::
-   Sur un compteur Linky, le type de raccordement est aussi affiché sur l’écran (« MONO » ou « TRI »).
+   Sur un compteur Linky, le type de raccordement est aussi affiché sur l’écran (« MONO » ou « TRI »).
 
 **En cas de doute**, consultez votre contrat d’électricité ou contactez votre fournisseur d’énergie.
 
@@ -81,7 +81,7 @@ Différences par configuration
 Composants traversants à souder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine, sauf les éclateurs GDT optionnels. Seuls les composants traversants (through-hole) et, si vous les montez, ces éclateurs doivent être soudés par l’utilisateur. Les composants à souder varient selon la configuration choisie :
+La carte universelle est livrée avec tous les composants :term:`CMS` déjà soudés en usine, sauf les éclateurs GDT optionnels. Seuls les composants traversants (through-hole) et, si vous les montez, ces éclateurs doivent être soudés par l’utilisateur. Les composants à souder varient selon la configuration choisie :
 
 .. list-table::
    :header-rows: 1
@@ -111,7 +111,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      - ✔
      - ✔
      - ✔
-   * - Connecteur :term:`SMA` (antenne RF, optionnel)
+   * - Connecteur :term:`SMA` (antenne RF, optionnel)
      - (opt.)
      - (opt.)
      - (opt.)
@@ -159,31 +159,31 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
      -
      - ✔
      -
-   * - Transformateur :term:`ZMPT101K` TR1
+   * - Transformateur :term:`ZMPT101K` TR1
      - ✔
      - ✔
      - ✔
-   * - Transformateur :term:`ZMPT101K` TR2
+   * - Transformateur :term:`ZMPT101K` TR2
      -
      - ✔
      - ✔
-   * - Transformateur :term:`ZMPT101K` TR3
+   * - Transformateur :term:`ZMPT101K` TR3
      -
      - ✔
      -
-   * - Connecteur :term:`CT` CT1
+   * - Connecteur :term:`CT` CT1
      - ✔
      - ✔
      - ✔
-   * - Connecteur :term:`CT` CT2 (optionnel en mono pour mesure diversion)
+   * - Connecteur :term:`CT` CT2 (optionnel en mono pour mesure diversion)
      - (opt.)
      - ✔
      - ✔
-   * - Connecteur :term:`CT` CT3
+   * - Connecteur :term:`CT` CT3
      -
      - ✔
      -
-   * - Résistances de :term:`burden <Burden>` (CT à sortie courant, dépannage)
+   * - Résistances de :term:`burden <Burden>` (CT à sortie courant, dépannage)
      - (opt.) D13, D23
      - (opt.) D13, D23, D33
      - (opt.) D13, D23
@@ -207,7 +207,7 @@ La carte universelle est livrée avec tous les composants :term:`CMS` déjà so
 Configuration des cavaliers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les cavaliers de soudure (V sel., SDA, SCL, IRQ, NSS, TEMP, +5V Rail) et le cavalier fil GND_LINK doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
+Les cavaliers de soudure (V sel., SDA, SCL, IRQ, NSS, TEMP, +5V Rail) et le cavalier fil GND_LINK doivent être configurés selon la configuration choisie. Consultez le chapitre :ref:`cavaliers` pour les détails.
 
 Résumé rapide :
 
@@ -236,17 +236,17 @@ Résumé rapide :
      - Fermés si module RF
      - Fermés si module RF
    * - TEMP
-     - Voir :ref:`cavaliers`
-     - Voir :ref:`cavaliers`
-     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
    * - +5V Rail
      - Fermé si cartes relais
      - Fermé si cartes relais
      - Fermé si cartes relais
    * - GND_LINK
-     - Voir :ref:`cavaliers`
-     - Voir :ref:`cavaliers`
-     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
+     - Voir :ref:`cavaliers`
    * - OLED disponible
      - Oui
      - Non

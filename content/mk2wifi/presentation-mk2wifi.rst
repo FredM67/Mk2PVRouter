@@ -9,14 +9,14 @@ Module mk2Wifi
 Vue d’ensemble
 --------------
 
-Le module :term:`mk2Wifi` est un module d’extension qui ajoute une connectivité sans fil au Mk2 PV Router. Il est basé sur un module **ESP32-C6-MINI-1** (:term:`ESP32-C6`, RISC-V simple cœur) et offre :
+Le module :term:`mk2Wifi` est un module d’extension qui ajoute une connectivité sans fil au Mk2 PV Router. Il est basé sur un module **ESP32-C6-MINI-1** (:term:`ESP32-C6`, RISC-V simple cœur) et offre :
 
 - **WiFi 6** 802.11 b/g/n/ax (2,4 GHz)
 - **Bluetooth LE 5**
 - **Zigbee** et **Thread** (802.15.4)
-- Connecteur **USB-C** pour le chargement initial du firmware (mises à jour suivantes via :term:`OTA`)
+- Connecteur **USB-C** pour le chargement initial du firmware (mises à jour suivantes via :term:`OTA`)
 - Écran **OLED** optionnel via I2C (connecteur Molex SL)
-- Cinq lignes de commande (**D5–D9**) qui pilotent des **entrées** du routeur (voir :ref:`presentation-mk2wifi-cavaliers`)
+- Cinq lignes de commande (**D5–D9**) qui pilotent des **entrées** du routeur (voir :ref:`presentation-mk2wifi-cavaliers`)
 - Quatre GPIO supplémentaires (**GPIO19–GPIO22**) sur un connecteur MISC
 - Passthrough du capteur de température 1-Wire **DS18B20**
 - Liaison série **UART** avec la carte principale
@@ -26,7 +26,7 @@ Le module se branche directement sur la carte principale via les connecteurs **T
 Bien que le module puisse être programmé avec n’importe quel firmware compatible ESP32-C6 (Arduino, ESP-IDF…), il est principalement conçu pour fonctionner avec **ESPHome**, permettant une intégration directe avec **Home Assistant**.
 
 .. note::
-   Les composants :term:`CMS` du module mk2Wifi sont **assemblés en usine**. Seules les deux **barrettes femelles** TRIG_EXT et UART_EXT doivent être soudées par l’utilisateur pour relier le module à la carte-mère. Les connecteurs OLED et MISC sont eux aussi traversants (absents de la vue « Composants CMS uniquement » ci-dessous) : ils ne servent que si vous branchez un écran ou utilisez les GPIO supplémentaires, et sont fournis selon votre commande.
+   Les composants :term:`CMS` du module mk2Wifi sont **assemblés en usine**. Seules les deux **barrettes femelles** TRIG_EXT et UART_EXT doivent être soudées par l’utilisateur pour relier le module à la carte-mère. Les connecteurs OLED et MISC sont eux aussi traversants (absents de la vue « Composants CMS uniquement » ci-dessous) : ils ne servent que si vous branchez un écran ou utilisez les GPIO supplémentaires, et sont fournis selon votre commande.
 
 Images de la carte
 ------------------
@@ -49,7 +49,7 @@ Images de la carte
    :widths: 50 50
    :header-rows: 1
 
-   * - Composants :term:`CMS` uniquement
+   * - Composants :term:`CMS` uniquement
      - Circuit imprimé nu
    * - .. figure:: ../img/mk2wifi-smd.png
           :alt: Module mk2Wifi — composants CMS
@@ -150,7 +150,7 @@ Côté routeur, ces lignes arrivent sur des **entrées de commande** (actives à
 Alimentation
 ------------
 
-En fonctionnement normal, le **+5 V** est fourni par la carte principale via le connecteur UART_EXT (broche 3). Le régulateur :term:`LDO` AP2112K-3.3 (U2) convertit cette tension en +3,3 V pour l’ESP32-C6 et l’écran OLED, avec un courant maximal de 600 mA.
+En fonctionnement normal, le **+5 V** est fourni par la carte principale via le connecteur UART_EXT (broche 3). Le régulateur :term:`LDO` AP2112K-3.3 (U2) convertit cette tension en +3,3 V pour l’ESP32-C6 et l’écran OLED, avec un courant maximal de 600 mA.
 
 Le connecteur USB-C peut également fournir du +5 V lors de la programmation initiale, lorsque la carte n’est pas connectée à la carte principale.
 
@@ -174,7 +174,7 @@ Le module mk2Wifi se branche sur les connecteurs **TRIG_EXT** et **UART_EXT** de
 - Le bus I2C (SDA = GPIO6, SCL = GPIO7) est **local au module mk2Wifi uniquement** — il relie l’ESP32-C6 à l’écran OLED et n’est pas routé vers la carte principale. Le YAML du configurateur déclare ce bus mais pas l’écran : le composant ``display`` est à ajouter vous-même
 
 .. note::
-   La gestion du capteur DS18B20 est sélectionnée par le cavalier **TEMP** sur la carte principale (voir :ref:`cavaliers`). En position 3–centre, c’est l’ESP32-C6 du mk2Wifi qui gère le capteur.
+   La gestion du capteur DS18B20 est sélectionnée par le cavalier **TEMP** sur la carte principale (voir :ref:`cavaliers`). En position 3–centre, c’est l’ESP32-C6 du mk2Wifi qui gère le capteur.
 
 .. |br| raw:: html
 

@@ -17,8 +17,8 @@ Téléchargement
 """"""""""""""
 
 #. Ouvrir le navigateur web : https://www.arduino.cc/en/software
-#. Cliquer sur **« Windows Win 10 and newer »** (fichier `.exe` ou `.zip`)
-#. ⚠️ **NE PAS** télécharger la version **« Windows app »** (incompatibilités connues)
+#. Cliquer sur **« Windows Win 10 and newer »** (fichier `.exe` ou `.zip`)
+#. ⚠️ **NE PAS** télécharger la version **« Windows app »** (incompatibilités connues)
 #. Attendre la fin du téléchargement (~200 MB)
 
 .. _arduino-ide-windows-installation:
@@ -29,12 +29,12 @@ Installation
 #. Double-cliquer sur le fichier téléchargé (`arduino-ide-xxxx.exe`)
 #. Accepter la licence
 #. Laisser les options et le répertoire d’installation proposés par défaut
-#. Cliquer sur **« Install »**
+#. Cliquer sur **« Install »**
 #. Attendre la fin de l’installation (5–10 minutes)
 #. Si l’installateur, ou l’Arduino IDE à son premier lancement, propose d’installer des pilotes USB, accepter
 
 .. note::
-   Si Windows affiche un avertissement de sécurité, cliquer sur **« Exécuter quand même »**.
+   Si Windows affiche un avertissement de sécurité, cliquer sur **« Exécuter quand même »**.
    Le logiciel Arduino est sûr et largement utilisé.
 
 .. _arduino-ide-macos:
@@ -48,7 +48,7 @@ Téléchargement
 """"""""""""""
 
 #. Ouvrir le navigateur web : https://www.arduino.cc/en/software
-#. Cliquer sur **« macOS »** (fichier `.dmg`)
+#. Cliquer sur **« macOS »** (fichier `.dmg`)
 #. Attendre la fin du téléchargement
 
 .. _arduino-ide-macos-installation:
@@ -63,7 +63,7 @@ Installation
 
 .. note::
    Au premier lancement, macOS peut demander l’autorisation d’ouvrir l’application.
-   Cliquer sur **« Ouvrir »** dans la fenêtre de sécurité.
+   Cliquer sur **« Ouvrir »** dans la fenêtre de sécurité.
 
 .. _arduino-ide-linux:
 
@@ -74,7 +74,7 @@ Méthode recommandée : AppImage
 """"""""""""""""""""""""""""""
 
 #. Ouvrir le navigateur web : https://www.arduino.cc/en/software
-#. Télécharger la version **« Linux AppImage »**
+#. Télécharger la version **« Linux AppImage »**
 #. Ouvrir un terminal
 #. Rendre le fichier exécutable :
 
@@ -134,7 +134,7 @@ macOS
 .. note::
    Le dossier `Library` peut être caché. Pour y accéder :
 
-   #. Dans le Finder, menu **« Aller »** → maintenir **Option** → cliquer sur **« Bibliothèque »**
+   #. Dans le Finder, menu **« Aller »** → maintenir **Option** → cliquer sur **« Bibliothèque »**
 
    Ou taper dans le terminal :
 
@@ -197,12 +197,12 @@ Ouvrir le Gestionnaire de bibliothèques
 
 #. Lancer Arduino IDE
 #. Menu : **Outils → Gérer les bibliothèques...**
-#. Une fenêtre « Gestionnaire de bibliothèques » s’ouvre
+#. Une fenêtre « Gestionnaire de bibliothèques » s’ouvre
 
 Installation des bibliothèques du firmware triphasé
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Pour chacune des bibliothèques ci-dessous, taper son nom dans le champ de recherche, choisir la bonne (auteur indiqué) puis cliquer sur **« Installer »** :
+Pour chacune des bibliothèques ci-dessous, taper son nom dans le champ de recherche, choisir la bonne (auteur indiqué) puis cliquer sur **« Installer »** :
 
 - **OneWire** par Jim Studt et al. (version 2.3.7 ou supérieure) : sondes de température DS18B20
 - **RFM69** par Felix Rusu, LowPowerLab (version 1.5.3 ou supérieure) : module radio RFM69CW
@@ -219,4 +219,4 @@ Vérification
 .. tip::
    Si les bibliothèques n’apparaissent pas, redémarrer Arduino IDE.
 
-✅ **Configuration Arduino IDE terminée !** Passez maintenant aux étapes spécifiques à votre configuration (:term:`monophasé <Monophasé>` ou :term:`triphasé <Triphasé>`).
+✅ **Configuration Arduino IDE terminée !** Passez maintenant aux étapes spécifiques à votre configuration (:term:`monophasé <Monophasé>` ou :term:`triphasé <Triphasé>`).

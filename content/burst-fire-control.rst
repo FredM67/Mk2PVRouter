@@ -58,7 +58,7 @@ Dans le Mk2PVRouter, le burst fire control est utilisé pour rediriger l’éner
 - Si un surplus d’énergie est détecté, le routeur active le triac pour un certain nombre de cycles complets, permettant à l’énergie excédentaire d’être consommée par un chauffe-eau.
 - Lorsque le surplus diminue, le routeur réduit le nombre de cycles activés, ajustant ainsi la puissance délivrée à la charge.
 
-Concrètement, la décision est prise une fois par période secteur (toutes les 20 ms à 50 Hz) : le routeur compare l’énergie excédentaire accumulée dans un « réservoir d’énergie » à des seuils, et peut alors mettre une charge en marche ou l’arrêter. L’optocoupleur à passage par zéro de l’étage de sortie (MOC3043M) fait que le triac ne commute qu’au passage par zéro de la tension.
+Concrètement, la décision est prise une fois par période secteur (toutes les 20 ms à 50 Hz) : le routeur compare l’énergie excédentaire accumulée dans un « réservoir d’énergie » à des seuils, et peut alors mettre une charge en marche ou l’arrêter. L’optocoupleur à passage par zéro de l’étage de sortie (MOC3043M) fait que le triac ne commute qu’au passage par zéro de la tension.
 
 Comparaison avec le Contrôle en Phase
 -------------------------------------

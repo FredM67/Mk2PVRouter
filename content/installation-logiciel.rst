@@ -4,7 +4,7 @@
 Installation des Logiciels
 ==========================
 
-Ce chapitre détaille l’installation de l’environnement de développement nécessaire pour programmer le Mk2PVRouter. Pour le téléchargement et la configuration du firmware, voir :ref:`logiciel-monophase` (monophasé) ou :ref:`logiciel-triphase` (triphasé).
+Ce chapitre détaille l’installation de l’environnement de développement nécessaire pour programmer le Mk2PVRouter. Pour le téléchargement et la configuration du firmware, voir :ref:`logiciel-monophase` (monophasé) ou :ref:`logiciel-triphase` (triphasé).
 
 Chaque firmware a aussi son site (en anglais), avec la documentation du code : `PVRouter-1-phase <https://fredm67.github.io/PVRouter-1-phase/>`_ (monophasé) et `PVRouter-3-phase <https://fredm67.github.io/PVRouter-3-phase/>`_ (triphasé).
 
@@ -34,9 +34,9 @@ L’ordinateur a besoin du pilote de la puce de l’adaptateur USB-série. Cette
 ~~~~~~~~~~
 
 #. Ouvrir le navigateur : https://ftdichip.com/drivers/vcp-drivers/
-#. Cliquer sur **« Windows »** dans la colonne **« Available Drivers »**
+#. Cliquer sur **« Windows »** dans la colonne **« Available Drivers »**
 #. Télécharger la dernière version (fichier `.exe`)
-#. Exécuter le fichier téléchargé en tant qu’administrateur (clic droit → **« Exécuter en tant qu’administrateur »**)
+#. Exécuter le fichier téléchargé en tant qu’administrateur (clic droit → **« Exécuter en tant qu’administrateur »**)
 #. Suivre l’assistant d’installation
 #. **Redémarrer l’ordinateur** après l’installation
 
@@ -47,8 +47,8 @@ Vérification
 
 #. Connecter l’adaptateur FTDI à un port USB
 #. Ouvrir le **Gestionnaire de périphériques** (Win + X → Gestionnaire de périphériques)
-#. Développer **« Ports (COM et LPT) »**
-#. Vérifier la présence de **« USB Serial Port (COMx) »** où x est un numéro
+#. Développer **« Ports (COM et LPT) »**
+#. Vérifier la présence de **« USB Serial Port (COMx) »** où x est un numéro
 #. **Noter le numéro COMx** (exemple : COM3, COM4)
 
 .. _ftdi-macos:
@@ -97,7 +97,7 @@ Vérification
 
    lsusb
 
-Rechercher une ligne contenant « FTDI » ou « Future Technology Devices ».
+Rechercher une ligne contenant « FTDI » ou « Future Technology Devices ».
 
 Si le pilote n’est pas chargé
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

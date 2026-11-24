@@ -14,9 +14,9 @@ Assemblage de la carte-mère universelle
 
    Avant de commencer ce chapitre :
 
-   | ☐ Chapitre :ref:`safety-overview` lu et compris
-   | ☐ Configuration choisie (voir :ref:`choix-configuration`)
-   | ☐ Chapitre :ref:`carte-mere-presentation` lu
+   | ☐ Chapitre :ref:`safety-overview` lu et compris
+   | ☐ Configuration choisie (voir :ref:`choix-configuration`)
+   | ☐ Chapitre :ref:`carte-mere-presentation` lu
    | ☐ Fer à souder et consommables prêts
    | ☐ Temps disponible (voir l’estimation ci-dessus)
    | ☐ Espace de travail propre et organisé
@@ -24,12 +24,12 @@ Assemblage de la carte-mère universelle
 Introduction
 ------------
 
-La carte universelle 3phaseDiverter est livrée avec tous les composants :term:`CMS` (montés en surface) déjà soudés en usine, sauf les éclateurs GDT optionnels (voir l’assemblage propre à votre configuration). Vous n’avez qu’à souder les composants **traversants** (through-hole).
+La carte universelle 3phaseDiverter est livrée avec tous les composants :term:`CMS` (montés en surface) déjà soudés en usine, sauf les éclateurs GDT optionnels (voir l’assemblage propre à votre configuration). Vous n’avez qu’à souder les composants **traversants** (through-hole).
 
-Le nombre de composants à souder dépend de votre configuration (monophasé, triphasé, etc.). Consultez le tableau dans le chapitre :ref:`choix-configuration` pour la liste complète.
+Le nombre de composants à souder dépend de votre configuration (monophasé, triphasé, etc.). Consultez le tableau dans le chapitre :ref:`choix-configuration` pour la liste complète.
 
 .. tip::
-   Avant de commencer, lisez la section :ref:`introduction:Recommandations pour les étapes de soudure` pour les recommandations générales de soudure et l’identification des composants polarisés.
+   Avant de commencer, lisez la section :ref:`introduction:Recommandations pour les étapes de soudure` pour les recommandations générales de soudure et l’identification des composants polarisés.
 
 .. include:: ../common/qualite-soudures.inc.rst
 
@@ -41,14 +41,14 @@ Ces composants doivent être soudés quelle que soit la configuration choisie.
 Support IC1 (ATmega328P)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le support :term:`DIL` 28 broches pour le microcontrôleur ATmega328P.
+Le support :term:`DIL` 28 broches pour le microcontrôleur ATmega328P.
 
 .. warning::
-   **NE PAS insérer l’ATmega328P dans le support à ce stade !**
+   **NE PAS insérer l’ATmega328P dans le support à ce stade !**
 
    Le microcontrôleur sera inséré après les tests électriques.
 
-#. Repérez l’**encoche** sur le support et alignez-la avec le repère sur le :term:`PCB`
+#. Repérez l’**encoche** sur le support et alignez-la avec le repère sur le :term:`PCB`
 #. Positionnez le support et maintenez-le avec du ruban adhésif
 #. Soudez une broche en diagonale, vérifiez l’alignement
 #. Soudez la broche opposée en diagonale
@@ -57,7 +57,7 @@ Le support :term:`DIL` 28 broches pour le microcontrôleur ATmega328P.
 .. todo:: Photo à fournir — support IC1 soudé, encoche alignée avec le repère PCB.
 
 .. hint::
-   Pour s’assurer que le support :term:`DIL` est bien plaqué contre le :term:`PCB`, commencez par souder une seule broche, puis vérifiez l’alignement avant de poursuivre.
+   Pour s’assurer que le support :term:`DIL` est bien plaqué contre le :term:`PCB`, commencez par souder une seule broche, puis vérifiez l’alignement avant de poursuivre.
 
 Quartz X1
 ~~~~~~~~~
@@ -69,14 +69,14 @@ Le quartz 16 MHz (boîtier HC-49).
 .. todo:: Photo à fournir — quartz X1 soudé.
 
 .. note::
-   Les condensateurs de charge C7 et C8 sont des composants :term:`CMS` déjà soudés en usine.
+   Les condensateurs de charge C7 et C8 sont des composants :term:`CMS` déjà soudés en usine.
 
 Connecteur SMA (antenne RF) — optionnel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le connecteur :term:`SMA` femelle vertical pour l’antenne du module RFM69CW. Ce connecteur n’est nécessaire que si le module :term:`RF` est utilisé.
+Le connecteur :term:`SMA` femelle vertical pour l’antenne du module RFM69CW. Ce connecteur n’est nécessaire que si le module :term:`RF` est utilisé.
 
-#. Positionnez le connecteur SMA sur le :term:`PCB`
+#. Positionnez le connecteur SMA sur le :term:`PCB`
 #. Soudez les pattes de fixation mécanique (masse) en premier
 #. Soudez la broche signal centrale
 
@@ -98,7 +98,7 @@ Le module radio RFM69CW permet la communication sans fil (bande ISM 433/868 MHz)
    Avant de souder le module, vérifiez que le cavalier **V sel.** est dans sa position d’usine **1–centre (3,3 V)** et qu’aucune soudure ne relie la pastille centrale à la pastille 3 (5 V). Le module RFM69CW fonctionne en 3,3 V — une alimentation en 5 V le **détruirait immédiatement**.
 
 #. Positionnez le module RFM69CW sur son emplacement
-#. **Vérifiez l’alignement** : chaque broche du module doit correspondre exactement à sa pastille sur le :term:`PCB`. Reportez-vous à la sérigraphie pour l’orientation correcte.
+#. **Vérifiez l’alignement** : chaque broche du module doit correspondre exactement à sa pastille sur le :term:`PCB`. Reportez-vous à la sérigraphie pour l’orientation correcte.
 #. Soudez une broche d’angle, vérifiez l’alignement, puis soudez les broches restantes
 
 .. todo:: Photo à fournir — module RFM69CW soudé et aligné sur son emplacement.
@@ -107,7 +107,7 @@ Le module radio RFM69CW permet la communication sans fil (bande ISM 433/868 MHz)
    Un petit morceau de ruban adhésif double face entre le module et le PCB permet de le maintenir en place pendant la soudure.
 
 .. note::
-   N’oubliez pas de fermer les cavaliers **IRQ** (face arrière) et **NSS** (face avant, près du module RF) pour activer le module RF (voir :ref:`cavaliers`).
+   N’oubliez pas de fermer les cavaliers **IRQ** (face arrière) et **NSS** (face avant, près du module RF) pour activer le module RF (voir :ref:`cavaliers`).
 
 Cavalier fil GND_LINK
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -143,7 +143,7 @@ Soudez les connecteurs suivants :
    Pour aligner correctement les connecteurs :
 
    - Soudez une seule broche
-   - Vérifiez que le connecteur est perpendiculaire au :term:`PCB`
+   - Vérifiez que le connecteur est perpendiculaire au :term:`PCB`
    - Corrigez si nécessaire en chauffant la soudure
    - Soudez les broches restantes
 
@@ -157,16 +157,16 @@ Chaque sortie numérique dispose de deux emplacements Molex SL : un 2 broches (
 .. note::
    Les connecteurs fournis dépendent de la configuration commandée. Inutile de souder des connecteurs sur des sorties non utilisées.
 
-   La broche +5 V du connecteur 1×03 est alimentée par le **rail +5 V des sorties**, **désactivé par défaut**. Ce rail est uniquement nécessaire si vous utilisez des **cartes de sortie relais** (le relais a besoin du +5 V pour sa bobine). Pour l’activer, fermez le cavalier de soudure **« +5V Rail »** situé en haut à droite de la carte, près du connecteur RESET (voir :ref:`cavaliers`).
+   La broche +5 V du connecteur 1×03 est alimentée par le **rail +5 V des sorties**, **désactivé par défaut**. Ce rail est uniquement nécessaire si vous utilisez des **cartes de sortie relais** (le relais a besoin du +5 V pour sa bobine). Pour l’activer, fermez le cavalier de soudure **« +5V Rail »** situé en haut à droite de la carte, près du connecteur RESET (voir :ref:`cavaliers`).
 
    - **D2\*, D10\*–D13\*** : réservées au module RF (si soudé)
-   - **D5#–D9#** : partagées avec le module :term:`mk2Wifi` (si présent)
+   - **D5#–D9#** : partagées avec le module :term:`mk2Wifi` (si présent)
    - Les sorties non réservées sont librement utilisables
 
 Cavaliers de soudure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Configurez les cavaliers selon votre configuration. Consultez le chapitre :ref:`cavaliers` pour les détails.
+Configurez les cavaliers selon votre configuration. Consultez le chapitre :ref:`cavaliers` pour les détails.
 
 .. admonition:: ✅ Point de Contrôle — Composants Communs
 
@@ -178,7 +178,7 @@ Configurez les cavaliers selon votre configuration. Consultez le chapitre :ref:
    | ☐ Module RFM69CW soudé et V sel. en 3,3 V (si module RF utilisé)
    | ☐ GND_LINK configuré (ouvert ou fermé selon votre installation)
    | ☐ Tous les connecteurs signaux soudés et perpendiculaires (FTDI, TRIG_EXT, UART_EXT, RESET ; OLED et DS18B20 si utilisés)
-   | ☐ Cavaliers configurés selon votre configuration (voir :ref:`cavaliers`)
+   | ☐ Cavaliers configurés selon votre configuration (voir :ref:`cavaliers`)
    | ☐ Toutes les soudures propres et brillantes
    | ☐ Pas de pont de soudure
 
@@ -187,8 +187,8 @@ Configurez les cavaliers selon votre configuration. Consultez le chapitre :ref:
 
 Poursuivez avec les composants spécifiques à votre configuration :
 
-- **Monophasé** → :ref:`assemblage-monophase`
-- **Triphasé** (avec neutre, ou 3 × 230 V sans neutre) → :ref:`assemblage-triphase`
+- **Monophasé** → :ref:`assemblage-monophase`
+- **Triphasé** (avec neutre, ou 3 × 230 V sans neutre) → :ref:`assemblage-triphase`
 
 .. |br| raw:: html
 

@@ -12,11 +12,11 @@ Configuration des cavaliers
 
    Avant de commencer ce chapitre :
 
-   | ☐ Chapitre :ref:`safety-overview` lu et compris
-   | ☐ Configuration choisie (voir :ref:`choix-configuration`)
-   | ☐ Assemblage de la carte en cours : étape « Cavaliers de soudure » de :ref:`assemblage-carte-mere`
+   | ☐ Chapitre :ref:`safety-overview` lu et compris
+   | ☐ Configuration choisie (voir :ref:`choix-configuration`)
+   | ☐ Assemblage de la carte en cours : étape « Cavaliers de soudure » de :ref:`assemblage-carte-mere`
 
-Les :term:`cavaliers de soudure <Cavalier de soudure>` permettent de configurer le comportement de la carte universelle. Ils sont configurés en déposant une goutte de soudure entre deux pastilles adjacentes. Seule exception : **V sel.**, déjà fermé d’usine par une piste de cuivre (voir ci-dessous).
+Les :term:`cavaliers de soudure <Cavalier de soudure>` permettent de configurer le comportement de la carte universelle. Ils sont configurés en déposant une goutte de soudure entre deux pastilles adjacentes. Seule exception : **V sel.**, déjà fermé d’usine par une piste de cuivre (voir ci-dessous).
 
 .. warning::
    La configuration des cavaliers doit être effectuée **avant** le premier test électrique. Une mauvaise configuration peut entraîner des mesures erronées ou un dysfonctionnement.
@@ -62,15 +62,15 @@ Description détaillée
 V sel. — Alimentation ATmega328P
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélectionne la tension d’alimentation du microcontrôleur.
+Cavalier à 3 pôles sérigraphié **V sel.** sur le :term:`PCB`. Il sélectionne la tension d’alimentation du microcontrôleur.
 
-- **Position 1–centre** (défaut) : L’ATmega328P, le module RF et le module :term:`mk2Wifi` sont alimentés en 3,3 V par le régulateur :term:`LDO` U1 (AP7361C-33E). La pastille 1 est celle située du côté de la sérigraphie « 3V3 Reg. ».
+- **Position 1–centre** (défaut) : L’ATmega328P, le module RF et le module :term:`mk2Wifi` sont alimentés en 3,3 V par le régulateur :term:`LDO` U1 (AP7361C-33E). La pastille 1 est celle située du côté de la sérigraphie « 3V3 Reg. ».
 - **Position 3–centre** : L’ATmega328P est alimenté directement en 5 V depuis le module PS1 (MPC10-5)
 
 La position 1–centre est **déjà fermée d’usine** par une fine piste de cuivre entre la pastille 1 et la pastille centrale : il n’y a **rien à souder** pour un fonctionnement en 3,3 V. Pour passer en 5 V, il faut d’abord couper cette piste au cutter, vérifier au multimètre qu’elle est bien ouverte, puis souder le pont 3–centre.
 
 .. warning::
-   Si le module RF (RFM69CW) et/ou le module :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** rester en position **1–centre (3,3 V)**. Le module RF fonctionne en 3,3 V et les broches GPIO de l’ESP32-C6 ne tolèrent que 3,3 V — une tension de 5 V sur ces lignes les **endommagerait irrémédiablement**.
+   Si le module RF (RFM69CW) et/ou le module :term:`mk2Wifi` sont utilisés, ce cavalier **doit impérativement** rester en position **1–centre (3,3 V)**. Le module RF fonctionne en 3,3 V et les broches GPIO de l’ESP32-C6 ne tolèrent que 3,3 V — une tension de 5 V sur ces lignes les **endommagerait irrémédiablement**.
 
 .. important::
    Ne déposez **jamais** de soudure entre la pastille centrale et la pastille **3 (5 V)** tant que le pont d’usine 1–centre est en place : cela relierait le 5 V directement à la sortie du régulateur 3,3 V, ce qui **détruirait le régulateur LDO, le module RF et/ou le module mk2Wifi**. Vérifiez au multimètre (mode continuité) qu’il n’y a **pas de continuité** entre la pastille centrale et la pastille 3.
@@ -80,7 +80,7 @@ SDA — Mesure tension L3 / I2C SDA
 
 Cavalier à 3 pôles qui sélectionne entre la mesure de tension de la phase L3 et le bus I2C.
 
-- **Position 1–centre** : Mesure de tension de la phase L3 (via le :term:`ZMPT101K` TR3).
+- **Position 1–centre** : Mesure de tension de la phase L3 (via le :term:`ZMPT101K` TR3).
 - **Position 3–centre** : Bus I2C (signal SDA). Permet l’utilisation de l’écran OLED.
 
 SCL — Mesure courant L3 / I2C SCL
@@ -104,7 +104,7 @@ Si le module radio RFM69CW est présent, **deux cavaliers de soudure** doivent �
 
 **IRQ** (face arrière)
 
-Cavalier à 2 pôles sérigraphié **IRQ** sur la face arrière du :term:`PCB`. Il relie la broche d’interruption (IRQ) du module RFM69 à la broche D2 (INT0) de l’ATmega328P.
+Cavalier à 2 pôles sérigraphié **IRQ** sur la face arrière du :term:`PCB`. Il relie la broche d’interruption (IRQ) du module RFM69 à la broche D2 (INT0) de l’ATmega328P.
 
 **NSS** (face avant)
 
@@ -118,7 +118,7 @@ Pour chaque cavalier :
 TEMP — Capteur de température DS18B20
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cavalier à 3 pôles sérigraphié **TEMP** sur le :term:`PCB`. Il configure l’acheminement du signal du capteur de température 1-Wire DS18B20.
+Cavalier à 3 pôles sérigraphié **TEMP** sur le :term:`PCB`. Il configure l’acheminement du signal du capteur de température 1-Wire DS18B20.
 
 - **Non soudé** : Aucun capteur DS18B20 utilisé. La broche D3 de l’ATmega328P reste disponible comme entrée/sortie numérique standard.
 - **Position 1–centre** : Le capteur DS18B20 est géré par le **routeur** (ATmega328P, broche D3).
@@ -138,7 +138,7 @@ Lorsque GND_LINK est **ouvert**, le circuit basse tension est entièrement isol�
 
 .. _cavalier-5v-rail:
 
-« +5V Rail » (JP40) — Rail +5 V sorties
+« +5V Rail » (JP40) — Rail +5 V sorties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cavalier à 2 pôles situé en **haut à droite** de la carte. Il active le **rail +5 V** qui alimente la broche VCC des connecteurs 1×03 des sorties numériques (D2–D13).
@@ -147,7 +147,7 @@ Cavalier à 2 pôles situé en **haut à droite** de la carte. Il active le **ra
 - **Ouvert** (défaut) : le rail +5 V est déconnecté des connecteurs de sortie
 
 .. warning::
-   Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie :term:`triac <Triac>` n’ont pas besoin de cette alimentation.
+   Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie :term:`triac <Triac>` n’ont pas besoin de cette alimentation.
 
 La LED témoin **+5V** (en haut à gauche de la carte) s’allume lorsque ce rail est actif.
 

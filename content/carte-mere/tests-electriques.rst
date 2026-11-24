@@ -12,8 +12,8 @@ Tests électriques
 
    Avant de commencer ce chapitre :
 
-   | ☐ Chapitre :ref:`safety-overview` lu et compris
-   | ☐ Assemblage de la carte terminé (voir :ref:`assemblage-carte-mere`)
+   | ☐ Chapitre :ref:`safety-overview` lu et compris
+   | ☐ Assemblage de la carte terminé (voir :ref:`assemblage-carte-mere`)
    | ☐ Support IC1 **vide** (ATmega328P PAS encore inséré)
    | ☐ Multimètre disponible (voltmètre et ohmmètre)
    | ☐ Câble secteur de test disponible
@@ -38,7 +38,7 @@ Avant toute mise sous tension, effectuez les vérifications suivantes au multim�
 
 #. **Vérifiez le cavalier V sel.** (position d’usine 3,3 V) :
 
-   ☐ Continuité entre la pastille **centre** et la pastille **1 (3,3 V, côté « 3V3 Reg. »)**
+   ☐ Continuité entre la pastille **centre** et la pastille **1 (3,3 V, côté « 3V3 Reg. »)**
 
    ☐ **Pas de continuité** entre la pastille **centre** et la pastille **3 (5 V)** — un court-circuit ici détruirait le régulateur LDO, le module RF et/ou le module mk2Wifi
 
@@ -68,7 +68,7 @@ Test du rail +5 V
 ~~~~~~~~~~~~~~~~~~~
 
 #. Réglez le multimètre en mode **voltmètre DC** (tension continue)
-#. Mesurez la tension entre les points de test marqués **+5V** et **GND** sur le :term:`PCB`
+#. Mesurez la tension entre les points de test marqués **+5V** et **GND** sur le :term:`PCB`
 #. **Valeur attendue** : **5,0 V ± 0,2 V**
 
    ✅ Si la tension est correcte, le module d’alimentation PS1 (MPC10-5) fonctionne
@@ -81,16 +81,16 @@ Test du rail +5 V
 Test du rail +3,3 V
 ~~~~~~~~~~~~~~~~~~~~~
 
-#. Mesurez la tension entre les points de test marqués **+3.3V** et **GND** sur le :term:`PCB`
+#. Mesurez la tension entre les points de test marqués **+3.3V** et **GND** sur le :term:`PCB`
 #. **Valeur attendue** : **3,3 V ± 0,1 V**
 
-   ✅ Si la tension est correcte, le régulateur :term:`LDO` U1 (AP7361C-33E) fonctionne
+   ✅ Si la tension est correcte, le régulateur :term:`LDO` U1 (AP7361C-33E) fonctionne
 
    ❌ Si la tension est absente, vérifiez le rail +5 V d’abord
 
-#. Mesurez aussi entre le point de test **VCC** (alimentation de l’ATmega328P, après le cavalier V sel.) et **GND** : **3,3 V**. Si vous lisez 5 V, coupez immédiatement : V sel. est mal ponté (voir :ref:`cavaliers`).
+#. Mesurez aussi entre le point de test **VCC** (alimentation de l’ATmega328P, après le cavalier V sel.) et **GND** : **3,3 V**. Si vous lisez 5 V, coupez immédiatement : V sel. est mal ponté (voir :ref:`cavaliers`).
 
-#. **Vérifiez la LED « ON »** (en haut à gauche de la carte) : elle doit être allumée, confirmant que le rail +3,3 V est actif
+#. **Vérifiez la LED « ON »** (en haut à gauche de la carte) : elle doit être allumée, confirmant que le rail +3,3 V est actif
 
 #. **Laissez la carte sous tension** environ 1 minute, sans la toucher
 
@@ -99,7 +99,7 @@ Test du rail +3,3 V
 #. **Vérifiez du bout du doigt**, hors tension, qu’aucun composant n’est chaud
 
 .. note::
-   La tension de référence VREF (1,1 V, tamponnée par l’amplificateur opérationnel LMV321A, point de test **VREF**) ne peut être vérifiée qu’après insertion de l’ATmega328P **et** exécution du firmware. C’est le firmware qui active la référence interne 1,1 V du microcontrôleur. Ce test sera effectué lors de la phase :ref:`logiciel-monophase` ou :ref:`logiciel-triphase`.
+   La tension de référence VREF (1,1 V, tamponnée par l’amplificateur opérationnel LMV321A, point de test **VREF**) ne peut être vérifiée qu’après insertion de l’ATmega328P **et** exécution du firmware. C’est le firmware qui active la référence interne 1,1 V du microcontrôleur. Ce test sera effectué lors de la phase :ref:`logiciel-monophase` ou :ref:`logiciel-triphase`.
 
 Insertion de l’ATmega328P
 --------------------------
@@ -111,7 +111,7 @@ Insertion de l’ATmega328P
    ⚠️ **ATTENTION** : Si l’ATmega328P est inséré à l’envers et la carte mise sous tension, le microcontrôleur sera **irrémédiablement détruit**.
 
 #. Repérez l’**encoche** (ou le point) sur l’ATmega328P qui indique la broche 1
-#. Alignez cette encoche avec celle du support IC1 et le repère sur le :term:`PCB`
+#. Alignez cette encoche avec celle du support IC1 et le repère sur le :term:`PCB`
 #. Les broches peuvent nécessiter un léger pliage vers l’intérieur pour entrer dans le support. Utilisez une surface plane et anti-statique pour les ajuster délicatement.
 #. Insérez le microcontrôleur dans le support en vérifiant qu’aucune broche ne se plie sous le composant
 

@@ -23,11 +23,11 @@ Le kit est livré avec un **adaptateur FTDI** : une petite carte avec un connect
    +------------------------+-----------------------------------+
 
    .. warning::
-      ⚠️ Vérifiez que **GND** de l’adaptateur arrive bien sur la broche 1 (« GND> ») : branché à l’envers, l’adaptateur ne communique pas. La liaison **DTR** est indispensable : sans elle, l’ATmega328P n’est pas redémarré automatiquement pour le téléversement, qui échoue (« not in sync »).
+      ⚠️ Vérifiez que **GND** de l’adaptateur arrive bien sur la broche 1 (« GND> ») : branché à l’envers, l’adaptateur ne communique pas. La liaison **DTR** est indispensable : sans elle, l’ATmega328P n’est pas redémarré automatiquement pour le téléversement, qui échoue (« not in sync »).
 
       La broche 3 (VCC) du connecteur n’est reliée à rien sur la carte : le routeur n’est jamais alimenté par l’adaptateur, il reste alimenté par le secteur.
 
-#. Vérifier le cavalier ou le commutateur de l’adaptateur FTDI : sa tension doit être celle de l’ATmega328P. Sur la carte universelle, c’est **3,3 V** (position d’usine du cavalier **V sel.**, voir :ref:`cavaliers`) ; **5 V** seulement si ce cavalier a été passé en 5 V.
+#. Vérifier le cavalier ou le commutateur de l’adaptateur FTDI : sa tension doit être celle de l’ATmega328P. Sur la carte universelle, c’est **3,3 V** (position d’usine du cavalier **V sel.**, voir :ref:`cavaliers`) ; **5 V** seulement si ce cavalier a été passé en 5 V.
 
 #. Connecter l’adaptateur FTDI à l’ordinateur (port USB)
 

@@ -14,7 +14,7 @@ Perçages
 
    Avant de commencer ce chapitre :
 
-   ☐ Chapitre :ref:`safety-overview` lu et compris (section perçage)
+   ☐ Chapitre :ref:`safety-overview` lu et compris (section perçage)
 
    ☐ Cartes assemblées et testées
 
@@ -67,9 +67,9 @@ Cependant, ce guide décrira l’implantation la plus classique.
    - 1 prise pour monophasé, 3 prises pour triphasé
 
 **Cartes-relais** (si utilisées)
-   - 4 trous de **3 mm** par carte (voir :ref:`carte-sortie-relais`)
+   - 4 trous de **3 mm** par carte (voir :ref:`carte-sortie-relais`)
 
-**Témoins LED** (cartes indicateur, voir :ref:`carte-indicateur`)
+**Témoins LED** (cartes indicateur, voir :ref:`carte-indicateur`)
    - 1 trou de **5 mm** par carte indicateur, dans le couvercle
 
 **Bouton reset** (fourni avec le kit triphasé, connecteur RESET de la carte-mère)
@@ -193,10 +193,10 @@ L’utilisation d’une perceuse à colonne est recommandée.
 
    Boîtier percé
 
-Perçage pour chaque étage de sortie :term:`triac <Triac>`
+Perçage pour chaque étage de sortie :term:`triac <Triac>`
 ------------------------------------------------------------
 
-Le :term:`triac <Triac>` de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur monté sur le côté du boîtier.
+Le :term:`triac <Triac>` de la carte de sortie doit être plaqué intégralement et fixé sur le dissipateur monté sur le côté du boîtier.
 L’étage de sortie doit aussi être fixé au fond du boîtier à la bonne hauteur pour être en accord avec le point de fixation du triac.
 
 Pour ce faire :

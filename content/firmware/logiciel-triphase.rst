@@ -4,11 +4,11 @@
 Installation et tests — Triphasé
 =================================
 
-| Une fois le processeur installé, il serait judicieux de vérifier que l'alimentation électrique fonctionne toujours correctement.
-| Si c'est le cas, nous pouvons exécuter un croquis (programme) pour vérifier si le processeur fonctionne correctement.
+| Une fois le processeur installé, il serait judicieux de vérifier que l’alimentation électrique fonctionne toujours correctement.
+| Si c’est le cas, nous pouvons exécuter un croquis (programme) pour vérifier si le processeur fonctionne correctement.
 
 | Nous allons maintenant tester le bon fonctionnement des autres parties matérielles de la carte-mère.
-| Cela permettra à la fois de s'assurer que le processeur est opérationnel et de vérifier que les autres composants sont correctement installés et/ou assemblés.
+| Cela permettra à la fois de s’assurer que le processeur est opérationnel et de vérifier que les autres composants sont correctement installés et/ou assemblés.
 
 | Pour cette prochaine étape, un dispositif de programmation approprié doit être mis en place.
 
@@ -40,13 +40,13 @@ Cela peut être vérifié en exécutant un programme (croquis) qui affiche les m
 
 Le programme est *RawSamplesTool_6chan.ino* : il se trouve dans le dossier ``dev/RawSamplesTool_6chan/`` du dépôt `PVRouter-3-phase <https://github.com/FredM67/PVRouter-3-phase>`_ et se téléverse seul, sans le firmware du routeur.
 
-Après avoir téléversé ce croquis sur le processeur via l'Arduino IDE, la fenêtre série (icône en forme de loupe) doit être ouverte.
-Après avoir terminé chaque exécution, le programme peut être redémarré à partir du clavier en saisissant le caractère « **g** », suivi de *Entrée*.
+Après avoir téléversé ce croquis sur le processeur via l’Arduino IDE, la fenêtre série (icône en forme de loupe) doit être ouverte.
+Après avoir terminé chaque exécution, le programme peut être redémarré à partir du clavier en saisissant le caractère « **g** », suivi de *Entrée*.
 
 Le programme *RawSamplesTool_6chan* affiche les échantillons des trois tensions alternatives et de courant pour un ou plusieurs cycles secteur complets.
 Si un courant important est mesuré ainsi que la tension, les résultats affichés sembleront plus intéressants.
 
-Si aucun signal n'est disponible sur les ports **CT1-CT3**, les formes d'onde de ces canaux seront toutes des lignes droites.
+Si aucun signal n’est disponible sur les ports **CT1-CT3**, les formes d’onde de ces canaux seront toutes des lignes droites.
 Seuls les signaux de tension afficheront un aspect sinusoïdal.
 Pour vérifier le fonctionnement des ports **CT1-CT3** pendant que le :term:`PCB` est testé sur le banc, un câblage adapté sera nécessaire.
 
@@ -57,13 +57,13 @@ Prochaines Étapes
 
 **Prochaines étapes :**
 
-#. **Étalonnage** : Voir chapitre :ref:`etalonnage-triphase`
+#. **Étalonnage** : Voir chapitre :ref:`etalonnage-triphase`
 
    L’étalonnage est **OBLIGATOIRE** en triphasé : le routeur additionne les trois phases, et une seule phase mal mesurée fausse la somme.
 
 #. **Installation finale** : Connexion au réseau électrique (faire appel à un électricien qualifié)
 
-#. **Configuration avancée** : Relais, sondes de température, double tarif, etc., avec le :ref:`configurateur <configurateur-triphase>`
+#. **Configuration avancée** : Relais, sondes de température, double tarif, etc., avec le :ref:`configurateur <configurateur-triphase>`
 
 .. warning::
    Ne pas connecter le routeur au réseau électrique domestique avant d’avoir :

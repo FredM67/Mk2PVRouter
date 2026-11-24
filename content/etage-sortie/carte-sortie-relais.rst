@@ -20,7 +20,7 @@ Une sortie relais *tout-ou-rien* est composée d’une bobine qui, lorsqu’elle
 Avantages pour les Appareils Électroniques
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Contact sec** : le contact du relais est un simple interrupteur mécanique. Ouvert, il ne laisse passer aucun courant de fuite. (L’étage de sortie :term:`triac <Triac>` est lui aussi isolé de la carte-mère, par son optocoupleur.)
+* **Contact sec** : le contact du relais est un simple interrupteur mécanique. Ouvert, il ne laisse passer aucun courant de fuite. (L’étage de sortie :term:`triac <Triac>` est lui aussi isolé de la carte-mère, par son optocoupleur.)
 * **Compatibilité avec Diverses Charges** : Contrairement aux sorties triac, qui sont optimales pour les charges résistives et peuvent présenter des problèmes avec des charges inductives ou capacitives, les relais peuvent commuter de manière fiable des appareils électroniques qui possèdent des alimentations à découpage, des moteurs, ou des composants inductifs sans risque de dysfonctionnement.
 * **Pas de Semi-Conduction** : Les sorties triac sont des dispositifs semi-conducteurs qui peuvent conduire partiellement, créant des situations où un appareil électronique pourrait recevoir une tension insuffisante ou erratique. Les relais, en revanche, offrent une commutation nette et complète, ce qui est préférable pour les appareils électroniques nécessitant une alimentation stable.
 
@@ -56,7 +56,7 @@ Matériel nécessaire
 
 ☐ Arduino alimenté par son port USB, ou carte-mère assemblée et fonctionnelle (alimentée par le secteur, voir l’étape 3)
 
-☐ Câble Molex 3 fils (GND, I/O, VCC) — le relais a besoin de l’alimentation VCC. Sur la carte-mère, la broche VCC (broche 3) des connecteurs 1×03 n’est alimentée que si le cavalier « +5V Rail » est fermé (voir :ref:`cavaliers`)
+☐ Câble Molex 3 fils (GND, I/O, VCC) — le relais a besoin de l’alimentation VCC. Sur la carte-mère, la broche VCC (broche 3) des connecteurs 1×03 n’est alimentée que si le cavalier « +5V Rail » est fermé (voir :ref:`cavaliers`)
 
 ☐ Multimètre (fonction continuité / résistance)
 
@@ -81,8 +81,8 @@ Procédure de test
    Le câblage du connecteur Molex 3 broches doit correspondre entre la carte-relais et la carte-mère : **GND↔GND**, **I/O↔I/O**, **VCC↔VCC**. Un câblage inversé peut endommager la carte-relais ou la carte-mère.
 
 #. Connecter le câble Molex 3 fils entre la carte-relais et une sortie numérique de la carte-mère (D2–D13, connecteur 1×03)
-#. Avec la carte-mère : vérifier que le cavalier « +5V Rail » est fermé (voir :ref:`cavaliers`) ; sans lui, la broche VCC reste hors tension et le relais ne colle jamais
-#. Alimenter l’Arduino par son port USB. La carte-mère n’a pas de port USB et ne s’alimente pas par le connecteur :term:`FTDI` (sa broche VCC n’est pas reliée) : elle n’est alimentée que par son module secteur intégré. Pour ce test avec la carte-mère, raccordez-la au secteur dans son boîtier fermé, en respectant les consignes de :ref:`safety-overview`
+#. Avec la carte-mère : vérifier que le cavalier « +5V Rail » est fermé (voir :ref:`cavaliers`) ; sans lui, la broche VCC reste hors tension et le relais ne colle jamais
+#. Alimenter l’Arduino par son port USB. La carte-mère n’a pas de port USB et ne s’alimente pas par le connecteur :term:`FTDI` (sa broche VCC n’est pas reliée) : elle n’est alimentée que par son module secteur intégré. Pour ce test avec la carte-mère, raccordez-la au secteur dans son boîtier fermé, en respectant les consignes de :ref:`safety-overview`
 #. Activer la sortie numérique correspondante (HIGH) :
 
    - Un **clic audible** du relais doit se produire

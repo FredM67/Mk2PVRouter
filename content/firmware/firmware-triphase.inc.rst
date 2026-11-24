@@ -3,7 +3,7 @@
 
 #. Ouvrir le navigateur : https://github.com/FredM67/PVRouter-3-phase
 #. Choisir la branche `dev` dans le menu des branches, au-dessus de la liste des fichiers
-#. Cliquer sur le bouton vert **« Code »** → **« Download ZIP »**
+#. Cliquer sur le bouton vert **« Code »** → **« Download ZIP »**
 #. Enregistrer le fichier `PVRouter-3-phase-dev.zip`
 #. Extraire le contenu dans un dossier de votre choix (exemple : `Documents/Arduino/`)
 #. Le firmware se trouve dans : `PVRouter-3-phase-dev/Mk2_3phase_RFdatalog_temp/`
@@ -32,7 +32,7 @@ Après extraction, vous devriez avoir :
    - **config.h** — Configuration générale (carte-mère, sorties, entrées de commande, options)
    - **calibration.h** — Paramètres d’étalonnage (à remplir après l’étalonnage)
 
-   `config_system.h` (fréquence du réseau, export requis, période d’envoi des données, 30 s au plus) et `config_rf.h` (liaison radio) ne changent que dans des cas particuliers. Le :ref:`configurateur <configurateur-triphase>` écrit les trois fichiers `config.h`, `config_system.h` et `config_rf.h`.
+   `config_system.h` (fréquence du réseau, export requis, période d’envoi des données, 30 s au plus) et `config_rf.h` (liaison radio) ne changent que dans des cas particuliers. Le :ref:`configurateur <configurateur-triphase>` écrit les trois fichiers `config.h`, `config_system.h` et `config_rf.h`.
 
 
 Étape 2 : Configuration du Firmware
@@ -168,7 +168,7 @@ Ce fichier contient les paramètres d’étalonnage, avec un jeu de valeurs par 
 
 .. warning::
    Ne modifiez **PAS** les autres valeurs maintenant — elles seront déterminées lors de l’étalonnage
-   (voir chapitre :ref:`etalonnage-triphase`).
+   (voir chapitre :ref:`etalonnage-triphase`).
 
 Les paramètres par défaut permettent de tester le routeur.
 

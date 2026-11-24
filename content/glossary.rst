@@ -114,7 +114,7 @@ Termes de Base pour Débutants
 
    Soudure
      | Technique pour **fixer et relier électriquement** des composants sur un circuit imprimé.
-     | Utilise un **fer à souder** (réglé à 320–380 °C selon l’alliage, voir :ref:`soldering-tutorial`) et de l’**étain** (alliage qui fond entre 183 °C pour l’étain-plomb et 227 °C pour le sans-plomb Sn99,3/Cu0,7).
+     | Utilise un **fer à souder** (réglé à 320–380 °C selon l’alliage, voir :ref:`soldering-tutorial`) et de l’**étain** (alliage qui fond entre 183 °C pour l’étain-plomb et 227 °C pour le sans-plomb Sn99,3/Cu0,7).
      | Une bonne soudure est brillante et forme un cône régulier.
 
    Pont de soudure
@@ -156,7 +156,7 @@ Termes de Base pour Débutants
    Firmware
      | **Programme informatique** stocké dans la mémoire du microcontrôleur.
      | C’est le « cerveau » du Mk2PVRouter qui gère les mesures et le contrôle des charges.
-     | Se téléverse avec l’Arduino IDE ou PlatformIO via un adaptateur USB-série (FTDI). Le module :term:`mk2Wifi`, lui, se programme par USB-C puis par :term:`OTA`.
+     | Se téléverse avec l’Arduino IDE ou PlatformIO via un adaptateur USB-série (FTDI). Le module :term:`mk2Wifi`, lui, se programme par USB-C puis par :term:`OTA`.
 
    Microcontrôleur
      | **Mini-ordinateur** sur une seule puce électronique.
@@ -248,7 +248,7 @@ Termes Techniques Avancés
    TVS
      | *Transient Voltage Suppressor* ou suppresseur de surtension transitoire.
      | Diode spécialisée qui protège les circuits sensibles contre les surtensions rapides.
-     | La carte universelle utilise des diodes TVS (DF2B7AE, CDSOD323-T03C) pour protéger les entrées :term:`ADC` de l’ATmega328P.
+     | La carte universelle utilise des diodes TVS (DF2B7AE, CDSOD323-T03C) pour protéger les entrées :term:`ADC` de l’ATmega328P.
 
    SMA
      | *SubMiniature version A*.
@@ -269,7 +269,7 @@ Termes Techniques Avancés
      | Le module **mk2Wifi** utilise un ESP32-C6-MINI-1 pour ajouter la connectivité sans fil au Mk2PVRouter.
 
    mk2Wifi
-     | Module d’extension WiFi/BLE pour le Mk2PVRouter, basé sur un :term:`ESP32-C6`.
+     | Module d’extension WiFi/BLE pour le Mk2PVRouter, basé sur un :term:`ESP32-C6`.
      | Se branche sur les connecteurs TRIG_EXT et UART_EXT de la carte principale.
      | Ajoute la connectivité sans fil (Home Assistant via ESPHome) et permet de piloter depuis Home Assistant des entrées du routeur (D5–D9 : marche forcée, arrêt du routage…). En option : un écran OLED et la lecture des sondes DS18B20 (cavalier TEMP).
 
@@ -282,8 +282,8 @@ Termes Techniques Avancés
      | La carte universelle en utilise 1 (monophasé) à 3 (triphasé) pour la mesure de tension sur chaque phase.
 
    Cavalier de soudure
-     | Pont conducteur réalisé en soudant deux pastilles adjacentes sur le :term:`PCB`.
-     | Les cavaliers V sel., SDA, SCL, TEMP, IRQ, NSS et +5V Rail sur la carte universelle permettent de configurer le mode de fonctionnement (monophasé/triphasé, alimentation, module RF, capteur de température). Le module :term:`mk2Wifi` a ses propres cavaliers D5–D9.
+     | Pont conducteur réalisé en soudant deux pastilles adjacentes sur le :term:`PCB`.
+     | Les cavaliers V sel., SDA, SCL, TEMP, IRQ, NSS et +5V Rail sur la carte universelle permettent de configurer le mode de fonctionnement (monophasé/triphasé, alimentation, module RF, capteur de température). Le module :term:`mk2Wifi` a ses propres cavaliers D5–D9.
 
    CT
      | *Current Transformer* ou dans notre cas **pince ampèremétrique**.
@@ -301,7 +301,7 @@ Termes Techniques Avancés
 
    Burden
      | Résistance de charge.
-     | Si le capteur :term:`CT` est du type « sortie courant » tel que le YHDC SCT-013-000, le signal de courant doit être converti en signal de tension avec une résistance de charge.
+     | Si le capteur :term:`CT` est du type « sortie courant » tel que le YHDC SCT-013-000, le signal de courant doit être converti en signal de tension avec une résistance de charge.
 
      .. seealso:: `CT Sensors - Interfacing with an Arduino <https://docs.openenergymonitor.org/electricity-monitoring/ct-sensors/interface-with-arduino.html>`_
 
@@ -388,7 +388,7 @@ Termes Techniques Avancés
    IoT
       | *Internet of Things* ou Internet des Objets.
       | Connexion d’objets physiques à Internet pour collecter et échanger des données.
-      | Pour le Mk2PVRouter, ``IoT`` est aussi le nom d’un mode de sortie série : des trames compactes à 9600 bauds 7E1, lues par le module :term:`mk2Wifi` pour Home Assistant. C’est le mode par défaut du ``config.h``.
+      | Pour le Mk2PVRouter, ``IoT`` est aussi le nom d’un mode de sortie série : des trames compactes à 9600 bauds 7E1, lues par le module :term:`mk2Wifi` pour Home Assistant. C’est le mode par défaut du ``config.h``.
 
    JSON
       | *JavaScript Object Notation*.
