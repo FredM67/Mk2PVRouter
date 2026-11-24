@@ -10,7 +10,7 @@ Introduction
 .. danger::
    ⚠️ **SÉCURITÉ AVANT TOUT** : Avant de commencer l’assemblage, lisez impérativement le chapitre :ref:`safety-overview`.
 
-   Ce projet implique la manipulation de composants électroniques sensibles et, plus tard, de tensions dangereuses (230 V).
+   Ce projet implique la manipulation de composants électroniques sensibles et, plus tard, de tensions dangereuses (230 V, et 400 V entre phases en triphasé).
 
 **Niveau de difficulté :** 🔧🔧🔧 Intermédiaire
 
@@ -39,7 +39,7 @@ Dans le kit, vous trouverez :
 
 * le circuit imprimé (:term:`PCB`) de la carte-mère universelle (composants :term:`CMS` déjà soudés en usine)
 * les composants traversants à souder (le nombre dépend de votre configuration, voir :ref:`choix-configuration`)
-* un ou plusieurs circuits imprimés pour chaque sortie :term:`triac <Triac>`
+* un circuit imprimé par sortie :term:`triac <Triac>`
 * une carte indicateur LED par étage de sortie (voir :ref:`carte-indicateur`)
 * des composants électroniques (résistances, condensateurs…). |br|
   Attention, certains sont sensibles à l’électricité statique, il faut donc les manipuler avec soin.
@@ -98,9 +98,9 @@ Composants polarisés
 
 Le **support IC1** (ATmega328P) possède une encoche d’orientation qui doit correspondre au repère sur le :term:`PCB`. Le microcontrôleur sera inséré dans le support après les tests électriques.
 
-Les autres composants traversants de la carte-mère (quartz, connecteurs, fusibles, transformateurs :term:`ZMPT101K`) ne sont pas polarisés ou ont un détrompeur mécanique.
+Le module d’alimentation **PS1** (MPC10-5) et le module radio **RFM69CW** (s’il est utilisé) doivent être orientés selon la sérigraphie. Les autres composants traversants de la carte-mère (quartz, connecteurs, fusibles, transformateurs :term:`ZMPT101K`) ne sont pas polarisés ou ont un détrompeur mécanique.
 
-Sur les **cartes de sortie** (étages triac), l’:term:`optocoupleur <Optocoupleur>` (MOC3043) et son support :term:`DIL` sont également orientés. Alignez le repère du composant avec le cercle sur le :term:`PCB`, et l’encoche du support avec le repère sérigraphié. Les résistances, connecteurs et le :term:`triac <Triac>` ne sont pas polarisés.
+Sur les **cartes de sortie** (étages triac), l’:term:`optocoupleur <Optocoupleur>` (MOC3043) et son support :term:`DIL` sont également orientés. Alignez le repère du composant avec le cercle sur le :term:`PCB`, et l’encoche du support avec le repère sérigraphié. Les résistances et les connecteurs ne sont pas polarisés. Le :term:`triac <Triac>` n’a qu’un sens de montage possible : sa semelle doit se trouver du côté du dissipateur (voir :ref:`carte-sortie`). La LED de la carte indicateur est polarisée : sa patte longue est l’anode (voir :ref:`carte-indicateur`).
 
 Matériels nécessaires
 ---------------------
