@@ -61,24 +61,24 @@ Sécurité — Points Essentiels
    ⚠️ **DANGERS DE LA SOUDURE**
 
    - **Brûlures** : Le fer à souder atteint **350–450 °C** (température capable de brûler instantanément la peau)
-   - **Fumées toxiques** : Les vapeurs de flux contiennent des produits chimiques irritants
+   - **Fumées toxiques** : Les fumées de flux (colophane) sont irritantes et **sensibilisantes** : une exposition répétée peut provoquer de l’asthme
    - **Projections** : Gouttes de soudure fondue peuvent jaillir
    - **Électricité** : Fer branché sur secteur 230 V
 
 Équipement de Protection
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ☐ **Lunettes de protection** (obligatoire — projections de soudure)
 
 ☐ **Ventilation** ou extracteur de fumées (obligatoire — fumées toxiques)
 
-☐ **Surface de travail ininflammable** (tapis silicone, carrelage, plaque métal)
+☐ **Surface de travail ininflammable** (tapis silicone, carrelage, plaque métal ; le métal convient pour souder une carte hors tension, jamais pour les essais sous tension)
 
 ☐ **Vêtements longs** (manches longues, pas de synthétique)
 
 ☐ **Lampe de bureau** (éclairage direct sur zone de travail)
 
-☐ **Eau à proximité** (en cas de brûlure légère)
+☐ **Eau à proximité** (en cas de brûlure : refroidir sous l’eau courante tempérée pendant une quinzaine de minutes ; consulter si la brûlure est étendue ou profonde)
 
 .. warning::
    🚫 **INTERDICTIONS ABSOLUES**
@@ -88,12 +88,13 @@ Sécurité — Points Essentiels
    - ❌ Ne JAMAIS inhaler volontairement les fumées
    - ❌ Ne JAMAIS souder sans ventilation
    - ❌ Ne JAMAIS poser le fer sur une surface inflammable
+   - ❌ Ne JAMAIS souder ni retoucher une carte branchée au secteur ou alimentée : débrancher le routeur avant toute soudure
 
 Matériel Nécessaire
 -------------------
 
 Équipement de Base (Essentiel)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
    ⚠️ **N’ACHETEZ PAS D’ÉQUIPEMENT PREMIER PRIX !**
@@ -116,7 +117,7 @@ Matériel Nécessaire
 **1. Station de soudure** (40–80 €)
 
    - **Température réglable** : 300–450 °C
-   - **Panne fine** : 1–2 mm de diamètre (type « biseauté » ou « conique »)
+   - **Panne biseautée** (« tournevis ») : convient à la plupart des joints traversants ; une panne conique fine transmet mal la chaleur aux grosses pastilles
    - **Support avec éponge** : Pour nettoyer la panne
    - **Marques recommandées** : Weller, Hakko, JBC (pro), ou entrée de gamme : Yihua, Aoyue
 
@@ -128,8 +129,8 @@ Matériel Nécessaire
    - **Type** : Étain avec flux intégré (*rosin core*)
    - **Alliage** :
 
-     - **Sn60/Pb40** (60 % étain, 40 % plomb) : Plus facile pour débuter, **température 190 °C**
-     - **Sn99/Cu1** (sans plomb) : Écologique, **température 220 °C**, un peu plus difficile
+     - **Sn60/Pb40** (60 % étain, 40 % plomb) : Plus facile pour débuter, **fond entre 183 et 190 °C** (Sn63/Pb37 : 183 °C)
+     - **Sn99,3/Cu0,7** (sans plomb) : Écologique, **fond à 227 °C**, un peu plus difficile
 
    - **Diamètre** : **0,7–1,0 mm** (idéal pour électronique)
    - **Flux** : Intégré (2–3 % minimum)
@@ -140,17 +141,18 @@ Matériel Nécessaire
       Le plomb est toxique. Si vous utilisez de la soudure plombée :
 
       - Se laver les mains après soudure (OBLIGATOIRE)
-      - Ne pas manger/boire pendant la soudure
+      - Ne pas manger, boire ni fumer pendant la soudure
+      - Tenir les enfants à l’écart du plan de travail
       - Bonne ventilation indispensable
 
 **3. Support de fer** (inclus avec station, ou 5–10 € séparé)
 
    - **Base lourde** : Stable, ne bascule pas
    - **Éponge humide** : Pour nettoyer la panne
-   - **Laine de cuivre** (optionnel) : Alternative à l’éponge, préserve mieux la température
+   - **Laine de laiton** (optionnel) : Alternative à l’éponge, préserve mieux la température
 
 Équipement Complémentaire (Recommandé)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ☐ **Pince brucelles** (ESD safe) : Maintenir les composants (5–10 €)
 
@@ -172,7 +174,7 @@ Préparation du Poste de Travail
 --------------------------------
 
 Configuration Optimale
-^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. graphviz::
    :caption: Organisation du poste de soudure (cliquer pour agrandir)
@@ -229,7 +231,7 @@ Configuration Optimale
                    <table border="0" cellborder="1" cellspacing="0" cellpadding="8" bgcolor="#FFF3E0">
                    <tr><td bgcolor="#FB8C00"><font color="white"><b>À DROITE</b></font></td></tr>
                    <tr><td align="left">• Outils (pince, coupante)</td></tr>
-                   <tr><td align="left">• Éponge/laine cuivre</td></tr>
+                   <tr><td align="left">• Éponge/laine laiton</td></tr>
                    </table>
                >];
 
@@ -250,7 +252,7 @@ Configuration Optimale
    }
 
 Checklist Avant de Commencer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ☐ **Surface de travail dégagée** (pas de papier, tissu inflammable)
 
@@ -272,7 +274,7 @@ Technique de Soudure — Les Bases
 ---------------------------------
 
 Préparation du Fer
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 **1. Allumer le fer et régler la température**
 
@@ -291,7 +293,7 @@ Préparation du Fer
       **Pourquoi étamer ?** La couche d’étain protège la panne de l’oxydation et améliore le transfert thermique.
 
 Comment Tenir le Fer
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~
 
 **✅ Prise correcte** (« prise stylo »)
 
@@ -307,7 +309,7 @@ Comment Tenir le Fer
 - Poignet en l’air (imprécision)
 
 Les 5 Étapes d’une Bonne Soudure
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: 🎯 Règle d’Or de la Soudure
 
@@ -343,7 +345,7 @@ Les 5 Étapes d’une Bonne Soudure
 - La soudure doit **fondre et couler** immédiatement
 - Appliquer soudure pour former un **petit cône** ou **volcan**
 
-**Étape 5 : Retirer fer et soudure** (simultanément)
+**Étape 5 : Retirer le fil, puis le fer**
 
 - Retirer d’abord le **fil de soudure**
 - Puis immédiatement le **fer** (moins d’1 seconde après)
@@ -367,7 +369,7 @@ Reconnaître une Bonne Soudure
    Exemples de bonnes et mauvaises soudures
 
 Caractéristiques d’une Soudure Parfaite
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **✅ BONNE SOUDURE** :
 
@@ -375,13 +377,13 @@ Caractéristiques d’une Soudure Parfaite
 - **Surface** : **Brillante** et lisse (aspect argenté)
 - **Contact** : Soudure **mouille** la patte ET la piste (étalement visible)
 - **Quantité** : Suffisante (recouvre joint), mais pas excessive (pas de boule)
-- **Concavité** : Légèrement **concave** (creux au centre acceptable)
+- **Concavité** : Flancs légèrement **concaves** ; aucun trou ni cratère autour de la patte
 
 Soudures Défectueuses — Comment les Reconnaître
 ------------------------------------------------
 
 1. Soudure Froide (*Cold Joint*)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Apparence** :
 
@@ -406,7 +408,7 @@ Soudures Défectueuses — Comment les Reconnaître
 - Ajouter un peu de flux si nécessaire
 
 2. Pont de Soudure (*Solder Bridge*)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Apparence** :
 
@@ -416,7 +418,7 @@ Soudures Défectueuses — Comment les Reconnaître
 **Cause** :
 
 - Trop de soudure appliquée
-- Fer trop chaud (soudure trop liquide)
+- Pas assez de flux (flux du fil déjà consumé)
 - Mouvement du fer pendant soudure
 
 **Conséquence** :
@@ -431,7 +433,7 @@ Soudures Défectueuses — Comment les Reconnaître
 - Vérifier continuité avec multimètre
 
 3. Boule de Soudure (*Solder Ball*)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Apparence** :
 
@@ -455,7 +457,7 @@ Soudures Défectueuses — Comment les Reconnaître
 - Nettoyer piste et refaire soudure proprement
 
 4. Soudure Sèche / Fissurée
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Apparence** :
 
@@ -477,7 +479,7 @@ Soudures Défectueuses — Comment les Reconnaître
 - Réchauffer complètement (refaire la soudure)
 
 5. Soudure Insuffisante
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Apparence** :
 
@@ -499,7 +501,7 @@ Soudures Défectueuses — Comment les Reconnaître
 - Ajouter de la soudure (réchauffer et appliquer)
 
 6. Surchauffe
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
 **Apparence** :
 
@@ -509,7 +511,7 @@ Soudures Défectueuses — Comment les Reconnaître
 
 **Cause** :
 
-- Fer **trop chaud** (> 400 °C pour plombé)
+- Fer **trop chaud** (> 400 °C pour de la soudure au plomb, sur un petit joint)
 - Fer laissé **trop longtemps** (> 5–8 secondes)
 
 **Conséquence** :
@@ -526,16 +528,16 @@ Techniques Avancées
 -------------------
 
 Dessoudage — Corriger ses Erreurs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Méthode 1 : Pompe à Dessouder** (recommandé pour débutants)
 
 .. code-block:: text
 
-   1. Chauffer le joint à dessouder (2-3 secondes)
-   2. Armer la pompe (pousser le piston)
-   3. Positionner l’embout de la pompe sur le joint
-   4. Appuyer sur le bouton : CLAC ! (aspiration)
+   1. Armer la pompe (pousser le piston)
+   2. Chauffer le joint à dessouder (2-3 secondes)
+   3. Poser l’embout de la pompe sur la soudure fondue
+   4. Appuyer aussitôt sur le bouton : CLAC ! (aspiration)
    5. Vérifier que la soudure est retirée
    6. Répéter si nécessaire
 
@@ -558,7 +560,7 @@ Dessoudage — Corriger ses Erreurs
    3. Réchauffer et retirer avec tresse/pompe
 
 Soudure de Composants Sensibles
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Circuits intégrés** (:term:`DIL`, :term:`SIL`)
 
@@ -579,8 +581,33 @@ Soudure de Composants Sensibles
 - ✅ Souder **rapidement** (2–3 secondes max)
 - ✅ Utiliser pâte thermique si montage sur dissipateur
 
+.. _soldering-haute-puissance:
+
+Soudures de Forte Section (Bornier, Agrafes du Triac)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Le connecteur haute puissance et les agrafes du triac de l’étage de sortie sont de grosses masses de cuivre : elles absorbent beaucoup de chaleur, et les règles de temps et de température ci-dessus, écrites pour les petits joints, ne suffisent pas.
+
+- Utiliser une **panne large** et un fer assez puissant, réglé plus chaud (l’étage de sortie demande 450 °C si possible, voir :ref:`carte-sortie`)
+- Laisser la pastille et la patte chauffer jusqu’à ce que la soudure coule franchement : un joint de forte section prend plus de temps qu’un petit joint
+- Apporter **généreusement** de la soudure et vérifier qu’elle est **remontée** de l’autre côté du circuit
+- Protéger le triac de la chaleur en le plaquant contre un dissipateur pendant la soudure (voir :ref:`carte-sortie`)
+- Une soudure terne ou granuleuse sur ces joints est à refaire : elle chaufferait sous la charge
+
+.. danger::
+   Ces joints transportent le courant de la charge sous 230 V : une soudure défectueuse peut provoquer un échauffement, voire un incendie.
+
+Cavaliers de Soudure (Pastilles CMS)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+La carte principale et le module mk2Wifi se configurent par des cavaliers de soudure : deux ou trois pastilles voisines à relier par une goutte de soudure (voir :ref:`cavaliers`).
+
+- **Fermer** : ajouter un peu de flux, chauffer les deux pastilles ensemble et apporter une petite quantité de soudure, qui forme un pont entre elles
+- **Vérifier** au multimètre (continuité) que les pastilles voulues sont reliées, et seulement elles
+- **Ouvrir** : retirer la soudure avec de la tresse à dessouder, puis vérifier au multimètre que la liaison est coupée
+
 Flux — Quand et Comment l’Utiliser
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Qu’est-ce que le flux ?**
 
@@ -610,7 +637,7 @@ Entretien du Fer à Souder
 --------------------------
 
 Nettoyage de la Panne
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 **Pendant la soudure** (toutes les 5–10 soudures) :
 
@@ -626,7 +653,7 @@ Nettoyage de la Panne
 #. Laisser refroidir 10–15 minutes avant de ranger
 
 Remplacement de la Panne
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Signes qu’une panne est usée** :
 
@@ -659,11 +686,11 @@ Pratique — Exercices Recommandés
 ---------------------------------
 
 Exercice 1 : Souder 10 Résistances
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Objectif** : Maîtriser le timing fer-soudure
 
-**Matériel** : Plaque d’essai + 10 résistances (n’importe quelle valeur)
+**Matériel** : Plaque à pastilles (perforée) + 10 résistances (n’importe quelle valeur)
 
 **Consigne** :
 
@@ -673,7 +700,7 @@ Exercice 1 : Souder 10 Résistances
 - **Critère de réussite** : 8/10 soudures brillantes et lisses
 
 Exercice 2 : Souder des Composants :term:`DIL`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Objectif** : Souder plusieurs broches proches sans faire de ponts
 
@@ -686,7 +713,7 @@ Exercice 2 : Souder des Composants :term:`DIL`
 - Vérifier avec multimètre (mode continuité)
 
 Exercice 3 : Dessouder et Ressouder
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Objectif** : Apprendre à corriger ses erreurs
 
@@ -696,7 +723,7 @@ Exercice 3 : Dessouder et Ressouder
 
 - Dessouder un composant (pompe ou tresse)
 - Nettoyer les trous du :term:`PCB`
-- Resouder le composant proprement
+- Ressouder le composant proprement
 
 Où Trouver des Kits de Pratique ?
 ----------------------------------
@@ -728,7 +755,7 @@ Résolution de Problèmes
 ------------------------
 
 Problème : La Soudure Ne Coule Pas
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Causes possibles** :
 
@@ -741,7 +768,7 @@ Problème : La Soudure Ne Coule Pas
 ☐ Mauvais fil de soudure (vérifier flux intégré)
 
 Problème : Composants Tombent Quand Je Retourne le :term:`PCB`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Solutions** :
 
@@ -754,15 +781,15 @@ Problème : Composants Tombent Quand Je Retourne le :term:`PCB`
 ✅ Souder d’abord composants plats (résistances), puis les hauts (transformateurs)
 
 Problème : Je Fais Trop de Ponts de Soudure
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Solutions** :
 
-✅ Utiliser **moins de soudure** (2–3 cm de fil suffit par joint)
+✅ Utiliser **moins de soudure** (quelques millimètres de fil suffisent pour un joint traversant)
 
-✅ Baisser température fer (moins liquide)
+✅ Ajouter du flux et repasser la panne propre sur le pont : la soudure se sépare d’elle-même
 
-✅ Souder plus lentement (retirer fer dès que soudure coule)
+✅ Travailler posément : retirer le fil puis le fer dès que la soudure a coulé
 
 ✅ Utiliser tresse pour retirer excédent
 
@@ -770,7 +797,7 @@ Ressources Complémentaires
 ---------------------------
 
 Vidéos Tutoriels (Recommandées)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: 🎥 Vidéos YouTube Recommandées
 
@@ -782,7 +809,7 @@ Vidéos Tutoriels (Recommandées)
    - « Collin’s Lab: Soldering » (Adafruit, anglais, excellent)
 
 Sites Web et Forums
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 
 - **Sonelec-Musique.com** : Tutoriels soudure en français
 - **OpenClassrooms** : Cours électronique
@@ -790,9 +817,9 @@ Sites Web et Forums
 - **r/AskElectronics** (Reddit) : Communauté anglophone très active
 
 Livres
-^^^^^^
+~~~~~~
 
-- *Électronique pour les débutants* - Charles Platt (Éditions Eyrolles)
+- *L’électronique en pratique* - Charles Platt (Éditions Eyrolles)
 - *Composants électroniques* - Pierre Mayé (Dunod)
 
 Checklist Finale — Prêt à Souder Votre Mk2PVRouter ?
