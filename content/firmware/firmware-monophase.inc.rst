@@ -47,7 +47,7 @@ Après extraction, vous devriez avoir :
    - **config.h** — Configuration générale (carte-mère, afficheur, sorties, relais, sondes…)
    - **calibration.h** — Paramètres d’étalonnage (à remplir après l’étalonnage)
 
-   `config_system.h` (fréquence du réseau, export requis, période d’envoi des données, 30 s au plus) et `config_rf.h` (liaison radio) ne changent que dans des cas particuliers. Le :ref:`configurateur <configurateur-monophase>` écrit les trois fichiers `config.h`, `config_system.h` et `config_rf.h`.
+   `config_system.h` (fréquence du réseau, export requis, période d’envoi des données, 30 s au plus) et `config_rf.h` (liaison radio) ne changent que dans des cas particuliers. Le :ref:`configurateur <configurateur-monophase>` écrit les trois fichiers `config.h`, `config_system.h` et `config_rf.h`.
 
 
 Étape 2 : Configuration du Firmware
@@ -90,7 +90,7 @@ Selon votre carte-mère :
    inline constexpr PcbVersion PCB_VERSION{ PcbVersion::NEW };
 
 .. warning::
-   Chaque carte a ses entrées analogiques, et la carte universelle utilise la référence interne 1,1 V de l’ATmega328P : un mauvais choix donne des mesures fausses. Après un changement, refaire l’étalonnage.
+   Chaque carte a ses entrées analogiques, et la carte universelle utilise la référence interne 1,1 V de l’ATmega328P : un mauvais choix donne des mesures fausses. Après un changement, refaire l’étalonnage.
 
 Le `config.h` fourni avec le firmware est réglé pour la carte universelle (`PcbVersion::NEW`).
 
@@ -203,7 +203,7 @@ Préparation
 
    L’adaptateur FTDI ne peut **PAS** alimenter le routeur seul !
 
-   Le routeur doit être alimenté par sa propre alimentation 230 V.
+   Le routeur doit être alimenté par sa propre alimentation 230 V.
 
 .. include:: ../common/connexion-ftdi.inc.rst
 

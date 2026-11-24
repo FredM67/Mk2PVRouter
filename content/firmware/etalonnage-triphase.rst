@@ -8,7 +8,7 @@
 
 🔧 **Niveau de difficulté** : Avancé
 
-⚠️ **Niveau de risque** : Élevé (manipulation 230 V sous tension)
+⚠️ **Niveau de risque** : Élevé (manipulation 230 V sous tension)
 
 .. admonition:: 📋 Prérequis
 
@@ -40,7 +40,7 @@ Ce qu’il vous faut
 
 * **Une lecture de référence par phase**, prise en même temps que celle du routeur : un wattmètre enfichable ou une pince wattmétrique sur le câble de la phase.
 * **L’affichage du Linky**, si vous n’avez rien d’autre : il donne la puissance **totale**, des trois phases, en puissance apparente (VA), avec un rafraîchissement lent ; VA et W ne sont égaux qu’avec une charge purement résistive. Il ne sert donc de référence qu’avec **une seule charge, sur une seule phase**, et toutes les autres consommations de la maison éteintes. Dès qu’il y a une autre consommation, prenez un appareil qui mesure une phase à la fois.
-* **Une forte charge résistive** (bouilloire, radiateur, chauffe-eau) : au moins 300 W, car en dessous la correction est imprécise. Un appareil purement résistif, sans ventilateur ni électronique, simplifie grandement l’étalonnage. **Elle doit fonctionner sans passer par le routeur** : le mode étalonnage ne commute rien, donc une charge reliée à une sortie triac du routeur reste éteinte. Branchez une bouilloire ou un radiateur sur une prise, ou faites marcher le chauffe-eau par son propre contacteur, en position forcée.
+* **Une forte charge résistive** (bouilloire, radiateur, chauffe-eau) : au moins 300 W, car en dessous la correction est imprécise. Un appareil purement résistif, sans ventilateur ni électronique, simplifie grandement l’étalonnage. **Elle doit fonctionner sans passer par le routeur** : le mode étalonnage ne commute rien, donc une charge reliée à une sortie triac du routeur reste éteinte. Branchez une bouilloire ou un radiateur sur une prise, ou faites marcher le chauffe-eau par son propre contacteur, en position forcée.
 * **Une consommation constante pendant l’étalonnage** : branchez la charge résistive et débranchez tout le reste, y compris votre ou vos systèmes de production d’électricité.
 * **Les pinces installées sur la phase correspondante**, par rapport à l’alimentation du routeur : la pince de la phase **L1** sur la phase branchée au connecteur **L1** du routeur, et ainsi de suite.
 * **Le** :ref:`configurateur <configurateur-triphase>`, qui fait le calcul pour vous et réécrit votre ``calibration.h``.
@@ -82,7 +82,7 @@ Pas à pas
 
 #. Ouvrez le :ref:`configurateur <configurateur-triphase>`, choisissez votre carte, puis cochez **« Mode étalonnage »**. La page ne montre plus que ce qui sert à l’étalonnage (vos autres réglages sont conservés).
 #. Chargez votre ``calibration.h`` avec **« Charger mon calibration.h »**, ou saisissez les valeurs de puissance (et de tension) avec lesquelles tourne le routeur. Le fichier doit venir de la même version du firmware : un ``calibration.h`` plus ancien, avec un seul ``f_powerCal``, est refusé.
-#. **Carte universelle seulement** : vérifiez le **calibre de la sonde** de chaque phase (``f_ctRating``), en ampères : 50 pour une sonde 50 A / 333 mV. Avec une sonde à sortie courant et une résistance de charge R, comme la YHDC SCT-013-000 (2000:1), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Un calibre se change dans ``calibration.h`` : voir le téléversement ci-dessous.
+#. **Carte universelle seulement** : vérifiez le **calibre de la sonde** de chaque phase (``f_ctRating``), en ampères : 50 pour une sonde 50 A / 333 mV. Avec une sonde à sortie courant et une résistance de charge R, comme la YHDC SCT-013-000 (2000:1), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Un calibre se change dans ``calibration.h`` : voir le téléversement ci-dessous.
 #. Dans le dossier du firmware, remplacez ``config.h`` par celui que génère le configurateur : il met le routeur en mode étalonnage, avec la sortie série lisible. Si vous avez changé un calibre, remplacez aussi ``calibration.h`` par le fichier du configurateur (après avoir chargé le vôtre), ou copiez la ligne ``f_ctRating`` qu’il donne dans le vôtre. Téléversez ensuite le firmware (le dossier du sketch) sur le routeur, avant les relevés.
 #. Branchez la charge résistive sur une phase, par exemple **L1**, sans passer par le routeur, et ouvrez le moniteur série. Il affiche, toutes les 5 secondes (valeur par défaut de ``DATALOG_PERIOD_IN_SECONDS``, dans ``config_system.h``, 30 s au plus), ``P1``, ``P2``, ``P3`` (la puissance de chaque phase) et ``P`` (le total) ; voir l’exemple plus bas, dans :ref:`Pour aller plus loin <etalonnage-triphase-aller-plus-loin>`.
 #. Relevez **au même moment** la puissance du routeur (``P1`` pour la phase **L1**) et celle de l’appareil de référence, et saisissez les deux dans la ligne de cette phase. La tension (``V1``…) se corrige de la même façon, mais elle ne sert qu’à l’affichage.
@@ -117,7 +117,7 @@ Un signe contraire signale un défaut de montage :
 
 .. admonition:: ✅ Point de Contrôle Final — Étalonnage Triphasé Complet
 
-   Avant de passer à l'installation finale, vérifiez :
+   Avant de passer à l’installation finale, vérifiez :
 
    | ☐ **f_powerCal validé pour L1, L2, L3**
    | ☐ Chaque phase mesure correctement (écart < 2 %)
@@ -146,7 +146,7 @@ Où :math:`f_{powerCal_{initial}}` est la valeur actuelle (celle du sketch tél�
 
 Le routeur pour cette méthode doit être en sortie lisible : ``SERIAL_OUTPUT_TYPE`` à ``SerialOutputType::HumanReadable`` dans ``config.h`` (le ``config.h`` fourni est en mode ``IoT``), et en mode étalonnage : ``CALIBRATION_MODE`` à ``true``, pour que le routeur ne commute plus aucune charge (remettez-le à ``false`` ensuite). Le mode étalonnage du :ref:`configurateur <configurateur-triphase>` le fait pour vous.
 
-L'affichage dans le Moniteur Série se présente comme ceci : ::
+L’affichage dans le Moniteur Série se présente comme ceci : ::
 
     1797.67, P:-21, P1:368, P2:-113, P3:-276, V1:233.24, V2:233.82, V3:233.84, (minSampleSets/MC 32, #ofSampleSets 8014)
     1793.61, P:-18, P1:367, P2:-110, P3:-275, V1:233.46, V2:233.93, V3:233.99, (minSampleSets/MC 32, #ofSampleSets 8013)
@@ -159,14 +159,14 @@ Si vous étalonnez la phase **L1**, alors **P1** devra afficher la même valeur 
 Avec le compteur de distribution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cette méthode ne nécessite aucun appareil de mesure, mais n'est pas la plus rapide à réaliser.
+Cette méthode ne nécessite aucun appareil de mesure, mais n’est pas la plus rapide à réaliser.
 
-À l'aide de l'affichage du compteur
+À l’aide de l’affichage du compteur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il est possible également de relever la consommation affichée par le compteur sur la phase en cours d'étalonnage.
+Il est possible également de relever la consommation affichée par le compteur sur la phase en cours d’étalonnage.
 Il faudra alors faire correspondre la puissance affichée par le routeur dans le moniteur série avec celle affichée par le compteur.
-D'où l'intérêt de ne pas avoir d'appareils qui vont se mettre en route sporadiquement (réfrigérateur…).
+D’où l’intérêt de ne pas avoir d’appareils qui vont se mettre en route sporadiquement (réfrigérateur…).
 
 .. admonition:: ✅ Point de Contrôle — Étalonnage Méthode Compteur
 
@@ -181,7 +181,7 @@ D'où l'intérêt de ne pas avoir d'appareils qui vont se mettre en route sporad
 Avec un appareil de mesure annexe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cette méthode nécessite un appareil de mesure, tel qu'un wattmètre, un compteur d'énergie portable, ou un autre dispositif de mesure de puissance.
+Cette méthode nécessite un appareil de mesure, tel qu’un wattmètre, un compteur d’énergie portable, ou un autre dispositif de mesure de puissance.
 
 Appareils de mesure possibles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -191,9 +191,9 @@ Appareils de mesure possibles
   - Affiche directement la puissance consommée en watts.
   - Idéal pour des mesures instantanées.
 
-* **Compteur d'énergie portable** :
+* **Compteur d’énergie portable** :
 
-  - Permet de mesurer la consommation d'énergie sur une période donnée (kWh).
+  - Permet de mesurer la consommation d’énergie sur une période donnée (kWh).
   - Utile pour des mesures prolongées.
 
 * **Multimètre avec fonction wattmètre** :
@@ -201,36 +201,36 @@ Appareils de mesure possibles
   - Polyvalent, peut également mesurer la tension et le courant.
   - Peut nécessiter des calculs manuels pour obtenir la puissance (P = U × I).
 
-* **Compteur d'énergie triphasé** :
+* **Compteur d’énergie triphasé** :
 
-  - Permet de mesurer directement les trois phases sans déplacer l'appareil.
+  - Permet de mesurer directement les trois phases sans déplacer l’appareil.
   - Idéal pour des installations triphasées complexes.
 
-Étapes pour l'étalonnage
+Étapes pour l’étalonnage
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. **Préparation** :
 
-   - Coupez l'alimentation électrique au tableau pour garantir la sécurité.
-   - Installez l'appareil de mesure sur la phase correspondante (par exemple, **L1**).
+   - Coupez l’alimentation électrique au tableau pour garantir la sécurité.
+   - Installez l’appareil de mesure sur la phase correspondante (par exemple, **L1**).
    - Connectez la pince ampèremétrique du routeur à la même phase.
 
 #. **Mesure de la puissance** :
 
-   - Rétablissez l'alimentation électrique.
+   - Rétablissez l’alimentation électrique.
    - Allumez un appareil purement résistif (par exemple, un radiateur ou une bouilloire).
-   - Relevez la puissance affichée par l'appareil de mesure.
+   - Relevez la puissance affichée par l’appareil de mesure.
 
 #. **Ajustement de** ``f_powerCal`` :
 
-   - Comparez la puissance mesurée par l'appareil avec celle affichée dans le moniteur série.
+   - Comparez la puissance mesurée par l’appareil avec celle affichée dans le moniteur série.
    - Utilisez la formule de correction ci-dessus pour ajuster la valeur de ``f_powerCal``.
 
 #. **Validation** :
 
    - Téléversez le sketch mis à jour sur le routeur.
-   - Vérifiez que la puissance affichée par le routeur correspond à celle mesurée par l'appareil.
-   - Répétez l'opération pour chaque phase (**L1**, **L2**, **L3**).
+   - Vérifiez que la puissance affichée par le routeur correspond à celle mesurée par l’appareil.
+   - Répétez l’opération pour chaque phase (**L1**, **L2**, **L3**).
 
 .. attention::
    La phase doit correspondre. Si vous étalonnez la phase **L1**, la charge DOIT être branchée sur **L1** et la pince du routeur DOIT être celle qui correspond à la phase **L1**.
@@ -238,10 +238,10 @@ Appareils de mesure possibles
 Chauffe-eau triphasé
 ^^^^^^^^^^^^^^^^^^^^
 
-Si vous utilisez un chauffe-eau triphasé comme appareil d'étalonnage, suivez ces étapes spécifiques :
+Si vous utilisez un chauffe-eau triphasé comme appareil d’étalonnage, suivez ces étapes spécifiques :
 
-* Branchez l'appareil de mesure sur une phase du chauffe-eau ainsi que la pince du routeur correspondante.
-* Si l'appareil de mesure est triphasé, il n'est pas nécessaire de le déplacer de phase en phase. Sinon, déplacez-le sur chaque phase pour effectuer les mesures.
+* Branchez l’appareil de mesure sur une phase du chauffe-eau ainsi que la pince du routeur correspondante.
+* Si l’appareil de mesure est triphasé, il n’est pas nécessaire de le déplacer de phase en phase. Sinon, déplacez-le sur chaque phase pour effectuer les mesures.
 * Relevez les valeurs de puissance pour chaque phase et ajustez ``f_powerCal`` en conséquence.
 
 | Exemple : supposons que le compteur/wattmètre affiche **2250**, et que le log du routeur affiche **2000**.
@@ -251,7 +251,7 @@ Si vous utilisez un chauffe-eau triphasé comme appareil d'étalonnage, suivez c
 
    f_{powerCal} = 0.05000 * {2250 \over 2000} = 0.05625
 
-| Répétez l'opération pour chaque phase. Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu'au convertisseur analogique du microcontrôleur.
+| Répétez l’opération pour chaque phase. Une ligne de mesure comprend TOUS les composants en partant de la pince jusqu’au convertisseur analogique du microcontrôleur.
 
 .. important::
    Chaque pince devra être marquée pour savoir à quelle ligne elle correspond.
@@ -274,7 +274,7 @@ Carte universelle, avec les valeurs par défaut et le calibre de vos sondes :
    inline constexpr float f_ctRating[NO_OF_PHASES]{ 50.0F, 50.0F, 50.0F };
    inline constexpr float f_powerCalPerAmp[NO_OF_PHASES]{ 0.00286405F, 0.00286405F, 0.00286405F };
 
-L'exemple ci-dessous part de l'ancienne carte (0,05) ; avec la carte universelle, le calcul est le même à partir de ``f_powerCalPerAmp``.
+L’exemple ci-dessous part de l’ancienne carte (0,05) ; avec la carte universelle, le calcul est le même à partir de ``f_powerCalPerAmp``.
 
 | Supposons que le compteur affiche **2250**, et que le log du routeur affiche **2000**.
 | On aura alors :
@@ -285,12 +285,12 @@ L'exemple ci-dessous part de l'ancienne carte (0,05) ; avec la carte universell
 
 .. note::
    La valeur ``0.05000`` dans la formule correspond à la valeur inscrite dans le sketch téléversé.
-   Si le sketch contient une autre valeur, il conviendra alors d'adapter la formule en conséquence.
+   Si le sketch contient une autre valeur, il conviendra alors d’adapter la formule en conséquence.
 
 .. hint::
-   Après avoir calculé le ``f_powerCal`` de la phase en cours d'étalonnage et saisi sa valeur dans le sketch, il peut être judicieux de téléverser à nouveau sur le routeur et de s'assurer que la valeur affichée dans le log correspond bien à celle du compteur.
+   Après avoir calculé le ``f_powerCal`` de la phase en cours d’étalonnage et saisi sa valeur dans le sketch, il peut être judicieux de téléverser à nouveau sur le routeur et de s’assurer que la valeur affichée dans le log correspond bien à celle du compteur.
 
-En triphasé, il faudra répéter l'opération sur chacune des phases.
+En triphasé, il faudra répéter l’opération sur chacune des phases.
 
 .. important::
    Chaque pince devra alors être marquée pour savoir à quelle ligne elle correspond.

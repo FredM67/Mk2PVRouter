@@ -33,16 +33,16 @@ Windows
 ~~~~~~~
 
 #. Ouvrir le navigateur web : https://code.visualstudio.com/
-#. Cliquer sur **« Download for Windows »**
+#. Cliquer sur **« Download for Windows »**
 #. Double-cliquer sur le fichier téléchargé (`VSCodeSetup-xxx.exe`)
 #. Accepter la licence
 #. **Recommandé :** Cocher toutes les options additionnelles :
 
    - Ajouter à PATH
    - Créer une icône sur le bureau
-   - Ajouter l’action « Ouvrir avec Code » au menu contextuel
+   - Ajouter l’action « Ouvrir avec Code » au menu contextuel
 
-#. Cliquer sur **« Installer »**
+#. Cliquer sur **« Installer »**
 #. Attendre la fin de l’installation
 #. Lancer VS Code
 
@@ -50,7 +50,7 @@ macOS
 ~~~~~
 
 #. Ouvrir le navigateur web : https://code.visualstudio.com/
-#. Cliquer sur **« Download for Mac »**
+#. Cliquer sur **« Download for Mac »**
 #. Ouvrir le fichier `.zip` téléchargé
 #. Glisser **Visual Studio Code.app** dans le dossier **Applications**
 #. Lancer VS Code depuis le dossier Applications
@@ -64,7 +64,7 @@ Méthode 1 : Installation via le site officiel (recommandé)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ouvrir le navigateur web : https://code.visualstudio.com/
-#. Cliquer sur **« .deb »** (pour Ubuntu/Debian)
+#. Cliquer sur **« .deb »** (pour Ubuntu/Debian)
 #. Installer le paquet téléchargé :
 
    .. code-block:: bash
@@ -91,10 +91,10 @@ Installation de l’Extension
 #. Ouvrir **Visual Studio Code**
 #. Cliquer sur l’icône **Extensions** dans la barre latérale gauche (ou Ctrl+Shift+X / Cmd+Shift+X)
 #. Dans le champ de recherche, taper : `PlatformIO IDE`
-#. Trouver l’extension **« PlatformIO IDE »** par PlatformIO
-#. Cliquer sur **« Install »**
+#. Trouver l’extension **« PlatformIO IDE »** par PlatformIO
+#. Cliquer sur **« Install »**
 #. Attendre la fin de l’installation (peut prendre 2–5 minutes)
-#. Une fois terminé, cliquer sur **« Reload »** pour redémarrer VS Code
+#. Une fois terminé, cliquer sur **« Reload »** pour redémarrer VS Code
 
 .. note::
    Au premier lancement après installation, PlatformIO téléchargera des outils supplémentaires.
@@ -112,7 +112,7 @@ Après le redémarrage de VS Code :
 Ouverture du Projet
 ~~~~~~~~~~~~~~~~~~~
 
-#. Dans **PIO Home**, cliquer sur **« Open Project »**
+#. Dans **PIO Home**, cliquer sur **« Open Project »**
 #. Naviguer vers le dossier du firmware :
 
    - Mono : `PVRouter-1-phase-dev/Mk2_1phase_RFdatalog_temp/`
@@ -138,10 +138,10 @@ Compilation et Téléversement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Connecter le routeur via l’adaptateur FTDI (voir *Connexion du Routeur* dans :ref:`logiciel-monophase` ou :ref:`logiciel-triphase`)
-#. Dans la barre inférieure de VS Code, cliquer sur l’icône **« Upload »** (→)
+#. Dans la barre inférieure de VS Code, cliquer sur l’icône **« Upload »** (→)
 #. PlatformIO compile automatiquement et téléverse le firmware
 #. Surveiller le terminal pour les messages de progression
-#. Pour le moniteur série, cliquer sur l’icône **« Serial Monitor »** (une prise) dans la barre inférieure : PlatformIO l’ouvre à 9600 bauds, sa vitesse par défaut, qui est celle du routeur
+#. Pour le moniteur série, cliquer sur l’icône **« Serial Monitor »** (une prise) dans la barre inférieure : PlatformIO l’ouvre à 9600 bauds, sa vitesse par défaut, qui est celle du routeur
 
 Sélection de la Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -165,4 +165,4 @@ Pour changer d’environnement :
 
 .. _platformio-termine:
 
-✅ **Configuration PlatformIO terminée !** Passez maintenant aux étapes spécifiques à votre version (:term:`monophasé <Monophasé>` ou :term:`triphasé <Triphasé>`).
+✅ **Configuration PlatformIO terminée !** Passez maintenant aux étapes spécifiques à votre version (:term:`monophasé <Monophasé>` ou :term:`triphasé <Triphasé>`).

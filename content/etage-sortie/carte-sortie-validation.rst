@@ -13,7 +13,7 @@ Problème 1 : Lampe Ne S’Allume Jamais
 
    **Test** : la broche 2 du connecteur Molex doit porter le signal (+), la broche 1 la masse ; inversé, la LED de l’optocoupleur n’est jamais alimentée
 
-☐ :term:`Optocoupleur` mal inséré (sens inversé)
+☐ :term:`Optocoupleur` mal inséré (sens inversé)
 
    **Test** : Retirer optocoupleur, vérifier repère alignement, réinsérer
 
@@ -29,7 +29,7 @@ Problème 1 : Lampe Ne S’Allume Jamais
 
    **Test** : un triac ouvert ne se distingue pas d’un triac sain à l’ohmmètre : hors tension, les deux bornes extérieures du connecteur de puissance donnent quelques MΩ ou OL dans les deux sens dans les deux cas. Si toutes les autres causes sont écartées, remplacer le triac
 
-☐ Soudure froide sur patte :term:`triac <Triac>`
+☐ Soudure froide sur patte :term:`triac <Triac>`
 
    **Action** : Refaire soudures triac avec fer très chaud (450 °C)
 
@@ -46,13 +46,13 @@ Problème 2 : Lampe Reste Allumée en Permanence
 
    **Action** : Remplacer triac (attention ESD lors manipulation)
 
-☐ Pont de soudure entre bornes :term:`triac <Triac>`
+☐ Pont de soudure entre bornes :term:`triac <Triac>`
 
    **Test** : Inspection visuelle loupe, vérifier continuité
 
    **Action** : Retirer excédent soudure avec tresse
 
-☐ :term:`Optocoupleur` défectueux (sortie en court-circuit)
+☐ :term:`Optocoupleur` défectueux (sortie en court-circuit)
 
    **Action** : Remplacer l’optocoupleur
 
@@ -63,11 +63,11 @@ Problème 3 : Grésillement ou Arc Électrique
 
 ☐ Soudure insuffisante sur agrafes cuivre
 
-   **Symptôme** : Arc entre agrafe et piste :term:`PCB`
+   **Symptôme** : Arc entre agrafe et piste :term:`PCB`
 
    **Action** : **ARRÊTER IMMÉDIATEMENT**, refaire soudures avec beaucoup de soudure
 
-☐ Écart entre :term:`triac <Triac>` et :term:`PCB` (mauvais contact)
+☐ Écart entre :term:`triac <Triac>` et :term:`PCB` (mauvais contact)
 
    **Action** : Dessouder le triac, aplatir les pattes, ressouder avec triac bien plaqué
 
@@ -128,7 +128,7 @@ Il est recommandé de noter sur un papier (à conserver avec la carte) :
 - **Valeur R1** : _____ Ω (220 Ω pour 3,3 V, 390 Ω pour 5 V)
 - **Valeur R2** : _____ Ω (330 Ω)
 - **Valeur R3** : _____ Ω (360 Ω)
-- **Référence :term:`triac <Triac>`** : __________ (ex :  BTA41-600B)
+- **Référence :term:`triac <Triac>`** : __________ (ex :  BTA41-600B)
 - **Charge testée** : _____ W (ex : 100 W)
 - **Durée test** : _____ minutes
 - **Résultat** : ☐ ✅ Validée  ☐ ❌ Défectueuse
@@ -147,15 +147,15 @@ Une fois que vous avez assemblé et testé avec succès :
 
 **Vous pouvez passer aux chapitres suivants :**
 
-#. **Perçages du boîtier** — :ref:`percages`
+#. **Perçages du boîtier** — :ref:`percages`
 
    Préparer le boîtier pour accueillir les cartes et les dissipateurs
 
-#. **Confection des câbles** — :ref:`confection-cables`
+#. **Confection des câbles** — :ref:`confection-cables`
 
    Câbles de commande, de témoin LED, de prise jack et de terre
 
-#. **Assemblage** — :ref:`assemblage-boitier`
+#. **Assemblage** — :ref:`assemblage-boitier`
 
    Fixation des dissipateurs sur les côtés du boîtier, des triacs sur les dissipateurs, puis des cartes
 
@@ -182,15 +182,15 @@ Ressources Complémentaires
 Documentation Technique
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Datasheet** :term:`triac <Triac>` BTA41 : Caractéristiques électriques, courbes thermiques
-- **Datasheet** :term:`optocoupleur <Optocoupleur>` MOC3043 : Schéma interne, caractéristiques LED
+- **Datasheet** :term:`triac <Triac>` BTA41 : Caractéristiques électriques, courbes thermiques
+- **Datasheet** :term:`optocoupleur <Optocoupleur>` MOC3043 : Schéma interne, caractéristiques LED
 - **Guide soudure haute puissance** : :ref:`soldering-haute-puissance`
 
 .. admonition:: 🎯 Récapitulatif Final
 
    **Vous avez maintenant assemblé une carte de sortie triac fonctionnelle !**
 
-   Cette carte utilise un :term:`triac <Triac>` BTA41 (41 A nominaux) mais, en raison de la taille du dissipateur, la charge est limitée à **3 000 W** (~13 A à 230 V) pour un fonctionnement sûr et fiable.
+   Cette carte utilise un :term:`triac <Triac>` BTA41 (41 A nominaux) mais, en raison de la taille du dissipateur, la charge est limitée à **3 000 W** (~13 A à 230 V) pour un fonctionnement sûr et fiable.
 
    **Points clés à retenir :**
 

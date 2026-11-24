@@ -10,7 +10,7 @@
 
 ⚠️ **Niveau de risque** : Élevé (haute puissance, risque d’incendie)
 
-| Le :term:`triac <Triac>`, également connu sous le nom de triode pour courant alternatif, appartient à la catégorie des thyristors et sert d’interrupteur semi-conducteur. Il a la capacité unique de gérer le courant dans les deux directions, ce qui le rend idéal pour les applications utilisant du courant alternatif (AC).
+| Le :term:`triac <Triac>`, également connu sous le nom de triode pour courant alternatif, appartient à la catégorie des thyristors et sert d’interrupteur semi-conducteur. Il a la capacité unique de gérer le courant dans les deux directions, ce qui le rend idéal pour les applications utilisant du courant alternatif (AC).
 | Utilisé pour ajuster la puissance fournie à des dispositifs purement résistifs comme des radiateurs, des chauffe-eau ou des lampes à incandescence, le triac permet de moduler avec précision l’énergie distribuée. Cela offre un contrôle fin sur le niveau de chaleur ou d’éclairage produit.
 
 .. contents:: Sommaire
@@ -21,7 +21,7 @@
 
    Avant de commencer ce chapitre :
 
-   ☐ Chapitre :ref:`safety-overview` lu et compris
+   ☐ Chapitre :ref:`safety-overview` lu et compris
 
    ☐ Carte-mère complètement assemblée et testée
 
@@ -36,7 +36,7 @@
 Principe de Fonctionnement d’une Sortie Triac
 ---------------------------------------------
 
-| Un :term:`triac <Triac>` est activé par un signal de déclenchement envoyé à sa broche de commande, également connue sous le nom de gâchette ou *gate*.
+| Un :term:`triac <Triac>` est activé par un signal de déclenchement envoyé à sa broche de commande, également connue sous le nom de gâchette ou *gate*.
 | Lorsque ce signal dépasse un seuil spécifique, le triac s’active et commence à conduire le courant, permettant ainsi son passage.
 | Une fois activé, le triac continue de conduire le courant jusqu’à ce que celui-ci descende en dessous d’un certain niveau, souvent proche de zéro.
 | Ce phénomène se produit automatiquement à la fin de chaque demi-cycle du courant alternatif, entraînant l’arrêt du passage du courant.
@@ -45,7 +45,7 @@ Contrôle de la Puissance
 ------------------------
 
 | Pour contrôler la puissance fournie à un appareil résistif, on utilise souvent une technique appelée variation de phase ou gradation.
-| Elle consiste à retarder l’amorçage du :term:`triac <Triac>` dans chaque demi-cycle de la tension alternative. En ne déclenchant le triac que pendant une portion de chaque demi-cycle, on réduit la quantité d’énergie fournie à la charge.
+| Elle consiste à retarder l’amorçage du :term:`triac <Triac>` dans chaque demi-cycle de la tension alternative. En ne déclenchant le triac que pendant une portion de chaque demi-cycle, on réduit la quantité d’énergie fournie à la charge.
 | Plus le retard est important, plus la puissance transmise est faible, et inversement.
 | Le principal inconvénient de cette méthode est qu’elle génère des harmoniques dans le réseau électrique.
 
@@ -56,13 +56,13 @@ Contrôle de la Puissance
 Applications typiques
 ---------------------
 
-* **Éclairage** : Les *dimmers*, ou variateurs de lumière, exploitent les triacs pour moduler l’intensité lumineuse. En ajustant le moment d’activation du :term:`triac <Triac>`, il est possible de faire varier la luminosité des lampes.
+* **Éclairage** : Les *dimmers*, ou variateurs de lumière, exploitent les triacs pour moduler l’intensité lumineuse. En ajustant le moment d’activation du :term:`triac <Triac>`, il est possible de faire varier la luminosité des lampes.
 * **Chauffage** : Dans le cas des chauffages électriques, les triacs servent à contrôler la température. En changeant la durée pendant laquelle le courant est conduit, on peut régler la quantité de chaleur émise par l’appareil de chauffage.
 
 Avantages comparés à un relais
 ------------------------------
 
-* **Contrôle Fin** : Le :term:`triac <Triac>` offre une gestion très précise de la puissance, ce qui est parfait pour les applications nécessitant un ajustement délicat.
+* **Contrôle Fin** : Le :term:`triac <Triac>` offre une gestion très précise de la puissance, ce qui est parfait pour les applications nécessitant un ajustement délicat.
 * **Commutation Sans Bruit** : À l’inverse des relais mécaniques, les triacs fonctionnent sans produire de bruit de clic caractéristique lors de la commutation.
 * **Absence de Composants Mobiles** : Le fait qu’il n’y ait pas de composants mobiles diminue l’usure due au mouvement, ce qui rend le système de commutation plus fiable et prolonge sa durée de vie.
 
@@ -70,7 +70,7 @@ Considérations Techniques
 -------------------------
 
 * **Dissipation Thermique** : L’utilisation des triacs entraîne une production de chaleur pendant leur fonctionnement. Il est crucial d’assurer une bonne évacuation de cette chaleur, généralement à l’aide de dispositifs tels que des radiateurs ou des dissipateurs thermiques.
-* **Compatibilité de Charge** : Du fait que le :term:`triac <Triac>` interrompt le courant de manière périodique, seuls les équipements résistifs (comme les chauffages ou les lampes) sont adaptés pour être contrôlés par un triac.
+* **Compatibilité de Charge** : Du fait que le :term:`triac <Triac>` interrompt le courant de manière périodique, seuls les équipements résistifs (comme les chauffages ou les lampes) sont adaptés pour être contrôlés par un triac.
 
 Composition d’un kit pour étage de sortie triac
 -----------------------------------------------
@@ -81,8 +81,8 @@ Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 * Une **résistance R1**, dont la valeur est choisie en fonction de la tension nominale du système et du modèle d’:term:`optocoupleur <Optocoupleur>` utilisé.
 * Une **résistance R2**, sélectionnée selon le modèle d’optocoupleur.
 * Une **résistance R3**.
-* Un **support** :term:`DIL` pour l’optocoupleur MOC3043M (U1), comportant deux rangées de trois broches.
-* Deux paires de **connecteurs type Molex** 2 broches, pour J2 et J3. Ces deux connecteurs sont câblés en parallèle : l’un reçoit le signal de commande de la carte-mère, l’autre peut alimenter une carte indicateur LED (voir :ref:`carte-indicateur`). Sur chacun, la broche 1 est la masse et la broche 2 le signal (+).
+* Un **support** :term:`DIL` pour l’optocoupleur MOC3043M (U1), comportant deux rangées de trois broches.
+* Deux paires de **connecteurs type Molex** 2 broches, pour J2 et J3. Ces deux connecteurs sont câblés en parallèle : l’un reçoit le signal de commande de la carte-mère, l’autre peut alimenter une carte indicateur LED (voir :ref:`carte-indicateur`). Sur chacun, la broche 1 est la masse et la broche 2 le signal (+).
 * Un **isolant** qui assure à la fois l’isolation électrique et la conduction thermique.
 * Un **triac** BTA41-600B (Q1, boîtier TO-218).
 * Un **connecteur de puissance** (J1, Phoenix Contact MSTBVA 2,5 au pas de 5,08 mm) à trois broches, la broche centrale étant inutilisée.
@@ -102,7 +102,7 @@ Pour les cartes de sortie, nous allons procéder dans cet ordre :
 
 #. agrafes en cuivre massif
 #. résistances
-#. support :term:`optocoupleur <Optocoupleur>`
+#. support :term:`optocoupleur <Optocoupleur>`
 #. broche centrale du connecteur de puissance (pour le maintenir)
 #. connecteurs Molex
 #. autres broches du connecteur de puissance
@@ -169,7 +169,7 @@ Avant de mettre sous tension, vérifiez (loupe recommandée) :
 
 ☐ Remplissage complet du trou traversant
 
-☐ Soudure visible des DEUX côtés du :term:`PCB`
+☐ Soudure visible des DEUX côtés du :term:`PCB`
 
 ☐ Pas de micro-fissures
 
@@ -184,7 +184,7 @@ Installation des *agrafes* en cuivre massif
 
 La première étape du montage consiste à installer des *agrafes* en cuivre pur pour augmenter la capacité de la carte à supporter des courants forts.
 
-Il est recommandé d’utiliser du cuivre d’une section transversale de 1,5 mm², compte tenu de la courte distance entre le :term:`triac <Triac>` et le connecteur de puissance.
+Il est recommandé d’utiliser du cuivre d’une section transversale de 1,5 mm², compte tenu de la courte distance entre le :term:`triac <Triac>` et le connecteur de puissance.
 
 Les emplacements pour ces agrafes sont marqués sur le circuit imprimé par des lignes épaisses sur la couche de sérigraphie, avec un espacement d’environ 7 mm entre les trous.
 
@@ -192,7 +192,7 @@ Pour installer les agrafes, commencez par plier le fil de cuivre afin qu’il tr
 
 Puis, pliez les extrémités vers l’extérieur et pressez-les fermement contre la face inférieure du circuit imprimé. L’utilisation d’une pince multiprise facilitera cette tâche, tout en prenant soin de ne pas abîmer le circuit.
 
-Sous la carte, chaque agrafe relie une pastille du connecteur de puissance à une pastille du :term:`triac <Triac>`. Une fois les agrafes correctement mises en place, coupez les quatre extrémités au niveau de ces pastilles : elles y seront soudées avec la patte du composant.
+Sous la carte, chaque agrafe relie une pastille du connecteur de puissance à une pastille du :term:`triac <Triac>`. Une fois les agrafes correctement mises en place, coupez les quatre extrémités au niveau de ces pastilles : elles y seront soudées avec la patte du composant.
 
 .. figure:: ../img/Pose-agrafes.jpg
    :alt: Vue dessus/dessous, agrafes posées
@@ -206,28 +206,28 @@ Sous la carte, chaque agrafe relie une pastille du connecteur de puissance à un
    Avant de continuer, vérifiez :
 
    | ☐ Agrafes en cuivre massif 1,5 mm² correctement installées
-   | ☐ Extrémités pliées fermement contre le :term:`PCB`
+   | ☐ Extrémités pliées fermement contre le :term:`PCB`
    | ☐ Longueur des extrémités coupée correctement
    | ☐ Pas de court-circuit avec les pistes adjacentes
    | ☐ Agrafes bien fixées et stables
 
 
-Installation des composants de faible puissance, support :term:`DIL`
+Installation des composants de faible puissance, support :term:`DIL`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Une fois les agrafes de cuivre mises en place, il est temps d’installer les composants qui nécessitent peu de puissance.
 
 Selon le plan du circuit :
 
-* La résistance **R1** doit être de **220 Ω** si la carte-mère fonctionne en **3,3 V** (réglage d’usine du cavalier V sel., voir :ref:`cavaliers`), ou de **390 Ω** si elle fonctionne en **5 V**.
+* La résistance **R1** doit être de **220 Ω** si la carte-mère fonctionne en **3,3 V** (réglage d’usine du cavalier V sel., voir :ref:`cavaliers`), ou de **390 Ω** si elle fonctionne en **5 V**.
 * La résistance **R2** doit avoir une valeur de **330 Ω**.
 * La résistance **R3** doit être de **360 Ω**.
 
 .. note::
-   Avec un :term:`optocoupleur <Optocoupleur>` MOC3063M (600 V) à la place du MOC3043M, R2 passe à **360 Ω** ; R1 reste inchangée.
+   Avec un :term:`optocoupleur <Optocoupleur>` MOC3063M (600 V) à la place du MOC3043M, R2 passe à **360 Ω** ; R1 reste inchangée.
 
 .. hint::
-   Pour assurer que le support :term:`DIL` soit correctement fixé et en contact total avec le circuit imprimé, commencez par souder une seule de ses broches.
+   Pour assurer que le support :term:`DIL` soit correctement fixé et en contact total avec le circuit imprimé, commencez par souder une seule de ses broches.
    Ensuite, vérifiez que le support est bien en place et parfaitement aligné avant de procéder à la soudure des cinq broches restantes.
 
 .. figure:: ../img/Soudure-Rs-DIL.jpg
@@ -235,14 +235,14 @@ Selon le plan du circuit :
    :align: center
    :scale: 25%
 
-   Vue dessus/dessous, résistances et support :term:`DIL` soudés
+   Vue dessus/dessous, résistances et support :term:`DIL` soudés
 
 .. admonition:: ✅ Point de Contrôle — Composants Faible Puissance
 
    Avant de continuer, vérifiez :
 
    | ☐ Résistances R1, R2, R3 aux bons emplacements (valeurs correctes pour tension système)
-   | ☐ Support :term:`DIL` bien plaqué contre le :term:`PCB`
+   | ☐ Support :term:`DIL` bien plaqué contre le :term:`PCB`
    | ☐ **Encoche du support DIL** correctement orientée
    | ☐ Toutes les soudures propres et brillantes
    | ☐ Pas de pont de soudure entre les pistes
@@ -276,7 +276,7 @@ Soudure des connecteurs type Molex
    | ☐ Connecteur de puissance broche centrale soudée
    | ☐ Deux connecteurs type Molex soudés
    | ☐ **Détrompeur correctement orienté** (Molex polarisés)
-   | ☐ Connecteurs bien plaqués contre le :term:`PCB`
+   | ☐ Connecteurs bien plaqués contre le :term:`PCB`
    | ☐ Soudures solides et propres
 
 
@@ -360,7 +360,7 @@ Installation de l’:term:`optocoupleur <Optocoupleur>`
 
    Avant le test sous tension, vérifiez :
 
-   | ☐ **Optocoupleur correctement orienté** (repère rouge aligné avec cercle :term:`PCB`)
+   | ☐ **Optocoupleur correctement orienté** (repère rouge aligné avec cercle :term:`PCB`)
    | ☐ Toutes les soudures haute puissance re-vérifiées (connecteur, :term:`triac <Triac>`, agrafes)
    | ☐ Pas de court-circuit visible (inspection visuelle complète)
    | ☐ Pas de flux de soudure résiduel conducteur

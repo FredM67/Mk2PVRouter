@@ -12,18 +12,18 @@ Assemblage — Composants monophasé
 
    Avant de commencer ce chapitre :
 
-   | ☐ Composants communs soudés et vérifiés (voir :ref:`assemblage-carte-mere`)
+   | ☐ Composants communs soudés et vérifiés (voir :ref:`assemblage-carte-mere`)
 
 En configuration monophasée, soudez les composants suivants en plus des composants communs.
 
 .. hint::
-   Soudez de préférence les composants les plus bas en premier : les composants déjà soudés gênent ainsi moins le retournement du :term:`PCB`.
+   Soudez de préférence les composants les plus bas en premier : les composants déjà soudés gênent ainsi moins le retournement du :term:`PCB`.
 
 Composants basse tension
 --------------------------
 
 .. note::
-   Les connecteurs de sorties numériques (D2–D13) sont communs à toutes les configurations et déjà soudés à l’étape précédente (voir :ref:`assemblage-carte-mere`).
+   Les connecteurs de sorties numériques (D2–D13) sont communs à toutes les configurations et déjà soudés à l’étape précédente (voir :ref:`assemblage-carte-mere`).
 
 Connecteurs CT1 (et CT2 optionnel)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,7 +40,7 @@ Résistances de burden (dépannage, CT à sortie courant uniquement)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
-   La carte est conçue pour des CT à sortie tension **333 mV** : avec eux, il n’y a rien à souder ici. Une résistance de :term:`burden <Burden>` n’est qu’une **solution de dépannage**, si vous ne disposez que de CT à sortie courant (par ex. SCT-013-000).
+   La carte est conçue pour des CT à sortie tension **333 mV** : avec eux, il n’y a rien à souder ici. Une résistance de :term:`burden <Burden>` n’est qu’une **solution de dépannage**, si vous ne disposez que de CT à sortie courant (par ex. SCT-013-000).
 
    Un burden mal choisi, ou absent, peut détruire l’entrée :term:`ADC` : lisez d’abord les règles de la section :ref:`types-de-capteurs-de-courant-supportes` (CT à sortie courant).
 
@@ -58,7 +58,7 @@ Composants haute tension
 
 Chaque éclateur GDTx est monté **en série** avec la varistance RVx de même numéro, entre un conducteur et la terre (GDT0 avec RV0 sur le neutre, GDT1 avec RV1 sur L1). Montez-les **toujours par paire GDTx + RVx**, ou pas du tout : l’un sans l’autre ne protège rien.
 
-Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
+Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
 
 #. Soudez **GDT0** et **GDT1**
 
@@ -90,9 +90,9 @@ Protection GM1 et varistances RV0, RV1 (optionnelles)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
-   Les composants GM et RV ont un aspect et un pas de broches très similaires. **Vérifiez la sérigraphie** sur le :term:`PCB` avant de souder chaque composant pour ne pas les intervertir. Si vous n’avez que les GM (sans RV), assurez-vous de les placer sur les emplacements **GM** et non sur les emplacements RV.
+   Les composants GM et RV ont un aspect et un pas de broches très similaires. **Vérifiez la sérigraphie** sur le :term:`PCB` avant de souder chaque composant pour ne pas les intervertir. Si vous n’avez que les GM (sans RV), assurez-vous de les placer sur les emplacements **GM** et non sur les emplacements RV.
 
-La varistance combinée :term:`GDT`\+\ :term:`MOV` pour la protection de la phase L1.
+La varistance combinée :term:`GDT`\+\ :term:`MOV` pour la protection de la phase L1.
 
 #. Soudez le composant **GM1** sur son emplacement (vérifiez la sérigraphie)
 
@@ -105,9 +105,9 @@ Si vous montez les paires optionnelles GDTx + RVx (voir ci-dessus), soudez leurs
 Transformateur de tension TR1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le transformateur :term:`ZMPT101K` pour la mesure de tension de la phase L1.
+Le transformateur :term:`ZMPT101K` pour la mesure de tension de la phase L1.
 
-#. Positionnez **TR1** sur le :term:`PCB`
+#. Positionnez **TR1** sur le :term:`PCB`
 #. Soudez les broches
 
 .. todo:: Photo à fournir — transformateur TR1 soudé.
@@ -126,7 +126,7 @@ Module d’alimentation PS1 (MPC10-5)
 
 Le module d’alimentation AC-DC convertit le 230 VAC en 5 VDC (10 W).
 
-#. Positionnez le module **PS1** sur le :term:`PCB`
+#. Positionnez le module **PS1** sur le :term:`PCB`
 #. Vérifiez l’orientation selon la sérigraphie
 #. Soudez toutes les broches
 
@@ -137,7 +137,7 @@ Self de mode commun FL1
 
 La self de mode commun (Schaffner) filtre les perturbations électromagnétiques sur les lignes secteur.
 
-#. Positionnez **FL1** sur le :term:`PCB`
+#. Positionnez **FL1** sur le :term:`PCB`
 #. Soudez les broches
 
 .. todo:: Photo à fournir — self de mode commun FL1 soudée.
@@ -179,4 +179,4 @@ Avant de passer aux tests électriques, effectuez une inspection minutieuse de t
    | ☐ **Composants orientés** vérifiés (support IC1, module PS1)
    | ☐ **Carte propre** et exempte de débris
 
-Passez ensuite au chapitre :ref:`tests-electriques` pour vérifier le bon fonctionnement de la carte.
+Passez ensuite au chapitre :ref:`tests-electriques` pour vérifier le bon fonctionnement de la carte.

@@ -10,7 +10,7 @@ Présentation de la carte universelle
 
    Avant de commencer ce chapitre :
 
-   | ☐ Chapitre :ref:`safety-overview` lu et compris
+   | ☐ Chapitre :ref:`safety-overview` lu et compris
 
 Vue d’ensemble
 --------------
@@ -19,23 +19,23 @@ La carte **3phaseDiverter** (rév. 6.0) est la carte principale universelle du M
 
 - **Monophasé** : une phase, un neutre (230 V)
 - **Triphasé avec neutre** : trois phases + neutre (400 V / 230 V)
-- **Triphasé 3 × 230 V sans neutre** : trois phases sans neutre, 230 V entre phases (voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`)
+- **Triphasé 3 × 230 V sans neutre** : trois phases sans neutre, 230 V entre phases (voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`)
 
-La sélection de la configuration se fait par les :term:`cavaliers de soudure <Cavalier de soudure>`, le choix des connecteurs et celui des composants traversants montés (voir :ref:`choix-configuration`) — tous les composants CMS sont identiques quelle que soit la configuration.
+La sélection de la configuration se fait par les :term:`cavaliers de soudure <Cavalier de soudure>`, le choix des connecteurs et celui des composants traversants montés (voir :ref:`choix-configuration`) — tous les composants CMS sont identiques quelle que soit la configuration.
 
 Caractéristiques principales
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Microcontrôleur **ATmega328P** (16 MHz, DIP-28)
 - Jusqu’à 3 capteurs de tension (:term:`ZMPT101K`, rapport 1000:1000)
-- Jusqu’à 3 connecteurs de transformateur de courant :term:`CT` (CT1–CT3)
-- Module radio **RFM69CW** (bande ISM 433/868 MHz) avec connecteur :term:`SMA`
+- Jusqu’à 3 connecteurs de transformateur de courant :term:`CT` (CT1–CT3)
+- Module radio **RFM69CW** (bande ISM 433/868 MHz) avec connecteur :term:`SMA`
 - Alimentation AC-DC intégrée (**MPC10-5**, 5 V / 10 W)
-- Régulateur :term:`LDO` **AP7361C-33E** (5 V → 3,3 V, 1 A)
+- Régulateur :term:`LDO` **AP7361C-33E** (5 V → 3,3 V, 1 A)
 - Protection parafoudre multiniveau (:term:`GDT`, fusibles, :term:`MOV`, self de mode commun)
 - Buffer de la référence interne 1,1 V (AREF) par amplificateur opérationnel **LMV321A**
 - Connecteurs d’extension : **TRIG_EXT**, **UART_EXT**, **FTDI**, **OLED**
-- Compatible avec le module d’extension :term:`mk2Wifi`
+- Compatible avec le module d’extension :term:`mk2Wifi`
 
 Images de la carte
 ------------------
@@ -58,7 +58,7 @@ Images de la carte
    :widths: 50 50
    :header-rows: 1
 
-   * - Composants :term:`CMS` uniquement
+   * - Composants :term:`CMS` uniquement
      - Circuit imprimé nu
    * - .. figure:: ../img/mainboard-smd.png
           :alt: Carte universelle — composants CMS
@@ -95,20 +95,20 @@ Connecteurs
      - Écran I2C (monophasé uniquement)
    * - SMA
      - :term:`SMA` vertical (50 Ω)
-     - Antenne module :term:`RF`
+     - Antenne module :term:`RF`
    * - CT1
      - Molex SL 1×02 (pas 2,54 mm)
-     - Entrée :term:`CT` L1
+     - Entrée :term:`CT` L1
    * - CT2
      - Molex SL 1×02 (pas 2,54 mm)
-     - Entrée :term:`CT` L2 en triphasé ; CT de diversion (optionnel) en monophasé
+     - Entrée :term:`CT` L2 en triphasé ; CT de diversion (optionnel) en monophasé
    * - CT3
      - Molex SL 1×02 (pas 2,54 mm)
-     - Entrée :term:`CT` L3 (triphasé uniquement)
+     - Entrée :term:`CT` L3 (triphasé uniquement)
    * - D2 à D13
      - | Molex SL 1×02 (GND, I/O) +
        | Molex SL 1×03 (GND, I/O, +5 V) par sortie
-     - Sorties numériques — voir :ref:`sorties-numeriques`
+     - Sorties numériques — voir :ref:`sorties-numeriques`
 
 Brochage des connecteurs
 -------------------------
@@ -224,7 +224,7 @@ OLED — Écran I2C (1×4 Molex SL)
      - SDA
 
 .. important::
-   Le bus I2C est partagé sur les broches A4 (SDA) et A5 (SCL) de l’ATmega328P. En mode triphasé, ces broches sont affectées à la mesure de tension/courant L3 — l’écran OLED n’est alors **pas disponible**. Le choix est effectué par les cavaliers **SDA** et **SCL** (voir :ref:`cavaliers`).
+   Le bus I2C est partagé sur les broches A4 (SDA) et A5 (SCL) de l’ATmega328P. En mode triphasé, ces broches sont affectées à la mesure de tension/courant L3 — l’écran OLED n’est alors **pas disponible**. Le choix est effectué par les cavaliers **SDA** et **SCL** (voir :ref:`cavaliers`).
 
 CT1 / CT2 / CT3 — Transformateurs de courant (1×2 Molex SL)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -261,7 +261,7 @@ Le connecteur **1×03** (GND, I/O, +5 V) sert aux **cartes de sortie relais**, 
    * - Sortie
      - Remarques
    * - D2\*
-     - Réservée au module :term:`RF` (IRQ). Libre si le module RF n’est pas soudé.
+     - Réservée au module :term:`RF` (IRQ). Libre si le module RF n’est pas soudé.
    * - D3
      - Capteur DS18B20 (si cavalier TEMP en position routeur). Libre si TEMP en position mk2Wifi.
    * - D4
@@ -269,13 +269,13 @@ Le connecteur **1×03** (GND, I/O, +5 V) sert aux **cartes de sortie relais**, 
    * - D5#–D9#
      - Broches du routeur reliées au connecteur TRIG_EXT, marquées d’un **dièse (#)** sur la sérigraphie car partagées avec le module :term:`mk2Wifi`. Par défaut, les charges sont sur D5–D7 en triphasé (D5 en monophasé) ; le mk2Wifi peut piloter les autres comme entrées du routeur (marche forcée, arrêt du routage…), voir :ref:`presentation-mk2wifi`. Utilisées par le mk2Wifi si celui-ci est présent et que le cavalier correspondant est fermé (voir ci-dessous). Libres sinon.
    * - D10\*
-     - SPI SS — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
+     - SPI SS — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
    * - D11\*
-     - SPI MOSI — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
+     - SPI MOSI — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
    * - D12\*
-     - SPI MISO — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
+     - SPI MISO — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
    * - D13\*
-     - SPI SCK — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
+     - SPI SCK — réservée au module :term:`RF`. Libre si le module RF n’est pas soudé.
 
 Les sorties marquées d’un **astérisque (\*)** sur la sérigraphie sont réservées au module RF (RFM69CW) lorsqu’il est soudé. Les sorties marquées d’un **dièse (#)** sont partagées avec le module :term:`mk2Wifi` (voir ci-dessous). Si le module concerné n’est pas présent, ces sorties sont librement utilisables.
 
@@ -292,48 +292,48 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
    - côté primaire (le câble mesuré) : **P1** / **P2** (ou **K** / **L**), la flèche allant de P1 vers P2 ;
    - côté secondaire (les fils vers la carte) : **S1** / **S2** (ou **k** / **l**). S1 est la borne positive quand le courant primaire entre par P1.
 
-   Ces marquages sont importants lors du raccordement aux connecteurs CT de la carte (voir :ref:`installation-finale`).
+   Ces marquages sont importants lors du raccordement aux connecteurs CT de la carte (voir :ref:`installation-finale`).
 
-**CT à sortie tension (333 mV)** — recommandé
-   Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de :term:`burden <Burden>`. Le signal de tension est directement compatible avec l’entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n’est nécessaire** sur la carte.
+**CT à sortie tension (333 mV)** — recommandé
+   Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de :term:`burden <Burden>`. Le signal de tension est directement compatible avec l’entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n’est nécessaire** sur la carte.
 
    C’est le type de CT recommandé pour la carte universelle.
 
 **CT à sortie courant** — solution de dépannage, avec burden THT
-   La carte est conçue pour des CT à sortie tension 333 mV. Un CT à sortie courant avec sa résistance de :term:`burden <Burden>` n’est qu’une solution de dépannage, par exemple en attendant des CT 333 mV.
+   La carte est conçue pour des CT à sortie tension 333 mV. Un CT à sortie courant avec sa résistance de :term:`burden <Burden>` n’est qu’une solution de dépannage, par exemple en attendant des CT 333 mV.
 
-   Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden <Burden>` soudée sur la carte, une par connecteur CT1 / CT2 / CT3 (R18 / R28 / R38 sur le schéma).
+   Les capteurs à sortie courant (par ex. YHDC SCT-013-000, 100 A / 50 mA) délivrent un courant proportionnel au courant mesuré. Ce courant doit être converti en tension par une résistance de :term:`burden <Burden>` soudée sur la carte, une par connecteur CT1 / CT2 / CT3 (R18 / R28 / R38 sur le schéma).
 
    Elle n’a pas d’empreinte propre : elle partage celle de la diode :term:`TVS` :term:`CMS` de protection **D13** / **D23** / **D33**, déjà soudée en usine, qui protège l’entrée de l’:term:`ADC` si un CT à sortie courant est branché sans burden. Cette empreinte double comporte, en plus des pastilles CMS de la diode, **deux trous traversants** au pas de 12,7 mm reliés aux mêmes signaux : la résistance s’y soude, **par-dessus** la diode, qui reste en place.
 
-   La valeur du burden doit être calculée pour que la tension crête ne dépasse pas **0,55 V** (soit la moitié de la plage :term:`ADC` avec VREF = 1,1 V) :
+   La valeur du burden doit être calculée pour que la tension crête ne dépasse pas **0,55 V** (soit la moitié de la plage :term:`ADC` avec VREF = 1,1 V) :
 
    .. math::
 
       R_{burden} = \frac{V_{REF}}{2 \times \sqrt{2} \times I_{secondaire\_RMS}} = \frac{0{,}55}{I_{secondaire\_crête}}
 
-   Où :math:`I_{secondaire\_RMS} = I_{primaire\_RMS} / N` (N = rapport de transformation du CT).
+   Où :math:`I_{secondaire\_RMS} = I_{primaire\_RMS} / N` (N = rapport de transformation du CT).
 
    **Puissance** : la résistance dissipe :math:`P = I_{secondaire\_RMS}^2 \times R_{burden}`. Faites le calcul avec le courant secondaire **nominal** du CT : c’est le pire cas.
 
    **Précision** : prenez une résistance à couche métallique à 1 %. Avec 5 %, la mesure est fausse d’autant, et seul l’étalonnage le rattrape.
 
-   **Exemple complet** : le CT le plus courant, le YHDC SCT-013-000 (100 A / 50 mA), sur un câble de 50 A au maximum.
+   **Exemple complet** : le CT le plus courant, le YHDC SCT-013-000 (100 A / 50 mA), sur un câble de 50 A au maximum.
 
    #. Rapport de transformation : :math:`N = 100 / 0{,}05 = 2000`.
-   #. Courant secondaire à 50 A : :math:`I_{sec} = 50 / 2000 = 25\,\text{mA RMS}`.
-   #. Burden : :math:`R_{burden} = \frac{1{,}1 \times 2000}{2 \times \sqrt{2} \times 50} \approx 15{,}6\,\Omega`. La valeur normalisée immédiatement inférieure est **15 Ω**.
-   #. Vérification : à 50 A, la tension crête vaut :math:`0{,}025 \times \sqrt{2} \times 15 \approx 0{,}53\,\text{V}`, sous la limite de 0,55 V. Avec 15 Ω, le courant mesurable va jusqu’à 51,9 A environ.
-   #. Puissance : à 50 A, :math:`0{,}025^2 \times 15 \approx 9\,\text{mW}` ; au courant nominal du CT (100 A, 50 mA), :math:`0{,}05^2 \times 15 \approx 38\,\text{mW}`. Une résistance de **0,25 W** suffit largement (l’emplacement, au pas de 12,7 mm, accepte aussi une 0,5 W).
+   #. Courant secondaire à 50 A : :math:`I_{sec} = 50 / 2000 = 25\,\text{mA RMS}`.
+   #. Burden : :math:`R_{burden} = \frac{1{,}1 \times 2000}{2 \times \sqrt{2} \times 50} \approx 15{,}6\,\Omega`. La valeur normalisée immédiatement inférieure est **15 Ω**.
+   #. Vérification : à 50 A, la tension crête vaut :math:`0{,}025 \times \sqrt{2} \times 15 \approx 0{,}53\,\text{V}`, sous la limite de 0,55 V. Avec 15 Ω, le courant mesurable va jusqu’à 51,9 A environ.
+   #. Puissance : à 50 A, :math:`0{,}025^2 \times 15 \approx 9\,\text{mW}` ; au courant nominal du CT (100 A, 50 mA), :math:`0{,}05^2 \times 15 \approx 38\,\text{mW}`. Une résistance de **0,25 W** suffit largement (l’emplacement, au pas de 12,7 mm, accepte aussi une 0,5 W).
 
-   Retenez la limite de ce choix : si le courant dépassait nettement 50 A, la tension crête dépasserait 0,55 V (1,06 V à 100 A). D’où la règle : dimensionner le burden pour le courant **maximal** du câble.
+   Retenez la limite de ce choix : si le courant dépassait nettement 50 A, la tension crête dépasserait 0,55 V (1,06 V à 100 A). D’où la règle : dimensionner le burden pour le courant **maximal** du câble.
 
    .. danger::
       **Un burden mal choisi peut détruire l’entrée ADC.**
 
       Un CT à sortie courant impose son courant : c’est la résistance de burden qui fixe la tension envoyée vers l’ATmega328P (:math:`V = R_{burden} \times I_{secondaire}`).
 
-      - **Valeur trop forte**, ou courant plus fort que prévu : la tension crête dépasse 0,55 V. Le signal est d’abord écrêté (mesures fausses), puis l’entrée de l’ATmega328P est poussée hors de ses limites. La diode :term:`TVS` limite la surtension, mais le microcontrôleur peut quand même être endommagé.
+      - **Valeur trop forte**, ou courant plus fort que prévu : la tension crête dépasse 0,55 V. Le signal est d’abord écrêté (mesures fausses), puis l’entrée de l’ATmega328P est poussée hors de ses limites. La diode :term:`TVS` limite la surtension, mais le microcontrôleur peut quand même être endommagé.
       - **Pas de burden** : le secondaire du CT est presque ouvert et sa tension monte très haut. La TVS n’est pas faite pour absorber ce courant en permanence : elle peut griller, l’entrée ADC avec elle, et la tension est dangereuse au toucher.
 
       Pour l’éviter :
@@ -431,7 +431,7 @@ La carte intègre plusieurs niveaux de protection contre les surtensions transit
 
 **Niveau 1 — Modules de protection GM1–GM3** (obligatoire)
 
-Chaque phase est protégée par un module combiné :term:`GDT`\+\ :term:`MOV`. Ces modules constituent la protection principale des circuits de mesure. GM1 protège la phase L1, GM2 la phase L2, GM3 la phase L3 (triphasé avec neutre uniquement).
+Chaque phase est protégée par un module combiné :term:`GDT`\+\ :term:`MOV`. Ces modules constituent la protection principale des circuits de mesure. GM1 protège la phase L1, GM2 la phase L2, GM3 la phase L3 (triphasé avec neutre uniquement).
 
 **Niveau 2 — Fusibles FS0–FS3** (obligatoire)
 
@@ -439,7 +439,7 @@ Les fusibles protègent l’installation contre les surintensités. Ils sont dim
 
 **Niveau 3 — Varistances RV0–RV3 et éclateurs GDT0–GDT3** (optionnel)
 
-Ce niveau de protection supplémentaire est recommandé pour les installations exposées aux surtensions (zones rurales, lignes aériennes, régions à forte activité orageuse). Chaque varistance :term:`MOV` RVx est montée **en série** avec l’éclateur :term:`GDT` de même numéro (GDTx), après les fusibles, entre un conducteur et la terre : RV0 + GDT0 sur le neutre, RV1 + GDT1 sur L1, RV2 + GDT2 sur L2, RV3 + GDT3 sur L3. Alors que GM1–GM3 protègent entre phase et neutre, ces paires protègent entre les conducteurs et la terre.
+Ce niveau de protection supplémentaire est recommandé pour les installations exposées aux surtensions (zones rurales, lignes aériennes, régions à forte activité orageuse). Chaque varistance :term:`MOV` RVx est montée **en série** avec l’éclateur :term:`GDT` de même numéro (GDTx), après les fusibles, entre un conducteur et la terre : RV0 + GDT0 sur le neutre, RV1 + GDT1 sur L1, RV2 + GDT2 sur L2, RV3 + GDT3 sur L3. Alors que GM1–GM3 protègent entre phase et neutre, ces paires protègent entre les conducteurs et la terre.
 
 .. note::
    Les composants optionnels (RV0–RV3, GDT0–GDT3) ne sont pas fournis dans le kit de base. Ils peuvent être ajoutés ultérieurement sans modifier le reste du circuit, mais **toujours par paire RVx + GDTx** : montés en série, l’un sans l’autre n’a aucun effet.
@@ -456,7 +456,7 @@ Rails d’alimentation
      - Usage
    * - +5 V
      - 5 V
-     - Entrée du régulateur U1, connecteur UART_EXT (broche 3), connecteurs DS18B20 et broche +5 V des sorties numériques (via cavalier « +5V Rail »). La broche VCC du connecteur FTDI n’est pas reliée.
+     - Entrée du régulateur U1, connecteur UART_EXT (broche 3), connecteurs DS18B20 et broche +5 V des sorties numériques (via cavalier « +5V Rail »). La broche VCC du connecteur FTDI n’est pas reliée.
    * - +3,3 V
      - 3,3 V
      - ATmega328P, module RFM69CW
@@ -482,12 +482,12 @@ Le cavalier de soudure **« +5V Rail »** (situé en haut à droite de la cart
 - **Ouvert** (défaut) : le rail +5 V est déconnecté des connecteurs de sortie
 
 .. warning::
-   Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie :term:`triac <Triac>` n’ont pas besoin de cette alimentation.
+   Ne fermez ce cavalier que si vous utilisez des cartes de sortie relais. Les cartes de sortie :term:`triac <Triac>` n’ont pas besoin de cette alimentation.
 
 LED témoins
 ~~~~~~~~~~~~~~
 
-Deux LED témoins :term:`CMS` sont situées en haut à gauche de la carte :
+Deux LED témoins :term:`CMS` sont situées en haut à gauche de la carte :
 
 - **ON** : allumée lorsque la carte est sous tension
 - **+5V** : allumée lorsque le rail +5 V des sorties est actif (cavalier « +5V Rail » fermé)
@@ -495,7 +495,7 @@ Deux LED témoins :term:`CMS` sont situées en haut à gauche de la carte :
 Intégration du module mk2Wifi
 ------------------------------
 
-La carte principale est conçue pour accueillir le module d’extension :term:`mk2Wifi` via les connecteurs TRIG_EXT et UART_EXT. La zone réservée au module est repérée par un **rectangle hachuré** sur la sérigraphie de la face avant, autour des connecteurs concernés.
+La carte principale est conçue pour accueillir le module d’extension :term:`mk2Wifi` via les connecteurs TRIG_EXT et UART_EXT. La zone réservée au module est repérée par un **rectangle hachuré** sur la sérigraphie de la face avant, autour des connecteurs concernés.
 
 Signaux échangés :
 
@@ -511,7 +511,7 @@ La zone hachurée sur la sérigraphie indique les connecteurs de sortie (D5#–D
 .. warning::
    Si vous utilisez une sortie D5–D9 pour un étage de sortie alors que le module mk2Wifi est branché :
 
-   - N’activez sur le mk2Wifi **que les cavaliers** (D5–D9) correspondant aux sorties réellement gérées par l’ESP32 (voir :ref:`presentation-mk2wifi`)
+   - N’activez sur le mk2Wifi **que les cavaliers** (D5–D9) correspondant aux sorties réellement gérées par l’ESP32 (voir :ref:`presentation-mk2wifi`)
    - **Ne jamais utiliser une même broche** à la fois par le mk2Wifi et par un autre périphérique — cela créerait un conflit de bus pouvant endommager les composants
 
 .. |br| raw:: html

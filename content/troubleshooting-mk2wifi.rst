@@ -5,7 +5,7 @@
 ======================================
 
 .. note::
-   Les premières sections de cette page concernent uniquement les kits équipés du module d’extension :term:`mk2Wifi` (ESP32-C6). Les sections « Obtenir de l’aide », « Annexe — Outils de diagnostic essentiels » et « Conclusion » valent pour tout le routeur.
+   Les premières sections de cette page concernent uniquement les kits équipés du module d’extension :term:`mk2Wifi` (ESP32-C6). Les sections « Obtenir de l’aide », « Annexe — Outils de diagnostic essentiels » et « Conclusion » valent pour tout le routeur.
 
 Le module ne s’allume pas
 -------------------------
@@ -37,7 +37,7 @@ Le module ne s’allume pas
 
       - V sel. ne coupe pas l’alimentation du module : son régulateur est alimenté par le +5 V de UART_EXT broche 3
       - Mais en position 5 V, les lignes UART et D5–D9 arrivent en 5 V sur l’ESP32-C6, qui peut avoir été endommagé : remettre V sel. en position 3,3 V avant tout nouvel essai
-      - Voir :ref:`cavaliers`
+      - Voir :ref:`cavaliers`
 
 Programmation USB-C impossible
 ------------------------------
@@ -187,7 +187,7 @@ Capteur DS18B20 — pas de température
 
       - En position **3–centre** : le DS18B20 est géré par le mk2Wifi (ESP32-C6). La mesure de température doit alors être désactivée dans le ``config.h`` du routeur (``TEMP_SENSOR_PRESENT`` à ``false``) et le bus déclaré dans le YAML (``one_wire`` sur GPIO23, écrit par le configurateur)
       - En position **1–centre** : le DS18B20 est géré par la carte principale (ATmega328P, broche D3)
-      - Voir :ref:`cavaliers`
+      - Voir :ref:`cavaliers`
 
    #. ☐ **Capteur correctement branché ?**
 

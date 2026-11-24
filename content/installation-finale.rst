@@ -3,23 +3,23 @@
 Installation Finale dans le Système Électrique
 ===============================================
 
-⚠️⚠️⚠️ **DANGER DE MORT — HAUTE TENSION 230 V AC** ⚠️⚠️⚠️
+⚠️⚠️⚠️ **DANGER DE MORT — HAUTE TENSION 230 V AC** ⚠️⚠️⚠️
 
 Cette section décrit la connexion du Mk2PVRouter au réseau électrique de votre habitation.
 
 **Cette opération présente des RISQUES MORTELS par électrocution.**
 
 .. danger::
-   ⚡ **TENSION MORTELLE 230 V AC, 400 V AC en triphasé** ⚡
+   ⚡ **TENSION MORTELLE 230 V AC, 400 V AC en triphasé** ⚡
 
-   Le contact avec des conducteurs sous tension peut provoquer :
+   Le contact avec des conducteurs sous tension peut provoquer :
 
    - **Décès par électrocution** (arrêt cardiaque, brûlures internes)
    - **Brûlures graves** (arc électrique : plusieurs milliers de °C)
    - **Incendie** (court-circuit, mauvaise connexion)
-   - **Explosion** (défaut d'isolation)
+   - **Explosion** (défaut d’isolation)
 
-   **Un seul instant d'inattention peut être FATAL.**
+   **Un seul instant d’inattention peut être FATAL.**
 
 Exigences Légales en France
 ----------------------------
@@ -49,7 +49,7 @@ Recommandation Forte
 .. important::
    🔴 **NOUS RECOMMANDONS VIVEMENT de faire appel à un électricien certifié**
 
-   **Pourquoi ?**
+   **Pourquoi ?**
 
    - Connaissance des normes en vigueur
    - Expérience des installations haute puissance
@@ -57,7 +57,7 @@ Recommandation Forte
    - Assurance responsabilité civile professionnelle
    - Attestation de conformité pour votre assurance
 
-   **Coût estimé :** 200–500 € pour l'installation complète
+   **Coût estimé :** 200–500 € pour l’installation complète
 
    **Ce coût est DÉRISOIRE comparé aux risques encourus.**
 
@@ -66,7 +66,7 @@ Prérequis Avant Installation
 
 .. admonition:: 📋 Vérifications Obligatoires
 
-   Avant TOUTE manipulation :
+   Avant TOUTE manipulation :
 
    ☐ **Mk2PVRouter complètement assemblé et testé**
 
@@ -88,9 +88,9 @@ Prérequis Avant Installation
       - Tester le VAT sur une source sous tension connue **avant** et **après** la vérification
       - Vérifier entre tous les conducteurs : phase–neutre, phase–terre, neutre–terre, et entre phases en triphasé
 
-   ☐ **Personne qualifiée présente** (si vous n'êtes pas électricien)
+   ☐ **Personne qualifiée présente** (si vous n’êtes pas électricien)
 
-      - En cas d'accident, quelqu'un doit pouvoir intervenir
+      - En cas d’accident, quelqu’un doit pouvoir intervenir
       - Connaissance des gestes de premiers secours recommandée
 
    ☐ **Téléphone à portée de main** pour appeler les secours (15, 18 ou 112)
@@ -118,7 +118,7 @@ Matériel de Sécurité Requis
 
 ☐ **VAT** (vérificateur d’absence de tension) bipolaire, à contact, conforme NF EN 61243-3. Un détecteur de tension sans contact peut compléter le VAT, jamais le remplacer : il ne prouve pas l’absence de tension.
 
-☐ **Tournevis isolés** 1 000 V
+☐ **Tournevis isolés** 1 000 V
 
 ☐ **Pince à dénuder isolée**
 

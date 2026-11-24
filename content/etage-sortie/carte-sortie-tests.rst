@@ -11,11 +11,11 @@ Les conseils suivants sont destinés aux situations où un étage de sortie doit
 .. danger::
    **Avertissement de Sécurité**
 
-   Pour vérifier le bon fonctionnement du déclencheur et du :term:`triac <Triac>`, un accès à la tension du réseau électrique **230 V** CA est nécessaire.
+   Pour vérifier le bon fonctionnement du déclencheur et du :term:`triac <Triac>`, un accès à la tension du réseau électrique **230 V** CA est nécessaire.
 
    Faites preuve de la plus grande prudence et n’entamez cette étape que si vous avez les compétences nécessaires pour le faire en toute sécurité.
 
-Lors du test d’une carte de sortie, il est important que le :term:`triac <Triac>` fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit :term:`optocoupleur <Optocoupleur>` et un ou plusieurs composants seront alors détruits immédiatement.
+Lors du test d’une carte de sortie, il est important que le :term:`triac <Triac>` fasse partie du circuit électrique, sinon tout le courant de charge passera par le circuit :term:`optocoupleur <Optocoupleur>` et un ou plusieurs composants seront alors détruits immédiatement.
 
 En tenant dûment compte de l’avertissement de sécurité ci-dessus, l’approche simple illustrée ci-dessous devrait convenir pour tester des cartes individuelles.
 
@@ -174,7 +174,7 @@ Procédure de Test Complète
 
 #. **Montage du banc de test**
 
-   ☐ Câbler la lampe **en série** avec le :term:`triac <Triac>` : phase → une borne extérieure du connecteur de puissance ; l’autre borne extérieure → lampe → neutre. La borne centrale n’est pas utilisée. Ne jamais brancher la lampe en parallèle sur le connecteur de puissance.
+   ☐ Câbler la lampe **en série** avec le :term:`triac <Triac>` : phase → une borne extérieure du connecteur de puissance ; l’autre borne extérieure → lampe → neutre. La borne centrale n’est pas utilisée. Ne jamais brancher la lampe en parallèle sur le connecteur de puissance.
 
    ☐ Connecter Arduino pin 9 → broche 2 du connecteur Molex (signal, +, repérée « + » sur la sérigraphie)
 
@@ -209,10 +209,10 @@ Procédure de Test Complète
 
    ❌ Si 0 V en permanence : vérifier le câble (broche 2 = signal), les soudures, l’orientation de l’optocoupleur et R1
 
-   Si vous disposez d’une carte indicateur LED (voir :ref:`carte-indicateur`), branchez-la sur le second connecteur Molex : elle doit s’allumer au rythme du programme. Cela vérifie le signal, pas l’optocoupleur.
+   Si vous disposez d’une carte indicateur LED (voir :ref:`carte-indicateur`), branchez-la sur le second connecteur Molex : elle doit s’allumer au rythme du programme. Cela vérifie le signal, pas l’optocoupleur.
 
    .. note::
-      Sans secteur, le côté haute tension (sortie de l’optocoupleur, R2, R3, :term:`triac <Triac>`) ne peut pas être testé : l’optocoupleur MOC3043M ne déclenche le triac qu’au passage par zéro de la tension secteur, et la tension aux bornes du triac reste nulle. Ce côté est testé à l’étape 3.
+      Sans secteur, le côté haute tension (sortie de l’optocoupleur, R2, R3, :term:`triac <Triac>`) ne peut pas être testé : l’optocoupleur MOC3043M ne déclenche le triac qu’au passage par zéro de la tension secteur, et la tension aux bornes du triac reste nulle. Ce côté est testé à l’étape 3.
 
 Étape 3 : Premier Test Sous Tension 230 V
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -269,7 +269,7 @@ Procédure de Test Complète
 Si le test précédent a réussi, vous pouvez tester avec une charge plus importante.
 
 .. warning::
-   Au-delà d’une lampe de 100 W, le :term:`triac <Triac>` **doit être monté sur son dissipateur**, avec l’isolant, exactement comme dans le boîtier. Sans dissipateur, un triac traversé par quelques ampères chauffe en quelques minutes bien au-delà de sa température maximale et se détruit. Sans dissipateur, limitez-vous à la lampe de l’étape 3.
+   Au-delà d’une lampe de 100 W, le :term:`triac <Triac>` **doit être monté sur son dissipateur**, avec l’isolant, exactement comme dans le boîtier. Sans dissipateur, un triac traversé par quelques ampères chauffe en quelques minutes bien au-delà de sa température maximale et se détruit. Sans dissipateur, limitez-vous à la lampe de l’étape 3.
 
 #. **Couper l’alimentation secteur**, puis remplacer la lampe par une charge plus importante (radiateur 500–1 000 W), triac monté sur son dissipateur
 
@@ -315,7 +315,7 @@ Carte Défectueuse
 
 ☒ Lampe ne s’allume jamais
 
-   **Diagnostic** : Circuit :term:`optocoupleur <Optocoupleur>` défectueux ou :term:`triac <Triac>` ouvert
+   **Diagnostic** : Circuit :term:`optocoupleur <Optocoupleur>` défectueux ou :term:`triac <Triac>` ouvert
 
    **Action** : Vérifier optocoupleur (sens, soudures), vérifier résistances R1-R3
 

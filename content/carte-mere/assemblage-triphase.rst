@@ -12,18 +12,18 @@ Assemblage — Composants triphasé
 
    Avant de commencer ce chapitre :
 
-   | ☐ Composants communs soudés et vérifiés (voir :ref:`assemblage-carte-mere`)
+   | ☐ Composants communs soudés et vérifiés (voir :ref:`assemblage-carte-mere`)
 
 En configuration triphasée (avec neutre, ou 3 × 230 V sans neutre), soudez les composants suivants en plus des composants communs.
 
 .. hint::
-   Soudez de préférence les composants les plus bas en premier : les composants déjà soudés gênent ainsi moins le retournement du :term:`PCB`.
+   Soudez de préférence les composants les plus bas en premier : les composants déjà soudés gênent ainsi moins le retournement du :term:`PCB`.
 
 Composants basse tension
 --------------------------
 
 .. note::
-   Les connecteurs de sorties numériques (D2–D13) sont communs à toutes les configurations et déjà soudés à l’étape précédente (voir :ref:`assemblage-carte-mere`).
+   Les connecteurs de sorties numériques (D2–D13) sont communs à toutes les configurations et déjà soudés à l’étape précédente (voir :ref:`assemblage-carte-mere`).
 
 Connecteurs CT1–CT3
 ~~~~~~~~~~~~~~~~~~~~
@@ -39,7 +39,7 @@ Résistances de burden (dépannage, CT à sortie courant uniquement)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
-   La carte est conçue pour des CT à sortie tension **333 mV** : avec eux, il n’y a rien à souder ici. Une résistance de :term:`burden <Burden>` n’est qu’une **solution de dépannage**, si vous ne disposez que de CT à sortie courant (par ex. SCT-013-000).
+   La carte est conçue pour des CT à sortie tension **333 mV** : avec eux, il n’y a rien à souder ici. Une résistance de :term:`burden <Burden>` n’est qu’une **solution de dépannage**, si vous ne disposez que de CT à sortie courant (par ex. SCT-013-000).
 
    Un burden mal choisi, ou absent, peut détruire l’entrée :term:`ADC` : lisez d’abord les règles de la section :ref:`types-de-capteurs-de-courant-supportes` (CT à sortie courant).
 
@@ -49,7 +49,7 @@ Résistances de burden (dépannage, CT à sortie courant uniquement)
 .. note::
    En configuration **3 × 230 V sans neutre**, la borne L3 n’est pas raccordée : FS3, GM3, RV3, GDT3, TR3 et CT3 ne servent pas.
 
-   Seuls les CT1 et CT2 sont utilisés : l’une des phases sert de référence et n’a pas besoin de capteur (:term:`théorème de Blondel <Théorème de Blondel>`, voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`).
+   Seuls les CT1 et CT2 sont utilisés : l’une des phases sert de référence et n’a pas besoin de capteur (:term:`théorème de Blondel <Théorème de Blondel>`, voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`).
 
 Composants haute tension
 --------------------------
@@ -62,7 +62,7 @@ Composants haute tension
 
 Chaque éclateur GDTx est monté **en série** avec la varistance RVx de même numéro, entre un conducteur et la terre (GDT0 avec RV0 sur le neutre, GDT1 avec RV1 sur L1, GDT2 avec RV2 sur L2, GDT3 avec RV3 sur L3). Montez-les **toujours par paire GDTx + RVx**, ou pas du tout : l’un sans l’autre ne protège rien.
 
-Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
+Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
 
 #. Soudez **GDT0**, **GDT1**, **GDT2**, et **GDT3** en triphasé avec neutre uniquement
 
@@ -94,9 +94,9 @@ Protection GM1–GM3 et varistances RV0–RV3 (optionnelles)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
-   Les composants GM et RV ont un aspect et un pas de broches très similaires. **Vérifiez la sérigraphie** sur le :term:`PCB` avant de souder chaque composant pour ne pas les intervertir. Si vous n’avez que les GM (sans RV), assurez-vous de les placer sur les emplacements **GM** et non sur les emplacements RV.
+   Les composants GM et RV ont un aspect et un pas de broches très similaires. **Vérifiez la sérigraphie** sur le :term:`PCB` avant de souder chaque composant pour ne pas les intervertir. Si vous n’avez que les GM (sans RV), assurez-vous de les placer sur les emplacements **GM** et non sur les emplacements RV.
 
-Les varistances combinées :term:`GDT`\+\ :term:`MOV` pour la protection de chaque phase.
+Les varistances combinées :term:`GDT`\+\ :term:`MOV` pour la protection de chaque phase.
 
 #. Soudez les composants **GM1**, **GM2** sur leurs emplacements respectifs (vérifiez la sérigraphie)
 #. Soudez **GM3** — **triphasé avec neutre uniquement**
@@ -110,7 +110,7 @@ Si vous montez les paires optionnelles GDTx + RVx (voir ci-dessus), soudez leurs
 Transformateurs de tension TR1–TR3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les transformateurs :term:`ZMPT101K` pour la mesure de tension de chaque phase.
+Les transformateurs :term:`ZMPT101K` pour la mesure de tension de chaque phase.
 
 #. Soudez **TR1** (L1), **TR2** (L2)
 #. Soudez **TR3** (L3) — **triphasé avec neutre uniquement**
@@ -118,7 +118,7 @@ Les transformateurs :term:`ZMPT101K` pour la mesure de tension de chaque phase.
 .. todo:: Photo à fournir — transformateurs TR1–TR3 soudés.
 
 .. note::
-   En configuration **3 × 230 V sans neutre** (3 fils), l’une des phases est raccordée sur la borne N du routeur et sert de référence : TR1 et TR2 mesurent la tension des deux autres phases par rapport à elle. Seuls TR1 et TR2 sont donc nécessaires (voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`).
+   En configuration **3 × 230 V sans neutre** (3 fils), l’une des phases est raccordée sur la borne N du routeur et sert de référence : TR1 et TR2 mesurent la tension des deux autres phases par rapport à elle. Seuls TR1 et TR2 sont donc nécessaires (voir :ref:`raccordement en 3 × 230 V <raccordement-3x230>`).
 
 Condensateur film C1
 ~~~~~~~~~~~~~~~~~~~~~
@@ -134,7 +134,7 @@ Module d’alimentation PS1 (MPC10-5)
 
 Le module d’alimentation AC-DC convertit le 230 VAC en 5 VDC (10 W).
 
-#. Positionnez le module **PS1** sur le :term:`PCB`
+#. Positionnez le module **PS1** sur le :term:`PCB`
 #. Vérifiez l’orientation selon la sérigraphie
 #. Soudez toutes les broches
 
@@ -145,7 +145,7 @@ Self de mode commun FL1
 
 La self de mode commun (Schaffner) filtre les perturbations électromagnétiques sur les lignes secteur.
 
-#. Positionnez **FL1** sur le :term:`PCB`
+#. Positionnez **FL1** sur le :term:`PCB`
 #. Soudez les broches
 
 .. todo:: Photo à fournir — self de mode commun FL1 soudée.
@@ -187,4 +187,4 @@ Avant de passer aux tests électriques, effectuez une inspection minutieuse de t
    | ☐ **Composants orientés** vérifiés (support IC1, module PS1)
    | ☐ **Carte propre** et exempte de débris
 
-Passez ensuite au chapitre :ref:`tests-electriques` pour vérifier le bon fonctionnement de la carte.
+Passez ensuite au chapitre :ref:`tests-electriques` pour vérifier le bon fonctionnement de la carte.

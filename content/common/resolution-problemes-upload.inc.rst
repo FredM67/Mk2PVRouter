@@ -17,9 +17,9 @@ Erreur : `avrdude: stk500_recv(): programmer is not responding`
 Erreur : ``static assertion failed: **** Please define 'gnu++17' in 'platform.txt' ! ****``
 ###########################################################################################
 
-Le fichier `platform.txt` n’a pas été modifié correctement : le compilateur ne travaille pas en C++17. D’autres erreurs suivent ce message ; elles disparaissent avec la bonne modification.
+Le fichier `platform.txt` n’a pas été modifié correctement : le compilateur ne travaille pas en C++17. D’autres erreurs suivent ce message ; elles disparaissent avec la bonne modification.
 
-**Solution :** Reprendre :ref:`arduino-cpp17-config`.
+**Solution :** Reprendre :ref:`arduino-cpp17-config`.
 
 Port COM n’apparaît pas
 #######################

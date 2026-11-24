@@ -33,7 +33,7 @@ Il est possible de réaliser l’assemblage dans n’importe quel ordre, cependa
    - Placer l’isolant fourni avec le kit (isolation électrique et conduction thermique) entre la patte métallique du triac et le dissipateur
    - Visser fermement pour assurer un bon contact thermique, sans serrer excessivement
 
-#. **Fixation du ou des étages de sortie dans le boîtier** (visser le :term:`PCB`)
+#. **Fixation du ou des étages de sortie dans le boîtier** (visser le :term:`PCB`)
 
    - Utiliser les entretoises pour maintenir le PCB à distance du boîtier
 
@@ -44,12 +44,12 @@ Il est possible de réaliser l’assemblage dans n’importe quel ordre, cependa
 
 #. **Mise en place des prises jack** (CT) et des éventuels boutons/témoins
 
-   - Prises jack : pour les :term:`CT` de mesure du réseau électrique
+   - Prises jack : pour les :term:`CT` de mesure du réseau électrique
    - Bouton reset en façade (connecteur RESET de la carte-mère), fourni avec le kit triphasé
 
 #. **Mise en place des câbles**
 
    - Faire passer tous les câbles par les presse-étoupe
    - Connecter les câbles de commande (carte-mère → étages de sortie) et les câbles de témoin LED (étages de sortie → cartes indicateur), broche 1 sur broche 1
-   - Raccorder le secteur et les charges comme décrit dans :ref:`raccordement-etages-sortie`
+   - Raccorder le secteur et les charges comme décrit dans :ref:`raccordement-etages-sortie`
    - Serrer définitivement les presse-étoupe

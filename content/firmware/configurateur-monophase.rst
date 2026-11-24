@@ -6,7 +6,7 @@ Configurateur du firmware — Monophasé
 
 Le **configurateur** écrit pour vous les fichiers de configuration du firmware monophasé ``Mk2_1phase_RFdatalog_temp``, à partir d’une simple description de votre installation.
 
-👉 **Ouvrir le configurateur :** `configurateur monophasé <../../configurateur-monophase/>`_
+👉 **Ouvrir le configurateur :** `configurateur monophasé <../../configurateur-monophase/>`_
 
 .. note::
    Le configurateur ne concerne que le firmware **monophasé** ``Mk2_1phase_RFdatalog_temp`` (`PVRouter-1-phase <https://github.com/FredM67/PVRouter-1-phase>`_). Pour le routeur triphasé, voir le :ref:`configurateur triphasé <configurateur-triphase>` ; en haut de chaque page, « Routeur : monophasé / triphasé » mène de l’un à l’autre. Il correspond toujours à la version du firmware décrite dans cette documentation.
@@ -82,7 +82,7 @@ Une valeur laissée vide garde sa valeur actuelle. Dans les **Vérifications**, 
 
 - une puissance négative sur le routeur : sa sonde est montée à l’envers ;
 - des relevés qui ne sont pas positifs, une valeur actuelle manquante, un calibre de sonde qui n’est pas positif ;
-- une puissance sous 300 W : la correction est imprécise ;
+- une puissance sous 300 W : la correction est imprécise ;
 - une correction suspecte (inférieure à ×0,5 ou supérieure à ×2) : vérifiez le câblage, et que les deux relevés portent sur le même câble, au même moment.
 
 La marche à suivre, pas à pas : :ref:`etalonnage-monophase`

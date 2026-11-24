@@ -81,7 +81,7 @@ Dans les **Vérifications**, la page signale, phase par phase :
 
 - une puissance négative sur le routeur : sa sonde est montée à l’envers, ou n’est pas sur la phase de son entrée tension ;
 - des relevés qui ne sont pas positifs, une valeur actuelle manquante, un calibre de sonde qui n’est pas positif ;
-- une charge sous 300 W : la correction est imprécise ;
+- une charge sous 300 W : la correction est imprécise ;
 - une correction suspecte (inférieure à ×0,5 ou supérieure à ×2) : vérifiez le câblage, et que les deux relevés portent sur la même phase, au même moment.
 
 La marche à suivre, pas à pas : :ref:`etalonnage-triphase`
