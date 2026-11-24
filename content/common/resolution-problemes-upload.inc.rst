@@ -11,7 +11,7 @@ Erreur : `avrdude: stk500_recv(): programmer is not responding`
 #. Câblage FTDI incorrect → Vérifier TX ↔ RX inversés
 #. ATmega328P mal inséré → Vérifier l’orientation et l’insertion complète
 #. Fil DTR non câblé (avec des fils séparés) → pas de reset automatique : câbler la broche 6 (DTR)
-#. ATmega328P sans *bootloader* → le graver avec un programmateur ISP
+#. ATmega328P de remplacement, acheté vierge (sans *bootloader*) → y graver le *bootloader* Arduino Uno avec un programmateur ISP ; la puce du kit en a déjà un
 #. Cavalier 3,3 V/5 V de l’adaptateur mal placé → voir *Connexion du Routeur* plus haut
 
 Erreur : ``static assertion failed: **** Please define 'gnu++17' in 'platform.txt' ! ****``

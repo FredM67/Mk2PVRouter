@@ -98,8 +98,8 @@ Le YAML généré par le configurateur se charge dans ESPHome (tableau de bord o
 
 - il demande **ESPHome 2026.10.0 ou plus récent** (``min_version``), première version qui intègre le composant ``mk2pvrouter`` ;
 - les mots de passe et clés n’y figurent pas : ils sont lus dans un fichier ``secrets.yaml``, qui doit définir ``wifi_ssid``, ``wifi_password``, ``wifi_fallback_password``, ``api_encryption_key``, ``esphome_ota_password``, ``esphome_web_server_username`` et ``esphome_web_server_password`` ;
-- le premier chargement se fait par le câble USB-C, module débranché de la carte principale (procédure ci-dessus) ;
-- Home Assistant se connecte au module par l’API native d’ESPHome, chiffrée avec la clé ``api_encryption_key`` ;
+- la **première installation** se fait par le câble USB-C, module débranché de la carte principale (procédure ci-dessus) : dans le tableau de bord ESPHome, « Install », puis « Plug into this computer » (ou ESPHome Web depuis le navigateur) ; les suivantes se font **sans fil** (:term:`OTA`, voir plus bas) ;
+- une fois le module sur le réseau WiFi, Home Assistant le détecte (intégration ESPHome) : ajoutez-le en saisissant la clé ``api_encryption_key`` ; la connexion passe par l’API native d’ESPHome, chiffrée avec cette clé ;
 - si le module ne trouve pas le réseau WiFi, il ouvre son propre point d’accès de secours, dont le nom commence par le nom convivial de l’appareil (mot de passe ``wifi_fallback_password``), qui permet de saisir le bon réseau ;
 - le journal série d’ESPHome est désactivé (``baud_rate: 0``) : l’UART sert à la liaison avec le routeur. Les journaux se consultent par WiFi.
 

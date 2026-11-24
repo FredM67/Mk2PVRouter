@@ -26,7 +26,7 @@ Le module se branche directement sur la carte principale via les connecteurs **T
 Bien que le module puisse être programmé avec n’importe quel firmware compatible ESP32-C6 (Arduino, ESP-IDF…), il est principalement conçu pour fonctionner avec **ESPHome**, permettant une intégration directe avec **Home Assistant**.
 
 .. note::
-   Les composants :term:`CMS` du module mk2Wifi sont **assemblés en usine**. Seules les deux **barrettes femelles** TRIG_EXT et UART_EXT doivent être soudées par l’utilisateur pour relier le module à la carte-mère. Les connecteurs OLED et MISC sont eux aussi traversants (absents de la vue « Composants CMS uniquement » ci-dessous) : ils ne servent que si vous branchez un écran ou utilisez les GPIO supplémentaires.
+   Les composants :term:`CMS` du module mk2Wifi sont **assemblés en usine**. Seules les deux **barrettes femelles** TRIG_EXT et UART_EXT doivent être soudées par l’utilisateur pour relier le module à la carte-mère. Les connecteurs OLED et MISC sont eux aussi traversants (absents de la vue « Composants CMS uniquement » ci-dessous) : ils ne servent que si vous branchez un écran ou utilisez les GPIO supplémentaires, et sont fournis selon votre commande.
 
 Images de la carte
 ------------------

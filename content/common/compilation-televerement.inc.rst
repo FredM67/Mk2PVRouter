@@ -8,7 +8,7 @@ Compilation et Téléversement
    - [ ] Adaptateur FTDI connecté (USB + PCB)
    - [ ] Bon port COM sélectionné
    - [ ] Type de carte = Arduino Uno
-   - [ ] ATmega328P avec le *bootloader* Arduino Uno : une puce vierge ne se programme pas par l’adaptateur FTDI, il faut d’abord y graver le *bootloader* avec un programmateur ISP
+   - [ ] ATmega328P du kit en place : il est livré avec son *bootloader*, il n’y a qu’à téléverser le firmware (une puce vierge achetée ailleurs devrait d’abord recevoir le *bootloader* Arduino Uno avec un programmateur ISP)
 
 #. Cliquer sur le bouton **« Vérifier »** (✓) pour compiler
 

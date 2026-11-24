@@ -25,7 +25,7 @@ Il est possible de réaliser l’assemblage dans n’importe quel ordre, cependa
 
 #. **Fixation du ou des dissipateurs sur le boîtier**, y compris fils de terre
 
-   - Fixer en même temps la cosse du fil de terre vert/jaune (voir :ref:`confection-cables`) sur le dissipateur, métal contre métal
+   - Fixer en même temps le fil de terre vert/jaune, muni d’une **cosse à œillet sertie** (voir :ref:`confection-cables`), sous **l’une des deux vis** qui fixent le dissipateur au boîtier, métal contre métal
    - Serrer les vis de manière croisée pour assurer un contact uniforme
 
 #. **Fixation du ou des étages de sortie sur chaque dissipateur** (visser le triac)
@@ -45,7 +45,7 @@ Il est possible de réaliser l’assemblage dans n’importe quel ordre, cependa
 #. **Mise en place des prises jack** (CT) et des éventuels boutons/témoins
 
    - Prises jack : pour les :term:`CT` de mesure du réseau électrique
-   - Bouton reset (connecteur RESET de la carte-mère), en option
+   - Bouton reset en façade (connecteur RESET de la carte-mère), fourni avec le kit triphasé
 
 #. **Mise en place des câbles**
 

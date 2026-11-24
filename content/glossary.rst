@@ -150,7 +150,7 @@ Termes de Base pour Débutants
 
    Électrocution
      | **Décès causé** par un choc électrique.
-     | Le danger dépend de la tension, de l’humidité du milieu et du trajet du courant dans le corps : une tension bien inférieure à 230 V peut déjà être dangereuse.
+     | Le danger dépend de la tension, de l’humidité du milieu et du trajet du courant dans le corps. La NF C 15-100 fixe la tension limite de sécurité à **50 V en alternatif** (120 V en continu) en milieu sec, et à **25 V en alternatif** (60 V en continu) en milieu humide : au-delà, le contact est dangereux.
      | ⚠️ **DANGER DE MORT** : Le 230 V domestique peut tuer instantanément.
 
    Firmware

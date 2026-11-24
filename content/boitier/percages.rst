@@ -72,7 +72,7 @@ Cependant, ce guide décrira l’implantation la plus classique.
 **Témoins LED** (cartes indicateur, voir :ref:`carte-indicateur`)
    - 1 trou de **5 mm** par carte indicateur, dans le couvercle
 
-**Bouton reset** (option, connecteur RESET de la carte-mère)
+**Bouton reset** (fourni avec le kit triphasé, connecteur RESET de la carte-mère)
    - 1 trou de **13 mm**
 
 Outils nécessaires
