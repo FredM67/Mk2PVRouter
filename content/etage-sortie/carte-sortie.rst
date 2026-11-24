@@ -51,7 +51,7 @@ Contrôle de la Puissance
 
 | Une autre approche consiste à ne laisser passer que des sinusoïdes complètes, une technique connue sous le nom de modulation par trains d’ondes ou *burst fire control*.
 | Le principal inconvénient de cette méthode est que la gradation est moins précise, mais l’expérience a montré que cela ne pose pas de problème avec les compteurs électriques en France, quel que soit le modèle.
-| Le principal **avantage** de cette méthode est qu’elle ne génère aucune harmonique dans le réseau électrique.
+| Le principal **avantage** de cette méthode est qu’elle ne génère pas d’harmoniques (multiples de 50 Hz) dans le réseau électrique. Avec de fortes charges, elle peut en revanche provoquer un léger papillotement (*flicker*) de l’éclairage.
 
 Applications typiques
 ---------------------
@@ -60,7 +60,7 @@ Applications typiques
 * **Chauffage** : Dans le cas des chauffages électriques, les triacs servent à contrôler la température. En changeant la durée pendant laquelle le courant est conduit, on peut régler la quantité de chaleur émise par l’appareil de chauffage.
 
 Avantages comparés à un relais
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 * **Contrôle Fin** : Le :term:`triac <Triac>` offre une gestion très précise de la puissance, ce qui est parfait pour les applications nécessitant un ajustement délicat.
 * **Commutation Sans Bruit** : À l’inverse des relais mécaniques, les triacs fonctionnent sans produire de bruit de clic caractéristique lors de la commutation.
@@ -81,12 +81,12 @@ Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 * Une **résistance R1**, dont la valeur est choisie en fonction de la tension nominale du système et du modèle d’:term:`optocoupleur <Optocoupleur>` utilisé.
 * Une **résistance R2**, sélectionnée selon le modèle d’optocoupleur.
 * Une **résistance R3**.
-* Un **support** :term:`DIL` pour l’optocoupleur, comportant deux rangées de trois broches.
-* Deux paires de **connecteurs type Molex**.
+* Un **support** :term:`DIL` pour l’optocoupleur MOC3043M (U1), comportant deux rangées de trois broches.
+* Deux paires de **connecteurs type Molex** 2 broches, pour J2 et J3. Ces deux connecteurs sont câblés en parallèle : l’un reçoit le signal de commande de la carte-mère, l’autre peut alimenter une carte indicateur LED (voir :ref:`carte-indicateur`). Sur chacun, la broche 1 est la masse et la broche 2 le signal (+).
 * Un **isolant** qui assure à la fois l’isolation électrique et la conduction thermique.
-* Un **triac**, adapté aux exigences spécifiques de l’application.
-* Un **connecteur de puissance** qui dispose habituellement de trois broches, la broche centrale étant inutilisée.
-* Un **morceau de cuivre massif** de 1.5 mm² de section.
+* Un **triac** BTA41-600B (Q1, boîtier TO-218).
+* Un **connecteur de puissance** (J1, Phoenix Contact MSTBVA 2,5 au pas de 5,08 mm) à trois broches, la broche centrale étant inutilisée.
+* Un **morceau de cuivre massif** de 1,5 mm² de section.
 
 .. figure:: ../img/Kit-sortie.jpg
    :alt: Contenu d’un kit de sortie
@@ -98,13 +98,16 @@ Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 Assemblage d’une carte de sortie
 --------------------------------
 
-Pour les cartes de sortie, nous allons procéder de façon similaire, dans cet ordre :
+Pour les cartes de sortie, nous allons procéder dans cet ordre :
 
+#. agrafes en cuivre massif
 #. résistances
 #. support :term:`optocoupleur <Optocoupleur>`
-#. connecteur·s Molex
-#. connecteur de puissance
+#. broche centrale du connecteur de puissance (pour le maintenir)
+#. connecteurs Molex
+#. autres broches du connecteur de puissance
 #. :term:`triac <Triac>`
+#. optocoupleur
 
 .. danger::
    ⚠️⚠️⚠️ **DANGER — RISQUE D’INCENDIE** ⚠️⚠️⚠️
@@ -130,11 +133,11 @@ Avant de commencer cette section :
 
 ☐ **Détecteur de fumée** — Fonctionnel et testé
 
-☐ **Surface isolante et ininflammable** — Travailler sur céramique, bois sec (PAS métal/plastique)
+☐ **Surface isolante et ininflammable** — Travailler sur céramique ou carrelage (PAS métal/plastique)
 
 ☐ **Quelqu’un d’autre présent** — En cas d’urgence
 
-☐ **Savoir où est le tableau électrique** — Pour couper alimentation si fumée
+☐ **Savoir où est le tableau électrique** — Pour couper l’alimentation si fumée
 
 ☐ **Fenêtres ouvertes** — Pour ventilation et évacuation fumée
 
@@ -154,7 +157,7 @@ En Cas de Fumée ou Odeur de Brûlé
 #. **COUPER ALIMENTATION IMMÉDIATEMENT** (disjoncteur)
 #. **NE PAS TOUCHER le routeur** (peut être très chaud)
 #. **Si flammes visibles** → Utiliser extincteur CO₂ ou poudre (PAS D’EAU !)
-#. **Si fumée importante** → Évacuer et appeler pompiers (18)
+#. **Si fumée importante** → Évacuer et appeler les pompiers (18 ou 112)
 #. **Laisser refroidir 30 minutes** minimum avant d’inspecter
 
 Vérification de Qualité
@@ -183,13 +186,13 @@ La première étape du montage consiste à installer des *agrafes* en cuivre pur
 
 Il est recommandé d’utiliser du cuivre d’une section transversale de 1,5 mm², compte tenu de la courte distance entre le :term:`triac <Triac>` et le connecteur de puissance.
 
-Les emplacements pour ces agrafes sont marqués sur le circuit imprimé par des lignes épaisses sur la couche de sérigraphie, avec un espacement d’environ 5 mm entre les trous.
+Les emplacements pour ces agrafes sont marqués sur le circuit imprimé par des lignes épaisses sur la couche de sérigraphie, avec un espacement d’environ 7 mm entre les trous.
 
 Pour installer les agrafes, commencez par plier le fil de cuivre afin qu’il traverse ces trous.
 
 Puis, pliez les extrémités vers l’extérieur et pressez-les fermement contre la face inférieure du circuit imprimé. L’utilisation d’une pince multiprise facilitera cette tâche, tout en prenant soin de ne pas abîmer le circuit.
 
-Une fois les agrafes correctement mises en place, coupez les quatre extrémités à la longueur nécessaire.
+Sous la carte, chaque agrafe relie une pastille du connecteur de puissance à une pastille du :term:`triac <Triac>`. Une fois les agrafes correctement mises en place, coupez les quatre extrémités au niveau de ces pastilles : elles y seront soudées avec la patte du composant.
 
 .. figure:: ../img/Pose-agrafes.jpg
    :alt: Vue dessus/dessous, agrafes posées
@@ -216,13 +219,12 @@ Une fois les agrafes de cuivre mises en place, il est temps d’installer les co
 
 Selon le plan du circuit :
 
-* La résistance **R1** doit être de **220 Ω** si le circuit est alimenté en **3,3 V**, ou de **390 Ω** pour une alimentation en **5 V**.
+* La résistance **R1** doit être de **220 Ω** si la carte-mère fonctionne en **3,3 V** (réglage d’usine du cavalier V sel., voir :ref:`cavaliers`), ou de **390 Ω** si elle fonctionne en **5 V**.
 * La résistance **R2** doit avoir une valeur de **330 Ω**.
 * La résistance **R3** doit être de **360 Ω**.
 
 .. note::
-   Pour des besoins spécifiques, un autre type d’:term:`optocoupleur <Optocoupleur>` pourrait être nécessaire.
-   Dans ce cas, les valeurs des résistances peuvent varier.
+   Avec un :term:`optocoupleur <Optocoupleur>` MOC3063M (600 V) à la place du MOC3043M, R2 passe à **360 Ω** ; R1 reste inchangée.
 
 .. hint::
    Pour assurer que le support :term:`DIL` soit correctement fixé et en contact total avec le circuit imprimé, commencez par souder une seule de ses broches.
@@ -250,7 +252,7 @@ Soudure des connecteurs type Molex
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Ces connecteurs ont une hauteur similaire au connecteur de puissance.
-| Il sera recommandé de souder la broche centrale du connecteur de puissance en premier. En effet, ce dernier peut être facilement maintenu pour cette opération grâce aux agrafes précédemment installées.
+| Il est recommandé de souder la broche centrale du connecteur de puissance en premier. En effet, ce dernier peut être facilement maintenu pour cette opération grâce aux agrafes précédemment installées.
 | Une fois soudé, ce connecteur sera d’une grande aide pour souder les deux autres connecteurs type Molex.
 
 .. figure:: ../img/Maintien-connecteur.jpg
