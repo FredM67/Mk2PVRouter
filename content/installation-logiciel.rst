@@ -21,17 +21,17 @@ Chaque firmware a aussi son site (en anglais), avec la documentation du code : 
 
 
 Installation Pilotes FTDI
-=========================
+-------------------------
 
-Les pilotes FTDI sont **OBLIGATOIRES** pour communiquer avec le routeur via le programmateur USB.
+L’ordinateur a besoin du pilote de la puce de l’adaptateur USB-série. Cette section décrit le pilote des adaptateurs à puce FTDI ; un adaptateur à puce CH340 ou CP2102 demande le pilote de son propre fabricant.
 
 .. important::
-   Sans ces pilotes, l’ordinateur ne détectera pas le routeur !
+   Sans pilote, l’ordinateur ne voit pas l’adaptateur, donc pas le routeur !
 
 .. _ftdi-windows:
 
 🪟 Windows
-----------
+~~~~~~~~~~
 
 #. Ouvrir le navigateur : https://ftdichip.com/drivers/vcp-drivers/
 #. Cliquer sur **« Windows »** dans la colonne **« Available Drivers »**
@@ -43,7 +43,7 @@ Les pilotes FTDI sont **OBLIGATOIRES** pour communiquer avec le routeur via le p
 .. _ftdi-windows-verif:
 
 Vérification
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 #. Connecter l’adaptateur FTDI à un port USB
 #. Ouvrir le **Gestionnaire de périphériques** (Win + X → Gestionnaire de périphériques)
@@ -54,14 +54,14 @@ Vérification
 .. _ftdi-macos:
 
 🍎 macOS
---------
+~~~~~~~~
 
 Les pilotes FTDI sont généralement inclus dans macOS moderne.
 
 .. _ftdi-macos-verif:
 
 Vérification
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 #. Connecter l’adaptateur FTDI à un port USB
 #. Ouvrir un terminal
@@ -74,7 +74,7 @@ Vérification
 #. Rechercher une ligne contenant `tty.usbserial` (exemple : `/dev/tty.usbserial-A50285BI`)
 
 Si aucun périphérique n’apparaît
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Télécharger les pilotes sur https://ftdichip.com/drivers/vcp-drivers/
 #. Choisir la version macOS
@@ -84,14 +84,14 @@ Si aucun périphérique n’apparaît
 .. _ftdi-linux:
 
 🐧 Linux
---------
+~~~~~~~~
 
 Les pilotes FTDI sont généralement inclus dans le noyau Linux.
 
 .. _ftdi-linux-verif:
 
 Vérification
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -100,14 +100,14 @@ Vérification
 Rechercher une ligne contenant « FTDI » ou « Future Technology Devices ».
 
 Si le pilote n’est pas chargé
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
    sudo modprobe ftdi_sio
 
 Ajouter l’utilisateur au groupe dialout
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -119,18 +119,18 @@ Ajouter l’utilisateur au groupe dialout
 
 
 Choix de l’Environnement de Développement
-=========================================
+-----------------------------------------
 
 Vous avez deux options pour programmer le Mk2PVRouter :
 
-**Option A : Arduino IDE** (recommandé pour les débutants)
+**Option A : Arduino IDE**
 
 - Configuration manuelle nécessaire (C++17, bibliothèques)
 - Suivre les sous-sections de l’**Option A** ci-dessous
 
-**Option B : PlatformIO** (recommandé pour les utilisateurs avancés)
+**Option B : PlatformIO** (recommandé par les Readme des deux firmwares)
 
-- Support C++17 natif (pas de configuration manuelle)
+- Support C++17 et bibliothèques sans configuration manuelle
 - Suivre les sous-sections de l’**Option B** ci-dessous
 
 .. note::

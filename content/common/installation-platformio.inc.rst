@@ -1,10 +1,10 @@
 Option B : Installation avec PlatformIO
 ---------------------------------------
 
-Pour les Utilisateurs Avancés
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Présentation
+~~~~~~~~~~~~
 
-**PlatformIO** est un environnement de développement plus complet que l’Arduino IDE.
+**PlatformIO** est un environnement de développement plus complet que l’Arduino IDE. Les Readme des deux firmwares recommandent de l’utiliser, avec Visual Studio Code.
 
 Avantages
 ~~~~~~~~~
@@ -13,7 +13,6 @@ Avantages
 - Support C++17 natif (pas besoin de modifier `platform.txt`)
 - Compilations plus rapides
 - Meilleure intégration avec Git
-- Débogage avancé
 
 .. important::
    Avec PlatformIO, **aucune configuration manuelle n’est nécessaire**.
@@ -138,10 +137,11 @@ PlatformIO télécharge **automatiquement** :
 Compilation et Téléversement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Connecter le routeur via l’adaptateur FTDI (voir étapes communes dans la version-specific include)
+#. Connecter le routeur via l’adaptateur FTDI (voir *Connexion du Routeur* dans :ref:`logiciel-monophase` ou :ref:`logiciel-triphase`)
 #. Dans la barre inférieure de VS Code, cliquer sur l’icône **« Upload »** (→)
 #. PlatformIO compile automatiquement et téléverse le firmware
 #. Surveiller le terminal pour les messages de progression
+#. Pour le moniteur série, cliquer sur l’icône **« Serial Monitor »** (une prise) dans la barre inférieure : PlatformIO l’ouvre à 9600 bauds, sa vitesse par défaut, qui est celle du routeur
 
 Sélection de la Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -161,8 +161,7 @@ Pour changer d’environnement :
 #. Recompiler le projet
 
 .. tip::
-   PlatformIO est recommandé pour les utilisateurs avancés qui développent ou modifient le firmware.
-   Pour un usage standard, Arduino IDE suffit amplement.
+   PlatformIO évite les deux étapes manuelles de l’Arduino IDE, sources d’erreurs fréquentes : la modification de `platform.txt` et l’installation des bibliothèques.
 
 .. _platformio-termine:
 
