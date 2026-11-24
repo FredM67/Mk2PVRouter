@@ -14,7 +14,7 @@ Après avoir effectué toutes les étapes précédentes (soudure de la carte-mè
    - clés six pans
    - clés plates
    - Pâte thermique (pour le triac) (option)
-   - Clé à douille ou pince (pour écrous M3 et M4)
+   - Clé à douille ou pince (pour écrous M3)
 
 Ordre d’Assemblage
 ------------------
