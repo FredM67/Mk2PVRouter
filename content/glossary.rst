@@ -10,9 +10,8 @@ Ce glossaire est divisé en deux sections :
 1. **Termes de Base** : Pour les débutants, explications simples des concepts électriques et électroniques fondamentaux
 2. **Termes Techniques** : Définitions spécialisées pour le Mk2PVRouter et l’électronique avancée
 
-=====================================
 Termes de Base pour Débutants
-=====================================
+-----------------------------
 
 .. glossary::
    :sorted:
@@ -55,12 +54,12 @@ Termes de Base pour Débutants
    Monophasé
      | Système électrique avec **une seule phase** (230 V entre phase et neutre).
      | C’est le système standard pour la plupart des habitations françaises.
-     | Compteur électrique monophasé : 2 fils (phase + neutre + terre).
+     | Compteur électrique monophasé : 2 fils (phase + neutre) ; la terre ne passe pas par le compteur.
 
    Triphasé
      | Système électrique avec **trois phases** (400 V entre phases, 230 V entre chaque phase et le neutre).
      | Utilisé pour les installations nécessitant beaucoup de puissance (grandes maisons, bâtiments professionnels).
-     | Compteur électrique triphasé : 4 fils (3 phases + neutre + terre).
+     | Compteur électrique triphasé : 4 fils (3 phases + neutre) ; la terre ne passe pas par le compteur.
 
    Disjoncteur
      | Dispositif de **sécurité** qui coupe automatiquement le courant en cas de :
@@ -115,7 +114,7 @@ Termes de Base pour Débutants
 
    Soudure
      | Technique pour **fixer et relier électriquement** des composants sur un circuit imprimé.
-     | Utilise un **fer à souder** (300–350 °C) et de l’**étain** (alliage qui fond à ~200 °C).
+     | Utilise un **fer à souder** (réglé à 320–380 °C selon l’alliage, voir :ref:`soldering-tutorial`) et de l’**étain** (alliage qui fond entre 183 °C pour l’étain-plomb et 227 °C pour le sans-plomb Sn99,3/Cu0,7).
      | Une bonne soudure est brillante et forme un cône régulier.
 
    Pont de soudure
@@ -147,17 +146,17 @@ Termes de Base pour Débutants
    Électrisation
      | **Choc électrique** subi par une personne exposée à une tension électrique.
      | La personne **survit** mais peut avoir des séquelles (brûlures, troubles cardiaques).
-     | Différent de l’électrocution (qui est mortel).
+     | Différent de l’électrocution (qui est mortelle).
 
    Électrocution
      | **Décès causé** par un choc électrique.
-     | Peut survenir à partir de 50 V AC en milieu humide, 120 V AC en milieu sec.
+     | Le danger dépend de la tension, de l’humidité du milieu et du trajet du courant dans le corps : une tension bien inférieure à 230 V peut déjà être dangereuse.
      | ⚠️ **DANGER DE MORT** : Le 230 V domestique peut tuer instantanément.
 
    Firmware
      | **Programme informatique** stocké dans la mémoire du microcontrôleur.
      | C’est le « cerveau » du Mk2PVRouter qui gère les mesures et le contrôle des charges.
-     | Se télécharge via l’Arduino IDE avec un câble USB-série (FTDI).
+     | Se téléverse avec l’Arduino IDE ou PlatformIO via un adaptateur USB-série (FTDI). Le module :term:`mk2Wifi`, lui, se programme par USB-C puis par :term:`OTA`.
 
    Microcontrôleur
      | **Mini-ordinateur** sur une seule puce électronique.
@@ -192,9 +191,9 @@ Termes de Base pour Débutants
      | Appareil électrique qui **consomme de l’énergie**.
      | Dans le contexte du Mk2PVRouter : Chauffe-eau, radiateur électrique, plancher chauffant, etc.
 
-   Délestage / Diversion
+   Routage / Diversion
      | Action de **rediriger** l’excédent de production vers une charge au lieu de l’injecter sur le réseau.
-     | Le Mk2PVRouter fait du délestage intelligent en temps réel.
+     | Le Mk2PVRouter route l’excédent en temps réel. À ne pas confondre avec le *délestage*, qui coupe des charges pour rester sous la puissance souscrite.
 
    Burst-fire
      | **Mode de contrôle** de puissance par cycles complets de la sinusoïde 50 Hz.
@@ -214,9 +213,8 @@ Termes de Base pour Débutants
      | **Coffret** contenant les disjoncteurs et dispositifs de protection de l’installation électrique.
      | C’est là que se trouve le **disjoncteur général** permettant de couper toute l’installation.
 
-==============================
 Termes Techniques Avancés
-==============================
+-------------------------
 
 .. glossary::
    :sorted:
@@ -273,7 +271,7 @@ Termes Techniques Avancés
    mk2Wifi
      | Module d’extension WiFi/BLE pour le Mk2PVRouter, basé sur un :term:`ESP32-C6`.
      | Se branche sur les connecteurs TRIG_EXT et UART_EXT de la carte principale.
-     | Ajoute la connectivité sans fil, un écran OLED optionnel et la gestion du capteur de température DS18B20.
+     | Ajoute la connectivité sans fil (Home Assistant via ESPHome) et permet de piloter depuis Home Assistant des entrées du routeur (D5–D9 : marche forcée, arrêt du routage…). En option : un écran OLED et la lecture des sondes DS18B20 (cavalier TEMP).
 
    Carte universelle
      | Carte principale **3phaseDiverter** (rév. 6.0) qui remplace les anciennes cartes monophasée et triphasée séparées.
@@ -285,7 +283,7 @@ Termes Techniques Avancés
 
    Cavalier de soudure
      | Pont conducteur réalisé en soudant deux pastilles adjacentes sur le :term:`PCB`.
-     | Les cavaliers V sel., SDA, SCL, IRQ, NSS et TEMP sur la carte universelle permettent de configurer le mode de fonctionnement (monophasé/triphasé, alimentation, module RF, capteur de température).
+     | Les cavaliers V sel., SDA, SCL, TEMP, IRQ, NSS et +5V Rail sur la carte universelle permettent de configurer le mode de fonctionnement (monophasé/triphasé, alimentation, module RF, capteur de température). Le module :term:`mk2Wifi` a ses propres cavaliers D5–D9.
 
    CT
      | *Current Transformer* ou dans notre cas **pince ampèremétrique**.
@@ -308,9 +306,10 @@ Termes Techniques Avancés
      .. seealso:: `CT Sensors - Interfacing with an Arduino <https://docs.openenergymonitor.org/electricity-monitoring/ct-sensors/interface-with-arduino.html>`_
 
    ADC
-     | *Analog Digital Converter* ou convertisseur analogique/numérique.
+     | *Analog-to-Digital Converter* ou convertisseur analogique/numérique.
      | Il permet de convertir un signal analogique, par exemple une tension, en un signal numérique, par exemple une valeur entre 0 et 1 023.
-     | Supposons que la plage de mesure aille de 0 à 5 V, alors, une tension d’entrée de 2,5 V correspondra à la valeur 511. Une tension de 5 V correspondra à une valeur de 1 023.
+     | Supposons que la plage de mesure aille de 0 à 5 V, alors, une tension d’entrée de 2,5 V correspondra à la valeur 512. Une tension de 5 V correspondra à une valeur de 1 023.
+     | Sur la carte universelle, le routeur utilise la référence interne de 1,1 V de l’ATmega328P.
 
    AC
      | *Alternating Current* ou courant alternatif.
@@ -389,7 +388,7 @@ Termes Techniques Avancés
    IoT
       | *Internet of Things* ou Internet des Objets.
       | Connexion d’objets physiques à Internet pour collecter et échanger des données.
-      | Le Mk2PVRouter peut être configuré pour envoyer des données au format IoT.
+      | Pour le Mk2PVRouter, ``IoT`` est aussi le nom d’un mode de sortie série : des trames compactes à 9600 bauds 7E1, lues par le module :term:`mk2Wifi` pour Home Assistant. C’est le mode par défaut du ``config.h``.
 
    JSON
       | *JavaScript Object Notation*.
@@ -398,4 +397,4 @@ Termes Techniques Avancés
 
    Baud rate
       | Vitesse de communication série, mesurée en bits par seconde.
-      | Le Mk2PVRouter utilise généralement 9 600 ou 115 200 bauds pour la communication avec l’ordinateur.
+      | Le Mk2PVRouter communique toujours à **9600 bauds** : 8N1 pour le texte de démarrage et les sorties lisible et JSON, 7E1 pour les trames de la sortie IoT.

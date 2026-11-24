@@ -5,10 +5,10 @@
 ======================================
 
 .. note::
-   Cette section concerne uniquement les kits équipés du module d’extension :term:`mk2Wifi` (ESP32-C6).
+   Les premières sections de cette page concernent uniquement les kits équipés du module d’extension :term:`mk2Wifi` (ESP32-C6). Les sections « Obtenir de l’aide », « Annexe — Outils de diagnostic essentiels » et « Conclusion » valent pour tout le routeur.
 
-Le Module ne s’Allume Pas
-=========================
+Le module ne s’allume pas
+-------------------------
 
 **Symptôme :** LED D1 du module éteinte lorsque la carte principale est sous tension
 
@@ -35,11 +35,12 @@ Le Module ne s’Allume Pas
 
    #. ☐ **Cavalier V sel. en position 3,3 V ?**
 
-      - Si le cavalier V sel. a été basculé en 5 V, le module est **détruit**
+      - V sel. ne coupe pas l’alimentation du module : son régulateur est alimenté par le +5 V de UART_EXT broche 3
+      - Mais en position 5 V, les lignes UART et D5–D9 arrivent en 5 V sur l’ESP32-C6, qui peut avoir été endommagé : remettre V sel. en position 3,3 V avant tout nouvel essai
       - Voir :ref:`cavaliers`
 
-Programmation USB-C Impossible
-==============================
+Programmation USB-C impossible
+------------------------------
 
 **Symptôme :** L’ESP32-C6 n’est pas détecté par l’ordinateur via USB-C
 
@@ -52,13 +53,13 @@ Programmation USB-C Impossible
 
    #. ☐ **Mode téléchargement activé ?**
 
-      - Maintenir le **bouton-poussoir** enfoncé pendant la mise sous tension (branchement du câble USB-C)
+      - Maintenir le bouton **Boot** (SW1) enfoncé pendant la mise sous tension (branchement du câble USB-C)
       - Relâcher le bouton après la connexion
       - Sans cette manipulation, le module démarre en mode normal (pas en mode programmation)
 
    #. ☐ **Câble USB-C avec données ?**
 
-      - Certains câbles USB-C sont **charge uniquement** (pas de fils de données)
+      - Certains câbles USB-C ne servent **qu’à la charge** (pas de fils de données)
       - Essayer un autre câble connu pour transférer des données
 
    #. ☐ **Port USB fonctionnel ?**
@@ -71,8 +72,8 @@ Programmation USB-C Impossible
       - Windows : vérifier dans le Gestionnaire de périphériques qu’un nouveau port COM apparaît
       - Linux : ``dmesg | grep tty`` doit montrer un nouveau périphérique
 
-Pas de Communication avec la Carte Principale
-==============================================
+Pas de communication avec la carte principale
+---------------------------------------------
 
 **Symptôme :** Module alimenté (LED D1 allumée) mais aucune donnée reçue de la carte principale
 
@@ -83,10 +84,11 @@ Pas de Communication avec la Carte Principale
       - Un branchement inversé empêche la communication
       - Vérifier l’alignement des sérigraphies TRIG_EXT et UART_EXT
 
-   #. ☐ **Firmware carte principale programmé ?**
+   #. ☐ **Routeur en sortie série IoT ?**
 
-      - L’ATmega328P doit être programmé avec un firmware compatible mk2Wifi
-      - Vérifier via le moniteur série de la carte principale
+      - Dans le ``config.h`` du routeur : ``SERIAL_OUTPUT_TYPE = SerialOutputType::IoT`` (9600 bauds, 7E1), le seul mode que le module comprend. À remettre si vous êtes passé en mode lisible pour les premiers tests
+      - Dans le YAML ESPHome, le bloc ``uart`` doit correspondre : ``tx_pin: GPIO16``, ``rx_pin: GPIO17``, ``baud_rate: 9600``, ``parity: EVEN``, ``data_bits: 7``, ``stop_bits: 1``. Le configurateur ne l’écrit que si la sortie du routeur est IoT : régénérez le YAML après tout changement du ``config.h``
+      - Au démarrage, le routeur affiche sa configuration à 9600 bauds 8N1 ; les trames qui suivent sont en 7E1. Un moniteur série réglé en 8N1 affiche donc des caractères incohérents après le démarrage
 
    #. ☐ **Barrettes bien soudées ?**
 
@@ -94,8 +96,8 @@ Pas de Communication avec la Carte Principale
       - Vérifier les soudures des connecteurs TRIG_EXT et UART_EXT sur la carte principale
       - Soudure froide = contact intermittent
 
-Connexion WiFi Impossible
-=========================
+Connexion WiFi impossible
+-------------------------
 
 **Symptôme :** Le module ne se connecte pas au réseau WiFi
 
@@ -109,8 +111,9 @@ Connexion WiFi Impossible
 
 #. **Identifiants corrects ?**
 
-   - Vérifier le SSID et le mot de passe dans la configuration du firmware
+   - Vérifier le SSID et le mot de passe dans la configuration du firmware (avec le YAML du configurateur : ``wifi_ssid`` et ``wifi_password`` dans ``secrets.yaml``)
    - Attention aux majuscules/minuscules et aux caractères spéciaux
+   - Avec le YAML du configurateur, un module qui ne trouve pas le réseau ouvre son point d’accès de secours (nom commençant par le nom convivial de l’appareil, mot de passe ``wifi_fallback_password``) : s’y connecter pour saisir le bon réseau
 
 #. **Signal suffisant ?**
 
@@ -123,8 +126,8 @@ Connexion WiFi Impossible
    - Vérifier que le firmware chargé inclut la configuration WiFi
    - Un firmware vierge ne se connecte à aucun réseau
 
-Mise à Jour OTA Échoue
-=======================
+La mise à jour OTA échoue
+-------------------------
 
 **Symptôme :** La mise à jour sans fil échoue ou le module ne redémarre pas
 
@@ -147,10 +150,10 @@ Mise à Jour OTA Échoue
 **Si le module ne répond plus après un OTA raté :**
 
 - Revenir à la programmation par **USB-C** (voir procédure initiale dans :ref:`installation-mk2wifi`)
-- Maintenir le **bouton-poussoir** enfoncé pour entrer en mode téléchargement
+- Maintenir le bouton **Boot** (SW1) enfoncé pour entrer en mode téléchargement
 
-Écran OLED Vide ou Incorrect
-=============================
+Écran OLED vide ou incorrect
+----------------------------
 
 **Symptôme :** L’écran OLED branché sur le connecteur mk2Wifi n’affiche rien ou des caractères incohérents
 
@@ -170,10 +173,11 @@ Mise à Jour OTA Échoue
    #. ☐ **Brochage correct ?**
 
       - Ordre des broches : GND, VCC, SCL, SDA
+      - VCC = 3,3 V : choisir un écran qui fonctionne en 3,3 V
       - Certains écrans ont un brochage différent — vérifier avant de brancher
 
-Capteur DS18B20 — Pas de Température
-=====================================
+Capteur DS18B20 — pas de température
+------------------------------------
 
 **Symptôme :** La température n’est pas mesurée malgré un capteur DS18B20 branché
 
@@ -181,7 +185,7 @@ Capteur DS18B20 — Pas de Température
 
    #. ☐ **Cavalier TEMP en bonne position ?**
 
-      - En position **3–centre** : le DS18B20 est géré par le mk2Wifi (ESP32-C6)
+      - En position **3–centre** : le DS18B20 est géré par le mk2Wifi (ESP32-C6). La mesure de température doit alors être désactivée dans le ``config.h`` du routeur (``TEMP_SENSOR_PRESENT`` à ``false``) et le bus déclaré dans le YAML (``one_wire`` sur GPIO23, écrit par le configurateur)
       - En position **1–centre** : le DS18B20 est géré par la carte principale (ATmega328P, broche D3)
       - Voir :ref:`cavaliers`
 
@@ -193,17 +197,16 @@ Capteur DS18B20 — Pas de Température
    #. ☐ **Résistance de pull-up présente ?**
 
       - Le bus 1-Wire nécessite une résistance de pull-up de 4,7 kΩ
-      - Vérifier si elle est déjà présente sur la carte ou sur le câble du capteur
+      - Elle est déjà sur la carte principale (R6, vers le 3,3 V) : n’en ajoutez pas sur le câble
 
-=================
-Obtenir de l’Aide
-=================
+Obtenir de l’aide
+-----------------
 
-Si Aucune Solution ne Fonctionne
-================================
+Si aucune solution ne fonctionne
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ressources Communautaires
--------------------------
+Ressources communautaires
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. **Communauté Facebook :** https://www.facebook.com/groups/3571488193062570
 
@@ -214,13 +217,13 @@ Ressources Communautaires
 
    - Temps réponse : 2–5 jours ouvrés
 
-#. **GitHub Issues :** https://github.com/FredM67/Mk2PVRouter/issues
+#. **GitHub Issues :**
 
-   - Pour bugs firmware
-   - Améliorations suggestions
+   - Bugs du firmware : https://github.com/FredM67/PVRouter-3-phase/issues (triphasé) ou https://github.com/FredM67/PVRouter-1-phase/issues (monophasé)
+   - Erreurs ou suggestions pour la documentation : https://github.com/FredM67/Mk2PVRouter/issues
 
-Informations à Fournir
-----------------------
+Informations à fournir
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. important::
  **📞 Pour obtenir une aide efficace, inclure :**
@@ -253,8 +256,8 @@ Informations à Fournir
  - Configuration (mono/tri, nombre sorties)
  - Système 3,3 V ou 5 V ?
 
-📸 Photos Utiles — Exemples
----------------------------
+📸 Photos utiles — exemples
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Photo dessus (composants) :**
 
@@ -275,8 +278,8 @@ Informations à Fournir
 - Connexions CT
 - Étiquettes équipements
 
-Avant de Poster
----------------
+Avant de poster
+^^^^^^^^^^^^^^^
 
 **Checklist pré-demande :**
 
@@ -289,12 +292,11 @@ Avant de Poster
 .. tip::
  Plus votre demande est précise et documentée, plus rapide sera la résolution !
 
-============================================
-🛠️ Annexe — Outils de Diagnostic Essentiels
-============================================
+🛠️ Annexe — Outils de diagnostic essentiels
+--------------------------------------------
 
-Multimètre — Utilisation de Base
-================================
+Multimètre — utilisation de base
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Mode Tension Continue (V⎓ ou VDC) :**
 
@@ -320,8 +322,8 @@ Multimètre — Utilisation de Base
 - Bip si résistance <50 Ω
 - Idéal pour vérifier soudures, tracer pistes
 
-Loupe ou Microscope USB
-=======================
+Loupe ou microscope USB
+~~~~~~~~~~~~~~~~~~~~~~~
 
 **Utilité :**
 
@@ -335,22 +337,22 @@ Loupe ou Microscope USB
 - Microscope USB 200× pour inspection détaillée
 - Éclairage LED intégré essentiel
 
-Oscilloscope (Optionnel)
-========================
+Oscilloscope (optionnel)
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Pour diagnostics avancés :**
 
 - Visualiser le signal de commande des étages de sortie, **côté basse tension uniquement** (connecteur Molex de la carte-mère) ; jamais sur la gâchette du triac ni côté puissance : la masse de l’oscilloscope est reliée à la terre
 - Vérifier oscillateur ATmega328P
-- Analyser formes d’ondes ADC
+- Analyser les formes d’onde de l’ADC
 
 **Alternative économique :**
 
 - Oscilloscope USB 20 MHz (50–100€)
 - Suffisant pour diagnostics DIY
 
-Pince Ampèremétrique
-====================
+Pince ampèremétrique
+~~~~~~~~~~~~~~~~~~~~
 
 **Utilité :**
 
@@ -361,12 +363,11 @@ Pince Ampèremétrique
 **Spécifications minimum :**
 
 - Plage : 0–20 A AC
-- Précision : ±3%
+- Précision : ±3 %
 - Lecture True RMS recommandée
 
-==========
 Conclusion
-==========
+----------
 
 Ce guide de dépannage couvre les problèmes les plus fréquents rencontrés lors de l’assemblage et de l’utilisation du Mk2PVRouter.
 
@@ -376,7 +377,7 @@ Ce guide de dépannage couvre les problèmes les plus fréquents rencontrés lor
  #. Toujours couper l’alimentation avant intervention
  #. Procéder méthodiquement (listes de contrôle)
  #. Prendre photos AVANT toute modification
- #. Si doute : demander aide plutôt que forcer
+ #. Au moindre doute : demander de l’aide plutôt que forcer
  #. Un composant coûte moins cher qu’un routeur détruit !
 
 **En cas de doute sérieux :**

@@ -16,7 +16,7 @@ Le module :term:`mk2Wifi` est un module d’extension qui ajoute une connectivi
 - **Zigbee** et **Thread** (802.15.4)
 - Connecteur **USB-C** pour le chargement initial du firmware (mises à jour suivantes via :term:`OTA`)
 - Écran **OLED** optionnel via I2C (connecteur Molex SL)
-- Cinq sorties GPIO de déclenchement/commande (**D5–D9**) vers la carte principale
+- Cinq lignes de commande (**D5–D9**) qui pilotent des **entrées** du routeur (voir :ref:`presentation-mk2wifi-cavaliers`)
 - Quatre GPIO supplémentaires (**GPIO19–GPIO22**) sur un connecteur MISC
 - Passthrough du capteur de température 1-Wire **DS18B20**
 - Liaison série **UART** avec la carte principale
@@ -26,7 +26,7 @@ Le module se branche directement sur la carte principale via les connecteurs **T
 Bien que le module puisse être programmé avec n’importe quel firmware compatible ESP32-C6 (Arduino, ESP-IDF…), il est principalement conçu pour fonctionner avec **ESPHome**, permettant une intégration directe avec **Home Assistant**.
 
 .. note::
-   Les composants :term:`CMS` du module mk2Wifi sont **assemblés en usine**. Seuls les **deux connecteurs à broches** (pin headers) doivent être soudés par l’utilisateur pour relier le module à la carte-mère.
+   Les composants :term:`CMS` du module mk2Wifi sont **assemblés en usine**. Seules les deux **barrettes femelles** TRIG_EXT et UART_EXT doivent être soudées par l’utilisateur pour relier le module à la carte-mère. Les connecteurs OLED et MISC sont eux aussi traversants (absents de la vue « Composants CMS uniquement » ci-dessous) : ils ne servent que si vous branchez un écran ou utilisez les GPIO supplémentaires.
 
 Images de la carte
 ------------------
@@ -107,6 +107,11 @@ Connecteur MISC
 
 Ces 4 GPIO sont directement connectés à l’ESP32-C6 sans résistance série. Ils peuvent être utilisés pour des capteurs, E/S ou interfaces de communication supplémentaires.
 
+.. warning::
+   Ces broches acceptent **3,3 V au maximum** : n’y appliquez jamais 5 V.
+
+.. _presentation-mk2wifi-cavaliers:
+
 Cavaliers de soudure (D5–D9)
 -------------------------------
 
@@ -114,25 +119,33 @@ Le module mk2Wifi dispose de **5 cavaliers de soudure** qui permettent de décon
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 80
+   :widths: 15 15 70
 
    * - Cavalier
-     - Liaison (via une résistance série de 1 kΩ)
+     - Repère PCB
+     - Liaison (via une résistance série de 1 kΩ)
    * - D5
+     - JP4
      - GPIO0 de l’ESP32-C6 ↔ D5 du routeur (TRIG_EXT broche 5)
    * - D6
+     - JP3
      - GPIO5 de l’ESP32-C6 ↔ D6 du routeur (TRIG_EXT broche 4)
    * - D7
+     - JP2
      - GPIO4 de l’ESP32-C6 ↔ D7 du routeur (TRIG_EXT broche 3)
    * - D8
+     - JP1
      - GPIO3 de l’ESP32-C6 ↔ D8 du routeur (TRIG_EXT broche 2)
    * - D9
+     - JP5
      - GPIO1 de l’ESP32-C6 ↔ D9 du routeur (TRIG_EXT broche 6)
 
-Pour utiliser une sortie de déclenchement, le cavalier correspondant doit être **fermé** (goutte de soudure entre les deux pastilles). Cela permet de n’activer que les sorties réellement utilisées et de libérer les autres broches pour d’autres usages sur la carte principale.
+La sérigraphie indique D5 à D9 à côté de chaque cavalier ; les repères JP1 à JP5 du schéma et de la nomenclature ne suivent pas l’ordre des signaux.
+
+Côté routeur, ces lignes arrivent sur des **entrées de commande** (actives à l’état bas, avec résistance de rappel) : arrêt du routage, arrêt du routeur, marche forcée, signal heures creuses, rotation des priorités. Le YAML généré par le configurateur les pilote en **drain ouvert** : le module ne fait que tirer la ligne à l’état bas, ou la relâcher. Pour qu’une ligne arrive au routeur, le cavalier correspondant doit être **fermé** (goutte de soudure entre les deux pastilles).
 
 .. tip::
-   Si vous utilisez toutes les sorties D5–D9, fermez les 5 cavaliers. Si vous n’utilisez que certaines sorties, ne fermez que les cavaliers correspondants.
+   Ne fermez **que** les cavaliers listés par le configurateur (en tête du YAML : *Solder jumpers to close*). Ne fermez jamais le cavalier d’une broche que le routeur utilise comme sortie (charge, relais, LED) : le module et le routeur piloteraient la même ligne. Avec le ``config.h`` d’origine, les charges sont sur D5, D6 et D7 en triphasé et sur D5 en monophasé.
 
 Alimentation
 ------------
@@ -153,12 +166,12 @@ Intégration avec la carte principale
 
 Le module mk2Wifi se branche sur les connecteurs **TRIG_EXT** et **UART_EXT** de la carte principale :
 
-- L’une des deux cartes utilise des **barrettes mâles**, l’autre des **barrettes femelles** (au choix de l’utilisateur)
+- La carte principale porte des **barrettes mâles**, le module mk2Wifi des **barrettes femelles**
 - L’alimentation +5 V est fournie par la carte principale via UART_EXT broche 3
 - L’UART (TX/RX) assure la communication série avec l’ATmega328P
 - Le signal DS18B20 est acheminé pour la mesure de température 1-Wire
-- Les signaux GPIO D5–D9 fournissent les sorties de déclenchement/commande
-- Le bus I2C (SCL/SDA) est **local au module mk2Wifi uniquement** — il relie l’ESP32-C6 à l’écran OLED et n’est pas routé vers la carte principale
+- Les lignes D5–D9 pilotent des entrées de commande du routeur (cavalier fermé uniquement)
+- Le bus I2C (SDA = GPIO6, SCL = GPIO7) est **local au module mk2Wifi uniquement** — il relie l’ESP32-C6 à l’écran OLED et n’est pas routé vers la carte principale. Le YAML du configurateur déclare ce bus mais pas l’écran : le composant ``display`` est à ajouter vous-même
 
 .. note::
    La gestion du capteur DS18B20 est sélectionnée par le cavalier **TEMP** sur la carte principale (voir :ref:`cavaliers`). En position 3–centre, c’est l’ESP32-C6 du mk2Wifi qui gère le capteur.
