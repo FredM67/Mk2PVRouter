@@ -250,14 +250,14 @@ Protection Électrique du Système
 .. note::
    **Architecture du système :**
 
-   - Le **Mk2PVRouter lui-même** consomme moins de **5 W** (alimentation électronique uniquement)
+   - Le **Mk2PVRouter lui-même** consomme au plus **10 W**, puissance nominale de son module d’alimentation PS1 (électronique uniquement)
    - Les **circuits de puissance** (triacs) sont **indépendants** et pilotent les charges
    - Chaque **charge** (chauffe-eau, radiateur) conserve sa **propre protection** existante
 
 Le Mk2PVRouter **électronique** nécessite un disjoncteur dédié pour son alimentation :
 
 - **Type** : Disjoncteur divisionnaire bipolaire en monophasé (Phase + Neutre), tétrapolaire en triphasé (3 Phases + Neutre)
-- **Calibre** : 2 A ou 6 A (suffisant pour l’électronique < 5 W)
+- **Calibre** : 2 A ou 6 A (suffisant pour l’électronique, 10 W au plus)
 - **Courbe** : Type C (protection usage courant)
 - **Pouvoir de coupure** : Minimum 4,5 kA (6 kA ou 10 kA recommandé)
 - **Protection différentielle** : le circuit du routeur, comme ceux des charges, doit être en aval d’un dispositif différentiel 30 mA
@@ -282,7 +282,7 @@ Le Mk2PVRouter **électronique** nécessite un disjoncteur dédié pour son alim
 Câblage d’alimentation du Mk2PVRouter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Le routeur lui-même consomme moins de 5 W (alimentation électronique uniquement). Son câble d’alimentation relie le disjoncteur dédié (voir ci-dessus) au connecteur secteur de la carte-mère (PE, N, L1 et éventuellement L2, L3) :
+Le routeur lui-même consomme au plus 10 W, puissance nominale de son module d’alimentation PS1. Son câble d’alimentation relie le disjoncteur dédié (voir ci-dessus) au connecteur secteur de la carte-mère (PE, N, L1 et éventuellement L2, L3) :
 
 - **Section** : 1,5 mm²
 - **Nombre de conducteurs** : 3 fils en monophasé (PE + N + L), 5 fils en triphasé (PE + N + L1 + L2 + L3)
@@ -404,8 +404,8 @@ Le connecteur de puissance de l’étage de sortie a 3 broches : la broche cent
 Chaque étage de sortie constitue un **circuit de puissance indépendant**. Le nombre d’étages de sortie dépend du nombre de charges à piloter, pas de la configuration du routeur :
 
 - **Charge monophasée** (chauffe-eau classique, radiateur) : **1 étage de sortie** par charge, protégé par un disjoncteur bipolaire (16 A ou 20 A selon la puissance).
-- **Charge triphasée sans neutre** (chauffe-eau triphasé en triangle) : **2 étages de sortie** pour la même charge, protégés par un **unique disjoncteur multipolaire** (tripolaire ou tétrapolaire). La troisième phase ne passe par aucun étage de sortie : la charge reste sous tension en permanence, même routeur arrêté. Chaque triac bloqué peut voir la tension entre phases, 400 V (565 V crête), au-delà des 400 V crête de l’optocoupleur MOC3043M de l’étage de sortie : demandez conseil avant ce montage (le dépôt matériel prévoit en variante un MOC3063M 600 V, avec R2 = 360 Ω).
-- **Charge triphasée avec neutre** (chauffe-eau triphasé en étoile) : **3 étages de sortie** pour la même charge, protégés par un **unique disjoncteur tétrapolaire**.
+- **Charge triphasée sans neutre** (chauffe-eau triphasé en triangle, ou en étoile sans neutre raccordé) : **2 étages de sortie** pour la même charge, protégés par un **unique disjoncteur multipolaire** (tripolaire ou tétrapolaire). La troisième phase ne passe par aucun étage de sortie : la charge reste sous tension en permanence, même routeur arrêté. Chaque triac bloqué peut voir la tension entre phases, 400 V (565 V crête), au-delà des 400 V crête de l’optocoupleur MOC3043M de l’étage de sortie. Ce montage demande le triac BTA41-800B ; pour l’optocoupleur, demandez conseil (le dépôt matériel prévoit en variante un MOC3063M 600 V, avec R2 = 360 Ω).
+- **Charge triphasée en étoile avec neutre raccordé** : **3 étages de sortie** pour la même charge, protégés par un **unique disjoncteur tétrapolaire**.
 
 .. warning::
    Pour une charge triphasée, tous les étages de sortie associés doivent être protégés par un **seul disjoncteur multipolaire**. L’utilisation de disjoncteurs unipolaires séparés est dangereuse : en cas de coupure d’une seule phase, la charge triphasée peut être endommagée ou provoquer un déséquilibre.

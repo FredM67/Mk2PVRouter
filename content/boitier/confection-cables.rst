@@ -33,10 +33,9 @@ Fil de mise à la terre
 
 Ce sont des fils passifs qui permettront d’assurer la sécurité des personnes en cas de défaut d’isolation d’un ou plusieurs triacs.
 
-.. admonition:: Longueurs conseillées
+.. admonition:: Nombre de fils
 
-   * boîtier **1** ou **2** sorties => 2 fils
-   * boîtier **3** ou **4** sorties => 4 fils (longueurs variables selon la position de chaque dissipateur)
+   Un fil par dissipateur ; sa longueur dépend de la position du dissipateur.
 
 Les fils devront être dénudés sur environ 5 mm et être sertis directement dans les cosses **sans** soudure.
 

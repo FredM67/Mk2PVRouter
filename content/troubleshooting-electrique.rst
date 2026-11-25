@@ -51,7 +51,7 @@ Causes Possibles
    Les transformateurs :term:`ZMPT101K` (TR1, TR2, TR3) ne sont pas en cause : chacun est alimenté à travers 6 résistances de 20 kΩ en série (environ 2 mA). Même en court-circuit, ils ne peuvent pas faire fondre un fusible de 1 A.
 
 .. note::
-   Seuls les composants traversants que vous avez soudés se vérifient et se remplacent. Un composant :term:`CMS` défectueux n’est pas réparable par l’utilisateur : la carte est à remplacer.
+   Seuls les composants traversants que vous avez soudés se vérifient et se remplacent. Pour un composant :term:`CMS` défectueux, contactez le support : certains peuvent être réparés.
 
 Procédure de Diagnostic
 ~~~~~~~~~~~~~~~~~~~~~~~
