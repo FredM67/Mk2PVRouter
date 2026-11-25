@@ -57,17 +57,18 @@ Composants haute tension
 .. danger::
    Les composants de cette section sont connectés au **secteur** : 230 V entre phase et neutre, 400 V entre phases en triphasé avec neutre. Vérifiez soigneusement chaque soudure.
 
-Éclateurs à gaz GDT0–GDT3 (optionnel, CMS)
+Paires optionnelles GDT0–GDT3 + RV0–RV3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Chaque éclateur GDTx est monté **en série** avec la varistance RVx de même numéro, entre un conducteur et la terre (GDT0 avec RV0 sur le neutre, GDT1 avec RV1 sur L1, GDT2 avec RV2 sur L2, GDT3 avec RV3 sur L3). Montez-les **toujours par paire GDTx + RVx**, ou pas du tout : l’un sans l’autre ne protège rien.
 
-Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
+Un éclateur GDTx est toujours fourni avec sa varistance RVx. Si ces paires sont dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS` —, puis leurs varistances.
 
 #. Soudez **GDT0** (borne N), **GDT1** (L1), **GDT2** (L2)
 #. Soudez **GDT3** (L3) — **triphasé avec neutre uniquement**
+#. Soudez les varistances **RV0**, **RV1**, **RV2** (radial, 300 V), et **RV3** en triphasé avec neutre uniquement (vérifiez la sérigraphie : RV, et non GM)
 
-.. todo:: Photo à fournir — GDT0–GDT3 soudés (composants CMS).
+.. todo:: Photo à fournir — paires GDT0–GDT3 + RV0–RV3 soudées.
 
 Fusibles FS0–FS3
 ~~~~~~~~~~~~~~~~~~
@@ -91,8 +92,8 @@ Le connecteur Phoenix Contact 5 voies (PE, N, L1, L2, L3) pour l’entrée secte
 
 .. todo:: Photo à fournir — connecteur Phoenix Contact 5 voies soudé.
 
-Protection GM1–GM3 et varistances RV0–RV3 (optionnelles)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Protection GM1–GM3
+~~~~~~~~~~~~~~~~~~
 
 .. warning::
    Les composants GM et RV ont un aspect et un pas de broches très similaires. **Vérifiez la sérigraphie** sur le :term:`PCB` avant de souder chaque composant pour ne pas les intervertir. Si vous n’avez que les GM (sans RV), assurez-vous de les placer sur les emplacements **GM** et non sur les emplacements RV.
@@ -102,11 +103,7 @@ Les varistances combinées :term:`GDT`\+\ :term:`MOV` pour la protection de chaq
 #. Soudez les composants **GM1**, **GM2** sur leurs emplacements respectifs (vérifiez la sérigraphie)
 #. Soudez **GM3** — **triphasé avec neutre uniquement**
 
-Si vous montez les paires optionnelles GDTx + RVx (voir ci-dessus), soudez leurs varistances :
-
-#. Soudez les varistances **RV0**, **RV1**, **RV2** (radial, 300 V) sur leurs emplacements respectifs, et **RV3** en triphasé avec neutre uniquement
-
-.. todo:: Photo à fournir — GM1–GM3 et varistances RV0–RV3 soudés (montrer la différence entre GM et RV).
+.. todo:: Photo à fournir — GM1–GM3 soudés (montrer la différence entre les emplacements GM et RV).
 
 Transformateurs de tension TR1–TR3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
