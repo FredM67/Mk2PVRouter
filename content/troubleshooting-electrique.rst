@@ -547,6 +547,6 @@ Dépannage Communication
 
 **Problèmes fréquents :**
 
-- Cavalier V sel. passé en position 5 V : l’ATmega328P pilote alors le module radio, alimenté en 3,3 V, avec des signaux 5 V (destruction possible) ; laissez V sel. dans sa position d’usine (3,3 V)
+- Carte passée en 5 V (cavalier V sel.) : aucun module RF ne peut y fonctionner. Une carte équipée d’un module RF reste en 3,3 V, position d’usine de V sel. ; ce point est vérifié à la commande
 - Interférences (éloigner de charges puissance)
 
