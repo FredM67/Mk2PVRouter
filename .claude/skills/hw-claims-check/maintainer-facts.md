@@ -41,9 +41,6 @@ maintainer confirms something new.
 - A faulty SMD part: contact support, some can be repaired; never "replace the board" (2026-11).
 - Soldering: 350 °C for normal joints, 450 °C for heavy parts; fuse pins briefly (a fuse melts)
   (2026-11). A 30 mA RCD is general electrical practice, fine to state (2026-11).
-- The mainboard schematic note "R16-R26-R36 only for Current Output CTs (old variant)" is a typo
-  for R18-R28-R38 (current-output CT burden, in the D13/D23/D33 holes). R16/R26/R36 are the
-  ZMPT101K burden. Do not follow the note's refs (2026-11).
 
 ## Output stage and loads
 
