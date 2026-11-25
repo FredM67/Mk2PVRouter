@@ -64,7 +64,8 @@ Chaque éclateur GDTx est monté **en série** avec la varistance RVx de même n
 
 Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
 
-#. Soudez **GDT0**, **GDT1**, **GDT2**, et **GDT3** en triphasé avec neutre uniquement
+#. Soudez **GDT0** (borne N), **GDT1** (L1), **GDT2** (L2)
+#. Soudez **GDT3** (L3) — **triphasé avec neutre uniquement**
 
 .. todo:: Photo à fournir — GDT0–GDT3 soudés (composants CMS).
 

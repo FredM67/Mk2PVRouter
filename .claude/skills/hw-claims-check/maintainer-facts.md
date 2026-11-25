@@ -6,8 +6,16 @@ maintainer confirms something new.
 
 ## Mainboard
 
+- The maintainer's uncommitted KiCad changes are the coming production version (2026-11): e.g.
+  JP0 « V sel. » pad 1 = U1 output, pad 3 = +5V, factory bridge 1–centre (`--worktree`), while
+  `origin/main` still has pad 1 = +5V. When the docs and `origin/main` disagree, compare with
+  `--worktree` before calling the docs wrong, and say which version you checked.
+
 - GDT0–GDT3 are optional and soldered by the user, always in pairs with RV0–RV3, for full
   lightning protection (2026-11). In KiCad they are SMD, in the BOM, not DNP.
+- Which GDT (and RV) positions a configuration uses: single-phase N and L1 (GDT0, GDT1);
+  three-phase with neutral all four; 3×230 V without neutral N, L1 and L2 (GDT0–GDT2), the
+  router's N terminal taking one of the phases (2026-11).
 - Fuses FS0–FS3 are soldered directly, no holder. The supplied rating varies with what can be
   sourced: 0.75 A, 1 A or 1.25 A, 250 V. Docs say "same rating and type as the original, as marked
   on the fuse" (2026-11).
