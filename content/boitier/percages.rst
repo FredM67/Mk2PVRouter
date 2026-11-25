@@ -50,7 +50,7 @@ Cependant, ce guide décrira l’implantation la plus classique.
 ~~~~~~~~~~~~~~~~~~
 
 **Dissipateurs**
-   - 2 trous de **3 mm** + 1 trou de **35 mm** par dissipateur
+   - 2 trous de **3,5 mm** + 1 trou de **35 mm** par dissipateur
    - Voir `Perçage du boîtier`_ ci-dessous
 
 **Étages de sortie triac**
@@ -64,7 +64,7 @@ Cependant, ce guide décrira l’implantation la plus classique.
 
 **Prises jack** (CT de mesure)
    - Trous de **8 mm**
-   - 1 prise pour monophasé, 3 prises pour triphasé
+   - 1 prise pour monophasé (2 avec le CT2 optionnel), 3 prises pour triphasé
 
 **Cartes-relais** (si utilisées)
    - 4 trous de **3 mm** par carte (voir :ref:`carte-sortie-relais`)
@@ -113,7 +113,7 @@ Chaque dissipateur doit être percé de trois trous : deux pour la fixation sur
 
 :download:`Gabarit de perçage <../pdf/dissipateur.pdf>`
 
-Comme indiqué, le perçage sera en 3 mm de diamètre. Pour le trou du milieu, percez d’abord entièrement en 3 mm, puis en 4 mm sur une profondeur de 2 mm.
+Les vis sont des M3 ; percez en 3,5 mm de diamètre pour garder un peu de marge.
 
 Ce gabarit devra être imprimé en taille réelle.
 Assurez-vous que les dimensions sont correctes une fois imprimées.

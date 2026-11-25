@@ -8,7 +8,7 @@ Il convient d’apporter un soin tout particulier pour la confection des multipl
 
 Voici la liste des câbles dont nous aurons besoin :
 
-* câble relié à la prise jack (1 pour monophasé, 3 pour triphasé)
+* câble relié à la prise jack (1 pour monophasé, 2 avec le CT2 optionnel, 3 pour triphasé)
 * câble de contrôle (un par étage de sortie : 2 fils pour un étage triac, 3 fils pour une carte-relais)
 * câble de témoin LED (un par étage de sortie et/ou sortie relais).
 * fil de mise à la terre vert/jaune (un par dissipateur)
@@ -33,10 +33,9 @@ Fil de mise à la terre
 
 Ce sont des fils passifs qui permettront d’assurer la sécurité des personnes en cas de défaut d’isolation d’un ou plusieurs triacs.
 
-.. admonition:: Longueurs conseillées
+.. admonition:: Nombre de fils
 
-   * boîtier **1** ou **2** sorties => 2 fils
-   * boîtier **3** ou **4** sorties => 4 fils (longueurs variables selon la position de chaque dissipateur)
+   Un fil par dissipateur ; sa longueur dépend de la position du dissipateur.
 
 Les fils devront être dénudés sur environ 5 mm et être sertis directement dans les cosses **sans** soudure.
 
@@ -48,7 +47,7 @@ Il conviendra donc d’y apporter le plus grand soin, afin de minimiser l’appa
 
 .. admonition:: Longueurs conseillées
 
-   **Monophasé** : 1 câble jack pour CT1, de même longueur que CT1 en triphasé (la carte-mère est la même) : **255 mm** (boîtier 1 ou 2 sorties) ou **315 mm** (boîtier 3 ou 4 sorties)
+   **Monophasé** : 1 câble jack pour CT1, de même longueur que CT1 en triphasé (la carte-mère est la même) : **255 mm** (boîtier 1 ou 2 sorties) ou **315 mm** (boîtier 3 ou 4 sorties). Avec le CT2 optionnel (mesure de la puissance routée), ajoutez un câble jack pour CT2
 
    **Triphasé** :
 

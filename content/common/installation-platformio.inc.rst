@@ -4,7 +4,7 @@ Option B : Installation avec PlatformIO
 Présentation
 ~~~~~~~~~~~~
 
-**PlatformIO** est un environnement de développement plus complet que l’Arduino IDE. Les Readme des deux firmwares recommandent de l’utiliser, avec Visual Studio Code.
+**PlatformIO** est un environnement de développement plus complet que l’Arduino IDE. C’est la méthode recommandée, avec Visual Studio Code ; l’Arduino IDE reste la plus simple à installer.
 
 Avantages
 ~~~~~~~~~

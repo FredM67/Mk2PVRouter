@@ -5,8 +5,8 @@ Bibliothèques pour l’Arduino IDE
 
 Avec l’Arduino IDE, installer ces bibliothèques par le Gestionnaire de bibliothèques (menu : **Outils → Gérer les bibliothèques...**) :
 
-- **OneWire** par Jim Studt et al. (version 2.3.7 ou supérieure)
-- **RFM69** par Felix Rusu, LowPowerLab (version 1.5.3 ou supérieure)
+- **OneWire** par Jim Studt et al. (version 2.3.8 ou supérieure)
+- **RFM69** par Felix Rusu, LowPowerLab (version 1.5.2 ou supérieure)
 - **U8g2** par Oliver Kraus (version 2.36.5 ou supérieure)
 - **SPI** : incluse avec l’Arduino IDE
 
@@ -47,7 +47,7 @@ Après extraction, vous devriez avoir :
    - **config.h** — Configuration générale (carte-mère, afficheur, sorties, relais, sondes…)
    - **calibration.h** — Paramètres d’étalonnage (à remplir après l’étalonnage)
 
-   `config_system.h` (fréquence du réseau, export requis, période d’envoi des données, 30 s au plus) et `config_rf.h` (liaison radio) ne changent que dans des cas particuliers. Le :ref:`configurateur <configurateur-monophase>` écrit les trois fichiers `config.h`, `config_system.h` et `config_rf.h`.
+   `config_system.h` (fréquence du réseau, export requis, période d’envoi des données, 40 s au plus) et `config_rf.h` (liaison radio) ne changent que dans des cas particuliers. Le :ref:`configurateur <configurateur-monophase>` écrit les trois fichiers `config.h`, `config_system.h` et `config_rf.h`.
 
 
 Étape 2 : Configuration du Firmware

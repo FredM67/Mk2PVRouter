@@ -103,11 +103,11 @@ Vérifier les composants d’alimentation :
  #. ☐ **Module PS1 (MPC10-5)** dans le bon sens ?
 
     - Vérifier l’orientation selon le schéma
-    - Vérifier que le point ou l’encoche du module correspond au repère sur le PCB
+    - Vérifier l’orientation du module d’après la sérigraphie de la carte
 
  #. ☐ **Chaîne d’alimentation bien soudée ?**
 
-    - Composants traversants que vous avez soudés : connecteur secteur PWR1, fusibles (Mono : FS0, FS1 ; Tri : FS0 à FS3), module PS1 (les composants CMS, comme le régulateur U1, sont soudés en usine)
+    - Composants traversants que vous avez soudés : connecteur secteur PWR1, fusibles (Mono : FS0, FS1 ; Tri : FS0 à FS3), module PS1, condensateur C1, self FL1, protections GM1–GM3 (les composants CMS, comme le régulateur U1, sont soudés en usine)
     - Soudures brillantes et lisses (pas ternes) ?
 
 .. include:: common/qualite-soudures.inc.rst
@@ -172,7 +172,7 @@ Causes Fréquentes — Résumé
  * - Aucune tension VCC
    - Fusible fondu
    - Trouver le défaut qui l’a fait fondre (voir :ref:`fusible-grille`), puis remplacer le fusible par un fusible de même calibre
- * - Tension VCC faible (<3 V)
+ * - Tension VCC faible (< 3,2 V)
    - Régulateur U1 ou module PS1 défectueux
    - Vérifier l’orientation, remplacer
  * - Tension OK, rien ne fonctionne

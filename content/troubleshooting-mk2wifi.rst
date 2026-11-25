@@ -36,7 +36,7 @@ Le module ne s’allume pas
    #. ☐ **Cavalier V sel. en position 3,3 V ?**
 
       - V sel. ne coupe pas l’alimentation du module : son régulateur est alimenté par le +5 V de UART_EXT broche 3
-      - Mais en position 5 V, les lignes UART et D5–D9 arrivent en 5 V sur l’ESP32-C6, qui peut avoir été endommagé : remettre V sel. en position 3,3 V avant tout nouvel essai
+      - Mais en position 5 V, les lignes UART arrivent en 5 V sur l’ESP32-C6 (et D5–D9 si leurs cavaliers à souder sont fermés sur le module), qui peut avoir été endommagé : remettre V sel. en position 3,3 V avant tout nouvel essai
       - Voir :ref:`cavaliers`
 
 Programmation USB-C impossible
@@ -51,11 +51,10 @@ Programmation USB-C impossible
       - Le module **doit** être déconnecté de la carte principale pendant la programmation USB-C
       - Les deux alimentations +5 V (USB et carte principale) ne sont pas isolées
 
-   #. ☐ **Mode téléchargement activé ?**
+   #. ☐ **Mode téléchargement activé ?**
 
-      - Maintenir le bouton **Boot** (SW1) enfoncé pendant la mise sous tension (branchement du câble USB-C)
+      - Si le module n’est pas détecté ou si le téléversement échoue, maintenir le bouton **Boot** (SW1) enfoncé pendant la mise sous tension (branchement du câble USB-C)
       - Relâcher le bouton après la connexion
-      - Sans cette manipulation, le module démarre en mode normal (pas en mode programmation)
 
    #. ☐ **Câble USB-C avec données ?**
 
@@ -150,7 +149,7 @@ La mise à jour OTA échoue
 **Si le module ne répond plus après un OTA raté :**
 
 - Revenir à la programmation par **USB-C**, routeur hors tension et **module débranché de la carte principale** (voir procédure initiale dans :ref:`installation-mk2wifi`) : ne jamais brancher le câble USB-C sur le module tant qu’il est enfiché sur la carte principale
-- Maintenir le bouton **Boot** (SW1) enfoncé pour entrer en mode téléchargement
+- Si le téléversement échoue, maintenir le bouton **Boot** (SW1) enfoncé au branchement pour forcer le mode téléchargement
 
 Écran OLED vide ou incorrect
 ----------------------------

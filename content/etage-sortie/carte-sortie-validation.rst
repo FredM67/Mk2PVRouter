@@ -128,7 +128,7 @@ Il est recommandé de noter sur un papier (à conserver avec la carte) :
 - **Valeur R1** : _____ Ω (220 Ω pour 3,3 V, 390 Ω pour 5 V)
 - **Valeur R2** : _____ Ω (330 Ω)
 - **Valeur R3** : _____ Ω (360 Ω)
-- **Référence :term:`triac <Triac>`** : __________ (ex :  BTA41-600B)
+- **Référence :term:`triac <Triac>`** : __________ (BTA41-600B ou BTA41-800B)
 - **Charge testée** : _____ W (ex : 100 W)
 - **Durée test** : _____ minutes
 - **Résultat** : ☐ ✅ Validée  ☐ ❌ Défectueuse

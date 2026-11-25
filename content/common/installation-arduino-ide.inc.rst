@@ -204,8 +204,8 @@ Installation des bibliothèques du firmware triphasé
 
 Pour chacune des bibliothèques ci-dessous, taper son nom dans le champ de recherche, choisir la bonne (auteur indiqué) puis cliquer sur **« Installer »** :
 
-- **OneWire** par Jim Studt et al. (version 2.3.7 ou supérieure) : sondes de température DS18B20
-- **RFM69** par Felix Rusu, LowPowerLab (version 1.5.3 ou supérieure) : module radio RFM69CW
+- **OneWire** par Jim Studt et al. (version 2.3.8 ou supérieure) : sondes de température DS18B20
+- **RFM69** par Felix Rusu, LowPowerLab (version 1.5.2 ou supérieure) : module radio RFM69CW
 - **SPI** : incluse avec l’Arduino IDE, rien à installer
 
 Elles sont toutes nécessaires, même sans sonde de température ni module RF : le firmware les inclut toujours, et le code inutilisé est éliminé à la compilation. Sans l’une d’elles, la compilation échoue. Voir le `Readme du firmware <https://github.com/FredM67/PVRouter-3-phase/blob/dev/Mk2_3phase_RFdatalog_temp/Readme.md#bibliothèques-requises-pour-larduino-ide>`_.

@@ -20,7 +20,7 @@ Quel est votre type de raccordement ?
 
 .. admonition:: À retenir
 
-   Peu importe l’installation de production d’électricité (monophasée, biphasée, triphasée), le routeur **DOIT** correspondre au type de raccordement au réseau électrique (Enedis ou régie locale).
+   Peu importe l’installation de production d’électricité (monophasée ou triphasée), le routeur **DOIT** correspondre au type de raccordement au réseau électrique (Enedis ou régie locale).
 
    **Exemple** : Si votre raccordement au réseau est triphasé, vous devez utiliser un routeur triphasé, même si votre production est monophasée.
 
