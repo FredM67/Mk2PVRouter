@@ -121,7 +121,7 @@ Ce cavalier relie la **terre de protection** (Earth, provenant du réseau élect
 .. todo:: Photo à fournir — cavalier fil GND_LINK soudé entre les deux pastilles.
 
 .. note::
-   Lorsque GND_LINK est **ouvert**, le circuit basse tension est entièrement isolé de la terre grâce à l’isolation galvanique du module d’alimentation MPC10-5. Lorsqu’il est **fermé**, la masse basse tension est référencée à la terre de protection.
+   Lorsque GND_LINK est **ouvert**, la carte ne relie pas la masse basse tension (GND) à la terre de protection. Lorsqu’il est **fermé**, la masse basse tension est référencée à la terre de protection.
 
    La configuration recommandée dépend de votre installation. En cas de doute, laissez le cavalier **ouvert** — il pourra toujours être soudé ultérieurement.
 

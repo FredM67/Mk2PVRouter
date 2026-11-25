@@ -78,7 +78,7 @@ Composition d’un kit pour étage de sortie triac
 Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 
 * Un **circuit imprimé** qui distingue clairement les zones de basse et de haute tension de chaque côté.
-* Une **résistance R1**, dont la valeur est choisie en fonction de la tension nominale du système et du modèle d’:term:`optocoupleur <Optocoupleur>` utilisé.
+* Une **résistance R1**, dont la valeur dépend de la tension d’alimentation de la carte-mère (3,3 V ou 5 V).
 * Une **résistance R2**, sélectionnée selon le modèle d’optocoupleur.
 * Une **résistance R3**.
 * Un **support** :term:`DIL` pour l’optocoupleur MOC3043M (U1), comportant deux rangées de trois broches.

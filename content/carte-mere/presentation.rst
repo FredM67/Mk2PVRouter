@@ -295,7 +295,7 @@ La carte universelle est conçue pour fonctionner avec deux types de capteurs de
    Ces marquages sont importants lors du raccordement aux connecteurs CT de la carte (voir :ref:`installation-finale`).
 
 **CT à sortie tension (333 mV)** — recommandé
-   Les capteurs à sortie tension (par ex. SCT-023R-005 ou équivalent 333 mV) intègrent leur propre résistance de :term:`burden <Burden>`. Le signal de tension est directement compatible avec l’entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n’est nécessaire** sur la carte.
+   Les capteurs à sortie tension intègrent leur propre résistance de :term:`burden <Burden>`. Le signal de tension est directement compatible avec l’entrée :term:`ADC` du microcontrôleur. **Aucun composant supplémentaire n’est nécessaire** sur la carte.
 
    C’est le type de CT recommandé pour la carte universelle.
 
@@ -435,14 +435,14 @@ Chaque phase est protégée, par rapport au neutre, par un module combiné :term
 
 **Niveau 2 — Fusibles FS0–FS3** (obligatoire)
 
-Les fusibles protègent l’installation contre les surintensités. Ils sont dimensionnés pour couper en cas de court-circuit sur la carte, par exemple une varistance en fin de vie ou un défaut du module d’alimentation PS1 ou du condensateur C1.
+Les fusibles protègent l’installation contre les surintensités : chacun coupe son conducteur en cas de défaut sur la carte.
 
 **Niveau 3 — Varistances RV0–RV3 et éclateurs GDT0–GDT3** (optionnel, pour une protection complète contre la foudre)
 
 Ce niveau de protection supplémentaire est recommandé pour les installations exposées aux surtensions (zones rurales, lignes aériennes, régions à forte activité orageuse). Chaque varistance :term:`MOV` RVx est montée **en série** avec l’éclateur :term:`GDT` de même numéro (GDTx), après les fusibles, entre un conducteur et la terre : RV0 + GDT0 sur le neutre, RV1 + GDT1 sur L1, RV2 + GDT2 sur L2, RV3 + GDT3 sur L3. Alors que GM1–GM3 protègent entre phase et neutre, ces paires protègent entre les conducteurs et la terre.
 
 .. note::
-   Les composants optionnels (RV0–RV3, GDT0–GDT3) ne sont pas fournis dans le kit de base. Ils peuvent être ajoutés ultérieurement sans modifier le reste du circuit, mais **toujours par paire RVx + GDTx** : montés en série, l’un sans l’autre n’a aucun effet.
+   Les composants optionnels (RV0–RV3, GDT0–GDT3) sont soudés par l’utilisateur. Ils peuvent être ajoutés ultérieurement sans modifier le reste du circuit, mais **toujours par paire RVx + GDTx** : montés en série, l’un sans l’autre n’a aucun effet.
 
 Rails d’alimentation
 ~~~~~~~~~~~~~~~~~~~~~

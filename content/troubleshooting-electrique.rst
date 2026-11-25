@@ -26,8 +26,8 @@ Causes Possibles
 
    #. ☐ **Erreur de câblage**
 
-      - Phase raccordée sur la borne N du routeur, ou 400 V entre une phase et N (neutre et phase intervertis en triphasé)
-      - Les composants de protection (GM1–GM3, et RV0–RV3 si montées) conduisent alors et font fondre les fusibles
+      - 400 V entre la borne N et une borne de phase, par exemple une phase raccordée sur la borne N en triphasé
+      - Les protections GM1–GM3, montées entre chaque phase et le neutre, conduisent alors et font fondre les fusibles
 
    #. ☐ **Pont de soudure sur pistes haute tension**
 
@@ -186,7 +186,7 @@ Vérifications CT (Current Transformer)
 
  #. ☐ **Connexion CT sur PCB correcte ?**
 
-    - Connecteur jack bien enfoncé
+    - Connecteur Molex du CT bien enfoncé sur la carte-mère
     - Pas de faux contact
 
 Vérifications Électroniques
@@ -310,20 +310,15 @@ LED Toujours Allumée
 
 **Causes possibles :**
 
-#. **Triac en court-circuit**
-
-   - Triac défectueux ou détruit
-   - Mesurer la résistance MT1-MT2 (doit être >1 MΩ à froid)
-
-#. **Optocoupleur défectueux**
-
-   - MOC3041/MOC3043 en court-circuit
-   - Remplacer le composant
+La LED suit le signal de commande de la carte-mère : sur l’étage de sortie, elle est branchée en parallèle de l’entrée de l’:term:`optocoupleur <Optocoupleur>` (connecteurs J2 et J3). Un triac ou un optocoupleur en court-circuit ne l’allume donc pas.
 
 #. **Problème firmware**
 
    - Entrée de marche forcée active (``OVERRIDE_PIN_PRESENT``), marche forcée programmée en heures creuses (``DUAL_TARIFF``) ou commande depuis Home Assistant via le module mk2Wifi
-   - Au démarrage, le moniteur série indique les fonctions présentes : lignes « Override feature is present », « Dual-tariff capability is present »
+   - Au démarrage, le moniteur série indique les fonctions présentes : lignes « Override feature is present », « Dual-tariff capability is present »
+
+.. note::
+   Si la charge chauffe en permanence alors que la LED est **éteinte**, cherchez côté puissance : triac en court-circuit (mesurez MT1-MT2 hors tension), ou contacteur heures creuses câblé en parallèle de l’étage de sortie et resté fermé.
 
 LED Clignote Bizarrement
 ------------------------
@@ -337,21 +332,18 @@ LED Clignote Bizarrement
  * - Comportement
    - Signification
    - Action
- * - Toutes éteintes permanent
+ * - Éteinte en permanence
    - Pas d’excédent OU routeur non fonctionnel
    - Vérifier la production solaire et le moniteur série
- * - Toutes allumées permanent
-   - Excédent max OU charge saturée
-   - Normal si chauffe-eau à température
+ * - Allumée en permanence
+   - Sortie commandée à pleine puissance
+   - Normal avec un fort excédent ; le thermostat peut couper la charge sans éteindre la LED
  * - Allumée la plupart du temps
    - Beaucoup d’excédent routé
    - Normal en pleine production
  * - Allumée une petite partie du temps
    - Peu d’excédent routé
    - Normal début/fin journée
- * - Clignotement erratique
-   - Mesures instables
-   - Vérifier le CT et l’étalonnage
 
 🔥 Problèmes de Routage — Charge ne Chauffe Pas
 ===============================================

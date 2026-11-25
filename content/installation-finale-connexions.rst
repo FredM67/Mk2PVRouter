@@ -206,7 +206,7 @@ Procédure d’Installation des :term:`CT`
 #. **Placer le CT autour du câble de phase UNIQUEMENT**
 
    - Un seul conducteur doit passer dans le :term:`CT`
-   - Ne pas passer plusieurs câbles ensemble (sauf si intentionnel pour mesure différentielle)
+   - Ne pas passer plusieurs câbles ensemble
 
 #. **Vérifier le sens** : Flèche vers la maison pour les :term:`CT` réseau
 
@@ -391,7 +391,7 @@ Le connecteur de puissance de l’étage de sortie a 3 broches : la broche cent
    Le :term:`triac <Triac>` ne coupe que la **phase**. Le neutre reste connecté en permanence à la charge. Pour intervenir sur la charge, il faut couper son disjoncteur dédié.
 
 .. danger::
-   **Le thermostat du chauffe-eau reste en série.** L’étage de sortie se place en série avec le thermostat et sa sécurité, sans jamais les shunter. Un triac défaillant reste le plus souvent en court-circuit (charge alimentée en permanence) : seuls le thermostat et sa sécurité limitent alors la température de l’eau.
+   **Le thermostat du chauffe-eau reste en série.** L’étage de sortie se place en série avec le thermostat et sa sécurité, sans jamais les shunter. Un triac défaillant peut rester en court-circuit (charge alimentée en permanence) : seuls le thermostat et sa sécurité limitent alors la température de l’eau.
 
 .. note::
    Beaucoup de chauffe-eau sont commandés par un contacteur heures creuses. Si l’étage de sortie est placé après ce contacteur, la charge n’est alimentée que lorsque le contacteur est fermé (heures creuses ou marche forcée) : le routage ne fonctionne pas en journée.

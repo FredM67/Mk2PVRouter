@@ -19,7 +19,7 @@ Bienvenue dans la documentation du Mk2PVRouter !
 
 .. admonition:: À retenir
 
-   Peu importe l’installation de production d’électricité (monophasée, biphasée, triphasée), le routeur **DOIT** correspondre au type de raccordement au réseau électrique.
+   Peu importe l’installation de production d’électricité (monophasée ou triphasée), le routeur **DOIT** correspondre au type de raccordement au réseau électrique.
 
    **Exemple** :
 

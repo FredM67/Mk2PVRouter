@@ -64,7 +64,7 @@ Cependant, ce guide décrira l’implantation la plus classique.
 
 **Prises jack** (CT de mesure)
    - Trous de **8 mm**
-   - 1 prise pour monophasé, 3 prises pour triphasé
+   - 1 prise pour monophasé (2 avec le CT2 optionnel), 3 prises pour triphasé
 
 **Cartes-relais** (si utilisées)
    - 4 trous de **3 mm** par carte (voir :ref:`carte-sortie-relais`)

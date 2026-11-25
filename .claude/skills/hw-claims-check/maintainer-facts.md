@@ -61,4 +61,5 @@ maintainer confirms something new.
 - mk2Wifi (ESP32-C6, not C3): first flash over USB, then OTA. The USB cable must NOT be connected
   while the module is plugged on the mainboard. Whether the C6 flashes without holding Boot:
   open question.
-- Split-phase is not supported; 3×230 V without neutral is not documented for now.
+- Split-phase is not supported. 3×230 V without neutral is documented for the hardware (router N
+  terminal on one phase, CT1 and CT2, GDT0–GDT2); the firmware has no mode for it (2026-11).

@@ -75,7 +75,7 @@ Procédure
 
 #. **Connectez le câble USB-C** entre le module et votre ordinateur
 
-#. **Passez en mode téléchargement** : Maintenez le bouton **Boot** (SW1) enfoncé (GPIO9 à l’état bas) pendant la mise sous tension, puis relâchez
+#. **Si le module n’est pas détecté, passez en mode téléchargement** : maintenez le bouton **Boot** (SW1) enfoncé (GPIO9 à l’état bas) pendant la mise sous tension, puis relâchez
 
    .. tip::
       Il s’agit du petit bouton-poussoir marqué « Boot » sur la carte. Si le module est déjà alimenté par USB, débranchez et rebranchez le câble USB-C tout en maintenant le bouton enfoncé.

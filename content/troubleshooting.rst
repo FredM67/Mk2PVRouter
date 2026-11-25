@@ -103,7 +103,7 @@ Vérifier les composants d’alimentation :
  #. ☐ **Module PS1 (MPC10-5)** dans le bon sens ?
 
     - Vérifier l’orientation selon le schéma
-    - Vérifier que le point ou l’encoche du module correspond au repère sur le PCB
+    - Vérifier l’orientation du module d’après la sérigraphie de la carte
 
  #. ☐ **Chaîne d’alimentation bien soudée ?**
 
