@@ -31,8 +31,9 @@ firmware win, and the disagreement is worth reporting.
 uncommitted work in progress; the scripts read `origin/main` through `git show` by default.
 Run `git -C <kicad repo> fetch` first if it may be stale. `<kicad repo>` is a checkout of
 PVRouter-KiCad, or this repo's `hardware` submodule after `git submodule update --init hardware`
-(never commit a submodule pointer). Use `--worktree` only when the
-maintainer asks about unreleased changes.
+(never commit a submodule pointer). The maintainer's uncommitted changes are
+the coming production board (see maintainer-facts.md): when the docs disagree with `origin/main`,
+run the same query with `--worktree` before calling the docs wrong, and say which version you checked.
 
 ## The rule for every claim
 
