@@ -431,7 +431,7 @@ La carte intègre plusieurs niveaux de protection contre les surtensions transit
 
 **Niveau 1 — Modules de protection GM1–GM3** (obligatoire)
 
-Chaque phase est protégée par un module combiné :term:`GDT`\+\ :term:`MOV`. Ces modules constituent la protection principale des circuits de mesure. GM1 protège la phase L1, GM2 la phase L2, GM3 la phase L3 (triphasé avec neutre uniquement).
+Chaque phase est protégée, par rapport au neutre, par un module combiné :term:`GDT`\+\ :term:`MOV`. Ces emplacements sont toujours équipés ; selon l’approvisionnement, une simple varistance peut y remplacer le module combiné, difficile à trouver en petites quantités. GM1 protège la phase L1, GM2 la phase L2, GM3 la phase L3 (triphasé avec neutre uniquement).
 
 **Niveau 2 — Fusibles FS0–FS3** (obligatoire)
 

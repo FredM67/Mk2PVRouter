@@ -243,7 +243,7 @@ Termes Techniques Avancés
    MOV
      | *Metal Oxide Varistor* ou varistance à oxyde métallique.
      | Composant de protection qui écrête les surtensions en absorbant l’énergie excédentaire.
-     | Les varistances RV0–RV3 et les modules GM1–GM3 protègent les circuits de mesure du Mk2PVRouter.
+     | Sur la carte universelle, GM1–GM3 protègent entre chaque phase et le neutre ; les varistances optionnelles RV0–RV3, toujours montées avec l’éclateur :term:`GDT` de même numéro, protègent entre chaque conducteur et la terre.
 
    TVS
      | *Transient Voltage Suppressor* ou suppresseur de surtension transitoire.

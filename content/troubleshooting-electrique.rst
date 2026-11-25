@@ -27,7 +27,7 @@ Causes Possibles
    #. ☐ **Erreur de câblage**
 
       - Phase raccordée sur la borne N du routeur, ou 400 V entre une phase et N (neutre et phase intervertis en triphasé)
-      - Les varistances (RV0–RV3 : 300 V ; GM1–GM3 : 320 V) conduisent alors et font fondre les fusibles
+      - Les composants de protection (GM1–GM3, et RV0–RV3 si montées) conduisent alors et font fondre les fusibles
 
    #. ☐ **Pont de soudure sur pistes haute tension**
 
@@ -547,6 +547,6 @@ Dépannage Communication
 
 **Problèmes fréquents :**
 
-- Cavalier V sel. passé en position 5 V : l’ATmega328P pilote alors le module radio, alimenté en 3,3 V, avec des signaux 5 V (destruction possible) ; laissez V sel. dans sa position d’usine (3,3 V)
+- Carte passée en 5 V (cavalier V sel.) : aucun module RF ne peut y fonctionner. Une carte équipée d’un module RF reste en 3,3 V, position d’usine de V sel. ; ce point est vérifié à la commande
 - Interférences (éloigner de charges puissance)
 

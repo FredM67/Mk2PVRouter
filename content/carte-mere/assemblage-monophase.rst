@@ -53,16 +53,17 @@ Composants haute tension
 .. danger::
    Les composants de cette section sont connectés au **secteur 230 V**. Vérifiez soigneusement chaque soudure.
 
-Éclateurs à gaz GDT0, GDT1 (optionnel, CMS)
+Paires optionnelles GDT0 + RV0, GDT1 + RV1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Chaque éclateur GDTx est monté **en série** avec la varistance RVx de même numéro, entre un conducteur et la terre (GDT0 avec RV0 sur le neutre, GDT1 avec RV1 sur L1). Montez-les **toujours par paire GDTx + RVx**, ou pas du tout : l’un sans l’autre ne protège rien.
 
-Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS`.
+Un éclateur GDTx est toujours fourni avec sa varistance RVx. Si ces paires sont dans votre kit, soudez les éclateurs à gaz **avant** les autres composants haute tension — ce sont des composants :term:`CMS` —, puis leurs varistances.
 
 #. Soudez **GDT0** et **GDT1**
+#. Soudez les varistances **RV0** et **RV1** (radial, 300 V) sur leurs emplacements respectifs (vérifiez la sérigraphie : RV, et non GM)
 
-.. todo:: Photo à fournir — GDT0 et GDT1 soudés (composants CMS).
+.. todo:: Photo à fournir — paires GDT0 + RV0 et GDT1 + RV1 soudées.
 
 Fusibles FS0, FS1
 ~~~~~~~~~~~~~~~~~~~
@@ -86,21 +87,17 @@ Le connecteur Phoenix Contact 3 voies (PE, N, L1) pour l’entrée secteur.
 
 .. todo:: Photo à fournir — connecteur Phoenix Contact 3 voies soudé.
 
-Protection GM1 et varistances RV0, RV1 (optionnelles)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Protection GM1
+~~~~~~~~~~~~~~
 
 .. warning::
-   Les composants GM et RV ont un aspect et un pas de broches très similaires. **Vérifiez la sérigraphie** sur le :term:`PCB` avant de souder chaque composant pour ne pas les intervertir. Si vous n’avez que les GM (sans RV), assurez-vous de les placer sur les emplacements **GM** et non sur les emplacements RV.
+   Les composants GM et les varistances ont un aspect et un pas de broches très similaires. **Vérifiez la sérigraphie** sur le :term:`PCB` : les composants de la protection de base, modules combinés ou simples varistances, vont sur les emplacements **GM**. Les emplacements **RV** ne reçoivent que les varistances des paires optionnelles GDTx + RVx.
 
-La varistance combinée :term:`GDT`\+\ :term:`MOV` pour la protection de la phase L1.
+La protection entre la phase L1 et le neutre. Cet emplacement fait partie de la protection de base : il est toujours équipé. Selon l’approvisionnement, le kit fournit une varistance combinée :term:`GDT`\+\ :term:`MOV` (GM), difficile à trouver en petites quantités, ou une simple varistance, qui se soude de la même façon.
 
-#. Soudez le composant **GM1** sur son emplacement (vérifiez la sérigraphie)
+#. Soudez le composant fourni (GM ou varistance) sur l’emplacement **GM1** (vérifiez la sérigraphie)
 
-Si vous montez les paires optionnelles GDTx + RVx (voir ci-dessus), soudez leurs varistances :
-
-#. Soudez les varistances **RV0** et **RV1** (radial, 300 V) sur leurs emplacements respectifs
-
-.. todo:: Photo à fournir — GM1 et varistances RV0/RV1 soudés (montrer la différence entre GM et RV).
+.. todo:: Photo à fournir — GM1 soudé (montrer la différence entre les emplacements GM et RV).
 
 Transformateur de tension TR1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
