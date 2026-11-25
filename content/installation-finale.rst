@@ -57,9 +57,7 @@ Recommandation Forte
    - Assurance responsabilité civile professionnelle
    - Attestation de conformité pour votre assurance
 
-   **Coût estimé :** 200–500 € pour l’installation complète
-
-   **Ce coût est DÉRISOIRE comparé aux risques encourus.**
+   **Son intervention coûte peu au regard des risques encourus.**
 
 Prérequis Avant Installation
 -----------------------------

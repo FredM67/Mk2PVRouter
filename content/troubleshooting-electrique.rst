@@ -89,8 +89,7 @@ Procédure de Diagnostic
 
 #. **Remplacement fusible**
 
-    - Utiliser **même valeur** que fusible d’origine : 1 A, 250 V (FS0–FS3)
-    - Type : temporisé (slow-blow) recommandé
+    - Utiliser un fusible identique à celui d’origine (FS0–FS3) : même calibre et même type, marqués sur le fusible (de 0,75 à 1,25 A selon l’approvisionnement)
     - ⚠️ Jamais de fusible plus fort !
 
 Tensions Incorrectes aux Points de Test
@@ -110,10 +109,10 @@ Valeurs de Référence
    - Tolérance
  * - TP3 « VCC » (+3,3 V)
    - 3,3 V
-   - ±0,2 V (3,1–3,5 V)
+   - ±0,1 V (3,2–3,4 V)
  * - TP4 « +5V »
    - 5,0 V
-   - ±0,3 V (4,7–5,3 V)
+   - ±0,2 V (4,8–5,2 V)
  * - VREF (point de test V_REF, firmware lancé)
    - 1,1 V
    - ±0,1 V (1,0–1,2 V)
@@ -210,29 +209,9 @@ Vérifications Électroniques
 Valeurs de Référence
 ~~~~~~~~~~~~~~~~~~~~
 
-**Test de cohérence :**
+**Test de cohérence :** après étalonnage, comparez la puissance affichée par le routeur à une mesure de référence (wattmètre, compteur) avec une charge résistive connue. Un écart de l’ordre de 20 % ou plus indique un problème matériel.
 
-.. list-table:: Tests de validation mesures
- :widths: 40 30 30
- :header-rows: 1
-
- * - Condition
-   - Valeur Attendue
-   - Tolérance
- * - Sans charge (0 W réel)
-   - 0 W ±10 W
-   - Normal
- * - Avec charge 2 000 W
-   - 1 900–2100 W
-   - ±5% après étalonnage
- * - Injection 3 000 W
-   - −2 850 à −3 150 W
-   - ±5%
- * - Écart >20%
-   - Problème matériel
-   - À investiguer
-
-**Si écart >20% après étalonnage :**
+**Causes possibles d’un tel écart :**
 
 - CT défectueux (rare mais possible)
 - Burden résistances mauvaise valeur
@@ -250,13 +229,11 @@ Valeurs de Référence
 
    - Utiliser une résistance pure (radiateur, chauffe-eau)
    - Pas de charge à découpage (ordinateur, LED)
-   - Puissance doit être stable ±2%
+   - Puissance stable pendant la mesure
 
 #. **Mesure de référence inexacte**
 
-   - Pince ampèremétrique : ±3% précision minimum
-   - Wattmètre : Classe 1 minimum
-   - Multimètre basique insuffisant
+   - Utiliser un appareil de référence fiable (wattmètre, compteur)
 
 #. **Interférences**
 
