@@ -67,7 +67,7 @@ Si ces paires sont fournies dans votre kit, soudez les éclateurs à gaz **avant
 Fusibles FS0, FS1
 ~~~~~~~~~~~~~~~~~~~
 
-Les fusibles de protection de la phase et du neutre (SET T1,25 A 250 V, temporisés).
+Les fusibles de protection de la phase et du neutre (250 V ; de 0,75 à 1,25 A selon l’approvisionnement).
 
 #. Soudez le fusible **FS0** (neutre)
 #. Soudez le fusible **FS1** (phase L1)

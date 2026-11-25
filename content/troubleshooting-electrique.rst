@@ -89,7 +89,7 @@ Procédure de Diagnostic
 
 #. **Remplacement fusible**
 
-    - Utiliser un fusible identique à l’origine : T1,25 A 250 V, temporisé (FS0–FS3)
+    - Utiliser un fusible identique à celui d’origine (FS0–FS3) : même calibre et même type, marqués sur le fusible (de 0,75 à 1,25 A selon l’approvisionnement)
     - ⚠️ Jamais de fusible plus fort !
 
 Tensions Incorrectes aux Points de Test
