@@ -15,6 +15,9 @@ maintainer confirms something new.
   lightning protection (2026-11). In KiCad they are SMD, in the BOM, not DNP.
 - A board running on 5 V (V sel. cut on one side, soldered on the other) can never take an RF
   module; this is checked when the order is placed (2026-11).
+- GM1–GM3 (IsoMOV, MOV + GDT in one package, phase to neutral) are the basic protection, never
+  optional. They are hard to find in small quantities: depending on supply, plain varistors are
+  delivered for the GM positions instead. Only the GDTx + RVx pairs are optional (2026-11).
 - Which GDT (and RV) positions a configuration uses: single-phase N and L1 (GDT0, GDT1);
   three-phase with neutral all four; 3×230 V without neutral N, L1 and L2 (GDT0–GDT2), the
   router's N terminal taking one of the phases (2026-11).

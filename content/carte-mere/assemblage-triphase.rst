@@ -96,12 +96,12 @@ Protection GM1–GM3
 ~~~~~~~~~~~~~~~~~~
 
 .. warning::
-   Les composants GM et RV ont un aspect et un pas de broches très similaires. **Vérifiez la sérigraphie** sur le :term:`PCB` avant de souder chaque composant pour ne pas les intervertir. Si vous n’avez que les GM (sans RV), assurez-vous de les placer sur les emplacements **GM** et non sur les emplacements RV.
+   Les composants GM et les varistances ont un aspect et un pas de broches très similaires. **Vérifiez la sérigraphie** sur le :term:`PCB` : les composants de la protection de base, modules combinés ou simples varistances, vont sur les emplacements **GM**. Les emplacements **RV** ne reçoivent que les varistances des paires optionnelles GDTx + RVx.
 
-Les varistances combinées :term:`GDT`\+\ :term:`MOV` pour la protection de chaque phase.
+La protection entre chaque phase et le neutre. Ces emplacements font partie de la protection de base : ils sont toujours équipés. Selon l’approvisionnement, le kit fournit pour eux des varistances combinées :term:`GDT`\+\ :term:`MOV` (GM), difficiles à trouver en petites quantités, ou de simples varistances, qui se soudent de la même façon.
 
-#. Soudez les composants **GM1**, **GM2** sur leurs emplacements respectifs (vérifiez la sérigraphie)
-#. Soudez **GM3** — **triphasé avec neutre uniquement**
+#. Soudez les composants fournis (GM ou varistances) sur les emplacements **GM1** et **GM2** (vérifiez la sérigraphie)
+#. Soudez celui de l’emplacement **GM3** — **triphasé avec neutre uniquement**
 
 .. todo:: Photo à fournir — GM1–GM3 soudés (montrer la différence entre les emplacements GM et RV).
 
