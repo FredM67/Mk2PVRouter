@@ -27,7 +27,7 @@ Causes Possibles
    #. ☐ **Erreur de câblage**
 
       - Phase raccordée sur la borne N du routeur, ou 400 V entre une phase et N (neutre et phase intervertis en triphasé)
-      - Les varistances (RV0–RV3 : 300 V ; GM1–GM3 : 320 V) conduisent alors et font fondre les fusibles
+      - Les composants de protection (GM1–GM3, et RV0–RV3 si montées) conduisent alors et font fondre les fusibles
 
    #. ☐ **Pont de soudure sur pistes haute tension**
 
