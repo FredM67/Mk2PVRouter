@@ -84,7 +84,7 @@ Ce kit contient tout le nécessaire pour assembler un circuit de sortie :
 * Un **support** :term:`DIL` pour l’optocoupleur MOC3043M (U1), comportant deux rangées de trois broches.
 * Deux paires de **connecteurs type Molex** 2 broches, pour J2 et J3. Ces deux connecteurs sont câblés en parallèle : l’un reçoit le signal de commande de la carte-mère, l’autre peut alimenter une carte indicateur LED (voir :ref:`carte-indicateur`). Sur chacun, la broche 1 est la masse et la broche 2 le signal (+).
 * Un **isolant** qui assure à la fois l’isolation électrique et la conduction thermique.
-* Un **triac** BTA41-600B (Q1, boîtier TO-218).
+* Un **triac** BTA41-600B ou BTA41-800B (Q1, boîtier TO-218). La version 800 V est nécessaire pour un chauffe-eau triphasé câblé en triangle.
 * Un **connecteur de puissance** (J1, Phoenix Contact MSTBVA 2,5 au pas de 5,08 mm) à trois broches, la broche centrale étant inutilisée.
 * Un **morceau de cuivre massif** de 1,5 mm² de section.
 

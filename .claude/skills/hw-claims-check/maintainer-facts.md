@@ -32,6 +32,11 @@ maintainer confirms something new.
   depends on the order (2026-11).
 - GND_LINK: when to close it is not settled; keep "open by default, see the jumpers page".
 - High-current joints are soldered at about 450 °C (confirmed).
+- Every THT part is soldered by the user (C1, FL1, GM1–GM3, PS1, PWR1, fuses…); IC1 sits in a
+  socket and comes ready for a firmware upload (bootloader in place) (2026-11).
+- JP1 « SDA » / JP2 « SCL » are open: the user solders 1–centre (L3 measurement) or 3–centre
+  (I2C). JP3 « IRQ » and JP41 « NSS » are open by default (2026-11).
+- Usual tolerances are fine for test points (3.3 V ±0.1 V, 5 V ±0.2 V, VREF 1.0–1.2 V) (2026-11).
 
 ## Output stage and loads
 
@@ -42,6 +47,11 @@ maintainer confirms something new.
 - If the off-peak boost is not driven by the router, the off-peak contactor is wired in parallel
   with the output stage; the thermostat stays in series (2026-11).
 - MOC part supplied with the BTA41-800B: open question, waiting for the maintainer.
+- Triac supplied: BTA41-600B or BTA41-800B; the 800 V part is needed for a delta-wired water
+  heater (2026-11).
+- CT arrows: grid CT towards the house, diversion CT towards the load (2026-11).
+- Diversion CT: closed toroid inside the box on old boards; on the universal board a clip-on CT
+  (333 mV variants still being researched) (2026-11).
 
 ## Enclosure and assembly
 
@@ -53,6 +63,11 @@ maintainer confirms something new.
 - OLED: cut-out in the lid or a remote display, the user's choice.
 - Only M3 screws and nuts; M4 is no longer used (2026-11).
 - Torque: leave "couple indiqué par le fabricant" as is.
+- Heatsink fixing: M3 screws, holes drilled 3.5 mm for some room; no 4 mm step. The other hole
+  sizes in percages.rst are correct (2026-11).
+- Cable lengths in confection-cables.rst were measured by the maintainer (2026-11).
+- Heatsink statements in troubleshooting (paste, vertical, outside the box, no vents, 3 kW) are
+  fine (2026-11).
 
 ## Programming and mk2Wifi
 

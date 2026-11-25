@@ -116,25 +116,25 @@ Valeurs de Référence
  * - VREF (point de test V_REF, firmware lancé)
    - 1,1 V
    - ±0,1 V (1,0–1,2 V)
- * - Entrées ADC A0–A3, et A4–A5 en triphasé (repos, firmware lancé)
+ * - Entrées ADC A0–A3, et A4–A5 en triphasé si les cavaliers SDA et SCL sont soudés en position 1–centre (repos, firmware lancé)
    - 0,55 V (VREF/2)
    - ±0,05 V (0,50–0,60 V)
 
 Diagnostic par Tension
 ~~~~~~~~~~~~~~~~~~~~~~
 
-**+3,3 V (TP3) trop faible (< 3,1 V) :**
+**+3,3 V (TP3) trop faible (< 3,2 V) :**
 
 - Module PS1 (MPC10-5) défectueux, mal orienté ou mal soudé
 - Court-circuit partiel consommant trop de courant
 
-**+3,3 V (TP3) trop élevée (> 3,5 V) :**
+**+3,3 V (TP3) trop élevée (> 3,4 V) :**
 
 - ⚠️ **DANGER** pour le module RFM69CW et l’ATmega328P, alimentés par ce rail (cavalier V sel. dans sa position d’usine)
 - Régulateur U1 défectueux ou court-circuité
 - **COUPER L’ALIMENTATION IMMÉDIATEMENT**
 
-**+5 V (TP4) trop élevée (> 5,3 V) :**
+**+5 V (TP4) trop élevée (> 5,2 V) :**
 
 - Module PS1 (MPC10-5) défectueux
 - **COUPER L’ALIMENTATION**
@@ -519,7 +519,11 @@ Vérifications Matérielles
     - Toutes broches en contact ?
     - Orientation correcte ?
 
- #. ☐ **Antenne connectée ?**
+ #. ☐ **Cavaliers IRQ et NSS soudés ?**
+
+    - Les cavaliers à souder JP3 « IRQ » (vers D2) et JP41 « NSS » (vers D10) sont ouverts par défaut : soudez-les pour relier le module RF (voir :ref:`cavaliers`)
+
+ #. ☐ **Antenne connectée ?**
 
     - Antenne 433 ou 868 MHz (selon le module) vissée sur le connecteur SMA **CN1** de la carte-mère
 

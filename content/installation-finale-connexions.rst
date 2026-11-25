@@ -23,7 +23,7 @@ Les :term:`CT` réseau sont des capteurs à clip installés sur les câbles de *
 
 Le :term:`CT` Diversion (entrée CT2 du firmware monophasé) est installé sur le câble de phase reliant l’étage de sortie à la charge (chauffe-eau) ; les câbles de toutes les sorties locales peuvent y passer. Il mesure la puissance effectivement routée vers les charges. En triphasé, toutes les entrées CT mesurent le réseau : il n’y a pas de CT Diversion.
 
-⚠️ Ce :term:`CT` est un **tore** (anneau fermé) à travers lequel passe le câble de phase — contrairement aux :term:`CT` réseau qui sont des capteurs à clip ouvrant. Il est monté **à l’intérieur du boîtier** du Mk2PVRouter.
+⚠️ Sur les anciennes cartes, ce :term:`CT` est un **tore** (anneau fermé), monté **à l’intérieur du boîtier** du Mk2PVRouter, à travers lequel passe le câble de phase. Sur la carte universelle, un :term:`CT` à clip ouvrant convient, comme pour les :term:`CT` réseau.
 
 Schéma d’installation — Monophasé
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
