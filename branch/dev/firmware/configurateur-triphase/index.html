@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-11-24T22:51:44+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configurateur du firmware — Triphasé &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=01954304" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-new-tab-link.css?v=d87cb1ac" />
+      <link rel="stylesheet" type="text/css" href="../../_static/version-banner.css?v=9755ad97" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script src="../../_static/version-switch.js?v=a2dfe005"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Installation Finale dans le Système Électrique" href="../../installation-finale/" />
+    <link rel="prev" title="Étalonnage — Triphasé" href="../etalonnage-triphase/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logiciel-etalonnage-monophase/">Monophasé</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../logiciel-etalonnage-triphase/">Triphasé</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../logiciel-triphase/">Installation et tests — Triphasé</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../etalonnage-triphase/">Étalonnage — Triphasé</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Configurateur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ce-quil-fait">Ce qu’il fait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utilisation">Utilisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etalonnage">Étalonnage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mk2wifi">Module mk2Wifi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../logiciel-etalonnage-triphase/">Triphasé</a></li>
+      <li class="breadcrumb-item active">Configurateur du firmware — Triphasé</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/dev/content/firmware/configurateur-triphase.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+<div class="version-banner admonition warning" role="note">
+  <p>Version de développement : pour le firmware publié, voir la <a href="/Mk2PVRouter/" data-base="/Mk2PVRouter/">documentation stable</a>.</p>
+</div>
+
+           <div itemprop="articleBody">
+             
+  <section id="configurateur-du-firmware-triphase">
+<span id="configurateur-triphase"></span><h1>Configurateur du firmware — Triphasé<a class="headerlink" href="#configurateur-du-firmware-triphase" title="Lien vers cette rubrique"></a></h1>
+<p>Le <strong>configurateur</strong> écrit pour vous les fichiers de configuration du firmware triphasé <code class="docutils literal notranslate"><span class="pre">Mk2_3phase_RFdatalog_temp</span></code>, à partir d’une simple description de votre installation.</p>
+<p>👉 <strong>Ouvrir le configurateur :</strong> <a class="reference external" href="../../configurateur/" rel="noreferrer" target="_blank">configurateur triphasé</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le configurateur ne concerne que le firmware <strong>triphasé</strong> (<a class="reference external" href="https://github.com/FredM67/PVRouter-3-phase" rel="noreferrer" target="_blank">PVRouter-3-phase</a>). Pour le routeur monophasé, voir le <a class="reference internal" href="../configurateur-monophase/#configurateur-monophase"><span class="std std-ref">configurateur monophasé</span></a> ; en haut de chaque page, « Routeur : monophasé / triphasé » mène de l’un à l’autre. Il correspond toujours à la version du firmware décrite dans cette documentation.</p>
+</div>
+<nav class="contents local" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ce-quil-fait" id="id2">Ce qu’il fait</a></p></li>
+<li><p><a class="reference internal" href="#utilisation" id="id3">Utilisation</a></p></li>
+<li><p><a class="reference internal" href="#etalonnage" id="id4">Étalonnage</a></p></li>
+<li><p><a class="reference internal" href="#module-mk2wifi" id="id5">Module mk2Wifi</a></p></li>
+</ul>
+</nav>
+<section id="ce-quil-fait">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Ce qu’il fait</a><a class="headerlink" href="#ce-quil-fait" title="Lien vers cette rubrique"></a></h2>
+<p>Vous décrivez votre installation :</p>
+<ul class="simple">
+<li><p>les <strong>charges</strong> (triacs), pilotées par le routeur ou par une unité distante par radio, et leurs priorités ;</p></li>
+<li><p>les <strong>relais</strong> ;</p></li>
+<li><p>les <strong>entrées de commande</strong> : arrêt du routage, arrêt du routeur, marche forcée, rotation des priorités ;</p></li>
+<li><p>la <strong>LED de vie</strong> ;</p></li>
+<li><p>le <strong>double tarif</strong>, les <strong>sondes de température</strong> ;</p></li>
+<li><p>le <strong>module mk2Wifi</strong> ;</p></li>
+<li><p>la <strong>radio</strong> (RFM69) et les <strong>unités distantes</strong>, plus rarement utilisées.</p></li>
+</ul>
+<p>Il vérifie la cohérence de vos choix au fur et à mesure (broche utilisée deux fois, broche réservée à la radio, valeur hors limites…), avec les mêmes règles que le compilateur, et en plus ce que le compilateur ne peut pas voir, comme le câblage du module mk2Wifi.</p>
+<p>Il produit ensuite :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">config.h</span></code>, <code class="docutils literal notranslate"><span class="pre">config_system.h</span></code> et <code class="docutils literal notranslate"><span class="pre">config_rf.h</span></code> pour le routeur ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config.h</span></code> et <code class="docutils literal notranslate"><span class="pre">config_rf.h</span></code> pour chaque unité distante (firmware <code class="docutils literal notranslate"><span class="pre">RemoteLoadReceiver</span></code>) ;</p></li>
+<li><p>avec le module mk2Wifi, le fichier <strong>YAML ESPHome</strong> correspondant, ainsi que la liste des ponts de soudure à fermer et la position du cavalier TEMP.</p></li>
+</ul>
+</section>
+<section id="utilisation">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Utilisation</a><a class="headerlink" href="#utilisation" title="Lien vers cette rubrique"></a></h2>
+<ol class="arabic">
+<li><p>Ouvrir le configurateur et décrire l’installation, section par section. Par défaut, il part de la carte universelle 3phaseDiverter avec le module mk2Wifi (sortie série <strong>IoT</strong>) : avec l’ancienne carte triphasée, la choisir en premier.</p></li>
+<li><p>Consulter les <strong>Vérifications</strong> à droite : corriger les erreurs (en rouge), sans quoi les fichiers ne sont pas générés ; les avertissements (en orange) sont à vérifier, mais ne bloquent rien.</p></li>
+<li><p>Avec Chrome ou Edge, cliquer sur <strong>« Enregistrer dans le dossier du firmware… »</strong> et choisir le dossier du firmware décompressé (celui qui contient <code class="docutils literal notranslate"><span class="pre">Mk2_3phase_RFdatalog_temp</span></code> et <code class="docutils literal notranslate"><span class="pre">RemoteLoadReceiver</span></code>). Après confirmation, le configurateur y écrit tous les fichiers, à la place de ceux du même nom ; chaque unité distante reçoit son dossier <code class="docutils literal notranslate"><span class="pre">RemoteLoadReceiver-unitN</span></code>.</p>
+<p>Avant d’écrire, il sauvegarde ce qu’il remplace dans <code class="docutils literal notranslate"><span class="pre">configurator-backup/&lt;date_heure&gt;</span></code>. Si vous passez à moins d’unités distantes, les dossiers des unités en trop y sont déplacés.</p>
+<p>Avec un autre navigateur, cliquer sur <strong>« Tout télécharger (ZIP) »</strong>, puis copier les fichiers du routeur dans le dossier <code class="docutils literal notranslate"><span class="pre">Mk2_3phase_RFdatalog_temp</span></code>, à la place des fichiers du même nom.</p>
+</li>
+<li><p><strong>Garder votre</strong> <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> : en dehors du mode étalonnage (voir ci-dessous), le configurateur ne le modifie jamais.</p></li>
+<li><p>Compiler et téléverser comme d’habitude (voir <a class="reference internal" href="../logiciel-triphase/#logiciel-triphase"><span class="std std-ref">Installation et tests — Triphasé</span></a>).</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Le bouton <strong>« Annuler le dernier enregistrement… »</strong> (Chrome ou Edge) remet le dossier du firmware dans l’état où il était avant le dernier enregistrement du configurateur : les fichiers remplacés et les dossiers supprimés reviennent, ceux qu’il a créés sont effacés.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Le bouton <strong>« Enregistrer les choix »</strong> sauvegarde votre configuration dans un fichier JSON. Après une mise à jour du firmware, rechargez-le avec <strong>« Charger des choix »</strong> pour régénérer des fichiers à jour.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Le configurateur fonctionne aussi hors ligne : ouvrir <code class="docutils literal notranslate"><span class="pre">configurator/index.html</span></code> depuis une copie du dépôt du firmware.</p>
+</div>
+</section>
+<section id="etalonnage">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Étalonnage</a><a class="headerlink" href="#etalonnage" title="Lien vers cette rubrique"></a></h2>
+<p>Cochez <strong>« Mode étalonnage »</strong> : le routeur mesure sans rien commuter, avec la sortie série lisible. La page ne montre plus que ce qui sert à l’étalonnage, les autres sections sont masquées et leurs réglages conservés. Le <code class="docutils literal notranslate"><span class="pre">config.h</span></code> généré met le routeur en mode étalonnage, et votre choix habituel revient en décochant le mode.</p>
+<p><code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> contient un jeu de valeurs par carte-mère. Le configurateur ne montre et ne corrige que celles de la carte choisie dans la page :</p>
+<ul class="simple">
+<li><p><strong>ancienne carte triphasée</strong> : <code class="docutils literal notranslate"><span class="pre">f_powerCalOldBoard</span></code> (puissance) et <code class="docutils literal notranslate"><span class="pre">f_voltageCalOldBoard</span></code> (tension) ;</p></li>
+<li><p><strong>carte universelle</strong> : <code class="docutils literal notranslate"><span class="pre">f_ctRating</span></code> (calibre des sondes), <code class="docutils literal notranslate"><span class="pre">f_powerCalPerAmp</span></code> (puissance, par ampère de calibre) et <code class="docutils literal notranslate"><span class="pre">f_voltageCalNewBoard</span></code> (tension).</p></li>
+</ul>
+<p>À l’écran :</p>
+<ul class="simple">
+<li><p><strong>« Charger mon calibration.h »</strong> (facultatif) : la page réécrit votre fichier avec les nouvelles valeurs, le reste du fichier intact. Sans lui, saisissez les valeurs actuelles et copiez les lignes données. Le fichier doit venir de la même version du firmware : un <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> plus ancien, avec un seul <code class="docutils literal notranslate"><span class="pre">f_powerCal</span></code>, est refusé.</p></li>
+<li><p><strong>Calibre des sondes</strong> (carte universelle seulement) : le courant nominal de la sonde de chaque phase, en A, repris de votre fichier s’il est chargé.</p></li>
+<li><p><strong>Puissance</strong> et <strong>Tension</strong> : pour chaque phase, la valeur actuelle, les relevés <strong>Routeur (W)</strong> et <strong>Appareil (W)</strong> (ou <strong>(V)</strong> pour la tension), et la <strong>Nouvelle valeur</strong> calculée (valeur actuelle × appareil / routeur). Une phase laissée vide garde sa valeur. La tension est facultative : elle ne sert qu’à l’affichage.</p></li>
+<li><p><strong>Pour calibration.h</strong> : les lignes à copier dans le fichier.</p></li>
+<li><p><strong>Fichiers pour le routeur</strong> : le <code class="docutils literal notranslate"><span class="pre">config.h</span></code> (à téléverser en premier) et votre <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> avec les nouvelles valeurs.</p></li>
+<li><p><strong>« Nouvelles valeurs téléversées : nouvelle mesure »</strong> : les nouvelles valeurs deviennent les valeurs actuelles et les relevés sont effacés, pour vérifier ou affiner.</p></li>
+</ul>
+<p>Dans les <strong>Vérifications</strong>, la page signale, phase par phase :</p>
+<ul class="simple">
+<li><p>une puissance négative sur le routeur : sa sonde est montée à l’envers, ou n’est pas sur la phase de son entrée tension ;</p></li>
+<li><p>des relevés qui ne sont pas positifs, une valeur actuelle manquante, un calibre de sonde qui n’est pas positif ;</p></li>
+<li><p>une charge sous 300 W : la correction est imprécise ;</p></li>
+<li><p>une correction suspecte (inférieure à ×0,5 ou supérieure à ×2) : vérifiez le câblage, et que les deux relevés portent sur la même phase, au même moment.</p></li>
+</ul>
+<p>La marche à suivre, pas à pas : <a class="reference internal" href="../etalonnage-triphase/#etalonnage-triphase"><span class="std std-ref">Étalonnage — Triphasé</span></a></p>
+</section>
+<section id="module-mk2wifi">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Module mk2Wifi</a><a class="headerlink" href="#module-mk2wifi" title="Lien vers cette rubrique"></a></h2>
+<p>Avec le module mk2Wifi, le configurateur règle la sortie série du routeur en mode <strong>IoT</strong> et génère un YAML ESPHome complet, cohérent avec le <code class="docutils literal notranslate"><span class="pre">config.h</span></code> :</p>
+<ul class="simple">
+<li><p>un capteur pour chaque mesure réellement envoyée par le routeur (puissances, tensions, taux de routage de chaque charge, relais, températures, heures creuses…) ;</p></li>
+<li><p>une commande pour chaque entrée du routeur reliée au module (D5 à D9).</p></li>
+</ul>
+<p>Le YAML utilise le composant <code class="docutils literal notranslate"><span class="pre">mk2pvrouter</span></code> intégré à ESPHome (version 2026.10.0 et suivantes).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pour mettre à jour un YAML écrit pour une version plus ancienne, le plus simple est de le régénérer avec le configurateur. À la main : supprimer le bloc <code class="docutils literal notranslate"><span class="pre">external_components</span></code>, écrire <code class="docutils literal notranslate"><span class="pre">tag:</span></code> au lieu de <code class="docutils literal notranslate"><span class="pre">tag_name:</span></code> dans les capteurs, et supprimer <code class="docutils literal notranslate"><span class="pre">update_interval</span></code> sous <code class="docutils literal notranslate"><span class="pre">mk2pvrouter:</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Au démarrage, le routeur affiche sa configuration à 9600 bauds 8N1, puis passe en 7E1 pour les données destinées à Home Assistant. Le module ignore tout ce qui précède la première trame : ces lignes ne le gênent pas.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Les commandes sont <strong>sûres en cas de défaut</strong> : le module ne tire une entrée du routeur à l’état bas que pour l’état non par défaut, et la relâche sinon. Un fil coupé, un pont de soudure ouvert ou un module qui redémarre laissent donc le routeur dans son état normal : routage actif, routeur en marche, pas de marche forcée. À chaque démarrage du module, toutes les commandes reviennent à cet état.</p>
+</div>
+<p>Seuls les ponts de soudure listés par le configurateur doivent être fermés : les autres broches D5 à D9 peuvent être utilisées par le routeur lui-même (charges, relais…).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../etalonnage-triphase/" class="btn btn-neutral float-left" title="Étalonnage — Triphasé" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../../installation-finale/" class="btn btn-neutral float-right" title="Installation Finale dans le Système Électrique" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 24 novembre 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-current-base="/Mk2PVRouter/branch/dev/" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (dev)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/" data-base="/Mk2PVRouter/">stable</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/dev/" data-base="/Mk2PVRouter/branch/dev/">dev</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/" data-base="/Mk2PVRouter/branch/legacy/">legacy</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/branch/dev/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/dev/content/firmware/configurateur-triphase.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/dev/content/firmware/configurateur-triphase.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

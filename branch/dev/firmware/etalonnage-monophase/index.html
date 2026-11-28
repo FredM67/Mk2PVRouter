@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-11-25T13:05:32+01:00" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Étalonnage — Monophasé &mdash; Documentation Documentation du Mk2PVRouter </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=01954304" />
+      <link rel="stylesheet" type="text/css" href="../../_static/drawio.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-new-tab-link.css?v=d87cb1ac" />
+      <link rel="stylesheet" type="text/css" href="../../_static/version-banner.css?v=9755ad97" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0d32a3b3"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = '';</script>
+      <script>let toggleHintHide = '';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+      <script src="../../_static/translations.js?v=e6b791cb"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+      <script src="../../_static/clickable-graphviz.js?v=b703d362"></script>
+      <script src="../../_static/clickable-images.js?v=cb5602a2"></script>
+      <script src="../../_static/version-switch.js?v=a2dfe005"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Recherche" href="../../search/" />
+    <link rel="next" title="Configurateur du firmware — Monophasé" href="../configurateur-monophase/" />
+    <link rel="prev" title="Installation et tests — Monophasé" href="../logiciel-monophase/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Documentation du Mk2PVRouter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">⚠️ Sécurité (À LIRE EN PREMIER!)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../safety-overview/">⚠️ Sécurité — À Lire Absolument Avant de Commencer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📖 Théorie &amp; Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../principe-fonctionnement/">Principe de fonctionnement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../burst-fire-control/">Burst Fire Control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀 Démarrage (soudure, logiciel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../soldering-tutorial/">Guide de Soudure pour Débutants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-logiciel/">Installation des Logiciels</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔨 Carte-mère</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/presentation/">Présentation de la carte universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/choix-configuration/">Choix de la configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-carte-mere/">Assemblage de la carte-mère universelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-monophase/">Assemblage — Composants monophasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/assemblage-triphase/">Assemblage — Composants triphasé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/cavaliers/">Configuration des cavaliers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../carte-mere/tests-electriques/">Tests électriques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">⚡ Étages de sortie</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie/">Étage de sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-tests/">Tests de la Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-validation/">Validation et Dépannage — Carte de Sortie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-sortie-relais/">Sortie relais tout-ou-rien</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../etage-sortie/carte-indicateur/">Carte indicateur LED</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📡 Module mk2Wifi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/presentation-mk2wifi/">Module mk2Wifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mk2wifi/installation-mk2wifi/">Installation du module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📦 Boîtier &amp; Montage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/percages/">Perçages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/confection-cables/">Confection des câbles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boitier/assemblage/">Assemblage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💻 Logiciel &amp; Étalonnage</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../logiciel-etalonnage-monophase/">Monophasé</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../logiciel-monophase/">Installation et tests — Monophasé</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Étalonnage — Monophasé</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ce-quil-vous-faut">Ce qu’il vous faut</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etalonner-avec-le-configurateur">Étalonner avec le configurateur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#les-valeurs-selon-la-carte">Les valeurs, selon la carte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pas-a-pas">Pas à pas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#verifier">Vérifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pour-aller-plus-loin">Pour aller plus loin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#le-mode-etalonnage-a-la-main">Le mode étalonnage à la main</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#la-formule-de-correction">La formule de correction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#le-filtre-de-ct1-anciennes-cartes">Le filtre de CT1 (anciennes cartes)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configurateur-monophase/">Configurateur</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../logiciel-etalonnage-triphase/">Triphasé</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🏠 Installation Finale</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale/">Installation Finale dans le Système Électrique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-connexions/">Capteurs de Courant et Connexions Électriques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-finale-mise-en-service/">Mise en Service et Maintenance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔧 Dépannage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Guide de Dépannage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-electrique/">⚡ Problèmes Électriques — Tests et Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting-mk2wifi/">📡 Problèmes du Module mk2Wifi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚 Glossaire</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossaire</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation du Mk2PVRouter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../logiciel-etalonnage-monophase/">Monophasé</a></li>
+      <li class="breadcrumb-item active">Étalonnage — Monophasé</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/FredM67/Mk2PVRouter/blob/dev/content/firmware/etalonnage-monophase.rst" class="fa fa-github"> Éditer sur GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+<div class="version-banner admonition warning" role="note">
+  <p>Version de développement : pour le firmware publié, voir la <a href="/Mk2PVRouter/" data-base="/Mk2PVRouter/">documentation stable</a>.</p>
+</div>
+
+           <div itemprop="articleBody">
+             
+  <section id="etalonnage-monophase">
+<span id="id1"></span><h1>Étalonnage — Monophasé<a class="headerlink" href="#etalonnage-monophase" title="Lien vers cette rubrique"></a></h1>
+<p>⏱️ <strong>Temps estimé</strong> : 30–45 minutes</p>
+<p>🔧 <strong>Niveau de difficulté</strong> : Intermédiaire</p>
+<p>⚠️ <strong>Niveau de risque</strong> : Élevé (manipulation 230 V sous tension)</p>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>L’étalonnage est <strong>recommandé</strong> en monophasé, sans être obligatoire.</p>
+<ul class="simple">
+<li><p><strong>Pour dévier l’énergie vers les triacs, il n’est pas nécessaire</strong> : le routeur agit sur le signe de l’énergie échangée avec le réseau, et une erreur d’échelle ne le change pas.</p></li>
+<li><p><strong>Pour des valeurs réalistes, il l’est</strong> : ce que le routeur affiche et envoie (afficheur, moniteur série, Home Assistant via le module mk2Wifi), et tous les réglages en watts comparés à la puissance mesurée. Dès que des <strong>relais</strong> routent le surplus, leurs seuils (surplus, import) sont en watts : sans étalonnage, ils s’appliquent à des watts faux. Même chose pour la limite anti-fluage de CT2 et l’export requis.</p></li>
+</ul>
+</div>
+<div class="admonition-prerequis admonition">
+<p class="admonition-title">📋 Prérequis</p>
+<p>Avant de commencer ce chapitre :</p>
+<div class="line-block">
+<div class="line">☐ Chapitre <a class="reference internal" href="../../safety-overview/#safety-overview"><span class="std std-ref">⚠️ Sécurité — À Lire Absolument Avant de Commencer</span></a> lu et compris</div>
+<div class="line">☐ Tests électriques effectués (voir <a class="reference internal" href="../../carte-mere/tests-electriques/#tests-electriques"><span class="std std-ref">Tests électriques</span></a>)</div>
+<div class="line">☐ Firmware installé et fonctionnel (voir <a class="reference internal" href="../logiciel-monophase/#logiciel-monophase"><span class="std std-ref">Installation et tests — Monophasé</span></a>)</div>
+<div class="line">☐ Routeur alimenté par le secteur</div>
+<div class="line">☐ Un appareil de référence : pince wattmétrique, wattmètre ou affichage du Linky</div>
+<div class="line">☐ Une forte charge résistive (bouilloire, radiateur, chauffe-eau), qui fonctionne sans passer par le routeur</div>
+</div>
+</div>
+<nav class="contents local" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ce-quil-vous-faut" id="id2">Ce qu’il vous faut</a></p></li>
+<li><p><a class="reference internal" href="#etalonner-avec-le-configurateur" id="id3">Étalonner avec le configurateur</a></p>
+<ul>
+<li><p><a class="reference internal" href="#les-valeurs-selon-la-carte" id="id4">Les valeurs, selon la carte</a></p></li>
+<li><p><a class="reference internal" href="#pas-a-pas" id="id5">Pas à pas</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#verifier" id="id6">Vérifier</a></p></li>
+<li><p><a class="reference internal" href="#pour-aller-plus-loin" id="id7">Pour aller plus loin</a></p>
+<ul>
+<li><p><a class="reference internal" href="#le-mode-etalonnage-a-la-main" id="id8">Le mode étalonnage à la main</a></p></li>
+<li><p><a class="reference internal" href="#la-formule-de-correction" id="id9">La formule de correction</a></p></li>
+<li><p><a class="reference internal" href="#le-filtre-de-ct1-anciennes-cartes" id="id10">Le filtre de CT1 (anciennes cartes)</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="ce-quil-vous-faut">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Ce qu’il vous faut</a><a class="headerlink" href="#ce-quil-vous-faut" title="Lien vers cette rubrique"></a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>ALERTE SÉCURITÉ</strong></p>
+<p>Tout travail sur le câblage (passer le câble d’une charge à travers CT2, intervenir dans le tableau ou sur une installation fixe) se fait <strong>disjoncteur coupé au tableau</strong>, après avoir vérifié l’absence de tension avec un VAT bipolaire (voir <a class="reference internal" href="../../installation-finale/#installation-finale"><span class="std std-ref">Installation Finale dans le Système Électrique</span></a>). Dans le doute, coupez le disjoncteur principal.</p>
+</div>
+<ul class="simple">
+<li><p><strong>Une lecture de référence au point de raccordement</strong>, prise en même temps que celle du routeur : une pince wattmétrique autour du même câble que CT1, ou l’affichage du Linky (sa puissance instantanée). Le Linky affiche une puissance apparente (en VA), avec un rafraîchissement lent : avec une charge purement résistive, VA et W sont égaux, à condition d’éteindre toutes les autres consommations de la maison (il donne la puissance totale).</p></li>
+<li><p><strong>Une forte charge résistive</strong> (bouilloire, radiateur, chauffe-eau) : au moins 300 W, car en dessous la correction est imprécise. Un appareil purement résistif, sans ventilateur ni électronique, simplifie grandement l’étalonnage. <strong>Elle doit fonctionner sans passer par le routeur</strong> : le mode étalonnage ne commute rien, donc une charge reliée à la sortie triac du routeur reste éteinte. Branchez une bouilloire ou un radiateur sur une prise, ou faites marcher le chauffe-eau par son propre contacteur, en position forcée.</p></li>
+<li><p><strong>Une consommation constante pendant l’étalonnage</strong> : branchez la charge résistive et débranchez tout le reste, y compris votre ou vos systèmes de production d’électricité.</p></li>
+<li><p><strong>Le</strong> <a class="reference internal" href="../configurateur-monophase/#configurateur-monophase"><span class="std std-ref">configurateur</span></a>, qui fait le calcul pour vous et réécrit votre <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code>.</p></li>
+<li><p>Votre <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> (celui du dossier du firmware), si vous l’avez déjà modifié : le configurateur peut le charger.</p></li>
+<li><p><strong>Si le routeur a une sonde CT2</strong> (énergie routée) et que vous voulez l’étalonner : une charge résistive dont le câble passe <strong>à travers CT2</strong>, par exemple un séparateur de ligne (ou « diviseur de ligne », vendu pour les pinces ampèremétriques), prêt à l’emploi, ou à défaut un câble d’extension modifié entre une prise et la charge (un seul des conducteurs traverse la sonde ; à faire hors tension, en ouvrant seulement la gaine extérieure, sans abîmer l’isolant des conducteurs intérieurs ; un tel câble ne sert qu’à l’étalonnage : marquez-le et ne le laissez jamais en service). Le mode étalonnage ne commute jamais de charge : cette charge doit fonctionner par d’autres moyens, branchée directement ou mise en marche à la main.</p></li>
+</ul>
+</section>
+<section id="etalonner-avec-le-configurateur">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Étalonner avec le configurateur</a><a class="headerlink" href="#etalonner-avec-le-configurateur" title="Lien vers cette rubrique"></a></h2>
+<p>Le routeur est étalonné en mode étalonnage : il mesure, sans rien commuter (ni triacs, ni relais, ni charges distantes, ni forçages), et affiche ses mesures sur le moniteur série. Le configurateur règle ce mode, calcule les nouvelles valeurs à partir de vos relevés et réécrit <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code>.</p>
+<section id="les-valeurs-selon-la-carte">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Les valeurs, selon la carte</a><a class="headerlink" href="#les-valeurs-selon-la-carte" title="Lien vers cette rubrique"></a></h3>
+<p>Le fichier <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> contient un jeu de valeurs pour les anciennes cartes et un pour la carte universelle, et le routeur utilise celui de <code class="docutils literal notranslate"><span class="pre">PCB_VERSION</span></code> (dans <code class="docutils literal notranslate"><span class="pre">config.h</span></code>). Le configurateur ne montre et ne corrige que celles de la carte que vous avez choisie dans la page :</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Carte</p></th>
+<th class="head"><p>CT1, réseau (le routage)</p></th>
+<th class="head"><p>CT2, énergie routée</p></th>
+<th class="head"><p>Tension (affichage)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Anciennes cartes (<code class="docutils literal notranslate"><span class="pre">PcbVersion::OLD_SEG</span></code> et <code class="docutils literal notranslate"><span class="pre">PcbVersion::OLD_OLED</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">f_powerCalOldBoard</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">f_powerCalDivertedOldBoard</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">f_voltageCalOldBoard</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Carte universelle, rév. 6.0 et suivantes (<code class="docutils literal notranslate"><span class="pre">PcbVersion::NEW</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">f_powerCalPerAmp</span></code>, multipliée par <code class="docutils literal notranslate"><span class="pre">f_ctRating</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">f_powerCalPerAmp</span></code>, multipliée par <code class="docutils literal notranslate"><span class="pre">f_ctRatingDiverted</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">f_voltageCalNewBoard</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Le facteur de puissance de CT1 est celui avec lequel le routeur régule. Celui de CT2 ne sert qu’à l’énergie routée qu’il affiche. La tension (<code class="docutils literal notranslate"><span class="pre">V</span></code>) n’est qu’affichée.</p>
+<p><strong>Carte universelle</strong> : le facteur de puissance est donné par ampère de calibre de sonde, <code class="docutils literal notranslate"><span class="pre">f_powerCal</span></code> = <code class="docutils literal notranslate"><span class="pre">f_powerCalPerAmp</span></code> × <code class="docutils literal notranslate"><span class="pre">f_ctRating</span></code> (<code class="docutils literal notranslate"><span class="pre">f_ctRatingDiverted</span></code> pour CT2). Changer de sonde revient donc à entrer son calibre. Les valeurs par défaut conviennent aux sondes à sortie tension 333 mV et découlent de la conception de la carte, corrigée par l’étalonnage d’une première carte : le routeur est en général précis à quelques pour cent avant étalonnage, ce qui ne dispense pas de le faire.</p>
+<p><strong>Anciennes cartes</strong> : les valeurs se trouvent uniquement par étalonnage ; 0,05 est un bon départ pour <code class="docutils literal notranslate"><span class="pre">f_powerCalOldBoard</span></code> et <code class="docutils literal notranslate"><span class="pre">f_powerCalDivertedOldBoard</span></code>.</p>
+<p>Dans la suite de ce chapitre, <code class="docutils literal notranslate"><span class="pre">f_powerCal</span></code> désigne la valeur de puissance de votre carte.</p>
+</section>
+<section id="pas-a-pas">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Pas à pas</a><a class="headerlink" href="#pas-a-pas" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Ouvrez le <a class="reference internal" href="../configurateur-monophase/#configurateur-monophase"><span class="std std-ref">configurateur</span></a>, choisissez votre <strong>carte-mère</strong>, puis cochez <strong>« Mode étalonnage »</strong>. La page ne montre plus que ce qui sert à l’étalonnage (vos autres réglages sont conservés).</p></li>
+<li><p>Chargez votre <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> avec <strong>« Charger mon calibration.h »</strong>, ou saisissez les valeurs avec lesquelles tourne le routeur. Le fichier doit venir de la même version du firmware : s’il manque des valeurs (<code class="docutils literal notranslate"><span class="pre">f_powerCalOldBoard</span></code>, <code class="docutils literal notranslate"><span class="pre">f_powerCalDivertedOldBoard</span></code>, <code class="docutils literal notranslate"><span class="pre">f_voltageCalOldBoard</span></code>, <code class="docutils literal notranslate"><span class="pre">f_ctRating</span></code>, <code class="docutils literal notranslate"><span class="pre">f_ctRatingDiverted</span></code>, <code class="docutils literal notranslate"><span class="pre">f_powerCalPerAmp</span></code>, <code class="docutils literal notranslate"><span class="pre">f_voltageCalNewBoard</span></code>), il est refusé.</p></li>
+<li><p><strong>Carte universelle seulement</strong> : vérifiez le <strong>calibre de CT1</strong> (<code class="docutils literal notranslate"><span class="pre">f_ctRating</span></code>), en ampères : 50 pour une sonde 50 A / 333 mV. Avec une sonde à sortie courant et une résistance de charge R, comme la YHDC SCT-013-000 (2000:1), le calibre vaut 666 / R, soit 30,3 avec 22 Ω. Le calibre de CT2 (<code class="docutils literal notranslate"><span class="pre">f_ctRatingDiverted</span></code>) vient avec la puissance routée, plus bas.</p></li>
+<li><p>Dans le dossier du firmware, remplacez <code class="docutils literal notranslate"><span class="pre">config.h</span></code> par celui que génère le configurateur : il met le routeur en mode étalonnage, avec la sortie série lisible. Un calibre se change dans <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> : si vous avez changé celui de CT1, remplacez aussi <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> par le fichier du configurateur (après avoir chargé le vôtre), ou copiez la ligne <code class="docutils literal notranslate"><span class="pre">f_ctRating</span></code> qu’il donne dans le vôtre. Téléversez ensuite le firmware (le dossier du sketch) sur le routeur, avant les relevés.</p></li>
+<li><p>Mettez la forte charge résistive en marche, sans passer par le routeur (une bouilloire ou un radiateur sur une prise, sans production solaire), et ouvrez le moniteur série à 9600 bauds. Toutes les 5 secondes (valeur par défaut de <code class="docutils literal notranslate"><span class="pre">DATALOG_PERIOD_IN_SECONDS</span></code>, dans <code class="docutils literal notranslate"><span class="pre">config_system.h</span></code>, 40 s au plus), le routeur y affiche :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">P</span></code> : la puissance au point de raccordement, en W, positive en import (le premier nombre après <code class="docutils literal notranslate"><span class="pre">P:</span></code>) ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">V</span></code> : la tension, en V (le nombre après <code class="docutils literal notranslate"><span class="pre">V:</span></code>) ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diverted</span></code> (avec CT2 seulement) : la puissance routée en W, suivie de l’énergie en Wh (<code class="docutils literal notranslate"><span class="pre">diverted</span> <span class="pre">&lt;W&gt;</span> <span class="pre">W,</span> <span class="pre">&lt;Wh&gt;</span> <span class="pre">Wh</span></code>). C’est la puissance en W qui sert à l’étalonnage, pas l’énergie.</p></li>
+</ul>
+</li>
+<li><p>Relevez <strong>au même moment</strong> la puissance du routeur (<code class="docutils literal notranslate"><span class="pre">P</span></code>) et celle de l’appareil de référence (pince sur le même câble que CT1, ou affichage du Linky), et saisissez les deux dans <strong>« Puissance réseau »</strong> (colonnes <strong>Routeur (W)</strong> et <strong>Appareil (W)</strong>). La tension (<code class="docutils literal notranslate"><span class="pre">V</span></code>) se corrige de la même façon, mais elle ne sert qu’à l’affichage : son champ est facultatif.</p></li>
+<li><p><strong>Avec CT2, si vous voulez l’étalonner</strong> : arrêtez la charge, et faites passer son câble à travers CT2 (disjoncteur coupé : voir l’alerte plus haut). Remettez le courant et mettez la charge en marche par un autre moyen que le routeur. Pincez l’appareil de référence sur ce même câble, relevez <strong>au même moment</strong> <code class="docutils literal notranslate"><span class="pre">diverted</span></code> (la puissance en W) et la référence, et saisissez-les dans <strong>« Puissance routée »</strong>. Sur les anciennes cartes, cela corrige <code class="docutils literal notranslate"><span class="pre">f_powerCalDivertedOldBoard</span></code> ; sur la carte universelle, la valeur actuelle est le calibre de CT2 (<code class="docutils literal notranslate"><span class="pre">f_ctRatingDiverted</span></code>), en A, et la nouvelle valeur tient compte de la correction de CT1 que prend <code class="docutils literal notranslate"><span class="pre">f_powerCalPerAmp</span></code>.</p></li>
+<li><p>Le configurateur calcule les nouvelles valeurs (valeur actuelle × appareil / routeur) et signale ce qui est douteux : puissance négative (sonde à l’envers), charge sous 300 W, écart trop grand. Si l’un de ces signalements apparaît, corrigez la cause avant de continuer.</p></li>
+<li><p>Copiez les lignes données (<strong>« Pour calibration.h »</strong>), ou enregistrez les fichiers : votre <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> est réécrit avec les nouvelles valeurs, le reste du fichier intact. Remplacez-le dans le dossier du firmware et téléversez.</p></li>
+<li><p>Cliquez sur <strong>« Nouvelles valeurs téléversées : nouvelle mesure »</strong> : les nouvelles valeurs deviennent les valeurs actuelles et les relevés sont effacés. Refaites une mesure pour vérifier (voir <a class="reference internal" href="#etalonnage-monophase-verifier"><span class="std std-ref">la section suivante</span></a>).</p></li>
+<li><p>Une fois étalonné, décochez <strong>« Mode étalonnage »</strong> dans le configurateur et téléversez à nouveau : le routeur reprend son fonctionnement normal.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Une ligne de mesure comprend TOUS les composants, de la pince jusqu’au convertisseur analogique du microcontrôleur. Marquez chaque pince (CT1 = réseau, CT2 = routage) et ne les intervertissez jamais après l’étalonnage.</p>
+</div>
+</section>
+</section>
+<section id="verifier">
+<span id="etalonnage-monophase-verifier"></span><h2><a class="toc-backref" href="#id6" role="doc-backlink">Vérifier</a><a class="headerlink" href="#verifier" title="Lien vers cette rubrique"></a></h2>
+<p>Après avoir téléversé les nouvelles valeurs, refaites un relevé et comparez le routeur et la référence : ils doivent concorder à quelques pour cent près (moins de 2 % est un bon résultat), pour <code class="docutils literal notranslate"><span class="pre">P</span></code> comme, avec CT2, pour <code class="docutils literal notranslate"><span class="pre">diverted</span></code>.</p>
+<p>Un signe contraire signale un défaut de montage :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">P</span></code> <strong>négative alors que vous importez</strong> (une charge fonctionne) : CT1 est monté à l’envers. Retournez-le ;</p></li>
+<li><p><strong>Puissance routée négative</strong> (<code class="docutils literal notranslate"><span class="pre">diverted</span></code>) alors que la charge de CT2 fonctionne : CT2 est monté à l’envers. Retournez-le.</p></li>
+</ul>
+<div class="admonition-point-de-controle-final-etalonnage-monophase-complet admonition">
+<p class="admonition-title">✅ Point de Contrôle Final — Étalonnage Monophasé Complet</p>
+<p>Avant de passer à l’installation finale, vérifiez :</p>
+<div class="line-block">
+<div class="line">☐ Valeurs de CT1 (et de CT2, si installée) mises à jour dans <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code></div>
+<div class="line">☐ Routeur et référence concordent (écart &lt; 2 %)</div>
+<div class="line">☐ <strong>CTs marqués</strong> (CT1 = réseau, CT2 = routage)</div>
+<div class="line">☐ « Mode étalonnage » décoché et <code class="docutils literal notranslate"><span class="pre">config.h</span></code> téléversé à nouveau</div>
+<div class="line">☐ <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> conservé en lieu sûr</div>
+</div>
+</div>
+</section>
+<section id="pour-aller-plus-loin">
+<span id="etalonnage-monophase-aller-plus-loin"></span><h2><a class="toc-backref" href="#id7" role="doc-backlink">Pour aller plus loin</a><a class="headerlink" href="#pour-aller-plus-loin" title="Lien vers cette rubrique"></a></h2>
+<p>Le configurateur n’est pas la seule voie : le mode étalonnage se règle aussi à la main dans <code class="docutils literal notranslate"><span class="pre">config.h</span></code>, et la formule qu’il applique se calcule à la main. C’est utile sans le configurateur, ou pour comprendre ce qu’il fait.</p>
+<section id="le-mode-etalonnage-a-la-main">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Le mode étalonnage à la main</a><a class="headerlink" href="#le-mode-etalonnage-a-la-main" title="Lien vers cette rubrique"></a></h3>
+<p>L’étalonnage se fait avec le programme du routeur lui-même : les valeurs sont ainsi mesurées avec exactement le traitement avec lequel elles seront utilisées.</p>
+<ol class="arabic simple">
+<li><p>Dans <code class="docutils literal notranslate"><span class="pre">config.h</span></code>, mettez <code class="docutils literal notranslate"><span class="pre">CALIBRATION_MODE</span></code> à <code class="docutils literal notranslate"><span class="pre">true</span></code> et <code class="docutils literal notranslate"><span class="pre">SERIAL_OUTPUT_TYPE</span></code> à <code class="docutils literal notranslate"><span class="pre">SerialOutputType::HumanReadable</span></code> (le <code class="docutils literal notranslate"><span class="pre">config.h</span></code> fourni est en mode <code class="docutils literal notranslate"><span class="pre">IoT</span></code>), puis téléversez. Le routeur mesure et affiche comme d’habitude, mais ne commute plus aucune charge (triacs, relais, charges distantes, forçages) : cela modifierait la puissance mesurée. Il l’annonce au démarrage.</p></li>
+<li><p>Mesurez la puissance au point de raccordement avec l’appareil de référence (par exemple une pince wattmétrique autour du même câble que CT1), avec une forte charge résistive en marche.</p></li>
+<li><p>Comparez-la à <code class="docutils literal notranslate"><span class="pre">P</span></code> et corrigez CT1 avec la formule ci-dessous, pour <code class="docutils literal notranslate"><span class="pre">f_powerCalOldBoard</span></code> ou, sur la carte universelle, <code class="docutils literal notranslate"><span class="pre">f_powerCalPerAmp</span></code>.</p></li>
+<li><p>Pour CT2, passez-y le câble d’une charge résistive (disjoncteur coupé), mesurez cette charge avec l’appareil de référence et comparez à la puissance routée (<code class="docutils literal notranslate"><span class="pre">diverted</span></code>), avec la même formule, pour <code class="docutils literal notranslate"><span class="pre">f_powerCalDivertedOldBoard</span></code> ou, sur la carte universelle, <code class="docutils literal notranslate"><span class="pre">f_ctRatingDiverted</span></code>. Étalonnez CT1 d’abord et téléversez : CT2 est alors relevé avec la valeur corrigée de <code class="docutils literal notranslate"><span class="pre">f_powerCalPerAmp</span></code>.</p></li>
+<li><p>Téléversez à nouveau et vérifiez, puis remettez <code class="docutils literal notranslate"><span class="pre">CALIBRATION_MODE</span></code> à <code class="docutils literal notranslate"><span class="pre">false</span></code> et téléversez : le routeur route à nouveau.</p></li>
+</ol>
+</section>
+<section id="la-formule-de-correction">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">La formule de correction</a><a class="headerlink" href="#la-formule-de-correction" title="Lien vers cette rubrique"></a></h3>
+<div class="math notranslate nohighlight">
+\[nouvelle\ valeur = ancienne\ valeur * \frac{P_{\text{référence}}}{P_{routeur}}\]</div>
+<p>Où l’ancienne valeur est celle du <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> téléversé, <span class="math notranslate nohighlight">\(P_{\text{référence}}\)</span> la puissance de l’appareil de référence et <span class="math notranslate nohighlight">\(P_{routeur}\)</span> celle affichée par le routeur (<code class="docutils literal notranslate"><span class="pre">P</span></code> ou <code class="docutils literal notranslate"><span class="pre">diverted</span></code>).</p>
+<div class="line-block">
+<div class="line">Exemple, ancienne carte : la référence affiche <strong>2250</strong> et le routeur <strong>2000</strong>.</div>
+<div class="line">On aura alors :</div>
+</div>
+<div class="math notranslate nohighlight">
+\[f_{powerCalOldBoard} = 0.05000 * {2250 \over 2000} = 0.05625\]</div>
+<p>Avec la carte universelle, le calcul est le même à partir de <code class="docutils literal notranslate"><span class="pre">f_powerCalPerAmp</span></code> (0,00286405 par défaut) pour CT1, ou de <code class="docutils literal notranslate"><span class="pre">f_ctRatingDiverted</span></code> (50 par défaut) pour CT2.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La valeur <code class="docutils literal notranslate"><span class="pre">0.05000</span></code> de l’exemple est celle du <code class="docutils literal notranslate"><span class="pre">calibration.h</span></code> fourni. Si le vôtre contient une autre valeur, partez de celle-là.</p>
+</div>
+</section>
+<section id="le-filtre-de-ct1-anciennes-cartes">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Le filtre de CT1 (anciennes cartes)</a><a class="headerlink" href="#le-filtre-de-ct1-anciennes-cartes" title="Lien vers cette rubrique"></a></h3>
+<p>Sur les anciennes cartes, un filtre passe-bas du courant de CT1 compense le comportement de la sonde, réglé par <code class="docutils literal notranslate"><span class="pre">lpf_gainOldBoard</span></code> et <code class="docutils literal notranslate"><span class="pre">alphaOldBoard</span></code> : laissez les valeurs fournies, qui sont provisoires.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../logiciel-monophase/" class="btn btn-neutral float-left" title="Installation et tests — Monophasé" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../configurateur-monophase/" class="btn btn-neutral float-right" title="Configurateur du firmware — Monophasé" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, ENERGIE ROUTER &amp; F. Metrich (aka github:FredM67).
+      <span class="lastupdated">Mis à jour le 25 novembre 2026.
+      </span></p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+<div class="rst-versions" data-current-base="/Mk2PVRouter/branch/dev/" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Documentation</span>
+      v (dev)
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/Mk2PVRouter/" data-base="/Mk2PVRouter/">stable</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/dev/" data-base="/Mk2PVRouter/branch/dev/">dev</a></dd>
+        
+          <dd><a href="/Mk2PVRouter/branch/legacy/" data-base="/Mk2PVRouter/branch/legacy/">legacy</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Téléchargements</dt>
+        
+          <dd><a href="/Mk2PVRouter/branch/dev/_static/Mk2PVRouter.pdf">PDF</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Github</dt>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/blob/dev/content/firmware/etalonnage-monophase.rst"> View</a></dd>
+          <dd><a href="https://github.com/FredM67/Mk2PVRouter/edit/dev/content/firmware/etalonnage-monophase.rst"> Edit</a></dd>
+      </dl>
+      <dl>
+        <dt>Recherche</dt>
+          <dd>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div></dd>
+      </dl>
+    </div>
+  </div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

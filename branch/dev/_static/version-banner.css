@@ -1,0 +1,12 @@
+/* Banner shown on every version of the documentation except the stable one. */
+.version-banner.admonition.warning {
+  background: #ffedcc;
+  border-left: 4px solid #f0b37e;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+
+.version-banner.admonition.warning p {
+  margin: 0;
+  color: #404040;
+}
